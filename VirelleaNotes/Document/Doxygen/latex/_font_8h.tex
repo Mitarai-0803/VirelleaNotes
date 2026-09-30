@@ -1,0 +1,110 @@
+\doxysection{F\+:/sg mitarai/\+Reo\+Engine/src/\+Font.h ファイル}
+\hypertarget{_font_8h}{}\label{_font_8h}\index{F:/sg mitarai/ReoEngine/src/Font.h@{F:/sg mitarai/ReoEngine/src/Font.h}}
+
+
+フォント管理ユーティリティの宣言  
+
+
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_font_1_1_font_manager}{Font\+::\+Font\+Manager}}
+\begin{DoxyCompactList}\small\item\em フォントを管理するクラスの宣言 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_font_8h_a3591e082ae7c15c726d437110807d044}{Font\+::\+Font\+Index}} \{ \newline
+\mbox{\hyperlink{_font_8h_a3591e082ae7c15c726d437110807d044a7e086626a94f9b3e8713fa29cf414bc9}{Font\+::\+FONT\+\_\+\+SIZE\+\_\+70\+\_\+\+INDEX}} = 0
+, \mbox{\hyperlink{_font_8h_a3591e082ae7c15c726d437110807d044a01da84c8b9aa5e02279d00a5930f2abb}{Font\+::\+FONT\+\_\+\+SIZE\+\_\+50\+\_\+\+INDEX}}
+, \mbox{\hyperlink{_font_8h_a3591e082ae7c15c726d437110807d044af259c83c1dab8b416748edfeef0de897}{Font\+::\+FONT\+\_\+\+SIZE\+\_\+40\+\_\+\+INDEX}}
+, \mbox{\hyperlink{_font_8h_a3591e082ae7c15c726d437110807d044a859586a6e54e770e49e129e9d493ebbf}{Font\+::\+FONT\+\_\+\+SIZE\+\_\+30\+\_\+\+INDEX}}
+, \newline
+\mbox{\hyperlink{_font_8h_a3591e082ae7c15c726d437110807d044af9f7bada06749dd1a3e35c552622840c}{Font\+::\+FONT\+\_\+\+SIZE\+\_\+25\+\_\+\+INDEX}}
+, \mbox{\hyperlink{_font_8h_a3591e082ae7c15c726d437110807d044a09214da38b2ed36d84f6bb34096ff34a}{Font\+::\+FONT\+\_\+\+SIZE\+\_\+10\+\_\+\+INDEX}}
+, \mbox{\hyperlink{_font_8h_a3591e082ae7c15c726d437110807d044a2ef70f8d72140d00ccc1b004901ad9a2}{Font\+::\+FONT\+\_\+\+MAX}}
+ \}
+\begin{DoxyCompactList}\small\item\em フォントインデックス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_font_8h_affcd0db11986504379d9351419f8c2f7}\label{_font_8h_affcd0db11986504379d9351419f8c2f7} 
+void {\bfseries Font\+::\+Font\+Init} ()
+\begin{DoxyCompactList}\small\item\em フォント初期化 \end{DoxyCompactList}\item 
+\Hypertarget{_font_8h_a9414ec9d72f81ccedab59ec124bb672b}\label{_font_8h_a9414ec9d72f81ccedab59ec124bb672b} 
+void {\bfseries Font\+::\+Font\+Exit} ()
+\begin{DoxyCompactList}\small\item\em フォント解放 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_font_8h_ad1ab00a053362a2c107f1b3ae3845b76}{Font\+::\+Get\+Font}} (int font\+\_\+index)
+\begin{DoxyCompactList}\small\item\em フォントハンドル取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+フォント管理ユーティリティの宣言 
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_font_8h_doc-enum-members}
+\doxysubsection{列挙型詳解}
+\Hypertarget{_font_8h_a3591e082ae7c15c726d437110807d044}\index{Font.h@{Font.h}!FontIndex@{FontIndex}}
+\index{FontIndex@{FontIndex}!Font.h@{Font.h}}
+\doxysubsubsection{\texorpdfstring{FontIndex}{FontIndex}}
+{\footnotesize\ttfamily \label{_font_8h_a3591e082ae7c15c726d437110807d044} 
+enum \mbox{\hyperlink{_font_8h_a3591e082ae7c15c726d437110807d044}{Font\+::\+Font\+Index}}}
+
+
+
+フォントインデックス 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FONT\_SIZE\_70\_INDEX@{FONT\_SIZE\_70\_INDEX}!Font.h@{Font.h}}\index{Font.h@{Font.h}!FONT\_SIZE\_70\_INDEX@{FONT\_SIZE\_70\_INDEX}}}\Hypertarget{_font_8h_a3591e082ae7c15c726d437110807d044a7e086626a94f9b3e8713fa29cf414bc9}\label{_font_8h_a3591e082ae7c15c726d437110807d044a7e086626a94f9b3e8713fa29cf414bc9} 
+FONT\+\_\+\+SIZE\+\_\+70\+\_\+\+INDEX&フォントサイズ 70 のインデックス \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FONT\_SIZE\_50\_INDEX@{FONT\_SIZE\_50\_INDEX}!Font.h@{Font.h}}\index{Font.h@{Font.h}!FONT\_SIZE\_50\_INDEX@{FONT\_SIZE\_50\_INDEX}}}\Hypertarget{_font_8h_a3591e082ae7c15c726d437110807d044a01da84c8b9aa5e02279d00a5930f2abb}\label{_font_8h_a3591e082ae7c15c726d437110807d044a01da84c8b9aa5e02279d00a5930f2abb} 
+FONT\+\_\+\+SIZE\+\_\+50\+\_\+\+INDEX&フォントサイズ 50 のインデックス \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FONT\_SIZE\_40\_INDEX@{FONT\_SIZE\_40\_INDEX}!Font.h@{Font.h}}\index{Font.h@{Font.h}!FONT\_SIZE\_40\_INDEX@{FONT\_SIZE\_40\_INDEX}}}\Hypertarget{_font_8h_a3591e082ae7c15c726d437110807d044af259c83c1dab8b416748edfeef0de897}\label{_font_8h_a3591e082ae7c15c726d437110807d044af259c83c1dab8b416748edfeef0de897} 
+FONT\+\_\+\+SIZE\+\_\+40\+\_\+\+INDEX&フォントサイズ 40 のインデックス \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FONT\_SIZE\_30\_INDEX@{FONT\_SIZE\_30\_INDEX}!Font.h@{Font.h}}\index{Font.h@{Font.h}!FONT\_SIZE\_30\_INDEX@{FONT\_SIZE\_30\_INDEX}}}\Hypertarget{_font_8h_a3591e082ae7c15c726d437110807d044a859586a6e54e770e49e129e9d493ebbf}\label{_font_8h_a3591e082ae7c15c726d437110807d044a859586a6e54e770e49e129e9d493ebbf} 
+FONT\+\_\+\+SIZE\+\_\+30\+\_\+\+INDEX&フォントサイズ 30 のインデックス \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FONT\_SIZE\_25\_INDEX@{FONT\_SIZE\_25\_INDEX}!Font.h@{Font.h}}\index{Font.h@{Font.h}!FONT\_SIZE\_25\_INDEX@{FONT\_SIZE\_25\_INDEX}}}\Hypertarget{_font_8h_a3591e082ae7c15c726d437110807d044af9f7bada06749dd1a3e35c552622840c}\label{_font_8h_a3591e082ae7c15c726d437110807d044af9f7bada06749dd1a3e35c552622840c} 
+FONT\+\_\+\+SIZE\+\_\+25\+\_\+\+INDEX&フォントサイズ 25 のインデックス \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FONT\_SIZE\_10\_INDEX@{FONT\_SIZE\_10\_INDEX}!Font.h@{Font.h}}\index{Font.h@{Font.h}!FONT\_SIZE\_10\_INDEX@{FONT\_SIZE\_10\_INDEX}}}\Hypertarget{_font_8h_a3591e082ae7c15c726d437110807d044a09214da38b2ed36d84f6bb34096ff34a}\label{_font_8h_a3591e082ae7c15c726d437110807d044a09214da38b2ed36d84f6bb34096ff34a} 
+FONT\+\_\+\+SIZE\+\_\+10\+\_\+\+INDEX&フォントサイズ 10 のインデックス \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FONT\_MAX@{FONT\_MAX}!Font.h@{Font.h}}\index{Font.h@{Font.h}!FONT\_MAX@{FONT\_MAX}}}\Hypertarget{_font_8h_a3591e082ae7c15c726d437110807d044a2ef70f8d72140d00ccc1b004901ad9a2}\label{_font_8h_a3591e082ae7c15c726d437110807d044a2ef70f8d72140d00ccc1b004901ad9a2} 
+FONT\+\_\+\+MAX&フォントの最大数 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{_font_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_font_8h_ad1ab00a053362a2c107f1b3ae3845b76}\index{Font.h@{Font.h}!GetFont@{GetFont}}
+\index{GetFont@{GetFont}!Font.h@{Font.h}}
+\doxysubsubsection{\texorpdfstring{GetFont()}{GetFont()}}
+{\footnotesize\ttfamily \label{_font_8h_ad1ab00a053362a2c107f1b3ae3845b76} 
+int Font\+::\+Get\+Font (\begin{DoxyParamCaption}\item[{int}]{font\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+
+フォントハンドル取得 
+
+
+\begin{DoxyParams}{引数}
+{\em font\+\_\+index} & フォントインデックス \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+フォントハンドル 
+\end{DoxyReturn}

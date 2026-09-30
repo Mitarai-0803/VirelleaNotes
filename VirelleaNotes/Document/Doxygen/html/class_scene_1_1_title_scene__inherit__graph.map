@@ -1,0 +1,5 @@
+<map id="Scene::TitleScene" name="Scene::TitleScene">
+<area shape="rect" id="Node000001" title="タイトルシーンクラス" alt="" coords="20,443,138,512"/>
+<area shape="rect" id="Node000002" href="$class_scene_1_1_scene_base.html" title="シーン基底クラス" alt="" coords="5,5,153,395"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,407,82,443,77,442,78,412"/>
+</map>

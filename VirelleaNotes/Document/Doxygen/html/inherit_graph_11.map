@@ -1,0 +1,9 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="Node000000" href="$classnoncopyable.html" title=" " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="Node000001" href="$class_type_info.html" title="型情報基底" alt="" coords="148,31,219,57"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="115,28,150,36,144,38,115,33"/>
+<area shape="rect" id="Node000002" href="$class_class_type_info.html" title="クラス用型情報 ClassTypeInfo&lt;T&gt;" alt="" coords="267,31,403,57"/>
+<area shape="poly" id="edge7_Node000001_Node000002" title=" " alt="" coords="234,41,270,44,264,44,235,47"/>
+<area shape="rect" id="Node000003" href="$classnonmovable.html" title="move禁止" alt="" coords="7,56,98,83"/>
+<area shape="poly" id="edge8_Node000003_Node000001" title=" " alt="" coords="113,55,150,50,144,51,114,60"/>
+</map>

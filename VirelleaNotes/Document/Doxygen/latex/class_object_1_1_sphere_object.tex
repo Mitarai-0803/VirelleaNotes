@@ -1,0 +1,225 @@
+\doxysection{Object\+::Sphere\+Object クラス}
+\hypertarget{class_object_1_1_sphere_object}{}\label{class_object_1_1_sphere_object}\index{Object::SphereObject@{Object::SphereObject}}
+
+
+物理演算球オブジェクト  
+
+
+
+
+{\ttfamily \#include $<$Sphere\+Object.\+h$>$}
+
+
+
+Object\+::Sphere\+Object の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_sphere_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Object\+::Sphere\+Object 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_sphere_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_1_1_sphere_object_a80402950a1245dc64b6b8d23fe77d64d}{Sphere\+Object}} (const JPH\+::\+RVec3 \&pos, float radius=0.\+5f)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\Hypertarget{class_object_1_1_sphere_object_a3ffeab9f73182dd1eb4a6c3328f45950}\label{class_object_1_1_sphere_object_a3ffeab9f73182dd1eb4a6c3328f45950} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Sphere\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_object_1_1_sphere_object_ace679bd2809609c002188f4945b7ed3f}{Get\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em 球の半径を取得する \end{DoxyCompactList}\item 
+JPH\+::\+Vec3 \mbox{\hyperlink{class_object_1_1_sphere_object_aa7c5c3e4094e54937bd4bfd3ff8de92e}{Get\+Linear\+Velocity}} () const
+\begin{DoxyCompactList}\small\item\em 現在の速度を取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_sphere_object_a43db6968939c88811d29300b086723b3}{Set\+Linear\+Velocity}} (const JPH\+::\+Vec3 \&velocity)
+\begin{DoxyCompactList}\small\item\em 速度を直接設定する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries Get\+Position} () const
+\item 
+void {\bfseries Set\+Position} (const JPH\+::\+RVec3 \&pos)
+\item 
+JPH\+::\+Quat {\bfseries Get\+Rotation} () const
+\item 
+void {\bfseries Set\+Rotation} (const JPH\+::\+Quat \&rot)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_1_1_object_base_af53775f0db55e72971bd8bfed4ba6809}{\texorpdfstring{$\sim$}{\string~}\+Object\+Base}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_1_1_object_base_a16b478109bc4787d7095706ba6d7cdfb}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名の取得 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Name} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名の設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Add\+Component} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_object_1_1_object_base_ac6b0a1cda5413d3b3d110d2316bd7536}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em ライフサイクル呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\item 
+void {\bfseries Draw\+Debug} ()
+\item 
+void {\bfseries Draw} ()
+\item 
+void {\bfseries End} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_object_1_1_sphere_object_a994635364937413dc37cf5f2e03de07a}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_sphere_object_aa5e854badeefbf898751622f80a20aa2}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_sphere_object_abd6b18e76e8c1df026199ec717236e07}{On\+End}} () override
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_object_1_1_object_base_a4d695309d1ef84228aab59296ea82876}{On\+Update}} ()
+\item 
+virtual void {\bfseries On\+Draw\+Debug} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries m\+\_\+pos} = JPH\+::\+RVec3(0.\+0f, 0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em 手動設定の座標 \end{DoxyCompactList}\item 
+JPH\+::\+Quat {\bfseries m\+\_\+rot} = JPH\+::\+Quat\+::s\+Identity()
+\begin{DoxyCompactList}\small\item\em 手動設定の回転 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+物理演算球オブジェクト 
+
+\doxylink{class_sphere_collider}{Sphere\+Collider} を持ち Jolt 物理シミュレーションで動作する。 コンストラクタはスポーン座標と半径の保存のみを行い、 コライダーの生成・登録は \doxylink{class_object_1_1_sphere_object_a994635364937413dc37cf5f2e03de07a}{On\+Init()} で行う。 座標／回転は基底クラス Object\+Base3\+D\+::\+Get\+Position() 等が 自動でコライダーへ委譲するため、本クラスで二重管理はしない。 
+
+\label{doc-constructors}
+\Hypertarget{class_object_1_1_sphere_object_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_object_1_1_sphere_object_a80402950a1245dc64b6b8d23fe77d64d}\index{Object::SphereObject@{Object::SphereObject}!SphereObject@{SphereObject}}
+\index{SphereObject@{SphereObject}!Object::SphereObject@{Object::SphereObject}}
+\doxysubsubsection{\texorpdfstring{SphereObject()}{SphereObject()}}
+{\footnotesize\ttfamily \label{class_object_1_1_sphere_object_a80402950a1245dc64b6b8d23fe77d64d} 
+Object\+::\+Sphere\+Object\+::\+Sphere\+Object (\begin{DoxyParamCaption}\item[{const JPH\+::\+RVec3 \&}]{pos}{, }\item[{float}]{radius}{ = {\ttfamily 0.5f}}\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+値の保存のみ行う。コライダーの生成は \doxylink{class_object_1_1_sphere_object_a994635364937413dc37cf5f2e03de07a}{On\+Init()} で行う。 
+\begin{DoxyParams}{引数}
+{\em pos} & 初期スポーン座標 \\
+\hline
+{\em radius} & 球の半径（デフォルト 0.\+5f） \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_object_1_1_sphere_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_object_1_1_sphere_object_aa7c5c3e4094e54937bd4bfd3ff8de92e}\index{Object::SphereObject@{Object::SphereObject}!GetLinearVelocity@{GetLinearVelocity}}
+\index{GetLinearVelocity@{GetLinearVelocity}!Object::SphereObject@{Object::SphereObject}}
+\doxysubsubsection{\texorpdfstring{GetLinearVelocity()}{GetLinearVelocity()}}
+{\footnotesize\ttfamily \label{class_object_1_1_sphere_object_aa7c5c3e4094e54937bd4bfd3ff8de92e} 
+JPH\+::\+Vec3 Object\+::\+Sphere\+Object\+::\+Get\+Linear\+Velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+現在の速度を取得する 
+
+コライダー未生成の場合はゼロ速度を返す \begin{DoxyReturn}{戻り値}
+線形速度（\+Jolt Vec3） 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_sphere_object_ace679bd2809609c002188f4945b7ed3f}\index{Object::SphereObject@{Object::SphereObject}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!Object::SphereObject@{Object::SphereObject}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily \label{class_object_1_1_sphere_object_ace679bd2809609c002188f4945b7ed3f} 
+float Object\+::\+Sphere\+Object\+::\+Get\+Radius (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+球の半径を取得する 
+
+水面侵入判定などの外部計算に利用する \begin{DoxyReturn}{戻り値}
+半径 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_sphere_object_aa5e854badeefbf898751622f80a20aa2}\index{Object::SphereObject@{Object::SphereObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!Object::SphereObject@{Object::SphereObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_object_1_1_sphere_object_aa5e854badeefbf898751622f80a20aa2} 
+void Object\+::\+Sphere\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_sphere_object_abd6b18e76e8c1df026199ec717236e07}\index{Object::SphereObject@{Object::SphereObject}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!Object::SphereObject@{Object::SphereObject}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_object_1_1_sphere_object_abd6b18e76e8c1df026199ec717236e07} 
+void Object\+::\+Sphere\+Object\+::\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_sphere_object_a994635364937413dc37cf5f2e03de07a}\index{Object::SphereObject@{Object::SphereObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!Object::SphereObject@{Object::SphereObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_object_1_1_sphere_object_a994635364937413dc37cf5f2e03de07a} 
+void Object\+::\+Sphere\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+コンストラクタから移動した処理：コライダーコンポーネントの 生成と物理システムへの登録をここで行う。 
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_sphere_object_a43db6968939c88811d29300b086723b3}\index{Object::SphereObject@{Object::SphereObject}!SetLinearVelocity@{SetLinearVelocity}}
+\index{SetLinearVelocity@{SetLinearVelocity}!Object::SphereObject@{Object::SphereObject}}
+\doxysubsubsection{\texorpdfstring{SetLinearVelocity()}{SetLinearVelocity()}}
+{\footnotesize\ttfamily \label{class_object_1_1_sphere_object_a43db6968939c88811d29300b086723b3} 
+void Object\+::\+Sphere\+Object\+::\+Set\+Linear\+Velocity (\begin{DoxyParamCaption}\item[{const JPH\+::\+Vec3 \&}]{velocity}{}\end{DoxyParamCaption})}
+
+
+
+速度を直接設定する 
+
+ジャンプ演出や水中でのブレーキ演出などに利用できる 
+\begin{DoxyParams}{引数}
+{\em velocity} & 設定する線形速度 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_sphere_object_8h}{Sphere\+Object.\+h}}\end{DoxyCompactItemize}

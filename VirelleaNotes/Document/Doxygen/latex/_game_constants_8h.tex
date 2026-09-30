@@ -1,0 +1,123 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Game\+Constants.h ファイル}
+\hypertarget{_game_constants_8h}{}\label{_game_constants_8h}\index{G:/sg mitarai/自作エンジン/Engine/src/GameConstants.h@{G:/sg mitarai/自作エンジン/Engine/src/GameConstants.h}}
+
+
+ゲーム全体で使用する定数定義 @detail 画面、時間、ズーム、\+BPM、ノーツなどの各種定数を定義します。  
+
+
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_game_constants_8h_a73b3ee86f313b7721c74a2dfe0e3b0c9}\label{_game_constants_8h_a73b3ee86f313b7721c74a2dfe0e3b0c9} 
+constexpr int {\bfseries PLAY\+\_\+\+LINE\+\_\+X} = 0
+\begin{DoxyCompactList}\small\item\em 再生ラインの開始\+X座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_aec7789fa89032d0a222471cc6192e12b}\label{_game_constants_8h_aec7789fa89032d0a222471cc6192e12b} 
+constexpr int {\bfseries PLAY\+\_\+\+LINE\+\_\+\+STR\+\_\+X} = 10
+\begin{DoxyCompactList}\small\item\em 「再生中/停止中」ラベルの\+X座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a15dac4a4ab368d2f6090df7853c5b8ae}\label{_game_constants_8h_a15dac4a4ab368d2f6090df7853c5b8ae} 
+constexpr int {\bfseries TIME\+\_\+\+LABEL\+\_\+\+OFFSET} = 25
+\begin{DoxyCompactList}\small\item\em ラベルをラインからどれだけ上にずらすか \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_acd70c80fffc618994d7c475b5880b5ef}\label{_game_constants_8h_acd70c80fffc618994d7c475b5880b5ef} 
+constexpr int {\bfseries SCREEN\+\_\+W} = 1280
+\begin{DoxyCompactList}\small\item\em 画面幅 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_ab6e8e58868831b7c047b548fc05600c5}\label{_game_constants_8h_ab6e8e58868831b7c047b548fc05600c5} 
+constexpr int {\bfseries SCREEN\+\_\+H} = 720
+\begin{DoxyCompactList}\small\item\em 画面高さ \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_ae82997cce20331df4213aebff0cd8a1d}\label{_game_constants_8h_ae82997cce20331df4213aebff0cd8a1d} 
+constexpr float {\bfseries HALF} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em 半分の値 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a361f690a18f114cd53d195dc30c820f8}\label{_game_constants_8h_a361f690a18f114cd53d195dc30c820f8} 
+constexpr float {\bfseries TWICE} = 2.\+0f
+\begin{DoxyCompactList}\small\item\em 2倍にする値 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a1b7b06c805d30036124b05331f852048}\label{_game_constants_8h_a1b7b06c805d30036124b05331f852048} 
+constexpr float {\bfseries HALF\+\_\+\+SCREEN\+\_\+W} = \mbox{\hyperlink{_constants_game_8h_acd70c80fffc618994d7c475b5880b5ef}{SCREEN\+\_\+W}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_constants_game_8h_ae82997cce20331df4213aebff0cd8a1d}{HALF}}
+\begin{DoxyCompactList}\small\item\em 画面幅の半分 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a4206ee95dafa03659f4152363c96d4d3}\label{_game_constants_8h_a4206ee95dafa03659f4152363c96d4d3} 
+constexpr float {\bfseries HALF\+\_\+\+SCREEN\+\_\+H} = \mbox{\hyperlink{_constants_game_8h_ab6e8e58868831b7c047b548fc05600c5}{SCREEN\+\_\+H}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_constants_game_8h_ae82997cce20331df4213aebff0cd8a1d}{HALF}}
+\begin{DoxyCompactList}\small\item\em 画面高さの半分 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a9d6ada3b9e7f0353ceab7769b22274b1}\label{_game_constants_8h_a9d6ada3b9e7f0353ceab7769b22274b1} 
+constexpr int {\bfseries BPM\+\_\+\+DEFAULT} = 120
+\begin{DoxyCompactList}\small\item\em 初期\+BPM \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a688f0c815ff7ac9b2fc7b4105b139412}\label{_game_constants_8h_a688f0c815ff7ac9b2fc7b4105b139412} 
+constexpr int {\bfseries BPM\+\_\+\+MAX} = 300
+\begin{DoxyCompactList}\small\item\em 最大\+BPM \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a3dbf6301ce55a2a6f721aa7684f1b3ae}\label{_game_constants_8h_a3dbf6301ce55a2a6f721aa7684f1b3ae} 
+constexpr int {\bfseries BPM\+\_\+\+MIN} = 30
+\begin{DoxyCompactList}\small\item\em 最小\+BPM \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a8794be0c7dab84be3f7697b449553a88}\label{_game_constants_8h_a8794be0c7dab84be3f7697b449553a88} 
+constexpr int {\bfseries BPM\+\_\+\+STEP} = 1
+\begin{DoxyCompactList}\small\item\em BPM増減量 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_aae779898097e74a5eac19461aad8aee8}\label{_game_constants_8h_aae779898097e74a5eac19461aad8aee8} 
+constexpr int {\bfseries BPM\+\_\+\+STR\+\_\+X} = 0
+\begin{DoxyCompactList}\small\item\em BPM表示\+X座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a6c8af8ea124172ec2f3e12c39cb6819e}\label{_game_constants_8h_a6c8af8ea124172ec2f3e12c39cb6819e} 
+constexpr int {\bfseries BPM\+\_\+\+STR\+\_\+Y} = 5
+\begin{DoxyCompactList}\small\item\em BPM表示\+Y座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_aba8f011b5560aab5b1a5e831a6518655}\label{_game_constants_8h_aba8f011b5560aab5b1a5e831a6518655} 
+constexpr int {\bfseries BPM\+\_\+\+KEY\+\_\+\+HOLD\+\_\+\+THRESHOLD} = 60
+\begin{DoxyCompactList}\small\item\em BPMのホールド判定までのフレーム数 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a3e736be8246b20c42cf0b5c79426829a}\label{_game_constants_8h_a3e736be8246b20c42cf0b5c79426829a} 
+constexpr int {\bfseries DRAW\+\_\+\+BPM\+\_\+\+GRID\+\_\+X} = 390
+\begin{DoxyCompactList}\small\item\em BPMグリッド表示\+X座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_af1b75277a68f5e707557a8b6030cff77}\label{_game_constants_8h_af1b75277a68f5e707557a8b6030cff77} 
+constexpr int {\bfseries DRAW\+\_\+\+BPM\+\_\+\+GRID\+\_\+Y} = 5
+\begin{DoxyCompactList}\small\item\em BPMグリッド表示\+Y座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a71758b28704a1098949b2af22e69f9b3}\label{_game_constants_8h_a71758b28704a1098949b2af22e69f9b3} 
+constexpr int {\bfseries DRAW\+\_\+\+BPM\+\_\+\+OFFSET\+\_\+X} = 10
+\begin{DoxyCompactList}\small\item\em BPM数表示オフセット\+X座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a0a13624da4c4ae219623e9a404edb909}\label{_game_constants_8h_a0a13624da4c4ae219623e9a404edb909} 
+constexpr int {\bfseries DRAW\+\_\+\+BPM\+\_\+\+OFFSET\+\_\+Y} = 5
+\begin{DoxyCompactList}\small\item\em BPM数表示オフセット\+Y座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a8efc0f987513febbf52a5762dd2b34cb}\label{_game_constants_8h_a8efc0f987513febbf52a5762dd2b34cb} 
+constexpr int {\bfseries TIME\+\_\+\+STR\+\_\+Y} = 40
+\begin{DoxyCompactList}\small\item\em 現在再生時間\+Y座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a39170c1dfcf268a9116abd4e79bcac80}\label{_game_constants_8h_a39170c1dfcf268a9116abd4e79bcac80} 
+constexpr int {\bfseries MAX\+\_\+\+TIME\+\_\+\+STR\+\_\+Y} = 75
+\begin{DoxyCompactList}\small\item\em 最大再生時間\+Y座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a4ea8e4f621cd4f2677b4f4fc39e042aa}\label{_game_constants_8h_a4ea8e4f621cd4f2677b4f4fc39e042aa} 
+constexpr float {\bfseries PLAY\+\_\+\+TIME\+\_\+\+STR\+\_\+X} = 750.\+0f
+\begin{DoxyCompactList}\small\item\em 現在再生時間\+X座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a5b59c824039c87535802d59681f44a42}\label{_game_constants_8h_a5b59c824039c87535802d59681f44a42} 
+constexpr float {\bfseries PLAY\+\_\+\+TIME\+\_\+\+STR\+\_\+Y} = 15.\+0f
+\begin{DoxyCompactList}\small\item\em 現在再生時間\+Y座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_aaef8953133f3679dd0ec531c3c3e6a74}\label{_game_constants_8h_aaef8953133f3679dd0ec531c3c3e6a74} 
+constexpr float {\bfseries ZOOM\+\_\+\+DEFAULT} = 50.\+0f
+\begin{DoxyCompactList}\small\item\em 初期ズーム \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a98e174ad3d1afcef80da78842d81c142}\label{_game_constants_8h_a98e174ad3d1afcef80da78842d81c142} 
+constexpr float {\bfseries ZOOM\+\_\+\+MAX} = 200.\+0f
+\begin{DoxyCompactList}\small\item\em 最大ズーム \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a75c84006fe1dacef704a9af9cb7287a6}\label{_game_constants_8h_a75c84006fe1dacef704a9af9cb7287a6} 
+constexpr float {\bfseries ZOOM\+\_\+\+MIN} = 50.\+0f
+\begin{DoxyCompactList}\small\item\em 最小ズーム \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a18b0e7aec7a9e3c80533643e9d7acf7b}\label{_game_constants_8h_a18b0e7aec7a9e3c80533643e9d7acf7b} 
+constexpr float {\bfseries ZOOM\+\_\+\+STEP} = 10.\+0f
+\begin{DoxyCompactList}\small\item\em ズーム変更ステップ \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_ac01434fcf858bd4b50b62784079ad3c0}\label{_game_constants_8h_ac01434fcf858bd4b50b62784079ad3c0} 
+constexpr float {\bfseries PI} = 3.\+14159265358979323846f
+\begin{DoxyCompactList}\small\item\em 円周率 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a35ffad74a7892cbbb9feab353ec0ee0f}\label{_game_constants_8h_a35ffad74a7892cbbb9feab353ec0ee0f} 
+constexpr int {\bfseries MS\+\_\+\+PER\+\_\+\+SEC} = 1000
+\begin{DoxyCompactList}\small\item\em 1秒のミリ秒数 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a421faefcda5713e48381f699bd497ee0}\label{_game_constants_8h_a421faefcda5713e48381f699bd497ee0} 
+constexpr int {\bfseries MS\+\_\+\+PER\+\_\+\+MIN} = 60000
+\begin{DoxyCompactList}\small\item\em 1分のミリ秒数 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a490f02f987fe45d60c2a1b24c3c00782}\label{_game_constants_8h_a490f02f987fe45d60c2a1b24c3c00782} 
+constexpr int {\bfseries INVALID\+\_\+\+NOTE\+\_\+\+OFFSET\+\_\+Y} = 50
+\begin{DoxyCompactList}\small\item\em ノーツの配置ができないラインオフセット\+Y座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a6aa870622711e498ae440e3d0e73c812}\label{_game_constants_8h_a6aa870622711e498ae440e3d0e73c812} 
+constexpr int {\bfseries NOTE\+\_\+\+LINE\+\_\+Y} = 100
+\begin{DoxyCompactList}\small\item\em ノーツ配置ラインの\+Y座標 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a57ca8ad03fe54b8e02df64d33730be26}\label{_game_constants_8h_a57ca8ad03fe54b8e02df64d33730be26} 
+constexpr int {\bfseries NOTE\+\_\+\+SNAP\+\_\+\+INTERVAL} = 30
+\begin{DoxyCompactList}\small\item\em ノーツ配置スナップ間隔 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a9d785e6c981e1be494810e3d9da7559d}\label{_game_constants_8h_a9d785e6c981e1be494810e3d9da7559d} 
+constexpr float {\bfseries NOTE\+\_\+\+DELETE\+\_\+\+RADIUS} = 30.\+0f
+\begin{DoxyCompactList}\small\item\em ノーツの消す距離 \end{DoxyCompactList}\item 
+\Hypertarget{_game_constants_8h_a6bb611ad56370b5a1deff25892ce6eed}\label{_game_constants_8h_a6bb611ad56370b5a1deff25892ce6eed} 
+constexpr float {\bfseries NOTE\+\_\+\+LINE\+\_\+\+WIDTH} = 30.\+0f
+\begin{DoxyCompactList}\small\item\em ノーツ長押しノーツを結ぶ線の太さ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ゲーム全体で使用する定数定義 @detail 画面、時間、ズーム、\+BPM、ノーツなどの各種定数を定義します。 
+

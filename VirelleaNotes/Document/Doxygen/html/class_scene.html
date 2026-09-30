@@ -1,0 +1,748 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Scene クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_scene.html','','class_scene-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Scene クラス</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a34512f125a00582d9fb48b407cefa839" id="r_a34512f125a00582d9fb48b407cefa839"><td class="memItemLeft" align="right" valign="top"><a id="a34512f125a00582d9fb48b407cefa839" name="a34512f125a00582d9fb48b407cefa839"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>BasePtr</b> = std::shared_ptr&lt;Base&gt;</td></tr>
+<tr class="memitem:a767f0587dbd609cbaae24219037778d3" id="r_a767f0587dbd609cbaae24219037778d3"><td class="memItemLeft" align="right" valign="top"><a id="a767f0587dbd609cbaae24219037778d3" name="a767f0587dbd609cbaae24219037778d3"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>BasePtrVec</b> = std::vector&lt;BasePtr&gt;</td></tr>
+<tr class="memitem:a79a7bc59e066d97bf78d144d232f2257" id="r_a79a7bc59e066d97bf78d144d232f2257"><td class="memItemLeft" align="right" valign="top"><a id="a79a7bc59e066d97bf78d144d232f2257" name="a79a7bc59e066d97bf78d144d232f2257"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>BasePtrMap</b> = std::unordered_map&lt;std::string, BasePtr&gt;</td></tr>
+<tr class="memitem:a731012816f97fd5e79f562f2024b93e0" id="r_a731012816f97fd5e79f562f2024b93e0"><td class="memItemLeft" align="right" valign="top"><a id="a731012816f97fd5e79f562f2024b93e0" name="a731012816f97fd5e79f562f2024b93e0"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SignalsDefault</b> = sigslot::signal&lt;&gt;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr id="pub-static-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">シーン操作関係</div></td></tr>
+<tr class="memitem:a9c34e940e4f2ec488a0adb63b81ae67a" id="r_a9c34e940e4f2ec488a0adb63b81ae67a"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a9c34e940e4f2ec488a0adb63b81ae67a template"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c34e940e4f2ec488a0adb63b81ae67a">GetScene</a> ()</td></tr>
+<tr class="memitem:a770e8579116a453c1b263f7e34c9ce39" id="r_a770e8579116a453c1b263f7e34c9ce39"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a770e8579116a453c1b263f7e34c9ce39 template"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a770e8579116a453c1b263f7e34c9ce39">ReleaseScene</a> ()</td></tr>
+<tr class="memitem:adb28c35d5f5f39bbb66e472ff0d9c9b2" id="r_adb28c35d5f5f39bbb66e472ff0d9c9b2"><td class="memItemLeft" align="right" valign="top"><a id="adb28c35d5f5f39bbb66e472ff0d9c9b2" name="adb28c35d5f5f39bbb66e472ff0d9c9b2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseScene</b> (const ::Scene::BasePtr &amp;scene)</td></tr>
+<tr class="memitem:a6c587929c515912fc5b966a115539e3e" id="r_a6c587929c515912fc5b966a115539e3e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c587929c515912fc5b966a115539e3e">Change</a> (BasePtr scene)</td></tr>
+<tr class="memitem:aeda746a01a50ce228d21bdb2a5b4aa5d" id="r_aeda746a01a50ce228d21bdb2a5b4aa5d"><td class="memItemLeft" align="right" valign="top"><a id="aeda746a01a50ce228d21bdb2a5b4aa5d" name="aeda746a01a50ce228d21bdb2a5b4aa5d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNextScene</b> (BasePtr scene)</td></tr>
+<tr class="memdesc:aeda746a01a50ce228d21bdb2a5b4aa5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">次のシーンをセットする <br /></td></tr>
+<tr class="memitem:a8c1da1effe141998e84595bbaad10948" id="r_a8c1da1effe141998e84595bbaad10948"><td class="memItemLeft" align="right" valign="top"><a id="a8c1da1effe141998e84595bbaad10948" name="a8c1da1effe141998e84595bbaad10948"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>CheckLeak</b> ()</td></tr>
+<tr class="memitem:a22c112358b815e776a8e282a8ee38f03" id="r_a22c112358b815e776a8e282a8ee38f03"><td class="memItemLeft" align="right" valign="top"><a id="a22c112358b815e776a8e282a8ee38f03" name="a22c112358b815e776a8e282a8ee38f03"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ChangeNextScene</b> ()</td></tr>
+<tr class="memdesc:a22c112358b815e776a8e282a8ee38f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">次のシーンに切り替える <br /></td></tr>
+<tr class="memitem:a9f606c4b064f812bf2dab1a568a5d9d0" id="r_a9f606c4b064f812bf2dab1a568a5d9d0"><td class="memItemLeft" align="right" valign="top"><a id="a9f606c4b064f812bf2dab1a568a5d9d0" name="a9f606c4b064f812bf2dab1a568a5d9d0"></a>
+static <a class="el" href="class_scene_1_1_base.html">Scene::Base</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentScene</b> ()</td></tr>
+<tr class="memitem:aa8a101d7d9321906ca46a5a8b3149ee9" id="r_aa8a101d7d9321906ca46a5a8b3149ee9"><td class="memTemplParams" colspan="2"><a id="aa8a101d7d9321906ca46a5a8b3149ee9" name="aa8a101d7d9321906ca46a5a8b3149ee9"></a>
+template&lt;typename T&gt; </td></tr>
+<tr class="memitem:aa8a101d7d9321906ca46a5a8b3149ee9 template"><td class="memItemLeft" align="right" valign="top">static T *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCurrentScene</b> ()</td></tr>
+<tr id="pub-static-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">オブジェクト操作 関係</div></td></tr>
+<tr class="memitem:a8eafc112b91ebde95fd4491d409b5334" id="r_a8eafc112b91ebde95fd4491d409b5334"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a8eafc112b91ebde95fd4491d409b5334 template"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8eafc112b91ebde95fd4491d409b5334">CreateObjectPtr</a> (const std::string_view name=u8&quot;object&quot;, bool no_transform=false, <a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> update=<a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>, <a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> draw=<a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>)</td></tr>
+<tr class="memitem:a01747d00538360fded5f192a2937175b" id="r_a01747d00538360fded5f192a2937175b"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a01747d00538360fded5f192a2937175b template"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01747d00538360fded5f192a2937175b">CreateObjectDelayInitialize</a> (const std::string_view name=u8&quot;object&quot;, bool no_transform=false, <a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> update=<a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>, <a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> draw=<a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>)</td></tr>
+<tr class="memitem:a298d059ec0aa85b0f905519a05a3b5ce" id="r_a298d059ec0aa85b0f905519a05a3b5ce"><td class="memTemplParams" colspan="2"><a id="a298d059ec0aa85b0f905519a05a3b5ce" name="a298d059ec0aa85b0f905519a05a3b5ce"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a298d059ec0aa85b0f905519a05a3b5ce template"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseObject</b> ()</td></tr>
+<tr class="memitem:ac7ec92990d92723a7021dce8e129b910" id="r_ac7ec92990d92723a7021dce8e129b910"><td class="memItemLeft" align="right" valign="top"><a id="ac7ec92990d92723a7021dce8e129b910" name="ac7ec92990d92723a7021dce8e129b910"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseObject</b> (std::string_view name=&quot;&quot;)</td></tr>
+<tr class="memitem:a3bdc712400d71c3850af079c05e84295" id="r_a3bdc712400d71c3850af079c05e84295"><td class="memItemLeft" align="right" valign="top"><a id="a3bdc712400d71c3850af079c05e84295" name="a3bdc712400d71c3850af079c05e84295"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseObject</b> (ObjectPtr obj)</td></tr>
+<tr id="pub-static-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">シーン処理 関係</div></td></tr>
+<tr class="memitem:a826a3f87d3369fd96f07c5ee53e6d68d" id="r_a826a3f87d3369fd96f07c5ee53e6d68d"><td class="memItemLeft" align="right" valign="top"><a id="a826a3f87d3369fd96f07c5ee53e6d68d" name="a826a3f87d3369fd96f07c5ee53e6d68d"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> ()</td></tr>
+<tr class="memdesc:a826a3f87d3369fd96f07c5ee53e6d68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化処理 <br /></td></tr>
+<tr class="memitem:afafc902e0171236d82a7fca75dde2133" id="r_afafc902e0171236d82a7fca75dde2133"><td class="memItemLeft" align="right" valign="top"><a id="afafc902e0171236d82a7fca75dde2133" name="afafc902e0171236d82a7fca75dde2133"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>PreUpdate</b> ()</td></tr>
+<tr class="memdesc:afafc902e0171236d82a7fca75dde2133"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン更新前処理 @detail 基本的にはUpdate集団より先にで行いたいものをこの層で処理します <br /></td></tr>
+<tr class="memitem:aa72309f8cf847a64f04ac440acf177ec" id="r_aa72309f8cf847a64f04ac440acf177ec"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa72309f8cf847a64f04ac440acf177ec">Update</a> ()</td></tr>
+<tr class="memitem:aa91900395be35598e800994cd8bd4f11" id="r_aa91900395be35598e800994cd8bd4f11"><td class="memItemLeft" align="right" valign="top"><a id="aa91900395be35598e800994cd8bd4f11" name="aa91900395be35598e800994cd8bd4f11"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>PrePhysics</b> ()</td></tr>
+<tr class="memdesc:aa91900395be35598e800994cd8bd4f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Physics前処理 @detail OwnerObject移動によるコリジョンコンポーネント前処理 <br /></td></tr>
+<tr class="memitem:ae4235e8f87ca89870494b17d4750b8da" id="r_ae4235e8f87ca89870494b17d4750b8da"><td class="memItemLeft" align="right" valign="top"><a id="ae4235e8f87ca89870494b17d4750b8da" name="ae4235e8f87ca89870494b17d4750b8da"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>PostPhysics</b> ()</td></tr>
+<tr class="memdesc:ae4235e8f87ca89870494b17d4750b8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Physics後処理 @detail OwnerObject移動によるコリジョンコンポーネント移動後処理 <br /></td></tr>
+<tr class="memitem:a762ee910330fbab32b76e93032d229e2" id="r_a762ee910330fbab32b76e93032d229e2"><td class="memItemLeft" align="right" valign="top"><a id="a762ee910330fbab32b76e93032d229e2" name="a762ee910330fbab32b76e93032d229e2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>PostUpdate</b> ()</td></tr>
+<tr class="memdesc:a762ee910330fbab32b76e93032d229e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン更新後の処理 @detail Physicsおよびすべての当たり判定後に処理します <br /></td></tr>
+<tr class="memitem:a5819841652f8cf25d474a951944a241e" id="r_a5819841652f8cf25d474a951944a241e"><td class="memItemLeft" align="right" valign="top"><a id="a5819841652f8cf25d474a951944a241e" name="a5819841652f8cf25d474a951944a241e"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
+<tr class="memdesc:a5819841652f8cf25d474a951944a241e"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン描画 <br /></td></tr>
+<tr class="memitem:a799864454e60bab40e690f7503ffbb4c" id="r_a799864454e60bab40e690f7503ffbb4c"><td class="memItemLeft" align="right" valign="top"><a id="a799864454e60bab40e690f7503ffbb4c" name="a799864454e60bab40e690f7503ffbb4c"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>Exit</b> ()</td></tr>
+<tr class="memdesc:a799864454e60bab40e690f7503ffbb4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン終了 <br /></td></tr>
+<tr class="memitem:ae8694d4502086d75488a0f63873daff2" id="r_ae8694d4502086d75488a0f63873daff2"><td class="memItemLeft" align="right" valign="top"><a id="ae8694d4502086d75488a0f63873daff2" name="ae8694d4502086d75488a0f63873daff2"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>GUI</b> ()</td></tr>
+<tr class="memdesc:ae8694d4502086d75488a0f63873daff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンGUI @detail ※この処理はUpdate後に行う必要があります <br /></td></tr>
+<tr id="pub-static-methods-3" class="groupHeader"><td colspan="2"><div class="groupHeader">シーン状態 関係</div></td></tr>
+<tr class="memitem:a193518f206eee1c3e683426005d7ca56" id="r_a193518f206eee1c3e683426005d7ca56"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a193518f206eee1c3e683426005d7ca56">IsPause</a> ()</td></tr>
+<tr class="memitem:ad3fac02e013073c19698b3495f8ce6f4" id="r_ad3fac02e013073c19698b3495f8ce6f4"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3fac02e013073c19698b3495f8ce6f4">GetTime</a> ()</td></tr>
+<tr class="memitem:a02f329a7c7366773d5e6ae1101464edf" id="r_a02f329a7c7366773d5e6ae1101464edf"><td class="memItemLeft" align="right" valign="top"><a id="a02f329a7c7366773d5e6ae1101464edf" name="a02f329a7c7366773d5e6ae1101464edf"></a>
+static size_t&#160;</td><td class="memItemRight" valign="bottom"><b>GetSceneCount</b> ()</td></tr>
+<tr class="memdesc:a02f329a7c7366773d5e6ae1101464edf"><td class="mdescLeft">&#160;</td><td class="mdescRight">存在するシーン数 <br /></td></tr>
+<tr id="pub-static-methods-4" class="groupHeader"><td colspan="2"><div class="groupHeader">シーン内オブジェクト取得 関係</div></td></tr>
+<tr class="memitem:a9e143dc2e860651e852c1b45b0d9b3c3" id="r_a9e143dc2e860651e852c1b45b0d9b3c3"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a9e143dc2e860651e852c1b45b0d9b3c3 template"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e143dc2e860651e852c1b45b0d9b3c3">GetObjectPtr</a> (std::string_view name=&quot;&quot;)</td></tr>
+<tr class="memdesc:a9e143dc2e860651e852c1b45b0d9b3c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトサーチ&amp;取得  <br /></td></tr>
+<tr class="memitem:a9c9ace68b25b4ce4432a97d26dfc9271" id="r_a9c9ace68b25b4ce4432a97d26dfc9271"><td class="memTemplParams" colspan="2">template&lt;class T&gt; </td></tr>
+<tr class="memitem:a9c9ace68b25b4ce4432a97d26dfc9271 template"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::shared_ptr&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c9ace68b25b4ce4432a97d26dfc9271">GetObjectsPtr</a> ()</td></tr>
+<tr class="memdesc:a9c9ace68b25b4ce4432a97d26dfc9271"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトサーチ&amp;取得  <br /></td></tr>
+<tr class="memitem:ac4de6c9aa678150f0b66cb61759be1b6" id="r_ac4de6c9aa678150f0b66cb61759be1b6"><td class="memTemplParams" colspan="2"><a id="ac4de6c9aa678150f0b66cb61759be1b6" name="ac4de6c9aa678150f0b66cb61759be1b6"></a>
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:ac4de6c9aa678150f0b66cb61759be1b6 template"><td class="memItemLeft" align="right" valign="top">static std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetObjectPtrWithCreate</b> (std::string_view name=&quot;&quot;)</td></tr>
+<tr class="memitem:af593a86b122e381efc320429f34f9062" id="r_af593a86b122e381efc320429f34f9062"><td class="memItemLeft" align="right" valign="top"><a id="af593a86b122e381efc320429f34f9062" name="af593a86b122e381efc320429f34f9062"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>CheckComponentCollisions</b> ()</td></tr>
+<tr class="memdesc:af593a86b122e381efc320429f34f9062"><td class="mdescLeft">&#160;</td><td class="mdescRight">ComponentCollisionの当たり判定を行う <br /></td></tr>
+<tr class="memitem:a0174d321f2cdc7506e2ffdd9861792bb" id="r_a0174d321f2cdc7506e2ffdd9861792bb"><td class="memItemLeft" align="right" valign="top"><a id="a0174d321f2cdc7506e2ffdd9861792bb" name="a0174d321f2cdc7506e2ffdd9861792bb"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>SelectObjectWindow</b> (const ObjectPtr &amp;object)</td></tr>
+<tr class="memdesc:a0174d321f2cdc7506e2ffdd9861792bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">セレクトしているオブジェクトかをチェックする <br /></td></tr>
+<tr class="memitem:aa6cc94ed470ebb1c8ba63c2166408fbe" id="r_aa6cc94ed470ebb1c8ba63c2166408fbe"><td class="memItemLeft" align="right" valign="top"><a id="aa6cc94ed470ebb1c8ba63c2166408fbe" name="aa6cc94ed470ebb1c8ba63c2166408fbe"></a>
+static ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><b>SelectObjectPtr</b> ()</td></tr>
+<tr class="memitem:aec9c2ca27f4d6154bced40697723d798" id="r_aec9c2ca27f4d6154bced40697723d798"><td class="memItemLeft" align="right" valign="top"><a id="aec9c2ca27f4d6154bced40697723d798" name="aec9c2ca27f4d6154bced40697723d798"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetGUIObjectDetailSize</b> ()</td></tr>
+<tr class="memdesc:aec9c2ca27f4d6154bced40697723d798"><td class="mdescLeft">&#160;</td><td class="mdescRight">GUIオブジェクトのEditor設定であるためObjectでなくこちらで設定する <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Proc</h2></td></tr>
+<tr class="memitem:ac92ebe1c4749abec88d8b490e8738a97" id="r_ac92ebe1c4749abec88d8b490e8738a97"><td class="memItemLeft" align="right" valign="top">enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac92ebe1c4749abec88d8b490e8738a97">EditorStatusBit</a> : u64 { <a class="el" href="#ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1">EditorPlacement</a>
+, <a class="el" href="#ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f">EditorPlacement_Always</a>
+ }</td></tr>
+<tr class="memitem:ab92d86fc0973bcfe3cd3d47ebf31a144" id="r_ab92d86fc0973bcfe3cd3d47ebf31a144"><td class="memItemLeft" align="right" valign="top"><a id="ab92d86fc0973bcfe3cd3d47ebf31a144" name="ab92d86fc0973bcfe3cd3d47ebf31a144"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>SETGUI_ATTACH_LEFT</b> = -10000</td></tr>
+<tr class="memitem:a191e505ff6fc1d326e75b637f07b7952" id="r_a191e505ff6fc1d326e75b637f07b7952"><td class="memItemLeft" align="right" valign="top"><a id="a191e505ff6fc1d326e75b637f07b7952" name="a191e505ff6fc1d326e75b637f07b7952"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>SETGUI_ATTACH_RIGHT</b> = +10000</td></tr>
+<tr class="memitem:a6f9b586a53fe8076385a6e02b4555628" id="r_a6f9b586a53fe8076385a6e02b4555628"><td class="memItemLeft" align="right" valign="top"><a id="a6f9b586a53fe8076385a6e02b4555628" name="a6f9b586a53fe8076385a6e02b4555628"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>SETGUI_ATTACH_TOP</b> = -10000</td></tr>
+<tr class="memitem:a2e046f0540ab99430e14ee2af74d5140" id="r_a2e046f0540ab99430e14ee2af74d5140"><td class="memItemLeft" align="right" valign="top"><a id="a2e046f0540ab99430e14ee2af74d5140" name="a2e046f0540ab99430e14ee2af74d5140"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>SETGUI_ATTACH_BOTTOM</b> = +10000</td></tr>
+<tr class="memitem:a89d86265bdf50406d7dae01c7cf24de0" id="r_a89d86265bdf50406d7dae01c7cf24de0"><td class="memItemLeft" align="right" valign="top"><a id="a89d86265bdf50406d7dae01c7cf24de0" name="a89d86265bdf50406d7dae01c7cf24de0"></a>
+static SignalsDefault &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSignals</b> (<a class="el" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing)</td></tr>
+<tr class="memitem:ad75a1ed81a95aa300459c4491fa919f4" id="r_ad75a1ed81a95aa300459c4491fa919f4"><td class="memItemLeft" align="right" valign="top"><a id="ad75a1ed81a95aa300459c4491fa919f4" name="ad75a1ed81a95aa300459c4491fa919f4"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetGUIWindow</b> (int posx, int posy, int width, int height)</td></tr>
+<tr class="memitem:a371a58469c5d5a4887a0514ba5c11090" id="r_a371a58469c5d5a4887a0514ba5c11090"><td class="memItemLeft" align="right" valign="top">static ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a371a58469c5d5a4887a0514ba5c11090">PickObject</a> (int x, int y)</td></tr>
+<tr class="memdesc:a371a58469c5d5a4887a0514ba5c11090"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト選択  <br /></td></tr>
+<tr class="memitem:a908202bd4ffaf8c710345e58a7e36e94" id="r_a908202bd4ffaf8c710345e58a7e36e94"><td class="memItemLeft" align="right" valign="top">static ComponentCameraWeakPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a908202bd4ffaf8c710345e58a7e36e94">GetCurrentCamera</a> ()</td></tr>
+<tr class="memdesc:a908202bd4ffaf8c710345e58a7e36e94"><td class="mdescLeft">&#160;</td><td class="mdescRight">カレントカメラの取得  <br /></td></tr>
+<tr class="memitem:a6b574f3017be5bb64e7e3d4c7e14aeed" id="r_a6b574f3017be5bb64e7e3d4c7e14aeed"><td class="memItemLeft" align="right" valign="top">static ComponentCameraWeakPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b574f3017be5bb64e7e3d4c7e14aeed">SetCurrentCamera</a> (std::string_view name)</td></tr>
+<tr class="memdesc:a6b574f3017be5bb64e7e3d4c7e14aeed"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトの名前でのカレントカメラの設定  <br /></td></tr>
+<tr class="memitem:a97e3fcf746d3aef8a3a3789907701fe6" id="r_a97e3fcf746d3aef8a3a3789907701fe6"><td class="memItemLeft" align="right" valign="top"><a id="a97e3fcf746d3aef8a3a3789907701fe6" name="a97e3fcf746d3aef8a3a3789907701fe6"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SetEditorStatus</b> (<a class="el" href="#ac92ebe1c4749abec88d8b490e8738a97">EditorStatusBit</a> b, bool on)</td></tr>
+<tr class="memitem:a115d6e7de8c7fce285b54ead8caa35ee" id="r_a115d6e7de8c7fce285b54ead8caa35ee"><td class="memItemLeft" align="right" valign="top"><a id="a115d6e7de8c7fce285b54ead8caa35ee" name="a115d6e7de8c7fce285b54ead8caa35ee"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetEditorStatus</b> (<a class="el" href="#ac92ebe1c4749abec88d8b490e8738a97">EditorStatusBit</a> b)</td></tr>
+<tr class="memitem:a3177f5365d677bcb663d5f717d79e9a2" id="r_a3177f5365d677bcb663d5f717d79e9a2"><td class="memItemLeft" align="right" valign="top"><a id="a3177f5365d677bcb663d5f717d79e9a2" name="a3177f5365d677bcb663d5f717d79e9a2"></a>
+static <a class="el" href="struct_status.html">Status</a>&lt; <a class="el" href="#ac92ebe1c4749abec88d8b490e8738a97">EditorStatusBit</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>SceneStatus</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+Cereal セーブロード</h2></td></tr>
+<tr class="memitem:ae2c498cdcc205a471f654f7c02cfb0ac" id="r_ae2c498cdcc205a471f654f7c02cfb0ac"><td class="memItemLeft" align="right" valign="top"><a id="ae2c498cdcc205a471f654f7c02cfb0ac" name="ae2c498cdcc205a471f654f7c02cfb0ac"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>SaveEditor</b> ()</td></tr>
+<tr class="memitem:a6dacffd9ad9dfba127275902cff660e5" id="r_a6dacffd9ad9dfba127275902cff660e5"><td class="memItemLeft" align="right" valign="top"><a id="a6dacffd9ad9dfba127275902cff660e5" name="a6dacffd9ad9dfba127275902cff660e5"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>LoadEditor</b> ()</td></tr>
+<tr class="memitem:a9edb4c659d21e254ed3216162325293a" id="r_a9edb4c659d21e254ed3216162325293a"><td class="memItemLeft" align="right" valign="top"><a id="a9edb4c659d21e254ed3216162325293a" name="a9edb4c659d21e254ed3216162325293a"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>Save</b> (std::string_view filename=&quot;&quot;)</td></tr>
+<tr class="memitem:aed3dec9b07d5fbda9602f909485f4a86" id="r_aed3dec9b07d5fbda9602f909485f4a86"><td class="memItemLeft" align="right" valign="top"><a id="aed3dec9b07d5fbda9602f909485f4a86" name="aed3dec9b07d5fbda9602f909485f4a86"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>Load</b> (std::string_view filename=&quot;&quot;)</td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型メンバ詳解</h2>
+<a id="ac92ebe1c4749abec88d8b490e8738a97" name="ac92ebe1c4749abec88d8b490e8738a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac92ebe1c4749abec88d8b490e8738a97">&#9670;&#160;</a></span>EditorStatusBit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum struct Scene::EditorStatusBit : <a class="el" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1" name="ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1"></a>EditorPlacement&#160;</td><td class="fielddoc"><p>エディタ配置 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f" name="ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f"></a>EditorPlacement_Always&#160;</td><td class="fielddoc"><p>エディタ配置(常に引っ付く) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a6c587929c515912fc5b966a115539e3e" name="a6c587929c515912fc5b966a115539e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c587929c515912fc5b966a115539e3e">&#9670;&#160;</a></span>Change()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::Change </td>
+          <td>(</td>
+          <td class="paramtype">BasePtr</td>          <td class="paramname"><span class="paramname"><em>scene</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>シーン切り替え </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scene</td><td>次に再生するシーン</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>内部的には、SetNextScene() -&gt; ChangeNextScene() が呼ばれています </p>
+
+</div>
+</div>
+<a id="a01747d00538360fded5f192a2937175b" name="a01747d00538360fded5f192a2937175b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01747d00538360fded5f192a2937175b">&#9670;&#160;</a></span>CreateObjectDelayInitialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; T &gt; Scene::CreateObjectDelayInitialize </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">u8&quot;object&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>no_transform</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a></td>          <td class="paramname"><span class="paramname"><em>update</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a></td>          <td class="paramname"><span class="paramname"><em>draw</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトの作成 Objectをシーン上に発生させる </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no_transform</td><td>ComponentTransformを作らない (true = 作らない) </td></tr>
+    <tr><td class="paramname">update</td><td>処理優先 </td></tr>
+    <tr><td class="paramname">draw</td><td>描画優先 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8eafc112b91ebde95fd4491d409b5334" name="a8eafc112b91ebde95fd4491d409b5334"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eafc112b91ebde95fd4491d409b5334">&#9670;&#160;</a></span>CreateObjectPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; T &gt; Scene::CreateObjectPtr </td>
+          <td>(</td>
+          <td class="paramtype">const std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">u8&quot;object&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>no_transform</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a></td>          <td class="paramname"><span class="paramname"><em>update</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a></td>          <td class="paramname"><span class="paramname"><em>draw</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトの作成 Objectをシーン上に発生させる </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">no_transform</td><td>ComponentTransformを作らない (true = 作らない) </td></tr>
+    <tr><td class="paramname">update</td><td>処理優先 </td></tr>
+    <tr><td class="paramname">draw</td><td>描画優先 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a908202bd4ffaf8c710345e58a7e36e94" name="a908202bd4ffaf8c710345e58a7e36e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a908202bd4ffaf8c710345e58a7e36e94">&#9670;&#160;</a></span>GetCurrentCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComponentCameraWeakPtr Scene::GetCurrentCamera </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>カレントカメラの取得 </p>
+<dl class="section return"><dt>戻り値</dt><dd>カレントカメラ </dd></dl>
+
+</div>
+</div>
+<a id="a9e143dc2e860651e852c1b45b0d9b3c3" name="a9e143dc2e860651e852c1b45b0d9b3c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e143dc2e860651e852c1b45b0d9b3c3">&#9670;&#160;</a></span>GetObjectPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; T &gt; Scene::GetObjectPtr </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;&quot;</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクトサーチ&amp;取得 </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>取得したいオブジェクトタイプ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>取得したいオブジェクトの名前 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>オブジェクト </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">todo</a></b></dt><dd>nullptrの時、存在しないので、ここでLOGでエラーを出しておく </dd></dl>
+
+</div>
+</div>
+<a id="a9c9ace68b25b4ce4432a97d26dfc9271" name="a9c9ace68b25b4ce4432a97d26dfc9271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c9ace68b25b4ce4432a97d26dfc9271">&#9670;&#160;</a></span>GetObjectsPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::shared_ptr&lt; T &gt; &gt; Scene::GetObjectsPtr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクトサーチ&amp;取得 </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>取得したいオブジェクトタイプ</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>同じタイプのオブジェクトが複数あると先に見つかったものを返します </p><dl class="section return"><dt>戻り値</dt><dd>オブジェクト </dd></dl>
+
+</div>
+</div>
+<a id="a9c34e940e4f2ec488a0adb63b81ae67a" name="a9c34e940e4f2ec488a0adb63b81ae67a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c34e940e4f2ec488a0adb63b81ae67a">&#9670;&#160;</a></span>GetScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; T &gt; Scene::GetScene </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>シーンを作成または取得します </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">class</td><td>T 取得するシーンクラス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>シーン名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>シーン </dd></dl>
+
+</div>
+</div>
+<a id="ad3fac02e013073c19698b3495f8ce6f4" name="ad3fac02e013073c19698b3495f8ce6f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3fac02e013073c19698b3495f8ce6f4">&#9670;&#160;</a></span>GetTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Scene::GetTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>シーン内時間の取得 </p><dl class="section return"><dt>戻り値</dt><dd>シーンが始まってからの時間 </dd></dl>
+
+</div>
+</div>
+<a id="a193518f206eee1c3e683426005d7ca56" name="a193518f206eee1c3e683426005d7ca56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a193518f206eee1c3e683426005d7ca56">&#9670;&#160;</a></span>IsPause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Scene::IsPause </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ポーズ中かをチェック </p><dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>ポーズ中 </td></tr>
+    <tr><td class="paramname">false</td><td>ポーズしていない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a371a58469c5d5a4887a0514ba5c11090" name="a371a58469c5d5a4887a0514ba5c11090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371a58469c5d5a4887a0514ba5c11090">&#9670;&#160;</a></span>PickObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ObjectPtr Scene::PickObject </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクト選択 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>mouseポインタX </td></tr>
+    <tr><td class="paramname">y</td><td>mouseポインタY </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ObjectPtr (ない場合はnullptr) </dd></dl>
+
+</div>
+</div>
+<a id="a770e8579116a453c1b263f7e34c9ce39" name="a770e8579116a453c1b263f7e34c9ce39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a770e8579116a453c1b263f7e34c9ce39">&#9670;&#160;</a></span>ReleaseScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::ReleaseScene </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>シーンを消去します </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>シーン名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6b574f3017be5bb64e7e3d4c7e14aeed" name="a6b574f3017be5bb64e7e3d4c7e14aeed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b574f3017be5bb64e7e3d4c7e14aeed">&#9670;&#160;</a></span>SetCurrentCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ComponentCameraWeakPtr Scene::SetCurrentCamera </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクトの名前でのカレントカメラの設定 </p>
+<p>name 名前 </p><dl class="section return"><dt>戻り値</dt><dd>カレントカメラ </dd></dl>
+
+</div>
+</div>
+<a id="aa72309f8cf847a64f04ac440acf177ec" name="aa72309f8cf847a64f04ac440acf177ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa72309f8cf847a64f04ac440acf177ec">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>シーン更新 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta</td><td>更新インターバル(秒指定) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/自作エンジン/src/System/<a class="el" href="_scene_8h_source.html">Scene.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_scene.html">Scene</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

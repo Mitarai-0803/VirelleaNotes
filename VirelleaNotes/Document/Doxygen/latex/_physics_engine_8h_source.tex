@@ -1,0 +1,90 @@
+\doxysection{Physics\+Engine.\+h}
+\hypertarget{_physics_engine_8h_source}{}\label{_physics_engine_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsEngine.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsEngine.h}}
+\mbox{\hyperlink{_physics_engine_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ray}{Ray}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }JPH\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }Vec3;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }Quat;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }Mat44;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }PhysicsSystem;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }BodyInterface;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }TempAllocator;}
+\DoxyCodeLine{00017\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ JPH}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }physics\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267ba}{ObjectLayers}}\ :\ \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00026\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structphysics_1_1_ray_cast_result}{RayCastResult}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}\ body\_id\_;\ \ \ \ \textcolor{comment}{//\ ボディID}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ t\_;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 衝突点のパラメーターt\ \ hit\_position\ =\ start\ +\ t\ *\ (end\ -\/\ start)}}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ 物理シミュレーション}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classphysics_1_1_engine_a08b42b6b3fc88a1a8afd47efde3823cb}{Engine}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classphysics_1_1_engine_a08b42b6b3fc88a1a8afd47efde3823cb}{Engine}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classphysics_1_1_engine_a9de3345e6bce21c52b45b47d7f9a60c0}{\string~Engine}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_engine_a96a24878ea8a67f35ebfef84e804f1cf}{update}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ dt)\ =\ 0;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ \ シーンにレイをキャスト}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classphysics_1_1_engine_ad87d160a08543e440af348a00be309cd}{castRay}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_ray}{Ray}}\&\ ray,\ \mbox{\hyperlink{structphysics_1_1_ray_cast_result}{RayCastResult}}\&\ result)\ =\ 0;}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_engine_abbc4494b9eca276c577867230d10b304}{optimize}}()\ =\ 0;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_engine_a4ed415ef1b0a43a39bc75eab7d9e83b2}{setLayerAlias}}(\textcolor{keyword}{const}\ std::pair<physics::ObjectLayers,\ u16>*\ layers,\ \textcolor{keywordtype}{size\_t}\ layerCount)\ =\ 0;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_engine_ad67bc7551d7da8b923967e983260af0d}{overrideLayerCollide}}(std::function<\textcolor{keywordtype}{bool}(\mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}},\ \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}})>\ callback)\ =\ 0;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ float3\ \mbox{\hyperlink{classphysics_1_1_engine_af553ad1f2213303c889854b95e3b2a75}{gravity}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classphysics_1_1_engine_a7b10220f9e53630cb19fc6da12cf0317}{isValid}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classphysics_1_1_engine_a08b42b6b3fc88a1a8afd47efde3823cb}{Engine}}*\ \mbox{\hyperlink{classphysics_1_1_engine_a78aea17182a7ed3a7082f5660a491cfb}{instance}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keyword}{static}\ JPH::PhysicsSystem*\ \mbox{\hyperlink{classphysics_1_1_engine_a3306f98b56010abde22227702730f61a}{physicsSystem}}();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{static}\ JPH::BodyInterface*\ \mbox{\hyperlink{classphysics_1_1_engine_a4241a537ffe1b9642f134bb88f65c1af}{bodyInterface}}();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{static}\ JPH::TempAllocator*\ \mbox{\hyperlink{classphysics_1_1_engine_abd023769b83f598a83dfab2d116443ea}{tempAllocator}}();}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00106\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{comment}{//\ \ 物理シミュレーションクラスを作成}}
+\DoxyCodeLine{00110\ std::unique\_ptr<physics::Engine>\ createPhysics();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ JPH::Vec3\ \ castJPH(\textcolor{keyword}{const}\ float3\&\ v);}
+\DoxyCodeLine{00115\ float3\ \ \ \ \ castJPH(\textcolor{keyword}{const}\ JPH::Vec3\&\ v);}
+\DoxyCodeLine{00116\ JPH::Quat\ \ castJPH(\textcolor{keyword}{const}\ quaternion\&\ q);}
+\DoxyCodeLine{00117\ quaternion\ castJPH(\textcolor{keyword}{const}\ JPH::Quat\&\ v);}
+\DoxyCodeLine{00118\ \mbox{\hyperlink{classmatrix}{matrix}}\ \ \ \ \ castJPH(\textcolor{keyword}{const}\ JPH::Mat44\&\ mat44);}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ physics}}
+
+\end{DoxyCode}

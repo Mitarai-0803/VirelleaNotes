@@ -1,0 +1,482 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: physics::Character クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classphysics_1_1_character.html','','classphysics_1_1_character-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">physics::Character クラス<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>キャラクターコントローラー  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_physics_character_8h_source.html">PhysicsCharacter.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:ContactListener" id="r_ContactListener"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysics_1_1_character_1_1_contact_listener.html">ContactListener</a></td></tr>
+<tr class="memitem:ContactSettings" id="r_ContactSettings"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classphysics_1_1_character_1_1_contact_settings.html">ContactSettings</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a64bf4eb4653df1dfeefb2443f2fa4873" id="r_a64bf4eb4653df1dfeefb2443f2fa4873"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64bf4eb4653df1dfeefb2443f2fa4873">GroundState</a> { <a class="el" href="#a64bf4eb4653df1dfeefb2443f2fa4873a2b9beed57034f5727573d7ded76cf777">OnGround</a>
+, <a class="el" href="#a64bf4eb4653df1dfeefb2443f2fa4873a50f80f8d96a6d65de73ba8a6b9910761">OnSteepGround</a>
+, <a class="el" href="#a64bf4eb4653df1dfeefb2443f2fa4873a9ed2d871602556951e39f3cebd08d6cb">NotSupported</a>
+, <a class="el" href="#a64bf4eb4653df1dfeefb2443f2fa4873aee4e669a07b061d70b9b79dfed9cb5e7">InAir</a>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">コンタクトリスナー</div></td></tr>
+<tr class="memitem:a312ff4bf8d4d23672f70481de601e174" id="r_a312ff4bf8d4d23672f70481de601e174"><td class="memItemLeft" align="right" valign="top"><a id="a312ff4bf8d4d23672f70481de601e174" name="a312ff4bf8d4d23672f70481de601e174"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setListener</b> (<a class="el" href="classphysics_1_1_character_1_1_contact_listener.html">physics::Character::ContactListener</a> *<a class="el" href="#af75d79d7efe3e5a592474b1f9bdc542f">listener</a>)=0</td></tr>
+<tr class="memdesc:a312ff4bf8d4d23672f70481de601e174"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンタクトリスナーを設定 <br /></td></tr>
+<tr class="memitem:af75d79d7efe3e5a592474b1f9bdc542f" id="r_af75d79d7efe3e5a592474b1f9bdc542f"><td class="memItemLeft" align="right" valign="top"><a id="af75d79d7efe3e5a592474b1f9bdc542f" name="af75d79d7efe3e5a592474b1f9bdc542f"></a>
+virtual <a class="el" href="classphysics_1_1_character_1_1_contact_listener.html">physics::Character::ContactListener</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>listener</b> () const =0</td></tr>
+<tr class="memdesc:af75d79d7efe3e5a592474b1f9bdc542f"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンタクトリスナーを取得 <br /></td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">パラメーター</div></td></tr>
+<tr class="memitem:a8e6a4bb7757c969fb3fc3a35ff866696" id="r_a8e6a4bb7757c969fb3fc3a35ff866696"><td class="memItemLeft" align="right" valign="top"><a id="a8e6a4bb7757c969fb3fc3a35ff866696" name="a8e6a4bb7757c969fb3fc3a35ff866696"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>linearVelocity</b> () const =0</td></tr>
+<tr class="memdesc:a8e6a4bb7757c969fb3fc3a35ff866696"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度を取得 (単位:m/s) <br /></td></tr>
+<tr class="memitem:a7a466020621512467bf8b2c99cbd7410" id="r_a7a466020621512467bf8b2c99cbd7410"><td class="memItemLeft" align="right" valign="top"><a id="a7a466020621512467bf8b2c99cbd7410" name="a7a466020621512467bf8b2c99cbd7410"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setLinearVelocity</b> (const float3 &amp;linear_velocity)=0</td></tr>
+<tr class="memdesc:a7a466020621512467bf8b2c99cbd7410"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度を設定 (単位:m/s) <br /></td></tr>
+<tr class="memitem:a4dd722578045fe3b4f9343efa7f1f9a4" id="r_a4dd722578045fe3b4f9343efa7f1f9a4"><td class="memItemLeft" align="right" valign="top"><a id="a4dd722578045fe3b4f9343efa7f1f9a4" name="a4dd722578045fe3b4f9343efa7f1f9a4"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> () const =0</td></tr>
+<tr class="memdesc:a4dd722578045fe3b4f9343efa7f1f9a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置を取得 <br /></td></tr>
+<tr class="memitem:ade4826fc25e3722627329a79fad55302" id="r_ade4826fc25e3722627329a79fad55302"><td class="memItemLeft" align="right" valign="top"><a id="ade4826fc25e3722627329a79fad55302" name="ade4826fc25e3722627329a79fad55302"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (const float3 &amp;p)=0</td></tr>
+<tr class="memdesc:ade4826fc25e3722627329a79fad55302"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置を設定 <br /></td></tr>
+<tr class="memitem:a6af7cf39f8ca37c9009003875bb06468" id="r_a6af7cf39f8ca37c9009003875bb06468"><td class="memItemLeft" align="right" valign="top"><a id="a6af7cf39f8ca37c9009003875bb06468" name="a6af7cf39f8ca37c9009003875bb06468"></a>
+virtual quaternion&#160;</td><td class="memItemRight" valign="bottom"><b>rotation</b> () const =0</td></tr>
+<tr class="memdesc:a6af7cf39f8ca37c9009003875bb06468"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転姿勢を取得 <br /></td></tr>
+<tr class="memitem:af06acd9d0fe75db90f2b82282c5b283f" id="r_af06acd9d0fe75db90f2b82282c5b283f"><td class="memItemLeft" align="right" valign="top"><a id="af06acd9d0fe75db90f2b82282c5b283f" name="af06acd9d0fe75db90f2b82282c5b283f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setRotation</b> (const quaternion &amp;r)=0</td></tr>
+<tr class="memdesc:af06acd9d0fe75db90f2b82282c5b283f"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転姿勢を設定 <br /></td></tr>
+<tr class="memitem:a2eeffe7b11fe0663f455e198bc3681c3" id="r_a2eeffe7b11fe0663f455e198bc3681c3"><td class="memItemLeft" align="right" valign="top"><a id="a2eeffe7b11fe0663f455e198bc3681c3" name="a2eeffe7b11fe0663f455e198bc3681c3"></a>
+virtual <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>worldMatrix</b> () const =0</td></tr>
+<tr class="memdesc:a2eeffe7b11fe0663f455e198bc3681c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列を取得 <br /></td></tr>
+<tr class="memitem:a2e47b974eaaf62e982e657e251b26201" id="r_a2e47b974eaaf62e982e657e251b26201"><td class="memItemLeft" align="right" valign="top"><a id="a2e47b974eaaf62e982e657e251b26201" name="a2e47b974eaaf62e982e657e251b26201"></a>
+virtual <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>centerOfMassTransform</b> () const =0</td></tr>
+<tr class="memdesc:a2e47b974eaaf62e982e657e251b26201"><td class="mdescLeft">&#160;</td><td class="mdescRight">重心の変換行列を取得 <br /></td></tr>
+<tr class="memitem:a35601f6453ac278e80f3fb81157ad7a5" id="r_a35601f6453ac278e80f3fb81157ad7a5"><td class="memItemLeft" align="right" valign="top"><a id="a35601f6453ac278e80f3fb81157ad7a5" name="a35601f6453ac278e80f3fb81157ad7a5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setMass</b> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> mass)=0</td></tr>
+<tr class="memdesc:a35601f6453ac278e80f3fb81157ad7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">質量を設定 (単位:kg) <br /></td></tr>
+<tr class="memitem:aff28ca0b1c3abccb44914e43f54eeefd" id="r_aff28ca0b1c3abccb44914e43f54eeefd"><td class="memItemLeft" align="right" valign="top"><a id="aff28ca0b1c3abccb44914e43f54eeefd" name="aff28ca0b1c3abccb44914e43f54eeefd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxSlopeAngle</b> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> max_slope_angle)=0</td></tr>
+<tr class="memdesc:aff28ca0b1c3abccb44914e43f54eeefd"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャラクターがまだ歩ける最大傾斜角度を設定する (単位:ラジアン) <br /></td></tr>
+<tr class="memitem:a1850bc55a8663491fee199f7fb31f3d8" id="r_a1850bc55a8663491fee199f7fb31f3d8"><td class="memItemLeft" align="right" valign="top"><a id="a1850bc55a8663491fee199f7fb31f3d8" name="a1850bc55a8663491fee199f7fb31f3d8"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setMaxStrength</b> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> max_strength)=0</td></tr>
+<tr class="memdesc:a1850bc55a8663491fee199f7fb31f3d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャラクターが他の物体を押すことができる最大の力を設定（単位:N） <br /></td></tr>
+<tr class="memitem:ab76bde2e4a93c6be241012d48b19bd74" id="r_ab76bde2e4a93c6be241012d48b19bd74"><td class="memItemLeft" align="right" valign="top"><a id="ab76bde2e4a93c6be241012d48b19bd74" name="ab76bde2e4a93c6be241012d48b19bd74"></a>
+virtual <a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><b>characterPadding</b> () const =0</td></tr>
+<tr class="memdesc:ab76bde2e4a93c6be241012d48b19bd74"><td class="mdescLeft">&#160;</td><td class="mdescRight">ジオメトリからどれだけ離れられるかの距離を取得 <br /></td></tr>
+<tr class="memitem:a6368798da0919a9f9d39db5b13e23edd" id="r_a6368798da0919a9f9d39db5b13e23edd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6368798da0919a9f9d39db5b13e23edd">update</a> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> delta_time)=0</td></tr>
+<tr class="memitem:a07bd7bb40708ed1beb8f2d06d5f9daca" id="r_a07bd7bb40708ed1beb8f2d06d5f9daca"><td class="memItemLeft" align="right" valign="top">virtual float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07bd7bb40708ed1beb8f2d06d5f9daca">move</a> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> delta_time, const float3 &amp;move_vector, const float3 &amp;old_position, const float3 &amp;jump_vector=float3(0.0f, 0.0f, 0.0f))=0</td></tr>
+<tr class="memitem:a2258c4316e1079fa738005bfbf502316" id="r_a2258c4316e1079fa738005bfbf502316"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2258c4316e1079fa738005bfbf502316">canWalkStairs</a> (const float3 &amp;move_vector) const =0</td></tr>
+<tr class="memitem:a5c310f6ab55042491d41f831634199c1" id="r_a5c310f6ab55042491d41f831634199c1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c310f6ab55042491d41f831634199c1">walkStairs</a> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> delta_time, const float3 &amp;step_up, const float3 &amp;step_forward, const float3 &amp;step_forward_test, const float3 &amp;step_down_extra=float3(0.0f, 0.0f, 0.0f))=0</td></tr>
+<tr class="memitem:a1c8eab5932aa07a6c7777b05658c7a2a" id="r_a1c8eab5932aa07a6c7777b05658c7a2a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c8eab5932aa07a6c7777b05658c7a2a">refleshContacts</a> ()=0</td></tr>
+<tr class="memitem:add6b0d15ca001aec9f26747094859ea2" id="r_add6b0d15ca001aec9f26747094859ea2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add6b0d15ca001aec9f26747094859ea2">setShape</a> (const <a class="el" href="classshape_1_1_base.html">shape::Base</a> &amp;<a class="el" href="#ac27dc5721dd843a3b4dd182fd55fd101">shape</a>, const float3 &amp;shape_offset=float3(0.0f, 0.0f, 0.0f))=0</td></tr>
+<tr class="memitem:ac27dc5721dd843a3b4dd182fd55fd101" id="r_ac27dc5721dd843a3b4dd182fd55fd101"><td class="memItemLeft" align="right" valign="top"><a id="ac27dc5721dd843a3b4dd182fd55fd101" name="ac27dc5721dd843a3b4dd182fd55fd101"></a>
+virtual <a class="el" href="classshape_1_1_base.html">shape::Base</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>shape</b> () const =0</td></tr>
+<tr class="memdesc:ac27dc5721dd843a3b4dd182fd55fd101"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェイプを取得 <br /></td></tr>
+<tr class="memitem:a2e72aef2bd84dff611547cdb640e1c2e" id="r_a2e72aef2bd84dff611547cdb640e1c2e"><td class="memItemLeft" align="right" valign="top"><a id="a2e72aef2bd84dff611547cdb640e1c2e" name="a2e72aef2bd84dff611547cdb640e1c2e"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>shapeOffset</b> () const =0</td></tr>
+<tr class="memdesc:a2e72aef2bd84dff611547cdb640e1c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェイプの移動オフセットを取得 <br /></td></tr>
+<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">接地判定関連</div></td></tr>
+<tr class="memitem:a8a24875f6882a34c25776422cc83ff13" id="r_a8a24875f6882a34c25776422cc83ff13"><td class="memItemLeft" align="right" valign="top"><a id="a8a24875f6882a34c25776422cc83ff13" name="a8a24875f6882a34c25776422cc83ff13"></a>
+virtual <a class="el" href="#a64bf4eb4653df1dfeefb2443f2fa4873">Character::GroundState</a>&#160;</td><td class="memItemRight" valign="bottom"><b>groundState</b> () const =0</td></tr>
+<tr class="memdesc:a8a24875f6882a34c25776422cc83ff13"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の接地状態を取得 <br /></td></tr>
+<tr class="memitem:a75ef2bba3278c6effed998b2f61c71e0" id="r_a75ef2bba3278c6effed998b2f61c71e0"><td class="memItemLeft" align="right" valign="top"><a id="a75ef2bba3278c6effed998b2f61c71e0" name="a75ef2bba3278c6effed998b2f61c71e0"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>groundPosition</b> () const =0</td></tr>
+<tr class="memdesc:a75ef2bba3278c6effed998b2f61c71e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">接地している足元の位置座標を取得 <br /></td></tr>
+<tr class="memitem:a44010813f6325b7ab5965052d1a711fe" id="r_a44010813f6325b7ab5965052d1a711fe"><td class="memItemLeft" align="right" valign="top"><a id="a44010813f6325b7ab5965052d1a711fe" name="a44010813f6325b7ab5965052d1a711fe"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>groundNormal</b> () const =0</td></tr>
+<tr class="memdesc:a44010813f6325b7ab5965052d1a711fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">接地している足元の法線を取得 <br /></td></tr>
+<tr class="memitem:a7a562edf20007702fae5f8a25c7fc9b8" id="r_a7a562edf20007702fae5f8a25c7fc9b8"><td class="memItemLeft" align="right" valign="top"><a id="a7a562edf20007702fae5f8a25c7fc9b8" name="a7a562edf20007702fae5f8a25c7fc9b8"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>groundVelocity</b> () const =0</td></tr>
+<tr class="memdesc:a7a562edf20007702fae5f8a25c7fc9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">接地している足元の速度を取得 <br /></td></tr>
+<tr class="memitem:afefff07cea497a369bca10f06f202809" id="r_afefff07cea497a369bca10f06f202809"><td class="memItemLeft" align="right" valign="top"><a id="afefff07cea497a369bca10f06f202809" name="afefff07cea497a369bca10f06f202809"></a>
+virtual <a class="el" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><b>groundBodyID</b> () const =0</td></tr>
+<tr class="memdesc:afefff07cea497a369bca10f06f202809"><td class="mdescLeft">&#160;</td><td class="mdescRight">キャラクターが立っているオブジェクトのボディIDを取得 <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>キャラクターコントローラー </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型メンバ詳解</h2>
+<a id="a64bf4eb4653df1dfeefb2443f2fa4873" name="a64bf4eb4653df1dfeefb2443f2fa4873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64bf4eb4653df1dfeefb2443f2fa4873">&#9670;&#160;</a></span>GroundState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a64bf4eb4653df1dfeefb2443f2fa4873">physics::Character::GroundState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a64bf4eb4653df1dfeefb2443f2fa4873a2b9beed57034f5727573d7ded76cf777" name="a64bf4eb4653df1dfeefb2443f2fa4873a2b9beed57034f5727573d7ded76cf777"></a>OnGround&#160;</td><td class="fielddoc"><p>キャラクターが地上にいて自由に動ける状態 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a64bf4eb4653df1dfeefb2443f2fa4873a50f80f8d96a6d65de73ba8a6b9910761" name="a64bf4eb4653df1dfeefb2443f2fa4873a50f80f8d96a6d65de73ba8a6b9910761"></a>OnSteepGround&#160;</td><td class="fielddoc"><p>キャラクターは急すぎる斜面にいて、これ以上登れない。もし斜面から滑りたいのであれば、呼び出し手は下降速度をかけ始める必要があります。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a64bf4eb4653df1dfeefb2443f2fa4873a9ed2d871602556951e39f3cebd08d6cb" name="a64bf4eb4653df1dfeefb2443f2fa4873a9ed2d871602556951e39f3cebd08d6cb"></a>NotSupported&#160;</td><td class="fielddoc"><p>キャラクターがオブジェクトに触れているが、そのオブジェクトに対応していないため落下する必要がある。GetGroundXXX関数は、タッチされたオブジェクトの情報を返します。 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a64bf4eb4653df1dfeefb2443f2fa4873aee4e669a07b061d70b9b79dfed9cb5e7" name="a64bf4eb4653df1dfeefb2443f2fa4873aee4e669a07b061d70b9b79dfed9cb5e7"></a>InAir&#160;</td><td class="fielddoc"><p>キャラクターは空宙にいる </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a2258c4316e1079fa738005bfbf502316" name="a2258c4316e1079fa738005bfbf502316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2258c4316e1079fa738005bfbf502316">&#9670;&#160;</a></span>canWalkStairs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool physics::Character::canWalkStairs </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>move_vector</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>階段を歩けるかどうかを取得</p>
+<p>この関数はキャラクターが急すぎる斜面（垂直な壁など）に移動した場合にtrueを返します。 階段を上ろうとする場合はwalkStairsを呼び出すことになります。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">move_vector</td><td>移動ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a07bd7bb40708ed1beb8f2d06d5f9daca" name="a07bd7bb40708ed1beb8f2d06d5f9daca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07bd7bb40708ed1beb8f2d06d5f9daca">&#9670;&#160;</a></span>move()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float3 physics::Character::move </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>          <td class="paramname"><span class="paramname"><em>delta_time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>move_vector</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>old_position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>jump_vector</em></span><span class="paramdefsep"> = </span><span class="paramdefval">float3(0.0f,&#160;0.0f,&#160;0.0f)</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>移動 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta_time</td><td>シミュレーションステップ時間 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">move_vector</td><td>移動ベクトル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">old_position</td><td>移動前の位置( <a class="el" href="#a6368798da0919a9f9d39db5b13e23edd">update()</a>実行前の座標が必要です ) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">jump_vector</td><td>ジャンプ方向ベクトル(ジャンプしない場合は0で渡します) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>新しい補正後の移動速度 内部でwalkStairs()による階段歩行も行います </dd></dl>
+
+</div>
+</div>
+<a id="a1c8eab5932aa07a6c7777b05658c7a2a" name="a1c8eab5932aa07a6c7777b05658c7a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c8eab5932aa07a6c7777b05658c7a2a">&#9670;&#160;</a></span>refleshContacts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::Character::refleshContacts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>衝突点を再検出 この機能はキャラクターがテレポートした後に、新しい世界とのコンタクトを決定するために使用することができます。 </p>
+
+</div>
+</div>
+<a id="add6b0d15ca001aec9f26747094859ea2" name="add6b0d15ca001aec9f26747094859ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add6b0d15ca001aec9f26747094859ea2">&#9670;&#160;</a></span>setShape()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool physics::Character::setShape </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classshape_1_1_base.html">shape::Base</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>shape_offset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">float3(0.0f,&#160;0.0f,&#160;0.0f)</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>キャラクターの形状を入れ替える（しゃがみ、構え方など） </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">shape</td><td>形状 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">shape_offset</td><td>形状位置をずらすオフセット </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>正常終了(形状の入れ替え成功) </td></tr>
+    <tr><td class="paramname">false</td><td>形状の入れ替え後に衝突物があり、切り替えできなかった場合 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6368798da0919a9f9d39db5b13e23edd" name="a6368798da0919a9f9d39db5b13e23edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6368798da0919a9f9d39db5b13e23edd">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::Character::update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>          <td class="paramname"><span class="paramname"><em>delta_time</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>更新 現在の速度に応じてキャラクターを移動させます。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta_time</td><td>シミュレーションステップ時間 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5c310f6ab55042491d41f831634199c1" name="a5c310f6ab55042491d41f831634199c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c310f6ab55042491d41f831634199c1">&#9670;&#160;</a></span>walkStairs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool physics::Character::walkStairs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>          <td class="paramname"><span class="paramname"><em>delta_time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>step_up</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>step_forward</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>step_forward_test</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>step_down_extra</em></span><span class="paramdefsep"> = </span><span class="paramdefval">float3(0.0f,&#160;0.0f,&#160;0.0f)</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>階段歩行 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta_time</td><td>シミュレーションのステップ時間 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">step_up</td><td>ステップアップする方向と距離（これが最大ステップ高に相当する） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">step_forward</td><td>踏み台昇降の後に前に踏み出す方向と距離 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">step_forward_test</td><td>床を検査する方向と距離 </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">inStepDownExtra</td><td>ステップダウンする最後に加算される平行移動。上より下にステップダウンできるようにします。不要な場合は0に設定します。 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>階段の歩行が成功した場合はtrueが戻ります</dd></dl>
+<p>引数 step_forward_test について 高い周波数で走行している場合 step_forward は非常に小さくなり、降りるときに階段の側面にぶつかる可能性があります。 そのため、最大傾斜角度に違反する法線が発生する可能性があります。 このような場合は上昇位置からこの距離を使って再度テストし、有効なスロープを見つけるかどうかを確認します。 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/<a class="el" href="_physics_character_8h_source.html">PhysicsCharacter.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>physics</b></li><li class="navelem"><a href="classphysics_1_1_character.html">Character</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

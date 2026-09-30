@@ -1,0 +1,55 @@
+\doxysection{Scene\+Fps.\+h}
+\hypertarget{_scene_fps_8h_source}{}\label{_scene_fps_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneFps.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneFps.h}}
+\mbox{\hyperlink{_scene_fps_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_model}{Model}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_animation}{Animation}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture}{Texture}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_fps}{SceneFps}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_1_1_base}{Scene::Base}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{_type_info_8h_aed9c544bcefbc45da9189a4c3d3e4d6c}{BP\_CLASS\_DECL}}(\mbox{\hyperlink{class_scene_fps}{SceneFps}},\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}FPSサンプル"{}})}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ bool\ \mbox{\hyperlink{class_scene_fps_a744af30a20510715f5986bb094816390}{Init}}()\ override;\ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_fps_a31d8b1aed17e4459274140536c9366d0}{Update}}()\ override;\ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_fps_a3818694c1aa1e5cdad16853683442db3}{Draw}}()\ override;\ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_fps_a583191e46d83bc0056966e5c16682045}{Exit}}()\ override;\ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_fps_a6c269431590dc7f7bab48a098e6ce1fe}{GUI}}()\ override;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ private:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_attacked\_\ =\ false;\ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_model}{Model}}>\ model\_field\_;\ \ \ \ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_model}{Model}}>\ \ \ \ \ model\_;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_animation}{Animation}}>\ animation\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ \ \ tex\_diffuse\_;\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ \ \ tex\_specular\_;\ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ \ \ tex\_albedo\_;\ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ \ \ tex\_normal\_;\ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ \ \ tex\_ao\_;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_model}{Model}}>\ \ \ model\_knife\_;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ tex\_kn0\_albedo\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ tex\_kn0\_normal\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ tex\_kn0\_roughness\_;\ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ tex\_kn0\_metalness\_;\ \ \ \ }
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ tex\_kn1\_albedo\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ tex\_kn1\_normal\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ tex\_kn1\_roughness\_;\ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ tex\_kn1\_metalness\_;\ \ \ \ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ std::shared\_ptr<\mbox{\hyperlink{class_texture}{Texture}}>\ tex\_crosschairs\_;\ \ \ \ }
+\DoxyCodeLine{00052\ \};}
+
+\end{DoxyCode}

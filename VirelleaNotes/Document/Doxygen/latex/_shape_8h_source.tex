@@ -1,0 +1,133 @@
+\doxysection{Shape.\+h}
+\hypertarget{_shape_8h_source}{}\label{_shape_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/Shape.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/Shape.h}}
+\mbox{\hyperlink{_shape_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }shape\ \{}
+\DoxyCodeLine{00008\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_shape_8h_a9a3bcea560c04ba3bfdccf0bf60865d1}{default\_density\_}}\ =\ 1000.0f;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{Type}}\ :\ \mbox{\hyperlink{_typedef_8h_ae5300ed9eabeae78ee9d0c704a9c412a}{s32}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786a88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_sphere}{Sphere}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_box}{Box}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_capsule}{Capsule}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_cylinder}{Cylinder}},\ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_convex_hull}{ConvexHull}},\ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_mesh}{Mesh}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00029\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classshape_1_1_base_a1af2227f6de05e9ea03b2ff50c25648a}{Base}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_base_a1af2227f6de05e9ea03b2ff50c25648a}{Base}}(\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{shape::Type}}\ type)}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ :\ type\_(type)}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{shape::Type}}\ \mbox{\hyperlink{classshape_1_1_base_a1851ec46b8b181e5bcbc8d91a34f280f}{shapeType}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ type\_;\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{shape::Type}}\ type\_\ \ \ \ =\ \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786a88183b946cc5f0e8c96b2e66e1c74a7e}{shape::Type::Unknown}};}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \ \ \ \ \ \ \ \ density\_\ =\ \mbox{\hyperlink{_shape_8h_a9a3bcea560c04ba3bfdccf0bf60865d1}{default\_density\_}};}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classshape_1_1_sphere_a3e97caae7245d2c1cac0fdd519994d37}{Sphere}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classshape_1_1_base}{shape::Base}}}
+\DoxyCodeLine{00051\ \{}
+\DoxyCodeLine{00052\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ float3\ \mbox{\hyperlink{classshape_1_1_sphere_ad3e7478119ecdaa0d86495b973b08448}{position\_}};\ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \ \ \ \mbox{\hyperlink{classshape_1_1_sphere_a76beef0fe73f0023f6f368066bc17ede}{radius\_}};\ \ \ \ \ \ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_sphere_a3e97caae7245d2c1cac0fdd519994d37}{Sphere}}(\textcolor{keyword}{const}\ float3\&\ position,\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ radius,\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ density\ =\ \mbox{\hyperlink{_shape_8h_a9a3bcea560c04ba3bfdccf0bf60865d1}{default\_density\_}})}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ :\ shape::\mbox{\hyperlink{classshape_1_1_base_a1af2227f6de05e9ea03b2ff50c25648a}{Base}}(shape::\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{Type}}::\mbox{\hyperlink{classshape_1_1_sphere_a3e97caae7245d2c1cac0fdd519994d37}{Sphere}})}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classshape_1_1_sphere_ad3e7478119ecdaa0d86495b973b08448}{position\_}}(position)}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classshape_1_1_sphere_a76beef0fe73f0023f6f368066bc17ede}{radius\_}}(radius)}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ density\_\ =\ density;}
+\DoxyCodeLine{00063\ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00068\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00069\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classshape_1_1_box_a3634ef0c306ca13c203972ce45e04898}{Box}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classshape_1_1_base}{shape::Base}}}
+\DoxyCodeLine{00070\ \{}
+\DoxyCodeLine{00071\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00072\ \ \ \ \ float3\ \mbox{\hyperlink{classshape_1_1_box_ab68c19405eb1677ae15e578efae29d9d}{extent\_}};\ \ \ \ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_box_a3634ef0c306ca13c203972ce45e04898}{Box}}(\textcolor{keyword}{const}\ float3\&\ extent,\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ density\ =\ \mbox{\hyperlink{_shape_8h_a9a3bcea560c04ba3bfdccf0bf60865d1}{default\_density\_}})}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ :\ shape::\mbox{\hyperlink{classshape_1_1_base_a1af2227f6de05e9ea03b2ff50c25648a}{Base}}(shape::\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{Type}}::\mbox{\hyperlink{classshape_1_1_box_a3634ef0c306ca13c203972ce45e04898}{Box}})}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classshape_1_1_box_ab68c19405eb1677ae15e578efae29d9d}{extent\_}}(extent)}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ density\_\ =\ density;}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00086\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classshape_1_1_capsule_ab8bd41dd68cb58206eb4d93dd9cd9989}{Capsule}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classshape_1_1_base}{shape::Base}}}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \mbox{\hyperlink{classshape_1_1_capsule_ac5aee3e3a7c5fcb1a0b19eb0d5f640dd}{half\_height\_}};\ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \mbox{\hyperlink{classshape_1_1_capsule_a70409c59ede36496bde3d1f3fc496bd9}{radius\_}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_capsule_ab8bd41dd68cb58206eb4d93dd9cd9989}{Capsule}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ half\_height,\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ radius,\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ density\ =\ \mbox{\hyperlink{_shape_8h_a9a3bcea560c04ba3bfdccf0bf60865d1}{default\_density\_}})}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ :\ shape::\mbox{\hyperlink{classshape_1_1_base_a1af2227f6de05e9ea03b2ff50c25648a}{Base}}(shape::\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{Type}}::\mbox{\hyperlink{classshape_1_1_capsule_ab8bd41dd68cb58206eb4d93dd9cd9989}{Capsule}})}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classshape_1_1_capsule_ac5aee3e3a7c5fcb1a0b19eb0d5f640dd}{half\_height\_}}(half\_height)}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classshape_1_1_capsule_a70409c59ede36496bde3d1f3fc496bd9}{radius\_}}(radius)}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ density\_\ =\ density;}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00104\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00105\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classshape_1_1_cylinder_a132ece935b93218c087d919b620e9195}{Cylinder}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classshape_1_1_base}{shape::Base}}}
+\DoxyCodeLine{00106\ \{}
+\DoxyCodeLine{00107\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \mbox{\hyperlink{classshape_1_1_cylinder_a719b5b11c9644aa5346239fba55c4615}{half\_height\_}};\ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \mbox{\hyperlink{classshape_1_1_cylinder_aaea254c1352d98a3117df9d5f30eae6e}{radius\_}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_cylinder_a132ece935b93218c087d919b620e9195}{Cylinder}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ half\_height,\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ radius,\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ density\ =\ \mbox{\hyperlink{_shape_8h_a9a3bcea560c04ba3bfdccf0bf60865d1}{default\_density\_}})}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ :\ shape::\mbox{\hyperlink{classshape_1_1_base_a1af2227f6de05e9ea03b2ff50c25648a}{Base}}(shape::\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{Type}}::\mbox{\hyperlink{classshape_1_1_box}{Box}})}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classshape_1_1_cylinder_a719b5b11c9644aa5346239fba55c4615}{half\_height\_}}(half\_height)}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{classshape_1_1_cylinder_aaea254c1352d98a3117df9d5f30eae6e}{radius\_}}(radius)}
+\DoxyCodeLine{00116\ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ density\_\ =\ density;}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ \};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00123\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00124\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classshape_1_1_convex_hull_a211c4c2d2d1d869c206cb840e24998b6}{ConvexHull}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classshape_1_1_base}{shape::Base}}}
+\DoxyCodeLine{00125\ \{}
+\DoxyCodeLine{00126\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00127\ \ \ \ \ std::vector<float3>\ vertices\_;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_convex_hull_a211c4c2d2d1d869c206cb840e24998b6}{ConvexHull}}(\mbox{\hyperlink{class_model}{Model}}*\ model);}
+\DoxyCodeLine{00131\ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00135\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00136\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classshape_1_1_mesh_a667955c63db978d73722260df32dcf4f}{Mesh}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classshape_1_1_base}{shape::Base}}}
+\DoxyCodeLine{00137\ \{}
+\DoxyCodeLine{00138\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00139\ \ \ \ \ std::vector<float3>\ vertices\_;}
+\DoxyCodeLine{00140\ \ \ \ \ std::vector<u32>\ \ \ \ indices\_;}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{classshape_1_1_mesh_a667955c63db978d73722260df32dcf4f}{Mesh}}(\mbox{\hyperlink{class_model}{Model}}*\ model,\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ scale\ =\ 1.0f);}
+\DoxyCodeLine{00146\ \};}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ shape}}
+
+\end{DoxyCode}

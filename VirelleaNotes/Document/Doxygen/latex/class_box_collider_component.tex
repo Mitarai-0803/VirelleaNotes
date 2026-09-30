@@ -1,0 +1,109 @@
+\doxysection{Box\+Collider\+Component クラス}
+\hypertarget{class_box_collider_component}{}\label{class_box_collider_component}\index{BoxColliderComponent@{BoxColliderComponent}}
+
+
+Box\+Collider\+Component の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_box_collider_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Box\+Collider\+Component 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_box_collider_component__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_box_collider_component_a96d9d40013518e6f4efd81d0573e1289}{Init}} (JPH\+::\+Physics\+System \texorpdfstring{$\ast$}{*}system, const JPH\+::\+RVec3 \&pos, JPH\+::\+Vec3 half\+Extent=JPH\+::\+Vec3(0.\+5f, 0.\+5f, 0.\+5f), JPH\+::\+EMotion\+Type motion\+Type=JPH\+::\+EMotion\+Type\+::\+Dynamic)
+\begin{DoxyCompactList}\small\item\em 初期化処理（ボックス形状の生成と\+Body登録） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_collision_component}{Collision\+Component}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Collision\+Component} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ / デストラクタ \end{DoxyCompactList}\item 
+JPH\+::\+Body\+ID \mbox{\hyperlink{class_collision_component_afaaa49439b7408b00ae8d3904fb3e1b8}{Get\+Body\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Body\+ID取得 \end{DoxyCompactList}\item 
+JPH\+::\+RVec3 \mbox{\hyperlink{class_collision_component_a3ddd6a3821f24b4a85c8d285ae1296c5}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em ゲッター / セッター (アクセサ) \end{DoxyCompactList}\item 
+void {\bfseries Set\+Position} (const JPH\+::\+RVec3 \&pos)
+\begin{DoxyCompactList}\small\item\em 座標の設定 \end{DoxyCompactList}\item 
+JPH\+::\+Quat {\bfseries Get\+Rotation} () const
+\begin{DoxyCompactList}\small\item\em 回転の取得 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Rotation} (const JPH\+::\+Quat \&rot)
+\begin{DoxyCompactList}\small\item\em 回転の設定 \end{DoxyCompactList}\item 
+JPH\+::\+Vec3 {\bfseries Get\+Linear\+Velocity} () const
+\begin{DoxyCompactList}\small\item\em 速度の取得 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Linear\+Velocity} (const JPH\+::\+Vec3 \&velocity)
+\begin{DoxyCompactList}\small\item\em 速度の設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collision_component_a9dbd6f242046ee057a0a7b12ade7f6a5}{Add\+Force}} (const JPH\+::\+Vec3 \&force)
+\begin{DoxyCompactList}\small\item\em 物理操作 \end{DoxyCompactList}\item 
+void {\bfseries Add\+Impulse} (const JPH\+::\+Vec3 \&impulse)
+\begin{DoxyCompactList}\small\item\em 瞬間的な衝撃を加える \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Component\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Component\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em フレーム更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a4027650e43503768ca90668c82d5df84}{Draw\+Debug}} ()
+\begin{DoxyCompactList}\small\item\em デバッグ描画処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_collision_component}{Collision\+Component}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_collision_component_a833155b9d074ce6ee798ae4710dfd9ec}{Create\+And\+Add\+Body}} (JPH\+::\+Physics\+System \texorpdfstring{$\ast$}{*}system, JPH\+::\+Ref$<$ JPH\+::\+Shape $>$ shape, const JPH\+::\+RVec3 \&pos, JPH\+::\+EMotion\+Type motion\+Type)
+\begin{DoxyCompactList}\small\item\em 物理ボディの生成・登録（派生クラスの Init から呼ぶ共通処理） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_collision_component}{Collision\+Component}} に属する継承限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+Body\+ID {\bfseries m\+\_\+body\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Joltのボディ\+ID \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_box_collider_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_box_collider_component_a96d9d40013518e6f4efd81d0573e1289}\index{BoxColliderComponent@{BoxColliderComponent}!Init@{Init}}
+\index{Init@{Init}!BoxColliderComponent@{BoxColliderComponent}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_box_collider_component_a96d9d40013518e6f4efd81d0573e1289} 
+void Box\+Collider\+Component\+::\+Init (\begin{DoxyParamCaption}\item[{JPH\+::\+Physics\+System \texorpdfstring{$\ast$}{*}}]{system}{, }\item[{const JPH\+::\+RVec3 \&}]{pos}{, }\item[{JPH\+::\+Vec3}]{half\+Extent}{ = {\ttfamily JPH\+:\+:Vec3(0.5f,~0.5f,~0.5f)}, }\item[{JPH\+::\+EMotion\+Type}]{motion\+Type}{ = {\ttfamily JPH\+:\+:EMotionType\+:\+:Dynamic}}\end{DoxyParamCaption})}
+
+
+
+初期化処理（ボックス形状の生成と\+Body登録） 
+
+
+\begin{DoxyParams}{引数}
+{\em system} & 物理システム \\
+\hline
+{\em pos} & 初期位置 \\
+\hline
+{\em half\+Extent} & ボックスの半サイズ（デフォルト\+: 0.\+5f の立方体） \\
+\hline
+{\em motion\+Type} & Dynamic=動く / Static=動かない（デフォルト\+: Dynamic） \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_box_collider_component_8h}{Box\+Collider\+Component.\+h}}\end{DoxyCompactItemize}

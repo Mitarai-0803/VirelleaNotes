@@ -1,0 +1,107 @@
+\doxysection{Component\+Collision\+Line.\+h}
+\hypertarget{_component_collision_line_8h_source}{}\label{_component_collision_line_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentCollisionLine.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentCollisionLine.h}}
+\mbox{\hyperlink{_component_collision_line_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_collision_8h}{System/Component/ComponentCollision.h}}>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_transform_8h}{System/Component/ComponentTransform.h}}>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <ImGuizmo/ImGuizmo.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ USING\_PTR(\mbox{\hyperlink{class_component_collision_line}{ComponentCollisionLine}});}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }ComponentCollisionLine\ :\ \textcolor{keyword}{public}\ ComponentCollision,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_matrix}{IMatrix}}<ComponentCollisionLine>}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{_component_8h_a544c31f98b90b38818b27eff6683eef6}{BP\_COMPONENT\_DECL}}(ComponentCollisionLine,\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}SphereCollision機能クラス"{}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ ComponentCollisionLine()\ \{\ collision\_type\_\ =\ CollisionType::LINE;\ \}}
+\DoxyCodeLine{00020\ \ \ \ \ ComponentCollisionLinePtr\ SetName(\textcolor{keyword}{const}\ std::string\_view\&\ name)\ \{\ \textcolor{keywordflow}{return}\ Component::SetName<ComponentCollisionLine>(name);\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_line_a98677b227a7e4fd67d0f2b822ea6269e}{Init}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_line_a56d18e5dc48fc7d3b2a22e971f3b01a8}{Update}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_line_a807d94f7d41216d937a7b0d42dafb35e}{PostUpdate}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_line_a057d41a2542530c564fa382f7eabec2d}{Draw}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_line_a35031728ba258483460961042a109263}{Exit}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_line_a93b80a6266a4e94d2b19a10be76d3bbb}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \ \ \ \ ComponentCollisionLinePtr\ \mbox{\hyperlink{class_component_collision_line_a955b95352cb93d647008107625a92073}{SetLine}}(float3\ start,\ float3\ end);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::array<float3,\ 2>\ \mbox{\hyperlink{class_component_collision_line_af6284b8949429e37d2f55be00f8fa3c8}{GetLine}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::array<float3,\ 2>\ \mbox{\hyperlink{class_component_collision_line_a0667aca4d6a6b6a3497f0203a2e25378}{GetWorldLine}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{HitInfo}}\ \mbox{\hyperlink{class_component_collision_line_ae83a125f43c79ee2b0409be02eebfc1c}{IsHit}}(ComponentCollisionPtr\ col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\&\ \mbox{\hyperlink{class_component_collision_line_a335a7ceff1067c1320d10e8b3078edd1}{Matrix}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_a7c35f5cbec169010e664494423e8994f}{collision\_transform\_}};\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ \mbox{\hyperlink{class_component_collision_line_a3b354d9c485b8c8582eaf639182d48e0}{GetMatrix}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_a7c35f5cbec169010e664494423e8994f}{collision\_transform\_}};\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{virtual}\ ComponentCollisionLinePtr\ SharedThis()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentCollisionLine>(shared\_from\_this());\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_collision_line_ae1a78dbc43405915cbcc94d1355fbeb4}{GetWorldMatrix}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_collision_line_a2cfb0954378b0a733f4e8a0e1faa0f69}{GetOldWorldMatrix}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_a56fe7bf6d5b1f6e5ad9c6e48393c7fbb}{old\_transform\_}};\ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#if\ 1\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ CompoentCollisionからの移行}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\ \ \ \ \#if\ 0\ \ \ \ }\textcolor{comment}{//\ 通常Componentへ移動}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{inline}\ ComponentCollisionLinePtr\ SetName(\ std::string\_view\ name\ )}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ name\_\ =\ name;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentCollisionLine>(\ shared\_from\_this()\ );}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{inline}\ ComponentCollisionLinePtr\ SetHitCollisionGroup(\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ hit\_group)}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_aa2ea132001b00585d45467e08c8a0543}{collision\_hit\_}}\ =\ hit\_group;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentCollisionLine>(shared\_from\_this());}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keyword}{inline}\ ComponentCollisionLinePtr\ SetOverlapCollisionGroup(\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ overlap\_group)}
+\DoxyCodeLine{00084\ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_ad9c8ca02fbf7cb8c8d51624ab0678f04}{collision\_overlap\_}}\ =\ overlap\_group;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentCollisionLine>(shared\_from\_this());}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{inline}\ ComponentCollisionLinePtr\ SetCollisionGroup(CollisionGroup\ grp)}
+\DoxyCodeLine{00090\ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_ade25258ae0d5861b1351b37cfba62b41}{collision\_group\_}}\ =\ grp;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentCollisionLine>(shared\_from\_this());}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{inline}\ ComponentCollisionLinePtr\ SetMass(\textcolor{keywordtype}{float}\ mass)}
+\DoxyCodeLine{00096\ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_a4ee515355f686d895f4a469f2f5f8d68}{collision\_mass\_}}\ =\ mass;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentCollisionLine>(shared\_from\_this());}
+\DoxyCodeLine{00099\ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#ifdef\ USE\_JOLT\_PHYSICS}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{bool}\ set\_size\_\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif\ \ \ \ }\textcolor{comment}{//USE\_JOLT\_PHYSICS}}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{float}\ line\_scale\_\ =\ 1.0f;}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{_cereal_8h_a7df5c4a4fa530d0bf2831fc2180f0386}{CEREAL\_SAVELOAD}}(arc,\ ver)}
+\DoxyCodeLine{00114\ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}owner"{}},\ \mbox{\hyperlink{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}{owner\_}}));}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}line"{}},\ line\_scale\_));}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}ComponentCollision"{}},\ cereal::base\_class<ComponentCollision>(\textcolor{keyword}{this})));}
+\DoxyCodeLine{00118\ \ \ \ \ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ CEREAL\_REGISTER\_TYPE(\mbox{\hyperlink{class_component_collision_line}{ComponentCollisionLine}})}
+\DoxyCodeLine{00124\ CEREAL\_REGISTER\_POLYMORPHIC\_RELATION(\mbox{\hyperlink{class_component_collision}{ComponentCollision}},\ \mbox{\hyperlink{class_component_collision_line}{ComponentCollisionLine}})}
+
+\end{DoxyCode}

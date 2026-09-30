@@ -1,0 +1,53 @@
+\doxysection{File\+Watcher クラス}
+\hypertarget{class_file_watcher}{}\label{class_file_watcher}\index{FileWatcher@{FileWatcher}}
+
+
+ファイル変更監視  
+
+
+
+
+{\ttfamily \#include $<$File\+Watcher.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_file_watcher_a7db0265065f45b87e930ca0acc4070fc}{initialize}} (const wchar\+\_\+t \texorpdfstring{$\ast$}{*}path, std\+::function$<$ void(const wchar\+\_\+t \texorpdfstring{$\ast$}{*})$>$ callback)
+\item 
+void \mbox{\hyperlink{class_file_watcher_af2a7434835ea10f3e5c2fae51de973e4}{update}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ファイル変更監視 
+
+\label{doc-func-members}
+\Hypertarget{class_file_watcher_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_file_watcher_a7db0265065f45b87e930ca0acc4070fc}\index{FileWatcher@{FileWatcher}!initialize@{initialize}}
+\index{initialize@{initialize}!FileWatcher@{FileWatcher}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{class_file_watcher_a7db0265065f45b87e930ca0acc4070fc} 
+bool File\+Watcher\+::initialize (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t \texorpdfstring{$\ast$}{*}}]{path}{, }\item[{std\+::function$<$ void(const wchar\+\_\+t \texorpdfstring{$\ast$}{*})$>$}]{callback}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em path} & 監視対象のディレクトリパス \\
+\hline
+\mbox{\texttt{in}}  & {\em callback} & ファイル変更通知のコールバック関数 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_file_watcher_af2a7434835ea10f3e5c2fae51de973e4}\index{FileWatcher@{FileWatcher}!update@{update}}
+\index{update@{update}!FileWatcher@{FileWatcher}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_file_watcher_af2a7434835ea10f3e5c2fae51de973e4} 
+void File\+Watcher\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{覚え書き}
+メインループで呼ぶ必要がある 
+\end{DoxyNote}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\mbox{\hyperlink{_file_watcher_8h}{File\+Watcher.\+h}}\end{DoxyCompactItemize}

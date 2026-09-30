@@ -1,0 +1,826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: physics::RigidBody クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classphysics_1_1_rigid_body.html','','classphysics_1_1_rigid_body-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">physics::RigidBody クラス<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>剛体クラス  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_rigid_body_8h_source.html">RigidBody.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aeaf58e0ff88940582079c3d6860f80a6" id="r_aeaf58e0ff88940582079c3d6860f80a6"><td class="memItemLeft" align="right" valign="top"><a id="aeaf58e0ff88940582079c3d6860f80a6" name="aeaf58e0ff88940582079c3d6860f80a6"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~RigidBody</b> ()=default</td></tr>
+<tr class="memdesc:aeaf58e0ff88940582079c3d6860f80a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">オブジェクトレイヤー（フィルター）</div></td></tr>
+<tr class="memitem:a4db561e203a7a6238b7e6dabfefacbd6" id="r_a4db561e203a7a6238b7e6dabfefacbd6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4db561e203a7a6238b7e6dabfefacbd6">setLayer</a> (<a class="el" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> <a class="el" href="#aff03acd91146bc9a20f2a491f93d1932">layer</a>)=0</td></tr>
+<tr class="memitem:aff03acd91146bc9a20f2a491f93d1932" id="r_aff03acd91146bc9a20f2a491f93d1932"><td class="memItemLeft" align="right" valign="top"><a id="aff03acd91146bc9a20f2a491f93d1932" name="aff03acd91146bc9a20f2a491f93d1932"></a>
+virtual <a class="el" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><b>layer</b> () const =0</td></tr>
+<tr class="memdesc:aff03acd91146bc9a20f2a491f93d1932"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトレイヤーを取得 <br /></td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">位置と回転姿勢</div></td></tr>
+<tr class="memitem:a5a6e6230056bbc74b6af14ecb85fbd58" id="r_a5a6e6230056bbc74b6af14ecb85fbd58"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a6e6230056bbc74b6af14ecb85fbd58">setPosition</a> (const float3 &amp;<a class="el" href="#a43919be018e0b51e9b4b9c568962181e">position</a>, bool is_activate=true)=0</td></tr>
+<tr class="memitem:a43919be018e0b51e9b4b9c568962181e" id="r_a43919be018e0b51e9b4b9c568962181e"><td class="memItemLeft" align="right" valign="top"><a id="a43919be018e0b51e9b4b9c568962181e" name="a43919be018e0b51e9b4b9c568962181e"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> () const =0</td></tr>
+<tr class="memdesc:a43919be018e0b51e9b4b9c568962181e"><td class="mdescLeft">&#160;</td><td class="mdescRight">位置を取得 <br /></td></tr>
+<tr class="memitem:a670ba2bf210384276c1c4fe305d2605a" id="r_a670ba2bf210384276c1c4fe305d2605a"><td class="memItemLeft" align="right" valign="top"><a id="a670ba2bf210384276c1c4fe305d2605a" name="a670ba2bf210384276c1c4fe305d2605a"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>centerOfMassPosition</b> () const =0</td></tr>
+<tr class="memdesc:a670ba2bf210384276c1c4fe305d2605a"><td class="mdescLeft">&#160;</td><td class="mdescRight">重心位置を取得 <br /></td></tr>
+<tr class="memitem:a9deeb6a45f111d31082587d6782fa8c5" id="r_a9deeb6a45f111d31082587d6782fa8c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9deeb6a45f111d31082587d6782fa8c5">setRotation</a> (const quaternion &amp;rot, bool is_activate=true)=0</td></tr>
+<tr class="memitem:a191e138030612de47568431c8b6e727a" id="r_a191e138030612de47568431c8b6e727a"><td class="memItemLeft" align="right" valign="top"><a id="a191e138030612de47568431c8b6e727a" name="a191e138030612de47568431c8b6e727a"></a>
+virtual quaternion&#160;</td><td class="memItemRight" valign="bottom"><b>rotation</b> () const =0</td></tr>
+<tr class="memdesc:a191e138030612de47568431c8b6e727a"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転姿勢を設定 <br /></td></tr>
+<tr class="memitem:aa66ae217f95717046cc57b312e2e77a2" id="r_aa66ae217f95717046cc57b312e2e77a2"><td class="memItemLeft" align="right" valign="top"><a id="aa66ae217f95717046cc57b312e2e77a2" name="aa66ae217f95717046cc57b312e2e77a2"></a>
+virtual <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>worldMatrix</b> () const =0</td></tr>
+<tr class="memdesc:aa66ae217f95717046cc57b312e2e77a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列を取得 <br /></td></tr>
+<tr class="memitem:a065d328b0a961382a8911805168282eb" id="r_a065d328b0a961382a8911805168282eb"><td class="memItemLeft" align="right" valign="top"><a id="a065d328b0a961382a8911805168282eb" name="a065d328b0a961382a8911805168282eb"></a>
+virtual <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>centerOfMassTransform</b> () const =0</td></tr>
+<tr class="memdesc:a065d328b0a961382a8911805168282eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">重心の変換行列を取得 <br /></td></tr>
+<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">速度と角速度</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>LinearVelocityは重心の速度であり、物体の位置と一致しない場合がありますので補正してください。 </p>
+</div></td></tr>
+<tr class="memitem:a7be837e25dd2f8cded86f47fa2d1d2b4" id="r_a7be837e25dd2f8cded86f47fa2d1d2b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be837e25dd2f8cded86f47fa2d1d2b4">moveKinematic</a> (const float3 &amp;target_position, const quaternion &amp;target_rotation, <a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> delta_time)=0</td></tr>
+<tr class="memitem:abea074b8e238039bf3dda46a19ab0179" id="r_abea074b8e238039bf3dda46a19ab0179"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abea074b8e238039bf3dda46a19ab0179">setLinearVelocity</a> (const float3 &amp;v)=0</td></tr>
+<tr class="memitem:a795c95e408ea76d6acdcec99e3bb98e4" id="r_a795c95e408ea76d6acdcec99e3bb98e4"><td class="memItemLeft" align="right" valign="top"><a id="a795c95e408ea76d6acdcec99e3bb98e4" name="a795c95e408ea76d6acdcec99e3bb98e4"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>linearVelocity</b> () const =0</td></tr>
+<tr class="memdesc:a795c95e408ea76d6acdcec99e3bb98e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度を取得 <br /></td></tr>
+<tr class="memitem:a2060d916e6bb2a292387fd90951e767b" id="r_a2060d916e6bb2a292387fd90951e767b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2060d916e6bb2a292387fd90951e767b">addLinearVelocity</a> (const float3 &amp;v)=0</td></tr>
+<tr class="memitem:ab09d70d5181788b5893755a1e1621b7f" id="r_ab09d70d5181788b5893755a1e1621b7f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab09d70d5181788b5893755a1e1621b7f">setAngularVelocity</a> (const float3 &amp;vrot)=0</td></tr>
+<tr class="memitem:aca09f2b18ac78d022623059e1dc6a2d5" id="r_aca09f2b18ac78d022623059e1dc6a2d5"><td class="memItemLeft" align="right" valign="top"><a id="aca09f2b18ac78d022623059e1dc6a2d5" name="aca09f2b18ac78d022623059e1dc6a2d5"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>angularVelocity</b> () const =0</td></tr>
+<tr class="memdesc:aca09f2b18ac78d022623059e1dc6a2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">角速度を取得 <br /></td></tr>
+<tr class="memitem:a0a0c9e6a7c5df94035190acf80b5fd28" id="r_a0a0c9e6a7c5df94035190acf80b5fd28"><td class="memItemLeft" align="right" valign="top">virtual float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a0c9e6a7c5df94035190acf80b5fd28">pointVelocity</a> (const float3 &amp;point) const =0</td></tr>
+<tr id="pub-methods-3" class="groupHeader"><td colspan="2"><div class="groupHeader">力を与える</div></td></tr>
+<tr class="memitem:af6c8404e91d54e8783ddb3ebb364f98b" id="r_af6c8404e91d54e8783ddb3ebb364f98b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6c8404e91d54e8783ddb3ebb364f98b">addForce</a> (const float3 &amp;force)=0</td></tr>
+<tr class="memitem:a95f0919a27bf81b0f244382734232eb7" id="r_a95f0919a27bf81b0f244382734232eb7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95f0919a27bf81b0f244382734232eb7">addForce</a> (const float3 &amp;force, const float3 &amp;point)=0</td></tr>
+<tr class="memitem:aedfe68f1035bd0a879340d548b92a10f" id="r_aedfe68f1035bd0a879340d548b92a10f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedfe68f1035bd0a879340d548b92a10f">addTorque</a> (const float3 &amp;torque)=0</td></tr>
+<tr id="pub-methods-4" class="groupHeader"><td colspan="2"><div class="groupHeader">撃力を与える</div></td></tr>
+<tr class="memitem:a81b0c1a3b94735b1377f13bddb758156" id="r_a81b0c1a3b94735b1377f13bddb758156"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81b0c1a3b94735b1377f13bddb758156">addImpulse</a> (const float3 &amp;impulse)=0</td></tr>
+<tr class="memitem:a5b626de3448224a249ced873c05e2c3e" id="r_a5b626de3448224a249ced873c05e2c3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b626de3448224a249ced873c05e2c3e">addImpulse</a> (const float3 &amp;impulse, const float3 &amp;point)=0</td></tr>
+<tr class="memitem:a4424738f3f08bfa0e3f6adf9698a04a4" id="r_a4424738f3f08bfa0e3f6adf9698a04a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4424738f3f08bfa0e3f6adf9698a04a4">addAngularImpulse</a> (const float3 &amp;impulse)=0</td></tr>
+<tr id="pub-methods-5" class="groupHeader"><td colspan="2"><div class="groupHeader">跳ね返り係数</div></td></tr>
+<tr class="memitem:ae5b08588113928e34e44d2a5bb04473a" id="r_ae5b08588113928e34e44d2a5bb04473a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5b08588113928e34e44d2a5bb04473a">setRestitution</a> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> coeff)=0</td></tr>
+<tr class="memitem:a633447c5e3021f47842e0e21e790e938" id="r_a633447c5e3021f47842e0e21e790e938"><td class="memItemLeft" align="right" valign="top"><a id="a633447c5e3021f47842e0e21e790e938" name="a633447c5e3021f47842e0e21e790e938"></a>
+virtual <a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><b>restitution</b> () const =0</td></tr>
+<tr class="memdesc:a633447c5e3021f47842e0e21e790e938"><td class="mdescLeft">&#160;</td><td class="mdescRight">跳ね返り係数を取得 <br /></td></tr>
+<tr id="pub-methods-6" class="groupHeader"><td colspan="2"><div class="groupHeader">摩擦係数</div></td></tr>
+<tr class="memitem:a3176341b3cd9b22e1dd62122e3e3d6b4" id="r_a3176341b3cd9b22e1dd62122e3e3d6b4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3176341b3cd9b22e1dd62122e3e3d6b4">setFriction</a> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> coeff)=0</td></tr>
+<tr class="memitem:aa4acbfa32015dedfcbd04fc59e9893e6" id="r_aa4acbfa32015dedfcbd04fc59e9893e6"><td class="memItemLeft" align="right" valign="top"><a id="aa4acbfa32015dedfcbd04fc59e9893e6" name="aa4acbfa32015dedfcbd04fc59e9893e6"></a>
+virtual <a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><b>friction</b> () const =0</td></tr>
+<tr class="memdesc:aa4acbfa32015dedfcbd04fc59e9893e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">摩擦係数を取得 <br /></td></tr>
+<tr id="pub-methods-7" class="groupHeader"><td colspan="2"><div class="groupHeader">重力係数</div></td></tr>
+<tr class="memitem:a40753495537fbb8104fb953ed876fd77" id="r_a40753495537fbb8104fb953ed876fd77"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40753495537fbb8104fb953ed876fd77">setGravityFactor</a> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> coeff)=0</td></tr>
+<tr class="memitem:aaa35fb380e89eaf36505627c723a90d0" id="r_aaa35fb380e89eaf36505627c723a90d0"><td class="memItemLeft" align="right" valign="top"><a id="aaa35fb380e89eaf36505627c723a90d0" name="aaa35fb380e89eaf36505627c723a90d0"></a>
+virtual <a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gravityFactor</b> () const =0</td></tr>
+<tr class="memdesc:aaa35fb380e89eaf36505627c723a90d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力係数を取得 <br /></td></tr>
+<tr class="memitem:ab4fd511bac9774e5061a2a57b40e16d3" id="r_ab4fd511bac9774e5061a2a57b40e16d3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4fd511bac9774e5061a2a57b40e16d3">setMotionType</a> (<a class="el" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">physics::MotionType</a> motion_type, bool is_activate=true)=0</td></tr>
+<tr class="memitem:a4ddd6c758d9f7a53ef5d6d20e36502b5" id="r_a4ddd6c758d9f7a53ef5d6d20e36502b5"><td class="memItemLeft" align="right" valign="top"><a id="a4ddd6c758d9f7a53ef5d6d20e36502b5" name="a4ddd6c758d9f7a53ef5d6d20e36502b5"></a>
+virtual <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inverseInertia</b> () const =0</td></tr>
+<tr class="memdesc:a4ddd6c758d9f7a53ef5d6d20e36502b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド空間の逆慣性テンソルを取得する <br /></td></tr>
+<tr class="memitem:a0eaf71f1f1d32abdf4f4095581061a2a" id="r_a0eaf71f1f1d32abdf4f4095581061a2a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eaf71f1f1d32abdf4f4095581061a2a">setData</a> (std::intptr_t s)=0</td></tr>
+<tr class="memitem:aa06209408a89f72e2b9c37d0dbbc3369" id="r_aa06209408a89f72e2b9c37d0dbbc3369"><td class="memItemLeft" align="right" valign="top"><a id="aa06209408a89f72e2b9c37d0dbbc3369" name="aa06209408a89f72e2b9c37d0dbbc3369"></a>
+virtual std::intptr_t&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> () const =0</td></tr>
+<tr class="memdesc:aa06209408a89f72e2b9c37d0dbbc3369"><td class="mdescLeft">&#160;</td><td class="mdescRight">ユーザーデーターを取得 <br /></td></tr>
+<tr class="memitem:aa3aedac15bd41b6d2623fde9a7b35e8e" id="r_aa3aedac15bd41b6d2623fde9a7b35e8e"><td class="memItemLeft" align="right" valign="top"><a id="aa3aedac15bd41b6d2623fde9a7b35e8e" name="aa3aedac15bd41b6d2623fde9a7b35e8e"></a>
+virtual <a class="el" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bodyID</b> () const =0</td></tr>
+<tr class="memdesc:aa3aedac15bd41b6d2623fde9a7b35e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボディIDを取得 <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>剛体クラス </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a4424738f3f08bfa0e3f6adf9698a04a4" name="a4424738f3f08bfa0e3f6adf9698a04a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4424738f3f08bfa0e3f6adf9698a04a4">&#9670;&#160;</a></span>addAngularImpulse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::addAngularImpulse </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>impulse</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>角力積を与える </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">angular_impulse</td><td>与える角力積 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af6c8404e91d54e8783ddb3ebb364f98b" name="af6c8404e91d54e8783ddb3ebb364f98b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c8404e91d54e8783ddb3ebb364f98b">&#9670;&#160;</a></span>addForce() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::addForce </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>force</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>力を与える </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>与える力 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a95f0919a27bf81b0f244382734232eb7" name="a95f0919a27bf81b0f244382734232eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f0919a27bf81b0f244382734232eb7">&#9670;&#160;</a></span>addForce() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::addForce </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>force</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>指定位置に力を与える </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>与える力 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a81b0c1a3b94735b1377f13bddb758156" name="a81b0c1a3b94735b1377f13bddb758156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81b0c1a3b94735b1377f13bddb758156">&#9670;&#160;</a></span>addImpulse() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::addImpulse </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>impulse</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>撃力を与える </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">impulse</td><td>与える撃力 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b626de3448224a249ced873c05e2c3e" name="a5b626de3448224a249ced873c05e2c3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b626de3448224a249ced873c05e2c3e">&#9670;&#160;</a></span>addImpulse() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::addImpulse </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>impulse</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>指定位置に撃力を与える </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">impulse</td><td>与える撃力 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2060d916e6bb2a292387fd90951e767b" name="a2060d916e6bb2a292387fd90951e767b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2060d916e6bb2a292387fd90951e767b">&#9670;&#160;</a></span>addLinearVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::addLinearVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>現在の速度に速度を加算 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>加算する速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aedfe68f1035bd0a879340d548b92a10f" name="aedfe68f1035bd0a879340d548b92a10f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfe68f1035bd0a879340d548b92a10f">&#9670;&#160;</a></span>addTorque()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::addTorque </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>torque</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>トルクを与える </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>与える力 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7be837e25dd2f8cded86f47fa2d1d2b4" name="a7be837e25dd2f8cded86f47fa2d1d2b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be837e25dd2f8cded86f47fa2d1d2b4">&#9670;&#160;</a></span>moveKinematic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::moveKinematic </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>target_position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const quaternion &amp;</td>          <td class="paramname"><span class="paramname"><em>target_rotation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>          <td class="paramname"><span class="paramname"><em>delta_time</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>速度と角速度を逆算して設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">target_position</td><td>目標の位置 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target_rotation</td><td>目標の回転姿勢 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">delta_time</td><td>所要時間 target_position/target_rotation に delta_time 秒で位置するようにボディの速度を設定します。 必要に応じてボディをアクティブにします。 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a0c9e6a7c5df94035190acf80b5fd28" name="a0a0c9e6a7c5df94035190acf80b5fd28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a0c9e6a7c5df94035190acf80b5fd28">&#9670;&#160;</a></span>pointVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual float3 physics::RigidBody::pointVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>指定座標のワールド空間での速度を取得 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab09d70d5181788b5893755a1e1621b7f" name="ab09d70d5181788b5893755a1e1621b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab09d70d5181788b5893755a1e1621b7f">&#9670;&#160;</a></span>setAngularVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setAngularVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>vrot</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>角速度を設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vrot</td><td>角速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0eaf71f1f1d32abdf4f4095581061a2a" name="a0eaf71f1f1d32abdf4f4095581061a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eaf71f1f1d32abdf4f4095581061a2a">&#9670;&#160;</a></span>setData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setData </td>
+          <td>(</td>
+          <td class="paramtype">std::intptr_t</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>ユーザーデーターを設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">[s]</td><td>ユーザーデーター(識別用に任意に設定可能です) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3176341b3cd9b22e1dd62122e3e3d6b4" name="a3176341b3cd9b22e1dd62122e3e3d6b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3176341b3cd9b22e1dd62122e3e3d6b4">&#9670;&#160;</a></span>setFriction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setFriction </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>          <td class="paramname"><span class="paramname"><em>coeff</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>摩擦係数を設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">coeff</td><td>摩擦係数(0.0f~) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a40753495537fbb8104fb953ed876fd77" name="a40753495537fbb8104fb953ed876fd77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40753495537fbb8104fb953ed876fd77">&#9670;&#160;</a></span>setGravityFactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setGravityFactor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>          <td class="paramname"><span class="paramname"><em>coeff</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>重力係数を設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">coeff</td><td>摩擦係数(0.0f~) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4db561e203a7a6238b7e6dabfefacbd6" name="a4db561e203a7a6238b7e6dabfefacbd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4db561e203a7a6238b7e6dabfefacbd6">&#9670;&#160;</a></span>setLayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setLayer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a></td>          <td class="paramname"><span class="paramname"><em>layer</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトレイヤーを設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">layer</td><td>オブジェクトレイヤー </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abea074b8e238039bf3dda46a19ab0179" name="abea074b8e238039bf3dda46a19ab0179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea074b8e238039bf3dda46a19ab0179">&#9670;&#160;</a></span>setLinearVelocity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setLinearVelocity </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>速度を設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab4fd511bac9774e5061a2a57b40e16d3" name="ab4fd511bac9774e5061a2a57b40e16d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4fd511bac9774e5061a2a57b40e16d3">&#9670;&#160;</a></span>setMotionType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setMotionType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">physics::MotionType</a></td>          <td class="paramname"><span class="paramname"><em>motion_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_activate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>動的/静的/キネマティックを切り替え </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">motion_type</td><td>動作タイプ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_activate</td><td>アクティブ化するかどうか true:アクティブにする false:アクティブにしない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a6e6230056bbc74b6af14ecb85fbd58" name="a5a6e6230056bbc74b6af14ecb85fbd58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6e6230056bbc74b6af14ecb85fbd58">&#9670;&#160;</a></span>setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_activate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>位置を設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">position</td><td>設定座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_activate</td><td>アクティブ化するかどうか true:アクティブにする false:アクティブにしない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae5b08588113928e34e44d2a5bb04473a" name="ae5b08588113928e34e44d2a5bb04473a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5b08588113928e34e44d2a5bb04473a">&#9670;&#160;</a></span>setRestitution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setRestitution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>          <td class="paramname"><span class="paramname"><em>coeff</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>跳ね返り係数を設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">coeff</td><td>跳ね返り係数(0.0f-1.0f) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9deeb6a45f111d31082587d6782fa8c5" name="a9deeb6a45f111d31082587d6782fa8c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9deeb6a45f111d31082587d6782fa8c5">&#9670;&#160;</a></span>setRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::RigidBody::setRotation </td>
+          <td>(</td>
+          <td class="paramtype">const quaternion &amp;</td>          <td class="paramname"><span class="paramname"><em>rot</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_activate</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>回転姿勢を設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rot</td><td>設定角度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_activate</td><td>アクティブ化するかどうか true:アクティブにする false:アクティブにしない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/<a class="el" href="_rigid_body_8h_source.html">RigidBody.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>physics</b></li><li class="navelem"><a href="classphysics_1_1_rigid_body.html">RigidBody</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

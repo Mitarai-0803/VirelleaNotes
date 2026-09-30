@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Scene::SceneBase クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_scene_1_1_scene_base.html','','class_scene_1_1_scene_base-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Scene::SceneBase クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>シーン基底クラス  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_scene_base_8h_source.html">SceneBase.h</a>&gt;</code></p>
+<div class="dynheader">
+Scene::SceneBase の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_1_1_scene_base__inherit__graph.png" border="0" usemap="#a_scene_1_1_scene_base_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_scene_1_1_scene_base_inherit__map" id="a_scene_1_1_scene_base_inherit__map">
+<area shape="rect" title="シーン基底クラス" alt="" coords="148,5,296,395"/>
+<area shape="rect" href="class_scene_1_1_game_scene.html" title="増水パズルのゲームプレイシーンクラス" alt="" coords="5,443,133,512"/>
+<area shape="poly" title=" " alt="" coords="144,347,90,445,85,442,138,348"/>
+<area shape="rect" href="class_scene_1_1_result_scene.html" title="リザルト/ランキング表示シーンクラス" alt="" coords="156,443,288,512"/>
+<area shape="poly" title=" " alt="" coords="224,407,225,444,220,441,221,411"/>
+<area shape="rect" href="class_scene_1_1_title_scene.html" title="タイトルシーンクラス" alt="" coords="313,443,431,512"/>
+<area shape="poly" title=" " alt="" coords="305,348,357,443,351,443,302,353"/>
+</map>
+</div>
+<div class="dynheader">
+Scene::SceneBase 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_scene_1_1_scene_base__coll__graph.png" border="0" usemap="#a_scene_1_1_scene_base_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_scene_1_1_scene_base_coll__map" id="a_scene_1_1_scene_base_coll__map">
+<area shape="rect" title="シーン基底クラス" alt="" coords="5,5,153,395"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a29cedff7b1f1283cea375d8ed8bad9bd" id="r_a29cedff7b1f1283cea375d8ed8bad9bd"><td class="memItemLeft" align="right" valign="top"><a id="a29cedff7b1f1283cea375d8ed8bad9bd" name="a29cedff7b1f1283cea375d8ed8bad9bd"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> ()</td></tr>
+<tr class="memdesc:a29cedff7b1f1283cea375d8ed8bad9bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン初期化 <br /></td></tr>
+<tr class="memitem:afcbc5b70ee53f126dd68a701d31d3497" id="r_afcbc5b70ee53f126dd68a701d31d3497"><td class="memItemLeft" align="right" valign="top"><a id="afcbc5b70ee53f126dd68a701d31d3497" name="afcbc5b70ee53f126dd68a701d31d3497"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memdesc:afcbc5b70ee53f126dd68a701d31d3497"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン更新 <br /></td></tr>
+<tr class="memitem:a31db66e612b6ec093d188e592b930e43" id="r_a31db66e612b6ec093d188e592b930e43"><td class="memItemLeft" align="right" valign="top"><a id="a31db66e612b6ec093d188e592b930e43" name="a31db66e612b6ec093d188e592b930e43"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
+<tr class="memdesc:a31db66e612b6ec093d188e592b930e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン描画 <br /></td></tr>
+<tr class="memitem:a30812e9f8af495658f635c3f196a242f" id="r_a30812e9f8af495658f635c3f196a242f"><td class="memItemLeft" align="right" valign="top"><a id="a30812e9f8af495658f635c3f196a242f" name="a30812e9f8af495658f635c3f196a242f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>End</b> ()</td></tr>
+<tr class="memdesc:a30812e9f8af495658f635c3f196a242f"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン終了処理 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a457f6f8e0403169a5cd25c88cb22bb48" id="r_a457f6f8e0403169a5cd25c88cb22bb48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a457f6f8e0403169a5cd25c88cb22bb48">AddObject</a> (std::shared_ptr&lt; <a class="el" href="class_object_1_1_object_base.html">Object::ObjectBase</a> &gt; obj)</td></tr>
+<tr class="memdesc:a457f6f8e0403169a5cd25c88cb22bb48"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトを追加  <br /></td></tr>
+<tr class="memitem:a31cd1523e65464dce3b442841b886e3a" id="r_a31cd1523e65464dce3b442841b886e3a"><td class="memItemLeft" align="right" valign="top"><a id="a31cd1523e65464dce3b442841b886e3a" name="a31cd1523e65464dce3b442841b886e3a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SceneInit</b> ()</td></tr>
+<tr class="memdesc:a31cd1523e65464dce3b442841b886e3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン固有の初期化処理 <br /></td></tr>
+<tr class="memitem:a516fb34023090b6a637828b0c914689d" id="r_a516fb34023090b6a637828b0c914689d"><td class="memItemLeft" align="right" valign="top"><a id="a516fb34023090b6a637828b0c914689d" name="a516fb34023090b6a637828b0c914689d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SceneUpdate</b> ()</td></tr>
+<tr class="memdesc:a516fb34023090b6a637828b0c914689d"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン固有の更新処理 <br /></td></tr>
+<tr class="memitem:a0dbacd839adeecfd422f1061e3511141" id="r_a0dbacd839adeecfd422f1061e3511141"><td class="memItemLeft" align="right" valign="top"><a id="a0dbacd839adeecfd422f1061e3511141" name="a0dbacd839adeecfd422f1061e3511141"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SceneDraw</b> ()</td></tr>
+<tr class="memdesc:a0dbacd839adeecfd422f1061e3511141"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン固有の描画処理 <br /></td></tr>
+<tr class="memitem:a483c6a8fdc675c4a2abe0e8d099f1618" id="r_a483c6a8fdc675c4a2abe0e8d099f1618"><td class="memItemLeft" align="right" valign="top"><a id="a483c6a8fdc675c4a2abe0e8d099f1618" name="a483c6a8fdc675c4a2abe0e8d099f1618"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SceneEnd</b> ()</td></tr>
+<tr class="memdesc:a483c6a8fdc675c4a2abe0e8d099f1618"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン固有の終了処理 <br /></td></tr>
+<tr class="memitem:a49a30f1c807dba7f45f37858255b7065" id="r_a49a30f1c807dba7f45f37858255b7065"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:a49a30f1c807dba7f45f37858255b7065 template"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49a30f1c807dba7f45f37858255b7065">AddObjectSetName</a> (const std::string &amp;obj_name)</td></tr>
+<tr class="memdesc:a49a30f1c807dba7f45f37858255b7065"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト追加  <br /></td></tr>
+<tr class="memitem:aa03d0c19e1187e6a4084e79f5bd1bc13" id="r_aa03d0c19e1187e6a4084e79f5bd1bc13"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:aa03d0c19e1187e6a4084e79f5bd1bc13 template"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa03d0c19e1187e6a4084e79f5bd1bc13">GetSceneObject</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:aa03d0c19e1187e6a4084e79f5bd1bc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン内オブジェクト取得  <br /></td></tr>
+<tr class="memitem:ab53511392eec055bf9e2fa526c4528ee" id="r_ab53511392eec055bf9e2fa526c4528ee"><td class="memItemLeft" align="right" valign="top"><a id="ab53511392eec055bf9e2fa526c4528ee" name="ab53511392eec055bf9e2fa526c4528ee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectInit</b> ()</td></tr>
+<tr class="memdesc:ab53511392eec055bf9e2fa526c4528ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン内オブジェクトの初期化呼び出し <br /></td></tr>
+<tr class="memitem:a3b3515eb4d27ba994d4567ed09beda82" id="r_a3b3515eb4d27ba994d4567ed09beda82"><td class="memItemLeft" align="right" valign="top"><a id="a3b3515eb4d27ba994d4567ed09beda82" name="a3b3515eb4d27ba994d4567ed09beda82"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectUpdate</b> ()</td></tr>
+<tr class="memdesc:a3b3515eb4d27ba994d4567ed09beda82"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン内オブジェクトの更新呼び出し <br /></td></tr>
+<tr class="memitem:aa7b10213a972f9489736694c7369088f" id="r_aa7b10213a972f9489736694c7369088f"><td class="memItemLeft" align="right" valign="top"><a id="aa7b10213a972f9489736694c7369088f" name="aa7b10213a972f9489736694c7369088f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectDrawDebug</b> ()</td></tr>
+<tr class="memdesc:aa7b10213a972f9489736694c7369088f"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン内オブジェクトのデバッグ描画呼び出し <br /></td></tr>
+<tr class="memitem:a533e3c4fe53e9f4d5f610623bb1e24e8" id="r_a533e3c4fe53e9f4d5f610623bb1e24e8"><td class="memItemLeft" align="right" valign="top"><a id="a533e3c4fe53e9f4d5f610623bb1e24e8" name="a533e3c4fe53e9f4d5f610623bb1e24e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectDraw</b> ()</td></tr>
+<tr class="memdesc:a533e3c4fe53e9f4d5f610623bb1e24e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン内オブジェクトの描画呼び出し <br /></td></tr>
+<tr class="memitem:ac3b25ef760864deaed361a3caeb2f1be" id="r_ac3b25ef760864deaed361a3caeb2f1be"><td class="memItemLeft" align="right" valign="top"><a id="ac3b25ef760864deaed361a3caeb2f1be" name="ac3b25ef760864deaed361a3caeb2f1be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectEnd</b> ()</td></tr>
+<tr class="memdesc:ac3b25ef760864deaed361a3caeb2f1be"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーン内オブジェクトの終了呼び出し <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:ac8937ecd828f30bcff4fb62402c50cff" id="r_ac8937ecd828f30bcff4fb62402c50cff"><td class="memItemLeft" align="right" valign="top"><a id="ac8937ecd828f30bcff4fb62402c50cff" name="ac8937ecd828f30bcff4fb62402c50cff"></a>
+std::vector&lt; std::shared_ptr&lt; <a class="el" href="class_object_1_1_object_base.html">Object::ObjectBase</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>m_scene_objects</b></td></tr>
+<tr class="memdesc:ac8937ecd828f30bcff4fb62402c50cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">シーンが保持するオブジェクト <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>シーン基底クラス </p>
+<p>シーン内のオブジェクト管理およびライフサイクルを提供 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a457f6f8e0403169a5cd25c88cb22bb48" name="a457f6f8e0403169a5cd25c88cb22bb48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a457f6f8e0403169a5cd25c88cb22bb48">&#9670;&#160;</a></span>AddObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::SceneBase::AddObject </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_object_1_1_object_base.html">Object::ObjectBase</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>obj</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクトを追加 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>追加するオブジェクト(shared_ptr) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a49a30f1c807dba7f45f37858255b7065" name="a49a30f1c807dba7f45f37858255b7065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49a30f1c807dba7f45f37858255b7065">&#9670;&#160;</a></span>AddObjectSetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scene::SceneBase::AddObjectSetName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>obj_name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>オブジェクト追加 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj_name</td><td>追加するオブジェクトの名前 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa03d0c19e1187e6a4084e79f5bd1bc13" name="aa03d0c19e1187e6a4084e79f5bd1bc13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa03d0c19e1187e6a4084e79f5bd1bc13">&#9670;&#160;</a></span>GetSceneObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; T &gt; Scene::SceneBase::GetSceneObject </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>シーン内オブジェクト取得 </p>
+<dl class="tparams"><dt>テンプレート引数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>取得したい型（ObjectBase または派生型） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>オブジェクト名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>見つかれば shared_ptr&lt;T&gt;、なければ nullptr </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>F:/sg mitarai/ReoEngine/src/<a class="el" href="_scene_base_8h_source.html">SceneBase.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Scene</b></li><li class="navelem"><a href="class_scene_1_1_scene_base.html">SceneBase</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

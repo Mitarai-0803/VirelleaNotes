@@ -1,0 +1,40 @@
+\doxysection{Body\+Manager クラス}
+\hypertarget{class_body_manager}{}\label{class_body_manager}\index{BodyManager@{BodyManager}}
+
+
+物理ボディ管理クラス  
+
+
+
+
+{\ttfamily \#include $<$Body\+Manager.\+h$>$}
+
+
+
+Body\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_body_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_body_manager_a4c5981aa2f35adbc5b79e84bd2f91e68}\label{class_body_manager_a4c5981aa2f35adbc5b79e84bd2f91e68} 
+void {\bfseries Register\+Component} (JPH\+::\+Body\+ID id, \mbox{\hyperlink{class_collision_component}{Collision\+Component}} \texorpdfstring{$\ast$}{*}component)
+\begin{DoxyCompactList}\small\item\em コンポーネントの登録 \end{DoxyCompactList}\item 
+\Hypertarget{class_body_manager_a9df000541e03456c5e33fc8b06fa9c65}\label{class_body_manager_a9df000541e03456c5e33fc8b06fa9c65} 
+void {\bfseries Unregister\+Component} (JPH\+::\+Body\+ID id)
+\begin{DoxyCompactList}\small\item\em コンポーネントの解除 \end{DoxyCompactList}\item 
+\Hypertarget{class_body_manager_a4900da6262322d68bb65ac0546e0e57d}\label{class_body_manager_a4900da6262322d68bb65ac0546e0e57d} 
+\mbox{\hyperlink{class_collision_component}{Collision\+Component}} \texorpdfstring{$\ast$}{*} {\bfseries Find\+Component} (JPH\+::\+Body\+ID id) const
+\begin{DoxyCompactList}\small\item\em Body\+IDからコンポーネントを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+物理ボディ管理クラス 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_body_manager_8h}{Body\+Manager.\+h}}\end{DoxyCompactItemize}

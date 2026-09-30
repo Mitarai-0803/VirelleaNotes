@@ -1,0 +1,93 @@
+\doxysection{Object\+::Object\+Base2D クラス}
+\hypertarget{class_object_1_1_object_base2_d}{}\label{class_object_1_1_object_base2_d}\index{Object::ObjectBase2D@{Object::ObjectBase2D}}
+
+
+Object\+::Object\+Base2D の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_object_base2_d__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Object\+::Object\+Base2D 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_object_base2_d__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_object_1_1_object_base2_d_af063b15e0244cdc5a36f788f2b028828}\label{class_object_1_1_object_base2_d_af063b15e0244cdc5a36f788f2b028828} 
+float {\bfseries GetX} () const
+\item 
+\Hypertarget{class_object_1_1_object_base2_d_aaab553ff993f201434523921867e4dfe}\label{class_object_1_1_object_base2_d_aaab553ff993f201434523921867e4dfe} 
+float {\bfseries GetY} () const
+\item 
+\Hypertarget{class_object_1_1_object_base2_d_aea289cddde1b907acbbc81813e18ac29}\label{class_object_1_1_object_base2_d_aea289cddde1b907acbbc81813e18ac29} 
+void {\bfseries SetX} (float x)
+\item 
+\Hypertarget{class_object_1_1_object_base2_d_a4a103dfe99c3dd51e888c49d301214aa}\label{class_object_1_1_object_base2_d_a4a103dfe99c3dd51e888c49d301214aa} 
+void {\bfseries SetY} (float y)
+\item 
+\Hypertarget{class_object_1_1_object_base2_d_a01118672535d33076c605b594b8a7d67}\label{class_object_1_1_object_base2_d_a01118672535d33076c605b594b8a7d67} 
+void {\bfseries Set\+Pos} (float x, float y)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_1_1_object_base_af53775f0db55e72971bd8bfed4ba6809}{\texorpdfstring{$\sim$}{\string~}\+Object\+Base}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_1_1_object_base_a16b478109bc4787d7095706ba6d7cdfb}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名の取得 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Name} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名の設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Add\+Component} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_object_1_1_object_base_ac6b0a1cda5413d3b3d110d2316bd7536}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em ライフサイクル呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\item 
+void {\bfseries Draw\+Debug} ()
+\item 
+void {\bfseries Draw} ()
+\item 
+void {\bfseries End} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_object_1_1_object_base2_d_a6d73593639ae6280a0543c737f47a138}\label{class_object_1_1_object_base2_d_a6d73593639ae6280a0543c737f47a138} 
+float {\bfseries m\+\_\+x} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em スクリーン\+X座標 \end{DoxyCompactList}\item 
+\Hypertarget{class_object_1_1_object_base2_d_a25aecc84e32db744607c8d6ef3aa7731}\label{class_object_1_1_object_base2_d_a25aecc84e32db744607c8d6ef3aa7731} 
+float {\bfseries m\+\_\+y} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em スクリーン\+Y座標 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_object_1_1_object_base_a411f4015ff78bdad51ed979feb6f071e}{On\+Init}} ()
+\item 
+virtual void \mbox{\hyperlink{class_object_1_1_object_base_a4d695309d1ef84228aab59296ea82876}{On\+Update}} ()
+\item 
+virtual void {\bfseries On\+Draw\+Debug} ()
+\item 
+virtual void \mbox{\hyperlink{class_object_1_1_object_base_a105baf255136617256756f729ef42700}{On\+Draw}} ()
+\item 
+virtual void \mbox{\hyperlink{class_object_1_1_object_base_a585b193a6dd280c458205cff27ec27c4}{On\+End}} ()
+\end{DoxyCompactItemize}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_object_base2_d_8h}{Object\+Base2\+D.\+h}}\end{DoxyCompactItemize}

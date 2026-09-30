@@ -1,0 +1,131 @@
+\doxysection{Cereal.\+h}
+\hypertarget{_cereal_8h_source}{}\label{_cereal_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Cereal.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Cereal.h}}
+\mbox{\hyperlink{_cereal_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cereal/cereal.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cereal/archives/json.hpp>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cereal/types/vector.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cereal/types/memory.hpp>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cereal/types/array.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cereal/types/unordered\_map.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <cereal/types/functional.hpp>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_vector_math_8h}{System/VectorMath.h}}>}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacecereal}{cereal}}\ \{}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ load(Archive\&\ arc,\ std::function<\textcolor{keywordtype}{void}()>\&\ f)}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ バイナリ列をロードしてそのポインタからfunctionに変更}}
+\DoxyCodeLine{00026\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ save(Archive\&\ arc,\ std::function<\textcolor{keywordtype}{void}()>\&\ f)}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ TODO\ functionのバイナリ列をすべて取得して書き込み}}
+\DoxyCodeLine{00032\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ serialize(Archive\&\ arc,\ std::function<\textcolor{keywordtype}{void}(\textcolor{keywordtype}{float})>\&\ f)}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ バイナリではシリアライズ不可}}
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ serialize(Archive\&\ arc,\ hlslpp::float2\&\ f)}
+\DoxyCodeLine{00042\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}x"{}},\ (\textcolor{keywordtype}{float}\&)f.f32[0]),\ cereal::make\_nvp(\textcolor{stringliteral}{"{}y"{}},\ (\textcolor{keywordtype}{float}\&)f.f32[1]));}
+\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ serialize(Archive\&\ arc,\ hlslpp::float3\&\ f)}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}x"{}},\ (\textcolor{keywordtype}{float}\&)f.f32[0]),\ cereal::make\_nvp(\textcolor{stringliteral}{"{}y"{}},\ (\textcolor{keywordtype}{float}\&)f.f32[1]),\ cereal::make\_nvp(\textcolor{stringliteral}{"{}z"{}},\ (\textcolor{keywordtype}{float}\&)f.f32[2]));}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ serialize(Archive\&\ arc,\ hlslpp::float4\&\ f)}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}x"{}},\ (\textcolor{keywordtype}{float}\&)f.f32[0]),}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}y"{}},\ (\textcolor{keywordtype}{float}\&)f.f32[1]),}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}z"{}},\ (\textcolor{keywordtype}{float}\&)f.f32[2]),}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}w"{}},\ (\textcolor{keywordtype}{float}\&)f.f32[3]));}
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ save(Archive\&\ arc,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ m)}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ arc((float4\&)m.f32\_128\_0,\ (float4\&)m.f32\_128\_1,\ (float4\&)m.f32\_128\_2,\ (float4\&)m.f32\_128\_3);}
+\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ Archive>}
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ load(Archive\&\ arc,\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ m)}
+\DoxyCodeLine{00069\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ arc((float4\&)m.f32\_128\_0,\ (float4\&)m.f32\_128\_1,\ (float4\&)m.f32\_128\_2,\ (float4\&)m.f32\_128\_3);}
+\DoxyCodeLine{00071\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ cereal}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00077\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ CEREAL\_SAVELOAD(arc,\ ver)\ \(\backslash\)}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\ \ \ \ friend\ class\ cereal::access;\ \ \(\backslash\)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\ \ \ \ template\ <class\ Archive>\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ void\ serialize(Archive\&\ arc,\ [[maybe\_unused]]\ std::uint32\_t\ const\ ver)}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ CEREAL\_SAVE(arc,\ ver)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\ \ \ \ friend\ class\ cereal::access;\ \(\backslash\)}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\ \ \ \ template\ <class\ Archive>\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\ \ \ \ void\ save(Archive\&\ arc,\ [[maybe\_unused]]\ std::uint32\_t\ const\ ver)\ const}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ CEREAL\_LOAD(arc,\ ver)\ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\ \ \ \ friend\ class\ cereal::access;\ \(\backslash\)}}
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\ \ \ \ template\ <class\ Archive>\ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\ \ \ \ void\ load(Archive\&\ arc,\ [[maybe\_unused]]\ std::uint32\_t\ const\ ver)}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ CEREAL\_LOAD\_AND\_CONSTRUCT(cls,\ arc,\ ver)\ \(\backslash\)}}
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\ \ \ \ template\ <class\ Archive>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\ \ \ \ static\ void\ load\_and\_construct(Archive\&\ arc,\ cereal::construct<cls>\&\ construct,\ [[maybe\_unused]]\ std::uint32\_t\ const\ ver)}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#define\ CEREAL\_SAVELOAD\_CPP(cls,\ arc,\ ver)\ \(\backslash\)}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\ \ \ \ template\ <class\ Archive>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\ \ \ \ void\ cls::serialize(Archive\&\ arc,\ [[maybe\_unused]]\ std::uint32\_t\ const\ ver)}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ CEREAL\_SAVE\_CPP(cls,\ arc,\ ver)\ \(\backslash\)}}
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\ \ \ \ template\ <class\ Archive>\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\ \ \ \ void\ cls::save(Archive\&\ arc,\ [[maybe\_unused]]\ std::uint32\_t\ const\ ver)\ const}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00112\ \textcolor{preprocessor}{\#define\ CEREAL\_LOAD\_CPP(cls,\ arc,\ ver)\ \(\backslash\)}}
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\ \ \ \ friend\ class\ cereal::access;\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\ \ \ \ template\ <class\ Archive>\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\ \ \ \ void\ cls::load(Archive\&\ arc,\ [[maybe\_unused]]\ std::uint32\_t\ const\ ver)}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00119\ \textcolor{preprocessor}{\#define\ CEREAL\_LOAD\_AND\_CONSTRUCT\_CPP(cls,\ arc,\ ver)\ \(\backslash\)}}
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\ \ \ \ template\ <class\ Archive>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\ \ \ \ void\ cls::load\_and\_construct(Archive\&\ arc,\ cereal::construct<cls>\&\ construct,\ [[maybe\_unused]]\ std::uint32\_t\ const\ ver)}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#define\ CEREAL\_LOAD\_AND\_CONSTRUCT\_BEGIN(cls,\ arc,\ ver)\ \(\backslash\)}}
+\DoxyCodeLine{00126\ \textcolor{preprocessor}{\ \ \ \ namespace\ cereal\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00127\ \textcolor{preprocessor}{\ \ \ \ template\ <>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\ \ \ \ struct\ LoadAndConstruct<cls>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ template\ <class\ Archive>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ static\ void\ load\_and\_construct(Archive\&\ arc,\ cereal::construct<cls>\&\ construct,\ [[maybe\_unused]]\ std::uint32\_t\ const\ ver)}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00135\ \textcolor{preprocessor}{\#define\ CEREAL\_LOAD\_AND\_CONSTRUCT\_END()\ \(\backslash\)}}
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\ \ \ \ ;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00138\ \textcolor{preprocessor}{\ \ \ \ \}\ \ \ \ }\textcolor{comment}{//\ namespace\ cereal}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#define\ CEREAL\_SAVELOAD\_OTHER(cls,\ arc,\ other)\ \(\backslash\)}}
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\ \ \ \ template\ <class\ Archive>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\ \ \ \ void\ serialize(Archive\&\ arc,\ cls\&\ other)}}
+
+\end{DoxyCode}

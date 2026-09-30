@@ -1,0 +1,65 @@
+\doxysection{Resource\+Animation クラス}
+\hypertarget{class_resource_animation}{}\label{class_resource_animation}\index{ResourceAnimation@{ResourceAnimation}}
+
+
+アニメーション情報  
+
+
+
+
+{\ttfamily \#include $<$Animation.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}\label{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e} 
+{\bfseries Resource\+Animation} ()=default
+\begin{DoxyCompactList}\small\item\em デフォルトコンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_resource_animation_afcccaa752e31408fe89587e27b198648}{Resource\+Animation}} (std\+::string\+\_\+view path)
+\item 
+\Hypertarget{class_resource_animation_a508a18d599fba908c5dd3e98cbfd86f9}\label{class_resource_animation_a508a18d599fba908c5dd3e98cbfd86f9} 
+bool {\bfseries is\+Valid} () const
+\item 
+bool \mbox{\hyperlink{class_resource_animation_af18a53a955907e27afb34b776a531034}{is\+Active}} () const
+\item 
+\Hypertarget{class_resource_animation_a12344483e701ca25ed03e191d20d8695}\label{class_resource_animation_a12344483e701ca25ed03e191d20d8695} 
+{\bfseries operator int} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+アニメーション情報 
+
+\label{doc-constructors}
+\Hypertarget{class_resource_animation_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_resource_animation_afcccaa752e31408fe89587e27b198648}\index{ResourceAnimation@{ResourceAnimation}!ResourceAnimation@{ResourceAnimation}}
+\index{ResourceAnimation@{ResourceAnimation}!ResourceAnimation@{ResourceAnimation}}
+\doxysubsubsection{\texorpdfstring{ResourceAnimation()}{ResourceAnimation()}}
+{\footnotesize\ttfamily \label{class_resource_animation_afcccaa752e31408fe89587e27b198648} 
+Resource\+Animation\+::\+Resource\+Animation (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_resource_animation_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_resource_animation_af18a53a955907e27afb34b776a531034}\index{ResourceAnimation@{ResourceAnimation}!isActive@{isActive}}
+\index{isActive@{isActive}!ResourceAnimation@{ResourceAnimation}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily \label{class_resource_animation_af18a53a955907e27afb34b776a531034} 
+bool Resource\+Animation\+::is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyNote}{覚え書き}
+利用可能になっていない状態で\+Dx\+Libアニメーション関数を呼ぶと非同期ロードがブロッキングされます 
+\end{DoxyNote}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/\mbox{\hyperlink{_animation_8h}{Animation.\+h}}\end{DoxyCompactItemize}

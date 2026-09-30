@@ -1,0 +1,7 @@
+<map id="Object::PlatformObject" name="Object::PlatformObject">
+<area shape="rect" id="Node000001" title="増水パズル用の静的な足場オブジェクト" alt="" coords="5,688,149,885"/>
+<area shape="rect" id="Node000002" href="$class_object_1_1_object_base3_d.html" title=" " alt="" coords="6,443,148,640"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,653,80,688,75,688,77,658"/>
+<area shape="rect" id="Node000003" href="$class_object_1_1_object_base.html" title=" " alt="" coords="15,5,140,395"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,407,80,443,75,443,77,412"/>
+</map>

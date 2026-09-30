@@ -1,0 +1,55 @@
+\doxysection{Constant\+Buffer クラス}
+\hypertarget{class_constant_buffer}{}\label{class_constant_buffer}\index{ConstantBuffer@{ConstantBuffer}}
+
+
+定数バッファ  
+
+
+
+
+{\ttfamily \#include $<$Constant\+Buffer.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_constant_buffer_a795dd9a332c61cf910cebe559bb672d5}\label{class_constant_buffer_a795dd9a332c61cf910cebe559bb672d5} 
+{\footnotesize template$<$typename U$>$ }\\U \texorpdfstring{$\ast$}{*} {\bfseries begin\+Update} () const
+\item 
+virtual void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_constant_buffer_ab3773f5fdeb4f86f896ffcf0d4a1e177}{begin\+Update}} () const =0
+\item 
+\Hypertarget{class_constant_buffer_ae1533540b0151b8078315ec6abfa8612}\label{class_constant_buffer_ae1533540b0151b8078315ec6abfa8612} 
+virtual void {\bfseries end\+Update} () const =0
+\begin{DoxyCompactList}\small\item\em バッファを更新終了 \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_constant_buffer_ace4c3643f5b60103ea53533187330148}{operator int}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+定数バッファ 
+
+\label{doc-func-members}
+\Hypertarget{class_constant_buffer_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_constant_buffer_ab3773f5fdeb4f86f896ffcf0d4a1e177}\index{ConstantBuffer@{ConstantBuffer}!beginUpdate@{beginUpdate}}
+\index{beginUpdate@{beginUpdate}!ConstantBuffer@{ConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{beginUpdate()}{beginUpdate()}}
+{\footnotesize\ttfamily \label{class_constant_buffer_ab3773f5fdeb4f86f896ffcf0d4a1e177} 
+virtual void \texorpdfstring{$\ast$}{*} Constant\+Buffer\+::begin\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+バッファを更新開始 \begin{DoxyReturn}{戻り値}
+更新先のバッファのポインタ。このアドレスがバッファの先頭を指していますので書き換えてください。 
+\end{DoxyReturn}
+\Hypertarget{class_constant_buffer_ace4c3643f5b60103ea53533187330148}\index{ConstantBuffer@{ConstantBuffer}!operator int@{operator int}}
+\index{operator int@{operator int}!ConstantBuffer@{ConstantBuffer}}
+\doxysubsubsection{\texorpdfstring{operator int()}{operator int()}}
+{\footnotesize\ttfamily \label{class_constant_buffer_ace4c3643f5b60103ea53533187330148} 
+virtual Constant\+Buffer\+::operator int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\mbox{[}Dx\+Lib\mbox{]} 定数バッファハンドルを取得 \begin{DoxyReturn}{戻り値}
+定数バッファハンドル 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/\mbox{\hyperlink{_constant_buffer_8h}{Constant\+Buffer.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,109 @@
+\doxysection{Audio\+Manager\+Component クラス}
+\hypertarget{class_audio_manager_component}{}\label{class_audio_manager_component}\index{AudioManagerComponent@{AudioManagerComponent}}
+
+
+音量管理用コンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Audio\+Manager\+Component.\+h$>$}
+
+Audio\+Manager\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_audio_manager_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_audio_manager_component_a7561d9fd907673d3593b3f8aad443d13}\label{class_audio_manager_component_a7561d9fd907673d3593b3f8aad443d13} 
+{\bfseries Audio\+Manager\+Component} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_manager_component_a21be708c809dde0e087eb9f2cd166c7c}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_manager_component_aa01553d592c8b95e99849da80d638cdb}{End}} () override
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_manager_component_ae857d77907a889ec27303899b86de29c}{Load}} (const char \texorpdfstring{$\ast$}{*}filepath)
+\begin{DoxyCompactList}\small\item\em 音源読み込み \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_audio_manager_component_a89966dc31ca9555dda5397a4b4160dd8}{Get\+Load\+Handle}} () const
+\begin{DoxyCompactList}\small\item\em 音源ハンドル取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries ‾\+Component\+Base} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em フレーム更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+音量管理用コンポーネント 
+
+\label{doc-func-members}
+\Hypertarget{class_audio_manager_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_audio_manager_component_aa01553d592c8b95e99849da80d638cdb}\index{AudioManagerComponent@{AudioManagerComponent}!End@{End}}
+\index{End@{End}!AudioManagerComponent@{AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \label{class_audio_manager_component_aa01553d592c8b95e99849da80d638cdb} 
+void Audio\+Manager\+Component\+::\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+
+
+\mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_audio_manager_component_a89966dc31ca9555dda5397a4b4160dd8}\index{AudioManagerComponent@{AudioManagerComponent}!GetLoadHandle@{GetLoadHandle}}
+\index{GetLoadHandle@{GetLoadHandle}!AudioManagerComponent@{AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{GetLoadHandle()}{GetLoadHandle()}}
+{\footnotesize\ttfamily \label{class_audio_manager_component_a89966dc31ca9555dda5397a4b4160dd8} 
+int Audio\+Manager\+Component\+::\+Get\+Load\+Handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+音源ハンドル取得 
+
+\begin{DoxyReturn}{戻り値}
+読み込んだ音源ハンドル 
+\end{DoxyReturn}
+\Hypertarget{class_audio_manager_component_a21be708c809dde0e087eb9f2cd166c7c}\index{AudioManagerComponent@{AudioManagerComponent}!Init@{Init}}
+\index{Init@{Init}!AudioManagerComponent@{AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_audio_manager_component_a21be708c809dde0e087eb9f2cd166c7c} 
+void Audio\+Manager\+Component\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_audio_manager_component_ae857d77907a889ec27303899b86de29c}\index{AudioManagerComponent@{AudioManagerComponent}!Load@{Load}}
+\index{Load@{Load}!AudioManagerComponent@{AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{class_audio_manager_component_ae857d77907a889ec27303899b86de29c} 
+void Audio\+Manager\+Component\+::\+Load (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filepath}{}\end{DoxyParamCaption})}
+
+
+
+音源読み込み 
+
+
+\begin{DoxyParams}{引数}
+{\em filepath} & 読み込む音源ファイルのパス \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/自作ゲーム/音ゲー制作エンジン -\/ コピー/src/\+Components/\+Audio\+Manager\+Component/Audio\+Manager\+Component.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,157 @@
+\doxysection{Component\+Spring\+Arm.\+h}
+\hypertarget{_component_spring_arm_8h_source}{}\label{_component_spring_arm_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentSpringArm.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentSpringArm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_8h}{System/Component/Component.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_transform_8h}{System/Component/ComponentTransform.h}}>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <System/Utils/HelperLib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_cereal_8h}{System/Cereal.h}}>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ USING\_PTR(\mbox{\hyperlink{class_component_spring_arm}{ComponentSpringArm}});}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }ComponentSpringArm\ :\ \textcolor{keyword}{public}\ Component}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }Object;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{_component_8h_a544c31f98b90b38818b27eff6683eef6}{BP\_COMPONENT\_DECL}}(ComponentSpringArm,\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}SpringArm機能クラス"{}});}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ ComponentSpringArm()\ \{\}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_spring_arm_af8eda61cdb478f64fbe80e01bcad54d0}{Init}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_spring_arm_a3a571d13f8de2802e87662131eab9780}{PrePhysics}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_spring_arm_abe1e3bce143ae566e32d34a9c438c76e}{PostUpdate}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_spring_arm_abbf024eca02f2d611a0cf75e3600b2ce}{Draw}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_spring_arm_a0e2774124852d8b338e18495ea3c1bf8}{Exit}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_spring_arm_ab45f3f6d273528ebc4ca4852155bd428}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_spring_arm_a4d9a77029d2fd0e660159b9aaf97e3f4}{GetPutOnMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{enum\ struct}\ \mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838}{SpringArmBit}}\ :\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}
+\DoxyCodeLine{00034\ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838a59d87a4758a9d35fbaf6b204341bb399}{Initialized}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838adf948fb94ab60cab4be0783d6e7f50a1}{EnableTimeLine}},\ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSpringArmStatus(\mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838}{SpringArmBit}}\ bit,\ \textcolor{keywordtype}{bool}\ on)\ \{\ spring\_arm\_status\_.set(bit,\ on);\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ GetSpringArmStatus(\mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838}{SpringArmBit}}\ bit)\ \{\ \textcolor{keywordflow}{return}\ spring\_arm\_status\_.is(bit);\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSpringArmObject(ObjectPtr\ \textcolor{keywordtype}{object});}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSpringArmObject(std::string\_view\ name);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00049\ \ \ \ \ ComponentSpringArmPtr\ \mbox{\hyperlink{class_component_spring_arm_aec1e103ca473cf41a0edace65fa88743}{SetSpringArmRotate}}(float3\ rot)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ spring\_arm\_rotate\_\ =\ rot;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentSpringArm>(shared\_from\_this());}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00057\ \ \ \ \ ComponentSpringArmPtr\ \mbox{\hyperlink{class_component_spring_arm_a22f36e0b21c94bdf7907ead9838513c0}{SetSpringArmVector}}(float3\ vec)}
+\DoxyCodeLine{00058\ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ trans[3]\{\};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rot[3]\{\};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ scale[3]\{\};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \ mat\ =\ HelperLib::Math::CreateMatrixByFrontVector(vec);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(mat.f32\_128\_0,\ trans,\ rot,\ scale);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ spring\_arm\_rotate\_\ =\ float3(rot[0],\ rot[1],\ rot[2]);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentSpringArm>(shared\_from\_this());}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ [[deprecated(\textcolor{stringliteral}{"{}ComponentSpringArm::SetSpringArmOffset()は古い形式です。ComponentSpringArm::SetSpringArmLookOffsetを使用してください"{}})]]}
+\DoxyCodeLine{00069\ \ \ \ \ ComponentSpringArmPtr\ SetSpringArmOffset(float3\ offset)}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SetSpringArmLookOffset(offset);}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ ComponentSpringArmPtr\ SetSpringArmPositionOffset(float3\ offset)}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ spring\_arm\_offset\_\ =\ offset;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentSpringArm>(shared\_from\_this());}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ ComponentSpringArmPtr\ SetSpringArmLookOffset(float3\ offset)}
+\DoxyCodeLine{00081\ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ spring\_arm\_look\_\ =\ offset;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentSpringArm>(shared\_from\_this());}
+\DoxyCodeLine{00084\ \ \ \ \ \}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ ComponentSpringArmPtr\ SetSpringArmLength(\textcolor{keywordtype}{float}\ len)}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ spring\_arm\_length\_\ =\ len;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentSpringArm>(shared\_from\_this());}
+\DoxyCodeLine{00090\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{float}\ GetSpringArmLength()\ \{\ \textcolor{keywordflow}{return}\ spring\_arm\_length\_;\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ ObjectWeakPtr\ GetSpringArmObject()\ \{\ \textcolor{keywordflow}{return}\ object\_;\ \}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ ComponentSpringArmPtr\ SetSpringArmStrong(\textcolor{keywordtype}{float}\ strong)}
+\DoxyCodeLine{00097\ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ spring\_arm\_strong\_\ =\ strong;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentSpringArm>(shared\_from\_this());}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ ComponentSpringArmPtr\ SetSpringArmReturn(\textcolor{keywordtype}{float}\ ret)}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ spring\_arm\_strong\_\ =\ ret;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentSpringArm>(shared\_from\_this());}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00109\ \ \ \ \ Status<SpringArmBit>\ spring\_arm\_status\_;\ \ \ \ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ float3\ spring\_arm\_rotate\_\{10,\ 0,\ 0\};}
+\DoxyCodeLine{00112\ \ \ \ \ float3\ spring\_arm\_offset\_\{0,\ 3,\ 0\};}
+\DoxyCodeLine{00113\ \ \ \ \ float3\ spring\_arm\_look\_\{0,\ 3,\ 0\};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{float}\ spring\_arm\_length\_\ =\ 20.0f;}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ ObjectWeakPtr\ object\_;}
+\DoxyCodeLine{00118\ \ \ \ \ std::string\ \ \ object\_name\_\{\};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ object\_node\_index\_\ =\ 0;}
+\DoxyCodeLine{00121\ \ \ \ \ std::string\ object\_node\_name\_\{\};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{comment}{//\ 以後スプリング部}}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{float}\ spring\_arm\_strong\_\ =\ 1.00f;}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{float}\ spring\_arm\_return\_\ =\ 0.01f;}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{float}\ spring\_arm\_length\_now\_\ =\ 20.0f;}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{float}\ spring\_arm\_vecspd\_\ \ \ \ \ =\ 0.0f;}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{float}\ force\_up\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0.0f;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ @param\ arc\ アーカイバ}}
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{comment}{//\ @param\ ver\ バージョン}}
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{_cereal_8h_a7df5c4a4fa530d0bf2831fc2180f0386}{CEREAL\_SAVELOAD}}(arc,\ ver)}
+\DoxyCodeLine{00141\ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}owner"{}},\ \mbox{\hyperlink{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}{owner\_}}));\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//<\ オーナー}}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}spring\_arm\_status"{}},\ spring\_arm\_status\_.get()));\ \ \ \ \textcolor{comment}{//<\ カメラステート}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(spring\_arm\_rotate\_));}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(spring\_arm\_offset\_));}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(spring\_arm\_length\_));}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(object\_name\_));}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(object\_node\_index\_));}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(object\_node\_name\_));}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(spring\_arm\_strong\_));}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(spring\_arm\_return\_));}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(spring\_arm\_length\_now\_));}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(spring\_arm\_vecspd\_));}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(force\_up\_));}
+\DoxyCodeLine{00156\ \ \ \ \ \}}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00159\ \};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ CEREAL\_REGISTER\_TYPE(\mbox{\hyperlink{class_component_spring_arm}{ComponentSpringArm}})}
+\DoxyCodeLine{00162\ CEREAL\_REGISTER\_POLYMORPHIC\_RELATION(\mbox{\hyperlink{class_component}{Component}},\ \mbox{\hyperlink{class_component_spring_arm}{ComponentSpringArm}})}
+
+\end{DoxyCode}

@@ -1,0 +1,189 @@
+\doxysection{F\+:/sg mitarai/\+Reo\+Engine/src/\+Input\+Manager.h ファイル}
+\hypertarget{_input_manager_8h}{}\label{_input_manager_8h}\index{F:/sg mitarai/ReoEngine/src/InputManager.h@{F:/sg mitarai/ReoEngine/src/InputManager.h}}
+
+
+入力管理ユーティリティの宣言  
+
+
+{\ttfamily \#include "{}Dx\+Lib.\+h"{}}\newline
+Input\+Manager.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{_input_manager_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_input_manager_8h_aa5480931dba2720e7d80dd00a53adae0}\label{_input_manager_8h_aa5480931dba2720e7d80dd00a53adae0} 
+void {\bfseries Input\+Manager\+::\+Update} ()
+\begin{DoxyCompactList}\small\item\em 入力状態更新（毎フレーム呼ぶ） \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_manager_8h_a21d0bba89d06b4bbb88c28edaa20367a}{Input\+Manager\+::\+Push\+Hit\+Key}} (int key)
+\begin{DoxyCompactList}\small\item\em キーが押された瞬間か \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_manager_8h_af42b18fb5093e57be01123f372c590de}{Input\+Manager\+::\+Check\+Hit\+Key}} (int key)
+\begin{DoxyCompactList}\small\item\em キーが押下中か（継続押下を含む） \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_manager_8h_ab7785446467a4715e15046d5e6a76114}{Input\+Manager\+::\+Check\+Mouse\+Input}} (int button)
+\begin{DoxyCompactList}\small\item\em マウスボタン押下中判定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_input_manager_8h_aa26b6ada6f0715266c0399b18b150edd}{Input\+Manager\+::\+Push\+Mouse\+Input}} (int button)
+\begin{DoxyCompactList}\small\item\em マウスボタン押下瞬間判定 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_input_manager_8h_aaf3b26c6111df679c31b89570ea36146}{Input\+Manager\+::\+Get\+Mouse\+Wheel}} ()
+\begin{DoxyCompactList}\small\item\em マウスホイール回転量取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_input_manager_8h_af9bde9886eebfed884ade36fdc85337e}{Input\+Manager\+::\+Get\+MouseX}} ()
+\begin{DoxyCompactList}\small\item\em マウス\+X座標取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_input_manager_8h_a3fe1eecc6fd43ae5d0366c8492febbf8}{Input\+Manager\+::\+Get\+MouseY}} ()
+\begin{DoxyCompactList}\small\item\em マウス\+Y座標取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_input_manager_8h_a81a9736f74cd834cdb28133926e29c69}{Input\+Manager\+::\+Get\+Mouse\+DeltaX}} ()
+\begin{DoxyCompactList}\small\item\em マウス移動量\+X（前フレームとの差分）を取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_input_manager_8h_a43deee84d7e15fae76413835523b5d8e}{Input\+Manager\+::\+Get\+Mouse\+DeltaY}} ()
+\begin{DoxyCompactList}\small\item\em マウス移動量\+Y（前フレームとの差分）を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+入力管理ユーティリティの宣言 
+
+全キー入力とマウス入力を管理します。 \begin{DoxyAuthor}{著者}
+レオ 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{_input_manager_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_input_manager_8h_af42b18fb5093e57be01123f372c590de}\index{InputManager.h@{InputManager.h}!CheckHitKey@{CheckHitKey}}
+\index{CheckHitKey@{CheckHitKey}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{CheckHitKey()}{CheckHitKey()}}
+{\footnotesize\ttfamily \label{_input_manager_8h_af42b18fb5093e57be01123f372c590de} 
+bool Input\+Manager\+::\+Check\+Hit\+Key (\begin{DoxyParamCaption}\item[{int}]{key}{}\end{DoxyParamCaption})}
+
+
+
+キーが押下中か（継続押下を含む） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em key} & 判定するキーコード \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true 押下中 
+\end{DoxyReturn}
+\Hypertarget{_input_manager_8h_ab7785446467a4715e15046d5e6a76114}\index{InputManager.h@{InputManager.h}!CheckMouseInput@{CheckMouseInput}}
+\index{CheckMouseInput@{CheckMouseInput}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{CheckMouseInput()}{CheckMouseInput()}}
+{\footnotesize\ttfamily \label{_input_manager_8h_ab7785446467a4715e15046d5e6a76114} 
+bool Input\+Manager\+::\+Check\+Mouse\+Input (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})}
+
+
+
+マウスボタン押下中判定 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em button} & MOUSE\+\_\+\+INPUT\+\_\+\+LEFT, MOUSE\+\_\+\+INPUT\+\_\+\+RIGHT など \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true 押下中 
+\end{DoxyReturn}
+\Hypertarget{_input_manager_8h_a81a9736f74cd834cdb28133926e29c69}\index{InputManager.h@{InputManager.h}!GetMouseDeltaX@{GetMouseDeltaX}}
+\index{GetMouseDeltaX@{GetMouseDeltaX}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{GetMouseDeltaX()}{GetMouseDeltaX()}}
+{\footnotesize\ttfamily \label{_input_manager_8h_a81a9736f74cd834cdb28133926e29c69} 
+int Input\+Manager\+::\+Get\+Mouse\+DeltaX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+マウス移動量\+X（前フレームとの差分）を取得 
+
+\begin{DoxyReturn}{戻り値}
+マウス\+X座標の前フレームからの変化量 
+\end{DoxyReturn}
+\Hypertarget{_input_manager_8h_a43deee84d7e15fae76413835523b5d8e}\index{InputManager.h@{InputManager.h}!GetMouseDeltaY@{GetMouseDeltaY}}
+\index{GetMouseDeltaY@{GetMouseDeltaY}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{GetMouseDeltaY()}{GetMouseDeltaY()}}
+{\footnotesize\ttfamily \label{_input_manager_8h_a43deee84d7e15fae76413835523b5d8e} 
+int Input\+Manager\+::\+Get\+Mouse\+DeltaY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+マウス移動量\+Y（前フレームとの差分）を取得 
+
+\begin{DoxyReturn}{戻り値}
+マウス\+Y座標の前フレームからの変化量 
+\end{DoxyReturn}
+\Hypertarget{_input_manager_8h_aaf3b26c6111df679c31b89570ea36146}\index{InputManager.h@{InputManager.h}!GetMouseWheel@{GetMouseWheel}}
+\index{GetMouseWheel@{GetMouseWheel}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{GetMouseWheel()}{GetMouseWheel()}}
+{\footnotesize\ttfamily \label{_input_manager_8h_aaf3b26c6111df679c31b89570ea36146} 
+int Input\+Manager\+::\+Get\+Mouse\+Wheel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+マウスホイール回転量取得 
+
+\begin{DoxyReturn}{戻り値}
+1以上 = 奥回転, 0 = 回していない, -\/1以下 = 手前回転 
+\end{DoxyReturn}
+\Hypertarget{_input_manager_8h_af9bde9886eebfed884ade36fdc85337e}\index{InputManager.h@{InputManager.h}!GetMouseX@{GetMouseX}}
+\index{GetMouseX@{GetMouseX}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{GetMouseX()}{GetMouseX()}}
+{\footnotesize\ttfamily \label{_input_manager_8h_af9bde9886eebfed884ade36fdc85337e} 
+int Input\+Manager\+::\+Get\+MouseX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+マウス\+X座標取得 
+
+\begin{DoxyReturn}{戻り値}
+マウスのスクリーン\+X座標 
+\end{DoxyReturn}
+\Hypertarget{_input_manager_8h_a3fe1eecc6fd43ae5d0366c8492febbf8}\index{InputManager.h@{InputManager.h}!GetMouseY@{GetMouseY}}
+\index{GetMouseY@{GetMouseY}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{GetMouseY()}{GetMouseY()}}
+{\footnotesize\ttfamily \label{_input_manager_8h_a3fe1eecc6fd43ae5d0366c8492febbf8} 
+int Input\+Manager\+::\+Get\+MouseY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+マウス\+Y座標取得 
+
+\begin{DoxyReturn}{戻り値}
+マウスのスクリーン\+Y座標 
+\end{DoxyReturn}
+\Hypertarget{_input_manager_8h_a21d0bba89d06b4bbb88c28edaa20367a}\index{InputManager.h@{InputManager.h}!PushHitKey@{PushHitKey}}
+\index{PushHitKey@{PushHitKey}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{PushHitKey()}{PushHitKey()}}
+{\footnotesize\ttfamily \label{_input_manager_8h_a21d0bba89d06b4bbb88c28edaa20367a} 
+bool Input\+Manager\+::\+Push\+Hit\+Key (\begin{DoxyParamCaption}\item[{int}]{key}{}\end{DoxyParamCaption})}
+
+
+
+キーが押された瞬間か 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em key} & 判定するキーコード \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true 押された瞬間 
+\end{DoxyReturn}
+\Hypertarget{_input_manager_8h_aa26b6ada6f0715266c0399b18b150edd}\index{InputManager.h@{InputManager.h}!PushMouseInput@{PushMouseInput}}
+\index{PushMouseInput@{PushMouseInput}!InputManager.h@{InputManager.h}}
+\doxysubsubsection{\texorpdfstring{PushMouseInput()}{PushMouseInput()}}
+{\footnotesize\ttfamily \label{_input_manager_8h_aa26b6ada6f0715266c0399b18b150edd} 
+bool Input\+Manager\+::\+Push\+Mouse\+Input (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption})}
+
+
+
+マウスボタン押下瞬間判定 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em button} & MOUSE\+\_\+\+INPUT\+\_\+\+LEFT, MOUSE\+\_\+\+INPUT\+\_\+\+RIGHT など \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true 押された瞬間 
+\end{DoxyReturn}

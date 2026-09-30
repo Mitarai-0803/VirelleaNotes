@@ -1,0 +1,3 @@
+<map id="CreateInstance&lt; T, true &gt;" name="CreateInstance&lt; T, true &gt;">
+<area shape="rect" id="Node000001" title="抽象クラスの場合はnewできないためnullptrを返す特殊化" alt="" coords="5,5,127,91"/>
+</map>

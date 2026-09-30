@@ -1,0 +1,98 @@
+\doxysection{System\+::Zoom\+Component クラス}
+\hypertarget{class_system_1_1_zoom_component}{}\label{class_system_1_1_zoom_component}\index{System::ZoomComponent@{System::ZoomComponent}}
+
+
+{\ttfamily \#include $<$Zoom\+Component.\+h$>$}
+
+System\+::Zoom\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_system_1_1_zoom_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_1_1_zoom_component_a77c6cd137727ac4e42e235bbfcb804a8}\label{class_system_1_1_zoom_component_a77c6cd137727ac4e42e235bbfcb804a8} 
+{\bfseries Zoom\+Component} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_zoom_component_acfa4003b1e4b96370441e457aec53d8e}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_zoom_component_a8d24e951f231d9c3ace7c06658d0d247}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_system_1_1_zoom_component_a5f4c2cb6e791e1f831a538a1a828d9ba}{Get\+Zoom}} () const
+\item 
+void \mbox{\hyperlink{class_system_1_1_zoom_component_ab13d7a9047e3ac5d4ce80d4f0cffc4bb}{Set\+Zoom}} (float zoom)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_base_a24e99a122f01df33d2914cd8e5abff63}{Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_component_base_a4c25df37cf7ca24e8cd55889bab19aef}{‾\+Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ズーム制御を行うコンポーネントです。 
+
+\label{doc-func-members}
+\Hypertarget{class_system_1_1_zoom_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_system_1_1_zoom_component_a5f4c2cb6e791e1f831a538a1a828d9ba}\index{System::ZoomComponent@{System::ZoomComponent}!GetZoom@{GetZoom}}
+\index{GetZoom@{GetZoom}!System::ZoomComponent@{System::ZoomComponent}}
+\doxysubsubsection{\texorpdfstring{GetZoom()}{GetZoom()}}
+{\footnotesize\ttfamily \label{class_system_1_1_zoom_component_a5f4c2cb6e791e1f831a538a1a828d9ba} 
+float System\+::\+Zoom\+Component\+::\+Get\+Zoom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+現在のズーム倍率取得 \begin{DoxyReturn}{戻り値}
+現在のズーム倍率 
+\end{DoxyReturn}
+\Hypertarget{class_system_1_1_zoom_component_acfa4003b1e4b96370441e457aec53d8e}\index{System::ZoomComponent@{System::ZoomComponent}!Init@{Init}}
+\index{Init@{Init}!System::ZoomComponent@{System::ZoomComponent}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_system_1_1_zoom_component_acfa4003b1e4b96370441e457aec53d8e} 
+void System\+::\+Zoom\+Component\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_system_1_1_zoom_component_ab13d7a9047e3ac5d4ce80d4f0cffc4bb}\index{System::ZoomComponent@{System::ZoomComponent}!SetZoom@{SetZoom}}
+\index{SetZoom@{SetZoom}!System::ZoomComponent@{System::ZoomComponent}}
+\doxysubsubsection{\texorpdfstring{SetZoom()}{SetZoom()}}
+{\footnotesize\ttfamily \label{class_system_1_1_zoom_component_ab13d7a9047e3ac5d4ce80d4f0cffc4bb} 
+void System\+::\+Zoom\+Component\+::\+Set\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom}{}\end{DoxyParamCaption})}
+
+ズーム倍率設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em zoom} & 設定するズーム倍率 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_system_1_1_zoom_component_a8d24e951f231d9c3ace7c06658d0d247}\index{System::ZoomComponent@{System::ZoomComponent}!Update@{Update}}
+\index{Update@{Update}!System::ZoomComponent@{System::ZoomComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_system_1_1_zoom_component_a8d24e951f231d9c3ace7c06658d0d247} 
+void System\+::\+Zoom\+Component\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+
+
+\mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Component\+Base}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/\mbox{\hyperlink{_zoom_component_8h}{Zoom\+Component.\+h}}\end{DoxyCompactItemize}

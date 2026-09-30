@@ -1,0 +1,120 @@
+\doxysection{Type\+Info クラス}
+\hypertarget{class_type_info}{}\label{class_type_info}\index{TypeInfo@{TypeInfo}}
+
+
+型情報基底  
+
+
+
+
+{\ttfamily \#include $<$Type\+Info.\+h$>$}
+
+
+
+Type\+Info の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_type_info__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Type\+Info 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{class_type_info__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_type_info_a3fea5e44c795c92d7a294eeaffaaa36e}{Type\+Info}} (const char \texorpdfstring{$\ast$}{*}class\+\_\+name, size\+\_\+t class\+\_\+size, \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*}parent\+\_\+type=nullptr, const char \texorpdfstring{$\ast$}{*}desc\+\_\+name="{}"{})
+\item 
+\Hypertarget{class_type_info_aaff7650702211d2496c1f619122bd60b}\label{class_type_info_aaff7650702211d2496c1f619122bd60b} 
+virtual void \texorpdfstring{$\ast$}{*} {\bfseries create\+Instance} () const
+\item 
+\Hypertarget{class_type_info_a8017dcce1e0c96e71e719277a91c6e8b}\label{class_type_info_a8017dcce1e0c96e71e719277a91c6e8b} 
+const char \texorpdfstring{$\ast$}{*} {\bfseries class\+Name} () const
+\item 
+\Hypertarget{class_type_info_a39cb0103e8ee2e0645625dcffa6ba747}\label{class_type_info_a39cb0103e8ee2e0645625dcffa6ba747} 
+const char \texorpdfstring{$\ast$}{*} {\bfseries desc\+Name} () const
+\item 
+\Hypertarget{class_type_info_a4e7dfbbe51989519b1879b5b98ff0e0a}\label{class_type_info_a4e7dfbbe51989519b1879b5b98ff0e0a} 
+size\+\_\+t {\bfseries class\+Size} () const
+\item 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_type_info_a8be2922a8d831c706073a0a320fa3860}{parent}} () const
+\item 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_type_info_a7c25eb4cb6570d8d5c46d3715822adc8}{child}} () const
+\item 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_type_info_a5a7cd1c13530aca4cb9fb9d78fa5a6c0}{siblings}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_type_info_a362a348448516fe28c6c3316d197fcf3}\label{class_type_info_a362a348448516fe28c6c3316d197fcf3} 
+static \mbox{\hyperlink{class_type_info}{Type\+Info}} {\bfseries Root}
+\begin{DoxyCompactList}\small\item\em ルートの型情報 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+型情報基底 
+
+\label{doc-constructors}
+\Hypertarget{class_type_info_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_type_info_a3fea5e44c795c92d7a294eeaffaaa36e}\index{TypeInfo@{TypeInfo}!TypeInfo@{TypeInfo}}
+\index{TypeInfo@{TypeInfo}!TypeInfo@{TypeInfo}}
+\doxysubsubsection{\texorpdfstring{TypeInfo()}{TypeInfo()}}
+{\footnotesize\ttfamily \label{class_type_info_a3fea5e44c795c92d7a294eeaffaaa36e} 
+Type\+Info\+::\+Type\+Info (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{class\+\_\+name}{, }\item[{size\+\_\+t}]{class\+\_\+size}{, }\item[{\mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*}}]{parent\+\_\+type}{ = {\ttfamily nullptr}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{desc\+\_\+name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em class\+\_\+name} & クラスの名前 \\
+\hline
+\mbox{\texttt{in}}  & {\em class\+\_\+size} & クラスのサイズ(単位\+:bytes) \\
+\hline
+\mbox{\texttt{in}}  & {\em parent\+\_\+type} & 親クラスの型情報(親がないクラスはnullptr) \\
+\hline
+\mbox{\texttt{in}}  & {\em desc\+\_\+name} & 説明文文字列 \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_type_info_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_type_info_a7c25eb4cb6570d8d5c46d3715822adc8}\index{TypeInfo@{TypeInfo}!child@{child}}
+\index{child@{child}!TypeInfo@{TypeInfo}}
+\doxysubsubsection{\texorpdfstring{child()}{child()}}
+{\footnotesize\ttfamily \label{class_type_info_a7c25eb4cb6570d8d5c46d3715822adc8} 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} Type\+Info\+::child (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{戻り値}
+ノードへのポインタ (存在しない場合はnullptr) 
+\end{DoxyReturn}
+\Hypertarget{class_type_info_a8be2922a8d831c706073a0a320fa3860}\index{TypeInfo@{TypeInfo}!parent@{parent}}
+\index{parent@{parent}!TypeInfo@{TypeInfo}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily \label{class_type_info_a8be2922a8d831c706073a0a320fa3860} 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} Type\+Info\+::parent (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{戻り値}
+ノードへのポインタ (存在しない場合はnullptr) 
+\end{DoxyReturn}
+\Hypertarget{class_type_info_a5a7cd1c13530aca4cb9fb9d78fa5a6c0}\index{TypeInfo@{TypeInfo}!siblings@{siblings}}
+\index{siblings@{siblings}!TypeInfo@{TypeInfo}}
+\doxysubsubsection{\texorpdfstring{siblings()}{siblings()}}
+{\footnotesize\ttfamily \label{class_type_info_a5a7cd1c13530aca4cb9fb9d78fa5a6c0} 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} Type\+Info\+::siblings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{戻り値}
+ノードへのポインタ (存在しない場合はnullptr) 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_type_info_8h}{Type\+Info.\+h}}\end{DoxyCompactItemize}

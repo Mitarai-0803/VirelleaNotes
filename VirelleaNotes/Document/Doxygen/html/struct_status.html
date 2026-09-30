@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Status&lt; T, V &gt; 構造体テンプレート</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('struct_status.html','','struct_status-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Status&lt; T, V &gt; 構造体テンプレート</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>ステータス  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_status_8h_source.html">Status.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a18920e81b62e7f59821f116cb1a7e9a0" id="r_a18920e81b62e7f59821f116cb1a7e9a0"><td class="memItemLeft" align="right" valign="top">enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0">Bit</a> : V { <br />
+&#160;&#160;<a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0abd9f7c5d6ab4201b138a3e51dab7056f">Alive</a> = 0
+, <a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0ac5475a8fae2fa421403e56f7ae0de108">ChangePrio</a>
+, <a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0a552f244367a4f2e2ef9e4e5ff2c52ea0">ShowGUI</a>
+, <a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0a59d87a4758a9d35fbaf6b204341bb399">Initialized</a>
+, <br />
+&#160;&#160;<a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0af3413da9e97ed78dada82d1330fde5f1">NoUpdate</a>
+, <a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0add349546b418e50c23e2d88a3342a68f">NoDraw</a>
+, <a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0ad0b20a6cab952ae657cd06d2c956a7ea">DisablePause</a>
+, <a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0a7c572e80f65d4b3a29bc954dd03225b6">IsPause</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a467ddc32f7183ea10eeac09cc90c23bf" id="r_a467ddc32f7183ea10eeac09cc90c23bf"><td class="memItemLeft" align="right" valign="top"><a id="a467ddc32f7183ea10eeac09cc90c23bf" name="a467ddc32f7183ea10eeac09cc90c23bf"></a>
+V&#160;</td><td class="memItemRight" valign="bottom"><b>on</b> (T b)</td></tr>
+<tr class="memitem:a0e024bca0f58b5e1cda3dd6bf94d40c7" id="r_a0e024bca0f58b5e1cda3dd6bf94d40c7"><td class="memItemLeft" align="right" valign="top"><a id="a0e024bca0f58b5e1cda3dd6bf94d40c7" name="a0e024bca0f58b5e1cda3dd6bf94d40c7"></a>
+V&#160;</td><td class="memItemRight" valign="bottom"><b>off</b> (T b)</td></tr>
+<tr class="memitem:ad9dc31e328652e8e835aa12d89195811" id="r_ad9dc31e328652e8e835aa12d89195811"><td class="memItemLeft" align="right" valign="top"><a id="ad9dc31e328652e8e835aa12d89195811" name="ad9dc31e328652e8e835aa12d89195811"></a>
+V&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (T b, bool _on)</td></tr>
+<tr class="memitem:af4b46e2be91cf8da689ef283875f6bc2" id="r_af4b46e2be91cf8da689ef283875f6bc2"><td class="memItemLeft" align="right" valign="top"><a id="af4b46e2be91cf8da689ef283875f6bc2" name="af4b46e2be91cf8da689ef283875f6bc2"></a>
+V&#160;</td><td class="memItemRight" valign="bottom"><b>is</b> (T b) const</td></tr>
+<tr class="memitem:a5ab7163f7b7a66a3194abef65187eddc" id="r_a5ab7163f7b7a66a3194abef65187eddc"><td class="memItemLeft" align="right" valign="top"><a id="a5ab7163f7b7a66a3194abef65187eddc" name="a5ab7163f7b7a66a3194abef65187eddc"></a>
+V &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> ()</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class T, class V = u32&gt;<br />
+struct Status&lt; T, V &gt;</div><p>ステータス </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型メンバ詳解</h2>
+<a id="a18920e81b62e7f59821f116cb1a7e9a0" name="a18920e81b62e7f59821f116cb1a7e9a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18920e81b62e7f59821f116cb1a7e9a0">&#9670;&#160;</a></span>Bit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T, class V = u32&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum struct <a class="el" href="#a18920e81b62e7f59821f116cb1a7e9a0">Status::Bit</a> : V</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a18920e81b62e7f59821f116cb1a7e9a0abd9f7c5d6ab4201b138a3e51dab7056f" name="a18920e81b62e7f59821f116cb1a7e9a0abd9f7c5d6ab4201b138a3e51dab7056f"></a>Alive&#160;</td><td class="fielddoc"><p>生存状態 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a18920e81b62e7f59821f116cb1a7e9a0ac5475a8fae2fa421403e56f7ae0de108" name="a18920e81b62e7f59821f116cb1a7e9a0ac5475a8fae2fa421403e56f7ae0de108"></a>ChangePrio&#160;</td><td class="fielddoc"><p>プライオリティの変更中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a18920e81b62e7f59821f116cb1a7e9a0a552f244367a4f2e2ef9e4e5ff2c52ea0" name="a18920e81b62e7f59821f116cb1a7e9a0a552f244367a4f2e2ef9e4e5ff2c52ea0"></a>ShowGUI&#160;</td><td class="fielddoc"><p>GUI表示中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a18920e81b62e7f59821f116cb1a7e9a0a59d87a4758a9d35fbaf6b204341bb399" name="a18920e81b62e7f59821f116cb1a7e9a0a59d87a4758a9d35fbaf6b204341bb399"></a>Initialized&#160;</td><td class="fielddoc"><p>初期化終了 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a18920e81b62e7f59821f116cb1a7e9a0af3413da9e97ed78dada82d1330fde5f1" name="a18920e81b62e7f59821f116cb1a7e9a0af3413da9e97ed78dada82d1330fde5f1"></a>NoUpdate&#160;</td><td class="fielddoc"><p>Updateしない </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a18920e81b62e7f59821f116cb1a7e9a0add349546b418e50c23e2d88a3342a68f" name="a18920e81b62e7f59821f116cb1a7e9a0add349546b418e50c23e2d88a3342a68f"></a>NoDraw&#160;</td><td class="fielddoc"><p>Drawしない </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a18920e81b62e7f59821f116cb1a7e9a0ad0b20a6cab952ae657cd06d2c956a7ea" name="a18920e81b62e7f59821f116cb1a7e9a0ad0b20a6cab952ae657cd06d2c956a7ea"></a>DisablePause&#160;</td><td class="fielddoc"><p>ポーズ不可 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a18920e81b62e7f59821f116cb1a7e9a0a7c572e80f65d4b3a29bc954dd03225b6" name="a18920e81b62e7f59821f116cb1a7e9a0a7c572e80f65d4b3a29bc954dd03225b6"></a>IsPause&#160;</td><td class="fielddoc"><p>ポーズ中 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/自作エンジン/src/System/<a class="el" href="_status_8h_source.html">Status.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_status.html">Status</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

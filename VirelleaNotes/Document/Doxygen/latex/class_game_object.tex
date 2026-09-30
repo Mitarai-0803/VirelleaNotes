@@ -1,0 +1,169 @@
+\doxysection{Game\+Object クラス}
+\hypertarget{class_game_object}{}\label{class_game_object}\index{GameObject@{GameObject}}
+
+
+\texorpdfstring{$<$}{<} 型特性  
+
+
+
+
+{\ttfamily \#include $<$Game\+Object.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_object_a49f0fc91c3048ec583044e7a1b9c2518}\label{class_game_object_a49f0fc91c3048ec583044e7a1b9c2518} 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a7ff7533019b93fc2bb8c06e6690ab1ca}\label{class_game_object_a7ff7533019b93fc2bb8c06e6690ab1ca} 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em 名前取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em 名前設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_aa70012636f8b4c1e84d8344bf5f3480a}\label{class_game_object_aa70012636f8b4c1e84d8344bf5f3480a} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em 初期化呼び出し \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a1bd14aa169f501f94f1721943d716535}\label{class_game_object_a1bd14aa169f501f94f1721943d716535} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em 更新呼び出し \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_ad3ac1deac50048cf7a1a19eb0e61ad26}\label{class_game_object_ad3ac1deac50048cf7a1a19eb0e61ad26} 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画呼び出し \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a71b94e687a7d37caeffa70ebac9bf3ee}\label{class_game_object_a71b94e687a7d37caeffa70ebac9bf3ee} 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em 終了呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em 追加描画（スクロール/ズーム対応） \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}\label{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3} 
+virtual void {\bfseries On\+Draw} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_object_aa3bb1b264bcd9b1762365b56892f9e1e}\label{class_game_object_aa3bb1b264bcd9b1762365b56892f9e1e} 
+virtual void {\bfseries On\+Init} ()
+\begin{DoxyCompactList}\small\item\em オブジェクト固有の初期化処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_game_object_a1ac2a73147f469ff7371971560a4dd0a}\label{class_game_object_a1ac2a73147f469ff7371971560a4dd0a} 
+virtual void {\bfseries On\+Update} ()
+\item 
+\Hypertarget{class_game_object_a622809423da053a4ce995e270547d06c}\label{class_game_object_a622809423da053a4ce995e270547d06c} 
+virtual void {\bfseries On\+Draw} ()
+\item 
+\Hypertarget{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71}\label{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71} 
+virtual void {\bfseries On\+End} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\texorpdfstring{$<$}{<} 型特性 
+
+\texorpdfstring{$<$}{<} コンポーネント基底クラス
+
+\texorpdfstring{$<$}{<} コンテナヘッダ スマートポインタ 文字列
+
+ゲームオブジェクトを表すクラス
+
+コンポーネントを保持し、ライフサイクル（\+Init/\+Update/\+Draw/\+End）を管理する 
+
+\label{doc-func-members}
+\Hypertarget{class_game_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}\index{GameObject@{GameObject}!AddComponent@{AddComponent}}
+\index{AddComponent@{AddComponent}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{AddComponent()}{AddComponent()}}
+{\footnotesize\ttfamily \label{class_game_object_acbcf681e26fc95dcedfae1e220712ba2} 
+template$<$typename T, typename... Args$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Game\+Object\+::\+Add\+Component (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンポーネント追加 
+
+
+\begin{DoxyTemplParams}{テンプレート引数}
+{\em T} & 追加するコンポーネント型 \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em args} & コンポーネントのコンストラクタ引数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+追加したコンポーネントの shared\+\_\+ptr 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}\index{GameObject@{GameObject}!Draw@{Draw}}
+\index{Draw@{Draw}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_game_object_a531f2c9a32e7e6d240ff561671f5f644} 
+virtual void Game\+Object\+::\+Draw (\begin{DoxyParamCaption}\item[{float}]{scroll}{, }\item[{float}]{zoom}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+追加描画（スクロール/ズーム対応） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em scroll} & スクロール値 \\
+\hline
+\mbox{\texttt{in}}  & {\em zoom} & ズーム値 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}\index{GameObject@{GameObject}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily \label{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8} 
+template$<$typename T$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Game\+Object\+::\+Get\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンポーネント取得 
+
+
+\begin{DoxyTemplParams}{テンプレート引数}
+{\em T} & 取得する型 \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{戻り値}
+見つかったら shared\+\_\+ptr、なければ nullptr 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a986731c4dfb08336dbf0731e6514bad9}\index{GameObject@{GameObject}!GetName@{GetName}}
+\index{GetName@{GetName}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily \label{class_game_object_a986731c4dfb08336dbf0731e6514bad9} 
+std\+::string Game\+Object\+::\+Get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+名前取得 
+
+\begin{DoxyReturn}{戻り値}
+オブジェクト名 
+\end{DoxyReturn}
+\Hypertarget{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}\index{GameObject@{GameObject}!SetName@{SetName}}
+\index{SetName@{SetName}!GameObject@{GameObject}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily \label{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6} 
+void Game\+Object\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{n}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+名前設定 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em n} & 設定する名前 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\mbox{\hyperlink{_game_object_8h}{Game\+Object.\+h}}\end{DoxyCompactItemize}

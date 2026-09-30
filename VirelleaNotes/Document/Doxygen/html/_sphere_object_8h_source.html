@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: F:/sg mitarai/ReoEngine/src/SphereObject.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_sphere_object_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SphereObject.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_sphere_object_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_object_base3_d_8h.html">ObjectBase3D.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;Jolt/Jolt.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="class_sphere_collider.html">SphereCollider</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>Object</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//============================================================================</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_object_1_1_sphere_object.html">   24</a></span><span class="keyword">class </span><a class="code hl_function" href="class_object_1_1_sphere_object.html#a80402950a1245dc64b6b8d23fe77d64d">SphereObject</a> : <span class="keyword">public</span> ObjectBase3D</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_object_1_1_sphere_object.html#a80402950a1245dc64b6b8d23fe77d64d">   33</a></span>    <a class="code hl_function" href="class_object_1_1_sphere_object.html#a80402950a1245dc64b6b8d23fe77d64d">SphereObject</a>(<span class="keyword">const</span> JPH::RVec3&amp; pos, <span class="keywordtype">float</span> radius = 0.5f);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_object_1_1_sphere_object.html#a3ffeab9f73182dd1eb4a6c3328f45950">   38</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_object_1_1_sphere_object.html#a3ffeab9f73182dd1eb4a6c3328f45950">~SphereObject</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">//=============================================================</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// ゲッター / セッター</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">//=============================================================</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_object_1_1_sphere_object.html#ace679bd2809609c002188f4945b7ed3f">   49</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_object_1_1_sphere_object.html#ace679bd2809609c002188f4945b7ed3f">GetRadius</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_radius; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_object_1_1_sphere_object.html#aa7c5c3e4094e54937bd4bfd3ff8de92e">   56</a></span>    JPH::Vec3 <a class="code hl_function" href="class_object_1_1_sphere_object.html#aa7c5c3e4094e54937bd4bfd3ff8de92e">GetLinearVelocity</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_object_1_1_sphere_object.html#a43db6968939c88811d29300b086723b3">   63</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_object_1_1_sphere_object.html#a43db6968939c88811d29300b086723b3">SetLinearVelocity</a>(<span class="keyword">const</span> JPH::Vec3&amp; velocity);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_object_1_1_sphere_object.html#a994635364937413dc37cf5f2e03de07a">   72</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_object_1_1_sphere_object.html#a994635364937413dc37cf5f2e03de07a">OnInit</a>()   <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_object_1_1_sphere_object.html#aa5e854badeefbf898751622f80a20aa2">   77</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_object_1_1_sphere_object.html#aa5e854badeefbf898751622f80a20aa2">OnDraw</a>()   <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_object_1_1_sphere_object.html#abd6b18e76e8c1df026199ec717236e07">   82</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_object_1_1_sphere_object.html#abd6b18e76e8c1df026199ec717236e07">OnEnd</a>()    <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    JPH::RVec3                      m_initPos;    </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">float</span>                           m_radius;     </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::shared_ptr&lt;SphereCollider&gt; m_collider;   </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}    <span class="comment">// namespace Object</span></div>
+<div class="ttc" id="a_object_base3_d_8h_html"><div class="ttname"><a href="_object_base3_d_8h.html">ObjectBase3D.h</a></div><div class="ttdoc">3Dオブジェクト基底クラス</div></div>
+<div class="ttc" id="aclass_object_1_1_sphere_object_html_a3ffeab9f73182dd1eb4a6c3328f45950"><div class="ttname"><a href="class_object_1_1_sphere_object.html#a3ffeab9f73182dd1eb4a6c3328f45950">Object::SphereObject::~SphereObject</a></div><div class="ttdeci">virtual ~SphereObject()=default</div><div class="ttdoc">デストラクタ</div></div>
+<div class="ttc" id="aclass_object_1_1_sphere_object_html_a43db6968939c88811d29300b086723b3"><div class="ttname"><a href="class_object_1_1_sphere_object.html#a43db6968939c88811d29300b086723b3">Object::SphereObject::SetLinearVelocity</a></div><div class="ttdeci">void SetLinearVelocity(const JPH::Vec3 &amp;velocity)</div><div class="ttdoc">速度を直接設定する</div></div>
+<div class="ttc" id="aclass_object_1_1_sphere_object_html_a80402950a1245dc64b6b8d23fe77d64d"><div class="ttname"><a href="class_object_1_1_sphere_object.html#a80402950a1245dc64b6b8d23fe77d64d">Object::SphereObject::SphereObject</a></div><div class="ttdeci">SphereObject(const JPH::RVec3 &amp;pos, float radius=0.5f)</div><div class="ttdoc">コンストラクタ</div></div>
+<div class="ttc" id="aclass_object_1_1_sphere_object_html_a994635364937413dc37cf5f2e03de07a"><div class="ttname"><a href="class_object_1_1_sphere_object.html#a994635364937413dc37cf5f2e03de07a">Object::SphereObject::OnInit</a></div><div class="ttdeci">void OnInit() override</div><div class="ttdoc">初期化処理</div></div>
+<div class="ttc" id="aclass_object_1_1_sphere_object_html_aa5e854badeefbf898751622f80a20aa2"><div class="ttname"><a href="class_object_1_1_sphere_object.html#aa5e854badeefbf898751622f80a20aa2">Object::SphereObject::OnDraw</a></div><div class="ttdeci">void OnDraw() override</div><div class="ttdoc">描画処理</div></div>
+<div class="ttc" id="aclass_object_1_1_sphere_object_html_aa7c5c3e4094e54937bd4bfd3ff8de92e"><div class="ttname"><a href="class_object_1_1_sphere_object.html#aa7c5c3e4094e54937bd4bfd3ff8de92e">Object::SphereObject::GetLinearVelocity</a></div><div class="ttdeci">JPH::Vec3 GetLinearVelocity() const</div><div class="ttdoc">現在の速度を取得する</div></div>
+<div class="ttc" id="aclass_object_1_1_sphere_object_html_abd6b18e76e8c1df026199ec717236e07"><div class="ttname"><a href="class_object_1_1_sphere_object.html#abd6b18e76e8c1df026199ec717236e07">Object::SphereObject::OnEnd</a></div><div class="ttdeci">void OnEnd() override</div><div class="ttdoc">終了処理</div></div>
+<div class="ttc" id="aclass_object_1_1_sphere_object_html_ace679bd2809609c002188f4945b7ed3f"><div class="ttname"><a href="class_object_1_1_sphere_object.html#ace679bd2809609c002188f4945b7ed3f">Object::SphereObject::GetRadius</a></div><div class="ttdeci">float GetRadius() const</div><div class="ttdoc">球の半径を取得する</div><div class="ttdef"><b>Definition</b> SphereObject.h:49</div></div>
+<div class="ttc" id="aclass_sphere_collider_html"><div class="ttname"><a href="class_sphere_collider.html">SphereCollider</a></div><div class="ttdoc">&lt; PhysicsSystem</div><div class="ttdef"><b>Definition</b> SphereCollider.h:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_sphere_object_8h.html">SphereObject.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

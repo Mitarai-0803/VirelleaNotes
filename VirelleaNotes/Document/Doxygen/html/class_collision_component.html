@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: CollisionComponent クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_collision_component.html','','class_collision_component-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CollisionComponent クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>&lt; Shape  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_collision_component_8h_source.html">CollisionComponent.h</a>&gt;</code></p>
+<div class="dynheader">
+CollisionComponent の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_collision_component__inherit__graph.png" border="0" usemap="#a_collision_component_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_collision_component_inherit__map" id="a_collision_component_inherit__map">
+<area shape="rect" title="&lt; Shape" alt="" coords="147,251,304,555"/>
+<area shape="rect" href="class_box_collider_component.html" title=" " alt="" coords="5,603,150,672"/>
+<area shape="poly" title=" " alt="" coords="142,538,101,604,97,601,137,541"/>
+<area shape="rect" href="class_capsule_collider.html" title="&lt; PhysicsSystem" alt="" coords="174,603,277,672"/>
+<area shape="poly" title=" " alt="" coords="227,567,228,604,223,602,224,571"/>
+<area shape="rect" href="class_sphere_collider.html" title="&lt; PhysicsSystem" alt="" coords="300,603,396,672"/>
+<area shape="poly" title=" " alt="" coords="312,563,333,604,328,602,310,568"/>
+<area shape="rect" href="class_component_base.html" title="コンポーネント基底クラス" alt="" coords="157,5,294,203"/>
+<area shape="poly" title=" " alt="" coords="226,215,228,251,223,250,225,220"/>
+</map>
+</div>
+<div class="dynheader">
+CollisionComponent 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_collision_component__coll__graph.png" border="0" usemap="#a_collision_component_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_collision_component_coll__map" id="a_collision_component_coll__map">
+<area shape="rect" title="&lt; Shape" alt="" coords="5,251,162,555"/>
+<area shape="rect" href="class_component_base.html" title="コンポーネント基底クラス" alt="" coords="15,5,152,203"/>
+<area shape="poly" title=" " alt="" coords="84,215,86,251,81,251,83,220"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a1d4c868d0fd4dc45e0fc6cf698434431" id="r_a1d4c868d0fd4dc45e0fc6cf698434431"><td class="memItemLeft" align="right" valign="top"><a id="a1d4c868d0fd4dc45e0fc6cf698434431" name="a1d4c868d0fd4dc45e0fc6cf698434431"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CollisionComponent</b> ()=default</td></tr>
+<tr class="memdesc:a1d4c868d0fd4dc45e0fc6cf698434431"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ / デストラクタ <br /></td></tr>
+<tr class="memitem:afaaa49439b7408b00ae8d3904fb3e1b8" id="r_afaaa49439b7408b00ae8d3904fb3e1b8"><td class="memItemLeft" align="right" valign="top">JPH::BodyID&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaaa49439b7408b00ae8d3904fb3e1b8">GetBodyID</a> () const</td></tr>
+<tr class="memdesc:afaaa49439b7408b00ae8d3904fb3e1b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">BodyID取得  <br /></td></tr>
+<tr class="memitem:a3ddd6a3821f24b4a85c8d285ae1296c5" id="r_a3ddd6a3821f24b4a85c8d285ae1296c5"><td class="memItemLeft" align="right" valign="top">JPH::RVec3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ddd6a3821f24b4a85c8d285ae1296c5">GetPosition</a> () const</td></tr>
+<tr class="memdesc:a3ddd6a3821f24b4a85c8d285ae1296c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ゲッター / セッター (アクセサ)  <br /></td></tr>
+<tr class="memitem:a2b9e1702f2c6fba4507071a06e4d3fa9" id="r_a2b9e1702f2c6fba4507071a06e4d3fa9"><td class="memItemLeft" align="right" valign="top"><a id="a2b9e1702f2c6fba4507071a06e4d3fa9" name="a2b9e1702f2c6fba4507071a06e4d3fa9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (const JPH::RVec3 &amp;pos)</td></tr>
+<tr class="memdesc:a2b9e1702f2c6fba4507071a06e4d3fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">座標の設定 <br /></td></tr>
+<tr class="memitem:a85e17819c4526f63a47d48afe41e9b70" id="r_a85e17819c4526f63a47d48afe41e9b70"><td class="memItemLeft" align="right" valign="top"><a id="a85e17819c4526f63a47d48afe41e9b70" name="a85e17819c4526f63a47d48afe41e9b70"></a>
+JPH::Quat&#160;</td><td class="memItemRight" valign="bottom"><b>GetRotation</b> () const</td></tr>
+<tr class="memdesc:a85e17819c4526f63a47d48afe41e9b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転の取得 <br /></td></tr>
+<tr class="memitem:a0159534264e1fae6dddf6c5dcd9b93d4" id="r_a0159534264e1fae6dddf6c5dcd9b93d4"><td class="memItemLeft" align="right" valign="top"><a id="a0159534264e1fae6dddf6c5dcd9b93d4" name="a0159534264e1fae6dddf6c5dcd9b93d4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRotation</b> (const JPH::Quat &amp;rot)</td></tr>
+<tr class="memdesc:a0159534264e1fae6dddf6c5dcd9b93d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転の設定 <br /></td></tr>
+<tr class="memitem:a49fdb4d3e6d2ce838b66290cc52ee785" id="r_a49fdb4d3e6d2ce838b66290cc52ee785"><td class="memItemLeft" align="right" valign="top"><a id="a49fdb4d3e6d2ce838b66290cc52ee785" name="a49fdb4d3e6d2ce838b66290cc52ee785"></a>
+JPH::Vec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetLinearVelocity</b> () const</td></tr>
+<tr class="memdesc:a49fdb4d3e6d2ce838b66290cc52ee785"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度の取得 <br /></td></tr>
+<tr class="memitem:a58471638ae54cc4723b3b6def5ba1b32" id="r_a58471638ae54cc4723b3b6def5ba1b32"><td class="memItemLeft" align="right" valign="top"><a id="a58471638ae54cc4723b3b6def5ba1b32" name="a58471638ae54cc4723b3b6def5ba1b32"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetLinearVelocity</b> (const JPH::Vec3 &amp;velocity)</td></tr>
+<tr class="memdesc:a58471638ae54cc4723b3b6def5ba1b32"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度の設定 <br /></td></tr>
+<tr class="memitem:a9dbd6f242046ee057a0a7b12ade7f6a5" id="r_a9dbd6f242046ee057a0a7b12ade7f6a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9dbd6f242046ee057a0a7b12ade7f6a5">AddForce</a> (const JPH::Vec3 &amp;force)</td></tr>
+<tr class="memdesc:a9dbd6f242046ee057a0a7b12ade7f6a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理操作  <br /></td></tr>
+<tr class="memitem:a66a64bfbdfc1a2868f1a705e81acc766" id="r_a66a64bfbdfc1a2868f1a705e81acc766"><td class="memItemLeft" align="right" valign="top"><a id="a66a64bfbdfc1a2868f1a705e81acc766" name="a66a64bfbdfc1a2868f1a705e81acc766"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>AddImpulse</b> (const JPH::Vec3 &amp;impulse)</td></tr>
+<tr class="memdesc:a66a64bfbdfc1a2868f1a705e81acc766"><td class="mdescLeft">&#160;</td><td class="mdescRight">瞬間的な衝撃を加える <br /></td></tr>
+<tr class="inherit_header pub_methods_class_component_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_component_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_component_base.html">ComponentBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a24e99a122f01df33d2914cd8e5abff63 inherit pub_methods_class_component_base" id="r_a24e99a122f01df33d2914cd8e5abff63"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>ComponentBase</b> ()=default</td></tr>
+<tr class="memdesc:a24e99a122f01df33d2914cd8e5abff63 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="memitem:a07bed7cce2c67ca53ca08640a871323f inherit pub_methods_class_component_base" id="r_a07bed7cce2c67ca53ca08640a871323f"><td class="memItemLeft" align="right" valign="top">
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~ComponentBase</b> ()=default</td></tr>
+<tr class="memdesc:a07bed7cce2c67ca53ca08640a871323f inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:af2f8f8036a0732b852b2bc74b0b3227c inherit pub_methods_class_component_base" id="r_af2f8f8036a0732b852b2bc74b0b3227c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#af2f8f8036a0732b852b2bc74b0b3227c">Init</a> ()</td></tr>
+<tr class="memdesc:af2f8f8036a0732b852b2bc74b0b3227c inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化処理  <br /></td></tr>
+<tr class="memitem:ae9fb9187e72a3773b72480f4b19a5bf8 inherit pub_methods_class_component_base" id="r_ae9fb9187e72a3773b72480f4b19a5bf8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ae9fb9187e72a3773b72480f4b19a5bf8">Update</a> ()</td></tr>
+<tr class="memdesc:ae9fb9187e72a3773b72480f4b19a5bf8 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">フレーム更新  <br /></td></tr>
+<tr class="memitem:ae507af3a83b0a3f25a9d57184fd73512 inherit pub_methods_class_component_base" id="r_ae507af3a83b0a3f25a9d57184fd73512"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#ae507af3a83b0a3f25a9d57184fd73512">Draw</a> ()</td></tr>
+<tr class="memdesc:ae507af3a83b0a3f25a9d57184fd73512 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画処理  <br /></td></tr>
+<tr class="memitem:a6e922e2d405ed29b0abb732b13f585fc inherit pub_methods_class_component_base" id="r_a6e922e2d405ed29b0abb732b13f585fc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a6e922e2d405ed29b0abb732b13f585fc">End</a> ()</td></tr>
+<tr class="memdesc:a6e922e2d405ed29b0abb732b13f585fc inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了処理  <br /></td></tr>
+<tr class="memitem:a4027650e43503768ca90668c82d5df84 inherit pub_methods_class_component_base" id="r_a4027650e43503768ca90668c82d5df84"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component_base.html#a4027650e43503768ca90668c82d5df84">DrawDebug</a> ()</td></tr>
+<tr class="memdesc:a4027650e43503768ca90668c82d5df84 inherit pub_methods_class_component_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ描画処理  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a833155b9d074ce6ee798ae4710dfd9ec" id="r_a833155b9d074ce6ee798ae4710dfd9ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a833155b9d074ce6ee798ae4710dfd9ec">CreateAndAddBody</a> (JPH::PhysicsSystem *system, JPH::Ref&lt; JPH::Shape &gt; shape, const JPH::RVec3 &amp;pos, JPH::EMotionType motionType)</td></tr>
+<tr class="memdesc:a833155b9d074ce6ee798ae4710dfd9ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">物理ボディの生成・登録（派生クラスの Init から呼ぶ共通処理）  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:af564f2f6b75fde697f4cd6e949b2bd35" id="r_af564f2f6b75fde697f4cd6e949b2bd35"><td class="memItemLeft" align="right" valign="top"><a id="af564f2f6b75fde697f4cd6e949b2bd35" name="af564f2f6b75fde697f4cd6e949b2bd35"></a>
+JPH::BodyID&#160;</td><td class="memItemRight" valign="bottom"><b>m_body_id</b></td></tr>
+<tr class="memdesc:af564f2f6b75fde697f4cd6e949b2bd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">JoltのボディID <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>&lt; Shape </p>
+<p>&lt; コンポーネント基底</p>
+<p>&lt; Joltライブラリの基本定義</p>
+<p>&lt; PhysicsSystem</p>
+<p>&lt; BodyID</p>
+<p>当たり判定コンポーネント基底</p>
+<p>派生クラス（BoxCollider等）はCreateAndAddBodyを呼んでボディを登録する </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a9dbd6f242046ee057a0a7b12ade7f6a5" name="a9dbd6f242046ee057a0a7b12ade7f6a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dbd6f242046ee057a0a7b12ade7f6a5">&#9670;&#160;</a></span>AddForce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionComponent::AddForce </td>
+          <td>(</td>
+          <td class="paramtype">const JPH::Vec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>force</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>物理操作 </p>
+<p>継続的な力を加える </p>
+
+</div>
+</div>
+<a id="a833155b9d074ce6ee798ae4710dfd9ec" name="a833155b9d074ce6ee798ae4710dfd9ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a833155b9d074ce6ee798ae4710dfd9ec">&#9670;&#160;</a></span>CreateAndAddBody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CollisionComponent::CreateAndAddBody </td>
+          <td>(</td>
+          <td class="paramtype">JPH::PhysicsSystem *</td>          <td class="paramname"><span class="paramname"><em>system</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JPH::Ref&lt; JPH::Shape &gt;</td>          <td class="paramname"><span class="paramname"><em>shape</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const JPH::RVec3 &amp;</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">JPH::EMotionType</td>          <td class="paramname"><span class="paramname"><em>motionType</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>物理ボディの生成・登録（派生クラスの Init から呼ぶ共通処理） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">system</td><td>物理システム </td></tr>
+    <tr><td class="paramname">shape</td><td>使用するコリジョン形状 </td></tr>
+    <tr><td class="paramname">pos</td><td>初期位置 </td></tr>
+    <tr><td class="paramname">motionType</td><td>Dynamic=動く / Static=動かない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afaaa49439b7408b00ae8d3904fb3e1b8" name="afaaa49439b7408b00ae8d3904fb3e1b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaaa49439b7408b00ae8d3904fb3e1b8">&#9670;&#160;</a></span>GetBodyID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JPH::BodyID CollisionComponent::GetBodyID </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>BodyID取得 </p>
+<dl class="section return"><dt>戻り値</dt><dd>JoltのBodyID </dd></dl>
+
+</div>
+</div>
+<a id="a3ddd6a3821f24b4a85c8d285ae1296c5" name="a3ddd6a3821f24b4a85c8d285ae1296c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ddd6a3821f24b4a85c8d285ae1296c5">&#9670;&#160;</a></span>GetPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JPH::RVec3 CollisionComponent::GetPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ゲッター / セッター (アクセサ) </p>
+<p>座標の取得 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>F:/sg mitarai/ReoEngine/src/<a class="el" href="_collision_component_8h_source.html">CollisionComponent.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_collision_component.html">CollisionComponent</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

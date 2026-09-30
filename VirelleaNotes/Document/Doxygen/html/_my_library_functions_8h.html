@@ -1,0 +1,490 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/MyLibraryFunctions.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_my_library_functions_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MyLibraryFunctions.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>汎用的なユーティリティ関数群の宣言  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_dx_main_8h_source.html">DxMain.h</a>&quot;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
+<code>#include &lt;hlsl++.h&gt;</code><br />
+</div>
+<p><a href="_my_library_functions_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ab2ec42bb2ae81d508b0f70a5fe8cc87a" id="r_ab2ec42bb2ae81d508b0f70a5fe8cc87a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2ec42bb2ae81d508b0f70a5fe8cc87a">my_library::ConvertMilliToSec</a> (int milli)</td></tr>
+<tr class="memdesc:ab2ec42bb2ae81d508b0f70a5fe8cc87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミリ秒を秒に変換する  <br /></td></tr>
+<tr class="memitem:a57628622976ab63c7a247532d7e12944" id="r_a57628622976ab63c7a247532d7e12944"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57628622976ab63c7a247532d7e12944">my_library::ConvertMilliToMinute</a> (int milli)</td></tr>
+<tr class="memdesc:a57628622976ab63c7a247532d7e12944"><td class="mdescLeft">&#160;</td><td class="mdescRight">ミリ秒を分に変換する  <br /></td></tr>
+<tr class="memitem:a625ed9f2929dcb45c1a0fb06e47f628b" id="r_a625ed9f2929dcb45c1a0fb06e47f628b"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a625ed9f2929dcb45c1a0fb06e47f628b">my_library::GetFileExtension</a> (const char *filepath)</td></tr>
+<tr class="memdesc:a625ed9f2929dcb45c1a0fb06e47f628b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパスから拡張子を取り出す  <br /></td></tr>
+<tr class="memitem:aac3917763df2f6d4a2b7f7ced4b3e843" id="r_aac3917763df2f6d4a2b7f7ced4b3e843"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac3917763df2f6d4a2b7f7ced4b3e843">my_library::ObjectPointToDirection</a> (float2 now_pos, float2 goal_pos, float dir, float rot_speed)</td></tr>
+<tr class="memdesc:aac3917763df2f6d4a2b7f7ced4b3e843"><td class="mdescLeft">&#160;</td><td class="mdescRight">目標地点に向かうための角度調整計算  <br /></td></tr>
+<tr class="memitem:af70c818946d10344c99400a3fdaa7004" id="r_af70c818946d10344c99400a3fdaa7004"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af70c818946d10344c99400a3fdaa7004">my_library::CameraStop</a> (float pos_x, float pos_y, float w, float h, float &amp;cam_x, float &amp;cam_y)</td></tr>
+<tr class="memdesc:af70c818946d10344c99400a3fdaa7004"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラの停止処理（ワールド境界内でキャラを追従）  <br /></td></tr>
+<tr class="memitem:a79d60073bdbaa8b8e0b91c601764928a" id="r_a79d60073bdbaa8b8e0b91c601764928a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79d60073bdbaa8b8e0b91c601764928a">my_library::ClampPositionToArea</a> (float2 &amp;target_pos, int target_w, int target_h, float area_w, float area_h)</td></tr>
+<tr class="memdesc:a79d60073bdbaa8b8e0b91c601764928a"><td class="mdescLeft">&#160;</td><td class="mdescRight">対象位置を指定領域内にクランプする  <br /></td></tr>
+<tr class="memitem:aa547c63786fd8ee09818f965b9709bc9" id="r_aa547c63786fd8ee09818f965b9709bc9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa547c63786fd8ee09818f965b9709bc9">my_library::CheckPointBoxHitF</a> (const float2 &amp;point, const float2 &amp;pos, const float2 &amp;size)</td></tr>
+<tr class="memdesc:aa547c63786fd8ee09818f965b9709bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">浮動小数点版：点と矩形の当たり判定  <br /></td></tr>
+<tr class="memitem:a33c123d6269797d0228da5ffdd2d0aca" id="r_a33c123d6269797d0228da5ffdd2d0aca"><td class="memItemLeft" align="right" valign="top"><a id="a33c123d6269797d0228da5ffdd2d0aca" name="a33c123d6269797d0228da5ffdd2d0aca"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>my_library::CheckPointBoxHit</b> (float point_x, float point_y, float box_x, float box_y, float box_w, float box_h)</td></tr>
+<tr class="memdesc:a33c123d6269797d0228da5ffdd2d0aca"><td class="mdescLeft">&#160;</td><td class="mdescRight">点と矩形の当たり判定（座標指定版） <br /></td></tr>
+<tr class="memitem:a16fd756dd8743046a310900329e1de6b" id="r_a16fd756dd8743046a310900329e1de6b"><td class="memItemLeft" align="right" valign="top"><a id="a16fd756dd8743046a310900329e1de6b" name="a16fd756dd8743046a310900329e1de6b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>my_library::CheckBoxHit</b> (float x1, float y1, float w1, float h1, float x2, float y2, float w2, float h2)</td></tr>
+<tr class="memdesc:a16fd756dd8743046a310900329e1de6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">矩形同士の当たり判定 <br /></td></tr>
+<tr class="memitem:a399fe08a8e4f1cf94dc06fd839851c99" id="r_a399fe08a8e4f1cf94dc06fd839851c99"><td class="memItemLeft" align="right" valign="top"><a id="a399fe08a8e4f1cf94dc06fd839851c99" name="a399fe08a8e4f1cf94dc06fd839851c99"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>my_library::CheckCircleHit</b> (float x1, float y1, float r1, float x2, float y2, float r2)</td></tr>
+<tr class="memdesc:a399fe08a8e4f1cf94dc06fd839851c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">円同士の当たり判定 <br /></td></tr>
+<tr class="memitem:a621372a86bfc3005571fd27eff84d6ea" id="r_a621372a86bfc3005571fd27eff84d6ea"><td class="memItemLeft" align="right" valign="top"><a id="a621372a86bfc3005571fd27eff84d6ea" name="a621372a86bfc3005571fd27eff84d6ea"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>my_library::CheckPointCircleHit</b> (float point_x, float point_y, float circle_x, float circle_y, float circle_r)</td></tr>
+<tr class="memdesc:a621372a86bfc3005571fd27eff84d6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">点と円の当たり判定 <br /></td></tr>
+<tr class="memitem:af01e746999fe08759849b137264ff478" id="r_af01e746999fe08759849b137264ff478"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af01e746999fe08759849b137264ff478">my_library::ToRadian</a> (float degree)</td></tr>
+<tr class="memdesc:af01e746999fe08759849b137264ff478"><td class="mdescLeft">&#160;</td><td class="mdescRight">度をラジアンに変換する  <br /></td></tr>
+<tr class="memitem:a339bda10a663dfeaf0be4aa614f6a9e8" id="r_a339bda10a663dfeaf0be4aa614f6a9e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a339bda10a663dfeaf0be4aa614f6a9e8">my_library::ToDegree</a> (float radian)</td></tr>
+<tr class="memdesc:a339bda10a663dfeaf0be4aa614f6a9e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ラジアンを度に変換する  <br /></td></tr>
+<tr class="memitem:a50b4fda0be57780b8691a7d3b97f96c4" id="r_a50b4fda0be57780b8691a7d3b97f96c4"><td class="memItemLeft" align="right" valign="top"><a id="a50b4fda0be57780b8691a7d3b97f96c4" name="a50b4fda0be57780b8691a7d3b97f96c4"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>my_library::GetLengthAlongRotation</b> (float rot)</td></tr>
+<tr class="memdesc:a50b4fda0be57780b8691a7d3b97f96c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転角から cos を取得（X 成分） <br /></td></tr>
+<tr class="memitem:a710e50495831d0418df53cdd19dd1522" id="r_a710e50495831d0418df53cdd19dd1522"><td class="memItemLeft" align="right" valign="top"><a id="a710e50495831d0418df53cdd19dd1522" name="a710e50495831d0418df53cdd19dd1522"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>my_library::GetLengthOppositeRotation</b> (float rot)</td></tr>
+<tr class="memdesc:a710e50495831d0418df53cdd19dd1522"><td class="mdescLeft">&#160;</td><td class="mdescRight">回転角から sin を取得（Y 成分） <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:aef779f68d95d3abb3c8893bcbf786530" id="r_aef779f68d95d3abb3c8893bcbf786530"><td class="memItemLeft" align="right" valign="top"><a id="aef779f68d95d3abb3c8893bcbf786530" name="aef779f68d95d3abb3c8893bcbf786530"></a>
+constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>my_library::MS_PER_SEC</b> = 1000</td></tr>
+<tr class="memdesc:aef779f68d95d3abb3c8893bcbf786530"><td class="mdescLeft">&#160;</td><td class="mdescRight">1秒あたりのミリ秒 <br /></td></tr>
+<tr class="memitem:aecee5f1861bdacc101b8349e2f3f5132" id="r_aecee5f1861bdacc101b8349e2f3f5132"><td class="memItemLeft" align="right" valign="top"><a id="aecee5f1861bdacc101b8349e2f3f5132" name="aecee5f1861bdacc101b8349e2f3f5132"></a>
+constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>my_library::MS_PER_MIN</b> = 60000</td></tr>
+<tr class="memdesc:aecee5f1861bdacc101b8349e2f3f5132"><td class="mdescLeft">&#160;</td><td class="mdescRight">1分あたりのミリ秒 <br /></td></tr>
+<tr class="memitem:aac1123ca1e98b5b650ea934bd9e37a91" id="r_aac1123ca1e98b5b650ea934bd9e37a91"><td class="memItemLeft" align="right" valign="top"><a id="aac1123ca1e98b5b650ea934bd9e37a91" name="aac1123ca1e98b5b650ea934bd9e37a91"></a>
+constexpr float&#160;</td><td class="memItemRight" valign="bottom"><b>my_library::PI</b> = 3.14159265358979323846f</td></tr>
+<tr class="memdesc:aac1123ca1e98b5b650ea934bd9e37a91"><td class="mdescLeft">&#160;</td><td class="mdescRight">円周率 <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>汎用的なユーティリティ関数群の宣言 </p>
+<p>時間変換・ファイル操作・当たり判定などエンジン内部で再利用する 関数をまとめたヘルパー群です。 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="af70c818946d10344c99400a3fdaa7004" name="af70c818946d10344c99400a3fdaa7004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af70c818946d10344c99400a3fdaa7004">&#9670;&#160;</a></span>CameraStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void my_library::CameraStop </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pos_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>pos_y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>cam_x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;</td>          <td class="paramname"><span class="paramname"><em>cam_y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>カメラの停止処理（ワールド境界内でキャラを追従） </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos_x</td><td>対象のX座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos_y</td><td>対象のY座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">w</td><td>ワールド幅 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>ワールド高さ </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cam_x</td><td>カメラX（変更される） </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">cam_y</td><td>カメラY（変更される） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa547c63786fd8ee09818f965b9709bc9" name="aa547c63786fd8ee09818f965b9709bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa547c63786fd8ee09818f965b9709bc9">&#9670;&#160;</a></span>CheckPointBoxHitF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool my_library::CheckPointBoxHitF </td>
+          <td>(</td>
+          <td class="paramtype">const float2 &amp;</td>          <td class="paramname"><span class="paramname"><em>point</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float2 &amp;</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float2 &amp;</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>浮動小数点版：点と矩形の当たり判定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">point</td><td>判定する点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>矩形の左上座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>矩形のサイズ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>当たっていれば true </dd></dl>
+
+</div>
+</div>
+<a id="a79d60073bdbaa8b8e0b91c601764928a" name="a79d60073bdbaa8b8e0b91c601764928a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d60073bdbaa8b8e0b91c601764928a">&#9670;&#160;</a></span>ClampPositionToArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void my_library::ClampPositionToArea </td>
+          <td>(</td>
+          <td class="paramtype">float2 &amp;</td>          <td class="paramname"><span class="paramname"><em>target_pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>target_w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>target_h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>area_w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>area_h</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>対象位置を指定領域内にクランプする </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">target_pos</td><td>対象位置（変更される） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target_w</td><td>対象幅 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target_h</td><td>対象高さ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">area_w</td><td>領域幅 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">area_h</td><td>領域高さ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a57628622976ab63c7a247532d7e12944" name="a57628622976ab63c7a247532d7e12944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57628622976ab63c7a247532d7e12944">&#9670;&#160;</a></span>ConvertMilliToMinute()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float my_library::ConvertMilliToMinute </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>milli</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ミリ秒を分に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">milli</td><td>ミリ秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>分（float） </dd></dl>
+
+</div>
+</div>
+<a id="ab2ec42bb2ae81d508b0f70a5fe8cc87a" name="ab2ec42bb2ae81d508b0f70a5fe8cc87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ec42bb2ae81d508b0f70a5fe8cc87a">&#9670;&#160;</a></span>ConvertMilliToSec()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float my_library::ConvertMilliToSec </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>milli</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ミリ秒を秒に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">milli</td><td>ミリ秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>秒（float） </dd></dl>
+
+</div>
+</div>
+<a id="a625ed9f2929dcb45c1a0fb06e47f628b" name="a625ed9f2929dcb45c1a0fb06e47f628b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a625ed9f2929dcb45c1a0fb06e47f628b">&#9670;&#160;</a></span>GetFileExtension()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string my_library::GetFileExtension </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>filepath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ファイルパスから拡張子を取り出す </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">filepath</td><td>ファイルパス（C文字列、nullptr非対応） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>拡張子（見つからなければ空文字） </dd></dl>
+
+</div>
+</div>
+<a id="aac3917763df2f6d4a2b7f7ced4b3e843" name="aac3917763df2f6d4a2b7f7ced4b3e843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac3917763df2f6d4a2b7f7ced4b3e843">&#9670;&#160;</a></span>ObjectPointToDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float my_library::ObjectPointToDirection </td>
+          <td>(</td>
+          <td class="paramtype">float2</td>          <td class="paramname"><span class="paramname"><em>now_pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float2</td>          <td class="paramname"><span class="paramname"><em>goal_pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>dir</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>rot_speed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>目標地点に向かうための角度調整計算 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">now_pos</td><td>現在位置 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">goal_pos</td><td>目標位置 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>現在の角度（ラジアン） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rot_speed</td><td>1フレームあたりの最大回転量（度） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>新しい角度（ラジアン） </dd></dl>
+
+</div>
+</div>
+<a id="a339bda10a663dfeaf0be4aa614f6a9e8" name="a339bda10a663dfeaf0be4aa614f6a9e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339bda10a663dfeaf0be4aa614f6a9e8">&#9670;&#160;</a></span>ToDegree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float my_library::ToDegree </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>radian</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ラジアンを度に変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">radian</td><td>ラジアン </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>度 </dd></dl>
+
+</div>
+</div>
+<a id="af01e746999fe08759849b137264ff478" name="af01e746999fe08759849b137264ff478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01e746999fe08759849b137264ff478">&#9670;&#160;</a></span>ToRadian()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float my_library::ToRadian </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>degree</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>度をラジアンに変換する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">degree</td><td>度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>ラジアン </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_my_library_functions_8h.html">MyLibraryFunctions.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

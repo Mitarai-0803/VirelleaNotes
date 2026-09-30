@@ -1,0 +1,96 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Physics/\+Rigid\+Body.h ファイル}
+\hypertarget{_rigid_body_8h}{}\label{_rigid_body_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/RigidBody.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/RigidBody.h}}
+
+
+剛体  
+
+
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classphysics_1_1_rigid_body}{physics\+::\+Rigid\+Body}}
+\begin{DoxyCompactList}\small\item\em 剛体クラス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}{physics\+::\+Motion\+Type}} \{ \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a84a8921b25f505d0d2077aeb5db4bc16}{Static}}
+, \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a40c78b58b86002ee38fad2d3c9dd787e}{Kinematic}}
+, \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c}{Dynamic}}
+ \}
+\begin{DoxyCompactList}\small\item\em 動作タイプ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{Indent}\textbf{ 生成}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_rigid_body_8h_a213b9cbdf20e7e81820b846f0c01d692}\label{_rigid_body_8h_a213b9cbdf20e7e81820b846f0c01d692} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_rigid_body}{physics\+::\+Rigid\+Body}} $>$ {\bfseries physics\+::create\+Rigid\+Body} (const \mbox{\hyperlink{classshape_1_1_sphere}{shape\+::\+Sphere}} \&o, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} layer, \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}{physics\+::\+Motion\+Type}} motion\+\_\+type=\mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c}{physics\+::\+Motion\+Type\+::\+Dynamic}}, \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} density=\mbox{\hyperlink{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}{shape\+::default\+\_\+density}})
+\item 
+\Hypertarget{_rigid_body_8h_ab6ac1913cd4d7ea61119267d3895af23}\label{_rigid_body_8h_ab6ac1913cd4d7ea61119267d3895af23} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_rigid_body}{physics\+::\+Rigid\+Body}} $>$ {\bfseries physics\+::create\+Rigid\+Body} (const \mbox{\hyperlink{classshape_1_1_box}{shape\+::\+Box}} \&o, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} layer, \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}{physics\+::\+Motion\+Type}} motion\+\_\+type=\mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c}{physics\+::\+Motion\+Type\+::\+Dynamic}}, \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} density=\mbox{\hyperlink{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}{shape\+::default\+\_\+density}})
+\item 
+\Hypertarget{_rigid_body_8h_a54fb600c4b37ba99440b421d684fc483}\label{_rigid_body_8h_a54fb600c4b37ba99440b421d684fc483} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_rigid_body}{physics\+::\+Rigid\+Body}} $>$ {\bfseries physics\+::create\+Rigid\+Body} (const \mbox{\hyperlink{classshape_1_1_cylinder}{shape\+::\+Cylinder}} \&o, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} layer, \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}{physics\+::\+Motion\+Type}} motion\+\_\+type=\mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c}{physics\+::\+Motion\+Type\+::\+Dynamic}}, \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} density=\mbox{\hyperlink{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}{shape\+::default\+\_\+density}})
+\item 
+\Hypertarget{_rigid_body_8h_af8362a40e8f3a5ad840689972f820713}\label{_rigid_body_8h_af8362a40e8f3a5ad840689972f820713} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_rigid_body}{physics\+::\+Rigid\+Body}} $>$ {\bfseries physics\+::create\+Rigid\+Body} (const \mbox{\hyperlink{classshape_1_1_capsule}{shape\+::\+Capsule}} \&o, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} layer, \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}{physics\+::\+Motion\+Type}} motion\+\_\+type=\mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c}{physics\+::\+Motion\+Type\+::\+Dynamic}}, \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} density=\mbox{\hyperlink{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}{shape\+::default\+\_\+density}})
+\item 
+\Hypertarget{_rigid_body_8h_aceb60e51d26ec7d8033e6de40fa0ce88}\label{_rigid_body_8h_aceb60e51d26ec7d8033e6de40fa0ce88} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_rigid_body}{physics\+::\+Rigid\+Body}} $>$ {\bfseries physics\+::create\+Rigid\+Body} (const \mbox{\hyperlink{classshape_1_1_convex_hull}{shape\+::\+Convex\+Hull}} \&o, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} layer, \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}{physics\+::\+Motion\+Type}} motion\+\_\+type=\mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c}{physics\+::\+Motion\+Type\+::\+Dynamic}}, \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} density=\mbox{\hyperlink{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}{shape\+::default\+\_\+density}})
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_rigid_body}{physics\+::\+Rigid\+Body}} $>$ \mbox{\hyperlink{_rigid_body_8h_a2a93d994134381d223627d3c0cc35b26}{physics\+::create\+Rigid\+Body}} (const \mbox{\hyperlink{classshape_1_1_mesh}{shape\+::\+Mesh}} \&o, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} layer)
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}\label{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac} 
+constexpr \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} {\bfseries shape\+::default\+\_\+density} = 1000.\+0f
+\begin{DoxyCompactList}\small\item\em デフォルト質量 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+剛体 
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_rigid_body_8h_doc-enum-members}
+\doxysubsection{列挙型詳解}
+\Hypertarget{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}\index{RigidBody.h@{RigidBody.h}!MotionType@{MotionType}}
+\index{MotionType@{MotionType}!RigidBody.h@{RigidBody.h}}
+\doxysubsubsection{\texorpdfstring{MotionType}{MotionType}}
+{\footnotesize\ttfamily \label{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3} 
+enum class \mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}{physics\+::\+Motion\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+動作タイプ 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Static@{Static}!RigidBody.h@{RigidBody.h}}\index{RigidBody.h@{RigidBody.h}!Static@{Static}}}\Hypertarget{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a84a8921b25f505d0d2077aeb5db4bc16}\label{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a84a8921b25f505d0d2077aeb5db4bc16} 
+Static&静的。動かない。 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Kinematic@{Kinematic}!RigidBody.h@{RigidBody.h}}\index{RigidBody.h@{RigidBody.h}!Kinematic@{Kinematic}}}\Hypertarget{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a40c78b58b86002ee38fad2d3c9dd787e}\label{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a40c78b58b86002ee38fad2d3c9dd787e} 
+Kinematic&速度のみで移動可能で、力には反応しない。 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dynamic@{Dynamic}!RigidBody.h@{RigidBody.h}}\index{RigidBody.h@{RigidBody.h}!Dynamic@{Dynamic}}}\Hypertarget{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c}\label{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c} 
+Dynamic&通常の物理オブジェクトとして力に応答する。 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{_rigid_body_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_rigid_body_8h_a2a93d994134381d223627d3c0cc35b26}\index{RigidBody.h@{RigidBody.h}!createRigidBody@{createRigidBody}}
+\index{createRigidBody@{createRigidBody}!RigidBody.h@{RigidBody.h}}
+\doxysubsubsection{\texorpdfstring{createRigidBody()}{createRigidBody()}}
+{\footnotesize\ttfamily \label{_rigid_body_8h_a2a93d994134381d223627d3c0cc35b26} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_rigid_body}{physics\+::\+Rigid\+Body}} $>$ physics\+::create\+Rigid\+Body (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_mesh}{shape\+::\+Mesh}} \&}]{o}{, }\item[{\mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}}]{layer}{}\end{DoxyParamCaption})}
+
+\begin{DoxyNote}{覚え書き}
+メッシュ剛体は常に静的で生成されます 
+\end{DoxyNote}

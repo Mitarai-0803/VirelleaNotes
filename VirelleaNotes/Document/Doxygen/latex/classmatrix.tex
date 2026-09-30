@@ -1,0 +1,282 @@
+\doxysection{matrix クラス}
+\hypertarget{classmatrix}{}\label{classmatrix}\index{matrix@{matrix}}
+
+
+4x4行列  
+
+
+
+
+{\ttfamily \#include $<$Vector\+Math.\+h$>$}
+
+
+
+matrix の継承関係図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmatrix__inherit__graph}
+\end{center}
+\end{figure}
+
+
+matrix 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classmatrix__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmatrix_a73ef15efc56465db46f2f36986da629d}\label{classmatrix_a73ef15efc56465db46f2f36986da629d} 
+{\bfseries matrix} (const float4x4 \&m)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ 要素ベクトル参照}\par
+{\em 各要素へのアクセスはこのアクセサを利用します。 float4で列ベクトルfloat4で直接操作を必要とする場合は 下記メンバーを利用してください
+\begin{DoxyItemize}
+\item \+\_\+11\+\_\+12\+\_\+13\+\_\+14
+\item \+\_\+21\+\_\+22\+\_\+23\+\_\+24
+\item \+\_\+31\+\_\+32\+\_\+33\+\_\+34
+\item \+\_\+41\+\_\+42\+\_\+43\+\_\+44 
+\end{DoxyItemize}}\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmatrix_acbc751a8985a8f5d962f3256acea59df}\label{classmatrix_acbc751a8985a8f5d962f3256acea59df} 
+float3 {\bfseries axisX} () const
+\item 
+\Hypertarget{classmatrix_a8cacc60f5c84e6354664ffe9349b1257}\label{classmatrix_a8cacc60f5c84e6354664ffe9349b1257} 
+float3 {\bfseries axisY} () const
+\item 
+\Hypertarget{classmatrix_ab76eb4b005f28f1db5e3dfb3b8a4ad15}\label{classmatrix_ab76eb4b005f28f1db5e3dfb3b8a4ad15} 
+float3 {\bfseries axisZ} () const
+\item 
+\Hypertarget{classmatrix_aea54cccd84b3b11f01cb54d5e448b41a}\label{classmatrix_aea54cccd84b3b11f01cb54d5e448b41a} 
+float3 {\bfseries translate} () const
+\item 
+\Hypertarget{classmatrix_a93e7596281903043e248c52ffedf7c9c}\label{classmatrix_a93e7596281903043e248c52ffedf7c9c} 
+auto \& {\bfseries axis\+VectorX} ()
+\begin{DoxyCompactList}\small\item\em X軸ベクトル参照を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classmatrix_af26e34a9858c79655c828a0e82ca6f60}\label{classmatrix_af26e34a9858c79655c828a0e82ca6f60} 
+auto \& {\bfseries axis\+VectorY} ()
+\begin{DoxyCompactList}\small\item\em Y軸ベクトル参照を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classmatrix_a1aae7438793b15d6403e98fd27c1d324}\label{classmatrix_a1aae7438793b15d6403e98fd27c1d324} 
+auto \& {\bfseries axis\+VectorZ} ()
+\begin{DoxyCompactList}\small\item\em Z軸ベクトル参照を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classmatrix_a61209a50a3cca44a15434beaf2db6b5b}\label{classmatrix_a61209a50a3cca44a15434beaf2db6b5b} 
+auto \& {\bfseries translate\+Vector} ()
+\begin{DoxyCompactList}\small\item\em 平行移動ベクトル参照を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Dx\+Lib関連}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmatrix_ad98201f67dd7c577ca05c84880d4698a}\label{classmatrix_ad98201f67dd7c577ca05c84880d4698a} 
+{\bfseries matrix} (const Dx\+Lib\+::\+MATRIX \&\mbox{\hyperlink{classmatrix}{matrix}})
+\begin{DoxyCompactList}\small\item\em \mbox{[}Dx\+Lib\mbox{]} Dx\+Lib\+::\+MATRIXから初期化 \end{DoxyCompactList}\item 
+\Hypertarget{classmatrix_a2567c4cb61b2b1f05b4cd0ae655be83e}\label{classmatrix_a2567c4cb61b2b1f05b4cd0ae655be83e} 
+{\bfseries operator Dx\+Lib\+::\+MATRIX const} ()
+\begin{DoxyCompactList}\small\item\em \mbox{[}Dx\+Lib\mbox{]} Dx\+Lib\+::\+MATRIXへキャスト \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{Indent}\textbf{ 行列作成}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmatrix_a563189f24256e032ef34dd12b5141461}\label{classmatrix_a563189f24256e032ef34dd12b5141461} 
+static \mbox{\hyperlink{classmatrix}{matrix}} {\bfseries identity} ()
+\begin{DoxyCompactList}\small\item\em 単位行列 \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}} (const float3 \&v)
+\item 
+\Hypertarget{classmatrix_aedcc8bc0ce110957615c0fd3e9053002}\label{classmatrix_aedcc8bc0ce110957615c0fd3e9053002} 
+static \mbox{\hyperlink{classmatrix}{matrix}} {\bfseries translate} (float x, float y, float z)
+\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_a77943ad632099406ed3a3ec04d772a9c}{scale}} (const float3 \&s)
+\item 
+\Hypertarget{classmatrix_a52dab5d0f95d1fdbf6ab1f66a0fd1963}\label{classmatrix_a52dab5d0f95d1fdbf6ab1f66a0fd1963} 
+static \mbox{\hyperlink{classmatrix}{matrix}} {\bfseries scale} (float sx, float sy, float sz)
+\item 
+\Hypertarget{classmatrix_ac41ce7890fdb2588e8a95583741b2b4b}\label{classmatrix_ac41ce7890fdb2588e8a95583741b2b4b} 
+static \mbox{\hyperlink{classmatrix}{matrix}} {\bfseries scale} (float s)
+\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_a368f9088c35a97b2b3689c4f17bc7c22}{rotateX}} (float radian)
+\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_a813389a687218884597e96aeb34358c3}{rotateY}} (float radian)
+\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_af3869c5076d612bbfe29e21abeab1847}{rotateZ}} (float radian)
+\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_ad4c15b4b3432a7d15dca39fcd6076a2c}{rotate\+Axis}} (const float3 \&axis, float radian)
+\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_afa0c2aacb9575808899a5797ad83eaea}{look\+At\+LH}} (const float3 \&eye, const float3 \&look\+\_\+at, const float3 \&world\+\_\+up=float3(0.\+0f, 1.\+0f, 0.\+0f))
+\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_af4bdc9f63f750f2840832211ecf3113a}{perspective\+Fov\+LH}} (float fovy, float aspect\+\_\+ratio, float near\+\_\+z, float far\+\_\+z)
+\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_a4aedb41fd343fb179e65fa4fba06a20d}{perspective\+Fov\+Infinite\+Far\+Plane\+LH}} (float fovy, float aspect\+\_\+ratio, float near\+\_\+z)
+\item 
+static \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{classmatrix_a75281117d2449c2873e030dd3447236f}{orthographic\+Off\+Center\+LH}} (float left, float right, float bottom, float top, float near\+\_\+z, float far\+\_\+z)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+4x4行列 
+
+\label{doc-func-members}
+\Hypertarget{classmatrix_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classmatrix_afa0c2aacb9575808899a5797ad83eaea}\index{matrix@{matrix}!lookAtLH@{lookAtLH}}
+\index{lookAtLH@{lookAtLH}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{lookAtLH()}{lookAtLH()}}
+{\footnotesize\ttfamily \label{classmatrix_afa0c2aacb9575808899a5797ad83eaea} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::look\+At\+LH (\begin{DoxyParamCaption}\item[{const float3 \&}]{eye}{, }\item[{const float3 \&}]{look\+\_\+at}{, }\item[{const float3 \&}]{world\+\_\+up}{ = {\ttfamily float3(0.0f,~1.0f,~0.0f)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em eye} & 視点座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em look\+\_\+at} & 注視点 \\
+\hline
+\mbox{\texttt{in}}  & {\em world\+\_\+up} & 世界の上方向のベクトル(default\+:(0.\+0f, 1.\+0f, 0.\+0f)) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmatrix_a75281117d2449c2873e030dd3447236f}\index{matrix@{matrix}!orthographicOffCenterLH@{orthographicOffCenterLH}}
+\index{orthographicOffCenterLH@{orthographicOffCenterLH}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{orthographicOffCenterLH()}{orthographicOffCenterLH()}}
+{\footnotesize\ttfamily \label{classmatrix_a75281117d2449c2873e030dd3447236f} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::orthographic\+Off\+Center\+LH (\begin{DoxyParamCaption}\item[{float}]{left}{, }\item[{float}]{right}{, }\item[{float}]{bottom}{, }\item[{float}]{top}{, }\item[{float}]{near\+\_\+z}{, }\item[{float}]{far\+\_\+z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em left} & 左側の幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em right} & 右側の幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em bottom} & 下側の幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em top} & 上側の幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em near\+\_\+z} & 近クリップ\+Z値 \\
+\hline
+\mbox{\texttt{in}}  & {\em far\+\_\+z} & 遠クリップ\+Z値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{覚え書き}
+Inverse\+Zにしたい場合はnear\+Zの値とfar\+Zの値を交換して指定。 
+\end{DoxyNote}
+\Hypertarget{classmatrix_a4aedb41fd343fb179e65fa4fba06a20d}\index{matrix@{matrix}!perspectiveFovInfiniteFarPlaneLH@{perspectiveFovInfiniteFarPlaneLH}}
+\index{perspectiveFovInfiniteFarPlaneLH@{perspectiveFovInfiniteFarPlaneLH}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{perspectiveFovInfiniteFarPlaneLH()}{perspectiveFovInfiniteFarPlaneLH()}}
+{\footnotesize\ttfamily \label{classmatrix_a4aedb41fd343fb179e65fa4fba06a20d} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::perspective\+Fov\+Infinite\+Far\+Plane\+LH (\begin{DoxyParamCaption}\item[{float}]{fovy}{, }\item[{float}]{aspect\+\_\+ratio}{, }\item[{float}]{near\+\_\+z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+遠クリップ面を廃止して無限遠まで描画可能にする行列。 浮動小数点の丸め誤差を低減。Z=0.\+0fで描画すると無限遠。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em fovy} & 画角(単位\+:radian) \\
+\hline
+\mbox{\texttt{in}}  & {\em aspect\+\_\+ratio} & アスペクト比 \\
+\hline
+\mbox{\texttt{in}}  & {\em near\+\_\+z} & 近クリップ\+Z値\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{参照}
+GDC\textquotesingle{}07 「\+Projection Matrix Tricks」 
+\end{DoxySeeAlso}
+\begin{DoxyAttention}{注意}
+Inverse\+Z前提の投影にになるため注意。 
+\end{DoxyAttention}
+\Hypertarget{classmatrix_af4bdc9f63f750f2840832211ecf3113a}\index{matrix@{matrix}!perspectiveFovLH@{perspectiveFovLH}}
+\index{perspectiveFovLH@{perspectiveFovLH}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{perspectiveFovLH()}{perspectiveFovLH()}}
+{\footnotesize\ttfamily \label{classmatrix_af4bdc9f63f750f2840832211ecf3113a} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::perspective\+Fov\+LH (\begin{DoxyParamCaption}\item[{float}]{fovy}{, }\item[{float}]{aspect\+\_\+ratio}{, }\item[{float}]{near\+\_\+z}{, }\item[{float}]{far\+\_\+z}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em fovy} & 画角(単位\+:radian) \\
+\hline
+\mbox{\texttt{in}}  & {\em aspect\+\_\+ratio} & アスペクト比 \\
+\hline
+\mbox{\texttt{in}}  & {\em near\+\_\+z} & 近クリップ\+Z値 \\
+\hline
+\mbox{\texttt{in}}  & {\em far\+\_\+z} & 遠クリップ\+Z値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{覚え書き}
+Inverse\+Zにしたい場合はnear\+Zの値とfar\+Zの値を交換して指定。 
+\end{DoxyNote}
+\Hypertarget{classmatrix_ad4c15b4b3432a7d15dca39fcd6076a2c}\index{matrix@{matrix}!rotateAxis@{rotateAxis}}
+\index{rotateAxis@{rotateAxis}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{rotateAxis()}{rotateAxis()}}
+{\footnotesize\ttfamily \label{classmatrix_ad4c15b4b3432a7d15dca39fcd6076a2c} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::rotate\+Axis (\begin{DoxyParamCaption}\item[{const float3 \&}]{axis}{, }\item[{float}]{radian}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em axis} & 回転の中心軸 \\
+\hline
+\mbox{\texttt{in}}  & {\em radian} & 回転角度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmatrix_a368f9088c35a97b2b3689c4f17bc7c22}\index{matrix@{matrix}!rotateX@{rotateX}}
+\index{rotateX@{rotateX}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{rotateX()}{rotateX()}}
+{\footnotesize\ttfamily \label{classmatrix_a368f9088c35a97b2b3689c4f17bc7c22} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::rotateX (\begin{DoxyParamCaption}\item[{float}]{radian}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em radian} & 回転角度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{参照}
+\href{https://ja.wikipedia.org/wiki/\%E5\%9B\%9E\%E8\%BB\%A2\%E8\%A1\%8C\%E5\%88\%97}{\texttt{https\+://ja.\+wikipedia.\+org/wiki/\%\+E5\%9\+B\%9\+E\%\+E8\%\+BB\%\+A2\%\+E8\%\+A1\%8\+C\%\+E5\%88\%97}} 
+\end{DoxySeeAlso}
+\Hypertarget{classmatrix_a813389a687218884597e96aeb34358c3}\index{matrix@{matrix}!rotateY@{rotateY}}
+\index{rotateY@{rotateY}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{rotateY()}{rotateY()}}
+{\footnotesize\ttfamily \label{classmatrix_a813389a687218884597e96aeb34358c3} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::rotateY (\begin{DoxyParamCaption}\item[{float}]{radian}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em radian} & 回転角度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmatrix_af3869c5076d612bbfe29e21abeab1847}\index{matrix@{matrix}!rotateZ@{rotateZ}}
+\index{rotateZ@{rotateZ}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{rotateZ()}{rotateZ()}}
+{\footnotesize\ttfamily \label{classmatrix_af3869c5076d612bbfe29e21abeab1847} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::rotateZ (\begin{DoxyParamCaption}\item[{float}]{radian}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em radian} & 回転角度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmatrix_a77943ad632099406ed3a3ec04d772a9c}\index{matrix@{matrix}!scale@{scale}}
+\index{scale@{scale}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \label{classmatrix_a77943ad632099406ed3a3ec04d772a9c} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::scale (\begin{DoxyParamCaption}\item[{const float3 \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em s} & スケール値 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}\index{matrix@{matrix}!translate@{translate}}
+\index{translate@{translate}!matrix@{matrix}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \label{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f} 
+\mbox{\hyperlink{classmatrix}{matrix}} matrix\+::translate (\begin{DoxyParamCaption}\item[{const float3 \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em v} & 移動ベクトル \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_vector_math_8h}{Vector\+Math.\+h}}\end{DoxyCompactItemize}

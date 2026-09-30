@@ -1,0 +1,190 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Proc\+Timing.h ファイル}
+\hypertarget{_proc_timing_8h}{}\label{_proc_timing_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/ProcTiming.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/ProcTiming.h}}
+
+
+処理タイミング  
+
+
+{\ttfamily \#include "{}Priority.\+h"{}}\newline
+{\ttfamily \#include $<$System/\+Signals.\+h$>$}\newline
+{\ttfamily \#include $<$System/\+Cereal.\+h$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_callable}{Callable}}
+\item 
+struct \mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}}
+\begin{DoxyCompactList}\small\item\em スロット \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_proc_timing_8h_a79954a1c537a0d505633565cfa3a164b}{OBJTIMING}}(p)
+\begin{DoxyCompactList}\small\item\em プライオリティ設定(\+Macro) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{_proc_timing_8h_a467d763ebd1698c335ae5ee88d44c839}{Proc\+Add\+Proc}}(name,  x)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_proc_timing_8h_a322b5cad852df319cf99f93d9c95a05e}\label{_proc_timing_8h_a322b5cad852df319cf99f93d9c95a05e} 
+using {\bfseries Proc\+Timing\+Func} = std\+::function$<$void()$>$
+\item 
+\Hypertarget{_proc_timing_8h_ab05faf2a61120596baea980b99128c56}\label{_proc_timing_8h_ab05faf2a61120596baea980b99128c56} 
+using {\bfseries Slot\+Procs} = std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}}$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}\label{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b} 
+enum struct \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} \+: u32 \{ \newline
+{\bfseries Pre\+Update} = 0
+, {\bfseries Update}
+, {\bfseries Late\+Update}
+, {\bfseries Pre\+Physics}
+, \newline
+{\bfseries Post\+Physics}
+, {\bfseries Post\+Update}
+, {\bfseries Pre\+Draw}
+, {\bfseries Draw}
+, \newline
+{\bfseries Late\+Draw}
+, {\bfseries Post\+Draw}
+, {\bfseries Shadow}
+, {\bfseries Gbuffer}
+, \newline
+{\bfseries Light}
+, {\bfseries HDR}
+, {\bfseries Filter}
+, {\bfseries UI}
+, \newline
+{\bfseries NUM}
+ \}
+\begin{DoxyCompactList}\small\item\em タイミング \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} \{ \newline
+\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5ac157bdf0b85a40d2619cbc8bc1ae5fe2}{NONE}} = -\/1
+, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5ae21a4e10ac16b844ebb238a2333bb594}{HIGHEST}} = 100
+, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a0c3a1dacf94061154b3ee354359c5893}{HIGH}} = 1000
+, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{NORMAL}} = 10000
+, \newline
+\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a6a226f4143ca3b18999551694cdb72a8}{LOW}} = 15000
+, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5ae321c2eb4e64b32d51da602bc6352f1d}{LOWEST}} = 20000
+, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a9eea1aac668568f900ebe4c229a5c956}{IFPOSSIBLE}} = 50000
+, {\bfseries NUM}
+ \}
+\begin{DoxyCompactList}\small\item\em プライオリティ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_proc_timing_8h_a2deff0220e6921920b821b718ebc8b94}\label{_proc_timing_8h_a2deff0220e6921920b821b718ebc8b94} 
+{\bfseries USING\+\_\+\+PTR} (\mbox{\hyperlink{class_object}{Object}})
+\item 
+\Hypertarget{_proc_timing_8h_acf719dccd2f400d5bef112558e3ab522}\label{_proc_timing_8h_acf719dccd2f400d5bef112558e3ab522} 
+{\bfseries USING\+\_\+\+PTR} (\mbox{\hyperlink{class_component}{Component}})
+\item 
+\Hypertarget{_proc_timing_8h_a6461e51a4f1ff47f46759c9668dc10c1}\label{_proc_timing_8h_a6461e51a4f1ff47f46759c9668dc10c1} 
+constexpr int {\bfseries TIMING} (\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} p)
+\begin{DoxyCompactList}\small\item\em プライオリティ設定 \end{DoxyCompactList}\item 
+\Hypertarget{_proc_timing_8h_ac6580db62c4a37f293339076616d1a06}\label{_proc_timing_8h_ac6580db62c4a37f293339076616d1a06} 
+std\+::string {\bfseries Get\+Proc\+Timing\+Name} (\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} proc)
+\item 
+\Hypertarget{_proc_timing_8h_a677cbee623f7bded94f1e096826e5e51}\label{_proc_timing_8h_a677cbee623f7bded94f1e096826e5e51} 
+Proc\+Timing\+Func {\bfseries Get\+Proc\+Timing\+Func} (\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} proc)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+処理タイミング 
+
+
+
+\label{doc-define-members}
+\Hypertarget{_proc_timing_8h_doc-define-members}
+\doxysubsection{マクロ定義詳解}
+\Hypertarget{_proc_timing_8h_a79954a1c537a0d505633565cfa3a164b}\index{ProcTiming.h@{ProcTiming.h}!OBJTIMING@{OBJTIMING}}
+\index{OBJTIMING@{OBJTIMING}!ProcTiming.h@{ProcTiming.h}}
+\doxysubsubsection{\texorpdfstring{OBJTIMING}{OBJTIMING}}
+{\footnotesize\ttfamily \label{_proc_timing_8h_a79954a1c537a0d505633565cfa3a164b} 
+\#define OBJTIMING(\begin{DoxyParamCaption}\item[{}]{p}{}\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{_proc_timing_8h_a6461e51a4f1ff47f46759c9668dc10c1}{TIMING}}(\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{ProcTiming}}::\#\#p)}
+
+\end{DoxyCode}
+
+
+プライオリティ設定(\+Macro) 
+
+\Hypertarget{_proc_timing_8h_a467d763ebd1698c335ae5ee88d44c839}\index{ProcTiming.h@{ProcTiming.h}!ProcAddProc@{ProcAddProc}}
+\index{ProcAddProc@{ProcAddProc}!ProcTiming.h@{ProcTiming.h}}
+\doxysubsubsection{\texorpdfstring{ProcAddProc}{ProcAddProc}}
+{\footnotesize\ttfamily \label{_proc_timing_8h_a467d763ebd1698c335ae5ee88d44c839} 
+\#define Proc\+Add\+Proc(\begin{DoxyParamCaption}\item[{}]{name}{, }\item[{}]{x}{}\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_callable}{Callable}}\#\#name\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_callable}{Callable}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{public}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_callable}{Callable}}\#\#name()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_callable}{Callable}}(\#name)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Exec\ x;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{private}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CEREAL\_SAVELOAD(arc,\ ver)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(name\_));\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ std::shared\_ptr<Callable\#\#name>\ name\ =\ std::make\_shared<Callable\#\#name>();\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ CEREAL\_REGISTER\_TYPE(Callable\#\#name);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ CEREAL\_REGISTER\_POLYMORPHIC\_RELATION(Callable,\ Callable\#\#name)}
+
+\end{DoxyCode}
+
+
+\label{doc-enum-members}
+\Hypertarget{_proc_timing_8h_doc-enum-members}
+\doxysubsection{列挙型詳解}
+\Hypertarget{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}\index{ProcTiming.h@{ProcTiming.h}!ProcPriority@{ProcPriority}}
+\index{ProcPriority@{ProcPriority}!ProcTiming.h@{ProcTiming.h}}
+\doxysubsubsection{\texorpdfstring{ProcPriority}{ProcPriority}}
+{\footnotesize\ttfamily \label{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5} 
+enum \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}}}
+
+
+
+プライオリティ 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NONE@{NONE}!ProcTiming.h@{ProcTiming.h}}\index{ProcTiming.h@{ProcTiming.h}!NONE@{NONE}}}\Hypertarget{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5ac157bdf0b85a40d2619cbc8bc1ae5fe2}\label{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5ac157bdf0b85a40d2619cbc8bc1ae5fe2} 
+NONE&なし \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGHEST@{HIGHEST}!ProcTiming.h@{ProcTiming.h}}\index{ProcTiming.h@{ProcTiming.h}!HIGHEST@{HIGHEST}}}\Hypertarget{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5ae21a4e10ac16b844ebb238a2333bb594}\label{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5ae21a4e10ac16b844ebb238a2333bb594} 
+HIGHEST&最優先 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HIGH@{HIGH}!ProcTiming.h@{ProcTiming.h}}\index{ProcTiming.h@{ProcTiming.h}!HIGH@{HIGH}}}\Hypertarget{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a0c3a1dacf94061154b3ee354359c5893}\label{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a0c3a1dacf94061154b3ee354359c5893} 
+HIGH&優先高 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!ProcTiming.h@{ProcTiming.h}}\index{ProcTiming.h@{ProcTiming.h}!NORMAL@{NORMAL}}}\Hypertarget{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}\label{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7} 
+NORMAL&通常 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOW@{LOW}!ProcTiming.h@{ProcTiming.h}}\index{ProcTiming.h@{ProcTiming.h}!LOW@{LOW}}}\Hypertarget{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a6a226f4143ca3b18999551694cdb72a8}\label{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a6a226f4143ca3b18999551694cdb72a8} 
+LOW&優先低 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOWEST@{LOWEST}!ProcTiming.h@{ProcTiming.h}}\index{ProcTiming.h@{ProcTiming.h}!LOWEST@{LOWEST}}}\Hypertarget{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5ae321c2eb4e64b32d51da602bc6352f1d}\label{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5ae321c2eb4e64b32d51da602bc6352f1d} 
+LOWEST&最低優先 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IFPOSSIBLE@{IFPOSSIBLE}!ProcTiming.h@{ProcTiming.h}}\index{ProcTiming.h@{ProcTiming.h}!IFPOSSIBLE@{IFPOSSIBLE}}}\Hypertarget{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a9eea1aac668568f900ebe4c229a5c956}\label{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a9eea1aac668568f900ebe4c229a5c956} 
+IFPOSSIBLE&処理時間が無ければ処理しない \\
+\hline
+
+\end{DoxyEnumFields}

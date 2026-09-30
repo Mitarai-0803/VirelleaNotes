@@ -1,0 +1,111 @@
+\doxysection{Volume\+Control\+Component クラス}
+\hypertarget{class_volume_control_component}{}\label{class_volume_control_component}\index{VolumeControlComponent@{VolumeControlComponent}}
+
+
+音量操作用コンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Volume\+Control\+Component.\+h$>$}
+
+Volume\+Control\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_volume_control_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_volume_control_component_acb76a2f43db6c6bbc1fa330d0e49eb14}\label{class_volume_control_component_acb76a2f43db6c6bbc1fa330d0e49eb14} 
+{\bfseries Volume\+Control\+Component} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_volume_control_component_a0846a687a2bbe6c1751466b729bed670}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_volume_control_component_a90554d92506e65831f82b2432ce133db}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_volume_control_component_a63c3c640bfcc920159d9640825a9b143}{Get\+Volume}} () const
+\begin{DoxyCompactList}\small\item\em 現在音量取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_volume_control_component_abd7930ae56e2dde4d421cbd7efab1d4d}{Set\+Volume}} (int volume)
+\begin{DoxyCompactList}\small\item\em 音量設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries ‾\+Component\+Base} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+音量操作用コンポーネント 
+
+上下キーで音量を調整する機能 
+
+\label{doc-func-members}
+\Hypertarget{class_volume_control_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_volume_control_component_a90554d92506e65831f82b2432ce133db}\index{VolumeControlComponent@{VolumeControlComponent}!Draw@{Draw}}
+\index{Draw@{Draw}!VolumeControlComponent@{VolumeControlComponent}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_volume_control_component_a90554d92506e65831f82b2432ce133db} 
+void Volume\+Control\+Component\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_volume_control_component_a63c3c640bfcc920159d9640825a9b143}\index{VolumeControlComponent@{VolumeControlComponent}!GetVolume@{GetVolume}}
+\index{GetVolume@{GetVolume}!VolumeControlComponent@{VolumeControlComponent}}
+\doxysubsubsection{\texorpdfstring{GetVolume()}{GetVolume()}}
+{\footnotesize\ttfamily \label{class_volume_control_component_a63c3c640bfcc920159d9640825a9b143} 
+int Volume\+Control\+Component\+::\+Get\+Volume (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+現在音量取得 
+
+\begin{DoxyReturn}{戻り値}
+音量 
+\end{DoxyReturn}
+\Hypertarget{class_volume_control_component_abd7930ae56e2dde4d421cbd7efab1d4d}\index{VolumeControlComponent@{VolumeControlComponent}!SetVolume@{SetVolume}}
+\index{SetVolume@{SetVolume}!VolumeControlComponent@{VolumeControlComponent}}
+\doxysubsubsection{\texorpdfstring{SetVolume()}{SetVolume()}}
+{\footnotesize\ttfamily \label{class_volume_control_component_abd7930ae56e2dde4d421cbd7efab1d4d} 
+void Volume\+Control\+Component\+::\+Set\+Volume (\begin{DoxyParamCaption}\item[{int}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+音量設定 
+
+
+\begin{DoxyParams}{引数}
+{\em volume} & 設定する音量 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_volume_control_component_a0846a687a2bbe6c1751466b729bed670}\index{VolumeControlComponent@{VolumeControlComponent}!Update@{Update}}
+\index{Update@{Update}!VolumeControlComponent@{VolumeControlComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_volume_control_component_a0846a687a2bbe6c1751466b729bed670} 
+void Volume\+Control\+Component\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+左右キーで\+BPMを調整 一定時間以上押すと押し続けている間増減 
+
+\mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Component\+Base}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/自作ゲーム/音ゲー制作エンジン -\/ コピー/src/\+Components/\+Volume\+Control\+Component/Volume\+Control\+Component.\+h\end{DoxyCompactItemize}

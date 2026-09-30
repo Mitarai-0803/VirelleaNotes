@@ -1,0 +1,249 @@
+\doxysection{physics\+::Character クラス}
+\hypertarget{classphysics_1_1_character}{}\label{classphysics_1_1_character}\index{physics::Character@{physics::Character}}
+
+
+キャラクターコントローラー  
+
+
+
+
+{\ttfamily \#include $<$Physics\+Character.\+h$>$}
+
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener}{Contact\+Listener}}
+\item 
+class \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_settings}{Contact\+Settings}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873}{Ground\+State}} \{ \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a2b9beed57034f5727573d7ded76cf777}{On\+Ground}}
+, \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a50f80f8d96a6d65de73ba8a6b9910761}{On\+Steep\+Ground}}
+, \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a9ed2d871602556951e39f3cebd08d6cb}{Not\+Supported}}
+, \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873aee4e669a07b061d70b9b79dfed9cb5e7}{In\+Air}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{Indent}\textbf{ コンタクトリスナー}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classphysics_1_1_character_a312ff4bf8d4d23672f70481de601e174}\label{classphysics_1_1_character_a312ff4bf8d4d23672f70481de601e174} 
+virtual void {\bfseries set\+Listener} (\mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener}{physics\+::\+Character\+::\+Contact\+Listener}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classphysics_1_1_character_af75d79d7efe3e5a592474b1f9bdc542f}{listener}})=0
+\begin{DoxyCompactList}\small\item\em コンタクトリスナーを設定 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_af75d79d7efe3e5a592474b1f9bdc542f}\label{classphysics_1_1_character_af75d79d7efe3e5a592474b1f9bdc542f} 
+virtual \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener}{physics\+::\+Character\+::\+Contact\+Listener}} \texorpdfstring{$\ast$}{*} {\bfseries listener} () const =0
+\begin{DoxyCompactList}\small\item\em コンタクトリスナーを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ パラメーター}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classphysics_1_1_character_a8e6a4bb7757c969fb3fc3a35ff866696}\label{classphysics_1_1_character_a8e6a4bb7757c969fb3fc3a35ff866696} 
+virtual float3 {\bfseries linear\+Velocity} () const =0
+\begin{DoxyCompactList}\small\item\em 速度を取得 (単位\+:m/s) \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a7a466020621512467bf8b2c99cbd7410}\label{classphysics_1_1_character_a7a466020621512467bf8b2c99cbd7410} 
+virtual void {\bfseries set\+Linear\+Velocity} (const float3 \&linear\+\_\+velocity)=0
+\begin{DoxyCompactList}\small\item\em 速度を設定 (単位\+:m/s) \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a4dd722578045fe3b4f9343efa7f1f9a4}\label{classphysics_1_1_character_a4dd722578045fe3b4f9343efa7f1f9a4} 
+virtual float3 {\bfseries position} () const =0
+\begin{DoxyCompactList}\small\item\em 位置を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_ade4826fc25e3722627329a79fad55302}\label{classphysics_1_1_character_ade4826fc25e3722627329a79fad55302} 
+virtual void {\bfseries set\+Position} (const float3 \&p)=0
+\begin{DoxyCompactList}\small\item\em 位置を設定 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a6af7cf39f8ca37c9009003875bb06468}\label{classphysics_1_1_character_a6af7cf39f8ca37c9009003875bb06468} 
+virtual quaternion {\bfseries rotation} () const =0
+\begin{DoxyCompactList}\small\item\em 回転姿勢を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_af06acd9d0fe75db90f2b82282c5b283f}\label{classphysics_1_1_character_af06acd9d0fe75db90f2b82282c5b283f} 
+virtual void {\bfseries set\+Rotation} (const quaternion \&r)=0
+\begin{DoxyCompactList}\small\item\em 回転姿勢を設定 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a2eeffe7b11fe0663f455e198bc3681c3}\label{classphysics_1_1_character_a2eeffe7b11fe0663f455e198bc3681c3} 
+virtual \mbox{\hyperlink{classmatrix}{matrix}} {\bfseries world\+Matrix} () const =0
+\begin{DoxyCompactList}\small\item\em ワールド行列を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a2e47b974eaaf62e982e657e251b26201}\label{classphysics_1_1_character_a2e47b974eaaf62e982e657e251b26201} 
+virtual \mbox{\hyperlink{classmatrix}{matrix}} {\bfseries center\+Of\+Mass\+Transform} () const =0
+\begin{DoxyCompactList}\small\item\em 重心の変換行列を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a35601f6453ac278e80f3fb81157ad7a5}\label{classphysics_1_1_character_a35601f6453ac278e80f3fb81157ad7a5} 
+virtual void {\bfseries set\+Mass} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} mass)=0
+\begin{DoxyCompactList}\small\item\em 質量を設定 (単位\+:kg) \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_aff28ca0b1c3abccb44914e43f54eeefd}\label{classphysics_1_1_character_aff28ca0b1c3abccb44914e43f54eeefd} 
+virtual void {\bfseries set\+Max\+Slope\+Angle} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} max\+\_\+slope\+\_\+angle)=0
+\begin{DoxyCompactList}\small\item\em キャラクターがまだ歩ける最大傾斜角度を設定する (単位\+:ラジアン) \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a1850bc55a8663491fee199f7fb31f3d8}\label{classphysics_1_1_character_a1850bc55a8663491fee199f7fb31f3d8} 
+virtual void {\bfseries set\+Max\+Strength} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} max\+\_\+strength)=0
+\begin{DoxyCompactList}\small\item\em キャラクターが他の物体を押すことができる最大の力を設定（単位\+:N） \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_ab76bde2e4a93c6be241012d48b19bd74}\label{classphysics_1_1_character_ab76bde2e4a93c6be241012d48b19bd74} 
+virtual \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} {\bfseries character\+Padding} () const =0
+\begin{DoxyCompactList}\small\item\em ジオメトリからどれだけ離れられるかの距離を取得 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_character_a6368798da0919a9f9d39db5b13e23edd}{update}} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} delta\+\_\+time)=0
+\item 
+virtual float3 \mbox{\hyperlink{classphysics_1_1_character_a07bd7bb40708ed1beb8f2d06d5f9daca}{move}} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} delta\+\_\+time, const float3 \&move\+\_\+vector, const float3 \&old\+\_\+position, const float3 \&jump\+\_\+vector=float3(0.\+0f, 0.\+0f, 0.\+0f))=0
+\item 
+virtual bool \mbox{\hyperlink{classphysics_1_1_character_a2258c4316e1079fa738005bfbf502316}{can\+Walk\+Stairs}} (const float3 \&move\+\_\+vector) const =0
+\item 
+virtual bool \mbox{\hyperlink{classphysics_1_1_character_a5c310f6ab55042491d41f831634199c1}{walk\+Stairs}} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} delta\+\_\+time, const float3 \&step\+\_\+up, const float3 \&step\+\_\+forward, const float3 \&step\+\_\+forward\+\_\+test, const float3 \&step\+\_\+down\+\_\+extra=float3(0.\+0f, 0.\+0f, 0.\+0f))=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_character_a1c8eab5932aa07a6c7777b05658c7a2a}{reflesh\+Contacts}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classphysics_1_1_character_add6b0d15ca001aec9f26747094859ea2}{set\+Shape}} (const \mbox{\hyperlink{classshape_1_1_base}{shape\+::\+Base}} \&\mbox{\hyperlink{classphysics_1_1_character_ac27dc5721dd843a3b4dd182fd55fd101}{shape}}, const float3 \&shape\+\_\+offset=float3(0.\+0f, 0.\+0f, 0.\+0f))=0
+\item 
+\Hypertarget{classphysics_1_1_character_ac27dc5721dd843a3b4dd182fd55fd101}\label{classphysics_1_1_character_ac27dc5721dd843a3b4dd182fd55fd101} 
+virtual \mbox{\hyperlink{classshape_1_1_base}{shape\+::\+Base}} \texorpdfstring{$\ast$}{*} {\bfseries shape} () const =0
+\begin{DoxyCompactList}\small\item\em シェイプを取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a2e72aef2bd84dff611547cdb640e1c2e}\label{classphysics_1_1_character_a2e72aef2bd84dff611547cdb640e1c2e} 
+virtual float3 {\bfseries shape\+Offset} () const =0
+\begin{DoxyCompactList}\small\item\em シェイプの移動オフセットを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 接地判定関連}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classphysics_1_1_character_a8a24875f6882a34c25776422cc83ff13}\label{classphysics_1_1_character_a8a24875f6882a34c25776422cc83ff13} 
+virtual \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873}{Character\+::\+Ground\+State}} {\bfseries ground\+State} () const =0
+\begin{DoxyCompactList}\small\item\em 現在の接地状態を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a75ef2bba3278c6effed998b2f61c71e0}\label{classphysics_1_1_character_a75ef2bba3278c6effed998b2f61c71e0} 
+virtual float3 {\bfseries ground\+Position} () const =0
+\begin{DoxyCompactList}\small\item\em 接地している足元の位置座標を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a44010813f6325b7ab5965052d1a711fe}\label{classphysics_1_1_character_a44010813f6325b7ab5965052d1a711fe} 
+virtual float3 {\bfseries ground\+Normal} () const =0
+\begin{DoxyCompactList}\small\item\em 接地している足元の法線を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_a7a562edf20007702fae5f8a25c7fc9b8}\label{classphysics_1_1_character_a7a562edf20007702fae5f8a25c7fc9b8} 
+virtual float3 {\bfseries ground\+Velocity} () const =0
+\begin{DoxyCompactList}\small\item\em 接地している足元の速度を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_character_afefff07cea497a369bca10f06f202809}\label{classphysics_1_1_character_afefff07cea497a369bca10f06f202809} 
+virtual \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}} {\bfseries ground\+Body\+ID} () const =0
+\begin{DoxyCompactList}\small\item\em キャラクターが立っているオブジェクトのボディ\+IDを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+キャラクターコントローラー 
+
+\label{doc-enum-members}
+\Hypertarget{classphysics_1_1_character_doc-enum-members}
+\doxysubsection{列挙型メンバ詳解}
+\Hypertarget{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873}\index{physics::Character@{physics::Character}!GroundState@{GroundState}}
+\index{GroundState@{GroundState}!physics::Character@{physics::Character}}
+\doxysubsubsection{\texorpdfstring{GroundState}{GroundState}}
+{\footnotesize\ttfamily \label{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873} 
+enum class \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873}{physics\+::\+Character\+::\+Ground\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnGround@{OnGround}!physics::Character@{physics::Character}}\index{physics::Character@{physics::Character}!OnGround@{OnGround}}}\Hypertarget{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a2b9beed57034f5727573d7ded76cf777}\label{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a2b9beed57034f5727573d7ded76cf777} 
+On\+Ground&キャラクターが地上にいて自由に動ける状態 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OnSteepGround@{OnSteepGround}!physics::Character@{physics::Character}}\index{physics::Character@{physics::Character}!OnSteepGround@{OnSteepGround}}}\Hypertarget{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a50f80f8d96a6d65de73ba8a6b9910761}\label{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a50f80f8d96a6d65de73ba8a6b9910761} 
+On\+Steep\+Ground&キャラクターは急すぎる斜面にいて、これ以上登れない。もし斜面から滑りたいのであれば、呼び出し手は下降速度をかけ始める必要があります。 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotSupported@{NotSupported}!physics::Character@{physics::Character}}\index{physics::Character@{physics::Character}!NotSupported@{NotSupported}}}\Hypertarget{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a9ed2d871602556951e39f3cebd08d6cb}\label{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a9ed2d871602556951e39f3cebd08d6cb} 
+Not\+Supported&キャラクターがオブジェクトに触れているが、そのオブジェクトに対応していないため落下する必要がある。\+Get\+Ground\+XXX関数は、タッチされたオブジェクトの情報を返します。 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InAir@{InAir}!physics::Character@{physics::Character}}\index{physics::Character@{physics::Character}!InAir@{InAir}}}\Hypertarget{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873aee4e669a07b061d70b9b79dfed9cb5e7}\label{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873aee4e669a07b061d70b9b79dfed9cb5e7} 
+In\+Air&キャラクターは空宙にいる \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{classphysics_1_1_character_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classphysics_1_1_character_a2258c4316e1079fa738005bfbf502316}\index{physics::Character@{physics::Character}!canWalkStairs@{canWalkStairs}}
+\index{canWalkStairs@{canWalkStairs}!physics::Character@{physics::Character}}
+\doxysubsubsection{\texorpdfstring{canWalkStairs()}{canWalkStairs()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_character_a2258c4316e1079fa738005bfbf502316} 
+virtual bool physics\+::\+Character\+::can\+Walk\+Stairs (\begin{DoxyParamCaption}\item[{const float3 \&}]{move\+\_\+vector}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+階段を歩けるかどうかを取得
+
+この関数はキャラクターが急すぎる斜面（垂直な壁など）に移動した場合にtrueを返します。 階段を上ろうとする場合はwalk\+Stairsを呼び出すことになります。 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em move\+\_\+vector} & 移動ベクトル \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_character_a07bd7bb40708ed1beb8f2d06d5f9daca}\index{physics::Character@{physics::Character}!move@{move}}
+\index{move@{move}!physics::Character@{physics::Character}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_character_a07bd7bb40708ed1beb8f2d06d5f9daca} 
+virtual float3 physics\+::\+Character\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}}]{delta\+\_\+time}{, }\item[{const float3 \&}]{move\+\_\+vector}{, }\item[{const float3 \&}]{old\+\_\+position}{, }\item[{const float3 \&}]{jump\+\_\+vector}{ = {\ttfamily float3(0.0f,~0.0f,~0.0f)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+移動 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em delta\+\_\+time} & シミュレーションステップ時間 \\
+\hline
+\mbox{\texttt{in}}  & {\em move\+\_\+vector} & 移動ベクトル \\
+\hline
+\mbox{\texttt{in}}  & {\em old\+\_\+position} & 移動前の位置( \doxylink{classphysics_1_1_character_a6368798da0919a9f9d39db5b13e23edd}{update()}実行前の座標が必要です ) \\
+\hline
+\mbox{\texttt{in}}  & {\em jump\+\_\+vector} & ジャンプ方向ベクトル(ジャンプしない場合は0で渡します) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+新しい補正後の移動速度 内部でwalk\+Stairs()による階段歩行も行います 
+\end{DoxyReturn}
+\Hypertarget{classphysics_1_1_character_a1c8eab5932aa07a6c7777b05658c7a2a}\index{physics::Character@{physics::Character}!refleshContacts@{refleshContacts}}
+\index{refleshContacts@{refleshContacts}!physics::Character@{physics::Character}}
+\doxysubsubsection{\texorpdfstring{refleshContacts()}{refleshContacts()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_character_a1c8eab5932aa07a6c7777b05658c7a2a} 
+virtual void physics\+::\+Character\+::reflesh\+Contacts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+衝突点を再検出 この機能はキャラクターがテレポートした後に、新しい世界とのコンタクトを決定するために使用することができます。 \Hypertarget{classphysics_1_1_character_add6b0d15ca001aec9f26747094859ea2}\index{physics::Character@{physics::Character}!setShape@{setShape}}
+\index{setShape@{setShape}!physics::Character@{physics::Character}}
+\doxysubsubsection{\texorpdfstring{setShape()}{setShape()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_character_add6b0d15ca001aec9f26747094859ea2} 
+virtual bool physics\+::\+Character\+::set\+Shape (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classshape_1_1_base}{shape\+::\+Base}} \&}]{shape}{, }\item[{const float3 \&}]{shape\+\_\+offset}{ = {\ttfamily float3(0.0f,~0.0f,~0.0f)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+キャラクターの形状を入れ替える（しゃがみ、構え方など） 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em shape} & 形状 \\
+\hline
+\mbox{\texttt{in}}  & {\em shape\+\_\+offset} & 形状位置をずらすオフセット \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 正常終了(形状の入れ替え成功) \\
+\hline
+{\em false} & 形状の入れ替え後に衝突物があり、切り替えできなかった場合 \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classphysics_1_1_character_a6368798da0919a9f9d39db5b13e23edd}\index{physics::Character@{physics::Character}!update@{update}}
+\index{update@{update}!physics::Character@{physics::Character}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_character_a6368798da0919a9f9d39db5b13e23edd} 
+virtual void physics\+::\+Character\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}}]{delta\+\_\+time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+更新 現在の速度に応じてキャラクターを移動させます。 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em delta\+\_\+time} & シミュレーションステップ時間 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_character_a5c310f6ab55042491d41f831634199c1}\index{physics::Character@{physics::Character}!walkStairs@{walkStairs}}
+\index{walkStairs@{walkStairs}!physics::Character@{physics::Character}}
+\doxysubsubsection{\texorpdfstring{walkStairs()}{walkStairs()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_character_a5c310f6ab55042491d41f831634199c1} 
+virtual bool physics\+::\+Character\+::walk\+Stairs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}}]{delta\+\_\+time}{, }\item[{const float3 \&}]{step\+\_\+up}{, }\item[{const float3 \&}]{step\+\_\+forward}{, }\item[{const float3 \&}]{step\+\_\+forward\+\_\+test}{, }\item[{const float3 \&}]{step\+\_\+down\+\_\+extra}{ = {\ttfamily float3(0.0f,~0.0f,~0.0f)}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+階段歩行 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em delta\+\_\+time} & シミュレーションのステップ時間 \\
+\hline
+\mbox{\texttt{in}}  & {\em step\+\_\+up} & ステップアップする方向と距離（これが最大ステップ高に相当する） \\
+\hline
+\mbox{\texttt{in}}  & {\em step\+\_\+forward} & 踏み台昇降の後に前に踏み出す方向と距離 \\
+\hline
+\mbox{\texttt{in}}  & {\em step\+\_\+forward\+\_\+test} & 床を検査する方向と距離 \\
+\hline
+ & {\em in\+Step\+Down\+Extra} & ステップダウンする最後に加算される平行移動。上より下にステップダウンできるようにします。不要な場合は0に設定します。 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+階段の歩行が成功した場合はtrueが戻ります
+\end{DoxyReturn}
+引数 step\+\_\+forward\+\_\+test について 高い周波数で走行している場合 step\+\_\+forward は非常に小さくなり、降りるときに階段の側面にぶつかる可能性があります。 そのため、最大傾斜角度に違反する法線が発生する可能性があります。 このような場合は上昇位置からこの距離を使って再度テストし、有効なスロープを見つけるかどうかを確認します。 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Physics/\mbox{\hyperlink{_physics_character_8h}{Physics\+Character.\+h}}\end{DoxyCompactItemize}

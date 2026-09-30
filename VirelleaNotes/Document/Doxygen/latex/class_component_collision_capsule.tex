@@ -1,0 +1,806 @@
+\doxysection{Component\+Collision\+Capsule クラス}
+\hypertarget{class_component_collision_capsule}{}\label{class_component_collision_capsule}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+
+
+コリジョンコンポーネントクラス  
+
+
+
+
+{\ttfamily \#include $<$Component\+Collision\+Capsule.\+h$>$}
+
+Component\+Collision\+Capsule の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_component_collision_capsule}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_capsule_a99abc909153feb40c012da97bed4b5a0}\label{class_component_collision_capsule_a99abc909153feb40c012da97bed4b5a0} 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component_collision_capsule}{Component\+Collision\+Capsule}}, u8"{}\+Capsule\+Collision機能クラス"{})
+\item 
+\Hypertarget{class_component_collision_capsule_a7995fcce1d8d89865f4594b021398dc9}\label{class_component_collision_capsule_a7995fcce1d8d89865f4594b021398dc9} 
+Component\+Collision\+Capsule\+Ptr {\bfseries Set\+Name} (const std\+::string\+\_\+view \&name)
+\item 
+virtual void \mbox{\hyperlink{class_component_collision_capsule_a5895db6d5fb09b5c9f4f960e84e46810}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_collision_capsule_a591e4078550aafcaaf9d8abf68626ef2}{Update}} () override
+\begin{DoxyCompactList}\small\item\em アップデート \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_collision_capsule_aeb609986bbba243b2c76ce2dcddb0cca}{Pre\+Physics}} () override
+\begin{DoxyCompactList}\small\item\em Physics前処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_collision_capsule_aedea7472b9cedc7335dacf887aa7ad0a}{Post\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Post\+Update \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_collision_capsule_add90278b51a823d0469c66ea4e70d315}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_collision_capsule_a83fbe427028df74706aae0ec9998c1e7}{Exit}} () override
+\begin{DoxyCompactList}\small\item\em 終了 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_collision_capsule_aa06804636d1368364ae0e9e22cf74cc2}{GUI}} () override
+\begin{DoxyCompactList}\small\item\em GUI \end{DoxyCompactList}\item 
+Component\+Collision\+Capsule\+Ptr \mbox{\hyperlink{class_component_collision_capsule_a23afdcd97d4d989427e0951dffe50c77}{Set\+Radius}} (float radius)
+\begin{DoxyCompactList}\small\item\em 半径の設定 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_component_collision_capsule_a435aaeb50ec68cc0387a5c50d34a6a46}{Get\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em 半径の取得 \end{DoxyCompactList}\item 
+Component\+Collision\+Capsule\+Ptr \mbox{\hyperlink{class_component_collision_capsule_ab4d78d757f0b2967f83b01a04b0227ef}{Set\+Height}} (float height)
+\begin{DoxyCompactList}\small\item\em カプセルの高さ設定 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_component_collision_capsule_a81ac0219755802f6505824151ea7924b}{Get\+Height}} ()
+\begin{DoxyCompactList}\small\item\em カプセルの高さを取得 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Hit\+Info}} \mbox{\hyperlink{class_component_collision_capsule_aa04de5200edb229113592cee33696bcd}{Is\+Hit}} (Component\+Collision\+Ptr col) override
+\begin{DoxyCompactList}\small\item\em 当たりをチェックします \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_collision}{Component\+Collision}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_component_collision_a94fbf4e3003bbf24fdffab518536ce40}{Construct}} (Object\+Ptr owner)
+\item 
+virtual void \mbox{\hyperlink{class_component_collision_a112e5c3ebd36edb531a9f533cf9aa799}{Late\+Update}} () override
+\begin{DoxyCompactList}\small\item\em Late\+Update \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_collision_a7f3cf1b4259c82671d1fe0ab515dfd4f}{GUICollision\+Data}} (bool use\+\_\+attach=true)
+\begin{DoxyCompactList}\small\item\em コリジョンデータ内容を表示する \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_collision_a772c56aecbc089864de0209f97c24e98}{On\+Hit}} (const \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Hit\+Info}} \&hit\+Info)
+\begin{DoxyCompactList}\small\item\em 当たった情報はコールバックで送られてくる \end{DoxyCompactList}\item 
+bool {\bfseries Is\+Collision\+Status} (\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5d}{Collision\+Bit}} bit) const
+\item 
+void {\bfseries Set\+Collision\+Status} (\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5d}{Collision\+Bit}} bit, bool b)
+\item 
+int {\bfseries Get\+Collision\+Group\+Index} () const
+\item 
+std\+::string {\bfseries Get\+Collision\+Group\+Name} () const
+\item 
+const \mbox{\hyperlink{class_component_collision_ac871fff0db414ee6b5a1e6b3acd05ebe}{Collision\+Type}} {\bfseries Get\+Collision\+Type} () const
+\item 
+const Collision\+Group {\bfseries Get\+Collision\+Group} () const
+\item 
+float {\bfseries Get\+Mass} () const
+\item 
+\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} {\bfseries Get\+Id} () const
+\item 
+void {\bfseries Attach\+To\+Model} (int node)
+\item 
+void {\bfseries Attach\+To\+Model} (const std\+::string\+\_\+view node)
+\item 
+float \texorpdfstring{$\ast$}{*} {\bfseries Get\+Col\+Matrix\+Float} ()
+\begin{DoxyCompactList}\small\item\em コリジョンマトリクス \end{DoxyCompactList}\item 
+float3 {\bfseries Get\+Col\+Matrix\+Translate} () const
+\item 
+bool \mbox{\hyperlink{class_component_collision_abf9476504d07cf38e8e5b35dce1036fa}{Calc\+Push}} (Component\+Collision\+Ptr collision, float3 vec, float3 \texorpdfstring{$\ast$}{*}push, float3 \texorpdfstring{$\ast$}{*}other\+\_\+push) const
+\begin{DoxyCompactList}\small\item\em 押し戻し量の再計算 \end{DoxyCompactList}\item 
+bool {\bfseries Is\+Group\+Hit} (Component\+Collision\+Ptr collision) const
+\item 
+void {\bfseries Use\+Gravity} (bool b=true)
+\item 
+bool {\bfseries Is\+Use\+Gravity} ()
+\item 
+void {\bfseries Overlap} (\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} bit)
+\item 
+bool {\bfseries Is\+Overlap} (Collision\+Group bit)
+\item 
+void {\bfseries Show\+In\+Game} (bool b=true)
+\item 
+bool {\bfseries Is\+Show\+In\+Game} ()
+\item 
+void {\bfseries Set\+Climb\+Limit} (float climb\+\_\+limit)
+\item 
+float {\bfseries Get\+Climb\+Limit} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component}{Component}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component}{Component}}, u8"{}\+Componentクラス"{})
+\item 
+\mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+Object\+Ptr {\bfseries Get\+Owner\+Ptr} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+const Object\+Ptr {\bfseries Get\+Owner\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Set\+Name} (const std\+::string\+\_\+view \&name)
+\item 
+const std\+::string\+\_\+view {\bfseries Get\+Name} () const
+\item 
+virtual void {\bfseries Late\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 遅い描画 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a01c7688b95056ecdba07d997750c8987}{Pre\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新前処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Pre\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画前処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Post\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画後処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a25dd8e0fdfebc4f68e5fc08738e3c7ae}{Post\+Physics}} ()
+\begin{DoxyCompactList}\small\item\em Physics後処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Init\+Serialize} ()
+\begin{DoxyCompactList}\small\item\em シリアライズでもどらないユーザー処理関数などを設定 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Priority} (\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} priority)
+\item 
+std\+::string {\bfseries Unique\+Text} (const std\+::string\+\_\+view \&name, int id=0)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Get\+Proc} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing)
+\begin{DoxyCompactList}\small\item\em 処理を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Proc} (const std\+::string \&proc\+\_\+name, Proc\+Timing\+Func func, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Priority} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Reset\+Proc} (const std\+::string \&proc\+\_\+name)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Remove\+This\+Component} ()
+\begin{DoxyCompactList}\small\item\em 自分の消去 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Set\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b, bool on)
+\begin{DoxyCompactList}\small\item\em ステータスの設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Get\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b)
+\begin{DoxyCompactList}\small\item\em ステータスの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_a8e41b07538bf037981574f4f011d773a}{On\+Hit\+Component}} (const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries On\+Hit\+Component} (const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_i_matrix}{IMatrix$<$ Component\+Collision\+Capsule $>$}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+auto {\bfseries Set\+Matrix} (const \mbox{\hyperlink{classmatrix}{matrix}} \&mat)
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{Get\+Matrix\+Float}} ()
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a714ba34bafae6ad18adc512a12bfd88c}{Set\+Translate}} (float3 translate)
+\begin{DoxyCompactList}\small\item\em 位置をセットします \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_ae7c4c3c592258a62946b51b4ddd3b9f4}{Add\+Translate}} (float3 translate, bool local=false, bool direct=false)
+\begin{DoxyCompactList}\small\item\em 現在の位置から移動させます \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_ab67ba5ffdc38b759a3cb4a4d37dbd69e}{Get\+Translate}} () const
+\begin{DoxyCompactList}\small\item\em 現在の位置を取得 \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a9964f98393c131d9aeaca9a2394dc2a0}{Translate}} ()
+\begin{DoxyCompactList}\small\item\em 現在の位置を取得 \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_aefa89e636dcd4f4c2f128fbd690829ed}{Get\+Vector\+AxisX}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_ac940f73d639aab045fef9c7ab9b0c001}{Get\+Vector\+AxisY}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_a521c543b440fd67361317096d075d230}{Get\+Vector\+AxisZ}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a781040f918546a43c53fe908f78749ab}{Vector\+AxisX}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a85f8892147948781655c3cdfef6b56a4}{Vector\+AxisY}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a13ca80b18abe18006c5963d182837ef4}{Vector\+AxisZ}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_ad3c834a912db364ad3da23ddfa865156}{Translate\+Float}} ()
+\begin{DoxyCompactList}\small\item\em 位置を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a634a043c1cbcdf122104ec3a5677b2a5}{Vector\+Axis\+XFloat}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a310e16cb1bcea89de3f5792c9a1256e4}{Vector\+Axis\+YFloat}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_ac85c3df7009e77d500be39547f08fc59}{Vector\+Axis\+ZFloat}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a714521197cdaf88b10263628c5d6b6e1}{Set\+Vector\+AxisX}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em X軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_affd008e5bc3f162771f65f6ccd0f4212}{Set\+Vector\+AxisY}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em Y軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a650a67e0bd69073dbf2540566436a6a8}{Set\+Vector\+AxisZ}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em Z軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_aabebf94bb7ad5c922f06a5718af1c3b7}{Set\+Rotation\+To\+Position}} (float3 position, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ポジションの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a626db18f4ef2eef12a3d94e7467e5d47}{Set\+Rotation\+To\+Vector}} (float3 vec, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a1c2365a4d13bae038007b507d987a019}{Set\+Rotation\+To\+Vector\+On\+Parent}} (float3 vec, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a64d76c423bcaf1509cdd0d59853db9a2}{Set\+Rotation\+To\+Position\+With\+Limit}} (float3 position, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ポジションの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a4033fc43ac7e0f5c3d2e2cc584fcc1d3}{Set\+Rotation\+To\+Vector\+With\+Limit}} (float3 vec, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_ab69f027e3f44e4a62fc51fd45372b766}{Set\+Rotation\+To\+Vector\+On\+Parent\+With\+Limit}} (float3 vec, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a79080df693fc6ca32a4d0cf00d277bf1}{Set\+Rotation\+Axis\+XYZ}} (float3 xyz)
+\begin{DoxyCompactList}\small\item\em 軸回転量を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a00baa4ac15c3a377d63b11a4ac694736}{Add\+Rotation\+Axis\+XYZ}} (float3 xyz)
+\begin{DoxyCompactList}\small\item\em 軸回転量を現在の状態から追加する \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_a33669a9c95add8d80d310fc7ef9a0bf7}{Get\+Rotation\+Axis\+XYZ}} (bool local=true)
+\begin{DoxyCompactList}\small\item\em 軸回転量を取得する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a1bf7f616a7fe4c9dfc975cf0a2748304}{Set\+Scale\+Axis\+XYZ}} (float3 scale)
+\begin{DoxyCompactList}\small\item\em スケールの設定 \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_aa710c9aafe9fcfed378d3242329c45b3}{Mul\+Scale\+Axis\+XYZ}} (float3 scale)
+\begin{DoxyCompactList}\small\item\em 現在のスケールから掛け合わせ倍率スケール \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_a9d823777983c3ca5e917c8ca8b879054}{Get\+Scale\+Axis\+XYZ}} (bool local=true)
+\begin{DoxyCompactList}\small\item\em スケールの取得 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_i_matrix_a34cd0c9a971a79694ff25330ed3431d3}{Get\+Degree\+To\+Position}} (float3 target\+\_\+position)
+\begin{DoxyCompactList}\small\item\em 向いている角度をもとめます \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_i_matrix_a938bf6fa6d01cc0945c0e7899aa03fc8}{Get\+Degree\+To\+Vector}} (float3 target\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em 向いている角度をもとめます \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{IMatrixインターフェースの利用するための定義}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_component_collision_capsule_a7870e9ef9d713f6fe45828bb3991aad6}{Matrix}} () override
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_component_collision_capsule_a191bc99e000675ac5713ed1a7f18af0a}{Get\+Matrix}} () const override
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+virtual Component\+Collision\+Capsule\+Ptr \mbox{\hyperlink{class_component_collision_capsule_ac2fc99ac4a7c9c2fd2a27bac14d1edce}{Shared\+This}} () override
+\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_component_collision_capsule_a64c76acb3bc608cedbea5840ea30545b}{Get\+World\+Matrix}} () const override
+\begin{DoxyCompactList}\small\item\em ワールド\+Matrixの取得 \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_component_collision_capsule_a32af0556871f073262135753491e157c}{Get\+Old\+World\+Matrix}} () const override
+\begin{DoxyCompactList}\small\item\em 1フレーム前のワールド\+Matrixの取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_component_collision_capsule_a645aef4f5d6a3fc57778f2a2577c0dec}\label{class_component_collision_capsule_a645aef4f5d6a3fc57778f2a2577c0dec} 
+void {\bfseries set\+Gravity} (float g)
+\item 
+\Hypertarget{class_component_collision_capsule_a9305b6fc6ea71e4f6461eb34594453c0}\label{class_component_collision_capsule_a9305b6fc6ea71e4f6461eb34594453c0} 
+float {\bfseries gravity} ()
+\item 
+\Hypertarget{class_component_collision_capsule_aef3b65bc496ac6cfb0896d9d08d4b0a6}\label{class_component_collision_capsule_aef3b65bc496ac6cfb0896d9d08d4b0a6} 
+Component\+Collision\+Capsule\+Ptr {\bfseries Set\+Hit\+Collision\+Group} (\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} hit\+\_\+group)
+\item 
+\Hypertarget{class_component_collision_capsule_a9b549e2a3c471150d2e271e72f6d1da9}\label{class_component_collision_capsule_a9b549e2a3c471150d2e271e72f6d1da9} 
+Component\+Collision\+Capsule\+Ptr {\bfseries Set\+Overlap\+Collision\+Group} (\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} overlap\+\_\+group)
+\item 
+\Hypertarget{class_component_collision_capsule_a84766de7b0d35647e641d585dcc3a494}\label{class_component_collision_capsule_a84766de7b0d35647e641d585dcc3a494} 
+Component\+Collision\+Capsule\+Ptr {\bfseries Set\+Collision\+Group} (Collision\+Group grp)
+\item 
+\Hypertarget{class_component_collision_capsule_a56c63a934fbbb368a8b058bd5903d617}\label{class_component_collision_capsule_a56c63a934fbbb368a8b058bd5903d617} 
+Component\+Collision\+Capsule\+Ptr {\bfseries Set\+Mass} (float mass)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_collision}{Component\+Collision}} に属する継承公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5d}{Collision\+Bit}} \+: u32 \{ \newline
+\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5da59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5daf5dcb4a16c9cba228cbc26f01d9ab113}{Disable\+Hit}}
+, \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5da84bc9636c1bdddab2cc7fd1c05fd8da9}{Show\+In\+Game}}
+, \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5dadbe849234308d83d4abce1d533509a70}{Is\+Ground}}
+, \newline
+\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5dab31e3562242db4cb3b7cddd4107ebcfe}{Use\+Physics}}
+, \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5da59e340d8613e634eb85f7268601aa67d}{Disable\+Transform}}
+ \}
+\begin{DoxyCompactList}\small\item\em コリジョンステータス \end{DoxyCompactList}\item 
+\Hypertarget{class_component_collision_ac871fff0db414ee6b5a1e6b3acd05ebe}\label{class_component_collision_ac871fff0db414ee6b5a1e6b3acd05ebe} 
+enum struct \mbox{\hyperlink{class_component_collision_ac871fff0db414ee6b5a1e6b3acd05ebe}{Collision\+Type}} \+: u32 \{ \newline
+{\bfseries NONE} = (u32)-\/1
+, {\bfseries LINE} = 0
+, {\bfseries TRIANGLE}
+, {\bfseries SPHERE}
+, \newline
+{\bfseries CAPSULE}
+, {\bfseries MODEL}
+ \}
+\begin{DoxyCompactList}\small\item\em タイプは増えたら登録する必要がある \end{DoxyCompactList}\item 
+\Hypertarget{class_component_collision_aaad1283ee9c4e3044a72739b0e608af9}\label{class_component_collision_aaad1283ee9c4e3044a72739b0e608af9} 
+enum struct {\bfseries Collision\+Group\+Bit} \+: u32 \{ \newline
+{\bfseries WALL} = 0
+, {\bfseries GROUND} = 1
+, {\bfseries PLAYER} = 2
+, {\bfseries ENEMY} = 3
+, \newline
+{\bfseries WEAPON} = 4
+, {\bfseries ITEM} = 5
+, {\bfseries CAMERA} = 6
+, {\bfseries ETC} = 7
+ \}
+\item 
+\Hypertarget{class_component_collision_a5b62afb68692a7efbde21ae661bd1ebf}\label{class_component_collision_a5b62afb68692a7efbde21ae661bd1ebf} 
+enum struct {\bfseries Collision\+Group} \+: u32 \{ \newline
+{\bfseries WALL} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} static\+\_\+cast\texorpdfstring{$<$}{<}u32\texorpdfstring{$>$}{>}(Collision\+Group\+Bit\+::WALL)
+, {\bfseries GROUND} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} static\+\_\+cast\texorpdfstring{$<$}{<}u32\texorpdfstring{$>$}{>}(Collision\+Group\+Bit\+::GROUND)
+, {\bfseries PLAYER} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} static\+\_\+cast\texorpdfstring{$<$}{<}u32\texorpdfstring{$>$}{>}(Collision\+Group\+Bit\+::PLAYER)
+, {\bfseries ENEMY} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} static\+\_\+cast\texorpdfstring{$<$}{<}u32\texorpdfstring{$>$}{>}(Collision\+Group\+Bit\+::ENEMY)
+, \newline
+{\bfseries WEAPON} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} static\+\_\+cast\texorpdfstring{$<$}{<}u32\texorpdfstring{$>$}{>}(Collision\+Group\+Bit\+::WEAPON)
+, {\bfseries ITEM} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} static\+\_\+cast\texorpdfstring{$<$}{<}u32\texorpdfstring{$>$}{>}(Collision\+Group\+Bit\+::ITEM)
+, {\bfseries CAMERA} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} static\+\_\+cast\texorpdfstring{$<$}{<}u32\texorpdfstring{$>$}{>}(Collision\+Group\+Bit\+::CAMERA)
+, {\bfseries ETC} = 1 \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} static\+\_\+cast\texorpdfstring{$<$}{<}u32\texorpdfstring{$>$}{>}(Collision\+Group\+Bit\+::ETC)
+ \}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} \+: u64 \{ \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0abd9f7c5d6ab4201b138a3e51dab7056f}{Alive}} = 0
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ac5475a8fae2fa421403e56f7ae0de108}{Change\+Prio}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a552f244367a4f2e2ef9e4e5ff2c52ea0}{Show\+GUI}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0af3413da9e97ed78dada82d1330fde5f1}{No\+Update}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0add349546b418e50c23e2d88a3342a68f}{No\+Draw}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ad0b20a6cab952ae657cd06d2c956a7ea}{Disable\+Pause}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a7c572e80f65d4b3a29bc954dd03225b6}{Is\+Pause}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a6b554ca9a13e5407990948d4c68e8229}{Same\+Type}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a268ce394e277db759f5d6ee76c59f0e7}{Exited}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2b59321169346822ab33b2c61dbb9975}{Serialized}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a0698adfc6182853d3bf40771142a42d1}{No\+Serialize}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2faec1f9f8cc7f8f40d521c4dd574f49}{Enable}}
+ \}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_abeb8b5fb2ca31a185f96d343af1ccd22}\label{class_component_abeb8b5fb2ca31a185f96d343af1ccd22} 
+static void {\bfseries Register\+To\+Object} (Component\+Ptr cmp, Object\+Ptr obj)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_collision}{Component\+Collision}} に属する継承公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Hit\+Info}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Func}
+\begin{DoxyCompactList}\small\item\em ラムダ当たり処理実装 \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_component_collision_a9cc00683556722e2d809cd9ba1f51422}{Collision\+Type\+Name}}
+\begin{DoxyCompactList}\small\item\em コリジョンタイプ名 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a04910312b4e9ad3959892ff5e231629e}\label{class_component_a04910312b4e9ad3959892ff5e231629e} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Func}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a91d5cc2893166a196e1d5e550391cf58}\label{class_component_a91d5cc2893166a196e1d5e550391cf58} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Physics\+Func}
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_collision}{Component\+Collision}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_component_collision_ab2e3cf71fa639a9758de957261482b3a}{gui\+Collision\+Data}} ()
+\begin{DoxyCompactList}\small\item\em GUI情報 \end{DoxyCompactList}\item 
+void {\bfseries gui\+Collision\+Data\+Attach} ()
+\begin{DoxyCompactList}\small\item\em アタッチ情報のみ表示 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_ace0d31ceef4d58fcf0ffbceff4a5aa79}{is\+Hit}} (Component\+Collision\+Capsule\+Ptr col1, Component\+Collision\+Sphere\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Capsule VS Sphere \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_a675957da5f924d6a6ee0bbfbcb52943f}{is\+Hit}} (Component\+Collision\+Sphere\+Ptr col1, Component\+Collision\+Capsule\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Sphere VS Capsule \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_a854cfd26167c281516cc37561ba36c84}{is\+Hit}} (Component\+Collision\+Capsule\+Ptr col1, Component\+Collision\+Capsule\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Capsule VS Capsule \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_aa9fdb656b5a2d37818e43f5035bb33f4}{is\+Hit}} (Component\+Collision\+Sphere\+Ptr col1, Component\+Collision\+Sphere\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Sphere VS Sphere \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_a98b53043a3e2aea2969844fdbe969662}{is\+Hit}} (Component\+Collision\+Model\+Ptr col1, Component\+Collision\+Sphere\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_model}{Model} VS Sphere \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_a2e8994f75df34bcaa60801143d00702e}{is\+Hit}} (Component\+Collision\+Sphere\+Ptr col1, Component\+Collision\+Model\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Sphere VS \doxylink{class_model}{Model} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_a0b023a86141dae87fdd1ddc8e7e268f7}{is\+Hit}} (Component\+Collision\+Model\+Ptr col1, Component\+Collision\+Capsule\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_model}{Model} VS Capsule \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_a3f6809820ad10622e13ee3dd8032cbd8}{is\+Hit}} (Component\+Collision\+Capsule\+Ptr col1, Component\+Collision\+Model\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Capsule VS \doxylink{class_model}{Model} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_a6e245a1c9791affeb72a2db97b692414}{is\+Hit}} (Component\+Collision\+Line\+Ptr col1, Component\+Collision\+Sphere\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Line VS Sphere \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_a49f867bd9f1c18d653f2a4dc8389c0c0}{is\+Hit}} (Component\+Collision\+Line\+Ptr col1, Component\+Collision\+Capsule\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Line VS Capsule \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_a68c3b374f827beb8ea6e9440f8fbf484}{is\+Hit}} (Component\+Collision\+Line\+Ptr col1, Component\+Collision\+Model\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Line VS \doxylink{class_model}{Model} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_aa9edbc5b34ea8ac65569983451d4bf27}{is\+Hit}} (Component\+Collision\+Sphere\+Ptr col1, Component\+Collision\+Line\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Line VS Sphere \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_add6bda14f0538ad2c0dc83c206a78a0e}{is\+Hit}} (Component\+Collision\+Capsule\+Ptr col1, Component\+Collision\+Line\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Line VS Capsule \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Component\+Collision\+::\+Hit\+Info}} \mbox{\hyperlink{class_component_collision_ad997e54e5cce00844fcc4a5307d92c18}{is\+Hit}} (Component\+Collision\+Model\+Ptr col1, Component\+Collision\+Line\+Ptr col2)
+\begin{DoxyCompactList}\small\item\em Line VS \doxylink{class_model}{Model} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a7c35f5cbec169010e664494423e8994f}\label{class_component_collision_a7c35f5cbec169010e664494423e8994f} 
+\mbox{\hyperlink{classmatrix}{matrix}} {\bfseries collision\+\_\+transform\+\_\+} = \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix\+::identity}}()
+\begin{DoxyCompactList}\small\item\em コリジョン用のトランスフォーム \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a56fe7bf6d5b1f6e5ad9c6e48393c7fbb}\label{class_component_collision_a56fe7bf6d5b1f6e5ad9c6e48393c7fbb} 
+\mbox{\hyperlink{classmatrix}{matrix}} {\bfseries old\+\_\+transform\+\_\+} = \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix\+::identity}}()
+\begin{DoxyCompactList}\small\item\em 1フレーム前の状態 (World\+Transform) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a0703267eaf89608f466562899e659aa5}\label{class_component_collision_a0703267eaf89608f466562899e659aa5} 
+\mbox{\hyperlink{class_component_collision_ac871fff0db414ee6b5a1e6b3acd05ebe}{Collision\+Type}} {\bfseries collision\+\_\+type\+\_\+} = Collision\+Type\+::\+NONE
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_ade25258ae0d5861b1351b37cfba62b41}\label{class_component_collision_ade25258ae0d5861b1351b37cfba62b41} 
+Collision\+Group {\bfseries collision\+\_\+group\+\_\+} = Collision\+Group\+::\+ETC
+\begin{DoxyCompactList}\small\item\em 自分のコリジョンタイプ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_aa2ea132001b00585d45467e08c8a0543}\label{class_component_collision_aa2ea132001b00585d45467e08c8a0543} 
+\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} {\bfseries collision\+\_\+hit\+\_\+} = 0xffffffff
+\begin{DoxyCompactList}\small\item\em デフォルトではすべてに当たる \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_ad9c8ca02fbf7cb8c8d51624ab0678f04}\label{class_component_collision_ad9c8ca02fbf7cb8c8d51624ab0678f04} 
+\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} {\bfseries collision\+\_\+overlap\+\_\+} = 0x00000000
+\begin{DoxyCompactList}\small\item\em デフォルトではオーバーラップしない \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a7ccef5dcf94b38e8bb2b13589ffba1ed}\label{class_component_collision_a7ccef5dcf94b38e8bb2b13589ffba1ed} 
+\mbox{\hyperlink{struct_status}{Status}}$<$ \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5d}{Collision\+Bit}} $>$ {\bfseries collision\+\_\+status\+\_\+}
+\begin{DoxyCompactList}\small\item\em 状態 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a4ee515355f686d895f4a469f2f5f8d68}\label{class_component_collision_a4ee515355f686d895f4a469f2f5f8d68} 
+float {\bfseries collision\+\_\+mass\+\_\+} = 1
+\begin{DoxyCompactList}\small\item\em 押し戻される量に影響(マイナスは戻されない) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_af40acb66ae551af4b1282068ef0413d7}\label{class_component_collision_af40acb66ae551af4b1282068ef0413d7} 
+\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} {\bfseries collision\+\_\+id\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em コリジョン識別子 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_abe3b52ccae56611004f143f9534a3499}\label{class_component_collision_abe3b52ccae56611004f143f9534a3499} 
+int {\bfseries attach\+\_\+node\+\_\+} = -\/1
+\begin{DoxyCompactList}\small\item\em モデルノードに付くときは0以上 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a8d78046138a5fee6167b6a56db600fdc}\label{class_component_collision_a8d78046138a5fee6167b6a56db600fdc} 
+\mbox{\hyperlink{classmatrix}{matrix}} {\bfseries attach\+\_\+node\+\_\+matrix\+\_\+} = \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix\+::identity}}()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a06330f2567778636d147ee9038158d64}\label{class_component_collision_a06330f2567778636d147ee9038158d64} 
+bool {\bfseries use\+\_\+gravity\+\_\+} = false
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a9f1c4b4d369b3b3247bc5b41e1b34f16}\label{class_component_collision_a9f1c4b4d369b3b3247bc5b41e1b34f16} 
+const float3 {\bfseries k\+\_\+gravity\+\_\+} = \{0, 100, 0\}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a402baed27cf6d1dbbd8bdfc1dca217db}\label{class_component_collision_a402baed27cf6d1dbbd8bdfc1dca217db} 
+float3 {\bfseries gravity\+\_\+} = \{0.\+0f, -\/0.\+98f, 0.\+0f\}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a9ff189df0b91e45fd2d8a925f8d94bbe}\label{class_component_collision_a9ff189df0b91e45fd2d8a925f8d94bbe} 
+float3 {\bfseries now\+\_\+gravity\+\_\+} = \{0.\+0f, 0.\+0f, 0.\+0f\}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_ae7fd514b346f85bcbffca7e1345dcba1}\label{class_component_collision_ae7fd514b346f85bcbffca7e1345dcba1} 
+float3 {\bfseries prev\+\_\+gravity\+\_\+} = \{0.\+0f, 0.\+0f, 0.\+0f\}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_collision_a470351b0810d3f25425899603dbe257b}\label{class_component_collision_a470351b0810d3f25425899603dbe257b} 
+float {\bfseries difficult\+\_\+to\+\_\+climb\+\_\+} = 0.\+5f
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}\label{class_component_aaf224b0e73780a9c3cbad323a0ec59f5} 
+Object\+Ptr {\bfseries owner\+\_\+} = nullptr
+\begin{DoxyCompactList}\small\item\em オーナー \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aa075f1283763194b7b15660ceb626196}\label{class_component_aa075f1283763194b7b15660ceb626196} 
+Slot\+Procs {\bfseries proc\+\_\+timings\+\_\+}
+\begin{DoxyCompactList}\small\item\em 登録処理(update) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_af89da12b7dd26576a4b896a785103e04}\label{class_component_af89da12b7dd26576a4b896a785103e04} 
+float {\bfseries update\+\_\+delta\+\_\+time\+\_\+} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em update以外で使用できるように \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaafe1a5010b858a2c66379bcd6faa80b}\label{class_component_aaafe1a5010b858a2c66379bcd6faa80b} 
+std\+::string {\bfseries name\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+コリジョンコンポーネントクラス 
+
+\label{doc-func-members}
+\Hypertarget{class_component_collision_capsule_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_component_collision_capsule_add90278b51a823d0469c66ea4e70d315}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!Draw@{Draw}}
+\index{Draw@{Draw}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_add90278b51a823d0469c66ea4e70d315} 
+virtual void Component\+Collision\+Capsule\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画 
+
+
+
+\mbox{\hyperlink{class_component_a8622ccd5f24035d48e33292717299313}{Component}}を再実装しています。
+
+\Hypertarget{class_component_collision_capsule_a83fbe427028df74706aae0ec9998c1e7}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!Exit@{Exit}}
+\index{Exit@{Exit}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{Exit()}{Exit()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a83fbe427028df74706aae0ec9998c1e7} 
+virtual void Component\+Collision\+Capsule\+::\+Exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了 
+
+
+
+\mbox{\hyperlink{class_component_a336a670bf5c6e49062b0ea3a7367c5d7}{Component}}を再実装しています。
+
+\Hypertarget{class_component_collision_capsule_a81ac0219755802f6505824151ea7924b}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a81ac0219755802f6505824151ea7924b} 
+float Component\+Collision\+Capsule\+::\+Get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+カプセルの高さを取得 
+
+\begin{DoxyReturn}{戻り値}
+カプセルの高さ 
+\end{DoxyReturn}
+\Hypertarget{class_component_collision_capsule_a191bc99e000675ac5713ed1a7f18af0a}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!GetMatrix@{GetMatrix}}
+\index{GetMatrix@{GetMatrix}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{GetMatrix()}{GetMatrix()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a191bc99e000675ac5713ed1a7f18af0a} 
+const \mbox{\hyperlink{classmatrix}{matrix}} \& Component\+Collision\+Capsule\+::\+Get\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Transformの\+Matrix情報を取得します 
+
+\begin{DoxyReturn}{戻り値}
+Transform の Matrix 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{IMatrix$<$ Component\+Collision\+Capsule $>$}}を実装しています。
+
+\Hypertarget{class_component_collision_capsule_a32af0556871f073262135753491e157c}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!GetOldWorldMatrix@{GetOldWorldMatrix}}
+\index{GetOldWorldMatrix@{GetOldWorldMatrix}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{GetOldWorldMatrix()}{GetOldWorldMatrix()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a32af0556871f073262135753491e157c} 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} Component\+Collision\+Capsule\+::\+Get\+Old\+World\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+1フレーム前のワールド\+Matrixの取得 
+
+\begin{DoxyReturn}{戻り値}
+他のコンポーネントも含めた位置 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_aba0d23d8c1c3cb1b5963e9ca06d56236}{IMatrix$<$ Component\+Collision\+Capsule $>$}}を実装しています。
+
+\Hypertarget{class_component_collision_capsule_a435aaeb50ec68cc0387a5c50d34a6a46}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a435aaeb50ec68cc0387a5c50d34a6a46} 
+float Component\+Collision\+Capsule\+::\+Get\+Radius (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+半径の取得 
+
+\begin{DoxyReturn}{戻り値}
+半径 
+\end{DoxyReturn}
+\Hypertarget{class_component_collision_capsule_a64c76acb3bc608cedbea5840ea30545b}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!GetWorldMatrix@{GetWorldMatrix}}
+\index{GetWorldMatrix@{GetWorldMatrix}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{GetWorldMatrix()}{GetWorldMatrix()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a64c76acb3bc608cedbea5840ea30545b} 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} Component\+Collision\+Capsule\+::\+Get\+World\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ワールド\+Matrixの取得 
+
+\begin{DoxyReturn}{戻り値}
+他のコンポーネントも含めた位置 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{IMatrix$<$ Component\+Collision\+Capsule $>$}}を実装しています。
+
+\Hypertarget{class_component_collision_capsule_aa06804636d1368364ae0e9e22cf74cc2}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!GUI@{GUI}}
+\index{GUI@{GUI}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{GUI()}{GUI()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_aa06804636d1368364ae0e9e22cf74cc2} 
+virtual void Component\+Collision\+Capsule\+::\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+GUI 
+
+
+
+\mbox{\hyperlink{class_component_collision_aa4072ddbe19bbaff34980ee8c81182f3}{Component\+Collision}}を再実装しています。
+
+\Hypertarget{class_component_collision_capsule_a5895db6d5fb09b5c9f4f960e84e46810}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!Init@{Init}}
+\index{Init@{Init}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a5895db6d5fb09b5c9f4f960e84e46810} 
+virtual void Component\+Collision\+Capsule\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化 
+
+
+
+\mbox{\hyperlink{class_component_a5a5e595fab62ba757f03becc5b101732}{Component}}を再実装しています。
+
+\Hypertarget{class_component_collision_capsule_aa04de5200edb229113592cee33696bcd}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!IsHit@{IsHit}}
+\index{IsHit@{IsHit}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{IsHit()}{IsHit()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_aa04de5200edb229113592cee33696bcd} 
+\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{Hit\+Info}} Component\+Collision\+Capsule\+::\+Is\+Hit (\begin{DoxyParamCaption}\item[{Component\+Collision\+Ptr}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+当たりをチェックします 
+
+
+\begin{DoxyParams}{引数}
+{\em collision} & 相手コリジョン \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たりの情報 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_component_collision_ae084dc4c6878df3c3eb2f925e266309f}{Component\+Collision}}を再実装しています。
+
+\Hypertarget{class_component_collision_capsule_a7870e9ef9d713f6fe45828bb3991aad6}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a7870e9ef9d713f6fe45828bb3991aad6} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& Component\+Collision\+Capsule\+::\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Transformの\+Matrix情報を取得します 
+
+\begin{DoxyReturn}{戻り値}
+\doxylink{class_component_transform}{Component\+Transform} の Matrix 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{IMatrix$<$ Component\+Collision\+Capsule $>$}}を実装しています。
+
+\Hypertarget{class_component_collision_capsule_aedea7472b9cedc7335dacf887aa7ad0a}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!PostUpdate@{PostUpdate}}
+\index{PostUpdate@{PostUpdate}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{PostUpdate()}{PostUpdate()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_aedea7472b9cedc7335dacf887aa7ad0a} 
+virtual void Component\+Collision\+Capsule\+::\+Post\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Post\+Update 
+
+
+
+\mbox{\hyperlink{class_component_collision_ac245cf529ba5e9b4fbc571aaeaf827dc}{Component\+Collision}}を再実装しています。
+
+\Hypertarget{class_component_collision_capsule_aeb609986bbba243b2c76ce2dcddb0cca}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!PrePhysics@{PrePhysics}}
+\index{PrePhysics@{PrePhysics}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{PrePhysics()}{PrePhysics()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_aeb609986bbba243b2c76ce2dcddb0cca} 
+virtual void Component\+Collision\+Capsule\+::\+Pre\+Physics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Physics前処理 
+
+
+
+\mbox{\hyperlink{class_component_a28834daa627c5e81e93d40f064a19249}{Component}}を再実装しています。
+
+\Hypertarget{class_component_collision_capsule_ab4d78d757f0b2967f83b01a04b0227ef}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!SetHeight@{SetHeight}}
+\index{SetHeight@{SetHeight}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{SetHeight()}{SetHeight()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_ab4d78d757f0b2967f83b01a04b0227ef} 
+Component\+Collision\+Capsule\+Ptr Component\+Collision\+Capsule\+::\+Set\+Height (\begin{DoxyParamCaption}\item[{float}]{height}{}\end{DoxyParamCaption})}
+
+
+
+カプセルの高さ設定 
+
+
+\begin{DoxyParams}{引数}
+{\em height} & 高さ (radius\texorpdfstring{$\ast$}{*}2 より大きい必要があります) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_component_collision_capsule_a23afdcd97d4d989427e0951dffe50c77}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!SetRadius@{SetRadius}}
+\index{SetRadius@{SetRadius}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{SetRadius()}{SetRadius()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a23afdcd97d4d989427e0951dffe50c77} 
+Component\+Collision\+Capsule\+Ptr Component\+Collision\+Capsule\+::\+Set\+Radius (\begin{DoxyParamCaption}\item[{float}]{radius}{}\end{DoxyParamCaption})}
+
+
+
+半径の設定 
+
+
+\begin{DoxyParams}{引数}
+{\em radius} & 半径 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_collision_capsule_ac2fc99ac4a7c9c2fd2a27bac14d1edce}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!SharedThis@{SharedThis}}
+\index{SharedThis@{SharedThis}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{SharedThis()}{SharedThis()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_ac2fc99ac4a7c9c2fd2a27bac14d1edce} 
+virtual Component\+Collision\+Capsule\+Ptr Component\+Collision\+Capsule\+::\+Shared\+This (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_matrix}{IMatrix$<$ Component\+Collision\+Capsule $>$}}を実装しています。
+
+\Hypertarget{class_component_collision_capsule_a591e4078550aafcaaf9d8abf68626ef2}\index{ComponentCollisionCapsule@{ComponentCollisionCapsule}!Update@{Update}}
+\index{Update@{Update}!ComponentCollisionCapsule@{ComponentCollisionCapsule}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_component_collision_capsule_a591e4078550aafcaaf9d8abf68626ef2} 
+virtual void Component\+Collision\+Capsule\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+アップデート 
+
+
+
+\mbox{\hyperlink{class_component_aaf2ce6dc5752072492f790ad4c7955bb}{Component}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/\mbox{\hyperlink{_component_collision_capsule_8h}{Component\+Collision\+Capsule.\+h}}\end{DoxyCompactItemize}

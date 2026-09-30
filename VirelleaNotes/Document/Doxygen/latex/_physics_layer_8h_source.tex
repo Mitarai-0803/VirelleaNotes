@@ -1,0 +1,28 @@
+\doxysection{Physics\+Layer.\+h}
+\hypertarget{_physics_layer_8h_source}{}\label{_physics_layer_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsLayer.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsLayer.h}}
+\mbox{\hyperlink{_physics_layer_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }physics\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ オブジェクトが属することのできるレイヤーで、他のどのオブジェクトと衝突することができるかを決定します。}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ 一般的には、少なくとも動的オブジェクトのレイヤーと静止オブジェクトのレイヤーが必要ですが、}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ 必要であればもっと多くのレイヤーを持つことができます。}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ 例えば、ハイディテールコリジョン用のレイヤーを持つこともできます}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ （これは物理シミュレーションでは使用されませんが、コリジョンテストを行う場合にのみ使用されます）。}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267ba}{ObjectLayers}}\ :\ \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baadb7efabc078fc1b67b86c709623de88a}{NON\_MOVING}}\ =\ 0,\ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa2e2cc651c3814ff21219ec336a859ae1}{MOVING}}\ \ \ \ \ =\ 1,\ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baaf636b41154b4d22d47e007d5a7e9ecab}{DEBRIS}}\ \ \ \ \ =\ 2,\ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa4cdbb711da8a5eef955dcbe48baea742}{SENSOR}}\ \ \ \ \ =\ 3,\ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa73d103b12bd08b49bf611a15e890d86d}{MAX\_COUNT}}\ =\ 4,\ \ \ \ }
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ physics}}
+
+\end{DoxyCode}

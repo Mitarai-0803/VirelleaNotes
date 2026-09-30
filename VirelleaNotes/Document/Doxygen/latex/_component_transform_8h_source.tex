@@ -1,0 +1,401 @@
+\doxysection{Component\+Transform.\+h}
+\hypertarget{_component_transform_8h_source}{}\label{_component_transform_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentTransform.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentTransform.h}}
+\mbox{\hyperlink{_component_transform_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_8h}{System/Component/Component.h}}>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <ImGuizmo/ImGuizmo.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_component_transform}{ComponentTransform}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_object}{Object}};}
+\DoxyCodeLine{00013\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_component_transform_8h_a53fe27048e7a64375d563b2644c95763}{ShowGizmo}}(\textcolor{keywordtype}{float}*\ \mbox{\hyperlink{classmatrix}{matrix}},\ ImGuizmo::OPERATION\ ope,\ ImGuizmo::MODE\ mode,\ uint64\_t\ \textcolor{keywordtype}{id}\ =\ 0);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ ImGuizmoのMatrixからEulerに変換する際に全軸に180度変換がかかってしまうため修正}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ DecomposeMatrixToComponents(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ matx,\ \textcolor{keywordtype}{float}*\ translation,\ \textcolor{keywordtype}{float}*\ rotation,\ \textcolor{keywordtype}{float}*\ scale);}
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{void}\ RecomposeMatrixFromComponents(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ translation,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ rotation,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}*\ scale,\ \textcolor{keywordtype}{float}*\ matx);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_matrix}{IMatrix}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}()\ =\ 0;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ std::shared\_ptr<T>\ SharedThis()\ =\ 0;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{GetWorldMatrix}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_i_matrix_aba0d23d8c1c3cb1b5963e9ca06d56236}{GetOldWorldMatrix}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{auto}\ SetMatrix(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ mat)}
+\DoxyCodeLine{00050\ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}()\ =\ mat;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().f32\_128\_0;\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a714ba34bafae6ad18adc512a12bfd88c}{SetTranslate}}(float3\ translate)}
+\DoxyCodeLine{00063\ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ (float4\&)\mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().\mbox{\hyperlink{classmatrix_a61209a50a3cca44a15434beaf2db6b5b}{translateVector}}()\ =\ \{translate,\ 1\};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_ae7c4c3c592258a62946b51b4ddd3b9f4}{AddTranslate}}(float3\ translate,\ \textcolor{keywordtype}{bool}\ local\ =\ \textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ direct\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ delta\ =\ direct\ ?\ 1.0f\ :\ GetDeltaTime60();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(local)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ float3\ add\ =\ \mbox{\hyperlink{_vector_math_8h_ab151ff244ab06b4f346d5827dde650e0}{mul}}(float4(translate,\ 0),\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}()).xyz;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_matrix_a714ba34bafae6ad18adc512a12bfd88c}{SetTranslate}}(\mbox{\hyperlink{class_i_matrix_ab67ba5ffdc38b759a3cb4a4d37dbd69e}{GetTranslate}}()\ +\ add\ *\ delta);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_matrix_a714ba34bafae6ad18adc512a12bfd88c}{SetTranslate}}(\mbox{\hyperlink{class_i_matrix_ab67ba5ffdc38b759a3cb4a4d37dbd69e}{GetTranslate}}()\ +\ translate\ *\ delta);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{const}\ float3\ \mbox{\hyperlink{class_i_matrix_ab67ba5ffdc38b759a3cb4a4d37dbd69e}{GetTranslate}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}().\mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}}();\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{class_i_matrix_a9964f98393c131d9aeaca9a2394dc2a0}{Translate}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().\_41\_42\_43;\ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00099\ \ \ \ \ float3\ \mbox{\hyperlink{class_i_matrix_aefa89e636dcd4f4c2f128fbd690829ed}{GetVectorAxisX}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}().axisX();\ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00103\ \ \ \ \ float3\ \mbox{\hyperlink{class_i_matrix_ac940f73d639aab045fef9c7ab9b0c001}{GetVectorAxisY}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}().axisY();\ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00107\ \ \ \ \ float3\ \mbox{\hyperlink{class_i_matrix_a521c543b440fd67361317096d075d230}{GetVectorAxisZ}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}().axisZ();\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{class_i_matrix_a781040f918546a43c53fe908f78749ab}{VectorAxisX}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().\_11\_12\_13;\ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{class_i_matrix_a85f8892147948781655c3cdfef6b56a4}{VectorAxisY}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().\_21\_22\_23;\ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{class_i_matrix_a13ca80b18abe18006c5963d182837ef4}{VectorAxisZ}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().\_31\_32\_33;\ \}}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{class_i_matrix_ad3c834a912db364ad3da23ddfa865156}{TranslateFloat}}()\ \{\ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float}*)\mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().f32\_128\_3;\ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{class_i_matrix_a634a043c1cbcdf122104ec3a5677b2a5}{VectorAxisXFloat}}()\ \{\ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float}*)\mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().f32\_128\_0;\ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{class_i_matrix_a310e16cb1bcea89de3f5792c9a1256e4}{VectorAxisYFloat}}()\ \{\ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float}*)\mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().f32\_128\_1;\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{class_i_matrix_ac85c3df7009e77d500be39547f08fc59}{VectorAxisZFloat}}()\ \{\ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float}*)\mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().f32\_128\_2;\ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a714521197cdaf88b10263628c5d6b6e1}{SetVectorAxisX}}(float3\ vec)}
+\DoxyCodeLine{00141\ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().\_11\_12\_13\ =\ vec;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00144\ \ \ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_affd008e5bc3f162771f65f6ccd0f4212}{SetVectorAxisY}}(float3\ vec)}
+\DoxyCodeLine{00150\ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().\_21\_22\_23\ =\ vec;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a650a67e0bd69073dbf2540566436a6a8}{SetVectorAxisZ}}(float3\ vec)}
+\DoxyCodeLine{00159\ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}}().\_31\_32\_33\ =\ vec;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_aabebf94bb7ad5c922f06a5718af1c3b7}{SetRotationToPosition}}(float3\ position,\ float3\ up\ =\ \{0,\ 1,\ 0\},\ \textcolor{keywordtype}{bool}\ up\_change\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00169\ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!up\_change)}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ position.y\ =\ \mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{GetWorldMatrix}}().\mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}}().y;}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ float3\ vec\ =\ position\ -\/\ \mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{GetWorldMatrix}}().\mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}}();}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_a1c2365a4d13bae038007b507d987a019}{SetRotationToVectorOnParent}}(vec,\ up,\ up\_change);}
+\DoxyCodeLine{00175\ \ \ \ \ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a626db18f4ef2eef12a3d94e7467e5d47}{SetRotationToVector}}(float3\ vec,\ float3\ up\ =\ \{0,\ 1,\ 0\},\ \textcolor{keywordtype}{bool}\ up\_change\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00182\ \ \ \ \ \{}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ mat\ =\ HelperLib::Math::CreateMatrixByFrontVector(-\/vec,\ up,\ up\_change);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslation[3],\ matrixRotation[3],\ matrixScale[3];}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslationVec[3],\ matrixRotationVec[3],\ matrixScaleVec[3];}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(\mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}(),\ matrixTranslation,\ matrixRotation,\ matrixScale);}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(mat.f32\_128\_0,\ matrixTranslationVec,\ matrixRotationVec,\ matrixScaleVec);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ RecomposeMatrixFromComponents(matrixTranslation,\ matrixRotationVec,\ matrixScale,\ \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}());}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a1c2365a4d13bae038007b507d987a019}{SetRotationToVectorOnParent}}(float3\ vec,\ float3\ up\ =\ \{0,\ 1,\ 0\},\ \textcolor{keywordtype}{bool}\ up\_change\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00201\ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#if\ 1\ \ \ \ }\textcolor{comment}{//\ Transformコンポーネントでなければ親の影響分は差し引く}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ mat\_tmp\ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_component_transform}{ComponentTransform}}*\textcolor{keyword}{>}(\textcolor{keyword}{this})\ \&\&\ !\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_object}{Object}}*\textcolor{keyword}{>}(\textcolor{keyword}{this}))\ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{auto}\ cmp\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_component}{Component}}*\textcolor{keyword}{>}(\textcolor{keyword}{this}))}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\_tmp\ =\ cmp-\/>GetOwner()-\/>GetMatrix();}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\textcolor{keyword}{auto}\ obj\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_object}{Object}}*\textcolor{keyword}{>}(\textcolor{keyword}{this}))}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\_tmp\ =\ obj-\/>GetMatrix();}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ vec4\ =\ \mbox{\hyperlink{_vector_math_8h_ab151ff244ab06b4f346d5827dde650e0}{mul}}(float4(vec,\ 0),\ inverse(mat\_tmp));}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ vec\ \ \ \ \ \ \ =\ vec4.xyz;}
+\DoxyCodeLine{00212\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_a626db18f4ef2eef12a3d94e7467e5d47}{SetRotationToVector}}(vec,\ up,\ up\_change);}
+\DoxyCodeLine{00214\ \ \ \ \ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a64d76c423bcaf1509cdd0d59853db9a2}{SetRotationToPositionWithLimit}}(float3\ position,\ \textcolor{keywordtype}{float}\ limit,\ float3\ up\ =\ \{0,\ 1,\ 0\},\ \textcolor{keywordtype}{bool}\ up\_change\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00221\ \ \ \ \ \{}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!up\_change)}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ position.y\ =\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}().\mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}}().y;}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ float3\ vec\ =\ position\ -\/\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}().\mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}}();}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_ab69f027e3f44e4a62fc51fd45372b766}{SetRotationToVectorOnParentWithLimit}}(vec,\ limit,\ up,\ up\_change);}
+\DoxyCodeLine{00227\ \ \ \ \ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a4033fc43ac7e0f5c3d2e2cc584fcc1d3}{SetRotationToVectorWithLimit}}(float3\ vec,\ \textcolor{keywordtype}{float}\ limit,\ float3\ up\ =\ \{0,\ 1,\ 0\},\ \textcolor{keywordtype}{bool}\ up\_change\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00235\ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ delta\ =\ GetDeltaTime60();}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ limit\ \ \ \ \ \ \ =\ limit\ *\ delta;}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 今の姿勢マトリクス}}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ now\_mat\ =\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}();}
+\DoxyCodeLine{00241\ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 向きたい方向のマトリクス}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ mat\ =\ HelperLib::Math::CreateMatrixByFrontVector(-\/vec,\ up,\ up\_change);}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 現在の姿勢}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslation[3],\ matrixRotation[3],\ matrixScale[3];}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 向きたい姿勢}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslationVec[3],\ matrixRotationVec[3],\ matrixScaleVec[3];}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(\mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}(),\ matrixTranslation,\ matrixRotation,\ matrixScale);}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(mat.f32\_128\_0,\ matrixTranslationVec,\ matrixRotationVec,\ matrixScaleVec);}
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rot\_x\ =\ matrixRotationVec[0]\ -\/\ matrixRotation[0];}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_x\ >\ 180)}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_x\ -\/=\ 360;}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_x\ <\ -\/180)}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_x\ +=\ 360;}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rot\_y\ =\ matrixRotationVec[1]\ -\/\ matrixRotation[1];}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_y\ >\ 180)}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_y\ -\/=\ 360;}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_y\ <\ -\/180)}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_y\ +=\ 360;}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ rot\_z\ =\ matrixRotationVec[2]\ -\/\ matrixRotation[2];}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_z\ >\ 180)}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_z\ -\/=\ 360;}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_z\ <\ -\/180)}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_z\ +=\ 360;}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_x\ >\ 0\ \&\&\ rot\_x\ >\ limit)}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_x\ =\ limit;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_x\ <\ 0\ \&\&\ rot\_x\ <\ -\/limit)}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_x\ =\ -\/limit;}
+\DoxyCodeLine{00274\ }
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_y\ >\ 0\ \&\&\ rot\_y\ >\ limit)}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_y\ =\ limit;}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_y\ <\ 0\ \&\&\ rot\_y\ <\ -\/limit)}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_y\ =\ -\/limit;}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_z\ >\ 0\ \&\&\ rot\_z\ >\ limit)}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_z\ =\ limit;}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(rot\_z\ <\ 0\ \&\&\ rot\_z\ <\ -\/limit)}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ rot\_z\ =\ -\/limit;}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ matrixRotationVec[0]\ =\ rot\_x\ +\ matrixRotation[0];}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ matrixRotationVec[1]\ =\ rot\_y\ +\ matrixRotation[1];}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ matrixRotationVec[2]\ =\ rot\_z\ +\ matrixRotation[2];}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ RecomposeMatrixFromComponents(matrixTranslation,\ matrixRotationVec,\ matrixScale,\ \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}());}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00290\ \ \ \ \ \}}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_ab69f027e3f44e4a62fc51fd45372b766}{SetRotationToVectorOnParentWithLimit}}(float3\ vec,\ \textcolor{keywordtype}{float}\ limit,\ float3\ up\ =\ \{0,\ 1,\ 0\},\ \textcolor{keywordtype}{bool}\ up\_change\ =\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00298\ \ \ \ \ \{}
+\DoxyCodeLine{00299\ \textcolor{preprocessor}{\#if\ 1\ \ \ \ }\textcolor{comment}{//\ Transformコンポーネントでなければ親の影響分は差し引く}}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ mat\_tmp\ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_component_transform}{ComponentTransform}}*\textcolor{keyword}{>}(\textcolor{keyword}{this})\ \&\&\ !\textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_object}{Object}}*\textcolor{keyword}{>}(\textcolor{keyword}{this}))\ \{}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{auto}\ cmp\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_component}{Component}}*\textcolor{keyword}{>}(\textcolor{keyword}{this}))}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\_tmp\ =\ cmp-\/>GetOwner()-\/>GetMatrix();}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\textcolor{keyword}{auto}\ obj\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{class_object}{Object}}*\textcolor{keyword}{>}(\textcolor{keyword}{this}))}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mat\_tmp\ =\ obj-\/>GetMatrix();}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ vec4\ =\ \mbox{\hyperlink{_vector_math_8h_ab151ff244ab06b4f346d5827dde650e0}{mul}}(float4(vec,\ 0),\ inverse(mat\_tmp));}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ vec\ \ \ \ \ \ \ =\ vec4.xyz;}
+\DoxyCodeLine{00309\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_a4033fc43ac7e0f5c3d2e2cc584fcc1d3}{SetRotationToVectorWithLimit}}(vec,\ limit,\ up,\ up\_change);}
+\DoxyCodeLine{00311\ \ \ \ \ \}}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00316\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a79080df693fc6ca32a4d0cf00d277bf1}{SetRotationAxisXYZ}}(float3\ xyz)}
+\DoxyCodeLine{00317\ \ \ \ \ \{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslation[3],\ matrixRotation[3],\ matrixScale[3];}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(\mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}(),\ matrixTranslation,\ matrixRotation,\ matrixScale);}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ matrixRotation[0]\ =\ xyz.x;}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ matrixRotation[1]\ =\ xyz.y;}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ matrixRotation[2]\ =\ xyz.z;}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ RecomposeMatrixFromComponents(matrixTranslation,\ matrixRotation,\ matrixScale,\ \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}());}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00327\ \ \ \ \ \}}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a00baa4ac15c3a377d63b11a4ac694736}{AddRotationAxisXYZ}}(float3\ xyz)}
+\DoxyCodeLine{00333\ \ \ \ \ \{}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ delta\ =\ GetDeltaTime60();}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslation[3],\ matrixRotation[3],\ matrixScale[3];}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(\mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}(),\ matrixTranslation,\ matrixRotation,\ matrixScale);}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ matrixRotation[0]\ +=\ xyz.x\ *\ delta;}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ matrixRotation[1]\ +=\ xyz.y\ *\ delta;}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ matrixRotation[2]\ +=\ xyz.z\ *\ delta;}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ RecomposeMatrixFromComponents(matrixTranslation,\ matrixRotation,\ matrixScale,\ \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}());}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00344\ \ \ \ \ \}}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00349\ \ \ \ \ \textcolor{keyword}{const}\ float3\ \mbox{\hyperlink{class_i_matrix_a33669a9c95add8d80d310fc7ef9a0bf7}{GetRotationAxisXYZ}}(\textcolor{keywordtype}{bool}\ local\ =\ \textcolor{keyword}{true})}
+\DoxyCodeLine{00350\ \ \ \ \ \{}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ mat\ =\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}();}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!local)}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ \mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{GetWorldMatrix}}();}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslation[3],\ matrixRotation[3],\ matrixScale[3];}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(mat.f32\_128\_0,\ matrixTranslation,\ matrixRotation,\ matrixScale);}
+\DoxyCodeLine{00357\ }
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *(float3*)matrixRotation;}
+\DoxyCodeLine{00359\ \ \ \ \ \}}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00364\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_a1bf7f616a7fe4c9dfc975cf0a2748304}{SetScaleAxisXYZ}}(float3\ scale)}
+\DoxyCodeLine{00365\ \ \ \ \ \{}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslation[3],\ matrixRotation[3],\ matrixScale[3];}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(\mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}(),\ matrixTranslation,\ matrixRotation,\ matrixScale);}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ matrixScale[0]\ =\ scale.x;}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ matrixScale[1]\ =\ scale.y;}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ matrixScale[2]\ =\ scale.z;}
+\DoxyCodeLine{00372\ }
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ RecomposeMatrixFromComponents(matrixTranslation,\ matrixRotation,\ matrixScale,\ \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}());}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00375\ \ \ \ \ \}}
+\DoxyCodeLine{00376\ }
+\DoxyCodeLine{00380\ \ \ \ \ \textcolor{keyword}{auto}\ \mbox{\hyperlink{class_i_matrix_aa710c9aafe9fcfed378d3242329c45b3}{MulScaleAxisXYZ}}(float3\ scale)}
+\DoxyCodeLine{00381\ \ \ \ \ \{}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslation[3],\ matrixRotation[3],\ matrixScale[3];}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(\mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}(),\ matrixTranslation,\ matrixRotation,\ matrixScale);}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ matrixScale[0]\ *=\ scale.x;}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ matrixScale[1]\ *=\ scale.y;}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ matrixScale[2]\ *=\ scale.z;}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ RecomposeMatrixFromComponents(matrixTranslation,\ matrixRotation,\ matrixScale,\ \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{GetMatrixFloat}}());}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SharedThis();}
+\DoxyCodeLine{00391\ \ \ \ \ \}}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00396\ \ \ \ \ \textcolor{keyword}{const}\ float3\ \mbox{\hyperlink{class_i_matrix_a9d823777983c3ca5e917c8ca8b879054}{GetScaleAxisXYZ}}(\textcolor{keywordtype}{bool}\ local\ =\ \textcolor{keyword}{true})}
+\DoxyCodeLine{00397\ \ \ \ \ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ mat\ =\ \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{GetMatrix}}();}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!local)}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ mat\ =\ \mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{GetWorldMatrix}}();}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ matrixTranslation[3],\ matrixRotation[3],\ matrixScale[3];}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ DecomposeMatrixToComponents(mat.f32\_128\_0,\ matrixTranslation,\ matrixRotation,\ matrixScale);}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *(float3*)matrixScale;}
+\DoxyCodeLine{00406\ \ \ \ \ \}}
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00411\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_i_matrix_a34cd0c9a971a79694ff25330ed3431d3}{GetDegreeToPosition}}(float3\ target\_position)}
+\DoxyCodeLine{00412\ \ \ \ \ \{}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ pos\ =\ \mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{GetWorldMatrix}}().\mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}}();}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_i_matrix_a938bf6fa6d01cc0945c0e7899aa03fc8}{GetDegreeToVector}}(target\_position\ -\/\ pos);}
+\DoxyCodeLine{00415\ \ \ \ \ \}}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00420\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_i_matrix_a938bf6fa6d01cc0945c0e7899aa03fc8}{GetDegreeToVector}}(float3\ target\_vector)}
+\DoxyCodeLine{00421\ \ \ \ \ \{}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \ L1\ \ =\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(-\/(\mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{GetWorldMatrix}}().axisZ()));}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ \ L2\ \ =\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(target\_vector);}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ deg\ =\ VRad(L1,\ L2)\ *\ (180.0f\ /\ DX\_PI\_F);}
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ deg;}
+\DoxyCodeLine{00427\ \ \ \ \ \}}
+\DoxyCodeLine{00428\ \};}
+\DoxyCodeLine{00429\ }
+\DoxyCodeLine{00430\ USING\_PTR(\mbox{\hyperlink{class_component_transform}{ComponentTransform}});}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00433\ \textcolor{keyword}{class\ }ComponentTransform\ :\ \textcolor{keyword}{public}\ Component,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_matrix}{IMatrix}}<ComponentTransform>}
+\DoxyCodeLine{00434\ \{}
+\DoxyCodeLine{00435\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }Object;}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00437\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00438\ \ \ \ \ \mbox{\hyperlink{_component_8h_a544c31f98b90b38818b27eff6683eef6}{BP\_COMPONENT\_DECL}}(ComponentTransform,\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}Transform機能クラス"{}});}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \ \ ComponentTransform();}
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00442\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_transform_ad88e0d464f8a49959960094fdb2bca9d}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00443\ }
+\DoxyCodeLine{00444\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_transform_a9e07709e83d911bd1f7af2dd19f6ea27}{PreUpdate}}()\textcolor{keyword}{\ override\ }\{\ world\_transform\_enable\_\ =\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00445\ }
+\DoxyCodeLine{00446\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_transform_a36bce7f60c092641dcb7d76472ae713b}{PrePhysics}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00447\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_transform_a3cf255a805813689f655aaa16b3000a1}{PostUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00448\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_transform_ae33e09e78e7de4daff321d9f96d1846a}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00450\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00452\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\&\ \mbox{\hyperlink{class_component_transform_a67a8f55575ec1eaa8aac8485e12d33aa}{Matrix}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ transform\_;\ \}}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ \mbox{\hyperlink{class_component_transform_ab8d4c1ff6819a996246335b9b7478113}{GetMatrix}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ transform\_;\ \}}
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ \ \ \ \ ComponentTransformPtr\ SharedThis()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentTransform>(shared\_from\_this());\ \}}
+\DoxyCodeLine{00460\ }
+\DoxyCodeLine{00463\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_transform_a4d40a531141fa18fe81f3c8bd813971c}{GetWorldMatrix}}()\textcolor{keyword}{\ const\ override}}
+\DoxyCodeLine{00464\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(world\_transform\_enable\_)}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ world\_transform\_;}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_transform_ab8d4c1ff6819a996246335b9b7478113}{GetMatrix}}();}
+\DoxyCodeLine{00469\ \ \ \ \ \}}
+\DoxyCodeLine{00470\ }
+\DoxyCodeLine{00473\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_transform_ac85379e34c4a6bf5d3f20ef08fe86e72}{GetOldWorldMatrix}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ old\_transform\_;\ \}}
+\DoxyCodeLine{00474\ }
+\DoxyCodeLine{00476\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_transform_a8f322939b3ab5376ecbb1b19b232b2ec}{SetWorldMatrix}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ mat)}
+\DoxyCodeLine{00477\ \ \ \ \ \{}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ world\_transform\_enable\_\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ world\_transform\_\ \ \ \ \ \ \ \ =\ mat;}
+\DoxyCodeLine{00480\ \ \ \ \ \}}
+\DoxyCodeLine{00481\ }
+\DoxyCodeLine{00483\ }
+\DoxyCodeLine{00484\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00485\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ transform\_;}
+\DoxyCodeLine{00486\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ old\_transform\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00487\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ world\_transform\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00488\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ world\_transform\_enable\_\ =\ \textcolor{keyword}{false};\ \ \ \ }
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ is\_guizmo\_\ \ \ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00491\ \ \ \ \ ImGuizmo::OPERATION\ gizmo\_operation\_\ =\ ImGuizmo::TRANSLATE;\ \ \ \ }
+\DoxyCodeLine{00492\ \ \ \ \ ImGuizmo::MODE\ \ \ \ \ \ gizmo\_mode\_\ \ \ \ \ \ =\ ImGuizmo::LOCAL;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00493\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_component}{Component}}*\ \ \ select\_component\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00494\ }
+\DoxyCodeLine{00495\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00496\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00498\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00500\ \ \ \ \ \mbox{\hyperlink{_cereal_8h_a7df5c4a4fa530d0bf2831fc2180f0386}{CEREAL\_SAVELOAD}}(arc,\ ver)}
+\DoxyCodeLine{00501\ \ \ \ \ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}owner"{}},\ \mbox{\hyperlink{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}{owner\_}}));}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}transform"{}},\ transform\_));}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}old\_transform"{}},\ old\_transform\_));}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ver\ >=\ 1)\ \{}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}world\_transform\_enable"{}},\ world\_transform\_enable\_));}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}world\_transform"{}},\ world\_transform\_));}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00509\ \ \ \ \ \}}
+\DoxyCodeLine{00510\ }
+\DoxyCodeLine{00512\ \};}
+\DoxyCodeLine{00513\ CEREAL\_CLASS\_VERSION(\mbox{\hyperlink{class_component_transform}{ComponentTransform}},\ 1);}
+\DoxyCodeLine{00514\ }
+\DoxyCodeLine{00515\ CEREAL\_REGISTER\_TYPE(\mbox{\hyperlink{class_component_transform}{ComponentTransform}})}
+\DoxyCodeLine{00516\ CEREAL\_REGISTER\_POLYMORPHIC\_RELATION(\mbox{\hyperlink{class_component}{Component}},\ \mbox{\hyperlink{class_component_transform}{ComponentTransform}})}
+
+\end{DoxyCode}

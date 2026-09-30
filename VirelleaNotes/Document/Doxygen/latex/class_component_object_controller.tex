@@ -1,0 +1,254 @@
+\doxysection{Component\+Object\+Controller クラス}
+\hypertarget{class_component_object_controller}{}\label{class_component_object_controller}\index{ComponentObjectController@{ComponentObjectController}}
+Component\+Object\+Controller の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_component_object_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_object_controller_a9fbd725fce6a6d378dd958415cd7af10}\label{class_component_object_controller_a9fbd725fce6a6d378dd958415cd7af10} 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component_object_controller}{Component\+Object\+Controller}}, u8"{}移動コンポーネント"{})
+\item 
+void \mbox{\hyperlink{class_component_object_controller_a47803eda4312b3a6e3955d8e385b1380}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_object_controller_a9d7478597fe68d29f79f44bf088fda6c}{Update}} () override
+\begin{DoxyCompactList}\small\item\em アップデート \end{DoxyCompactList}\item 
+\Hypertarget{class_component_object_controller_a048282c5b0ed623202b3c645006e26eb}\label{class_component_object_controller_a048282c5b0ed623202b3c645006e26eb} 
+Component\+Object\+Controller\+Ptr {\bfseries Set\+Speed} (const float speed)
+\item 
+\Hypertarget{class_component_object_controller_ac373acaf4908981a79b0f734fc769324}\label{class_component_object_controller_ac373acaf4908981a79b0f734fc769324} 
+Component\+Object\+Controller\+Ptr {\bfseries Set\+Move\+Speed} (const float speed)
+\item 
+\Hypertarget{class_component_object_controller_a2292ed82004bc54c14c02b76d41e36c1}\label{class_component_object_controller_a2292ed82004bc54c14c02b76d41e36c1} 
+Component\+Object\+Controller\+Ptr {\bfseries Set\+Rotate\+Speed} (const float speed)
+\item 
+\Hypertarget{class_component_object_controller_ae298346f45155d900cea7da1c07d33cd}\label{class_component_object_controller_ae298346f45155d900cea7da1c07d33cd} 
+Component\+Object\+Controller\+Ptr {\bfseries Set\+Keys} (int up, int down, int left, int right)
+\item 
+\Hypertarget{class_component_object_controller_aa884174260b4c645526aeb351274bb19}\label{class_component_object_controller_aa884174260b4c645526aeb351274bb19} 
+Component\+Object\+Controller\+Ptr {\bfseries Set\+Camera\+Keys} (int up, int down, int left, int right)
+\item 
+\Hypertarget{class_component_object_controller_a03edba0838b72bc1613af5dad4b3be06}\label{class_component_object_controller_a03edba0838b72bc1613af5dad4b3be06} 
+Component\+Object\+Controller\+Ptr {\bfseries Set\+Target} (Object\+Ptr target)
+\item 
+\Hypertarget{class_component_object_controller_ac9258c832b06495fc984e89ddf35123e}\label{class_component_object_controller_ac9258c832b06495fc984e89ddf35123e} 
+Component\+Object\+Controller\+Ptr {\bfseries Set\+Camera\+Rotate} (float3 rot)
+\item 
+\Hypertarget{class_component_object_controller_a5c2080cb5382a7e038baa02411cb334a}\label{class_component_object_controller_a5c2080cb5382a7e038baa02411cb334a} 
+Component\+Object\+Controller\+Ptr {\bfseries Set\+Use\+Mouse} (bool use=true)
+\item 
+\Hypertarget{class_component_object_controller_a67f87473c906cb67910de176fc7b109c}\label{class_component_object_controller_a67f87473c906cb67910de176fc7b109c} 
+const float {\bfseries Get\+Speed} () const
+\item 
+\Hypertarget{class_component_object_controller_ab53be8cd012ec4a76ff9f8b21770a080}\label{class_component_object_controller_ab53be8cd012ec4a76ff9f8b21770a080} 
+const float {\bfseries Get\+Move\+Speed} () const
+\item 
+\Hypertarget{class_component_object_controller_ac35a91e63a60d3f2dd0140ea1d249cf9}\label{class_component_object_controller_ac35a91e63a60d3f2dd0140ea1d249cf9} 
+const float {\bfseries Get\+Rotate\+Speed} () const
+\item 
+\Hypertarget{class_component_object_controller_a427483b2c6997cb5f64ce4dd7508e131}\label{class_component_object_controller_a427483b2c6997cb5f64ce4dd7508e131} 
+const void {\bfseries Set\+Front\+Rotate} (float rotate)
+\item 
+\Hypertarget{class_component_object_controller_a00c3ede986dd5b51c980871a88e2fa7e}\label{class_component_object_controller_a00c3ede986dd5b51c980871a88e2fa7e} 
+const float {\bfseries Get\+Front\+Rotate} () const
+\item 
+\Hypertarget{class_component_object_controller_a261d08afb1d54fd92d04ef09f9fa74e1}\label{class_component_object_controller_a261d08afb1d54fd92d04ef09f9fa74e1} 
+bool {\bfseries Is\+Use\+Mouse} () const
+\item 
+void \mbox{\hyperlink{class_component_object_controller_ac87c286dddcc5be26002f5b83972a765}{GUI}} () override
+\begin{DoxyCompactList}\small\item\em GUI表示 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component}{Component}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component}{Component}}, u8"{}\+Componentクラス"{})
+\item 
+\mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+Object\+Ptr {\bfseries Get\+Owner\+Ptr} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+const Object\+Ptr {\bfseries Get\+Owner\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Set\+Name} (const std\+::string\+\_\+view \&name)
+\item 
+const std\+::string\+\_\+view {\bfseries Get\+Name} () const
+\item 
+virtual void \mbox{\hyperlink{class_component_a1020899c4cee8796a2bb29d960f05daf}{Late\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 遅いアップデート \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a8622ccd5f24035d48e33292717299313}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画 \end{DoxyCompactList}\item 
+virtual void {\bfseries Late\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 遅い描画 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a336a670bf5c6e49062b0ea3a7367c5d7}{Exit}} ()
+\begin{DoxyCompactList}\small\item\em 終了 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a01c7688b95056ecdba07d997750c8987}{Pre\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新前処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a5ca9fb606c77392f74f4e80c3043d3fe}{Post\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新後処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Pre\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画前処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Post\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画後処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a28834daa627c5e81e93d40f064a19249}{Pre\+Physics}} ()
+\begin{DoxyCompactList}\small\item\em Physics前処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a25dd8e0fdfebc4f68e5fc08738e3c7ae}{Post\+Physics}} ()
+\begin{DoxyCompactList}\small\item\em Physics後処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Init\+Serialize} ()
+\begin{DoxyCompactList}\small\item\em シリアライズでもどらないユーザー処理関数などを設定 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Priority} (\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} priority)
+\item 
+std\+::string {\bfseries Unique\+Text} (const std\+::string\+\_\+view \&name, int id=0)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Get\+Proc} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing)
+\begin{DoxyCompactList}\small\item\em 処理を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Proc} (const std\+::string \&proc\+\_\+name, Proc\+Timing\+Func func, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Priority} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Reset\+Proc} (const std\+::string \&proc\+\_\+name)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Remove\+This\+Component} ()
+\begin{DoxyCompactList}\small\item\em 自分の消去 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Set\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b, bool on)
+\begin{DoxyCompactList}\small\item\em ステータスの設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Get\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b)
+\begin{DoxyCompactList}\small\item\em ステータスの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Construct} (Object\+Ptr owner)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_a8e41b07538bf037981574f4f011d773a}{On\+Hit\+Component}} (const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries On\+Hit\+Component} (const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} \+: u64 \{ \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0abd9f7c5d6ab4201b138a3e51dab7056f}{Alive}} = 0
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ac5475a8fae2fa421403e56f7ae0de108}{Change\+Prio}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a552f244367a4f2e2ef9e4e5ff2c52ea0}{Show\+GUI}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0af3413da9e97ed78dada82d1330fde5f1}{No\+Update}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0add349546b418e50c23e2d88a3342a68f}{No\+Draw}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ad0b20a6cab952ae657cd06d2c956a7ea}{Disable\+Pause}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a7c572e80f65d4b3a29bc954dd03225b6}{Is\+Pause}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a6b554ca9a13e5407990948d4c68e8229}{Same\+Type}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a268ce394e277db759f5d6ee76c59f0e7}{Exited}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2b59321169346822ab33b2c61dbb9975}{Serialized}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a0698adfc6182853d3bf40771142a42d1}{No\+Serialize}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2faec1f9f8cc7f8f40d521c4dd574f49}{Enable}}
+ \}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_abeb8b5fb2ca31a185f96d343af1ccd22}\label{class_component_abeb8b5fb2ca31a185f96d343af1ccd22} 
+static void {\bfseries Register\+To\+Object} (Component\+Ptr cmp, Object\+Ptr obj)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a04910312b4e9ad3959892ff5e231629e}\label{class_component_a04910312b4e9ad3959892ff5e231629e} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Func}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a91d5cc2893166a196e1d5e550391cf58}\label{class_component_a91d5cc2893166a196e1d5e550391cf58} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Physics\+Func}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}\label{class_component_aaf224b0e73780a9c3cbad323a0ec59f5} 
+Object\+Ptr {\bfseries owner\+\_\+} = nullptr
+\begin{DoxyCompactList}\small\item\em オーナー \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aa075f1283763194b7b15660ceb626196}\label{class_component_aa075f1283763194b7b15660ceb626196} 
+Slot\+Procs {\bfseries proc\+\_\+timings\+\_\+}
+\begin{DoxyCompactList}\small\item\em 登録処理(update) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_af89da12b7dd26576a4b896a785103e04}\label{class_component_af89da12b7dd26576a4b896a785103e04} 
+float {\bfseries update\+\_\+delta\+\_\+time\+\_\+} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em update以外で使用できるように \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaafe1a5010b858a2c66379bcd6faa80b}\label{class_component_aaafe1a5010b858a2c66379bcd6faa80b} 
+std\+::string {\bfseries name\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_component_object_controller_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_component_object_controller_ac87c286dddcc5be26002f5b83972a765}\index{ComponentObjectController@{ComponentObjectController}!GUI@{GUI}}
+\index{GUI@{GUI}!ComponentObjectController@{ComponentObjectController}}
+\doxysubsubsection{\texorpdfstring{GUI()}{GUI()}}
+{\footnotesize\ttfamily \label{class_component_object_controller_ac87c286dddcc5be26002f5b83972a765} 
+void Component\+Object\+Controller\+::\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+GUI表示 
+
+
+
+\mbox{\hyperlink{class_component_ae6895fe308d9365dd629b2e46a2ddf62}{Component}}を再実装しています。
+
+\Hypertarget{class_component_object_controller_a47803eda4312b3a6e3955d8e385b1380}\index{ComponentObjectController@{ComponentObjectController}!Init@{Init}}
+\index{Init@{Init}!ComponentObjectController@{ComponentObjectController}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_component_object_controller_a47803eda4312b3a6e3955d8e385b1380} 
+void Component\+Object\+Controller\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化 
+
+
+
+\mbox{\hyperlink{class_component_a5a5e595fab62ba757f03becc5b101732}{Component}}を再実装しています。
+
+\Hypertarget{class_component_object_controller_a9d7478597fe68d29f79f44bf088fda6c}\index{ComponentObjectController@{ComponentObjectController}!Update@{Update}}
+\index{Update@{Update}!ComponentObjectController@{ComponentObjectController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_component_object_controller_a9d7478597fe68d29f79f44bf088fda6c} 
+void Component\+Object\+Controller\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+アップデート 
+
+
+
+\mbox{\hyperlink{class_component_aaf2ce6dc5752072492f790ad4c7955bb}{Component}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/Component\+Object\+Controller.\+h\end{DoxyCompactItemize}

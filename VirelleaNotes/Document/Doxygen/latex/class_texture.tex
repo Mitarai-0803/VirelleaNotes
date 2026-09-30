@@ -1,0 +1,179 @@
+\doxysection{Texture クラス}
+\hypertarget{class_texture}{}\label{class_texture}\index{Texture@{Texture}}
+
+
+テクスチャ  
+
+
+
+
+{\ttfamily \#include $<$Texture.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_texture_ae9a85f7b33715ef0e68edce67be843a3}{Texture}} (ID3\+D11\+Resource \texorpdfstring{$\ast$}{*}d3d\+\_\+resource)
+\item 
+\mbox{\hyperlink{class_texture_a11fcd56485771262b0a6531ac462859c}{Texture}} (int graphic\+\_\+handle)
+\item 
+\mbox{\hyperlink{class_texture_af842a6fc3ecf83d8a1c94817ab98cb24}{Texture}} (std\+::string\+\_\+view path)
+\item 
+\mbox{\hyperlink{class_texture_a9deee0cc32ca74cdf8275bc19c4134fa}{Texture}} (u32 \mbox{\hyperlink{class_texture_a9c341afd0ca1af6d79c67c89eff67d25}{width}}, u32 height, DXGI\+\_\+\+FORMAT dxgi\+\_\+format)
+\item 
+\Hypertarget{class_texture_ae02304cd1a555cd43b0af49162102a1a}\label{class_texture_ae02304cd1a555cd43b0af49162102a1a} 
+void {\bfseries clear} ()
+\item 
+u32 \mbox{\hyperlink{class_texture_a9c341afd0ca1af6d79c67c89eff67d25}{width}} () const
+\item 
+\Hypertarget{class_texture_a22a0dedfb70725f0b78c295e8e4bb0b9}\label{class_texture_a22a0dedfb70725f0b78c295e8e4bb0b9} 
+u32 {\bfseries height} () const
+\item 
+\Hypertarget{class_texture_a91c9a5e26823f3f5d109bbfcb65ed030}\label{class_texture_a91c9a5e26823f3f5d109bbfcb65ed030} 
+ID3\+D11\+Resource \texorpdfstring{$\ast$}{*} {\bfseries d3d\+Resource} () const
+\item 
+\Hypertarget{class_texture_a4f0578eda3a38e2dfcbb769382a6fabd}\label{class_texture_a4f0578eda3a38e2dfcbb769382a6fabd} 
+ID3\+D11\+Shader\+Resource\+View \texorpdfstring{$\ast$}{*} {\bfseries srv} () const
+\item 
+\Hypertarget{class_texture_a496d0b82437139031e35a232e81d9985}\label{class_texture_a496d0b82437139031e35a232e81d9985} 
+ID3\+D11\+Render\+Target\+View \texorpdfstring{$\ast$}{*} {\bfseries rtv} () const
+\item 
+\Hypertarget{class_texture_adae0710525cf51a10a5b44c8bfc12704}\label{class_texture_adae0710525cf51a10a5b44c8bfc12704} 
+ID3\+D11\+Depth\+Stencil\+View \texorpdfstring{$\ast$}{*} {\bfseries dsv} () const
+\item 
+\Hypertarget{class_texture_a54c11f0221ff775c7937fce6d48cf756}\label{class_texture_a54c11f0221ff775c7937fce6d48cf756} 
+{\bfseries operator int} ()
+\item 
+\Hypertarget{class_texture_a47ac74626b65d49db950c3d4c09ba0fe}\label{class_texture_a47ac74626b65d49db950c3d4c09ba0fe} 
+const std\+::wstring \& {\bfseries path} () const
+\item 
+\Hypertarget{class_texture_ab00dee4883d41ac03b28cf15989eaa48}\label{class_texture_ab00dee4883d41ac03b28cf15989eaa48} 
+bool {\bfseries is\+\_\+valid} () const
+\item 
+bool \mbox{\hyperlink{class_texture_ac93b1f45c2596d473c33806768fc902c}{is\+\_\+active}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_texture_a6ab555c3825a26edb68b87df48b06d47}\label{class_texture_a6ab555c3825a26edb68b87df48b06d47} 
+bool {\bfseries initialize} (ID3\+D11\+Resource \texorpdfstring{$\ast$}{*}d3d\+\_\+resource)
+\item 
+\Hypertarget{class_texture_a56224ad23e5732920877471d4ff6e538}\label{class_texture_a56224ad23e5732920877471d4ff6e538} 
+void {\bfseries on\+\_\+initialize} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_texture_a56895dccd0b05ea56476b721d2fed811}\label{class_texture_a56895dccd0b05ea56476b721d2fed811} 
+u32 {\bfseries width\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em 幅 \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a509508e9b6d8f075757a88c95bd4a2d5}\label{class_texture_a509508e9b6d8f075757a88c95bd4a2d5} 
+u32 {\bfseries height\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em 高さ \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a7fde183054fd3db4bc89abb63f437a4d}\label{class_texture_a7fde183054fd3db4bc89abb63f437a4d} 
+int {\bfseries handle\+\_\+} = -\/1
+\begin{DoxyCompactList}\small\item\em \mbox{[}Dx\+Lib\mbox{]} Graphicハンドル \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a5771fda846de68e860a4ef7eaebdd34c}\label{class_texture_a5771fda846de68e860a4ef7eaebdd34c} 
+std\+::wstring {\bfseries path\+\_\+}
+\begin{DoxyCompactList}\small\item\em ファイルパス \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_aee2111a87b945ec4185ba6e0cf32f2af}\label{class_texture_aee2111a87b945ec4185ba6e0cf32f2af} 
+std\+::atomic$<$ bool $>$ {\bfseries active\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em アクティブ状態 true\+:利用可能 false\+:ロード未完了 \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a6895c68b9fadc7ebfb4eac4db17cb793}\label{class_texture_a6895c68b9fadc7ebfb4eac4db17cb793} 
+std\+::atomic$<$ bool $>$ {\bfseries need\+\_\+initialize\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em 初期化要求フラグ true\+:初期化が必要 false\+:初期化済または完了で不要 \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_afc8c086eab9d2b211bf08993be743370}\label{class_texture_afc8c086eab9d2b211bf08993be743370} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Resource $>$ {\bfseries d3d\+\_\+resource\+\_\+}
+\begin{DoxyCompactList}\small\item\em D3\+Dリソース(Texture2\+D/3D) \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a71bce01bc07d2b5e0ebe7c443af74ef1}\label{class_texture_a71bce01bc07d2b5e0ebe7c443af74ef1} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Shader\+Resource\+View $>$ {\bfseries d3d\+\_\+srv\+\_\+}
+\begin{DoxyCompactList}\small\item\em D3D Shader\+Resource View \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a2e47b7edba5d0101d8d9f8045c1e8401}\label{class_texture_a2e47b7edba5d0101d8d9f8045c1e8401} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Render\+Target\+View $>$ {\bfseries d3d\+\_\+rtv\+\_\+}
+\begin{DoxyCompactList}\small\item\em D3D Render\+Target View \end{DoxyCompactList}\item 
+\Hypertarget{class_texture_a4db26fc933a53a6bab991a3a0bf0163b}\label{class_texture_a4db26fc933a53a6bab991a3a0bf0163b} 
+Microsoft\+::\+WRL\+::\+Com\+Ptr$<$ ID3\+D11\+Depth\+Stencil\+View $>$ {\bfseries d3d\+\_\+dsv\+\_\+}
+\begin{DoxyCompactList}\small\item\em D3D Depth\+Stencil View \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+テクスチャ 
+
+\label{doc-constructors}
+\Hypertarget{class_texture_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_texture_ae9a85f7b33715ef0e68edce67be843a3}\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_texture_ae9a85f7b33715ef0e68edce67be843a3} 
+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{ID3\+D11\+Resource \texorpdfstring{$\ast$}{*}}]{d3d\+\_\+resource}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em d3d\+\_\+resource} & D3\+Dリソースオブジェクト \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_texture_a11fcd56485771262b0a6531ac462859c}\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_texture_a11fcd56485771262b0a6531ac462859c} 
+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{int}]{graphic\+\_\+handle}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em graphic\+\_\+handle} & DXライブラリのグラフィックハンドル \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_texture_af842a6fc3ecf83d8a1c94817ab98cb24}\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_texture_af842a6fc3ecf83d8a1c94817ab98cb24} 
+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_texture_a9deee0cc32ca74cdf8275bc19c4134fa}\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_texture_a9deee0cc32ca74cdf8275bc19c4134fa} 
+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{u32}]{width}{, }\item[{u32}]{height}{, }\item[{DXGI\+\_\+\+FORMAT}]{dxgi\+\_\+format}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em width} & 幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em height} & 高さ \\
+\hline
+\mbox{\texttt{in}}  & {\em dxgi\+\_\+format} & ピクセルフォーマット \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_texture_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_texture_ac93b1f45c2596d473c33806768fc902c}\index{Texture@{Texture}!is\_active@{is\_active}}
+\index{is\_active@{is\_active}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{is\_active()}{is\_active()}}
+{\footnotesize\ttfamily \label{class_texture_ac93b1f45c2596d473c33806768fc902c} 
+bool Texture\+::is\+\_\+active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyNote}{覚え書き}
+描画可能になっていない状態で\+MV1関数を呼ぶとブロッキングされます 
+\end{DoxyNote}
+\Hypertarget{class_texture_a9c341afd0ca1af6d79c67c89eff67d25}\index{Texture@{Texture}!width@{width}}
+\index{width@{width}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily \label{class_texture_a9c341afd0ca1af6d79c67c89eff67d25} 
+u32 Texture\+::width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyNote}{覚え書き}
+取得/参照 
+\end{DoxyNote}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/\mbox{\hyperlink{_texture_8h}{Texture.\+h}}\end{DoxyCompactItemize}

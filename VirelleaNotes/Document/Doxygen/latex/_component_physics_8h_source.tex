@@ -1,0 +1,309 @@
+\doxysection{Component\+Physics.\+h}
+\hypertarget{_component_physics_8h_source}{}\label{_component_physics_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentPhysics.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentPhysics.h}}
+\mbox{\hyperlink{_component_physics_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_8h}{System/Component/Component.h}}>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_transform_8h}{System/Component/ComponentTransform.h}}>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_rigid_body_8h}{System/Physics/RigidBody.h}}>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_status_8h}{System/Status.h}}>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <Jolt/Jolt.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <Jolt/Physics/Constraints/SixDOFConstraint.h>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ USING\_PTR(\mbox{\hyperlink{class_component_physics}{ComponentPhysics}});}
+\DoxyCodeLine{00017\ USING\_PTR(\mbox{\hyperlink{class_component_model}{ComponentModel}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }ComponentPhysics\ final\ :\ \textcolor{keyword}{public}\ Component,\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_i_matrix}{IMatrix}}<ComponentPhysics>}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{_component_8h_a544c31f98b90b38818b27eff6683eef6}{BP\_COMPONENT\_DECL}}(ComponentPhysics,\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}Physics物理機能クラス"{}});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ ComponentPhysics()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \string~ComponentPhysics();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a59e81f57cad608fb1788105b4098eea9}{Init}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a7ae9d26fc7b5f50f041579343c7d4549}{PrePhysics}}()\ \textcolor{keyword}{override};\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a144cc85b6834649a7ef8f5be9bbbeaca}{PostPhysics}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a7cfa8108ceed12064491b6f4e58db3af}{Draw}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a2d3a30923a15e22bed923242dbff1267}{Exit}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a908c3339e3b0c5563af25e54682d10f7}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ 移動関数}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ MoveTo(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ mat);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ MoveToWorldMatrix();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ 回転軸のロック}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ LockRotateAxis(\textcolor{keywordtype}{bool}\ x,\ \textcolor{keywordtype}{bool}\ y,\ \textcolor{keywordtype}{bool}\ z);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ @name\ Physics操作}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{enum\ struct}\ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919}{PhysicsBit}}\ :\ \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}}
+\DoxyCodeLine{00049\ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919aaddeb3b16cd9ee10bd748be723744135}{Actived}}\ =\ 0,\ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919a59d87a4758a9d35fbaf6b204341bb399}{Initialized}},\ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919a84a8921b25f505d0d2077aeb5db4bc16}{Static}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919a105b296a83f9c105355403f3332af50f}{Pause}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919ae6062085887ac5b83b2e43c1ec7be507}{LockRotX}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919a0fb70ad77c6f1f7983dbdd2585427e86}{LockRotY}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919a18bf112e8a2c9298785d5216fbd5ae86}{LockRotZ}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a88aa04b289008612934d31030e7eca08}{SetPhysicsStatus}}(\mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919}{PhysicsBit}}\ b,\ \textcolor{keywordtype}{bool}\ on)\ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ physics\_status\_.set(b,\ on);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(b\ ==\ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919ae6062085887ac5b83b2e43c1ec7be507}{PhysicsBit::LockRotX}}\ ||\ b\ ==\ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919a0fb70ad77c6f1f7983dbdd2585427e86}{PhysicsBit::LockRotY}}\ ||\ b\ ==\ \mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919a18bf112e8a2c9298785d5216fbd5ae86}{PhysicsBit::LockRotZ}})}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ LockRotateAxis(\mbox{\hyperlink{class_component_physics_a82ed0cb371f954d553ebe48805808dfa}{GetPhysicsStatus}}(\mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919ae6062085887ac5b83b2e43c1ec7be507}{PhysicsBit::LockRotX}}),\ \mbox{\hyperlink{class_component_physics_a82ed0cb371f954d553ebe48805808dfa}{GetPhysicsStatus}}(\mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919a0fb70ad77c6f1f7983dbdd2585427e86}{PhysicsBit::LockRotY}}),\ \mbox{\hyperlink{class_component_physics_a82ed0cb371f954d553ebe48805808dfa}{GetPhysicsStatus}}(\mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919a18bf112e8a2c9298785d5216fbd5ae86}{PhysicsBit::LockRotZ}}));}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_component_physics_a82ed0cb371f954d553ebe48805808dfa}{GetPhysicsStatus}}(\mbox{\hyperlink{class_component_physics_a2a434caca324c0c6b4e146d69081c919}{PhysicsBit}}\ b)\ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ physics\_status\_.is(b);}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ CreateBox(float3\ size,\ \textcolor{keywordtype}{float}\ density\ =\ \mbox{\hyperlink{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}{shape::default\_density}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ CreateSphere(float3\ center,\ \textcolor{keywordtype}{float}\ radius,\ \textcolor{keywordtype}{float}\ density\ =\ \mbox{\hyperlink{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}{shape::default\_density}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{bool}\ CreateCapsule(\textcolor{keywordtype}{float}\ half\_height,\ \textcolor{keywordtype}{float}\ radius,\ \textcolor{keywordtype}{float}\ density\ =\ \mbox{\hyperlink{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}{shape::default\_density}});}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ CreateCylinder(\textcolor{keywordtype}{float}\ half\_height,\ \textcolor{keywordtype}{float}\ radius,\ \textcolor{keywordtype}{float}\ density\ =\ \mbox{\hyperlink{_rigid_body_8h_a006ca422edcafa6d8ffa4805f69cfbac}{shape::default\_density}});}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ CreateMesh(ComponentModelPtr\ model,\ \textcolor{keywordtype}{float}\ scale\ =\ 1.0);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ std::shared\_ptr<physics::RigidBody>\ GetRigidBody()\ \{\ \textcolor{keywordflow}{return}\ body\_;\ \}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsValid()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\&\ \mbox{\hyperlink{class_component_physics_a2c571cadbb9e3b3babe40b6caaecb7a6}{Matrix}}()\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ physics\_transform\_;\ \}\ \ \ \ }
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ \mbox{\hyperlink{class_component_physics_ad3abcf3fcde9d1c53351a03dddec42d3}{GetMatrix}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ physics\_transform\_;\ \}\ \ \ \ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ ComponentPhysicsPtr\ SharedThis()\ \{\ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentPhysics>(shared\_from\_this());\ \}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_physics_a5153bb9dd6c72be7f1f6f65341c03b73}{GetWorldMatrix}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_physics_ace082813af3713655f975674e849dbde}{GetOldWorldMatrix}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ SetPhysicsMatrix(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ world);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ GetPhysicsMatrix()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{comment}{//\ @name\ タイプ}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ CollisionTypeSize\ =\ 16;}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_component_physics_a8811519de345041279f31fbfedf8e024}{CollisionType}}\ :\ \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}}
+\DoxyCodeLine{00118\ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ WALL\ \ \ =\ 1\ <<\ 0,}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ GROUND\ =\ 1\ <<\ 1,}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ PLAYER\ =\ 1\ <<\ 2,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ ENEMY\ \ =\ 1\ <<\ 3,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ WEAPON\ =\ 1\ <<\ 4,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ ITEM\ \ \ =\ 1\ <<\ 5,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ CAMERA\ =\ 1\ <<\ 6,}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ ETC\ \ \ =\ 1\ <<\ 7,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ ETC\_0\ =\ ETC,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ ETC\_1\ =\ 1\ <<\ 8,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ ETC\_2\ =\ 1\ <<\ 9,}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ ETC\_3\ =\ 1\ <<\ 10,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ ETC\_4\ =\ 1\ <<\ 11,}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ ETC\_5\ =\ 1\ <<\ 12,}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ ETC\_6\ =\ 1\ <<\ 13,}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ ETC\_7\ =\ 1\ <<\ 14,}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_physics_a8811519de345041279f31fbfedf8e024a98a0a2299e85802db243e64ef2a6d4bb}{NOHIT}}\ =\ 1\ <<\ 15,\ \ \ \ }
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{comment}{//ALL\ =\ WALL\ |\ GROUND\ |\ PLAYER\ |\ ENEMY\ |\ WEAPON\ |\ ITEM\ |\ CAMERA\ |\ ETC\_0\ |\ ETC\_1\ |\ ETC\_2\ |\ ETC\_3\ |\ ETC\_4\ |\ ETC\_5\ |\ ETC\_6\ |\ ETC\_7;}}
+\DoxyCodeLine{00139\ \ \ \ \ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a9f70d0d731b49999e590ba6a6fe2d9f3}{SetHitCollision}}(\mbox{\hyperlink{class_component_physics_a8811519de345041279f31fbfedf8e024}{ComponentPhysics::CollisionType}}\ col,\ \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}\ hit)\ \{\ hit\_status\_[(int)col]\ =\ hit;\ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}\ GetHitCollision(\mbox{\hyperlink{class_component_physics_a8811519de345041279f31fbfedf8e024}{ComponentPhysics::CollisionType}}\ col)}
+\DoxyCodeLine{00147\ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ (int)(log2((\textcolor{keywordtype}{int})col));}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ assert(\textcolor{keywordtype}{id}\ >=\ 0\ \&\&\ \textcolor{keywordtype}{id}\ <\ 16);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ hit\_status\_[id];}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ SetOverlapCollision(\mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}\ hit)\ \{\ overlap\_status\_\ =\ hit;\ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}\ GetOverlapCollision()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ overlap\_status\_;\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ SetCollisionType(\mbox{\hyperlink{class_component_physics_a8811519de345041279f31fbfedf8e024}{ComponentPhysics::CollisionType}}\ col)}
+\DoxyCodeLine{00158\ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ type\_\ =\ col;}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{comment}{//if\ (\ body\_\ )}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ body\_-\/>setLayer(\ (u16)type\_\ );}}
+\DoxyCodeLine{00162\ \ \ \ \ \}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_component_physics_a8811519de345041279f31fbfedf8e024}{ComponentPhysics::CollisionType}}\ GetCollisionType()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ type\_;\ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ SetGravityFactor(\textcolor{keywordtype}{float}\ fact)\ \{\ gravity\_factor\_\ =\ fact;\ \}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ GetGravityFactor()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ gravity\_factor\_;\ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a36c1dd7db3e54b4fd2aaeb388e54637f}{SetFriction}}(\textcolor{keywordtype}{float}\ friction)}
+\DoxyCodeLine{00173\ \ \ \ \ \{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(body\_)}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ body\_-\/>setFriction(friction);}
+\DoxyCodeLine{00176\ \ \ \ \ \}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_component_physics_a6a783268d8ccb4d85f7b005e421619ad}{GetFriction}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00181\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(body\_)}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ body\_-\/>friction();}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00186\ \ \ \ \ \}}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a6a200fda848044e4f1805d55aa68cdc6}{SetRestitution}}(\textcolor{keywordtype}{float}\ restitution)}
+\DoxyCodeLine{00191\ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(body\_)}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ body\_-\/>setRestitution(restitution);}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_component_physics_ae966602901cf272ba0f7aaa005b7ef72}{GetRestitution}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00199\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(body\_)}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ body\_-\/>restitution();}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0.0f;}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_aea3faff13202f4ddec288c57e6676782}{SetPhysicsReal}}(\textcolor{keywordtype}{float}\ pow)\ \{\ physics\_real\_\ =\ pow;\ \}}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_component_physics_a6806802ecf1f88d56b3435f2f1aeb900}{GetPhysicsReal}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ physics\_real\_;\ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{comment}{//\ @name\ コールバック}}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_component_physics_1_1_hit_info}{HitInfo}}}
+\DoxyCodeLine{00222\ \ \ \ \ \{}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_physics_1_1_hit_info_ae1ae33e512713c597a8c911266caa3b7}{hit\_}}\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ ComponentPhysics*\ \mbox{\hyperlink{struct_component_physics_1_1_hit_info_ad4d24c499f53a06194332fd2ccbcb619}{collision\_}}\ \ \ \ \ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_physics_1_1_hit_info_aae8704cea9b18281f4bf38fb8af394ea}{hit\_position\_}}\ \ =\ \{0.0f,\ 0.0f,\ 0.0f\};\ \ \ \ }
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ ComponentPhysics*\ \mbox{\hyperlink{struct_component_physics_1_1_hit_info_a3280073a750931ebc2b0c9741511d49f}{hit\_collision\_}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00227\ \ \ \ \ \};}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a64d0b241b6b8a0f5f4f0b517c3015642}{OnHit}}([[maybe\_unused]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_physics_1_1_hit_info}{ComponentPhysics::HitInfo}}\&\ hit\_info)\ \{\}}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_af9018fe3b5f016143a8ad30215f1096f}{OnBeginOverlap}}([[maybe\_unused]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_physics_1_1_hit_info}{ComponentPhysics::HitInfo}}\&\ hit\_info)\ \{\}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00239\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a4390758f3bbe0286a33aa4325d11968b}{OnEndOverlap}}([[maybe\_unused]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_physics_1_1_hit_info}{ComponentPhysics::HitInfo}}\&\ hit\_info)\ \{\}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00242\ \ \ \ \ std::function<void(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_physics_1_1_hit_info}{HitInfo}}\&\ hit\_info)>\ \mbox{\hyperlink{class_component_physics_a2c75761c91e57fd4e9a1f62f18c22d66}{OnHitFunc}};}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_physics_a5ffd94d021c6c4b1b8e6867270ef64aa}{OnHitComponent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_1_1_hit_info}{Component::HitInfo}}\&)\ \{\ assert(!\textcolor{stringliteral}{"{}この関数は使用できません。\ OnHitを使用してください"{}});\ \}}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordtype}{void}\ SetHitInfo(\mbox{\hyperlink{struct_component_physics_1_1_hit_info}{ComponentPhysics::HitInfo}}\&\ info)\ \{\ infos\_.push\_back(info);\ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{void}\ AddHitInfosCount()\ \{\ infos\_count\_++;\ \}}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00253\ \ \ \ \ std::vector<ComponentPhysics::HitInfo>\ infos\_;}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ infos\_count\_\ =\ 0;}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00257\ \ \ \ \ matrix\ physics\_transform\_\ \ \ \ \ =\ \mbox{\hyperlink{classmatrix_a77943ad632099406ed3a3ec04d772a9c}{matrix::scale}}(1.0f);}
+\DoxyCodeLine{00258\ \ \ \ \ matrix\ physics\_transform\_old\_\ =\ \mbox{\hyperlink{classmatrix_a77943ad632099406ed3a3ec04d772a9c}{matrix::scale}}(1.0f);}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ Status<PhysicsBit>\ physics\_status\_;\ \ \ \ }
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \ \ std::shared\_ptr<physics::RigidBody>\ body\_;}
+\DoxyCodeLine{00263\ \ \ \ \ matrix\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ world\_old\_;}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{comment}{//\ 重力係数}}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordtype}{float}\ gravity\_factor\_\ =\ 30.0f;}
+\DoxyCodeLine{00267\ }
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{comment}{//\ コリジョンのタイプ}}
+\DoxyCodeLine{00269\ \ \ \ \ \mbox{\hyperlink{class_component_physics_a8811519de345041279f31fbfedf8e024}{CollisionType}}\ type\_\ =\ CollisionType::ETC;}
+\DoxyCodeLine{00270\ }
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{comment}{//\ オーバーラップ情報}}
+\DoxyCodeLine{00272\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}\ overlap\_status\_\ =\ 0;}
+\DoxyCodeLine{00273\ }
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{comment}{//\ コリジョンヒットの情報(共通)}}
+\DoxyCodeLine{00275\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}\ hit\_status\_[CollisionTypeSize];}
+\DoxyCodeLine{00276\ }
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{comment}{//\ 軸固定コンストレイント}}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{keyword}{using\ }SettingsRef\ =\ JPH::Ref<JPH::SixDOFConstraintSettings>;}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ SettingsRef\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sSettings;}
+\DoxyCodeLine{00281\ \ \ \ \ JPH::Ref<JPH::SixDOFConstraint>\ constraint\_;}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00283\ \ \ \ \ \textcolor{comment}{//\ デバッグ3D描画用}}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ref\_model\_\ =\ -\/1;}
+\DoxyCodeLine{00285\ \ \ \ \ MV1\_REF\_POLYGONLIST\ ref\_poly\_\{\};}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keyword}{union\ }ShapeData\ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ ShapeData()\ \{\}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ ShapeData\&\ operator=(\textcolor{keyword}{const}\ ShapeData\&\ o)\ \&}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ memcpy(\textcolor{keyword}{this},\ (\textcolor{keywordtype}{void}*)\&o,\ \textcolor{keyword}{sizeof}(ShapeData));}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ ShapeData(\textcolor{keyword}{const}\ ShapeData\&\ o)\ \{\ *\textcolor{keyword}{this}\ =\ o;\ \}}
+\DoxyCodeLine{00297\ }
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ float3\ box\_size;}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ float3\ sphere\_center;}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ sphere\_radius;}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00308\ }
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ cylinder\_half\_height;}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ cylinder\_radius;}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \ \ \ \ \}\ shape\_data\{\};}
+\DoxyCodeLine{00316\ }
+\DoxyCodeLine{00317\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ density\_\ =\ 1000.0f;}
+\DoxyCodeLine{00318\ }
+\DoxyCodeLine{00319\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ physics\_real\_\ =\ 0.0f;}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00326\ \ \ \ \ \mbox{\hyperlink{_cereal_8h_a7df5c4a4fa530d0bf2831fc2180f0386}{CEREAL\_SAVELOAD}}(arc,\ ver)}
+\DoxyCodeLine{00327\ \ \ \ \ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}owner"{}},\ \mbox{\hyperlink{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}{owner\_}}),}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}physics\_transform"{}},\ physics\_transform\_),}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}physics\_status"{}},\ physics\_status\_.get()),}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(type\_),}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(overlap\_status\_),}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(gravity\_factor\_));}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 現在面倒なので復旧は全員行っている\ (TODO:別クラスへ移行して一つにするべき)}}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ CollisionTypeSize;\ ++i)\ \{}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(hit\_status\_[i]);}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00339\ }
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}Component"{}},\ cereal::base\_class<Component>(\textcolor{keyword}{this})));}
+\DoxyCodeLine{00341\ \ \ \ \ \}}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00344\ \};}
+\DoxyCodeLine{00345\ }
+\DoxyCodeLine{00346\ CEREAL\_REGISTER\_TYPE(\mbox{\hyperlink{class_component_physics}{ComponentPhysics}})}
+\DoxyCodeLine{00347\ CEREAL\_REGISTER\_POLYMORPHIC\_RELATION(\mbox{\hyperlink{class_component}{Component}},\ \mbox{\hyperlink{class_component_physics}{ComponentPhysics}})}
+
+\end{DoxyCode}

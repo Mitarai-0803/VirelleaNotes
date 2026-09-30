@@ -1,0 +1,119 @@
+\doxysection{Class\+Component\+Type\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} クラステンプレート}
+\hypertarget{class_class_component_type}{}\label{class_class_component_type}\index{ClassComponentType$<$ T $>$@{ClassComponentType$<$ T $>$}}
+
+
+クラス用型情報 \doxylink{class_class_component_type}{Class\+Component\+Type$<$\+T$>$}  
+
+
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+Class\+Component\+Type\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_class_component_type}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_class_component_type_a737ad712ca46aa5575bacf597df550a5}{Class\+Component\+Type}} (const char \texorpdfstring{$\ast$}{*}class\+\_\+name, \mbox{\hyperlink{class_component_type_info}{Component\+Type\+Info}} \texorpdfstring{$\ast$}{*}parent\+\_\+type=nullptr, const char \texorpdfstring{$\ast$}{*}desc\+\_\+name="{}"{})
+\item 
+virtual void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_class_component_type_a4033ca5e794b4f1c5cfc25aaecf25119}{create\+Component\+Ptr}} (const Object\+Ptr \&obj) override
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_type_info}{Component\+Type\+Info}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Component\+Type\+Info} (const char \texorpdfstring{$\ast$}{*}class\+\_\+name, size\+\_\+t class\+\_\+size, \mbox{\hyperlink{class_component_type_info}{Component\+Type\+Info}} \texorpdfstring{$\ast$}{*}parent\+\_\+type=nullptr, const char \texorpdfstring{$\ast$}{*}desc\+\_\+name="{}"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_type_info}{Type\+Info}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_type_info_a3fea5e44c795c92d7a294eeaffaaa36e}{Type\+Info}} (const char \texorpdfstring{$\ast$}{*}class\+\_\+name, size\+\_\+t class\+\_\+size, \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*}parent\+\_\+type=nullptr, const char \texorpdfstring{$\ast$}{*}desc\+\_\+name="{}"{})
+\item 
+virtual void \texorpdfstring{$\ast$}{*} {\bfseries create\+Instance} () const
+\item 
+const char \texorpdfstring{$\ast$}{*} {\bfseries class\+Name} () const
+\item 
+const char \texorpdfstring{$\ast$}{*} {\bfseries desc\+Name} () const
+\item 
+size\+\_\+t {\bfseries class\+Size} () const
+\item 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_type_info_a8be2922a8d831c706073a0a320fa3860}{parent}} () const
+\item 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_type_info_a7c25eb4cb6570d8d5c46d3715822adc8}{child}} () const
+\item 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_type_info_a5a7cd1c13530aca4cb9fb9d78fa5a6c0}{siblings}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_class_component_type_a1a56b5e07e1ef25510d53d482e9fb807}\label{class_class_component_type_a1a56b5e07e1ef25510d53d482e9fb807} 
+std\+::weak\+\_\+ptr$<$ T $>$ {\bfseries tmp}
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_type_info}{Component\+Type\+Info}} に属する継承公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+Component\+Ptr {\bfseries tmp} = std\+::shared\+\_\+ptr$<$class \mbox{\hyperlink{class_component}{Component}}$>$((\mbox{\hyperlink{class_component}{Component}}\texorpdfstring{$\ast$}{*})create\+Instance())
+\item 
+Component\+Weak\+Ptr {\bfseries ptr} = tmp
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_type_info}{Component\+Type\+Info}} に属する継承静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_component_type_info}{Component\+Type\+Info}} {\bfseries component\+\_\+root}
+\begin{DoxyCompactList}\small\item\em ルートの型情報 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_type_info}{Type\+Info}} に属する継承静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_type_info}{Type\+Info}} {\bfseries Root}
+\begin{DoxyCompactList}\small\item\em ルートの型情報 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\subsubsection*{template$<$class T$>$\newline
+class Class\+Component\+Type$<$ T $>$}
+クラス用型情報 \doxylink{class_class_component_type}{Class\+Component\+Type$<$\+T$>$} 
+
+\label{doc-constructors}
+\Hypertarget{class_class_component_type_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_class_component_type_a737ad712ca46aa5575bacf597df550a5}\index{ClassComponentType$<$ T $>$@{ClassComponentType$<$ T $>$}!ClassComponentType@{ClassComponentType}}
+\index{ClassComponentType@{ClassComponentType}!ClassComponentType$<$ T $>$@{ClassComponentType$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ClassComponentType()}{ClassComponentType()}}
+{\footnotesize\ttfamily \label{class_class_component_type_a737ad712ca46aa5575bacf597df550a5} 
+template$<$class T$>$ \\
+\mbox{\hyperlink{class_class_component_type}{Class\+Component\+Type}}$<$ T $>$\mbox{\hyperlink{class_class_component_type}{\+::\+Class\+Component\+Type}} (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{class\+\_\+name}{, }\item[{\mbox{\hyperlink{class_component_type_info}{Component\+Type\+Info}} \texorpdfstring{$\ast$}{*}}]{parent\+\_\+type}{ = {\ttfamily nullptr}, }\item[{const char \texorpdfstring{$\ast$}{*}}]{desc\+\_\+name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em class\+\_\+name} & クラスの名前 \\
+\hline
+\mbox{\texttt{in}}  & {\em parent\+\_\+type} & 親クラスの型情報(親がないクラスはnullptr) \\
+\hline
+\mbox{\texttt{in}}  & {\em desc\+\_\+name} & 説明文文字列 \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_class_component_type_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_class_component_type_a4033ca5e794b4f1c5cfc25aaecf25119}\index{ClassComponentType$<$ T $>$@{ClassComponentType$<$ T $>$}!createComponentPtr@{createComponentPtr}}
+\index{createComponentPtr@{createComponentPtr}!ClassComponentType$<$ T $>$@{ClassComponentType$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{createComponentPtr()}{createComponentPtr()}}
+{\footnotesize\ttfamily \label{class_class_component_type_a4033ca5e794b4f1c5cfc25aaecf25119} 
+template$<$class T$>$ \\
+virtual void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_class_component_type}{Class\+Component\+Type}}$<$ T $>$\+::create\+Component\+Ptr (\begin{DoxyParamCaption}\item[{const Object\+Ptr \&}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_component_type_info}{Component\+Type\+Info}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/\mbox{\hyperlink{_component_8h}{Component.\+h}}\end{DoxyCompactItemize}

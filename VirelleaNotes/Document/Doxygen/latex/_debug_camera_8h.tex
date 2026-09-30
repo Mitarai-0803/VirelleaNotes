@@ -1,0 +1,84 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Debug/\+Debug\+Camera.h ファイル}
+\hypertarget{_debug_camera_8h}{}\label{_debug_camera_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Debug/DebugCamera.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Debug/DebugCamera.h}}
+
+
+デバッグカメラ  
+
+
+{\ttfamily \#include $<$System/\+Component/\+Component\+Camera.\+h$>$}\newline
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_debug_camera_8h_a11b4a552c87ef1cc5965c18fcd66053c}\label{_debug_camera_8h_a11b4a552c87ef1cc5965c18fcd66053c} 
+enum {\bfseries Control} \+: int \{ {\bfseries Unity}
+, {\bfseries Unreal\+Engine}
+, {\bfseries Maya}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_debug_camera_8h_a48aff3f229835bbfc19e9ea578123fd3}{Debug\+Camera\+::\+Use}} (bool use)
+\begin{DoxyCompactList}\small\item\em デバックカメラを使用する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_debug_camera_8h_ad27405f7e30344e13ff27eaaeaf7e2d1}{Debug\+Camera\+::\+Is\+Use}} ()
+\begin{DoxyCompactList}\small\item\em デバッグカメラを使用中かどうか \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_debug_camera_8h_af1fdc38fc9a2d05d806c2d5fd21fabe1}{Debug\+Camera\+::\+Set\+Control}} (Control mode)
+\begin{DoxyCompactList}\small\item\em デバッグカメラの移動方法設定 \end{DoxyCompactList}\item 
+\Hypertarget{_debug_camera_8h_a9dc75c14ec2238ecd2a670d07bcffb94}\label{_debug_camera_8h_a9dc75c14ec2238ecd2a670d07bcffb94} 
+Component\+Camera\+Weak\+Ptr {\bfseries Debug\+Camera\+::\+Get\+Camera} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+デバッグカメラ 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_debug_camera_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_debug_camera_8h_ad27405f7e30344e13ff27eaaeaf7e2d1}\index{DebugCamera.h@{DebugCamera.h}!IsUse@{IsUse}}
+\index{IsUse@{IsUse}!DebugCamera.h@{DebugCamera.h}}
+\doxysubsubsection{\texorpdfstring{IsUse()}{IsUse()}}
+{\footnotesize\ttfamily \label{_debug_camera_8h_ad27405f7e30344e13ff27eaaeaf7e2d1} 
+bool Debug\+Camera\+::\+Is\+Use (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+デバッグカメラを使用中かどうか 
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & \+: デバッグカメラ使用中 \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_debug_camera_8h_af1fdc38fc9a2d05d806c2d5fd21fabe1}\index{DebugCamera.h@{DebugCamera.h}!SetControl@{SetControl}}
+\index{SetControl@{SetControl}!DebugCamera.h@{DebugCamera.h}}
+\doxysubsubsection{\texorpdfstring{SetControl()}{SetControl()}}
+{\footnotesize\ttfamily \label{_debug_camera_8h_af1fdc38fc9a2d05d806c2d5fd21fabe1} 
+void Debug\+Camera\+::\+Set\+Control (\begin{DoxyParamCaption}\item[{Control}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+デバッグカメラの移動方法設定 
+
+
+\begin{DoxyParams}{引数}
+{\em mode} & 移動方式 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_debug_camera_8h_a48aff3f229835bbfc19e9ea578123fd3}\index{DebugCamera.h@{DebugCamera.h}!Use@{Use}}
+\index{Use@{Use}!DebugCamera.h@{DebugCamera.h}}
+\doxysubsubsection{\texorpdfstring{Use()}{Use()}}
+{\footnotesize\ttfamily \label{_debug_camera_8h_a48aff3f229835bbfc19e9ea578123fd3} 
+void Debug\+Camera\+::\+Use (\begin{DoxyParamCaption}\item[{bool}]{use}{}\end{DoxyParamCaption})}
+
+
+
+デバックカメラを使用する 
+
+
+\begin{DoxyParams}{引数}
+{\em use} & 使用するかどうか \\
+\hline
+\end{DoxyParams}

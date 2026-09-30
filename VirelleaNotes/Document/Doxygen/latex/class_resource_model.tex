@@ -1,0 +1,56 @@
+\doxysection{Resource\+Model クラス}
+\hypertarget{class_resource_model}{}\label{class_resource_model}\index{ResourceModel@{ResourceModel}}
+
+
+3Dモデルリソース  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Model.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_resource_model_a29021d711333456640fee1acca141056}\label{class_resource_model_a29021d711333456640fee1acca141056} 
+{\bfseries Resource\+Model} (std\+::string\+\_\+view path)
+\item 
+\Hypertarget{class_resource_model_aee6ed712939e91a12b1b9573e062a80b}\label{class_resource_model_aee6ed712939e91a12b1b9573e062a80b} 
+void {\bfseries wait\+For\+Read\+Finish} ()
+\item 
+\Hypertarget{class_resource_model_aa79e1b35ddbd2374a65e9ef718ad5dd3}\label{class_resource_model_aa79e1b35ddbd2374a65e9ef718ad5dd3} 
+{\bfseries operator int} () const
+\item 
+\Hypertarget{class_resource_model_ad917d1ee8b36e5c6cd548558d642941d}\label{class_resource_model_ad917d1ee8b36e5c6cd548558d642941d} 
+\mbox{\hyperlink{class_model_cache}{Model\+Cache}} \texorpdfstring{$\ast$}{*} {\bfseries model\+Cache} () const
+\begin{DoxyCompactList}\small\item\em モデルキャッシュを取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_resource_model_a383726782fb0b333714a2eb92435d2a0}\label{class_resource_model_a383726782fb0b333714a2eb92435d2a0} 
+const std\+::wstring \& {\bfseries path} () const
+\item 
+\Hypertarget{class_resource_model_afecbe97bcd2da8ea0b2d3416ea58246a}\label{class_resource_model_afecbe97bcd2da8ea0b2d3416ea58246a} 
+bool {\bfseries is\+Valid} () const
+\item 
+bool \mbox{\hyperlink{class_resource_model_a900591cd261afc07adc60304dd005bff}{is\+Active}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+3Dモデルリソース 
+
+\label{doc-func-members}
+\Hypertarget{class_resource_model_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_resource_model_a900591cd261afc07adc60304dd005bff}\index{ResourceModel@{ResourceModel}!isActive@{isActive}}
+\index{isActive@{isActive}!ResourceModel@{ResourceModel}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily \label{class_resource_model_a900591cd261afc07adc60304dd005bff} 
+bool Resource\+Model\+::is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyNote}{覚え書き}
+描画可能になっていない状態で\+MV1関数を呼ぶとブロッキングされます 
+\end{DoxyNote}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/\mbox{\hyperlink{_resource_model_8h}{Resource\+Model.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,133 @@
+\doxysection{Input\+::Input\+System クラス}
+\hypertarget{class_input_1_1_input_system}{}\label{class_input_1_1_input_system}\index{Input::InputSystem@{Input::InputSystem}}
+
+
+全体の入力を一元管理するシステムコンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Input\+System.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_input_1_1_input_system_ae84078e1a6416e141af77bf191dedad2}{Input\+System}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\Hypertarget{class_input_1_1_input_system_a17279134759d8961c9fe1b6d20d2f989}\label{class_input_1_1_input_system_a17279134759d8961c9fe1b6d20d2f989} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_input_1_1_input_system_a4298646637af088f501947d072e42fcb}\label{class_input_1_1_input_system_a4298646637af088f501947d072e42fcb} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em 入力状態更新 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_1_1_input_system_a8826bbcac5aa71279bde19c75e02c209}{Push\+Hit\+Key}} (int key) const
+\begin{DoxyCompactList}\small\item\em キーが押された瞬間か \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_1_1_input_system_a8489bb636b637725a4e6e1706e94edcf}{Check\+Mouse\+Input}} (int button) const
+\begin{DoxyCompactList}\small\item\em マウスボタン押下チェック \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_input_1_1_input_system_a47b5bc4092324739705d63063da1759a}{Push\+Mouse\+Input}} (int button) const
+\begin{DoxyCompactList}\small\item\em マウスボタン押下瞬間チェック \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_input_1_1_input_system_ac97fe3b7f9e9c1944c5a9cde866a2447}{Get\+Mouse\+Wheel}} () const
+\begin{DoxyCompactList}\small\item\em マウスホイールの回転チェック \end{DoxyCompactList}\item 
+\Hypertarget{class_input_1_1_input_system_a8971ba26676d390c57a075b075e2b945}\label{class_input_1_1_input_system_a8971ba26676d390c57a075b075e2b945} 
+int {\bfseries Get\+MouseX} () const
+\begin{DoxyCompactList}\small\item\em マウス\+X座標取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_input_1_1_input_system_a34c5c33442257715e82fbae386ecef85}\label{class_input_1_1_input_system_a34c5c33442257715e82fbae386ecef85} 
+int {\bfseries Get\+MouseY} () const
+\begin{DoxyCompactList}\small\item\em マウス\+Y座標取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+全体の入力を一元管理するシステムコンポーネント 
+
+キーボード・マウス・マウスホイールの状態を取得し、 フレーム単位で押下判定を行う 
+
+\label{doc-constructors}
+\Hypertarget{class_input_1_1_input_system_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_input_1_1_input_system_ae84078e1a6416e141af77bf191dedad2}\index{Input::InputSystem@{Input::InputSystem}!InputSystem@{InputSystem}}
+\index{InputSystem@{InputSystem}!Input::InputSystem@{Input::InputSystem}}
+\doxysubsubsection{\texorpdfstring{InputSystem()}{InputSystem()}}
+{\footnotesize\ttfamily \label{class_input_1_1_input_system_ae84078e1a6416e141af77bf191dedad2} 
+Input\+::\+Input\+System\+::\+Input\+System (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+メンバー変数を初期化 
+
+\label{doc-func-members}
+\Hypertarget{class_input_1_1_input_system_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_input_1_1_input_system_a8489bb636b637725a4e6e1706e94edcf}\index{Input::InputSystem@{Input::InputSystem}!CheckMouseInput@{CheckMouseInput}}
+\index{CheckMouseInput@{CheckMouseInput}!Input::InputSystem@{Input::InputSystem}}
+\doxysubsubsection{\texorpdfstring{CheckMouseInput()}{CheckMouseInput()}}
+{\footnotesize\ttfamily \label{class_input_1_1_input_system_a8489bb636b637725a4e6e1706e94edcf} 
+bool Input\+::\+Input\+System\+::\+Check\+Mouse\+Input (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption}) const}
+
+
+
+マウスボタン押下チェック 
+
+
+\begin{DoxyParams}{引数}
+{\em button} & MOUSE\+\_\+\+INPUT\+\_\+\+LEFT, MOUSE\+\_\+\+INPUT\+\_\+\+RIGHTなど \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true 押下中 
+\end{DoxyReturn}
+\Hypertarget{class_input_1_1_input_system_ac97fe3b7f9e9c1944c5a9cde866a2447}\index{Input::InputSystem@{Input::InputSystem}!GetMouseWheel@{GetMouseWheel}}
+\index{GetMouseWheel@{GetMouseWheel}!Input::InputSystem@{Input::InputSystem}}
+\doxysubsubsection{\texorpdfstring{GetMouseWheel()}{GetMouseWheel()}}
+{\footnotesize\ttfamily \label{class_input_1_1_input_system_ac97fe3b7f9e9c1944c5a9cde866a2447} 
+int Input\+::\+Input\+System\+::\+Get\+Mouse\+Wheel (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+マウスホイールの回転チェック 
+
+\begin{DoxyReturn}{戻り値}
+1以上 = 奥回転 0 = 回していない -\/1以下 = 手前回転 
+\end{DoxyReturn}
+\Hypertarget{class_input_1_1_input_system_a8826bbcac5aa71279bde19c75e02c209}\index{Input::InputSystem@{Input::InputSystem}!PushHitKey@{PushHitKey}}
+\index{PushHitKey@{PushHitKey}!Input::InputSystem@{Input::InputSystem}}
+\doxysubsubsection{\texorpdfstring{PushHitKey()}{PushHitKey()}}
+{\footnotesize\ttfamily \label{class_input_1_1_input_system_a8826bbcac5aa71279bde19c75e02c209} 
+bool Input\+::\+Input\+System\+::\+Push\+Hit\+Key (\begin{DoxyParamCaption}\item[{int}]{key}{}\end{DoxyParamCaption}) const}
+
+
+
+キーが押された瞬間か 
+
+
+\begin{DoxyParams}{引数}
+{\em key} & 判定するキーコード \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true 押された瞬間 
+\end{DoxyReturn}
+\Hypertarget{class_input_1_1_input_system_a47b5bc4092324739705d63063da1759a}\index{Input::InputSystem@{Input::InputSystem}!PushMouseInput@{PushMouseInput}}
+\index{PushMouseInput@{PushMouseInput}!Input::InputSystem@{Input::InputSystem}}
+\doxysubsubsection{\texorpdfstring{PushMouseInput()}{PushMouseInput()}}
+{\footnotesize\ttfamily \label{class_input_1_1_input_system_a47b5bc4092324739705d63063da1759a} 
+bool Input\+::\+Input\+System\+::\+Push\+Mouse\+Input (\begin{DoxyParamCaption}\item[{int}]{button}{}\end{DoxyParamCaption}) const}
+
+
+
+マウスボタン押下瞬間チェック 
+
+
+\begin{DoxyParams}{引数}
+{\em button} & MOUSE\+\_\+\+INPUT\+\_\+\+LEFT, MOUSE\+\_\+\+INPUT\+\_\+\+RIGHTなど \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+true 押された瞬間 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/自作ゲーム/音ゲー制作エンジン -\/ コピー/src/Input\+System.\+h\end{DoxyCompactItemize}

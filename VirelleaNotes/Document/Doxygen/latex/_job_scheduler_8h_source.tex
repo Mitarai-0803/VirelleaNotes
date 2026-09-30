@@ -1,0 +1,54 @@
+\doxysection{Job\+Scheduler.\+h}
+\hypertarget{_job_scheduler_8h_source}{}\label{_job_scheduler_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/JobScheduler.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/JobScheduler.h}}
+\mbox{\hyperlink{_job_scheduler_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_job_handle}{JobHandle}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ \mbox{\hyperlink{struct_job_handle_a1baecff277760eef8fa8f38b6bc6b16c}{value\_}}\ =\ 0;\ \ \ \ }
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_job_group_a563c88b786e3bebe668cc242898c8ff9}{JobGroup}}\ final\ :\ noncopyable,\ nonmovable}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\ \ ジョブを一括実行します}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ execute();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ \ ジョブを登録します}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\ \ 【使用例】}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ registerJob(Priority(カテゴリーTYPE,\ TYPEの中の優先度),\ []()\{\ ラムダ式\ \})}}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{struct_job_handle}{JobHandle}}\ \mbox{\hyperlink{class_job_group_a66b72665825d66068ed3da48c65e2f3e}{registerJob}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_priority}{Priority}}\&\ priority,\ \textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{void}()>\&\ func);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ \ ジョブを登録解除します}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_job_group_a8b34a6d175b3e0d699716d3f300a5182}{unregisterJob}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_job_handle}{JobHandle}}\&\ job\_handle);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ \ 対象のジョブを有効にする}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_job_group_adb2845cb194e0af55549e0c4838e38dd}{enableJob}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_job_handle}{JobHandle}}\&\ job\_handle);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ \ 対象のジョブを無効にする}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_job_group_ad092361ce59002d8c17ca5942111bedd}{disableJob}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_job_handle}{JobHandle}}\&\ job\_handle);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ コンストラクタ}}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_job_group_a563c88b786e3bebe668cc242898c8ff9}{JobGroup}}(\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ job\_max\_count\ =\ 10000);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_job_group_aa7fca90d8c58bd00c456c8f78b59252b}{\string~JobGroup}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{using\ }Job\ =\ std::pair<\mbox{\hyperlink{struct_priority}{Priority}},\ std::function<void()>>;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ std::vector<Job>\ jobs\_;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ std::vector<u32>\ job\_free\_list\_;\ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ std::vector<u32>\ job\_used\_list\_;\ \ \ \ }
+\DoxyCodeLine{00064\ \};}
+
+\end{DoxyCode}

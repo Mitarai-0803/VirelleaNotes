@@ -1,0 +1,412 @@
+\doxysection{Object\+::Water\+Object クラス}
+\hypertarget{class_object_1_1_water_object}{}\label{class_object_1_1_water_object}\index{Object::WaterObject@{Object::WaterObject}}
+
+
+波紋シミュレーションを行う水面オブジェクト  
+
+
+
+
+{\ttfamily \#include $<$Water\+Object.\+h$>$}
+
+
+
+Object\+::Water\+Object の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_water_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Object\+::Water\+Object 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_water_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_1_1_water_object_a00d60e92d4b07497ac4f2c5ddf1c4332}{Water\+Object}} (int width, int height, VECTOR pos, float scale=0.\+125f)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\Hypertarget{class_object_1_1_water_object_ad63d9b50b24b4ac6f56aed6a25a2556e}\label{class_object_1_1_water_object_ad63d9b50b24b4ac6f56aed6a25a2556e} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Water\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_object_1_1_water_object_a1d6c44013bdc6f102a9dfd01c9b90e66}{Get\+Width}} () const
+\begin{DoxyCompactList}\small\item\em 水面グリッドの横分割数を取得する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_object_1_1_water_object_adee16fbf36ed27e37e97ccd6b286d989}{Get\+Height}} () const
+\begin{DoxyCompactList}\small\item\em 水面グリッドの縦分割数を取得する \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_object_1_1_water_object_a4c494228ef1c600f9f8d76f353f4c0a2}{Get\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em グリッド1マスのワールドサイズを取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_aa160fe0115da17a082e8dbd4c2aa4506}{Set\+Scale}} (float scale)
+\begin{DoxyCompactList}\small\item\em グリッド1マスのワールドサイズを設定する \end{DoxyCompactList}\item 
+VECTOR \mbox{\hyperlink{class_object_1_1_water_object_a6c5d96f2ebc7f1b913a991a3c4e15ab2}{Get\+Draw\+Position}} () const
+\begin{DoxyCompactList}\small\item\em 水面の描画原点座標を取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_a01f631f0c2fbb078d140091508f8b299}{Set\+Draw\+Position}} (const VECTOR \&pos)
+\begin{DoxyCompactList}\small\item\em 水面の描画原点座標を設定する \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_object_1_1_water_object_aa2d5e74cac950132593deb3693104e40}{Get\+SurfaceY}} () const
+\begin{DoxyCompactList}\small\item\em 水面のワールド\+Y座標を取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_afa21ba50de5c75fcbe201ac06bf7d517}{Set\+SurfaceY}} (float y)
+\begin{DoxyCompactList}\small\item\em 水面のワールド\+Y座標のみを設定する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_ac6803802252ab7f1d4d515a8f6e85d8f}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em 水面の高さをすべてリセットする \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_a7b0c0de7f4f3cf3406ec2af4a271961a}{Add\+Impulse}} (int x, int z, float impulse)
+\begin{DoxyCompactList}\small\item\em 指定グリッド座標に衝撃（波）を与える \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_ad690d6b5e9160065c126f388c84a25c6}{Add\+Impulse\+At\+World\+Pos}} (float wx, float wz, float impulse)
+\begin{DoxyCompactList}\small\item\em ワールド座標を使って波紋を起こす \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_object_1_1_water_object_a01ede4425c7d3e6ba6a7344d6b2660f2}{Get\+Height\+At\+World\+Pos}} (float wx, float wz) const
+\begin{DoxyCompactList}\small\item\em 指定ワールド座標の波高（水位からの相対高さ）を取得する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries Get\+Position} () const
+\item 
+void {\bfseries Set\+Position} (const JPH\+::\+RVec3 \&pos)
+\item 
+JPH\+::\+Quat {\bfseries Get\+Rotation} () const
+\item 
+void {\bfseries Set\+Rotation} (const JPH\+::\+Quat \&rot)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_1_1_object_base_af53775f0db55e72971bd8bfed4ba6809}{\texorpdfstring{$\sim$}{\string~}\+Object\+Base}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_1_1_object_base_a16b478109bc4787d7095706ba6d7cdfb}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名の取得 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Name} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名の設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Add\+Component} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_object_1_1_object_base_ac6b0a1cda5413d3b3d110d2316bd7536}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em ライフサイクル呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\item 
+void {\bfseries Draw\+Debug} ()
+\item 
+void {\bfseries Draw} ()
+\item 
+void {\bfseries End} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_a9fa6dcf14538f81833138290c4a2b05d}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_ab4be64ca39fab150fcf8e8b0a72049bd}{On\+Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_a59cf25769549d5744da6526ca79d9b86}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_water_object_a8a485d874c57a5aba8fcbd7a8c8604c4}{On\+End}} () override
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries On\+Draw\+Debug} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries m\+\_\+pos} = JPH\+::\+RVec3(0.\+0f, 0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em 手動設定の座標 \end{DoxyCompactList}\item 
+JPH\+::\+Quat {\bfseries m\+\_\+rot} = JPH\+::\+Quat\+::s\+Identity()
+\begin{DoxyCompactList}\small\item\em 手動設定の回転 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+波紋シミュレーションを行う水面オブジェクト 
+
+
+\begin{DoxyItemize}
+\item コンストラクタは引数を保存するだけに留め、 実際のバッファ確保や初期波生成は \doxylink{class_object_1_1_water_object_a9fa6dcf14538f81833138290c4a2b05d}{On\+Init()} で行う
+\item グリッド状の高さバッファ(現在・前・次フレーム)を使い 有限差分法で波の伝播を毎フレーム更新する
+\item 描画用の頂点バッファも \doxylink{class_object_1_1_water_object_a9fa6dcf14538f81833138290c4a2b05d}{On\+Init()} で一度だけ確保し、 \doxylink{class_object_1_1_water_object_a59cf25769549d5744da6526ca79d9b86}{On\+Draw()} では値の書き換えのみ行う（毎フレームのヒープ確保を避けるため）
+\item DXLib の Triangle\+Strip でグリッドをリアルタイム描画する
+\item \doxylink{class_object_1_1_object_base3_d}{Object\+Base3D} を継承し、シーンのオブジェクトリストで ライフサイクル管理(Init / Update / Draw / End)される
+\item 外部から状態を変更する場合は必ず Set 系メソッドを使用し、 メンバ変数への直接アクセスは行わない（カプセル化を維持する） 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_object_1_1_water_object_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_object_1_1_water_object_a00d60e92d4b07497ac4f2c5ddf1c4332}\index{Object::WaterObject@{Object::WaterObject}!WaterObject@{WaterObject}}
+\index{WaterObject@{WaterObject}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{WaterObject()}{WaterObject()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a00d60e92d4b07497ac4f2c5ddf1c4332} 
+Object\+::\+Water\+Object\+::\+Water\+Object (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{VECTOR}]{pos}{, }\item[{float}]{scale}{ = {\ttfamily 0.125f}}\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+値の保存のみ行い、バッファ確保などの重い処理は行わない。 実際の初期化は \doxylink{class_object_1_1_water_object_a9fa6dcf14538f81833138290c4a2b05d}{On\+Init()} で行われる。 
+\begin{DoxyParams}{引数}
+{\em width} & 水面グリッドの横分割数（頂点数） \\
+\hline
+{\em height} & 水面グリッドの縦分割数（頂点数） \\
+\hline
+{\em pos} & 水面の描画原点座標（\+DXLib VECTOR） \\
+\hline
+{\em scale} & グリッド1マスのワールドサイズ（デフォルト 0.\+125f） \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_object_1_1_water_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_object_1_1_water_object_a7b0c0de7f4f3cf3406ec2af4a271961a}\index{Object::WaterObject@{Object::WaterObject}!AddImpulse@{AddImpulse}}
+\index{AddImpulse@{AddImpulse}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{AddImpulse()}{AddImpulse()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a7b0c0de7f4f3cf3406ec2af4a271961a} 
+void Object\+::\+Water\+Object\+::\+Add\+Impulse (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{z}{, }\item[{float}]{impulse}{}\end{DoxyParamCaption})}
+
+
+
+指定グリッド座標に衝撃（波）を与える 
+
+
+\begin{DoxyParams}{引数}
+{\em x} & 衝撃を与えるグリッド\+X座標（1 〜 width-\/2） \\
+\hline
+{\em z} & 衝撃を与えるグリッド\+Z座標（1 〜 height-\/2） \\
+\hline
+{\em impulse} & 現在フレームの高さに加算する値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{覚え書き}
+境界ピクセルには加算されない（シミュレーションの安定性のため） 
+\end{DoxyNote}
+\Hypertarget{class_object_1_1_water_object_ad690d6b5e9160065c126f388c84a25c6}\index{Object::WaterObject@{Object::WaterObject}!AddImpulseAtWorldPos@{AddImpulseAtWorldPos}}
+\index{AddImpulseAtWorldPos@{AddImpulseAtWorldPos}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{AddImpulseAtWorldPos()}{AddImpulseAtWorldPos()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_ad690d6b5e9160065c126f388c84a25c6} 
+void Object\+::\+Water\+Object\+::\+Add\+Impulse\+At\+World\+Pos (\begin{DoxyParamCaption}\item[{float}]{wx}{, }\item[{float}]{wz}{, }\item[{float}]{impulse}{}\end{DoxyParamCaption})}
+
+
+
+ワールド座標を使って波紋を起こす 
+
+ワールド\+XZ座標をグリッド座標に変換して Add\+Impulse を呼ぶ。 コライダーの位置をそのまま渡せるため、衝突検出との連携が簡単になる。 
+\begin{DoxyParams}{引数}
+{\em wx} & ワールド\+X座標 \\
+\hline
+{\em wz} & ワールド\+Z座標 \\
+\hline
+{\em impulse} & 高さへの加算値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{覚え書き}
+グリッド範囲外の座標は Add\+Impulse 内で安全に弾かれる 
+\end{DoxyNote}
+\Hypertarget{class_object_1_1_water_object_a6c5d96f2ebc7f1b913a991a3c4e15ab2}\index{Object::WaterObject@{Object::WaterObject}!GetDrawPosition@{GetDrawPosition}}
+\index{GetDrawPosition@{GetDrawPosition}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{GetDrawPosition()}{GetDrawPosition()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a6c5d96f2ebc7f1b913a991a3c4e15ab2} 
+VECTOR Object\+::\+Water\+Object\+::\+Get\+Draw\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+水面の描画原点座標を取得する 
+
+\begin{DoxyReturn}{戻り値}
+描画原点座標（\+DXLib VECTOR） 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_water_object_adee16fbf36ed27e37e97ccd6b286d989}\index{Object::WaterObject@{Object::WaterObject}!GetHeight@{GetHeight}}
+\index{GetHeight@{GetHeight}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{GetHeight()}{GetHeight()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_adee16fbf36ed27e37e97ccd6b286d989} 
+int Object\+::\+Water\+Object\+::\+Get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+水面グリッドの縦分割数を取得する 
+
+\begin{DoxyReturn}{戻り値}
+グリッド縦分割数 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_water_object_a01ede4425c7d3e6ba6a7344d6b2660f2}\index{Object::WaterObject@{Object::WaterObject}!GetHeightAtWorldPos@{GetHeightAtWorldPos}}
+\index{GetHeightAtWorldPos@{GetHeightAtWorldPos}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{GetHeightAtWorldPos()}{GetHeightAtWorldPos()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a01ede4425c7d3e6ba6a7344d6b2660f2} 
+float Object\+::\+Water\+Object\+::\+Get\+Height\+At\+World\+Pos (\begin{DoxyParamCaption}\item[{float}]{wx}{, }\item[{float}]{wz}{}\end{DoxyParamCaption}) const}
+
+
+
+指定ワールド座標の波高（水位からの相対高さ）を取得する 
+
+浮力計算（オブジェクトを水面に浮かせる演出）などに利用できる 
+\begin{DoxyParams}{引数}
+{\em wx} & ワールド\+X座標 \\
+\hline
+{\em wz} & ワールド\+Z座標 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+波高（範囲外の場合は 0.\+0f を返す） 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_water_object_a4c494228ef1c600f9f8d76f353f4c0a2}\index{Object::WaterObject@{Object::WaterObject}!GetScale@{GetScale}}
+\index{GetScale@{GetScale}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{GetScale()}{GetScale()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a4c494228ef1c600f9f8d76f353f4c0a2} 
+float Object\+::\+Water\+Object\+::\+Get\+Scale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+グリッド1マスのワールドサイズを取得する 
+
+\begin{DoxyReturn}{戻り値}
+スケール値 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_water_object_aa2d5e74cac950132593deb3693104e40}\index{Object::WaterObject@{Object::WaterObject}!GetSurfaceY@{GetSurfaceY}}
+\index{GetSurfaceY@{GetSurfaceY}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{GetSurfaceY()}{GetSurfaceY()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_aa2d5e74cac950132593deb3693104e40} 
+float Object\+::\+Water\+Object\+::\+Get\+SurfaceY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+水面のワールド\+Y座標を取得する 
+
+衝突判定の閾値として外部から参照するために用意している \begin{DoxyReturn}{戻り値}
+描画原点の Y 値（静水面の高さ） 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_water_object_a1d6c44013bdc6f102a9dfd01c9b90e66}\index{Object::WaterObject@{Object::WaterObject}!GetWidth@{GetWidth}}
+\index{GetWidth@{GetWidth}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{GetWidth()}{GetWidth()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a1d6c44013bdc6f102a9dfd01c9b90e66} 
+int Object\+::\+Water\+Object\+::\+Get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+水面グリッドの横分割数を取得する 
+
+\begin{DoxyReturn}{戻り値}
+グリッド横分割数 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_water_object_a59cf25769549d5744da6526ca79d9b86}\index{Object::WaterObject@{Object::WaterObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a59cf25769549d5744da6526ca79d9b86} 
+void Object\+::\+Water\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+\doxylink{class_object_1_1_water_object_a9fa6dcf14538f81833138290c4a2b05d}{On\+Init()} で確保済みの m\+\_\+vertex\+Buffer の値だけを書き換えて描画する。 毎フレームの std\+::vector ヒープ確保を避けるための最適化。 Object\+Base\+::\+Draw() から呼ばれる 
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_water_object_a8a485d874c57a5aba8fcbd7a8c8604c4}\index{Object::WaterObject@{Object::WaterObject}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a8a485d874c57a5aba8fcbd7a8c8604c4} 
+void Object\+::\+Water\+Object\+::\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+使用リソースを解放する Object\+Base\+::\+End() から呼ばれる 
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_water_object_a9fa6dcf14538f81833138290c4a2b05d}\index{Object::WaterObject@{Object::WaterObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a9fa6dcf14538f81833138290c4a2b05d} 
+void Object\+::\+Water\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+高さバッファのリサイズ、中央への初期波生成に加えて、 描画用頂点バッファ（m\+\_\+vertex\+Buffer）の事前確保もここで行う。 \doxylink{class_object_1_1_object_base_a5c14cf4ce43fdee3ca1a97ef7c564d88}{Object\+Base\+::\+Init()} から呼ばれる。 
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_water_object_ab4be64ca39fab150fcf8e8b0a72049bd}\index{Object::WaterObject@{Object::WaterObject}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_ab4be64ca39fab150fcf8e8b0a72049bd} 
+void Object\+::\+Water\+Object\+::\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+有限差分法で波の伝播を1ステップ進める Object\+Base\+::\+Update() から呼ばれる 
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_water_object_ac6803802252ab7f1d4d515a8f6e85d8f}\index{Object::WaterObject@{Object::WaterObject}!Reset@{Reset}}
+\index{Reset@{Reset}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_ac6803802252ab7f1d4d515a8f6e85d8f} 
+void Object\+::\+Water\+Object\+::\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+水面の高さをすべてリセットする 
+
+現フレームバッファと前フレームバッファを 0 でクリアする \Hypertarget{class_object_1_1_water_object_a01f631f0c2fbb078d140091508f8b299}\index{Object::WaterObject@{Object::WaterObject}!SetDrawPosition@{SetDrawPosition}}
+\index{SetDrawPosition@{SetDrawPosition}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{SetDrawPosition()}{SetDrawPosition()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_a01f631f0c2fbb078d140091508f8b299} 
+void Object\+::\+Water\+Object\+::\+Set\+Draw\+Position (\begin{DoxyParamCaption}\item[{const VECTOR \&}]{pos}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+水面の描画原点座標を設定する 
+
+水面を別の位置へ丸ごと移動させたい場合に使用する 
+\begin{DoxyParams}{引数}
+{\em pos} & 新しい描画原点座標 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_1_1_water_object_aa160fe0115da17a082e8dbd4c2aa4506}\index{Object::WaterObject@{Object::WaterObject}!SetScale@{SetScale}}
+\index{SetScale@{SetScale}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{SetScale()}{SetScale()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_aa160fe0115da17a082e8dbd4c2aa4506} 
+void Object\+::\+Water\+Object\+::\+Set\+Scale (\begin{DoxyParamCaption}\item[{float}]{scale}{}\end{DoxyParamCaption})}
+
+
+
+グリッド1マスのワールドサイズを設定する 
+
+0以下の値は無視する（0除算防止） 
+\begin{DoxyParams}{引数}
+{\em scale} & 新しいスケール値 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_1_1_water_object_afa21ba50de5c75fcbe201ac06bf7d517}\index{Object::WaterObject@{Object::WaterObject}!SetSurfaceY@{SetSurfaceY}}
+\index{SetSurfaceY@{SetSurfaceY}!Object::WaterObject@{Object::WaterObject}}
+\doxysubsubsection{\texorpdfstring{SetSurfaceY()}{SetSurfaceY()}}
+{\footnotesize\ttfamily \label{class_object_1_1_water_object_afa21ba50de5c75fcbe201ac06bf7d517} 
+void Object\+::\+Water\+Object\+::\+Set\+SurfaceY (\begin{DoxyParamCaption}\item[{float}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+水面のワールド\+Y座標のみを設定する 
+
+増水パズルなど、水位を時間経過で上下させる演出に使用する 
+\begin{DoxyParams}{引数}
+{\em y} & 新しい水面の高さ \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_water_object_8h}{Water\+Object.\+h}}\end{DoxyCompactItemize}

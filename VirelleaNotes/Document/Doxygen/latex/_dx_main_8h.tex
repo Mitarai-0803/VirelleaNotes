@@ -1,0 +1,60 @@
+\doxysection{F\+:/sg mitarai/\+Reo\+Engine/src/\+Dx\+Main.h ファイル}
+\hypertarget{_dx_main_8h}{}\label{_dx_main_8h}\index{F:/sg mitarai/ReoEngine/src/DxMain.h@{F:/sg mitarai/ReoEngine/src/DxMain.h}}
+
+
+アプリケーションの基本設定。画面サイズや背景色などの定数を定義します。  
+
+
+{\ttfamily \#include "{}Windows.\+h"{}}\newline
+{\ttfamily \#include "{}Dx\+Lib.\+h"{}}\newline
+{\ttfamily \#include "{}Scene\+Manager.\+h"{}}\newline
+{\ttfamily \#include "{}memory"{}}\newline
+{\ttfamily \#include "{}hlsl++.\+h"{}}\newline
+Dx\+Main.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_dx_main_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{_dx_main_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_application}{Application}}
+\begin{DoxyCompactList}\small\item\em アプリケーションの初期化・メインループ・終了処理をまとめるクラス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_dx_main_8h_a9f918755b601cf4bffca775992e6fb90}{NOMINMAX}}
+\begin{DoxyCompactList}\small\item\em Windows.\+h の min/max マクロを無効化 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+アプリケーションの基本設定。画面サイズや背景色などの定数を定義します。 
+
+\begin{DoxyAuthor}{著者}
+レオ 
+\end{DoxyAuthor}
+
+
+\label{doc-define-members}
+\Hypertarget{_dx_main_8h_doc-define-members}
+\doxysubsection{マクロ定義詳解}
+\Hypertarget{_dx_main_8h_a9f918755b601cf4bffca775992e6fb90}\index{DxMain.h@{DxMain.h}!NOMINMAX@{NOMINMAX}}
+\index{NOMINMAX@{NOMINMAX}!DxMain.h@{DxMain.h}}
+\doxysubsubsection{\texorpdfstring{NOMINMAX}{NOMINMAX}}
+{\footnotesize\ttfamily \label{_dx_main_8h_a9f918755b601cf4bffca775992e6fb90} 
+\#define NOMINMAX}
+
+
+
+Windows.\+h の min/max マクロを無効化 
+
+Windows API利用 DXライブラリ利用 シーンマネージャ宣言 std\+::shared\+\_\+ptr 利用 HLSL 利用 

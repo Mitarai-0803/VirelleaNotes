@@ -1,0 +1,183 @@
+\doxysection{UI\+::Sec\+Grid\+Object クラス}
+\hypertarget{class_u_i_1_1_sec_grid_object}{}\label{class_u_i_1_1_sec_grid_object}\index{UI::SecGridObject@{UI::SecGridObject}}
+
+
+秒グリッド描画用オブジェクト  
+
+
+
+
+{\ttfamily \#include $<$Sec\+Grid\+Object.\+h$>$}
+
+UI\+::Sec\+Grid\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_sec_grid_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_sec_grid_object_a34c0d7bb561128bc61a0b4e34f0efdfe}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_sec_grid_object_a74f46595a221a0ca489b662da8b0e5ee}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_sec_grid_object_a05a161d984caaa773ff2c51d7c59536c}{Set\+Max\+Play\+Time}} (int max\+\_\+play\+\_\+time\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em 最大再生時間（ミリ秒）を設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_sec_grid_object_a3c7c1330120662001ba0ec35c42bad44}{Set\+Zoom}} (float zoom)
+\begin{DoxyCompactList}\small\item\em ズーム値を設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_sec_grid_object_a37d47b84d8ba7caddb4610b265529458}{Set\+ScrollY}} (int scroll\+\_\+y)
+\begin{DoxyCompactList}\small\item\em スクロール\+Y値を設定 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_u_i_1_1_sec_grid_object_a908c7a97344c212c8752b511fdbcdddc}{Get\+Max\+ScrollY}} ()
+\begin{DoxyCompactList}\small\item\em 最大スクロール\+Y値を取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_u_i_1_1_sec_grid_object_a025ed31148f5e805a4253f585263b20e}{Get\+Line\+PosY}} ()
+\begin{DoxyCompactList}\small\item\em 秒数の線の\+Y座標を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}{On\+Draw}} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a1ac2a73147f469ff7371971560a4dd0a}{On\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71}{On\+End}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+秒グリッド描画用オブジェクト 
+
+これまでの Sec\+Grid\+Component のロジックを統合した \doxylink{class_game_object}{Game\+Object} 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_sec_grid_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_sec_grid_object_a025ed31148f5e805a4253f585263b20e}\index{UI::SecGridObject@{UI::SecGridObject}!GetLinePosY@{GetLinePosY}}
+\index{GetLinePosY@{GetLinePosY}!UI::SecGridObject@{UI::SecGridObject}}
+\doxysubsubsection{\texorpdfstring{GetLinePosY()}{GetLinePosY()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sec_grid_object_a025ed31148f5e805a4253f585263b20e} 
+int UI\+::\+Sec\+Grid\+Object\+::\+Get\+Line\+PosY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+秒数の線の\+Y座標を取得 
+
+\begin{DoxyReturn}{戻り値}
+秒数の線の\+Y座標 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_sec_grid_object_a908c7a97344c212c8752b511fdbcdddc}\index{UI::SecGridObject@{UI::SecGridObject}!GetMaxScrollY@{GetMaxScrollY}}
+\index{GetMaxScrollY@{GetMaxScrollY}!UI::SecGridObject@{UI::SecGridObject}}
+\doxysubsubsection{\texorpdfstring{GetMaxScrollY()}{GetMaxScrollY()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sec_grid_object_a908c7a97344c212c8752b511fdbcdddc} 
+int UI\+::\+Sec\+Grid\+Object\+::\+Get\+Max\+ScrollY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+最大スクロール\+Y値を取得 
+
+\begin{DoxyReturn}{戻り値}
+最大スクロール\+Y値 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_sec_grid_object_a74f46595a221a0ca489b662da8b0e5ee}\index{UI::SecGridObject@{UI::SecGridObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!UI::SecGridObject@{UI::SecGridObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sec_grid_object_a74f46595a221a0ca489b662da8b0e5ee} 
+void UI\+::\+Sec\+Grid\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_sec_grid_object_a34c0d7bb561128bc61a0b4e34f0efdfe}\index{UI::SecGridObject@{UI::SecGridObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!UI::SecGridObject@{UI::SecGridObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sec_grid_object_a34c0d7bb561128bc61a0b4e34f0efdfe} 
+void UI\+::\+Sec\+Grid\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_sec_grid_object_a05a161d984caaa773ff2c51d7c59536c}\index{UI::SecGridObject@{UI::SecGridObject}!SetMaxPlayTime@{SetMaxPlayTime}}
+\index{SetMaxPlayTime@{SetMaxPlayTime}!UI::SecGridObject@{UI::SecGridObject}}
+\doxysubsubsection{\texorpdfstring{SetMaxPlayTime()}{SetMaxPlayTime()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sec_grid_object_a05a161d984caaa773ff2c51d7c59536c} 
+void UI\+::\+Sec\+Grid\+Object\+::\+Set\+Max\+Play\+Time (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+play\+\_\+time\+\_\+ms}{}\end{DoxyParamCaption})}
+
+
+
+最大再生時間（ミリ秒）を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em max\+\_\+play\+\_\+time\+\_\+ms} & 最大再生時間（ミリ秒） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_sec_grid_object_a37d47b84d8ba7caddb4610b265529458}\index{UI::SecGridObject@{UI::SecGridObject}!SetScrollY@{SetScrollY}}
+\index{SetScrollY@{SetScrollY}!UI::SecGridObject@{UI::SecGridObject}}
+\doxysubsubsection{\texorpdfstring{SetScrollY()}{SetScrollY()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sec_grid_object_a37d47b84d8ba7caddb4610b265529458} 
+void UI\+::\+Sec\+Grid\+Object\+::\+Set\+ScrollY (\begin{DoxyParamCaption}\item[{int}]{scroll\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+スクロール\+Y値を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em scroll\+\_\+y} & スクロール\+Y値 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_sec_grid_object_a3c7c1330120662001ba0ec35c42bad44}\index{UI::SecGridObject@{UI::SecGridObject}!SetZoom@{SetZoom}}
+\index{SetZoom@{SetZoom}!UI::SecGridObject@{UI::SecGridObject}}
+\doxysubsubsection{\texorpdfstring{SetZoom()}{SetZoom()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sec_grid_object_a3c7c1330120662001ba0ec35c42bad44} 
+void UI\+::\+Sec\+Grid\+Object\+::\+Set\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom}{}\end{DoxyParamCaption})}
+
+
+
+ズーム値を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em zoom} & ズーム値 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Sec\+Grid\+Object.\+h\end{DoxyCompactItemize}

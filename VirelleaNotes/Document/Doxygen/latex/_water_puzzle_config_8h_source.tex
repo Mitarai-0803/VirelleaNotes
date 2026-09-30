@@ -1,0 +1,64 @@
+\doxysection{Water\+Puzzle\+Config.\+h}
+\hypertarget{_water_puzzle_config_8h_source}{}\label{_water_puzzle_config_8h_source}\index{F:/sg mitarai/ReoEngine/src/WaterPuzzleConfig.h@{F:/sg mitarai/ReoEngine/src/WaterPuzzleConfig.h}}
+\mbox{\hyperlink{_water_puzzle_config_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <Jolt/Jolt.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }WaterPuzzleConfig\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//=============================================================}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ 水面関連}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//=============================================================}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \ \ \mbox{\hyperlink{_water_puzzle_config_8h_a614a2f06a20015beb1dfe8267457b4d0}{WATER\_GRID\_WIDTH}}\ \ \ \ =\ 82;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \ \ \mbox{\hyperlink{_water_puzzle_config_8h_a457bc03f17328c1b1541e9ab081fe7b0}{WATER\_GRID\_HEIGHT}}\ \ \ =\ 82;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_a27ce4c2acbd2304f5020d24de3d01092}{WATER\_GRID\_SCALE}}\ \ \ \ =\ 0.125f;\ \ \ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_a071cb6b07c02d0803ec3a43b530a85f9}{WATER\_ORIGIN\_X}}\ \ \ \ \ \ =\ -\/5.0f;\ \ \ \ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_adabf97d227c120b549d7ef46d2c32aff}{WATER\_ORIGIN\_Z}}\ \ \ \ \ \ =\ -\/5.0f;\ \ \ \ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_a19b33edbe22e25374d05889b69e5be65}{WATER\_INITIAL\_Y}}\ \ \ \ \ =\ -\/1.0f;\ \ \ \ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_a2faaf9569c99d2371c462a3e8584c0fe}{WATER\_RISE\_SPEED\_BASE}}\ \ =\ 0.05f;\ \ \ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_a883fe37d3a5bab67b376b504faf85133}{WATER\_RISE\_ACCEL}}\ \ \ \ \ \ \ =\ 0.0015f;\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_a7b5e4ec082a4244702cedd6b4848f35c}{WATER\_RISE\_SPEED\_MAX}}\ \ \ =\ 0.6f;\ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_a745a12fa8254cec2a42b5f15af0e3924}{WATER\_IMPULSE\_VELOCITY\_SCALE}}\ =\ 0.4f;\ \ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_ab495c3d1a219335d54e676546f29098d}{WATER\_IMPULSE\_MIN}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 0.1f;\ \ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_aa51a0e14eaf65143840d18dcf8bc4208}{WATER\_IMPULSE\_MAX}}\ \ \ \ \ \ \ \ \ \ \ \ =\ 2.0f;\ \ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//=============================================================}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ プレイヤー関連}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//=============================================================}}
+\DoxyCodeLine{00037\ \textcolor{keyword}{const}\ \ \ \ \ JPH::RVec3\ \mbox{\hyperlink{_water_puzzle_config_8h_ab7198f33ca2bd299dba546f46bb1eabf}{PLAYER\_SPAWN\_POS}}\ \ \ \ =\ JPH::RVec3(-\/3.0f,\ 1.5f,\ -\/3.0f);\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{const}\ \ \ \ \ JPH::Vec3\ \ \mbox{\hyperlink{_water_puzzle_config_8h_a77abddbaf0f9ba1fc78d18617e506d51}{PLAYER\_HALF\_EXTENT}}\ \ =\ JPH::Vec3(0.4f,\ 0.4f,\ 0.4f);\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \mbox{\hyperlink{_water_puzzle_config_8h_a61f6e38c49df87ad99b7999827ac50a5}{PLAYER\_MOVE\_SPEED}}\ \ =\ 4.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \mbox{\hyperlink{_water_puzzle_config_8h_a4b7d36af77ac266afa8151dbb4aaef36}{PLAYER\_JUMP\_SPEED}}\ \ =\ 6.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{//=============================================================}}
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ 足場関連}}
+\DoxyCodeLine{00044\ \textcolor{comment}{//=============================================================}}
+\DoxyCodeLine{00046\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_water_puzzle_config_1_1_platform_config}{PlatformConfig}}}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ JPH::RVec3\ \mbox{\hyperlink{struct_water_puzzle_config_1_1_platform_config_a3713069931b362107819efb6dda3fc69}{pos}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ JPH::Vec3\ \ \mbox{\hyperlink{struct_water_puzzle_config_1_1_platform_config_a7935872606ce24b9e18c16db833a7260}{halfExtent}};\ \ \ }
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ std::array<PlatformConfig,\ 5>\ \mbox{\hyperlink{_water_puzzle_config_8h_a575e4ff0659cc40dd44a3eb837c0c151}{PLATFORM\_CONFIGS}}\ =\ \{\{}
+\DoxyCodeLine{00055\ \ \ \ \ \{\ JPH::RVec3(-\/3.0f,\ 0.5f,\ -\/3.0f),\ JPH::Vec3(1.0f,\ 0.5f,\ 1.0f)\ \},\ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \{\ JPH::RVec3(\ 0.0f,\ 1.5f,\ -\/1.0f),\ JPH::Vec3(0.8f,\ 0.5f,\ 0.8f)\ \},\ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \{\ JPH::RVec3(\ 3.0f,\ 2.5f,\ \ 1.0f),\ JPH::Vec3(0.8f,\ 0.5f,\ 0.8f)\ \},\ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \{\ JPH::RVec3(\ 0.0f,\ 3.5f,\ \ 3.0f),\ JPH::Vec3(0.7f,\ 0.5f,\ 0.7f)\ \},\ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \{\ JPH::RVec3(-\/3.0f,\ 4.5f,\ \ 0.0f),\ JPH::Vec3(0.6f,\ 0.5f,\ 0.6f)\ \},\ \ \ \ }
+\DoxyCodeLine{00060\ \}\};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//=============================================================}}
+\DoxyCodeLine{00063\ \textcolor{comment}{//\ ゲームルール関連}}
+\DoxyCodeLine{00064\ \textcolor{comment}{//=============================================================}}
+\DoxyCodeLine{00065\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_water_puzzle_config_8h_a72bebdcefede141df40c99d3bd15aebe}{FIXED\_DELTA\_TIME}}\ \ \ \ =\ 1.0f\ /\ 60.0f;\ \ \ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ \ \ \mbox{\hyperlink{_water_puzzle_config_8h_ab40fd0493a5b80e6836f7ca1e03a5bbe}{RANKING\_MAX\_ENTRIES}}\ =\ 5;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ WaterPuzzleConfig}}
+
+\end{DoxyCode}

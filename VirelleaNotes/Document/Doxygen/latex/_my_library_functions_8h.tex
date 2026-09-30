@@ -1,0 +1,257 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+My\+Library\+Functions.h ファイル}
+\hypertarget{_my_library_functions_8h}{}\label{_my_library_functions_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/MyLibraryFunctions.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/MyLibraryFunctions.h}}
+
+
+汎用的なユーティリティ関数群の宣言  
+
+
+{\ttfamily \#include "{}Dx\+Main.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$hlsl++.\+h$>$}\newline
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{_my_library_functions_8h_ab2ec42bb2ae81d508b0f70a5fe8cc87a}{my\+\_\+library\+::\+Convert\+Milli\+To\+Sec}} (int milli)
+\begin{DoxyCompactList}\small\item\em ミリ秒を秒に変換する \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_my_library_functions_8h_a57628622976ab63c7a247532d7e12944}{my\+\_\+library\+::\+Convert\+Milli\+To\+Minute}} (int milli)
+\begin{DoxyCompactList}\small\item\em ミリ秒を分に変換する \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{_my_library_functions_8h_a625ed9f2929dcb45c1a0fb06e47f628b}{my\+\_\+library\+::\+Get\+File\+Extension}} (const char \texorpdfstring{$\ast$}{*}filepath)
+\begin{DoxyCompactList}\small\item\em ファイルパスから拡張子を取り出す \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_my_library_functions_8h_aac3917763df2f6d4a2b7f7ced4b3e843}{my\+\_\+library\+::\+Object\+Point\+To\+Direction}} (float2 now\+\_\+pos, float2 goal\+\_\+pos, float dir, float rot\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em 目標地点に向かうための角度調整計算 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_my_library_functions_8h_af70c818946d10344c99400a3fdaa7004}{my\+\_\+library\+::\+Camera\+Stop}} (float pos\+\_\+x, float pos\+\_\+y, float w, float h, float \&cam\+\_\+x, float \&cam\+\_\+y)
+\begin{DoxyCompactList}\small\item\em カメラの停止処理（ワールド境界内でキャラを追従） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_my_library_functions_8h_a79d60073bdbaa8b8e0b91c601764928a}{my\+\_\+library\+::\+Clamp\+Position\+To\+Area}} (float2 \&target\+\_\+pos, int target\+\_\+w, int target\+\_\+h, float area\+\_\+w, float area\+\_\+h)
+\begin{DoxyCompactList}\small\item\em 対象位置を指定領域内にクランプする \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_my_library_functions_8h_aa547c63786fd8ee09818f965b9709bc9}{my\+\_\+library\+::\+Check\+Point\+Box\+HitF}} (const float2 \&point, const float2 \&pos, const float2 \&size)
+\begin{DoxyCompactList}\small\item\em 浮動小数点版：点と矩形の当たり判定 \end{DoxyCompactList}\item 
+\Hypertarget{_my_library_functions_8h_a33c123d6269797d0228da5ffdd2d0aca}\label{_my_library_functions_8h_a33c123d6269797d0228da5ffdd2d0aca} 
+bool {\bfseries my\+\_\+library\+::\+Check\+Point\+Box\+Hit} (float point\+\_\+x, float point\+\_\+y, float box\+\_\+x, float box\+\_\+y, float box\+\_\+w, float box\+\_\+h)
+\begin{DoxyCompactList}\small\item\em 点と矩形の当たり判定（座標指定版） \end{DoxyCompactList}\item 
+\Hypertarget{_my_library_functions_8h_a16fd756dd8743046a310900329e1de6b}\label{_my_library_functions_8h_a16fd756dd8743046a310900329e1de6b} 
+bool {\bfseries my\+\_\+library\+::\+Check\+Box\+Hit} (float x1, float y1, float w1, float h1, float x2, float y2, float w2, float h2)
+\begin{DoxyCompactList}\small\item\em 矩形同士の当たり判定 \end{DoxyCompactList}\item 
+\Hypertarget{_my_library_functions_8h_a399fe08a8e4f1cf94dc06fd839851c99}\label{_my_library_functions_8h_a399fe08a8e4f1cf94dc06fd839851c99} 
+bool {\bfseries my\+\_\+library\+::\+Check\+Circle\+Hit} (float x1, float y1, float r1, float x2, float y2, float r2)
+\begin{DoxyCompactList}\small\item\em 円同士の当たり判定 \end{DoxyCompactList}\item 
+\Hypertarget{_my_library_functions_8h_a621372a86bfc3005571fd27eff84d6ea}\label{_my_library_functions_8h_a621372a86bfc3005571fd27eff84d6ea} 
+bool {\bfseries my\+\_\+library\+::\+Check\+Point\+Circle\+Hit} (float point\+\_\+x, float point\+\_\+y, float circle\+\_\+x, float circle\+\_\+y, float circle\+\_\+r)
+\begin{DoxyCompactList}\small\item\em 点と円の当たり判定 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_my_library_functions_8h_af01e746999fe08759849b137264ff478}{my\+\_\+library\+::\+To\+Radian}} (float degree)
+\begin{DoxyCompactList}\small\item\em 度をラジアンに変換する \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_my_library_functions_8h_a339bda10a663dfeaf0be4aa614f6a9e8}{my\+\_\+library\+::\+To\+Degree}} (float radian)
+\begin{DoxyCompactList}\small\item\em ラジアンを度に変換する \end{DoxyCompactList}\item 
+\Hypertarget{_my_library_functions_8h_a50b4fda0be57780b8691a7d3b97f96c4}\label{_my_library_functions_8h_a50b4fda0be57780b8691a7d3b97f96c4} 
+float {\bfseries my\+\_\+library\+::\+Get\+Length\+Along\+Rotation} (float rot)
+\begin{DoxyCompactList}\small\item\em 回転角から cos を取得（X 成分） \end{DoxyCompactList}\item 
+\Hypertarget{_my_library_functions_8h_a710e50495831d0418df53cdd19dd1522}\label{_my_library_functions_8h_a710e50495831d0418df53cdd19dd1522} 
+float {\bfseries my\+\_\+library\+::\+Get\+Length\+Opposite\+Rotation} (float rot)
+\begin{DoxyCompactList}\small\item\em 回転角から sin を取得（Y 成分） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_my_library_functions_8h_aef779f68d95d3abb3c8893bcbf786530}\label{_my_library_functions_8h_aef779f68d95d3abb3c8893bcbf786530} 
+constexpr int {\bfseries my\+\_\+library\+::\+MS\+\_\+\+PER\+\_\+\+SEC} = 1000
+\begin{DoxyCompactList}\small\item\em 1秒あたりのミリ秒 \end{DoxyCompactList}\item 
+\Hypertarget{_my_library_functions_8h_aecee5f1861bdacc101b8349e2f3f5132}\label{_my_library_functions_8h_aecee5f1861bdacc101b8349e2f3f5132} 
+constexpr int {\bfseries my\+\_\+library\+::\+MS\+\_\+\+PER\+\_\+\+MIN} = 60000
+\begin{DoxyCompactList}\small\item\em 1分あたりのミリ秒 \end{DoxyCompactList}\item 
+\Hypertarget{_my_library_functions_8h_aac1123ca1e98b5b650ea934bd9e37a91}\label{_my_library_functions_8h_aac1123ca1e98b5b650ea934bd9e37a91} 
+constexpr float {\bfseries my\+\_\+library\+::\+PI} = 3.\+14159265358979323846f
+\begin{DoxyCompactList}\small\item\em 円周率 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+汎用的なユーティリティ関数群の宣言 
+
+時間変換・ファイル操作・当たり判定などエンジン内部で再利用する 関数をまとめたヘルパー群です。 
+
+\label{doc-func-members}
+\Hypertarget{_my_library_functions_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_my_library_functions_8h_af70c818946d10344c99400a3fdaa7004}\index{MyLibraryFunctions.h@{MyLibraryFunctions.h}!CameraStop@{CameraStop}}
+\index{CameraStop@{CameraStop}!MyLibraryFunctions.h@{MyLibraryFunctions.h}}
+\doxysubsubsection{\texorpdfstring{CameraStop()}{CameraStop()}}
+{\footnotesize\ttfamily \label{_my_library_functions_8h_af70c818946d10344c99400a3fdaa7004} 
+void my\+\_\+library\+::\+Camera\+Stop (\begin{DoxyParamCaption}\item[{float}]{pos\+\_\+x}{, }\item[{float}]{pos\+\_\+y}{, }\item[{float}]{w}{, }\item[{float}]{h}{, }\item[{float \&}]{cam\+\_\+x}{, }\item[{float \&}]{cam\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+カメラの停止処理（ワールド境界内でキャラを追従） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em pos\+\_\+x} & 対象の\+X座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em pos\+\_\+y} & 対象の\+Y座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em w} & ワールド幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em h} & ワールド高さ \\
+\hline
+\mbox{\texttt{in,out}}  & {\em cam\+\_\+x} & カメラ\+X（変更される） \\
+\hline
+\mbox{\texttt{in,out}}  & {\em cam\+\_\+y} & カメラ\+Y（変更される） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_my_library_functions_8h_aa547c63786fd8ee09818f965b9709bc9}\index{MyLibraryFunctions.h@{MyLibraryFunctions.h}!CheckPointBoxHitF@{CheckPointBoxHitF}}
+\index{CheckPointBoxHitF@{CheckPointBoxHitF}!MyLibraryFunctions.h@{MyLibraryFunctions.h}}
+\doxysubsubsection{\texorpdfstring{CheckPointBoxHitF()}{CheckPointBoxHitF()}}
+{\footnotesize\ttfamily \label{_my_library_functions_8h_aa547c63786fd8ee09818f965b9709bc9} 
+bool my\+\_\+library\+::\+Check\+Point\+Box\+HitF (\begin{DoxyParamCaption}\item[{const float2 \&}]{point}{, }\item[{const float2 \&}]{pos}{, }\item[{const float2 \&}]{size}{}\end{DoxyParamCaption})}
+
+
+
+浮動小数点版：点と矩形の当たり判定 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em point} & 判定する点 \\
+\hline
+\mbox{\texttt{in}}  & {\em pos} & 矩形の左上座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em size} & 矩形のサイズ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_my_library_functions_8h_a79d60073bdbaa8b8e0b91c601764928a}\index{MyLibraryFunctions.h@{MyLibraryFunctions.h}!ClampPositionToArea@{ClampPositionToArea}}
+\index{ClampPositionToArea@{ClampPositionToArea}!MyLibraryFunctions.h@{MyLibraryFunctions.h}}
+\doxysubsubsection{\texorpdfstring{ClampPositionToArea()}{ClampPositionToArea()}}
+{\footnotesize\ttfamily \label{_my_library_functions_8h_a79d60073bdbaa8b8e0b91c601764928a} 
+void my\+\_\+library\+::\+Clamp\+Position\+To\+Area (\begin{DoxyParamCaption}\item[{float2 \&}]{target\+\_\+pos}{, }\item[{int}]{target\+\_\+w}{, }\item[{int}]{target\+\_\+h}{, }\item[{float}]{area\+\_\+w}{, }\item[{float}]{area\+\_\+h}{}\end{DoxyParamCaption})}
+
+
+
+対象位置を指定領域内にクランプする 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in,out}}  & {\em target\+\_\+pos} & 対象位置（変更される） \\
+\hline
+\mbox{\texttt{in}}  & {\em target\+\_\+w} & 対象幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em target\+\_\+h} & 対象高さ \\
+\hline
+\mbox{\texttt{in}}  & {\em area\+\_\+w} & 領域幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em area\+\_\+h} & 領域高さ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_my_library_functions_8h_a57628622976ab63c7a247532d7e12944}\index{MyLibraryFunctions.h@{MyLibraryFunctions.h}!ConvertMilliToMinute@{ConvertMilliToMinute}}
+\index{ConvertMilliToMinute@{ConvertMilliToMinute}!MyLibraryFunctions.h@{MyLibraryFunctions.h}}
+\doxysubsubsection{\texorpdfstring{ConvertMilliToMinute()}{ConvertMilliToMinute()}}
+{\footnotesize\ttfamily \label{_my_library_functions_8h_a57628622976ab63c7a247532d7e12944} 
+float my\+\_\+library\+::\+Convert\+Milli\+To\+Minute (\begin{DoxyParamCaption}\item[{int}]{milli}{}\end{DoxyParamCaption})}
+
+
+
+ミリ秒を分に変換する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em milli} & ミリ秒 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+分（float） 
+\end{DoxyReturn}
+\Hypertarget{_my_library_functions_8h_ab2ec42bb2ae81d508b0f70a5fe8cc87a}\index{MyLibraryFunctions.h@{MyLibraryFunctions.h}!ConvertMilliToSec@{ConvertMilliToSec}}
+\index{ConvertMilliToSec@{ConvertMilliToSec}!MyLibraryFunctions.h@{MyLibraryFunctions.h}}
+\doxysubsubsection{\texorpdfstring{ConvertMilliToSec()}{ConvertMilliToSec()}}
+{\footnotesize\ttfamily \label{_my_library_functions_8h_ab2ec42bb2ae81d508b0f70a5fe8cc87a} 
+float my\+\_\+library\+::\+Convert\+Milli\+To\+Sec (\begin{DoxyParamCaption}\item[{int}]{milli}{}\end{DoxyParamCaption})}
+
+
+
+ミリ秒を秒に変換する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em milli} & ミリ秒 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+秒（float） 
+\end{DoxyReturn}
+\Hypertarget{_my_library_functions_8h_a625ed9f2929dcb45c1a0fb06e47f628b}\index{MyLibraryFunctions.h@{MyLibraryFunctions.h}!GetFileExtension@{GetFileExtension}}
+\index{GetFileExtension@{GetFileExtension}!MyLibraryFunctions.h@{MyLibraryFunctions.h}}
+\doxysubsubsection{\texorpdfstring{GetFileExtension()}{GetFileExtension()}}
+{\footnotesize\ttfamily \label{_my_library_functions_8h_a625ed9f2929dcb45c1a0fb06e47f628b} 
+std\+::string my\+\_\+library\+::\+Get\+File\+Extension (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filepath}{}\end{DoxyParamCaption})}
+
+
+
+ファイルパスから拡張子を取り出す 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em filepath} & ファイルパス（\+C文字列、nullptr非対応） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+拡張子（見つからなければ空文字） 
+\end{DoxyReturn}
+\Hypertarget{_my_library_functions_8h_aac3917763df2f6d4a2b7f7ced4b3e843}\index{MyLibraryFunctions.h@{MyLibraryFunctions.h}!ObjectPointToDirection@{ObjectPointToDirection}}
+\index{ObjectPointToDirection@{ObjectPointToDirection}!MyLibraryFunctions.h@{MyLibraryFunctions.h}}
+\doxysubsubsection{\texorpdfstring{ObjectPointToDirection()}{ObjectPointToDirection()}}
+{\footnotesize\ttfamily \label{_my_library_functions_8h_aac3917763df2f6d4a2b7f7ced4b3e843} 
+float my\+\_\+library\+::\+Object\+Point\+To\+Direction (\begin{DoxyParamCaption}\item[{float2}]{now\+\_\+pos}{, }\item[{float2}]{goal\+\_\+pos}{, }\item[{float}]{dir}{, }\item[{float}]{rot\+\_\+speed}{}\end{DoxyParamCaption})}
+
+
+
+目標地点に向かうための角度調整計算 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em now\+\_\+pos} & 現在位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em goal\+\_\+pos} & 目標位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em dir} & 現在の角度（ラジアン） \\
+\hline
+\mbox{\texttt{in}}  & {\em rot\+\_\+speed} & 1フレームあたりの最大回転量（度） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+新しい角度（ラジアン） 
+\end{DoxyReturn}
+\Hypertarget{_my_library_functions_8h_a339bda10a663dfeaf0be4aa614f6a9e8}\index{MyLibraryFunctions.h@{MyLibraryFunctions.h}!ToDegree@{ToDegree}}
+\index{ToDegree@{ToDegree}!MyLibraryFunctions.h@{MyLibraryFunctions.h}}
+\doxysubsubsection{\texorpdfstring{ToDegree()}{ToDegree()}}
+{\footnotesize\ttfamily \label{_my_library_functions_8h_a339bda10a663dfeaf0be4aa614f6a9e8} 
+float my\+\_\+library\+::\+To\+Degree (\begin{DoxyParamCaption}\item[{float}]{radian}{}\end{DoxyParamCaption})}
+
+
+
+ラジアンを度に変換する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em radian} & ラジアン \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+度 
+\end{DoxyReturn}
+\Hypertarget{_my_library_functions_8h_af01e746999fe08759849b137264ff478}\index{MyLibraryFunctions.h@{MyLibraryFunctions.h}!ToRadian@{ToRadian}}
+\index{ToRadian@{ToRadian}!MyLibraryFunctions.h@{MyLibraryFunctions.h}}
+\doxysubsubsection{\texorpdfstring{ToRadian()}{ToRadian()}}
+{\footnotesize\ttfamily \label{_my_library_functions_8h_af01e746999fe08759849b137264ff478} 
+float my\+\_\+library\+::\+To\+Radian (\begin{DoxyParamCaption}\item[{float}]{degree}{}\end{DoxyParamCaption})}
+
+
+
+度をラジアンに変換する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em degree} & 度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+ラジアン 
+\end{DoxyReturn}

@@ -1,0 +1,170 @@
+\doxysection{UI\+::Bpm\+Grid\+Object クラス}
+\hypertarget{class_u_i_1_1_bpm_grid_object}{}\label{class_u_i_1_1_bpm_grid_object}\index{UI::BpmGridObject@{UI::BpmGridObject}}
+
+
+BPMグリッド描画用オブジェクト  
+
+
+
+
+{\ttfamily \#include $<$Bpm\+Grid\+Object.\+h$>$}
+
+UI\+::Bpm\+Grid\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_bpm_grid_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_bpm_grid_object_af224d4db8f6b83b57d89e33382988bdf}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_bpm_grid_object_a2ddea53462f8df026b8a9f28bd8d99a4}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_bpm_grid_object_a399c70861693cbaabd21f5a4a69efefb}{Set\+Max\+Play\+Time}} (int max\+\_\+play\+\_\+time\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em 最大再生時間を設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_bpm_grid_object_ad0db15c25639fa647316e9521d3e803a}{Set\+Zoom}} (float zoom)
+\begin{DoxyCompactList}\small\item\em ズーム率を設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_bpm_grid_object_acb74544db4f4a7e2df28e5b345988f9d}{Set\+ScrollY}} (int scroll\+\_\+y)
+\begin{DoxyCompactList}\small\item\em スクロール量（\+Y）を設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_bpm_grid_object_a2e4351a21998811507545113545aa0ea}{Set\+Bpm}} (int bpm)
+\begin{DoxyCompactList}\small\item\em BPMを設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}{On\+Draw}} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a1ac2a73147f469ff7371971560a4dd0a}{On\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71}{On\+End}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+BPMグリッド描画用オブジェクト 
+
+シーンに配置して\+BPMに合わせたグリッド線を描画する処理を持つ \doxylink{class_game_object}{Game\+Object} 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_bpm_grid_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_bpm_grid_object_a2ddea53462f8df026b8a9f28bd8d99a4}\index{UI::BpmGridObject@{UI::BpmGridObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!UI::BpmGridObject@{UI::BpmGridObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_bpm_grid_object_a2ddea53462f8df026b8a9f28bd8d99a4} 
+void UI\+::\+Bpm\+Grid\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_bpm_grid_object_af224d4db8f6b83b57d89e33382988bdf}\index{UI::BpmGridObject@{UI::BpmGridObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!UI::BpmGridObject@{UI::BpmGridObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_bpm_grid_object_af224d4db8f6b83b57d89e33382988bdf} 
+void UI\+::\+Bpm\+Grid\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_bpm_grid_object_a2e4351a21998811507545113545aa0ea}\index{UI::BpmGridObject@{UI::BpmGridObject}!SetBpm@{SetBpm}}
+\index{SetBpm@{SetBpm}!UI::BpmGridObject@{UI::BpmGridObject}}
+\doxysubsubsection{\texorpdfstring{SetBpm()}{SetBpm()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_bpm_grid_object_a2e4351a21998811507545113545aa0ea} 
+void UI\+::\+Bpm\+Grid\+Object\+::\+Set\+Bpm (\begin{DoxyParamCaption}\item[{int}]{bpm}{}\end{DoxyParamCaption})}
+
+
+
+BPMを設定 
+
+
+\begin{DoxyParams}{引数}
+{\em bpm} & BPM値 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_bpm_grid_object_a399c70861693cbaabd21f5a4a69efefb}\index{UI::BpmGridObject@{UI::BpmGridObject}!SetMaxPlayTime@{SetMaxPlayTime}}
+\index{SetMaxPlayTime@{SetMaxPlayTime}!UI::BpmGridObject@{UI::BpmGridObject}}
+\doxysubsubsection{\texorpdfstring{SetMaxPlayTime()}{SetMaxPlayTime()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_bpm_grid_object_a399c70861693cbaabd21f5a4a69efefb} 
+void UI\+::\+Bpm\+Grid\+Object\+::\+Set\+Max\+Play\+Time (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+play\+\_\+time\+\_\+ms}{}\end{DoxyParamCaption})}
+
+
+
+最大再生時間を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em max\+\_\+play\+\_\+time\+\_\+ms} & 最大再生時間（ミリ秒） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_bpm_grid_object_acb74544db4f4a7e2df28e5b345988f9d}\index{UI::BpmGridObject@{UI::BpmGridObject}!SetScrollY@{SetScrollY}}
+\index{SetScrollY@{SetScrollY}!UI::BpmGridObject@{UI::BpmGridObject}}
+\doxysubsubsection{\texorpdfstring{SetScrollY()}{SetScrollY()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_bpm_grid_object_acb74544db4f4a7e2df28e5b345988f9d} 
+void UI\+::\+Bpm\+Grid\+Object\+::\+Set\+ScrollY (\begin{DoxyParamCaption}\item[{int}]{scroll\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+スクロール量（\+Y）を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em scroll\+\_\+y} & スクロール量\+Y（ピクセル） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_bpm_grid_object_ad0db15c25639fa647316e9521d3e803a}\index{UI::BpmGridObject@{UI::BpmGridObject}!SetZoom@{SetZoom}}
+\index{SetZoom@{SetZoom}!UI::BpmGridObject@{UI::BpmGridObject}}
+\doxysubsubsection{\texorpdfstring{SetZoom()}{SetZoom()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_bpm_grid_object_ad0db15c25639fa647316e9521d3e803a} 
+void UI\+::\+Bpm\+Grid\+Object\+::\+Set\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom}{}\end{DoxyParamCaption})}
+
+
+
+ズーム率を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em zoom} & ズーム率 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Bpm\+Grid\+Object.\+h\end{DoxyCompactItemize}

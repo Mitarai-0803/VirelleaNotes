@@ -1,0 +1,179 @@
+\doxysection{UI\+::Music\+Play\+Button クラス}
+\hypertarget{class_u_i_1_1_music_play_button}{}\label{class_u_i_1_1_music_play_button}\index{UI::MusicPlayButton@{UI::MusicPlayButton}}
+UI\+::Music\+Play\+Button の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_i_1_1_music_play_button}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_music_play_button_a19b0b19f5296253bbaa3658ea283d0be}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_music_play_button_aa7f8dba50b4e14d10af0cf210fe75568}{On\+Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_music_play_button_aba083dbf9ba6406839d7393734413fa3}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_music_play_button_a22eaa5e669dbff8b6762ece068f0e1dc}{On\+End}} () override
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_music_play_button_aa49715b8f7f0965d804daa71af511d5a}\label{class_u_i_1_1_music_play_button_aa49715b8f7f0965d804daa71af511d5a} 
+void {\bfseries Set\+Handle} (int music\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em 音源のハンドルを設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_music_play_button_ac6e27f1c2df91ef336cd8f0e29efd785}{Set\+Volume}} (int volume)
+\begin{DoxyCompactList}\small\item\em 音源の音量を設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_u_i_1_1_image_button}{UI\+::\+Image\+Button}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Image\+Button} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i_1_1_image_button_aae08644cce92054af4f69feced4aa2a7}{\texorpdfstring{$\sim$}{\string~}\+Image\+Button}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a8e992795bc57ad682542e19f82a5e08e}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a9170b6b84f0003f6bb7b631781182407}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a5fd42e7e4a5b0bf9934d6c263e177c8c}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a69eb507707e74e7d1212b9737d56e2b8}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a4062aadf2bacbdaf26df927397ce7b29}{Set\+Input\+Type}} (\mbox{\hyperlink{namespace_u_i_affcf34a86c565c323b4be7a7ae0d3a8e}{Button\+Input\+Type}} type)
+\begin{DoxyCompactList}\small\item\em 入力タイプの設定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_u_i_1_1_image_button_a4a5bfac5145f80aaece60c9e83ec3d62}{Is\+On}} () const
+\begin{DoxyCompactList}\small\item\em ONかどうか判定 \end{DoxyCompactList}\item 
+void {\bfseries Set\+On} ()
+\begin{DoxyCompactList}\small\item\em ON状態に変更 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Off} ()
+\begin{DoxyCompactList}\small\item\em OFF状態に変更 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a83887780fb22cf81536020cd54010e9b}{Set\+Button\+Image}} (const char \texorpdfstring{$\ast$}{*}img\+\_\+on, const char \texorpdfstring{$\ast$}{*}img\+\_\+off=nullptr, const \mbox{\hyperlink{struct_float_pos}{Float\+Pos}} \&pos=\{ 0.\+0f, 0.\+0f \})
+\begin{DoxyCompactList}\small\item\em ボタン画像の設定 \end{DoxyCompactList}\item 
+void {\bfseries Reset\+Click} ()
+\begin{DoxyCompactList}\small\item\em 前クリック状態リセット \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}{On\+Draw}} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_u_i_1_1_image_button}{UI\+::\+Image\+Button}} に属する継承限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_float_pos}{Float\+Pos}} {\bfseries pos\+\_\+} \{ 0.\+0f, 0.\+0f \}
+\begin{DoxyCompactList}\small\item\em ボタン中央位置 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_float_size}{Float\+Size}} {\bfseries size\+\_\+} \{ 0.\+0f,0.\+0f \}
+\begin{DoxyCompactList}\small\item\em ボタンサイズ（幅・高さ） \end{DoxyCompactList}\item 
+int {\bfseries image\+\_\+off\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em OFF状態用画像ハンドル \end{DoxyCompactList}\item 
+int {\bfseries image\+\_\+on\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em ON状態用画像ハンドル \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_u_i_affcf34a86c565c323b4be7a7ae0d3a8e}{Button\+Input\+Type}} {\bfseries input\+\_\+type\+\_\+} = \mbox{\hyperlink{namespace_u_i_affcf34a86c565c323b4be7a7ae0d3a8ea1252c45651289c0b553a30d27bb5ae9b}{Button\+Input\+Type\+::\+TOGGLE}}
+\begin{DoxyCompactList}\small\item\em 入力タイプ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_u_i_aa228d368de3b96b402f849e8bec164d7}{Button\+State}} {\bfseries state\+\_\+} = \mbox{\hyperlink{namespace_u_i_aa228d368de3b96b402f849e8bec164d7a88559a0cfd8250c9d65970cc145c92d4}{Button\+State\+::\+OFF}}
+\begin{DoxyCompactList}\small\item\em ボタンの状態 \end{DoxyCompactList}\item 
+bool {\bfseries was\+\_\+pressed\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em 前フレームのクリック状態 \end{DoxyCompactList}\item 
+float {\bfseries scale\+\_\+} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em 描画スケール（ホバー時変化） \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_music_play_button_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_music_play_button_aba083dbf9ba6406839d7393734413fa3}\index{UI::MusicPlayButton@{UI::MusicPlayButton}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!UI::MusicPlayButton@{UI::MusicPlayButton}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_music_play_button_aba083dbf9ba6406839d7393734413fa3} 
+void UI\+::\+Music\+Play\+Button\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_music_play_button_a22eaa5e669dbff8b6762ece068f0e1dc}\index{UI::MusicPlayButton@{UI::MusicPlayButton}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!UI::MusicPlayButton@{UI::MusicPlayButton}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_music_play_button_a22eaa5e669dbff8b6762ece068f0e1dc} 
+void UI\+::\+Music\+Play\+Button\+::\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_music_play_button_a19b0b19f5296253bbaa3658ea283d0be}\index{UI::MusicPlayButton@{UI::MusicPlayButton}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!UI::MusicPlayButton@{UI::MusicPlayButton}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_music_play_button_a19b0b19f5296253bbaa3658ea283d0be} 
+void UI\+::\+Music\+Play\+Button\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_music_play_button_aa7f8dba50b4e14d10af0cf210fe75568}\index{UI::MusicPlayButton@{UI::MusicPlayButton}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!UI::MusicPlayButton@{UI::MusicPlayButton}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_music_play_button_aa7f8dba50b4e14d10af0cf210fe75568} 
+void UI\+::\+Music\+Play\+Button\+::\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_music_play_button_ac6e27f1c2df91ef336cd8f0e29efd785}\index{UI::MusicPlayButton@{UI::MusicPlayButton}!SetVolume@{SetVolume}}
+\index{SetVolume@{SetVolume}!UI::MusicPlayButton@{UI::MusicPlayButton}}
+\doxysubsubsection{\texorpdfstring{SetVolume()}{SetVolume()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_music_play_button_ac6e27f1c2df91ef336cd8f0e29efd785} 
+void UI\+::\+Music\+Play\+Button\+::\+Set\+Volume (\begin{DoxyParamCaption}\item[{int}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+音源の音量を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em volume} & 設定する音量 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Music\+Play\+Button.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,174 @@
+\doxysection{UI\+::Draw\+Format\+Strign\+Object クラス}
+\hypertarget{class_u_i_1_1_draw_format_strign_object}{}\label{class_u_i_1_1_draw_format_strign_object}\index{UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}}
+
+
+書式付き文字列オブジェクト  
+
+
+
+
+{\ttfamily \#include $<$Draw\+Format\+Strign\+Object.\+h$>$}
+
+UI\+::Draw\+Format\+Strign\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_draw_format_strign_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_format_strign_object_a55ae77ad7ae7abccc75012b2643dde07}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_format_strign_object_a0dcc9fe35507a8bbc01ca97b716a822d}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_format_strign_object_a8fdc82dfe7e6a10a773df6883a18f946}{Set\+Format\+Strign}} (std\+::string string, float param)
+\begin{DoxyCompactList}\small\item\em 書式付き文字列を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_format_strign_object_a46ed26f00cc2b75fb747db6b3e269c95}{Set\+Pos}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em 座標を設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_format_strign_object_a63e671e0fd9133885425d4e49ec525e3}{Set\+Color}} (unsigned int color)
+\begin{DoxyCompactList}\small\item\em 色を設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_format_strign_object_a7c5aaa64bcab31802295200750d301e2}{Set\+Font\+Handle}} (const int handle)
+\begin{DoxyCompactList}\small\item\em フォントデータを設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}{On\+Draw}} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a1ac2a73147f469ff7371971560a4dd0a}{On\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71}{On\+End}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+書式付き文字列オブジェクト 
+
+書式付きで文字列を出力(描画)する。 あるならフォントも指定できる 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_draw_format_strign_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_draw_format_strign_object_a0dcc9fe35507a8bbc01ca97b716a822d}\index{UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_format_strign_object_a0dcc9fe35507a8bbc01ca97b716a822d} 
+void UI\+::\+Draw\+Format\+Strign\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_draw_format_strign_object_a55ae77ad7ae7abccc75012b2643dde07}\index{UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_format_strign_object_a55ae77ad7ae7abccc75012b2643dde07} 
+void UI\+::\+Draw\+Format\+Strign\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_draw_format_strign_object_a63e671e0fd9133885425d4e49ec525e3}\index{UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_format_strign_object_a63e671e0fd9133885425d4e49ec525e3} 
+void UI\+::\+Draw\+Format\+Strign\+Object\+::\+Set\+Color (\begin{DoxyParamCaption}\item[{unsigned int}]{color}{}\end{DoxyParamCaption})}
+
+
+
+色を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em color} & 色 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_draw_format_strign_object_a7c5aaa64bcab31802295200750d301e2}\index{UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}!SetFontHandle@{SetFontHandle}}
+\index{SetFontHandle@{SetFontHandle}!UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}}
+\doxysubsubsection{\texorpdfstring{SetFontHandle()}{SetFontHandle()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_format_strign_object_a7c5aaa64bcab31802295200750d301e2} 
+void UI\+::\+Draw\+Format\+Strign\+Object\+::\+Set\+Font\+Handle (\begin{DoxyParamCaption}\item[{const int}]{handle}{}\end{DoxyParamCaption})}
+
+
+
+フォントデータを設定 
+
+
+\begin{DoxyParams}{引数}
+{\em handle} & フォント \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_draw_format_strign_object_a8fdc82dfe7e6a10a773df6883a18f946}\index{UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}!SetFormatStrign@{SetFormatStrign}}
+\index{SetFormatStrign@{SetFormatStrign}!UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}}
+\doxysubsubsection{\texorpdfstring{SetFormatStrign()}{SetFormatStrign()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_format_strign_object_a8fdc82dfe7e6a10a773df6883a18f946} 
+void UI\+::\+Draw\+Format\+Strign\+Object\+::\+Set\+Format\+Strign (\begin{DoxyParamCaption}\item[{std\+::string}]{string}{, }\item[{float}]{param}{}\end{DoxyParamCaption})}
+
+
+
+書式付き文字列を取得 
+
+
+\begin{DoxyParams}{引数}
+{\em string} & 文字列 \\
+\hline
+{\em param} & パラメータ値 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_draw_format_strign_object_a46ed26f00cc2b75fb747db6b3e269c95}\index{UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}!SetPos@{SetPos}}
+\index{SetPos@{SetPos}!UI::DrawFormatStrignObject@{UI::DrawFormatStrignObject}}
+\doxysubsubsection{\texorpdfstring{SetPos()}{SetPos()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_format_strign_object_a46ed26f00cc2b75fb747db6b3e269c95} 
+void UI\+::\+Draw\+Format\+Strign\+Object\+::\+Set\+Pos (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+座標を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em x} & X座標 \\
+\hline
+{\em y} & Y座標 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/自作ゲーム/音ゲー制作エンジン/src/Draw\+Format\+Strign\+Object.\+h\end{DoxyCompactItemize}

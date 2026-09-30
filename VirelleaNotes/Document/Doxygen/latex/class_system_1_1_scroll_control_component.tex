@@ -1,0 +1,166 @@
+\doxysection{System\+::Scroll\+Control\+Component クラス}
+\hypertarget{class_system_1_1_scroll_control_component}{}\label{class_system_1_1_scroll_control_component}\index{System::ScrollControlComponent@{System::ScrollControlComponent}}
+
+
+スクロール制御コンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Scroll\+Control\+Component.\+h$>$}
+
+System\+::Scroll\+Control\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_system_1_1_scroll_control_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_1_1_scroll_control_component_aac8cda838f0a2e10bbccbd1c5555d273}\label{class_system_1_1_scroll_control_component_aac8cda838f0a2e10bbccbd1c5555d273} 
+{\bfseries Scroll\+Control\+Component} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_scroll_control_component_a40ff73f1a9d9a5bab238c7e26e4a76d4}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_scroll_control_component_acceb7b85711347a0f98127cb733aeb92}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_scroll_control_component_ab097d10aa889b58c0ef65349efad92cd}{Set\+Content\+Height}} (int height)
+\begin{DoxyCompactList}\small\item\em コンテンツ全体の高さを設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_scroll_control_component_a554cbf9c293833d2c42fc93529f20b0c}{Set\+View\+Height}} (int height)
+\begin{DoxyCompactList}\small\item\em 表示領域の高さを設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_scroll_control_component_af8b01756d446f72677240ca65b98fed7}{Set\+Scroll\+Speed}} (int speed)
+\begin{DoxyCompactList}\small\item\em スクロール速度を設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_1_1_scroll_control_component_a8d49bfc377b946301aeba3b0eabfba92}{Set\+Bar\+Position}} (int x, int width)
+\begin{DoxyCompactList}\small\item\em バーの位置と幅を設定 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_system_1_1_scroll_control_component_a48aa2409f0b89a789a6edc5af4b4770d}{Get\+Scroll}} () const
+\begin{DoxyCompactList}\small\item\em スクロール位置を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_base_a24e99a122f01df33d2914cd8e5abff63}{Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_component_base_a4c25df37cf7ca24e8cd55889bab19aef}{‾\+Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+スクロール制御コンポーネント 
+
+コンテンツ領域と表示領域の高さに基づき、 スクロール位置やスクロールバーを自動的に管理する 
+
+\label{doc-func-members}
+\Hypertarget{class_system_1_1_scroll_control_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_system_1_1_scroll_control_component_acceb7b85711347a0f98127cb733aeb92}\index{System::ScrollControlComponent@{System::ScrollControlComponent}!Draw@{Draw}}
+\index{Draw@{Draw}!System::ScrollControlComponent@{System::ScrollControlComponent}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_system_1_1_scroll_control_component_acceb7b85711347a0f98127cb733aeb92} 
+void System\+::\+Scroll\+Control\+Component\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_system_1_1_scroll_control_component_a48aa2409f0b89a789a6edc5af4b4770d}\index{System::ScrollControlComponent@{System::ScrollControlComponent}!GetScroll@{GetScroll}}
+\index{GetScroll@{GetScroll}!System::ScrollControlComponent@{System::ScrollControlComponent}}
+\doxysubsubsection{\texorpdfstring{GetScroll()}{GetScroll()}}
+{\footnotesize\ttfamily \label{class_system_1_1_scroll_control_component_a48aa2409f0b89a789a6edc5af4b4770d} 
+int System\+::\+Scroll\+Control\+Component\+::\+Get\+Scroll (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+スクロール位置を取得 
+
+\begin{DoxyReturn}{戻り値}
+現在のスクロール値（バーの位置） 
+\end{DoxyReturn}
+\Hypertarget{class_system_1_1_scroll_control_component_a8d49bfc377b946301aeba3b0eabfba92}\index{System::ScrollControlComponent@{System::ScrollControlComponent}!SetBarPosition@{SetBarPosition}}
+\index{SetBarPosition@{SetBarPosition}!System::ScrollControlComponent@{System::ScrollControlComponent}}
+\doxysubsubsection{\texorpdfstring{SetBarPosition()}{SetBarPosition()}}
+{\footnotesize\ttfamily \label{class_system_1_1_scroll_control_component_a8d49bfc377b946301aeba3b0eabfba92} 
+void System\+::\+Scroll\+Control\+Component\+::\+Set\+Bar\+Position (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{width}{}\end{DoxyParamCaption})}
+
+
+
+バーの位置と幅を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em x} & バーの\+X座標 \\
+\hline
+{\em width} & バーの幅 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_system_1_1_scroll_control_component_ab097d10aa889b58c0ef65349efad92cd}\index{System::ScrollControlComponent@{System::ScrollControlComponent}!SetContentHeight@{SetContentHeight}}
+\index{SetContentHeight@{SetContentHeight}!System::ScrollControlComponent@{System::ScrollControlComponent}}
+\doxysubsubsection{\texorpdfstring{SetContentHeight()}{SetContentHeight()}}
+{\footnotesize\ttfamily \label{class_system_1_1_scroll_control_component_ab097d10aa889b58c0ef65349efad92cd} 
+void System\+::\+Scroll\+Control\+Component\+::\+Set\+Content\+Height (\begin{DoxyParamCaption}\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+コンテンツ全体の高さを設定 
+
+
+\begin{DoxyParams}{引数}
+{\em height} & コンテンツの高さ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_system_1_1_scroll_control_component_af8b01756d446f72677240ca65b98fed7}\index{System::ScrollControlComponent@{System::ScrollControlComponent}!SetScrollSpeed@{SetScrollSpeed}}
+\index{SetScrollSpeed@{SetScrollSpeed}!System::ScrollControlComponent@{System::ScrollControlComponent}}
+\doxysubsubsection{\texorpdfstring{SetScrollSpeed()}{SetScrollSpeed()}}
+{\footnotesize\ttfamily \label{class_system_1_1_scroll_control_component_af8b01756d446f72677240ca65b98fed7} 
+void System\+::\+Scroll\+Control\+Component\+::\+Set\+Scroll\+Speed (\begin{DoxyParamCaption}\item[{int}]{speed}{}\end{DoxyParamCaption})}
+
+
+
+スクロール速度を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em speed} & 1回の操作あたりのスクロール量 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_system_1_1_scroll_control_component_a554cbf9c293833d2c42fc93529f20b0c}\index{System::ScrollControlComponent@{System::ScrollControlComponent}!SetViewHeight@{SetViewHeight}}
+\index{SetViewHeight@{SetViewHeight}!System::ScrollControlComponent@{System::ScrollControlComponent}}
+\doxysubsubsection{\texorpdfstring{SetViewHeight()}{SetViewHeight()}}
+{\footnotesize\ttfamily \label{class_system_1_1_scroll_control_component_a554cbf9c293833d2c42fc93529f20b0c} 
+void System\+::\+Scroll\+Control\+Component\+::\+Set\+View\+Height (\begin{DoxyParamCaption}\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+
+
+表示領域の高さを設定 
+
+
+\begin{DoxyParams}{引数}
+{\em height} & 表示可能な高さ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_system_1_1_scroll_control_component_a40ff73f1a9d9a5bab238c7e26e4a76d4}\index{System::ScrollControlComponent@{System::ScrollControlComponent}!Update@{Update}}
+\index{Update@{Update}!System::ScrollControlComponent@{System::ScrollControlComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_system_1_1_scroll_control_component_a40ff73f1a9d9a5bab238c7e26e4a76d4} 
+void System\+::\+Scroll\+Control\+Component\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+
+
+\mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Component\+Base}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Scroll\+Control\+Component.\+h\end{DoxyCompactItemize}

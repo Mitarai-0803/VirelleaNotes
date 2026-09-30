@@ -1,0 +1,97 @@
+\doxysection{Component\+Target\+Tracking.\+h}
+\hypertarget{_component_target_tracking_8h_source}{}\label{_component_target_tracking_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentTargetTracking.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentTargetTracking.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_8h}{System/Component/Component.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_cereal_8h}{System/Cereal.h}}>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ USING\_PTR(\mbox{\hyperlink{class_component_target_tracking}{ComponentTargetTracking}});}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }ComponentTargetTracking\ :\ \textcolor{keyword}{public}\ Component}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{_component_8h_a544c31f98b90b38818b27eff6683eef6}{BP\_COMPONENT\_DECL}}(ComponentTargetTracking,\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}TargetTracking機能クラス"{}});}
+\DoxyCodeLine{00012\ \ \ \ \ ComponentTargetTracking()\ \{\}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_a76b59fd0afa913346f02fc7f782ef23b}{Init}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_ad0912897c771df1cf4ba58662e4a214b}{PreUpdate}}()\ \textcolor{keyword}{override};\ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_adfaede86934160a6161c74dc3cf562c8}{PostUpdate}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_addd4d95b960a721a8bcb1199904724e1}{Draw}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_ac137eb92824e90b3c4c3d3890bcefa78}{Exit}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_a5d2cb277f8f277a114b51b9dbb954e6d}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_aae6698280230239197a773e5cf538131}{SetTargetObjectPtr}}(ObjectWeakPtr\ obj);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_addcbd3cd335d4db25ddff5ad5aab7e4e}{SetTargetObjectPtr}}(\textcolor{keyword}{const}\ std::string\_view\ obj\_name);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00031\ \ \ \ \ ObjectPtr\ \mbox{\hyperlink{class_component_target_tracking_a59adf20bc856a293e1b741e0bfbb572c}{GetTargetObjectPtr}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_ad81e038c85c83342a1a4100dc95219ec}{SetTargetPoint}}(float3\ target);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_a3e07b9e006288545cef57b9124cc87c5}{SetTrackingNode}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_af639925b2c85f220c73d391ff6ec36dc}{SetTrackingNode}}(\textcolor{keywordtype}{int}\ tracking\_node\_index);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_abb0d359cde66787cc48d8ca13ff320c6}{SetTrackingLimitLeftRight}}(float2\ left\_right);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_a4116f845b7e81bb1d90f20555a5dfeb3}{SetTrackingLimitUpDown}}(float2\ up\_down);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_a5e624bf9c9d54da462d112cf699d3e2e}{SetTrackingFrameLimit}}(\textcolor{keywordtype}{float}\ limit);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_target_tracking_aa008ef47e8a1fcec755b6d488da3adbb}{SetFrontVector}}(float3\ vec);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{enum\ struct}\ \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2c}{TrackingBit}}\ :\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca59d87a4758a9d35fbaf6b204341bb399}{Initialized}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca0ad455c0d6af3a8d5547cf5dec6fbd0f}{LimitAxisY}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca0e75e4edd21b61adc096ff537f335a25}{LimitAxisX}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca5746081740b464ca842f220ff58a78c5}{ObjectTracking}},\ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ SetTrackingStatus(\mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2c}{TrackingBit}}\ bit,\ \textcolor{keywordtype}{bool}\ on)\ \{\ tracking\_status\_.set(bit,\ on);\ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ GetTrackingStatus(\mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2c}{TrackingBit}}\ bit)\ \{\ \textcolor{keywordflow}{return}\ tracking\_status\_.is(bit);\ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \ \ Status<TrackingBit>\ tracking\_status\_;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ std::string\ \ \ \ \ \ \ \ \ tracked\_node\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tracked\_node\_index\_\ =\ -\/1;\ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \ \ front\_vector\_\ \ \ \ \ \ \ =\ \{0,\ 0,\ -\/1\};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ float3\ look\_at\_\ \ \ \ \ =\ \{0,\ 0,\ 0\};\ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ float2\ limit\_lr\_\ \ \ \ =\ \{70,\ 70\};}
+\DoxyCodeLine{00083\ \ \ \ \ float2\ limit\_ud\_\ \ \ \ =\ \{50,\ 50\};}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{float}\ \ limit\_frame\_\ =\ 5.0;}
+\DoxyCodeLine{00085\ \ \ \ \ float2\ now\_rot\_\ \ \ \ \ =\ \{0,\ 0\};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ matrix\ tracking\_matrix\_\ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ ObjectWeakPtr\ \ \ \ \ \ \ \ \ tracking\_object\_\{\};\ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ ComponentModelWeakPtr\ owner\_model\_\{\};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{comment}{//\ @param\ arc\ アーカイバ}}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{comment}{//\ @param\ ver\ バージョン}}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{_cereal_8h_a7df5c4a4fa530d0bf2831fc2180f0386}{CEREAL\_SAVELOAD}}(arc,\ ver)}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}owner"{}},\ \mbox{\hyperlink{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}{owner\_}}));\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//<\ オーナー}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}tracking\_status"{}},\ tracking\_status\_.get()));\ \ \ \ \textcolor{comment}{//<\ カメラステート}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(tracked\_node\_),\ CEREAL\_NVP(tracked\_node\_index\_));}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(front\_vector\_));}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(tracking\_object\_),\ CEREAL\_NVP(look\_at\_));\ \ \ \ \textcolor{comment}{//<\ カメラ位置とターゲット}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(limit\_lr\_),\ CEREAL\_NVP(limit\_ud\_),\ CEREAL\_NVP(limit\_frame\_));}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_target_tracking_a3e07b9e006288545cef57b9124cc87c5}{SetTrackingNode}}(tracked\_node\_);}
+\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ CEREAL\_REGISTER\_TYPE(\mbox{\hyperlink{class_component_target_tracking}{ComponentTargetTracking}})}
+\DoxyCodeLine{00116\ CEREAL\_REGISTER\_POLYMORPHIC\_RELATION(\mbox{\hyperlink{class_component}{Component}},\ \mbox{\hyperlink{class_component_target_tracking}{ComponentTargetTracking}})}
+
+\end{DoxyCode}

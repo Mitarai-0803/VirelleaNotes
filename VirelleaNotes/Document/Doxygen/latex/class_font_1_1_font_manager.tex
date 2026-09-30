@@ -1,0 +1,64 @@
+\doxysection{Font\+::Font\+Manager クラス}
+\hypertarget{class_font_1_1_font_manager}{}\label{class_font_1_1_font_manager}\index{Font::FontManager@{Font::FontManager}}
+
+
+フォントを管理するクラスの宣言  
+
+
+
+
+{\ttfamily \#include $<$Font.\+h$>$}
+
+
+
+Font\+::Font\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_font_1_1_font_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_font_1_1_font_manager_ade55075c2825863e67b90afb1be1917c}\label{class_font_1_1_font_manager_ade55075c2825863e67b90afb1be1917c} 
+static void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em フォント初期化 \end{DoxyCompactList}\item 
+\Hypertarget{class_font_1_1_font_manager_a4848cb6d5922373678f6a62afd0f5c0d}\label{class_font_1_1_font_manager_a4848cb6d5922373678f6a62afd0f5c0d} 
+static void {\bfseries Exit} ()
+\begin{DoxyCompactList}\small\item\em フォント解放 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_font_1_1_font_manager_a1da6dd677c6a95fec42c3a046b2bb849}{Get\+Font}} (int font\+\_\+index)
+\begin{DoxyCompactList}\small\item\em フォントハンドル取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+フォントを管理するクラスの宣言 
+
+フォントハンドル配列をプライベートメンバとして保持し、 初期化・解放・取得処理を提供する 
+
+\label{doc-func-members}
+\Hypertarget{class_font_1_1_font_manager_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_font_1_1_font_manager_a1da6dd677c6a95fec42c3a046b2bb849}\index{Font::FontManager@{Font::FontManager}!GetFont@{GetFont}}
+\index{GetFont@{GetFont}!Font::FontManager@{Font::FontManager}}
+\doxysubsubsection{\texorpdfstring{GetFont()}{GetFont()}}
+{\footnotesize\ttfamily \label{class_font_1_1_font_manager_a1da6dd677c6a95fec42c3a046b2bb849} 
+int Font\+::\+Font\+Manager\+::\+Get\+Font (\begin{DoxyParamCaption}\item[{int}]{font\+\_\+index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+フォントハンドル取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em font\+\_\+index} & フォントインデックス \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+フォントハンドル 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_font_8h}{Font.\+h}}\end{DoxyCompactItemize}

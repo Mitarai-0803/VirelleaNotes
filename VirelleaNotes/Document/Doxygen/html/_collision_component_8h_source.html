@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: F:/sg mitarai/ReoEngine/src/CollisionComponent.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_collision_component_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CollisionComponent.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_collision_component_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_component_base_8h.html">ComponentBase.h</a>&quot;</span>                         </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;Jolt/Jolt.h&gt;</span>                             </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;Jolt/Physics/PhysicsSystem.h&gt;</span>            </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;Jolt/Physics/Body/BodyID.h&gt;</span>              </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;Jolt/Physics/Collision/Shape/Shape.h&gt;</span>    </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//============================================================================</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_collision_component.html">   19</a></span><span class="keyword">class </span><a class="code hl_function" href="class_collision_component.html#a1d4c868d0fd4dc45e0fc6cf698434431">CollisionComponent</a> : <span class="keyword">public</span> <a class="code hl_function" href="class_component_base.html#a24e99a122f01df33d2914cd8e5abff63">ComponentBase</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_collision_component.html#a1d4c868d0fd4dc45e0fc6cf698434431">   25</a></span>    <a class="code hl_function" href="class_collision_component.html#a1d4c868d0fd4dc45e0fc6cf698434431">CollisionComponent</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_collision_component.html#a1d4c868d0fd4dc45e0fc6cf698434431">~CollisionComponent</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_collision_component.html#afaaa49439b7408b00ae8d3904fb3e1b8">   32</a></span>    JPH::BodyID <a class="code hl_function" href="class_collision_component.html#afaaa49439b7408b00ae8d3904fb3e1b8">GetBodyID</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_collision_component.html#af564f2f6b75fde697f4cd6e949b2bd35">m_body_id</a>; }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_collision_component.html#a3ddd6a3821f24b4a85c8d285ae1296c5">   37</a></span>    JPH::RVec3 <a class="code hl_function" href="class_collision_component.html#a3ddd6a3821f24b4a85c8d285ae1296c5">GetPosition</a>() <span class="keyword">const</span>;                   </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_collision_component.html#a2b9e1702f2c6fba4507071a06e4d3fa9">   38</a></span>    <span class="keywordtype">void</span>       <a class="code hl_function" href="class_collision_component.html#a2b9e1702f2c6fba4507071a06e4d3fa9">SetPosition</a>(<span class="keyword">const</span> JPH::RVec3&amp; pos);    </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_collision_component.html#a85e17819c4526f63a47d48afe41e9b70">   40</a></span>    JPH::Quat <a class="code hl_function" href="class_collision_component.html#a85e17819c4526f63a47d48afe41e9b70">GetRotation</a>() <span class="keyword">const</span>;                  </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_collision_component.html#a0159534264e1fae6dddf6c5dcd9b93d4">   41</a></span>    <span class="keywordtype">void</span>      <a class="code hl_function" href="class_collision_component.html#a0159534264e1fae6dddf6c5dcd9b93d4">SetRotation</a>(<span class="keyword">const</span> JPH::Quat&amp; rot);    </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_collision_component.html#a49fdb4d3e6d2ce838b66290cc52ee785">   43</a></span>    JPH::Vec3 <a class="code hl_function" href="class_collision_component.html#a49fdb4d3e6d2ce838b66290cc52ee785">GetLinearVelocity</a>() <span class="keyword">const</span>;                       </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_collision_component.html#a58471638ae54cc4723b3b6def5ba1b32">   44</a></span>    <span class="keywordtype">void</span>      <a class="code hl_function" href="class_collision_component.html#a58471638ae54cc4723b3b6def5ba1b32">SetLinearVelocity</a>(<span class="keyword">const</span> JPH::Vec3&amp; velocity);    </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_collision_component.html#a9dbd6f242046ee057a0a7b12ade7f6a5">   49</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_collision_component.html#a9dbd6f242046ee057a0a7b12ade7f6a5">AddForce</a>(<span class="keyword">const</span> JPH::Vec3&amp; force);        </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_collision_component.html#a66a64bfbdfc1a2868f1a705e81acc766">   50</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_collision_component.html#a66a64bfbdfc1a2868f1a705e81acc766">AddImpulse</a>(<span class="keyword">const</span> JPH::Vec3&amp; impulse);    </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_collision_component.html#a833155b9d074ce6ee798ae4710dfd9ec">   60</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_collision_component.html#a833155b9d074ce6ee798ae4710dfd9ec">CreateAndAddBody</a>(JPH::PhysicsSystem* system, JPH::Ref&lt;JPH::Shape&gt; shape, <span class="keyword">const</span> JPH::RVec3&amp; pos, JPH::EMotionType motionType);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_collision_component.html#af564f2f6b75fde697f4cd6e949b2bd35">   62</a></span>    JPH::BodyID <a class="code hl_variable" href="class_collision_component.html#af564f2f6b75fde697f4cd6e949b2bd35">m_body_id</a>;    </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+</div>
+<div class="ttc" id="a_component_base_8h_html"><div class="ttname"><a href="_component_base_8h.html">ComponentBase.h</a></div><div class="ttdoc">コンポーネント基底クラスの宣言</div></div>
+<div class="ttc" id="aclass_collision_component_html_a0159534264e1fae6dddf6c5dcd9b93d4"><div class="ttname"><a href="class_collision_component.html#a0159534264e1fae6dddf6c5dcd9b93d4">CollisionComponent::SetRotation</a></div><div class="ttdeci">void SetRotation(const JPH::Quat &amp;rot)</div><div class="ttdoc">回転の設定</div></div>
+<div class="ttc" id="aclass_collision_component_html_a1d4c868d0fd4dc45e0fc6cf698434431"><div class="ttname"><a href="class_collision_component.html#a1d4c868d0fd4dc45e0fc6cf698434431">CollisionComponent::CollisionComponent</a></div><div class="ttdeci">CollisionComponent()=default</div><div class="ttdoc">コンストラクタ / デストラクタ</div></div>
+<div class="ttc" id="aclass_collision_component_html_a2b9e1702f2c6fba4507071a06e4d3fa9"><div class="ttname"><a href="class_collision_component.html#a2b9e1702f2c6fba4507071a06e4d3fa9">CollisionComponent::SetPosition</a></div><div class="ttdeci">void SetPosition(const JPH::RVec3 &amp;pos)</div><div class="ttdoc">座標の設定</div></div>
+<div class="ttc" id="aclass_collision_component_html_a3ddd6a3821f24b4a85c8d285ae1296c5"><div class="ttname"><a href="class_collision_component.html#a3ddd6a3821f24b4a85c8d285ae1296c5">CollisionComponent::GetPosition</a></div><div class="ttdeci">JPH::RVec3 GetPosition() const</div><div class="ttdoc">ゲッター / セッター (アクセサ)</div></div>
+<div class="ttc" id="aclass_collision_component_html_a49fdb4d3e6d2ce838b66290cc52ee785"><div class="ttname"><a href="class_collision_component.html#a49fdb4d3e6d2ce838b66290cc52ee785">CollisionComponent::GetLinearVelocity</a></div><div class="ttdeci">JPH::Vec3 GetLinearVelocity() const</div><div class="ttdoc">速度の取得</div></div>
+<div class="ttc" id="aclass_collision_component_html_a58471638ae54cc4723b3b6def5ba1b32"><div class="ttname"><a href="class_collision_component.html#a58471638ae54cc4723b3b6def5ba1b32">CollisionComponent::SetLinearVelocity</a></div><div class="ttdeci">void SetLinearVelocity(const JPH::Vec3 &amp;velocity)</div><div class="ttdoc">速度の設定</div></div>
+<div class="ttc" id="aclass_collision_component_html_a66a64bfbdfc1a2868f1a705e81acc766"><div class="ttname"><a href="class_collision_component.html#a66a64bfbdfc1a2868f1a705e81acc766">CollisionComponent::AddImpulse</a></div><div class="ttdeci">void AddImpulse(const JPH::Vec3 &amp;impulse)</div><div class="ttdoc">瞬間的な衝撃を加える</div></div>
+<div class="ttc" id="aclass_collision_component_html_a833155b9d074ce6ee798ae4710dfd9ec"><div class="ttname"><a href="class_collision_component.html#a833155b9d074ce6ee798ae4710dfd9ec">CollisionComponent::CreateAndAddBody</a></div><div class="ttdeci">void CreateAndAddBody(JPH::PhysicsSystem *system, JPH::Ref&lt; JPH::Shape &gt; shape, const JPH::RVec3 &amp;pos, JPH::EMotionType motionType)</div><div class="ttdoc">物理ボディの生成・登録（派生クラスの Init から呼ぶ共通処理）</div></div>
+<div class="ttc" id="aclass_collision_component_html_a85e17819c4526f63a47d48afe41e9b70"><div class="ttname"><a href="class_collision_component.html#a85e17819c4526f63a47d48afe41e9b70">CollisionComponent::GetRotation</a></div><div class="ttdeci">JPH::Quat GetRotation() const</div><div class="ttdoc">回転の取得</div></div>
+<div class="ttc" id="aclass_collision_component_html_a9dbd6f242046ee057a0a7b12ade7f6a5"><div class="ttname"><a href="class_collision_component.html#a9dbd6f242046ee057a0a7b12ade7f6a5">CollisionComponent::AddForce</a></div><div class="ttdeci">void AddForce(const JPH::Vec3 &amp;force)</div><div class="ttdoc">物理操作</div></div>
+<div class="ttc" id="aclass_collision_component_html_af564f2f6b75fde697f4cd6e949b2bd35"><div class="ttname"><a href="class_collision_component.html#af564f2f6b75fde697f4cd6e949b2bd35">CollisionComponent::m_body_id</a></div><div class="ttdeci">JPH::BodyID m_body_id</div><div class="ttdoc">JoltのボディID</div><div class="ttdef"><b>Definition</b> CollisionComponent.h:62</div></div>
+<div class="ttc" id="aclass_collision_component_html_afaaa49439b7408b00ae8d3904fb3e1b8"><div class="ttname"><a href="class_collision_component.html#afaaa49439b7408b00ae8d3904fb3e1b8">CollisionComponent::GetBodyID</a></div><div class="ttdeci">JPH::BodyID GetBodyID() const</div><div class="ttdoc">BodyID取得</div><div class="ttdef"><b>Definition</b> CollisionComponent.h:32</div></div>
+<div class="ttc" id="aclass_component_base_html_a24e99a122f01df33d2914cd8e5abff63"><div class="ttname"><a href="class_component_base.html#a24e99a122f01df33d2914cd8e5abff63">ComponentBase::ComponentBase</a></div><div class="ttdeci">ComponentBase()=default</div><div class="ttdoc">コンストラクタ</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_collision_component_8h.html">CollisionComponent.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

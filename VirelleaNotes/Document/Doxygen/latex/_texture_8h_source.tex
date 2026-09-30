@@ -1,0 +1,90 @@
+\doxysection{Texture.\+h}
+\hypertarget{_texture_8h_source}{}\label{_texture_8h_source}\index{G:/sg mitarai/自作エンジン/Engine/src/Graphics/Texture.h@{G:/sg mitarai/自作エンジン/Engine/src/Graphics/Texture.h}}
+\mbox{\hyperlink{_texture_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }Texture}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//\ コンストラクタ}}
+\DoxyCodeLine{00014\ \ \ \ \ Texture()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ D3D11Resource指定で初期化}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_texture_ae9a85f7b33715ef0e68edce67be843a3}{Texture}}(ID3D11Resource*\ d3d\_resource);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ [DxLib]\ Graphicハンドル指定で初期化}}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_texture_a11fcd56485771262b0a6531ac462859c}{Texture}}(\textcolor{keywordtype}{int}\ graphic\_handle);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//\ ファイルから作成}}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_texture_af842a6fc3ecf83d8a1c94817ab98cb24}{Texture}}(std::string\_view\ path);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ 描画対象のテクスチャ(RenderTarget/DepthStencil)を作成}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_texture_a9deee0cc32ca74cdf8275bc19c4134fa}{Texture}}(u32\ \mbox{\hyperlink{class_texture_a9c341afd0ca1af6d79c67c89eff67d25}{width}},\ u32\ height,\ DXGI\_FORMAT\ dxgi\_format);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ デストラクタ}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~Texture();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ 解放}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ clear();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{//\ 幅を取得}}
+\DoxyCodeLine{00046\ \ \ \ \ u32\ \mbox{\hyperlink{class_texture_a9c341afd0ca1af6d79c67c89eff67d25}{width}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ 高さを取得}}
+\DoxyCodeLine{00049\ \ \ \ \ u32\ height()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ D3Dリソースを取得}}
+\DoxyCodeLine{00052\ \ \ \ \ ID3D11Resource*\ d3dResource()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//\ ShaderResourceViewを取得}}
+\DoxyCodeLine{00055\ \ \ \ \ ID3D11ShaderResourceView*\ srv()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ RenderTargetViewを取得}}
+\DoxyCodeLine{00058\ \ \ \ \ ID3D11RenderTargetView*\ rtv()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ DepthStencilViewを取得}}
+\DoxyCodeLine{00061\ \ \ \ \ ID3D11DepthStencilView*\ dsv()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//\ [DxLib]\ Graphハンドルを取得}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{operator}\ int();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ ファイルパスを取得}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{const}\ std::wstring\&\ path()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ 初期化が正しく成功しているかどうか}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_valid()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ 描画可能な状態かどうか取得}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_texture_ac93b1f45c2596d473c33806768fc902c}{is\_active}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{comment}{//\ D3D11Resource指定で初期化}}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ initialize(ID3D11Resource*\ d3d\_resource);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ 遅延初期化}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ on\_initialize();}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00086\ \ \ \ \ u32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_texture_a56895dccd0b05ea56476b721d2fed811}{width\_}}\ \ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ u32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_texture_a509508e9b6d8f075757a88c95bd4a2d5}{height\_}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_texture_a7fde183054fd3db4bc89abb63f437a4d}{handle\_}}\ =\ -\/1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ std::wstring\ \ \ \ \ \ \mbox{\hyperlink{class_texture_a5771fda846de68e860a4ef7eaebdd34c}{path\_}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ std::atomic<bool>\ \mbox{\hyperlink{class_texture_aee2111a87b945ec4185ba6e0cf32f2af}{active\_}}\ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ std::atomic<bool>\ \mbox{\hyperlink{class_texture_a6895c68b9fadc7ebfb4eac4db17cb793}{need\_initialize\_}}\ =\ \textcolor{keyword}{false};\ \ \ \ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11Resource>\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_texture_afc8c086eab9d2b211bf08993be743370}{d3d\_resource\_}};\ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11ShaderResourceView>\ \mbox{\hyperlink{class_texture_a71bce01bc07d2b5e0ebe7c443af74ef1}{d3d\_srv\_}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11RenderTargetView>\ \ \ \mbox{\hyperlink{class_texture_a2e47b7edba5d0101d8d9f8045c1e8401}{d3d\_rtv\_}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ Microsoft::WRL::ComPtr<ID3D11DepthStencilView>\ \ \ \mbox{\hyperlink{class_texture_a4db26fc933a53a6bab991a3a0bf0163b}{d3d\_dsv\_}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00097\ \};}
+
+\end{DoxyCode}

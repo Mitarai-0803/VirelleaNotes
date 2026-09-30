@@ -1,0 +1,115 @@
+\doxysection{Component\+Base クラス}
+\hypertarget{class_component_base}{}\label{class_component_base}\index{ComponentBase@{ComponentBase}}
+
+
+コンポーネント基底クラス  
+
+
+
+
+{\ttfamily \#include $<$Component\+Base.\+h$>$}
+
+
+
+Component\+Base の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_component_base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Component\+Base 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{class_component_base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_base_a24e99a122f01df33d2914cd8e5abff63}\label{class_component_base_a24e99a122f01df33d2914cd8e5abff63} 
+{\bfseries Component\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\Hypertarget{class_component_base_a07bed7cce2c67ca53ca08640a871323f}\label{class_component_base_a07bed7cce2c67ca53ca08640a871323f} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Component\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em フレーム更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a4027650e43503768ca90668c82d5df84}{Draw\+Debug}} ()
+\begin{DoxyCompactList}\small\item\em デバッグ描画処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+コンポーネント基底クラス 
+
+派生クラスはこのクラスを継承して機能を実装します。 
+
+\label{doc-func-members}
+\Hypertarget{class_component_base_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}\index{ComponentBase@{ComponentBase}!Draw@{Draw}}
+\index{Draw@{Draw}!ComponentBase@{ComponentBase}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_component_base_ae507af3a83b0a3f25a9d57184fd73512} 
+virtual void Component\+Base\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+派生クラスで描画処理を実装する \Hypertarget{class_component_base_a4027650e43503768ca90668c82d5df84}\index{ComponentBase@{ComponentBase}!DrawDebug@{DrawDebug}}
+\index{DrawDebug@{DrawDebug}!ComponentBase@{ComponentBase}}
+\doxysubsubsection{\texorpdfstring{DrawDebug()}{DrawDebug()}}
+{\footnotesize\ttfamily \label{class_component_base_a4027650e43503768ca90668c82d5df84} 
+virtual void Component\+Base\+::\+Draw\+Debug (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+デバッグ描画処理 
+
+派生クラスでデバッグ描画処理を実装する \Hypertarget{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}\index{ComponentBase@{ComponentBase}!End@{End}}
+\index{End@{End}!ComponentBase@{ComponentBase}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \label{class_component_base_a6e922e2d405ed29b0abb732b13f585fc} 
+virtual void Component\+Base\+::\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+派生クラスで終了処理を実装する \Hypertarget{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}\index{ComponentBase@{ComponentBase}!Init@{Init}}
+\index{Init@{Init}!ComponentBase@{ComponentBase}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c} 
+virtual void Component\+Base\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+派生クラスで初期化処理を実装する \Hypertarget{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}\index{ComponentBase@{ComponentBase}!Update@{Update}}
+\index{Update@{Update}!ComponentBase@{ComponentBase}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8} 
+virtual void Component\+Base\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+フレーム更新 
+
+派生クラスで毎フレームの更新処理を実装する 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_component_base_8h}{Component\+Base.\+h}}\end{DoxyCompactItemize}

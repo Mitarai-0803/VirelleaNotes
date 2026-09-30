@@ -1,0 +1,68 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/\+Component\+Transform.h ファイル}
+\hypertarget{_component_transform_8h}{}\label{_component_transform_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentTransform.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentTransform.h}}
+
+
+トランスフォームコンポーネント(座標と姿勢と大きさ)  
+
+
+{\ttfamily \#include $<$System/\+Component/\+Component.\+h$>$}\newline
+{\ttfamily \#include $<$Im\+Guizmo/\+Im\+Guizmo.\+h$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_i_matrix}{IMatrix$<$ T $>$}}
+\item 
+class \mbox{\hyperlink{class_component_transform}{Component\+Transform}}
+\begin{DoxyCompactList}\small\item\em トランスフォーム \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_component_transform_8h_a53fe27048e7a64375d563b2644c95763}{Show\+Gizmo}} (float \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classmatrix}{matrix}}, Im\+Guizmo\+::\+OPERATION ope, Im\+Guizmo\+::\+MODE mode, uint64\+\_\+t id=0)
+\begin{DoxyCompactList}\small\item\em 三軸ギズモの表示 \end{DoxyCompactList}\item 
+\Hypertarget{_component_transform_8h_a6d9d86eb5b39827e671616046aef46d8}\label{_component_transform_8h_a6d9d86eb5b39827e671616046aef46d8} 
+void {\bfseries Decompose\+Matrix\+To\+Components} (const float \texorpdfstring{$\ast$}{*}matx, float \texorpdfstring{$\ast$}{*}translation, float \texorpdfstring{$\ast$}{*}rotation, float \texorpdfstring{$\ast$}{*}scale)
+\item 
+\Hypertarget{_component_transform_8h_abe00c8be42f2761185a0ccfca2ded81a}\label{_component_transform_8h_abe00c8be42f2761185a0ccfca2ded81a} 
+void {\bfseries Recompose\+Matrix\+From\+Components} (const float \texorpdfstring{$\ast$}{*}translation, const float \texorpdfstring{$\ast$}{*}rotation, const float \texorpdfstring{$\ast$}{*}scale, float \texorpdfstring{$\ast$}{*}matx)
+\item 
+\Hypertarget{_component_transform_8h_ab74110f7c150b57487eb1688210c7144}\label{_component_transform_8h_ab74110f7c150b57487eb1688210c7144} 
+{\bfseries USING\+\_\+\+PTR} (\mbox{\hyperlink{class_component_transform}{Component\+Transform}})
+\item 
+\Hypertarget{_component_transform_8h_a327e58de29d7202eecdc99999d0fd10f}\label{_component_transform_8h_a327e58de29d7202eecdc99999d0fd10f} 
+{\bfseries CEREAL\+\_\+\+CLASS\+\_\+\+VERSION} (\mbox{\hyperlink{class_component_transform}{Component\+Transform}}, 1)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+トランスフォームコンポーネント(座標と姿勢と大きさ) 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_component_transform_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_component_transform_8h_a53fe27048e7a64375d563b2644c95763}\index{ComponentTransform.h@{ComponentTransform.h}!ShowGizmo@{ShowGizmo}}
+\index{ShowGizmo@{ShowGizmo}!ComponentTransform.h@{ComponentTransform.h}}
+\doxysubsubsection{\texorpdfstring{ShowGizmo()}{ShowGizmo()}}
+{\footnotesize\ttfamily \label{_component_transform_8h_a53fe27048e7a64375d563b2644c95763} 
+bool Show\+Gizmo (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{Im\+Guizmo\+::\+OPERATION}]{ope}{, }\item[{Im\+Guizmo\+::\+MODE}]{mode}{, }\item[{uint64\+\_\+t}]{id}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+三軸ギズモの表示 
+
+
+\begin{DoxyParams}{引数}
+{\em matrix} & マトリクス(位置・回転・スケール) \\
+\hline
+{\em ope} & オペレーション \\
+\hline
+{\em mode} & モード \\
+\hline
+{\em id} & 個別\+ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+表示できたか 
+\end{DoxyReturn}

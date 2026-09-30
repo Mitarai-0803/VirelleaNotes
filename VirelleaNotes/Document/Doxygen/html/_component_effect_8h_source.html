@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentEffect.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_component_effect_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentEffect.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_component_effect_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="_component_8h.html">System/Component/Component.h</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="_component_transform_8h.html">System/Component/ComponentTransform.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;<a class="code" href="_object_8h.html">System/Object.h</a>&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;ImGuizmo/ImGuizmo.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>USING_PTR(<a class="code hl_class" href="class_component_effect.html">ComponentEffect</a>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_component_effect.html">   18</a></span><span class="keyword">class </span>ComponentEffect final : <span class="keyword">public</span> Component, <span class="keyword">public</span> <a class="code hl_class" href="class_i_matrix.html">IMatrix</a>&lt;ComponentEffect&gt;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_define" href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a>(ComponentEffect, <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;Effectコンポーネント&quot;</span>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    ComponentEffect() {}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    ~ComponentEffect() {}</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">using </span>EffectFunc = std::function&lt;void(ObjectPtr)&gt;;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    [[deprecated(<span class="stringliteral">&quot;ComponentEffect::CreateObject()は古い形式です。ComponentEffect::Object::Create()を使用してください&quot;</span>)]]</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">static</span> ObjectPtr CreateObject(<span class="keyword">const</span> std::string_view effect_name,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                                  <span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a>&amp;          offset,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                                  <span class="keyword">const</span> ObjectPtr&amp;       <span class="keywordtype">object</span>        = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                                  <span class="keyword">const</span> EffectFunc&amp;      callback_func = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    [[deprecated(<span class="stringliteral">&quot;ComponentEffect::CreateObject()は古い形式です。ComponentEffect::Object::Create()を使用してください&quot;</span>)]]</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">static</span> ObjectPtr CreateObject(<span class="keyword">const</span> std::string_view effect_name,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                                  <span class="keyword">const</span> float3&amp;          pos,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                                  <span class="keyword">const</span> float3&amp;          rotation      = {0, 0, 0},</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                                  <span class="keyword">const</span> float3&amp;          scale         = {1, 1, 1},</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                                  <span class="keyword">const</span> ObjectPtr&amp;       <span class="keywordtype">object</span>        = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                  <span class="keyword">const</span> EffectFunc&amp;      callback_func = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_component_effect_1_1_object.html">   43</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_component_effect_1_1_object.html">Object</a></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">static</span> ObjectPtr Create(<span class="keyword">const</span> std::string_view effect_name,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                                <span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a>&amp;          offset,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                                <span class="keyword">const</span> ObjectPtr&amp;       <span class="keywordtype">object</span>        = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                <span class="keyword">const</span> EffectFunc&amp;      callback_func = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">static</span> ObjectPtr Create(<span class="keyword">const</span> std::string_view effect_name,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                                <span class="keyword">const</span> float3&amp;          pos,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                <span class="keyword">const</span> float3&amp;          rotation      = {0, 0, 0},</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                                <span class="keyword">const</span> float3&amp;          scale         = {1, 1, 1},</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                                <span class="keyword">const</span> ObjectPtr&amp;       <span class="keywordtype">object</span>        = <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                                <span class="keyword">const</span> EffectFunc&amp;      callback_func = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    };</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> ClearResource()</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">// リソースを削除する</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> eff : exist_effects_resource_) DeleteEffekseerEffect(eff.second);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        exist_effects_resource_.clear();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> Construct(ObjectPtr owner) { __super::Construct(owner); }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> Construct(ObjectPtr owner, std::string_view path)</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        __super::Construct(owner);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <a class="code hl_function" href="class_component_effect.html#a804422954e7bdc9b06072b057ec3fcfb">Load</a>(path);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_component_effect.html#adc3fc4fb88cff24634ef469bc29ace04">   74</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#adc3fc4fb88cff24634ef469bc29ace04">Init</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_component_effect.html#ac1f312a7c7121a41fa07b7b3ce1156e5">   75</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#ac1f312a7c7121a41fa07b7b3ce1156e5">PostUpdate</a>() <span class="keyword">override</span>;    </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_component_effect.html#a699017a3913aac5f6826e4e1b859a9fd">   76</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#a699017a3913aac5f6826e4e1b859a9fd">Draw</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_component_effect.html#a641669141e59ec755598151ae4334fce">   77</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#a641669141e59ec755598151ae4334fce">Exit</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_component_effect.html#a092ed1b64ca8fa9f7d10705857076f87">   78</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#a092ed1b64ca8fa9f7d10705857076f87">GUI</a>() <span class="keyword">override</span>;           </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">//------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">// @name エフェクト操作</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">//------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_component_effect.html#a804422954e7bdc9b06072b057ec3fcfb">   87</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#a804422954e7bdc9b06072b057ec3fcfb">Load</a>(std::string_view path);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_component_effect.html#a1eb00bc4705ebcac1ff347f2cfef3939">   91</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#a1eb00bc4705ebcac1ff347f2cfef3939">Play</a>(<span class="keywordtype">bool</span> loop = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_component_effect.html#a1914f9d72a7f9e493befe84b56a80d9a">   94</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#a1914f9d72a7f9e493befe84b56a80d9a">Stop</a>();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_component_effect.html#adf88ee145287ed2d52907cb84a6cbb27">   98</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#adf88ee145287ed2d52907cb84a6cbb27">SetPlaySpeed</a>(<span class="keywordtype">float</span> speed);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_component_effect.html#af1a56b7ea0d1d36ae96616afee77e766">  102</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_component_effect.html#af1a56b7ea0d1d36ae96616afee77e766">GetPlaySpeed</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_component_effect.html#aafce65b4b099c6b3519da1a7df1843b5">  106</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_component_effect.html#aafce65b4b099c6b3519da1a7df1843b5">IsPlaying</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_component_effect.html#a944e93a76ea6b44bb167049a69c6c475">  110</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_effect.html#a944e93a76ea6b44bb167049a69c6c475">PlayPause</a>(<span class="keywordtype">bool</span> pause = <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_component_effect.html#a4515bc34ba77cb9a06a44fc69a5723b2">  114</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_component_effect.html#a4515bc34ba77cb9a06a44fc69a5723b2">IsPaused</a>();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_component_effect.html#a6f3a1ebd7e0784196b0eb39af29848e5">  118</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_component_effect.html#a6f3a1ebd7e0784196b0eb39af29848e5">IsValid</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_component_effect.html#a5949f35a6c4cec2d906114c7b2641c6f">  122</a></span>    <span class="keyword">const</span> std::string <a class="code hl_function" href="class_component_effect.html#a5949f35a6c4cec2d906114c7b2641c6f">GetEffectName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_component_effect.html#a6c20205d927a3998ae8d3a9ceee6f900">  126</a></span>    <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_component_effect.html#a6c20205d927a3998ae8d3a9ceee6f900">GetEffectTime</a>();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="};">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063">  133</a></span>    <span class="keyword">enum struct</span> <a class="code hl_enumeration" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063">EffectBit</a> : <a class="code hl_typedef" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063a59d87a4758a9d35fbaf6b204341bb399">  135</a></span>        <a class="code hl_enumvalue" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063a59d87a4758a9d35fbaf6b204341bb399">Initialized</a>,          </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063abe78aa55f62b5e1e6bd8a62ddedefcc9">  136</a></span>        <a class="code hl_enumvalue" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063abe78aa55f62b5e1e6bd8a62ddedefcc9">ErrorFileNotFound</a>,    </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063ac9dbb2b7c84159b632d71e512eba8428">  137</a></span>        <a class="code hl_enumvalue" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063ac9dbb2b7c84159b632d71e512eba8428">Playing</a>,              </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063ae99180abf47a8b3a856e0bcb2656990a">  138</a></span>        <a class="code hl_enumvalue" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063ae99180abf47a8b3a856e0bcb2656990a">Paused</a>,               </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063a89d7b10cb4238977d2b523dfd9ea7745">  139</a></span>        <a class="code hl_enumvalue" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063a89d7b10cb4238977d2b523dfd9ea7745">Loop</a>,                 </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    };</div>
+</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="class_component_effect.html#a944d7940e316ff7dbbb993dc00ae9bc0">  142</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_component_effect.html#a944d7940e316ff7dbbb993dc00ae9bc0">IsValid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> effect_status_.is(<a class="code hl_enumvalue" href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063a59d87a4758a9d35fbaf6b204341bb399">EffectBit::Initialized</a>); }    </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_component_effect.html#aa99f466188f3587b2180295cf8b9b39a">  149</a></span>    <a class="code hl_class" href="classmatrix.html">matrix</a>&amp; <a class="code hl_function" href="class_component_effect.html#aa99f466188f3587b2180295cf8b9b39a">Matrix</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> effect_transform_; }    </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="class_component_effect.html#ad9fb03f637710c92522cb0fd05f92e56">  151</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a>&amp; <a class="code hl_function" href="class_component_effect.html#ad9fb03f637710c92522cb0fd05f92e56">GetMatrix</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> effect_transform_; }    </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    ComponentEffectPtr SharedThis() { <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;ComponentEffect&gt;(shared_from_this()); }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="class_component_effect.html#a4fa10bc58cdefdedf7d7b953bac67b6c">  157</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a> <a class="code hl_function" href="class_component_effect.html#a4fa10bc58cdefdedf7d7b953bac67b6c">GetWorldMatrix</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="class_component_effect.html#a5edcf7a3101da820d00b1411056a5501">  161</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a> <a class="code hl_function" href="class_component_effect.html#a5edcf7a3101da820d00b1411056a5501">GetOldWorldMatrix</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_class" href="classmatrix.html">matrix</a> effect_transform_ = <a class="code hl_function" href="classmatrix.html#a77943ad632099406ed3a3ec04d772a9c">matrix::scale</a>(1.0f);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_struct" href="struct_status.html">Status&lt;EffectBit&gt;</a> effect_status_;    </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    std::string       path_{};           </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keyword">static</span> std::unordered_map&lt;std::string, int&gt; exist_effects_resource_;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment">// エフェクトハンドル(リソース)</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordtype">int</span> effect_handle_ = -1;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="comment">// エフェクトハンドル(再生中)</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">int</span> effect_play_handle_ = -1;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordtype">float</span> effect_time_ = 0.0f;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordtype">float</span> effect_speed_ = 1.0f;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> component_effect_count;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_define" href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a>(arc, ver)</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        arc(cereal::make_nvp(<span class="stringliteral">&quot;owner&quot;</span>, <a class="code hl_variable" href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">owner_</a>),</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            cereal::make_nvp(<span class="stringliteral">&quot;effect_transform&quot;</span>, effect_transform_),</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            cereal::make_nvp(<span class="stringliteral">&quot;path&quot;</span>, path_),</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            cereal::make_nvp(<span class="stringliteral">&quot;model_status&quot;</span>, effect_status_.get()),</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            cereal::make_nvp(<span class="stringliteral">&quot;exist_effects_resource&quot;</span>, exist_effects_resource_));</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        arc(cereal::make_nvp(<span class="stringliteral">&quot;Component&quot;</span>, cereal::base_class&lt;Component&gt;(<span class="keyword">this</span>)));</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="comment">// エフェクトリソースは再度ロードをしなおす</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span> effect : exist_effects_resource_) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="comment">// ロードしてリソース登録する</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            <span class="keyword">auto</span> wname = HelperLib::String::ToWString(effect.first);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            exist_effects_resource_[effect.first] = LoadEffekseerEffect(wname.data());</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordflow">if</span>(!path_.empty())</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            <a class="code hl_function" href="class_component_effect.html#a804422954e7bdc9b06072b057ec3fcfb">Load</a>(path_);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>};</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>CEREAL_REGISTER_TYPE(<a class="code hl_class" href="class_component_effect.html">ComponentEffect</a>)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>CEREAL_REGISTER_POLYMORPHIC_RELATION(<a class="code hl_class" href="class_component.html">Component</a>, <a class="code hl_class" href="class_component_effect.html">ComponentEffect</a>)</div>
+</div>
+</div>
+<div class="ttc" id="a_cereal_8h_html_a7df5c4a4fa530d0bf2831fc2180f0386"><div class="ttname"><a href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a></div><div class="ttdeci">#define CEREAL_SAVELOAD(arc, ver)</div><div class="ttdoc">Cereal</div><div class="ttdef"><b>Definition</b> Cereal.h:79</div></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">コンポーネント ベースクラス</div></div>
+<div class="ttc" id="a_component_8h_html_a544c31f98b90b38818b27eff6683eef6"><div class="ttname"><a href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a></div><div class="ttdeci">#define BP_COMPONENT_DECL(CLASS,...)</div><div class="ttdef"><b>Definition</b> Component.h:77</div></div>
+<div class="ttc" id="a_component_transform_8h_html"><div class="ttname"><a href="_component_transform_8h.html">ComponentTransform.h</a></div><div class="ttdoc">トランスフォームコンポーネント(座標と姿勢と大きさ)</div></div>
+<div class="ttc" id="a_object_8h_html"><div class="ttname"><a href="_object_8h.html">Object.h</a></div><div class="ttdoc">オブジェクト ベースクラス</div></div>
+<div class="ttc" id="a_typedef_8h_html_a1af9f95651e921615e75917a6dd1b574"><div class="ttname"><a href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div><div class="ttdeci">uint64_t u64</div><div class="ttdoc">64bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:24</div></div>
+<div class="ttc" id="a_typedef_8h_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:21</div></div>
+<div class="ttc" id="aclass_component_effect_html"><div class="ttname"><a href="class_component_effect.html">ComponentEffect</a></div><div class="ttdoc">モデルコンポーネントクラス</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:19</div></div>
+<div class="ttc" id="aclass_component_effect_html_a0111177be3f43aea08f44bde5ad18063"><div class="ttname"><a href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063">ComponentEffect::EffectBit</a></div><div class="ttdeci">EffectBit</div><div class="ttdoc">モデルステータス</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:134</div></div>
+<div class="ttc" id="aclass_component_effect_html_a0111177be3f43aea08f44bde5ad18063a59d87a4758a9d35fbaf6b204341bb399"><div class="ttname"><a href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063a59d87a4758a9d35fbaf6b204341bb399">ComponentEffect::EffectBit::Initialized</a></div><div class="ttdeci">@ Initialized</div><div class="ttdoc">初期化済み</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:135</div></div>
+<div class="ttc" id="aclass_component_effect_html_a0111177be3f43aea08f44bde5ad18063a89d7b10cb4238977d2b523dfd9ea7745"><div class="ttname"><a href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063a89d7b10cb4238977d2b523dfd9ea7745">ComponentEffect::EffectBit::Loop</a></div><div class="ttdeci">@ Loop</div><div class="ttdoc">ループ再生指定</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:139</div></div>
+<div class="ttc" id="aclass_component_effect_html_a0111177be3f43aea08f44bde5ad18063abe78aa55f62b5e1e6bd8a62ddedefcc9"><div class="ttname"><a href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063abe78aa55f62b5e1e6bd8a62ddedefcc9">ComponentEffect::EffectBit::ErrorFileNotFound</a></div><div class="ttdeci">@ ErrorFileNotFound</div><div class="ttdoc">ファイル読み込みエラー</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:136</div></div>
+<div class="ttc" id="aclass_component_effect_html_a0111177be3f43aea08f44bde5ad18063ac9dbb2b7c84159b632d71e512eba8428"><div class="ttname"><a href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063ac9dbb2b7c84159b632d71e512eba8428">ComponentEffect::EffectBit::Playing</a></div><div class="ttdeci">@ Playing</div><div class="ttdoc">エフェクト再生中</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:137</div></div>
+<div class="ttc" id="aclass_component_effect_html_a0111177be3f43aea08f44bde5ad18063ae99180abf47a8b3a856e0bcb2656990a"><div class="ttname"><a href="class_component_effect.html#a0111177be3f43aea08f44bde5ad18063ae99180abf47a8b3a856e0bcb2656990a">ComponentEffect::EffectBit::Paused</a></div><div class="ttdeci">@ Paused</div><div class="ttdoc">エフェクトポーズ中</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:138</div></div>
+<div class="ttc" id="aclass_component_effect_html_a092ed1b64ca8fa9f7d10705857076f87"><div class="ttname"><a href="class_component_effect.html#a092ed1b64ca8fa9f7d10705857076f87">ComponentEffect::GUI</a></div><div class="ttdeci">virtual void GUI() override</div><div class="ttdoc">GUI</div></div>
+<div class="ttc" id="aclass_component_effect_html_a1914f9d72a7f9e493befe84b56a80d9a"><div class="ttname"><a href="class_component_effect.html#a1914f9d72a7f9e493befe84b56a80d9a">ComponentEffect::Stop</a></div><div class="ttdeci">void Stop()</div><div class="ttdoc">停止</div></div>
+<div class="ttc" id="aclass_component_effect_html_a1eb00bc4705ebcac1ff347f2cfef3939"><div class="ttname"><a href="class_component_effect.html#a1eb00bc4705ebcac1ff347f2cfef3939">ComponentEffect::Play</a></div><div class="ttdeci">void Play(bool loop=false)</div><div class="ttdoc">再生</div></div>
+<div class="ttc" id="aclass_component_effect_html_a4515bc34ba77cb9a06a44fc69a5723b2"><div class="ttname"><a href="class_component_effect.html#a4515bc34ba77cb9a06a44fc69a5723b2">ComponentEffect::IsPaused</a></div><div class="ttdeci">bool IsPaused()</div><div class="ttdoc">ポーズ中かどうか</div></div>
+<div class="ttc" id="aclass_component_effect_html_a4fa10bc58cdefdedf7d7b953bac67b6c"><div class="ttname"><a href="class_component_effect.html#a4fa10bc58cdefdedf7d7b953bac67b6c">ComponentEffect::GetWorldMatrix</a></div><div class="ttdeci">virtual const matrix GetWorldMatrix() const override</div><div class="ttdoc">ワールドMatrixの取得</div></div>
+<div class="ttc" id="aclass_component_effect_html_a5949f35a6c4cec2d906114c7b2641c6f"><div class="ttname"><a href="class_component_effect.html#a5949f35a6c4cec2d906114c7b2641c6f">ComponentEffect::GetEffectName</a></div><div class="ttdeci">const std::string GetEffectName() const</div><div class="ttdoc">再生アニメーション名</div></div>
+<div class="ttc" id="aclass_component_effect_html_a5edcf7a3101da820d00b1411056a5501"><div class="ttname"><a href="class_component_effect.html#a5edcf7a3101da820d00b1411056a5501">ComponentEffect::GetOldWorldMatrix</a></div><div class="ttdeci">virtual const matrix GetOldWorldMatrix() const override</div><div class="ttdoc">1フレーム前のワールドMatrixの取得</div></div>
+<div class="ttc" id="aclass_component_effect_html_a641669141e59ec755598151ae4334fce"><div class="ttname"><a href="class_component_effect.html#a641669141e59ec755598151ae4334fce">ComponentEffect::Exit</a></div><div class="ttdeci">virtual void Exit() override</div><div class="ttdoc">終了</div></div>
+<div class="ttc" id="aclass_component_effect_html_a699017a3913aac5f6826e4e1b859a9fd"><div class="ttname"><a href="class_component_effect.html#a699017a3913aac5f6826e4e1b859a9fd">ComponentEffect::Draw</a></div><div class="ttdeci">virtual void Draw() override</div><div class="ttdoc">描画</div></div>
+<div class="ttc" id="aclass_component_effect_html_a6c20205d927a3998ae8d3a9ceee6f900"><div class="ttname"><a href="class_component_effect.html#a6c20205d927a3998ae8d3a9ceee6f900">ComponentEffect::GetEffectTime</a></div><div class="ttdeci">const float GetEffectTime()</div><div class="ttdoc">再生経過時間の取得</div></div>
+<div class="ttc" id="aclass_component_effect_html_a6f3a1ebd7e0784196b0eb39af29848e5"><div class="ttname"><a href="class_component_effect.html#a6f3a1ebd7e0784196b0eb39af29848e5">ComponentEffect::IsValid</a></div><div class="ttdeci">bool IsValid()</div><div class="ttdoc">利用可能かどうか</div></div>
+<div class="ttc" id="aclass_component_effect_html_a804422954e7bdc9b06072b057ec3fcfb"><div class="ttname"><a href="class_component_effect.html#a804422954e7bdc9b06072b057ec3fcfb">ComponentEffect::Load</a></div><div class="ttdeci">void Load(std::string_view path)</div><div class="ttdoc">モデルロード</div></div>
+<div class="ttc" id="aclass_component_effect_html_a944d7940e316ff7dbbb993dc00ae9bc0"><div class="ttname"><a href="class_component_effect.html#a944d7940e316ff7dbbb993dc00ae9bc0">ComponentEffect::IsValid</a></div><div class="ttdeci">bool IsValid() const</div><div class="ttdoc">モデルが読み込まれているか?</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:142</div></div>
+<div class="ttc" id="aclass_component_effect_html_a944e93a76ea6b44bb167049a69c6c475"><div class="ttname"><a href="class_component_effect.html#a944e93a76ea6b44bb167049a69c6c475">ComponentEffect::PlayPause</a></div><div class="ttdeci">void PlayPause(bool pause=true)</div><div class="ttdoc">ポーズ処理と解除処理</div></div>
+<div class="ttc" id="aclass_component_effect_html_aa99f466188f3587b2180295cf8b9b39a"><div class="ttname"><a href="class_component_effect.html#aa99f466188f3587b2180295cf8b9b39a">ComponentEffect::Matrix</a></div><div class="ttdeci">matrix &amp; Matrix() override</div><div class="ttdoc">マトリクス取得</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:149</div></div>
+<div class="ttc" id="aclass_component_effect_html_aafce65b4b099c6b3519da1a7df1843b5"><div class="ttname"><a href="class_component_effect.html#aafce65b4b099c6b3519da1a7df1843b5">ComponentEffect::IsPlaying</a></div><div class="ttdeci">bool IsPlaying()</div><div class="ttdoc">再生中かどうか</div></div>
+<div class="ttc" id="aclass_component_effect_html_ac1f312a7c7121a41fa07b7b3ce1156e5"><div class="ttname"><a href="class_component_effect.html#ac1f312a7c7121a41fa07b7b3ce1156e5">ComponentEffect::PostUpdate</a></div><div class="ttdeci">virtual void PostUpdate() override</div><div class="ttdoc">更新</div></div>
+<div class="ttc" id="aclass_component_effect_html_ad9fb03f637710c92522cb0fd05f92e56"><div class="ttname"><a href="class_component_effect.html#ad9fb03f637710c92522cb0fd05f92e56">ComponentEffect::GetMatrix</a></div><div class="ttdeci">const matrix &amp; GetMatrix() const override</div><div class="ttdoc">マトリクス取得</div><div class="ttdef"><b>Definition</b> ComponentEffect.h:151</div></div>
+<div class="ttc" id="aclass_component_effect_html_adc3fc4fb88cff24634ef469bc29ace04"><div class="ttname"><a href="class_component_effect.html#adc3fc4fb88cff24634ef469bc29ace04">ComponentEffect::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdoc">初期化</div></div>
+<div class="ttc" id="aclass_component_effect_html_adf88ee145287ed2d52907cb84a6cbb27"><div class="ttname"><a href="class_component_effect.html#adf88ee145287ed2d52907cb84a6cbb27">ComponentEffect::SetPlaySpeed</a></div><div class="ttdeci">void SetPlaySpeed(float speed)</div><div class="ttdoc">再生スピードの設定</div></div>
+<div class="ttc" id="aclass_component_effect_html_af1a56b7ea0d1d36ae96616afee77e766"><div class="ttname"><a href="class_component_effect.html#af1a56b7ea0d1d36ae96616afee77e766">ComponentEffect::GetPlaySpeed</a></div><div class="ttdeci">float GetPlaySpeed()</div><div class="ttdoc">再生スピードの取得</div></div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">コンポーネント</div><div class="ttdef"><b>Definition</b> Component.h:163</div></div>
+<div class="ttc" id="aclass_component_html_aaf224b0e73780a9c3cbad323a0ec59f5"><div class="ttname"><a href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">Component::owner_</a></div><div class="ttdeci">ObjectPtr owner_</div><div class="ttdoc">オーナー</div><div class="ttdef"><b>Definition</b> Component.h:309</div></div>
+<div class="ttc" id="aclass_i_matrix_html"><div class="ttname"><a href="class_i_matrix.html">IMatrix</a></div><div class="ttdef"><b>Definition</b> ComponentTransform.h:29</div></div>
+<div class="ttc" id="aclassmatrix_html"><div class="ttname"><a href="classmatrix.html">matrix</a></div><div class="ttdoc">4x4行列</div><div class="ttdef"><b>Definition</b> VectorMath.h:93</div></div>
+<div class="ttc" id="aclassmatrix_html_a77943ad632099406ed3a3ec04d772a9c"><div class="ttname"><a href="classmatrix.html#a77943ad632099406ed3a3ec04d772a9c">matrix::scale</a></div><div class="ttdeci">static matrix scale(const float3 &amp;s)</div></div>
+<div class="ttc" id="astruct_component_effect_1_1_object_html"><div class="ttname"><a href="struct_component_effect_1_1_object.html">ComponentEffect::Object</a></div><div class="ttdef"><b>Definition</b> ComponentEffect.h:44</div></div>
+<div class="ttc" id="astruct_status_html"><div class="ttname"><a href="struct_status.html">Status</a></div><div class="ttdoc">ステータス</div><div class="ttdef"><b>Definition</b> Status.h:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="dir_62db5b8162a41e57b9d75d02d7d318ce.html">Component</a></li><li class="navelem"><a href="_component_effect_8h.html">ComponentEffect.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

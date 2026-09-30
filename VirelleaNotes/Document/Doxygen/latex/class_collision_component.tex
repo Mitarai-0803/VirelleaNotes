@@ -1,0 +1,168 @@
+\doxysection{Collision\+Component クラス}
+\hypertarget{class_collision_component}{}\label{class_collision_component}\index{CollisionComponent@{CollisionComponent}}
+
+
+\texorpdfstring{$<$}{<} Shape  
+
+
+
+
+{\ttfamily \#include $<$Collision\+Component.\+h$>$}
+
+
+
+Collision\+Component の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_collision_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collision\+Component 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_collision_component__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_collision_component_a1d4c868d0fd4dc45e0fc6cf698434431}\label{class_collision_component_a1d4c868d0fd4dc45e0fc6cf698434431} 
+{\bfseries Collision\+Component} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ / デストラクタ \end{DoxyCompactList}\item 
+JPH\+::\+Body\+ID \mbox{\hyperlink{class_collision_component_afaaa49439b7408b00ae8d3904fb3e1b8}{Get\+Body\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Body\+ID取得 \end{DoxyCompactList}\item 
+JPH\+::\+RVec3 \mbox{\hyperlink{class_collision_component_a3ddd6a3821f24b4a85c8d285ae1296c5}{Get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em ゲッター / セッター (アクセサ) \end{DoxyCompactList}\item 
+\Hypertarget{class_collision_component_a2b9e1702f2c6fba4507071a06e4d3fa9}\label{class_collision_component_a2b9e1702f2c6fba4507071a06e4d3fa9} 
+void {\bfseries Set\+Position} (const JPH\+::\+RVec3 \&pos)
+\begin{DoxyCompactList}\small\item\em 座標の設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_collision_component_a85e17819c4526f63a47d48afe41e9b70}\label{class_collision_component_a85e17819c4526f63a47d48afe41e9b70} 
+JPH\+::\+Quat {\bfseries Get\+Rotation} () const
+\begin{DoxyCompactList}\small\item\em 回転の取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_collision_component_a0159534264e1fae6dddf6c5dcd9b93d4}\label{class_collision_component_a0159534264e1fae6dddf6c5dcd9b93d4} 
+void {\bfseries Set\+Rotation} (const JPH\+::\+Quat \&rot)
+\begin{DoxyCompactList}\small\item\em 回転の設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_collision_component_a49fdb4d3e6d2ce838b66290cc52ee785}\label{class_collision_component_a49fdb4d3e6d2ce838b66290cc52ee785} 
+JPH\+::\+Vec3 {\bfseries Get\+Linear\+Velocity} () const
+\begin{DoxyCompactList}\small\item\em 速度の取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_collision_component_a58471638ae54cc4723b3b6def5ba1b32}\label{class_collision_component_a58471638ae54cc4723b3b6def5ba1b32} 
+void {\bfseries Set\+Linear\+Velocity} (const JPH\+::\+Vec3 \&velocity)
+\begin{DoxyCompactList}\small\item\em 速度の設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_collision_component_a9dbd6f242046ee057a0a7b12ade7f6a5}{Add\+Force}} (const JPH\+::\+Vec3 \&force)
+\begin{DoxyCompactList}\small\item\em 物理操作 \end{DoxyCompactList}\item 
+\Hypertarget{class_collision_component_a66a64bfbdfc1a2868f1a705e81acc766}\label{class_collision_component_a66a64bfbdfc1a2868f1a705e81acc766} 
+void {\bfseries Add\+Impulse} (const JPH\+::\+Vec3 \&impulse)
+\begin{DoxyCompactList}\small\item\em 瞬間的な衝撃を加える \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Component\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Component\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em フレーム更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a4027650e43503768ca90668c82d5df84}{Draw\+Debug}} ()
+\begin{DoxyCompactList}\small\item\em デバッグ描画処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_collision_component_a833155b9d074ce6ee798ae4710dfd9ec}{Create\+And\+Add\+Body}} (JPH\+::\+Physics\+System \texorpdfstring{$\ast$}{*}system, JPH\+::\+Ref$<$ JPH\+::\+Shape $>$ shape, const JPH\+::\+RVec3 \&pos, JPH\+::\+EMotion\+Type motion\+Type)
+\begin{DoxyCompactList}\small\item\em 物理ボディの生成・登録（派生クラスの Init から呼ぶ共通処理） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_collision_component_af564f2f6b75fde697f4cd6e949b2bd35}\label{class_collision_component_af564f2f6b75fde697f4cd6e949b2bd35} 
+JPH\+::\+Body\+ID {\bfseries m\+\_\+body\+\_\+id}
+\begin{DoxyCompactList}\small\item\em Joltのボディ\+ID \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\texorpdfstring{$<$}{<} Shape 
+
+\texorpdfstring{$<$}{<} コンポーネント基底
+
+\texorpdfstring{$<$}{<} Joltライブラリの基本定義
+
+\texorpdfstring{$<$}{<} Physics\+System
+
+\texorpdfstring{$<$}{<} Body\+ID
+
+当たり判定コンポーネント基底
+
+派生クラス（\+Box\+Collider等）は\+Create\+And\+Add\+Bodyを呼んでボディを登録する 
+
+\label{doc-func-members}
+\Hypertarget{class_collision_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_collision_component_a9dbd6f242046ee057a0a7b12ade7f6a5}\index{CollisionComponent@{CollisionComponent}!AddForce@{AddForce}}
+\index{AddForce@{AddForce}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{AddForce()}{AddForce()}}
+{\footnotesize\ttfamily \label{class_collision_component_a9dbd6f242046ee057a0a7b12ade7f6a5} 
+void Collision\+Component\+::\+Add\+Force (\begin{DoxyParamCaption}\item[{const JPH\+::\+Vec3 \&}]{force}{}\end{DoxyParamCaption})}
+
+
+
+物理操作 
+
+継続的な力を加える \Hypertarget{class_collision_component_a833155b9d074ce6ee798ae4710dfd9ec}\index{CollisionComponent@{CollisionComponent}!CreateAndAddBody@{CreateAndAddBody}}
+\index{CreateAndAddBody@{CreateAndAddBody}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{CreateAndAddBody()}{CreateAndAddBody()}}
+{\footnotesize\ttfamily \label{class_collision_component_a833155b9d074ce6ee798ae4710dfd9ec} 
+void Collision\+Component\+::\+Create\+And\+Add\+Body (\begin{DoxyParamCaption}\item[{JPH\+::\+Physics\+System \texorpdfstring{$\ast$}{*}}]{system}{, }\item[{JPH\+::\+Ref$<$ JPH\+::\+Shape $>$}]{shape}{, }\item[{const JPH\+::\+RVec3 \&}]{pos}{, }\item[{JPH\+::\+EMotion\+Type}]{motion\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+物理ボディの生成・登録（派生クラスの Init から呼ぶ共通処理） 
+
+
+\begin{DoxyParams}{引数}
+{\em system} & 物理システム \\
+\hline
+{\em shape} & 使用するコリジョン形状 \\
+\hline
+{\em pos} & 初期位置 \\
+\hline
+{\em motion\+Type} & Dynamic=動く / Static=動かない \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_collision_component_afaaa49439b7408b00ae8d3904fb3e1b8}\index{CollisionComponent@{CollisionComponent}!GetBodyID@{GetBodyID}}
+\index{GetBodyID@{GetBodyID}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{GetBodyID()}{GetBodyID()}}
+{\footnotesize\ttfamily \label{class_collision_component_afaaa49439b7408b00ae8d3904fb3e1b8} 
+JPH\+::\+Body\+ID Collision\+Component\+::\+Get\+Body\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Body\+ID取得 
+
+\begin{DoxyReturn}{戻り値}
+Joltの\+Body\+ID 
+\end{DoxyReturn}
+\Hypertarget{class_collision_component_a3ddd6a3821f24b4a85c8d285ae1296c5}\index{CollisionComponent@{CollisionComponent}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!CollisionComponent@{CollisionComponent}}
+\doxysubsubsection{\texorpdfstring{GetPosition()}{GetPosition()}}
+{\footnotesize\ttfamily \label{class_collision_component_a3ddd6a3821f24b4a85c8d285ae1296c5} 
+JPH\+::\+RVec3 Collision\+Component\+::\+Get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+ゲッター / セッター (アクセサ) 
+
+座標の取得 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_collision_component_8h}{Collision\+Component.\+h}}\end{DoxyCompactItemize}

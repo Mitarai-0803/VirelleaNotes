@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: F:/sg mitarai/ReoEngine/src/WaterPuzzleConfig.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_water_puzzle_config_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">WaterPuzzleConfig.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_water_puzzle_config_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;Jolt/Jolt.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span>WaterPuzzleConfig {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">//=============================================================</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// 水面関連</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">//=============================================================</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a614a2f06a20015beb1dfe8267457b4d0">   19</a></span><span class="keyword">constexpr</span> <span class="keywordtype">int</span>   <a class="code hl_variable" href="_water_puzzle_config_8h.html#a614a2f06a20015beb1dfe8267457b4d0">WATER_GRID_WIDTH</a>    = 82;       </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a457bc03f17328c1b1541e9ab081fe7b0">   20</a></span><span class="keyword">constexpr</span> <span class="keywordtype">int</span>   <a class="code hl_variable" href="_water_puzzle_config_8h.html#a457bc03f17328c1b1541e9ab081fe7b0">WATER_GRID_HEIGHT</a>   = 82;       </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a27ce4c2acbd2304f5020d24de3d01092">   21</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#a27ce4c2acbd2304f5020d24de3d01092">WATER_GRID_SCALE</a>    = 0.125f;   </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a071cb6b07c02d0803ec3a43b530a85f9">   22</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#a071cb6b07c02d0803ec3a43b530a85f9">WATER_ORIGIN_X</a>      = -5.0f;    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#adabf97d227c120b549d7ef46d2c32aff">   23</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#adabf97d227c120b549d7ef46d2c32aff">WATER_ORIGIN_Z</a>      = -5.0f;    </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a19b33edbe22e25374d05889b69e5be65">   24</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#a19b33edbe22e25374d05889b69e5be65">WATER_INITIAL_Y</a>     = -1.0f;    </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a2faaf9569c99d2371c462a3e8584c0fe">   26</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#a2faaf9569c99d2371c462a3e8584c0fe">WATER_RISE_SPEED_BASE</a>  = 0.05f;   </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a883fe37d3a5bab67b376b504faf85133">   27</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#a883fe37d3a5bab67b376b504faf85133">WATER_RISE_ACCEL</a>       = 0.0015f; </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a7b5e4ec082a4244702cedd6b4848f35c">   28</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#a7b5e4ec082a4244702cedd6b4848f35c">WATER_RISE_SPEED_MAX</a>   = 0.6f;    </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a745a12fa8254cec2a42b5f15af0e3924">   30</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#a745a12fa8254cec2a42b5f15af0e3924">WATER_IMPULSE_VELOCITY_SCALE</a> = 0.4f;  </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#ab495c3d1a219335d54e676546f29098d">   31</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#ab495c3d1a219335d54e676546f29098d">WATER_IMPULSE_MIN</a>            = 0.1f;  </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#aa51a0e14eaf65143840d18dcf8bc4208">   32</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#aa51a0e14eaf65143840d18dcf8bc4208">WATER_IMPULSE_MAX</a>            = 2.0f;  </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">//=============================================================</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// プレイヤー関連</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">//=============================================================</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#ab7198f33ca2bd299dba546f46bb1eabf">   37</a></span><span class="keyword">const</span>     JPH::RVec3 <a class="code hl_variable" href="_water_puzzle_config_8h.html#ab7198f33ca2bd299dba546f46bb1eabf">PLAYER_SPAWN_POS</a>    = JPH::RVec3(-3.0f, 1.5f, -3.0f);          </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a77abddbaf0f9ba1fc78d18617e506d51">   38</a></span><span class="keyword">const</span>     JPH::Vec3  <a class="code hl_variable" href="_water_puzzle_config_8h.html#a77abddbaf0f9ba1fc78d18617e506d51">PLAYER_HALF_EXTENT</a>  = JPH::Vec3(0.4f, 0.4f, 0.4f);             </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a61f6e38c49df87ad99b7999827ac50a5">   39</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span>       <a class="code hl_variable" href="_water_puzzle_config_8h.html#a61f6e38c49df87ad99b7999827ac50a5">PLAYER_MOVE_SPEED</a>  = 4.0f;                                     </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a4b7d36af77ac266afa8151dbb4aaef36">   40</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span>       <a class="code hl_variable" href="_water_puzzle_config_8h.html#a4b7d36af77ac266afa8151dbb4aaef36">PLAYER_JUMP_SPEED</a>  = 6.0f;                                     </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">//=============================================================</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// 足場関連</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">//=============================================================</span></div>
+<div class="foldopen" id="foldopen00046" data-start="{" data-end="};">
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_water_puzzle_config_1_1_platform_config.html">   46</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_water_puzzle_config_1_1_platform_config.html">PlatformConfig</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_water_puzzle_config_1_1_platform_config.html#a3713069931b362107819efb6dda3fc69">   48</a></span>    JPH::RVec3 <a class="code hl_variable" href="struct_water_puzzle_config_1_1_platform_config.html#a3713069931b362107819efb6dda3fc69">pos</a>;          </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_water_puzzle_config_1_1_platform_config.html#a7935872606ce24b9e18c16db833a7260">   49</a></span>    JPH::Vec3  <a class="code hl_variable" href="struct_water_puzzle_config_1_1_platform_config.html#a7935872606ce24b9e18c16db833a7260">halfExtent</a>;   </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a575e4ff0659cc40dd44a3eb837c0c151">   54</a></span><span class="keyword">inline</span> <span class="keyword">const</span> std::array&lt;PlatformConfig, 5&gt; <a class="code hl_variable" href="_water_puzzle_config_8h.html#a575e4ff0659cc40dd44a3eb837c0c151">PLATFORM_CONFIGS</a> = {{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    { JPH::RVec3(-3.0f, 0.5f, -3.0f), JPH::Vec3(1.0f, 0.5f, 1.0f) },    </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    { JPH::RVec3( 0.0f, 1.5f, -1.0f), JPH::Vec3(0.8f, 0.5f, 0.8f) },    </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    { JPH::RVec3( 3.0f, 2.5f,  1.0f), JPH::Vec3(0.8f, 0.5f, 0.8f) },    </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    { JPH::RVec3( 0.0f, 3.5f,  3.0f), JPH::Vec3(0.7f, 0.5f, 0.7f) },    </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    { JPH::RVec3(-3.0f, 4.5f,  0.0f), JPH::Vec3(0.6f, 0.5f, 0.6f) },    </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}};</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">//=============================================================</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">// ゲームルール関連</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">//=============================================================</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#a72bebdcefede141df40c99d3bd15aebe">   65</a></span><span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_water_puzzle_config_8h.html#a72bebdcefede141df40c99d3bd15aebe">FIXED_DELTA_TIME</a>    = 1.0f / 60.0f;   </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="_water_puzzle_config_8h.html#ab40fd0493a5b80e6836f7ca1e03a5bbe">   66</a></span><span class="keyword">constexpr</span> <span class="keywordtype">int</span>   <a class="code hl_variable" href="_water_puzzle_config_8h.html#ab40fd0493a5b80e6836f7ca1e03a5bbe">RANKING_MAX_ENTRIES</a> = 5;               </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}    <span class="comment">// namespace WaterPuzzleConfig</span></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a071cb6b07c02d0803ec3a43b530a85f9"><div class="ttname"><a href="_water_puzzle_config_8h.html#a071cb6b07c02d0803ec3a43b530a85f9">WaterPuzzleConfig::WATER_ORIGIN_X</a></div><div class="ttdeci">constexpr float WATER_ORIGIN_X</div><div class="ttdoc">水面の描画原点X</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:22</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a19b33edbe22e25374d05889b69e5be65"><div class="ttname"><a href="_water_puzzle_config_8h.html#a19b33edbe22e25374d05889b69e5be65">WaterPuzzleConfig::WATER_INITIAL_Y</a></div><div class="ttdeci">constexpr float WATER_INITIAL_Y</div><div class="ttdoc">ゲーム開始時の水面の高さ</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:24</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a27ce4c2acbd2304f5020d24de3d01092"><div class="ttname"><a href="_water_puzzle_config_8h.html#a27ce4c2acbd2304f5020d24de3d01092">WaterPuzzleConfig::WATER_GRID_SCALE</a></div><div class="ttdeci">constexpr float WATER_GRID_SCALE</div><div class="ttdoc">グリッド1マスのワールドサイズ</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:21</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a2faaf9569c99d2371c462a3e8584c0fe"><div class="ttname"><a href="_water_puzzle_config_8h.html#a2faaf9569c99d2371c462a3e8584c0fe">WaterPuzzleConfig::WATER_RISE_SPEED_BASE</a></div><div class="ttdeci">constexpr float WATER_RISE_SPEED_BASE</div><div class="ttdoc">水位上昇の初期速度（m/秒）</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:26</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a457bc03f17328c1b1541e9ab081fe7b0"><div class="ttname"><a href="_water_puzzle_config_8h.html#a457bc03f17328c1b1541e9ab081fe7b0">WaterPuzzleConfig::WATER_GRID_HEIGHT</a></div><div class="ttdeci">constexpr int WATER_GRID_HEIGHT</div><div class="ttdoc">水面グリッド縦分割数</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:20</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a4b7d36af77ac266afa8151dbb4aaef36"><div class="ttname"><a href="_water_puzzle_config_8h.html#a4b7d36af77ac266afa8151dbb4aaef36">WaterPuzzleConfig::PLAYER_JUMP_SPEED</a></div><div class="ttdeci">constexpr float PLAYER_JUMP_SPEED</div><div class="ttdoc">スペースキージャンプの初速（m/秒）</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:40</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a575e4ff0659cc40dd44a3eb837c0c151"><div class="ttname"><a href="_water_puzzle_config_8h.html#a575e4ff0659cc40dd44a3eb837c0c151">WaterPuzzleConfig::PLATFORM_CONFIGS</a></div><div class="ttdeci">const std::array&lt; PlatformConfig, 5 &gt; PLATFORM_CONFIGS</div><div class="ttdoc">足場の配置一覧（階段状に高く・小さくしていく）</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:54</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a614a2f06a20015beb1dfe8267457b4d0"><div class="ttname"><a href="_water_puzzle_config_8h.html#a614a2f06a20015beb1dfe8267457b4d0">WaterPuzzleConfig::WATER_GRID_WIDTH</a></div><div class="ttdeci">constexpr int WATER_GRID_WIDTH</div><div class="ttdoc">水面グリッド横分割数</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:19</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a61f6e38c49df87ad99b7999827ac50a5"><div class="ttname"><a href="_water_puzzle_config_8h.html#a61f6e38c49df87ad99b7999827ac50a5">WaterPuzzleConfig::PLAYER_MOVE_SPEED</a></div><div class="ttdeci">constexpr float PLAYER_MOVE_SPEED</div><div class="ttdoc">矢印キー移動の速度（m/秒）</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:39</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a72bebdcefede141df40c99d3bd15aebe"><div class="ttname"><a href="_water_puzzle_config_8h.html#a72bebdcefede141df40c99d3bd15aebe">WaterPuzzleConfig::FIXED_DELTA_TIME</a></div><div class="ttdeci">constexpr float FIXED_DELTA_TIME</div><div class="ttdoc">1フレームあたりの経過時間（固定60fps想定）</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:65</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a745a12fa8254cec2a42b5f15af0e3924"><div class="ttname"><a href="_water_puzzle_config_8h.html#a745a12fa8254cec2a42b5f15af0e3924">WaterPuzzleConfig::WATER_IMPULSE_VELOCITY_SCALE</a></div><div class="ttdeci">constexpr float WATER_IMPULSE_VELOCITY_SCALE</div><div class="ttdoc">衝突速度から波紋の大きさへの変換係数</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:30</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a77abddbaf0f9ba1fc78d18617e506d51"><div class="ttname"><a href="_water_puzzle_config_8h.html#a77abddbaf0f9ba1fc78d18617e506d51">WaterPuzzleConfig::PLAYER_HALF_EXTENT</a></div><div class="ttdeci">const JPH::Vec3 PLAYER_HALF_EXTENT</div><div class="ttdoc">プレイヤーの半サイズ</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:38</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a7b5e4ec082a4244702cedd6b4848f35c"><div class="ttname"><a href="_water_puzzle_config_8h.html#a7b5e4ec082a4244702cedd6b4848f35c">WaterPuzzleConfig::WATER_RISE_SPEED_MAX</a></div><div class="ttdeci">constexpr float WATER_RISE_SPEED_MAX</div><div class="ttdoc">水位上昇速度の上限（m/秒）</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:28</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_a883fe37d3a5bab67b376b504faf85133"><div class="ttname"><a href="_water_puzzle_config_8h.html#a883fe37d3a5bab67b376b504faf85133">WaterPuzzleConfig::WATER_RISE_ACCEL</a></div><div class="ttdeci">constexpr float WATER_RISE_ACCEL</div><div class="ttdoc">経過時間に対する上昇速度の加速度（m/秒^2）</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:27</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_aa51a0e14eaf65143840d18dcf8bc4208"><div class="ttname"><a href="_water_puzzle_config_8h.html#aa51a0e14eaf65143840d18dcf8bc4208">WaterPuzzleConfig::WATER_IMPULSE_MAX</a></div><div class="ttdeci">constexpr float WATER_IMPULSE_MAX</div><div class="ttdoc">波紋の最大値</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:32</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_ab40fd0493a5b80e6836f7ca1e03a5bbe"><div class="ttname"><a href="_water_puzzle_config_8h.html#ab40fd0493a5b80e6836f7ca1e03a5bbe">WaterPuzzleConfig::RANKING_MAX_ENTRIES</a></div><div class="ttdeci">constexpr int RANKING_MAX_ENTRIES</div><div class="ttdoc">ランキングに保持する最大件数</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:66</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_ab495c3d1a219335d54e676546f29098d"><div class="ttname"><a href="_water_puzzle_config_8h.html#ab495c3d1a219335d54e676546f29098d">WaterPuzzleConfig::WATER_IMPULSE_MIN</a></div><div class="ttdeci">constexpr float WATER_IMPULSE_MIN</div><div class="ttdoc">波紋の最小値</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:31</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_ab7198f33ca2bd299dba546f46bb1eabf"><div class="ttname"><a href="_water_puzzle_config_8h.html#ab7198f33ca2bd299dba546f46bb1eabf">WaterPuzzleConfig::PLAYER_SPAWN_POS</a></div><div class="ttdeci">const JPH::RVec3 PLAYER_SPAWN_POS</div><div class="ttdoc">プレイヤーの初期スポーン座標</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:37</div></div>
+<div class="ttc" id="a_water_puzzle_config_8h_html_adabf97d227c120b549d7ef46d2c32aff"><div class="ttname"><a href="_water_puzzle_config_8h.html#adabf97d227c120b549d7ef46d2c32aff">WaterPuzzleConfig::WATER_ORIGIN_Z</a></div><div class="ttdeci">constexpr float WATER_ORIGIN_Z</div><div class="ttdoc">水面の描画原点Z</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:23</div></div>
+<div class="ttc" id="astruct_water_puzzle_config_1_1_platform_config_html"><div class="ttname"><a href="struct_water_puzzle_config_1_1_platform_config.html">WaterPuzzleConfig::PlatformConfig</a></div><div class="ttdoc">足場1つ分の設定（生成位置とサイズ）</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:47</div></div>
+<div class="ttc" id="astruct_water_puzzle_config_1_1_platform_config_html_a3713069931b362107819efb6dda3fc69"><div class="ttname"><a href="struct_water_puzzle_config_1_1_platform_config.html#a3713069931b362107819efb6dda3fc69">WaterPuzzleConfig::PlatformConfig::pos</a></div><div class="ttdeci">JPH::RVec3 pos</div><div class="ttdoc">足場の中心座標</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:48</div></div>
+<div class="ttc" id="astruct_water_puzzle_config_1_1_platform_config_html_a7935872606ce24b9e18c16db833a7260"><div class="ttname"><a href="struct_water_puzzle_config_1_1_platform_config.html#a7935872606ce24b9e18c16db833a7260">WaterPuzzleConfig::PlatformConfig::halfExtent</a></div><div class="ttdeci">JPH::Vec3 halfExtent</div><div class="ttdoc">足場の半サイズ</div><div class="ttdef"><b>Definition</b> WaterPuzzleConfig.h:49</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_water_puzzle_config_8h.html">WaterPuzzleConfig.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

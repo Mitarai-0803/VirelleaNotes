@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: F:/sg mitarai/ReoEngine/src/Functions.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_functions_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Functions.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_functions_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_dx_main_8h.html">DxMain.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;numbers&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;hlsl++.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// ※ using namespace はヘッダに書くと全インクルード先に汚染されるため .cpp 側で宣言する</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span>MyLibrary</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_functions_8h.html#a8a2adf07bf8824fea2d1bac762beeba5">   23</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a8a2adf07bf8824fea2d1bac762beeba5">ConvertMilliToSec</a>(<span class="keywordtype">int</span> milli);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_functions_8h.html#a11ad2cb307b33ed8f6734f71531495ff">   30</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a11ad2cb307b33ed8f6734f71531495ff">ConvertMilliToMinute</a>(<span class="keywordtype">int</span> milli);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_functions_8h.html#a34bf399b028db4d522ad95b8e8f60fa2">   37</a></span>    std::string <a class="code hl_function" href="_functions_8h.html#a34bf399b028db4d522ad95b8e8f60fa2">GetFileExtension</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filepath);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="_functions_8h.html#a356af782d61b73620bbb01327fd23251">   47</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a356af782d61b73620bbb01327fd23251">ObjectPointToDirection</a>(hlslpp::float2 now_pos, hlslpp::float2 goal_pos, <span class="keywordtype">float</span> dir, <span class="keywordtype">float</span> rot_speed);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_functions_8h.html#ad394290ecb9f00771408de37e0f6af0b">   58</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="_functions_8h.html#ad394290ecb9f00771408de37e0f6af0b">CameraStop</a>(<span class="keywordtype">float</span> pos_x, <span class="keywordtype">float</span> pos_y, <span class="keywordtype">float</span> w, <span class="keywordtype">float</span> h, <span class="keywordtype">float</span>&amp; cam_x, <span class="keywordtype">float</span>&amp; cam_y);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="_functions_8h.html#a48e677bf38724a67f3e7dbcbe281adcd">   68</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="_functions_8h.html#a48e677bf38724a67f3e7dbcbe281adcd">ClampPositionToArea</a>(hlslpp::float2&amp; target_pos, <span class="keywordtype">int</span> target_w, <span class="keywordtype">int</span> target_h, <span class="keywordtype">float</span> area_w, <span class="keywordtype">float</span> area_h);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="_functions_8h.html#a82e5d9abf80512667d716aa12e3244b6">   77</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a82e5d9abf80512667d716aa12e3244b6">CheckPointBoxHitF</a>(<span class="keyword">const</span> hlslpp::float2&amp; point, <span class="keyword">const</span> hlslpp::float2&amp; pos, <span class="keyword">const</span> hlslpp::float2&amp; size);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="_functions_8h.html#a6b8437bd2f41fb636c2d941fd96fd680">   89</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a6b8437bd2f41fb636c2d941fd96fd680">CheckPointBoxHit</a>(<span class="keywordtype">float</span> point_x, <span class="keywordtype">float</span> point_y, <span class="keywordtype">float</span> box_x, <span class="keywordtype">float</span> box_y, <span class="keywordtype">float</span> box_w, <span class="keywordtype">float</span> box_h);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="_functions_8h.html#ad4fa23e98022b95b096707154e0eec8f">  103</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#ad4fa23e98022b95b096707154e0eec8f">CheckBoxHit</a>(<span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> w1, <span class="keywordtype">float</span> h1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2, <span class="keywordtype">float</span> w2, <span class="keywordtype">float</span> h2);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="_functions_8h.html#adb8075e18371aa759f6715c6af09a4f8">  115</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#adb8075e18371aa759f6715c6af09a4f8">CheckCircleHit</a>(<span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> r1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2, <span class="keywordtype">float</span> r2);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="_functions_8h.html#a500b9529d523340b6fc5a488afd60370">  126</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a500b9529d523340b6fc5a488afd60370">CheckPointCircleHit</a>(<span class="keywordtype">float</span> point_x, <span class="keywordtype">float</span> point_y, <span class="keywordtype">float</span> circle_x, <span class="keywordtype">float</span> circle_y, <span class="keywordtype">float</span> circle_r);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="_functions_8h.html#a1c49abf2627b3232b4e7537983d97763">  135</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="_functions_8h.html#a1c49abf2627b3232b4e7537983d97763">DrawCircle3D_XZ</a>(hlslpp::float3 center, <span class="keywordtype">float</span> radius, <span class="keywordtype">int</span> color, <span class="keywordtype">bool</span> fill = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="_functions_8h.html#aedc76ca98d82929b4fa7121fae63b063">  145</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="_functions_8h.html#aedc76ca98d82929b4fa7121fae63b063">DrawBox3D_XZ</a>(hlslpp::float3 center, <span class="keywordtype">float</span> half_w, <span class="keywordtype">float</span> half_h, <span class="keywordtype">int</span> color, <span class="keywordtype">bool</span> fill = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="_functions_8h.html#a2871034a77584f022a26fc8f44c15536">  155</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a2871034a77584f022a26fc8f44c15536">CheckCircleXZHit</a>(hlslpp::float3&amp; center1, <span class="keywordtype">float</span> radius1, hlslpp::float3&amp; center2, <span class="keywordtype">float</span> radius2);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="_functions_8h.html#a88b98eec2ce940255b03d451536f6402">  165</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a88b98eec2ce940255b03d451536f6402">CheckBallHit</a>(hlslpp::float3&amp; center1, <span class="keywordtype">float</span> radius1, hlslpp::float3&amp; center2, <span class="keywordtype">float</span> radius2);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="_functions_8h.html#a7164ec6a9f699d4fc91a00005a6d46b6">  175</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a7164ec6a9f699d4fc91a00005a6d46b6">CheckBoxHit3D</a>(hlslpp::float3&amp; box_pos1, hlslpp::float3&amp; box_size1, hlslpp::float3&amp; box_pos2, hlslpp::float3&amp; box_size2);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="_functions_8h.html#a0bf99e8cfa813a2cc9740f4ebbba294e">  184</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a0bf99e8cfa813a2cc9740f4ebbba294e">CheckPointBoxHit3D</a>(hlslpp::float3&amp; point, hlslpp::float3&amp; box_pos, hlslpp::float3&amp; box_size);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="_functions_8h.html#aaeeb36939c06526b184a5805482eace4">  194</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#aaeeb36939c06526b184a5805482eace4">CheckBallBoxHit</a>(hlslpp::float3&amp; ball_pos, <span class="keywordtype">float</span> ball_radius, hlslpp::float3&amp; box_pos, hlslpp::float3&amp; box_size);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="_functions_8h.html#abbee8a5614da3529f2382dce2ca877d4">  203</a></span>    hlslpp::float3 <a class="code hl_function" href="_functions_8h.html#abbee8a5614da3529f2382dce2ca877d4">GetFloat3LinePointNearPosition</a>(hlslpp::float3&amp; line_start, hlslpp::float3&amp; line_goal, hlslpp::float3&amp; point);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="_functions_8h.html#a666f06a040a8a1a31b9ff822ca2b6898">  212</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a666f06a040a8a1a31b9ff822ca2b6898">GetFloat3LinePointNearDistance</a>(hlslpp::float3&amp; line_start, hlslpp::float3&amp; line_goal, hlslpp::float3&amp; point);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="_functions_8h.html#a3835bc39c49fb83dc641783689bac5e5">  222</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a3835bc39c49fb83dc641783689bac5e5">CheckLineBallHit</a>(hlslpp::float3&amp; line_start, hlslpp::float3&amp; line_goal, hlslpp::float3&amp; ball_pos, <span class="keywordtype">float</span> ball_radius);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="_functions_8h.html#aaaf97c1d3b7c9913d88473ecedba038a">  230</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#aaaf97c1d3b7c9913d88473ecedba038a">GetFloat2Distance</a>(hlslpp::float2&amp; pos1, hlslpp::float2&amp; pos2);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="_functions_8h.html#a7e07cc042a8278de41244b0dc35880d7">  238</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a7e07cc042a8278de41244b0dc35880d7">GetFloat2Dot</a>(hlslpp::float2&amp; v1, hlslpp::float2&amp; v2);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="_functions_8h.html#a1b2d20882ad1fcbb7c61bed8c8b318e1">  246</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a1b2d20882ad1fcbb7c61bed8c8b318e1">GetFloat2Cross</a>(hlslpp::float2&amp; v1, hlslpp::float2&amp; v2);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="_functions_8h.html#a5e3ef6341b62511f6df1f983b6bc7278">  254</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a5e3ef6341b62511f6df1f983b6bc7278">GetFloat3Distance</a>(hlslpp::float3&amp; pos1, hlslpp::float3&amp; pos2);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno"><a class="line" href="_functions_8h.html#a2159dde943661687b28ef8fb3896c1bc">  262</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a2159dde943661687b28ef8fb3896c1bc">GetFloat3Dot</a>(hlslpp::float3&amp; v1, hlslpp::float3&amp; v2);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="_functions_8h.html#a50bc1ac5296a83a07f251ebe810b1b49">  270</a></span>    hlslpp::float3 <a class="code hl_function" href="_functions_8h.html#a50bc1ac5296a83a07f251ebe810b1b49">GetFloat3Cross</a>(hlslpp::float3&amp; v1, hlslpp::float3&amp; v2);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="_functions_8h.html#abe44852bf4efba66f14374ad2b366138">  278</a></span>    hlslpp::float3 <a class="code hl_function" href="_functions_8h.html#abe44852bf4efba66f14374ad2b366138">GetFloat3VTransform</a>(hlslpp::float3&amp; v, MATRIX&amp; mat);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="_functions_8h.html#ac463dd1d1f838df327535d388ec51416">  283</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#adb8075e18371aa759f6715c6af09a4f8">CheckCircleHit</a>(hlslpp::float2&amp; center1, <span class="keywordtype">float</span> radius1, hlslpp::float2&amp; center2, <span class="keywordtype">float</span> radius2);</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="_functions_8h.html#a43e3e577321f4ba3f7f023b46d001cae">  288</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a500b9529d523340b6fc5a488afd60370">CheckPointCircleHit</a>(hlslpp::float2&amp; point, hlslpp::float2&amp; center, <span class="keywordtype">float</span> radius);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno"><a class="line" href="_functions_8h.html#a51a55aba15b4783106eeac947fb60f69">  293</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#ad4fa23e98022b95b096707154e0eec8f">CheckBoxHit</a>(hlslpp::float2&amp; box_pos1, hlslpp::float2&amp; box_size1, hlslpp::float2&amp; box_pos2, hlslpp::float2&amp; box_size2);</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno"><a class="line" href="_functions_8h.html#ad965165d3692754a11a84d219dd0b85b">  298</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a6b8437bd2f41fb636c2d941fd96fd680">CheckPointBoxHit</a>(hlslpp::float2&amp; point, hlslpp::float2&amp; box_pos, hlslpp::float2&amp; box_size);</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno"><a class="line" href="_functions_8h.html#a083f02978d9c6f3e7fc199d8ccf2af9e">  303</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a083f02978d9c6f3e7fc199d8ccf2af9e">CheckCircleBoxHit</a>(hlslpp::float2&amp; circle, <span class="keywordtype">float</span> radius, hlslpp::float2&amp; box_pos, hlslpp::float2&amp; box_size);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno"><a class="line" href="_functions_8h.html#ab35cecb42ff427e43c53fd74aca81195">  308</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#ab35cecb42ff427e43c53fd74aca81195">CheckPointTriangleHit</a>(hlslpp::float2&amp; point, hlslpp::float2&amp; triangle_pos1, hlslpp::float2&amp; triangle_pos2, hlslpp::float2&amp; triangle_pos3);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="_functions_8h.html#a1f4033a8e747d29898f24b2ba80010fd">  313</a></span>    hlslpp::float2 <a class="code hl_function" href="_functions_8h.html#a1f4033a8e747d29898f24b2ba80010fd">GetFloat2LinePointNearPosition</a>(hlslpp::float2&amp; line_start, hlslpp::float2&amp; line_goal, hlslpp::float2&amp; point);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno"><a class="line" href="_functions_8h.html#a3fdcc82df11bbbf72d1bf21f893885b8">  318</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a3fdcc82df11bbbf72d1bf21f893885b8">GetFloat2LinePointNearDistance</a>(hlslpp::float2&amp; line_start, hlslpp::float2&amp; line_goal, hlslpp::float2&amp; point);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno"><a class="line" href="_functions_8h.html#a4268ab332e6d006f0908271ac8b6532f">  323</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a4268ab332e6d006f0908271ac8b6532f">CheckLineCircleHit</a>(hlslpp::float2&amp; line_start, hlslpp::float2&amp; line_goal, hlslpp::float2&amp; circle_pos, <span class="keywordtype">float</span> circle_radius);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno"><a class="line" href="_functions_8h.html#afcb6486e8022a727b6e8576e71f2ce09">  333</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#afcb6486e8022a727b6e8576e71f2ce09">GetDistance</a>(<span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#ad4fa23e98022b95b096707154e0eec8f">CheckBoxHit</a>(<span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> w1, <span class="keywordtype">float</span> h1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2, <span class="keywordtype">float</span> w2, <span class="keywordtype">float</span> h2);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a6b8437bd2f41fb636c2d941fd96fd680">CheckPointBoxHit</a>(<span class="keywordtype">float</span> point_x, <span class="keywordtype">float</span> point_y, <span class="keywordtype">float</span> box_x, <span class="keywordtype">float</span> box_y, <span class="keywordtype">float</span> box_w, <span class="keywordtype">float</span> box_h);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno"><a class="line" href="_functions_8h.html#afb8500ca81d37305b1b70079b09afd16">  348</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_functions_8h.html#a083f02978d9c6f3e7fc199d8ccf2af9e">CheckCircleBoxHit</a>(<span class="keywordtype">float</span> circle_x, <span class="keywordtype">float</span> circle_y, <span class="keywordtype">float</span> circle_r, <span class="keywordtype">float</span> box_x, <span class="keywordtype">float</span> box_y, <span class="keywordtype">float</span> box_w, <span class="keywordtype">float</span> box_h);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno"><a class="line" href="_functions_8h.html#ae6c02d71f2f1f908f26f6c0e8d0498eb">  355</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#ae6c02d71f2f1f908f26f6c0e8d0498eb">TORADIAN</a>(<span class="keywordtype">float</span> degree);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno"><a class="line" href="_functions_8h.html#a87e76d507513413bb000cadf62cbbbe0">  362</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a87e76d507513413bb000cadf62cbbbe0">TODEGREE</a>(<span class="keywordtype">float</span> radian);</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno"><a class="line" href="_functions_8h.html#a669855e38c0e1b78cefe62a7f17a6897">  369</a></span>    hlslpp::float2 <a class="code hl_function" href="_functions_8h.html#a669855e38c0e1b78cefe62a7f17a6897">Normalize</a>(<span class="keyword">const</span> hlslpp::float2&amp; vec);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno"><a class="line" href="_functions_8h.html#a7268206d6ad56ac6d9cd39a0b74c1d92">  376</a></span>    hlslpp::float3 <a class="code hl_function" href="_functions_8h.html#a669855e38c0e1b78cefe62a7f17a6897">Normalize</a>(<span class="keyword">const</span> hlslpp::float3&amp; vec);</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno"><a class="line" href="_functions_8h.html#aef06017594cd1c4ae4244efdea9fb3c1">  383</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#aef06017594cd1c4ae4244efdea9fb3c1">GetLengthAlongRotation</a>(<span class="keywordtype">float</span> rot);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno"><a class="line" href="_functions_8h.html#a6c257008439735d19ef3e2ff73353997">  390</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_functions_8h.html#a6c257008439735d19ef3e2ff73353997">GetLengthOppositeRotation</a>(<span class="keywordtype">float</span> rot);</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span> </div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>} <span class="comment">// namespace MyLibrary</span></div>
+<div class="ttc" id="a_dx_main_8h_html"><div class="ttname"><a href="_dx_main_8h.html">DxMain.h</a></div><div class="ttdoc">アプリケーションの基本設定。画面サイズや背景色などの定数を定義します。</div></div>
+<div class="ttc" id="a_functions_8h_html_a083f02978d9c6f3e7fc199d8ccf2af9e"><div class="ttname"><a href="_functions_8h.html#a083f02978d9c6f3e7fc199d8ccf2af9e">MyLibrary::CheckCircleBoxHit</a></div><div class="ttdeci">bool CheckCircleBoxHit(hlslpp::float2 &amp;circle, float radius, hlslpp::float2 &amp;box_pos, hlslpp::float2 &amp;box_size)</div><div class="ttdoc">円と四角の当たり判定を行なう（float2 版）</div></div>
+<div class="ttc" id="a_functions_8h_html_a0bf99e8cfa813a2cc9740f4ebbba294e"><div class="ttname"><a href="_functions_8h.html#a0bf99e8cfa813a2cc9740f4ebbba294e">MyLibrary::CheckPointBoxHit3D</a></div><div class="ttdeci">bool CheckPointBoxHit3D(hlslpp::float3 &amp;point, hlslpp::float3 &amp;box_pos, hlslpp::float3 &amp;box_size)</div><div class="ttdoc">点と 3D ボックスの当たり判定を行なう</div></div>
+<div class="ttc" id="a_functions_8h_html_a11ad2cb307b33ed8f6734f71531495ff"><div class="ttname"><a href="_functions_8h.html#a11ad2cb307b33ed8f6734f71531495ff">MyLibrary::ConvertMilliToMinute</a></div><div class="ttdeci">float ConvertMilliToMinute(int milli)</div><div class="ttdoc">ミリ秒を分に変換</div></div>
+<div class="ttc" id="a_functions_8h_html_a1b2d20882ad1fcbb7c61bed8c8b318e1"><div class="ttname"><a href="_functions_8h.html#a1b2d20882ad1fcbb7c61bed8c8b318e1">MyLibrary::GetFloat2Cross</a></div><div class="ttdeci">float GetFloat2Cross(hlslpp::float2 &amp;v1, hlslpp::float2 &amp;v2)</div><div class="ttdoc">２つの float2 の外積を求める</div></div>
+<div class="ttc" id="a_functions_8h_html_a1c49abf2627b3232b4e7537983d97763"><div class="ttname"><a href="_functions_8h.html#a1c49abf2627b3232b4e7537983d97763">MyLibrary::DrawCircle3D_XZ</a></div><div class="ttdeci">void DrawCircle3D_XZ(hlslpp::float3 center, float radius, int color, bool fill=false)</div><div class="ttdoc">円を描画（XZ平面）</div></div>
+<div class="ttc" id="a_functions_8h_html_a1f4033a8e747d29898f24b2ba80010fd"><div class="ttname"><a href="_functions_8h.html#a1f4033a8e747d29898f24b2ba80010fd">MyLibrary::GetFloat2LinePointNearPosition</a></div><div class="ttdeci">hlslpp::float2 GetFloat2LinePointNearPosition(hlslpp::float2 &amp;line_start, hlslpp::float2 &amp;line_goal, hlslpp::float2 &amp;point)</div><div class="ttdoc">線分と点の最近接位置を取得します（2D）</div></div>
+<div class="ttc" id="a_functions_8h_html_a2159dde943661687b28ef8fb3896c1bc"><div class="ttname"><a href="_functions_8h.html#a2159dde943661687b28ef8fb3896c1bc">MyLibrary::GetFloat3Dot</a></div><div class="ttdeci">float GetFloat3Dot(hlslpp::float3 &amp;v1, hlslpp::float3 &amp;v2)</div><div class="ttdoc">２つの float3 の内積を求める</div></div>
+<div class="ttc" id="a_functions_8h_html_a2871034a77584f022a26fc8f44c15536"><div class="ttname"><a href="_functions_8h.html#a2871034a77584f022a26fc8f44c15536">MyLibrary::CheckCircleXZHit</a></div><div class="ttdeci">bool CheckCircleXZHit(hlslpp::float3 &amp;center1, float radius1, hlslpp::float3 &amp;center2, float radius2)</div><div class="ttdoc">XZ 平面上の円同士の当たり判定を行なう</div></div>
+<div class="ttc" id="a_functions_8h_html_a34bf399b028db4d522ad95b8e8f60fa2"><div class="ttname"><a href="_functions_8h.html#a34bf399b028db4d522ad95b8e8f60fa2">MyLibrary::GetFileExtension</a></div><div class="ttdeci">std::string GetFileExtension(const char *filepath)</div><div class="ttdoc">ファイルパスから拡張子を取得</div></div>
+<div class="ttc" id="a_functions_8h_html_a356af782d61b73620bbb01327fd23251"><div class="ttname"><a href="_functions_8h.html#a356af782d61b73620bbb01327fd23251">MyLibrary::ObjectPointToDirection</a></div><div class="ttdeci">float ObjectPointToDirection(hlslpp::float2 now_pos, hlslpp::float2 goal_pos, float dir, float rot_speed)</div><div class="ttdoc">オブジェクトの向き（ラジアン）を求める（回転補間あり）</div></div>
+<div class="ttc" id="a_functions_8h_html_a3835bc39c49fb83dc641783689bac5e5"><div class="ttname"><a href="_functions_8h.html#a3835bc39c49fb83dc641783689bac5e5">MyLibrary::CheckLineBallHit</a></div><div class="ttdeci">bool CheckLineBallHit(hlslpp::float3 &amp;line_start, hlslpp::float3 &amp;line_goal, hlslpp::float3 &amp;ball_pos, float ball_radius)</div><div class="ttdoc">線分と球の当たり判定を行なう（3D）</div></div>
+<div class="ttc" id="a_functions_8h_html_a3fdcc82df11bbbf72d1bf21f893885b8"><div class="ttname"><a href="_functions_8h.html#a3fdcc82df11bbbf72d1bf21f893885b8">MyLibrary::GetFloat2LinePointNearDistance</a></div><div class="ttdeci">float GetFloat2LinePointNearDistance(hlslpp::float2 &amp;line_start, hlslpp::float2 &amp;line_goal, hlslpp::float2 &amp;point)</div><div class="ttdoc">線分と点の最近接距離を返す（2D）</div></div>
+<div class="ttc" id="a_functions_8h_html_a4268ab332e6d006f0908271ac8b6532f"><div class="ttname"><a href="_functions_8h.html#a4268ab332e6d006f0908271ac8b6532f">MyLibrary::CheckLineCircleHit</a></div><div class="ttdeci">bool CheckLineCircleHit(hlslpp::float2 &amp;line_start, hlslpp::float2 &amp;line_goal, hlslpp::float2 &amp;circle_pos, float circle_radius)</div><div class="ttdoc">線分と円の当たり判定を行なう（2D）</div></div>
+<div class="ttc" id="a_functions_8h_html_a48e677bf38724a67f3e7dbcbe281adcd"><div class="ttname"><a href="_functions_8h.html#a48e677bf38724a67f3e7dbcbe281adcd">MyLibrary::ClampPositionToArea</a></div><div class="ttdeci">void ClampPositionToArea(hlslpp::float2 &amp;target_pos, int target_w, int target_h, float area_w, float area_h)</div><div class="ttdoc">位置を指定エリア内に制限します</div></div>
+<div class="ttc" id="a_functions_8h_html_a500b9529d523340b6fc5a488afd60370"><div class="ttname"><a href="_functions_8h.html#a500b9529d523340b6fc5a488afd60370">MyLibrary::CheckPointCircleHit</a></div><div class="ttdeci">bool CheckPointCircleHit(float point_x, float point_y, float circle_x, float circle_y, float circle_r)</div><div class="ttdoc">点と円の当たり判定</div></div>
+<div class="ttc" id="a_functions_8h_html_a50bc1ac5296a83a07f251ebe810b1b49"><div class="ttname"><a href="_functions_8h.html#a50bc1ac5296a83a07f251ebe810b1b49">MyLibrary::GetFloat3Cross</a></div><div class="ttdeci">hlslpp::float3 GetFloat3Cross(hlslpp::float3 &amp;v1, hlslpp::float3 &amp;v2)</div><div class="ttdoc">２つの float3 の外積を求める</div></div>
+<div class="ttc" id="a_functions_8h_html_a5e3ef6341b62511f6df1f983b6bc7278"><div class="ttname"><a href="_functions_8h.html#a5e3ef6341b62511f6df1f983b6bc7278">MyLibrary::GetFloat3Distance</a></div><div class="ttdeci">float GetFloat3Distance(hlslpp::float3 &amp;pos1, hlslpp::float3 &amp;pos2)</div><div class="ttdoc">２つの float3 の距離を求める</div></div>
+<div class="ttc" id="a_functions_8h_html_a666f06a040a8a1a31b9ff822ca2b6898"><div class="ttname"><a href="_functions_8h.html#a666f06a040a8a1a31b9ff822ca2b6898">MyLibrary::GetFloat3LinePointNearDistance</a></div><div class="ttdeci">float GetFloat3LinePointNearDistance(hlslpp::float3 &amp;line_start, hlslpp::float3 &amp;line_goal, hlslpp::float3 &amp;point)</div><div class="ttdoc">線分と点の最近接距離を返す（3D）</div></div>
+<div class="ttc" id="a_functions_8h_html_a669855e38c0e1b78cefe62a7f17a6897"><div class="ttname"><a href="_functions_8h.html#a669855e38c0e1b78cefe62a7f17a6897">MyLibrary::Normalize</a></div><div class="ttdeci">hlslpp::float2 Normalize(const hlslpp::float2 &amp;vec)</div><div class="ttdoc">正規化（float2）</div></div>
+<div class="ttc" id="a_functions_8h_html_a6b8437bd2f41fb636c2d941fd96fd680"><div class="ttname"><a href="_functions_8h.html#a6b8437bd2f41fb636c2d941fd96fd680">MyLibrary::CheckPointBoxHit</a></div><div class="ttdeci">bool CheckPointBoxHit(float point_x, float point_y, float box_x, float box_y, float box_w, float box_h)</div><div class="ttdoc">点と矩形の当たり判定（座標指定）</div></div>
+<div class="ttc" id="a_functions_8h_html_a6c257008439735d19ef3e2ff73353997"><div class="ttname"><a href="_functions_8h.html#a6c257008439735d19ef3e2ff73353997">MyLibrary::GetLengthOppositeRotation</a></div><div class="ttdeci">float GetLengthOppositeRotation(float rot)</div><div class="ttdoc">回転に垂直な長さ（sin）を取得</div></div>
+<div class="ttc" id="a_functions_8h_html_a7164ec6a9f699d4fc91a00005a6d46b6"><div class="ttname"><a href="_functions_8h.html#a7164ec6a9f699d4fc91a00005a6d46b6">MyLibrary::CheckBoxHit3D</a></div><div class="ttdeci">bool CheckBoxHit3D(hlslpp::float3 &amp;box_pos1, hlslpp::float3 &amp;box_size1, hlslpp::float3 &amp;box_pos2, hlslpp::float3 &amp;box_size2)</div><div class="ttdoc">3D の AABB 同士の当たり判定を行なう</div></div>
+<div class="ttc" id="a_functions_8h_html_a7e07cc042a8278de41244b0dc35880d7"><div class="ttname"><a href="_functions_8h.html#a7e07cc042a8278de41244b0dc35880d7">MyLibrary::GetFloat2Dot</a></div><div class="ttdeci">float GetFloat2Dot(hlslpp::float2 &amp;v1, hlslpp::float2 &amp;v2)</div><div class="ttdoc">２つの float2 の内積を求める</div></div>
+<div class="ttc" id="a_functions_8h_html_a82e5d9abf80512667d716aa12e3244b6"><div class="ttname"><a href="_functions_8h.html#a82e5d9abf80512667d716aa12e3244b6">MyLibrary::CheckPointBoxHitF</a></div><div class="ttdeci">bool CheckPointBoxHitF(const hlslpp::float2 &amp;point, const hlslpp::float2 &amp;pos, const hlslpp::float2 &amp;size)</div><div class="ttdoc">点と矩形の当たり判定（浮動小数）</div></div>
+<div class="ttc" id="a_functions_8h_html_a87e76d507513413bb000cadf62cbbbe0"><div class="ttname"><a href="_functions_8h.html#a87e76d507513413bb000cadf62cbbbe0">MyLibrary::TODEGREE</a></div><div class="ttdeci">float TODEGREE(float radian)</div><div class="ttdoc">ラジアンを度に変換</div></div>
+<div class="ttc" id="a_functions_8h_html_a88b98eec2ce940255b03d451536f6402"><div class="ttname"><a href="_functions_8h.html#a88b98eec2ce940255b03d451536f6402">MyLibrary::CheckBallHit</a></div><div class="ttdeci">bool CheckBallHit(hlslpp::float3 &amp;center1, float radius1, hlslpp::float3 &amp;center2, float radius2)</div><div class="ttdoc">球同士の当たり判定を行なう</div></div>
+<div class="ttc" id="a_functions_8h_html_a8a2adf07bf8824fea2d1bac762beeba5"><div class="ttname"><a href="_functions_8h.html#a8a2adf07bf8824fea2d1bac762beeba5">MyLibrary::ConvertMilliToSec</a></div><div class="ttdeci">float ConvertMilliToSec(int milli)</div><div class="ttdoc">ミリ秒を秒に変換</div></div>
+<div class="ttc" id="a_functions_8h_html_aaaf97c1d3b7c9913d88473ecedba038a"><div class="ttname"><a href="_functions_8h.html#aaaf97c1d3b7c9913d88473ecedba038a">MyLibrary::GetFloat2Distance</a></div><div class="ttdeci">float GetFloat2Distance(hlslpp::float2 &amp;pos1, hlslpp::float2 &amp;pos2)</div><div class="ttdoc">２つの float2 の距離を求める</div></div>
+<div class="ttc" id="a_functions_8h_html_aaeeb36939c06526b184a5805482eace4"><div class="ttname"><a href="_functions_8h.html#aaeeb36939c06526b184a5805482eace4">MyLibrary::CheckBallBoxHit</a></div><div class="ttdeci">bool CheckBallBoxHit(hlslpp::float3 &amp;ball_pos, float ball_radius, hlslpp::float3 &amp;box_pos, hlslpp::float3 &amp;box_size)</div><div class="ttdoc">球と AABB（ボックス）の当たり判定を行なう</div></div>
+<div class="ttc" id="a_functions_8h_html_ab35cecb42ff427e43c53fd74aca81195"><div class="ttname"><a href="_functions_8h.html#ab35cecb42ff427e43c53fd74aca81195">MyLibrary::CheckPointTriangleHit</a></div><div class="ttdeci">bool CheckPointTriangleHit(hlslpp::float2 &amp;point, hlslpp::float2 &amp;triangle_pos1, hlslpp::float2 &amp;triangle_pos2, hlslpp::float2 &amp;triangle_pos3)</div><div class="ttdoc">点と三角形の当たり判定を行なう（2D）</div></div>
+<div class="ttc" id="a_functions_8h_html_abbee8a5614da3529f2382dce2ca877d4"><div class="ttname"><a href="_functions_8h.html#abbee8a5614da3529f2382dce2ca877d4">MyLibrary::GetFloat3LinePointNearPosition</a></div><div class="ttdeci">hlslpp::float3 GetFloat3LinePointNearPosition(hlslpp::float3 &amp;line_start, hlslpp::float3 &amp;line_goal, hlslpp::float3 &amp;point)</div><div class="ttdoc">線分と点の最近接位置を取得します（3D）</div></div>
+<div class="ttc" id="a_functions_8h_html_abe44852bf4efba66f14374ad2b366138"><div class="ttname"><a href="_functions_8h.html#abe44852bf4efba66f14374ad2b366138">MyLibrary::GetFloat3VTransform</a></div><div class="ttdeci">hlslpp::float3 GetFloat3VTransform(hlslpp::float3 &amp;v, MATRIX &amp;mat)</div><div class="ttdoc">float3 を MATRIX で変換した float3 を返す</div></div>
+<div class="ttc" id="a_functions_8h_html_ad394290ecb9f00771408de37e0f6af0b"><div class="ttname"><a href="_functions_8h.html#ad394290ecb9f00771408de37e0f6af0b">MyLibrary::CameraStop</a></div><div class="ttdeci">void CameraStop(float pos_x, float pos_y, float w, float h, float &amp;cam_x, float &amp;cam_y)</div><div class="ttdoc">カメラの停止制御（指定範囲外ではスクロールしない）</div></div>
+<div class="ttc" id="a_functions_8h_html_ad4fa23e98022b95b096707154e0eec8f"><div class="ttname"><a href="_functions_8h.html#ad4fa23e98022b95b096707154e0eec8f">MyLibrary::CheckBoxHit</a></div><div class="ttdeci">bool CheckBoxHit(float x1, float y1, float w1, float h1, float x2, float y2, float w2, float h2)</div><div class="ttdoc">矩形同士の当たり判定</div></div>
+<div class="ttc" id="a_functions_8h_html_adb8075e18371aa759f6715c6af09a4f8"><div class="ttname"><a href="_functions_8h.html#adb8075e18371aa759f6715c6af09a4f8">MyLibrary::CheckCircleHit</a></div><div class="ttdeci">bool CheckCircleHit(float x1, float y1, float r1, float x2, float y2, float r2)</div><div class="ttdoc">円同士の当たり判定</div></div>
+<div class="ttc" id="a_functions_8h_html_ae6c02d71f2f1f908f26f6c0e8d0498eb"><div class="ttname"><a href="_functions_8h.html#ae6c02d71f2f1f908f26f6c0e8d0498eb">MyLibrary::TORADIAN</a></div><div class="ttdeci">float TORADIAN(float degree)</div><div class="ttdoc">度をラジアンに変換</div></div>
+<div class="ttc" id="a_functions_8h_html_aedc76ca98d82929b4fa7121fae63b063"><div class="ttname"><a href="_functions_8h.html#aedc76ca98d82929b4fa7121fae63b063">MyLibrary::DrawBox3D_XZ</a></div><div class="ttdeci">void DrawBox3D_XZ(hlslpp::float3 center, float half_w, float half_h, int color, bool fill=false)</div><div class="ttdoc">矩形を描画（XZ方向）</div></div>
+<div class="ttc" id="a_functions_8h_html_aef06017594cd1c4ae4244efdea9fb3c1"><div class="ttname"><a href="_functions_8h.html#aef06017594cd1c4ae4244efdea9fb3c1">MyLibrary::GetLengthAlongRotation</a></div><div class="ttdeci">float GetLengthAlongRotation(float rot)</div><div class="ttdoc">回転に沿った長さ（cos）を取得</div></div>
+<div class="ttc" id="a_functions_8h_html_afcb6486e8022a727b6e8576e71f2ce09"><div class="ttname"><a href="_functions_8h.html#afcb6486e8022a727b6e8576e71f2ce09">MyLibrary::GetDistance</a></div><div class="ttdeci">float GetDistance(float x1, float y1, float x2, float y2)</div><div class="ttdoc">2 点間の距離を返す</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_functions_8h.html">Functions.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentPhysics.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_component_physics_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentPhysics.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_component_physics_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="_component_8h.html">System/Component/Component.h</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="_component_transform_8h.html">System/Component/ComponentTransform.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;<a class="code" href="_rigid_body_8h.html">System/Physics/RigidBody.h</a>&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;<a class="code" href="_status_8h.html">System/Status.h</a>&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;Jolt/Jolt.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;Jolt/Physics/Constraints/SixDOFConstraint.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>USING_PTR(<a class="code hl_class" href="class_component_physics.html">ComponentPhysics</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>USING_PTR(<a class="code hl_class" href="class_component_model.html">ComponentModel</a>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span></div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_component_physics.html">   20</a></span><span class="keyword">class </span>ComponentPhysics final : <span class="keyword">public</span> Component, <span class="keyword">public</span> <a class="code hl_class" href="class_i_matrix.html">IMatrix</a>&lt;ComponentPhysics&gt;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_define" href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a>(ComponentPhysics, <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;Physics物理機能クラス&quot;</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    ComponentPhysics() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    ~ComponentPhysics();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_component_physics.html#a59e81f57cad608fb1788105b4098eea9">   29</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a59e81f57cad608fb1788105b4098eea9">Init</a>() <span class="keyword">override</span>;           </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_component_physics.html#a7ae9d26fc7b5f50f041579343c7d4549">   30</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a7ae9d26fc7b5f50f041579343c7d4549">PrePhysics</a>() <span class="keyword">override</span>;     </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_component_physics.html#a144cc85b6834649a7ef8f5be9bbbeaca">   31</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a144cc85b6834649a7ef8f5be9bbbeaca">PostPhysics</a>() <span class="keyword">override</span>;    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_component_physics.html#a7cfa8108ceed12064491b6f4e58db3af">   32</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a7cfa8108ceed12064491b6f4e58db3af">Draw</a>() <span class="keyword">override</span>;           </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2d3a30923a15e22bed923242dbff1267">   33</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a2d3a30923a15e22bed923242dbff1267">Exit</a>() <span class="keyword">override</span>;           </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_component_physics.html#a908c3339e3b0c5563af25e54682d10f7">   34</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a908c3339e3b0c5563af25e54682d10f7">GUI</a>() <span class="keyword">override</span>;            </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// 移動関数</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> MoveTo(<span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a>&amp; mat);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> MoveToWorldMatrix();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// 回転軸のロック</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> LockRotateAxis(<span class="keywordtype">bool</span> x, <span class="keywordtype">bool</span> y, <span class="keywordtype">bool</span> z);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment">//------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// @name Physics操作</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">//------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="};">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919">   48</a></span>    <span class="keyword">enum struct</span> <a class="code hl_enumeration" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919">PhysicsBit</a> : <a class="code hl_typedef" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919aaddeb3b16cd9ee10bd748be723744135">   50</a></span>        <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919aaddeb3b16cd9ee10bd748be723744135">Actived</a> = 0,    </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a59d87a4758a9d35fbaf6b204341bb399">   51</a></span>        <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a59d87a4758a9d35fbaf6b204341bb399">Initialized</a>,    </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a84a8921b25f505d0d2077aeb5db4bc16">   52</a></span>        <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a84a8921b25f505d0d2077aeb5db4bc16">Static</a>,         </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a105b296a83f9c105355403f3332af50f">   53</a></span>        <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a105b296a83f9c105355403f3332af50f">Pause</a>,          </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919ae6062085887ac5b83b2e43c1ec7be507">   54</a></span>        <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919ae6062085887ac5b83b2e43c1ec7be507">LockRotX</a>,       </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a0fb70ad77c6f1f7983dbdd2585427e86">   55</a></span>        <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a0fb70ad77c6f1f7983dbdd2585427e86">LockRotY</a>,       </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a18bf112e8a2c9298785d5216fbd5ae86">   56</a></span>        <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a18bf112e8a2c9298785d5216fbd5ae86">LockRotZ</a>,       </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    };</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_component_physics.html#a88aa04b289008612934d31030e7eca08">   59</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a88aa04b289008612934d31030e7eca08">SetPhysicsStatus</a>(<a class="code hl_enumeration" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919">PhysicsBit</a> b, <span class="keywordtype">bool</span> on)    </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        physics_status_.set(b, on);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span>(b == <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919ae6062085887ac5b83b2e43c1ec7be507">PhysicsBit::LockRotX</a> || b == <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a0fb70ad77c6f1f7983dbdd2585427e86">PhysicsBit::LockRotY</a> || b == <a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a18bf112e8a2c9298785d5216fbd5ae86">PhysicsBit::LockRotZ</a>)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            LockRotateAxis(<a class="code hl_function" href="class_component_physics.html#a82ed0cb371f954d553ebe48805808dfa">GetPhysicsStatus</a>(<a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919ae6062085887ac5b83b2e43c1ec7be507">PhysicsBit::LockRotX</a>), <a class="code hl_function" href="class_component_physics.html#a82ed0cb371f954d553ebe48805808dfa">GetPhysicsStatus</a>(<a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a0fb70ad77c6f1f7983dbdd2585427e86">PhysicsBit::LockRotY</a>), <a class="code hl_function" href="class_component_physics.html#a82ed0cb371f954d553ebe48805808dfa">GetPhysicsStatus</a>(<a class="code hl_enumvalue" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a18bf112e8a2c9298785d5216fbd5ae86">PhysicsBit::LockRotZ</a>));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_component_physics.html#a82ed0cb371f954d553ebe48805808dfa">   67</a></span>    <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_component_physics.html#a82ed0cb371f954d553ebe48805808dfa">GetPhysicsStatus</a>(<a class="code hl_enumeration" href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919">PhysicsBit</a> b)    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> physics_status_.is(b);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">bool</span> CreateBox(float3 size, <span class="keywordtype">float</span> density = <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">bool</span> CreateSphere(float3 center, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> density = <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">bool</span> CreateCapsule(<span class="keywordtype">float</span> half_height, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> density = <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">bool</span> CreateCylinder(<span class="keywordtype">float</span> half_height, <span class="keywordtype">float</span> radius, <span class="keywordtype">float</span> density = <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">bool</span> CreateMesh(ComponentModelPtr model, <span class="keywordtype">float</span> scale = 1.0);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    std::shared_ptr&lt;physics::RigidBody&gt; GetRigidBody() { <span class="keywordflow">return</span> body_; }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">bool</span> IsValid()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2c571cadbb9e3b3babe40b6caaecb7a6">   93</a></span>    <a class="code hl_class" href="classmatrix.html">matrix</a>&amp; <a class="code hl_function" href="class_component_physics.html#a2c571cadbb9e3b3babe40b6caaecb7a6">Matrix</a>()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> physics_transform_; }    </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="foldopen" id="foldopen00095" data-start="{" data-end="}">
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_component_physics.html#ad3abcf3fcde9d1c53351a03dddec42d3">   95</a></span>    <span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a>&amp; <a class="code hl_function" href="class_component_physics.html#ad3abcf3fcde9d1c53351a03dddec42d3">GetMatrix</a>()<span class="keyword"> const override </span>{ <span class="keywordflow">return</span> physics_transform_; }    </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    ComponentPhysicsPtr SharedThis() { <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;ComponentPhysics&gt;(shared_from_this()); }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_component_physics.html#a5153bb9dd6c72be7f1f6f65341c03b73">  101</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a> <a class="code hl_function" href="class_component_physics.html#a5153bb9dd6c72be7f1f6f65341c03b73">GetWorldMatrix</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_component_physics.html#ace082813af3713655f975674e849dbde">  105</a></span>    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a> <a class="code hl_function" href="class_component_physics.html#ace082813af3713655f975674e849dbde">GetOldWorldMatrix</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">void</span> SetPhysicsMatrix(<span class="keyword">const</span> <a class="code hl_class" href="classmatrix.html">matrix</a>&amp; world);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_class" href="classmatrix.html">matrix</a> GetPhysicsMatrix() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">//------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// @name タイプ</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="comment">//------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> CollisionTypeSize = 16;</div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="};">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_component_physics.html#a8811519de345041279f31fbfedf8e024">  117</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="class_component_physics.html#a8811519de345041279f31fbfedf8e024">CollisionType</a> : <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        WALL   = 1 &lt;&lt; 0,</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        GROUND = 1 &lt;&lt; 1,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        PLAYER = 1 &lt;&lt; 2,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        ENEMY  = 1 &lt;&lt; 3,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        WEAPON = 1 &lt;&lt; 4,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        ITEM   = 1 &lt;&lt; 5,</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        CAMERA = 1 &lt;&lt; 6,</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        ETC   = 1 &lt;&lt; 7,</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        ETC_0 = ETC,</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        ETC_1 = 1 &lt;&lt; 8,</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        ETC_2 = 1 &lt;&lt; 9,</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        ETC_3 = 1 &lt;&lt; 10,</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        ETC_4 = 1 &lt;&lt; 11,</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        ETC_5 = 1 &lt;&lt; 12,</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        ETC_6 = 1 &lt;&lt; 13,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        ETC_7 = 1 &lt;&lt; 14,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_component_physics.html#a8811519de345041279f31fbfedf8e024a98a0a2299e85802db243e64ef2a6d4bb">  136</a></span>        <a class="code hl_enumvalue" href="class_component_physics.html#a8811519de345041279f31fbfedf8e024a98a0a2299e85802db243e64ef2a6d4bb">NOHIT</a> = 1 &lt;&lt; 15,    </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="comment">//ALL = WALL | GROUND | PLAYER | ENEMY | WEAPON | ITEM | CAMERA | ETC_0 | ETC_1 | ETC_2 | ETC_3 | ETC_4 | ETC_5 | ETC_6 | ETC_7;</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    };</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_component_physics.html#a9f70d0d731b49999e590ba6a6fe2d9f3">  144</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a9f70d0d731b49999e590ba6a6fe2d9f3">SetHitCollision</a>(<a class="code hl_enumeration" href="class_component_physics.html#a8811519de345041279f31fbfedf8e024">ComponentPhysics::CollisionType</a> col, <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> hit) { hit_status_[(int)col] = hit; }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> GetHitCollision(<a class="code hl_enumeration" href="class_component_physics.html#a8811519de345041279f31fbfedf8e024">ComponentPhysics::CollisionType</a> col)</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordtype">int</span> <span class="keywordtype">id</span> = (int)(log2((<span class="keywordtype">int</span>)col));</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        assert(<span class="keywordtype">id</span> &gt;= 0 &amp;&amp; <span class="keywordtype">id</span> &lt; 16);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">return</span> hit_status_[id];</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    }</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetOverlapCollision(<a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> hit) { overlap_status_ = hit; }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> GetOverlapCollision()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> overlap_status_; }</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetCollisionType(<a class="code hl_enumeration" href="class_component_physics.html#a8811519de345041279f31fbfedf8e024">ComponentPhysics::CollisionType</a> col)</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        type_ = col;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <span class="comment">//if ( body_ )</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="comment">//  body_-&gt;setLayer( (u16)type_ );</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code hl_enumeration" href="class_component_physics.html#a8811519de345041279f31fbfedf8e024">ComponentPhysics::CollisionType</a> GetCollisionType()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> type_; }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> SetGravityFactor(<span class="keywordtype">float</span> fact) { gravity_factor_ = fact; }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">float</span> GetGravityFactor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> gravity_factor_; }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span></div>
+<div class="foldopen" id="foldopen00172" data-start="{" data-end="}">
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="class_component_physics.html#a36c1dd7db3e54b4fd2aaeb388e54637f">  172</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a36c1dd7db3e54b4fd2aaeb388e54637f">SetFriction</a>(<span class="keywordtype">float</span> friction)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    {</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">if</span>(body_)</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            body_-&gt;setFriction(friction);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
+</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span></div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="}">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="class_component_physics.html#a6a783268d8ccb4d85f7b005e421619ad">  180</a></span>    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_component_physics.html#a6a783268d8ccb4d85f7b005e421619ad">GetFriction</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="keywordflow">if</span>(body_)</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            <span class="keywordflow">return</span> body_-&gt;friction();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">return</span> 0.0f;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    }</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span></div>
+<div class="foldopen" id="foldopen00190" data-start="{" data-end="}">
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="class_component_physics.html#a6a200fda848044e4f1805d55aa68cdc6">  190</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a6a200fda848044e4f1805d55aa68cdc6">SetRestitution</a>(<span class="keywordtype">float</span> restitution)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="keywordflow">if</span>(body_)</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            body_-&gt;setRestitution(restitution);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    }</div>
+</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span></div>
+<div class="foldopen" id="foldopen00198" data-start="{" data-end="}">
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno"><a class="line" href="class_component_physics.html#ae966602901cf272ba0f7aaa005b7ef72">  198</a></span>    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_component_physics.html#ae966602901cf272ba0f7aaa005b7ef72">GetRestitution</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="keyword">    </span>{</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">if</span>(body_)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            <span class="keywordflow">return</span> body_-&gt;restitution();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordflow">return</span> 0.0f;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    }</div>
+</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="class_component_physics.html#aea3faff13202f4ddec288c57e6676782">  208</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#aea3faff13202f4ddec288c57e6676782">SetPhysicsReal</a>(<span class="keywordtype">float</span> pow) { physics_real_ = pow; }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="class_component_physics.html#a6806802ecf1f88d56b3435f2f1aeb900">  212</a></span>    <span class="keyword">inline</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_component_physics.html#a6806802ecf1f88d56b3435f2f1aeb900">GetPhysicsReal</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> physics_real_; }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="comment">//------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="comment">// @name コールバック</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="comment">//------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span></div>
+<div class="foldopen" id="foldopen00221" data-start="{" data-end="};">
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="struct_component_physics_1_1_hit_info.html">  221</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_component_physics_1_1_hit_info.html">HitInfo</a></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="struct_component_physics_1_1_hit_info.html#ae1ae33e512713c597a8c911266caa3b7">  223</a></span>        <span class="keywordtype">bool</span>              <a class="code hl_variable" href="struct_component_physics_1_1_hit_info.html#ae1ae33e512713c597a8c911266caa3b7">hit_</a>           = <span class="keyword">false</span>;                 </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="struct_component_physics_1_1_hit_info.html#ad4d24c499f53a06194332fd2ccbcb619">  224</a></span>        ComponentPhysics* <a class="code hl_variable" href="struct_component_physics_1_1_hit_info.html#ad4d24c499f53a06194332fd2ccbcb619">collision_</a>     = <span class="keyword">nullptr</span>;               </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="struct_component_physics_1_1_hit_info.html#aae8704cea9b18281f4bf38fb8af394ea">  225</a></span>        float3            <a class="code hl_variable" href="struct_component_physics_1_1_hit_info.html#aae8704cea9b18281f4bf38fb8af394ea">hit_position_</a>  = {0.0f, 0.0f, 0.0f};    </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="struct_component_physics_1_1_hit_info.html#a3280073a750931ebc2b0c9741511d49f">  226</a></span>        ComponentPhysics* <a class="code hl_variable" href="struct_component_physics_1_1_hit_info.html#a3280073a750931ebc2b0c9741511d49f">hit_collision_</a> = <span class="keyword">nullptr</span>;               </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    };</div>
+</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="class_component_physics.html#a64d0b241b6b8a0f5f4f0b517c3015642">  231</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a64d0b241b6b8a0f5f4f0b517c3015642">OnHit</a>([[maybe_unused]] <span class="keyword">const</span> <a class="code hl_struct" href="struct_component_physics_1_1_hit_info.html">ComponentPhysics::HitInfo</a>&amp; hit_info) {}</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno"><a class="line" href="class_component_physics.html#af9018fe3b5f016143a8ad30215f1096f">  235</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#af9018fe3b5f016143a8ad30215f1096f">OnBeginOverlap</a>([[maybe_unused]] <span class="keyword">const</span> <a class="code hl_struct" href="struct_component_physics_1_1_hit_info.html">ComponentPhysics::HitInfo</a>&amp; hit_info) {}</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="class_component_physics.html#a4390758f3bbe0286a33aa4325d11968b">  239</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a4390758f3bbe0286a33aa4325d11968b">OnEndOverlap</a>([[maybe_unused]] <span class="keyword">const</span> <a class="code hl_struct" href="struct_component_physics_1_1_hit_info.html">ComponentPhysics::HitInfo</a>&amp; hit_info) {}</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="class_component_physics.html#a2c75761c91e57fd4e9a1f62f18c22d66">  242</a></span>    std::function&lt;void(<span class="keyword">const</span> <a class="code hl_struct" href="struct_component_physics_1_1_hit_info.html">HitInfo</a>&amp; hit_info)&gt; <a class="code hl_variable" href="class_component_physics.html#a2c75761c91e57fd4e9a1f62f18c22d66">OnHitFunc</a>;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="class_component_physics.html#a5ffd94d021c6c4b1b8e6867270ef64aa">  245</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_physics.html#a5ffd94d021c6c4b1b8e6867270ef64aa">OnHitComponent</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_component_1_1_hit_info.html">Component::HitInfo</a>&amp;) { assert(!<span class="stringliteral">&quot;この関数は使用できません。 OnHitを使用してください&quot;</span>); }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keywordtype">void</span> SetHitInfo(<a class="code hl_struct" href="struct_component_physics_1_1_hit_info.html">ComponentPhysics::HitInfo</a>&amp; info) { infos_.push_back(info); }</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordtype">void</span> AddHitInfosCount() { infos_count_++; }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    std::vector&lt;ComponentPhysics::HitInfo&gt; infos_;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordtype">int</span>                                    infos_count_ = 0;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    matrix physics_transform_     = <a class="code hl_function" href="classmatrix.html#a77943ad632099406ed3a3ec04d772a9c">matrix::scale</a>(1.0f);</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    matrix physics_transform_old_ = <a class="code hl_function" href="classmatrix.html#a77943ad632099406ed3a3ec04d772a9c">matrix::scale</a>(1.0f);</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    Status&lt;PhysicsBit&gt; physics_status_;    </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    std::shared_ptr&lt;physics::RigidBody&gt; body_;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    matrix                              world_old_;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="comment">// 重力係数</span></div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <span class="keywordtype">float</span> gravity_factor_ = 30.0f;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="comment">// コリジョンのタイプ</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <a class="code hl_enumeration" href="class_component_physics.html#a8811519de345041279f31fbfedf8e024">CollisionType</a> type_ = CollisionType::ETC;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="comment">// オーバーラップ情報</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> overlap_status_ = 0;</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="comment">// コリジョンヒットの情報(共通)</span></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keyword">static</span> <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> hit_status_[CollisionTypeSize];</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="comment">// 軸固定コンストレイント</span></div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <span class="keyword">using </span>SettingsRef = JPH::Ref&lt;JPH::SixDOFConstraintSettings&gt;;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    SettingsRef                     sSettings;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    JPH::Ref&lt;JPH::SixDOFConstraint&gt; constraint_;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="comment">// デバッグ3D描画用</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordtype">int</span>                 ref_model_ = -1;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    MV1_REF_POLYGONLIST ref_poly_{};</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    <span class="keyword">union </span>ShapeData {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>        ShapeData() {}</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        ShapeData&amp; operator=(<span class="keyword">const</span> ShapeData&amp; o) &amp;</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>            memcpy(<span class="keyword">this</span>, (<span class="keywordtype">void</span>*)&amp;o, <span class="keyword">sizeof</span>(ShapeData));</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        }</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        ShapeData(<span class="keyword">const</span> ShapeData&amp; o) { *<span class="keyword">this</span> = o; }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        <span class="keyword">struct</span></div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            float3 box_size;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        };</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>        <span class="keyword">struct</span></div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>        {</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>            float3 sphere_center;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>            <span class="keywordtype">float</span>  sphere_radius;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        };</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <span class="keyword">struct</span></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        {</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>            <span class="keywordtype">float</span> cylinder_half_height;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>            <span class="keywordtype">float</span> cylinder_radius;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        };</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    } shape_data{};</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> density_ = 1000.0f;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> physics_real_ = 0.0f;</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <a class="code hl_define" href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a>(arc, ver)</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        arc(cereal::make_nvp(<span class="stringliteral">&quot;owner&quot;</span>, <a class="code hl_variable" href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">owner_</a>),</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            cereal::make_nvp(<span class="stringliteral">&quot;physics_transform&quot;</span>, physics_transform_),</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>            cereal::make_nvp(<span class="stringliteral">&quot;physics_status&quot;</span>, physics_status_.get()),</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            CEREAL_NVP(type_),</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>            CEREAL_NVP(overlap_status_),</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            CEREAL_NVP(gravity_factor_));</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        <span class="comment">// 現在面倒なので復旧は全員行っている (TODO:別クラスへ移行して一つにするべき)</span></div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; CollisionTypeSize; ++i) {</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            CEREAL_NVP(hit_status_[i]);</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        }</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        arc(cereal::make_nvp(<span class="stringliteral">&quot;Component&quot;</span>, cereal::base_class&lt;Component&gt;(<span class="keyword">this</span>)));</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    }</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span></div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>};</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>CEREAL_REGISTER_TYPE(<a class="code hl_class" href="class_component_physics.html">ComponentPhysics</a>)</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>CEREAL_REGISTER_POLYMORPHIC_RELATION(<a class="code hl_class" href="class_component.html">Component</a>, <a class="code hl_class" href="class_component_physics.html">ComponentPhysics</a>)</div>
+</div>
+</div>
+<div class="ttc" id="a_cereal_8h_html_a7df5c4a4fa530d0bf2831fc2180f0386"><div class="ttname"><a href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a></div><div class="ttdeci">#define CEREAL_SAVELOAD(arc, ver)</div><div class="ttdoc">Cereal</div><div class="ttdef"><b>Definition</b> Cereal.h:79</div></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">コンポーネント ベースクラス</div></div>
+<div class="ttc" id="a_component_8h_html_a544c31f98b90b38818b27eff6683eef6"><div class="ttname"><a href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a></div><div class="ttdeci">#define BP_COMPONENT_DECL(CLASS,...)</div><div class="ttdef"><b>Definition</b> Component.h:77</div></div>
+<div class="ttc" id="a_component_transform_8h_html"><div class="ttname"><a href="_component_transform_8h.html">ComponentTransform.h</a></div><div class="ttdoc">トランスフォームコンポーネント(座標と姿勢と大きさ)</div></div>
+<div class="ttc" id="a_rigid_body_8h_html"><div class="ttname"><a href="_rigid_body_8h.html">RigidBody.h</a></div><div class="ttdoc">剛体</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_a006ca422edcafa6d8ffa4805f69cfbac"><div class="ttname"><a href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a></div><div class="ttdeci">constexpr f32 default_density</div><div class="ttdoc">デフォルト質量</div><div class="ttdef"><b>Definition</b> RigidBody.h:20</div></div>
+<div class="ttc" id="a_status_8h_html"><div class="ttname"><a href="_status_8h.html">Status.h</a></div><div class="ttdoc">ステータス管理クラス</div></div>
+<div class="ttc" id="a_typedef_8h_html_a1af9f95651e921615e75917a6dd1b574"><div class="ttname"><a href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div><div class="ttdeci">uint64_t u64</div><div class="ttdoc">64bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:24</div></div>
+<div class="ttc" id="a_typedef_8h_html_a6dbf9516e516c901604625282c174aa4"><div class="ttname"><a href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a></div><div class="ttdeci">uint16_t u16</div><div class="ttdoc">16bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:22</div></div>
+<div class="ttc" id="a_typedef_8h_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:21</div></div>
+<div class="ttc" id="a_typedef_8h_html_ad34d88453d37b65a09797bad37f2f527"><div class="ttname"><a href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></div><div class="ttdeci">float f32</div><div class="ttdoc">単精度浮動小数点数</div><div class="ttdef"><b>Definition</b> Typedef.h:25</div></div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">コンポーネント</div><div class="ttdef"><b>Definition</b> Component.h:163</div></div>
+<div class="ttc" id="aclass_component_html_aaf224b0e73780a9c3cbad323a0ec59f5"><div class="ttname"><a href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">Component::owner_</a></div><div class="ttdeci">ObjectPtr owner_</div><div class="ttdoc">オーナー</div><div class="ttdef"><b>Definition</b> Component.h:309</div></div>
+<div class="ttc" id="aclass_component_model_html"><div class="ttname"><a href="class_component_model.html">ComponentModel</a></div><div class="ttdoc">モデルコンポーネントクラス</div><div class="ttdef"><b>Definition</b> ComponentModel.h:17</div></div>
+<div class="ttc" id="aclass_component_physics_html"><div class="ttname"><a href="class_component_physics.html">ComponentPhysics</a></div><div class="ttdoc">モデルコンポーネントクラス</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:21</div></div>
+<div class="ttc" id="aclass_component_physics_html_a144cc85b6834649a7ef8f5be9bbbeaca"><div class="ttname"><a href="class_component_physics.html#a144cc85b6834649a7ef8f5be9bbbeaca">ComponentPhysics::PostPhysics</a></div><div class="ttdeci">virtual void PostPhysics() override</div><div class="ttdoc">更新後</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2a434caca324c0c6b4e146d69081c919"><div class="ttname"><a href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919">ComponentPhysics::PhysicsBit</a></div><div class="ttdeci">PhysicsBit</div><div class="ttdoc">Physicsステータスビット</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:49</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2a434caca324c0c6b4e146d69081c919a0fb70ad77c6f1f7983dbdd2585427e86"><div class="ttname"><a href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a0fb70ad77c6f1f7983dbdd2585427e86">ComponentPhysics::PhysicsBit::LockRotY</a></div><div class="ttdeci">@ LockRotY</div><div class="ttdoc">Y軸回転禁止</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:55</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2a434caca324c0c6b4e146d69081c919a105b296a83f9c105355403f3332af50f"><div class="ttname"><a href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a105b296a83f9c105355403f3332af50f">ComponentPhysics::PhysicsBit::Pause</a></div><div class="ttdeci">@ Pause</div><div class="ttdoc">一時停止</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:53</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2a434caca324c0c6b4e146d69081c919a18bf112e8a2c9298785d5216fbd5ae86"><div class="ttname"><a href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a18bf112e8a2c9298785d5216fbd5ae86">ComponentPhysics::PhysicsBit::LockRotZ</a></div><div class="ttdeci">@ LockRotZ</div><div class="ttdoc">Z軸回転禁止</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:56</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2a434caca324c0c6b4e146d69081c919a59d87a4758a9d35fbaf6b204341bb399"><div class="ttname"><a href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a59d87a4758a9d35fbaf6b204341bb399">ComponentPhysics::PhysicsBit::Initialized</a></div><div class="ttdeci">@ Initialized</div><div class="ttdoc">初期化終了</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:51</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2a434caca324c0c6b4e146d69081c919a84a8921b25f505d0d2077aeb5db4bc16"><div class="ttname"><a href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919a84a8921b25f505d0d2077aeb5db4bc16">ComponentPhysics::PhysicsBit::Static</a></div><div class="ttdeci">@ Static</div><div class="ttdoc">固定</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:52</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2a434caca324c0c6b4e146d69081c919aaddeb3b16cd9ee10bd748be723744135"><div class="ttname"><a href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919aaddeb3b16cd9ee10bd748be723744135">ComponentPhysics::PhysicsBit::Actived</a></div><div class="ttdeci">@ Actived</div><div class="ttdoc">物理有効状態</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:50</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2a434caca324c0c6b4e146d69081c919ae6062085887ac5b83b2e43c1ec7be507"><div class="ttname"><a href="class_component_physics.html#a2a434caca324c0c6b4e146d69081c919ae6062085887ac5b83b2e43c1ec7be507">ComponentPhysics::PhysicsBit::LockRotX</a></div><div class="ttdeci">@ LockRotX</div><div class="ttdoc">X軸回転禁止</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:54</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2c571cadbb9e3b3babe40b6caaecb7a6"><div class="ttname"><a href="class_component_physics.html#a2c571cadbb9e3b3babe40b6caaecb7a6">ComponentPhysics::Matrix</a></div><div class="ttdeci">matrix &amp; Matrix() override</div><div class="ttdoc">マトリクス取得</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:93</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2c75761c91e57fd4e9a1f62f18c22d66"><div class="ttname"><a href="class_component_physics.html#a2c75761c91e57fd4e9a1f62f18c22d66">ComponentPhysics::OnHitFunc</a></div><div class="ttdeci">std::function&lt; void(const HitInfo &amp;hit_info)&gt; OnHitFunc</div><div class="ttdoc">ラムダ当たり処理実装</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:242</div></div>
+<div class="ttc" id="aclass_component_physics_html_a2d3a30923a15e22bed923242dbff1267"><div class="ttname"><a href="class_component_physics.html#a2d3a30923a15e22bed923242dbff1267">ComponentPhysics::Exit</a></div><div class="ttdeci">virtual void Exit() override</div><div class="ttdoc">終了</div></div>
+<div class="ttc" id="aclass_component_physics_html_a36c1dd7db3e54b4fd2aaeb388e54637f"><div class="ttname"><a href="class_component_physics.html#a36c1dd7db3e54b4fd2aaeb388e54637f">ComponentPhysics::SetFriction</a></div><div class="ttdeci">void SetFriction(float friction)</div><div class="ttdoc">摩擦力を設定します</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:172</div></div>
+<div class="ttc" id="aclass_component_physics_html_a4390758f3bbe0286a33aa4325d11968b"><div class="ttname"><a href="class_component_physics.html#a4390758f3bbe0286a33aa4325d11968b">ComponentPhysics::OnEndOverlap</a></div><div class="ttdeci">virtual void OnEndOverlap(const ComponentPhysics::HitInfo &amp;hit_info)</div><div class="ttdoc">オーバーラップ終了</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:239</div></div>
+<div class="ttc" id="aclass_component_physics_html_a5153bb9dd6c72be7f1f6f65341c03b73"><div class="ttname"><a href="class_component_physics.html#a5153bb9dd6c72be7f1f6f65341c03b73">ComponentPhysics::GetWorldMatrix</a></div><div class="ttdeci">virtual const matrix GetWorldMatrix() const override</div><div class="ttdoc">ワールドMatrixの取得</div></div>
+<div class="ttc" id="aclass_component_physics_html_a59e81f57cad608fb1788105b4098eea9"><div class="ttname"><a href="class_component_physics.html#a59e81f57cad608fb1788105b4098eea9">ComponentPhysics::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdoc">初期化</div></div>
+<div class="ttc" id="aclass_component_physics_html_a5ffd94d021c6c4b1b8e6867270ef64aa"><div class="ttname"><a href="class_component_physics.html#a5ffd94d021c6c4b1b8e6867270ef64aa">ComponentPhysics::OnHitComponent</a></div><div class="ttdeci">void OnHitComponent(const Component::HitInfo &amp;)</div><div class="ttdoc">ComponentのOnHitは使用しない</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:245</div></div>
+<div class="ttc" id="aclass_component_physics_html_a64d0b241b6b8a0f5f4f0b517c3015642"><div class="ttname"><a href="class_component_physics.html#a64d0b241b6b8a0f5f4f0b517c3015642">ComponentPhysics::OnHit</a></div><div class="ttdeci">virtual void OnHit(const ComponentPhysics::HitInfo &amp;hit_info)</div><div class="ttdoc">当たった時にここに来る (overrideして使用します)</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:231</div></div>
+<div class="ttc" id="aclass_component_physics_html_a6806802ecf1f88d56b3435f2f1aeb900"><div class="ttname"><a href="class_component_physics.html#a6806802ecf1f88d56b3435f2f1aeb900">ComponentPhysics::GetPhysicsReal</a></div><div class="ttdeci">const float GetPhysicsReal() const</div><div class="ttdoc">現実の物理にどれだけ近いかの設定の取得</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:212</div></div>
+<div class="ttc" id="aclass_component_physics_html_a6a200fda848044e4f1805d55aa68cdc6"><div class="ttname"><a href="class_component_physics.html#a6a200fda848044e4f1805d55aa68cdc6">ComponentPhysics::SetRestitution</a></div><div class="ttdeci">void SetRestitution(float restitution)</div><div class="ttdoc">跳返り係数を設定します</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:190</div></div>
+<div class="ttc" id="aclass_component_physics_html_a6a783268d8ccb4d85f7b005e421619ad"><div class="ttname"><a href="class_component_physics.html#a6a783268d8ccb4d85f7b005e421619ad">ComponentPhysics::GetFriction</a></div><div class="ttdeci">const float GetFriction() const</div><div class="ttdoc">摩擦力を取得します</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:180</div></div>
+<div class="ttc" id="aclass_component_physics_html_a7ae9d26fc7b5f50f041579343c7d4549"><div class="ttname"><a href="class_component_physics.html#a7ae9d26fc7b5f50f041579343c7d4549">ComponentPhysics::PrePhysics</a></div><div class="ttdeci">virtual void PrePhysics() override</div><div class="ttdoc">更新前</div></div>
+<div class="ttc" id="aclass_component_physics_html_a7cfa8108ceed12064491b6f4e58db3af"><div class="ttname"><a href="class_component_physics.html#a7cfa8108ceed12064491b6f4e58db3af">ComponentPhysics::Draw</a></div><div class="ttdeci">virtual void Draw() override</div><div class="ttdoc">描画</div></div>
+<div class="ttc" id="aclass_component_physics_html_a82ed0cb371f954d553ebe48805808dfa"><div class="ttname"><a href="class_component_physics.html#a82ed0cb371f954d553ebe48805808dfa">ComponentPhysics::GetPhysicsStatus</a></div><div class="ttdeci">bool GetPhysicsStatus(PhysicsBit b)</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:67</div></div>
+<div class="ttc" id="aclass_component_physics_html_a8811519de345041279f31fbfedf8e024"><div class="ttname"><a href="class_component_physics.html#a8811519de345041279f31fbfedf8e024">ComponentPhysics::CollisionType</a></div><div class="ttdeci">CollisionType</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:118</div></div>
+<div class="ttc" id="aclass_component_physics_html_a8811519de345041279f31fbfedf8e024a98a0a2299e85802db243e64ef2a6d4bb"><div class="ttname"><a href="class_component_physics.html#a8811519de345041279f31fbfedf8e024a98a0a2299e85802db243e64ef2a6d4bb">ComponentPhysics::CollisionType::NOHIT</a></div><div class="ttdeci">@ NOHIT</div><div class="ttdoc">これがあると強制的に当たらなくなる</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:136</div></div>
+<div class="ttc" id="aclass_component_physics_html_a88aa04b289008612934d31030e7eca08"><div class="ttname"><a href="class_component_physics.html#a88aa04b289008612934d31030e7eca08">ComponentPhysics::SetPhysicsStatus</a></div><div class="ttdeci">void SetPhysicsStatus(PhysicsBit b, bool on)</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:59</div></div>
+<div class="ttc" id="aclass_component_physics_html_a908c3339e3b0c5563af25e54682d10f7"><div class="ttname"><a href="class_component_physics.html#a908c3339e3b0c5563af25e54682d10f7">ComponentPhysics::GUI</a></div><div class="ttdeci">virtual void GUI() override</div><div class="ttdoc">GUI</div></div>
+<div class="ttc" id="aclass_component_physics_html_a9f70d0d731b49999e590ba6a6fe2d9f3"><div class="ttname"><a href="class_component_physics.html#a9f70d0d731b49999e590ba6a6fe2d9f3">ComponentPhysics::SetHitCollision</a></div><div class="ttdeci">static void SetHitCollision(ComponentPhysics::CollisionType col, u16 hit)</div><div class="ttdoc">コリジョンのタイプがどのタイプに当たるかを設定する</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:144</div></div>
+<div class="ttc" id="aclass_component_physics_html_ace082813af3713655f975674e849dbde"><div class="ttname"><a href="class_component_physics.html#ace082813af3713655f975674e849dbde">ComponentPhysics::GetOldWorldMatrix</a></div><div class="ttdeci">virtual const matrix GetOldWorldMatrix() const override</div><div class="ttdoc">1フレーム前のワールドMatrixの取得</div></div>
+<div class="ttc" id="aclass_component_physics_html_ad3abcf3fcde9d1c53351a03dddec42d3"><div class="ttname"><a href="class_component_physics.html#ad3abcf3fcde9d1c53351a03dddec42d3">ComponentPhysics::GetMatrix</a></div><div class="ttdeci">const matrix &amp; GetMatrix() const override</div><div class="ttdoc">マトリクス取得</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:95</div></div>
+<div class="ttc" id="aclass_component_physics_html_ae966602901cf272ba0f7aaa005b7ef72"><div class="ttname"><a href="class_component_physics.html#ae966602901cf272ba0f7aaa005b7ef72">ComponentPhysics::GetRestitution</a></div><div class="ttdeci">const float GetRestitution() const</div><div class="ttdoc">跳返り係数を取得します</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:198</div></div>
+<div class="ttc" id="aclass_component_physics_html_aea3faff13202f4ddec288c57e6676782"><div class="ttname"><a href="class_component_physics.html#aea3faff13202f4ddec288c57e6676782">ComponentPhysics::SetPhysicsReal</a></div><div class="ttdeci">void SetPhysicsReal(float pow)</div><div class="ttdoc">現実の物理にどれだけ近いかを設定する</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:208</div></div>
+<div class="ttc" id="aclass_component_physics_html_af9018fe3b5f016143a8ad30215f1096f"><div class="ttname"><a href="class_component_physics.html#af9018fe3b5f016143a8ad30215f1096f">ComponentPhysics::OnBeginOverlap</a></div><div class="ttdeci">virtual void OnBeginOverlap(const ComponentPhysics::HitInfo &amp;hit_info)</div><div class="ttdoc">オーバーラップ開始</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:235</div></div>
+<div class="ttc" id="aclass_i_matrix_html"><div class="ttname"><a href="class_i_matrix.html">IMatrix</a></div><div class="ttdef"><b>Definition</b> ComponentTransform.h:29</div></div>
+<div class="ttc" id="aclassmatrix_html"><div class="ttname"><a href="classmatrix.html">matrix</a></div><div class="ttdoc">4x4行列</div><div class="ttdef"><b>Definition</b> VectorMath.h:93</div></div>
+<div class="ttc" id="aclassmatrix_html_a77943ad632099406ed3a3ec04d772a9c"><div class="ttname"><a href="classmatrix.html#a77943ad632099406ed3a3ec04d772a9c">matrix::scale</a></div><div class="ttdeci">static matrix scale(const float3 &amp;s)</div></div>
+<div class="ttc" id="astruct_component_1_1_hit_info_html"><div class="ttname"><a href="struct_component_1_1_hit_info.html">Component::HitInfo</a></div><div class="ttdoc">ヒット情報</div><div class="ttdef"><b>Definition</b> ComponentHitInfo.h:13</div></div>
+<div class="ttc" id="astruct_component_physics_1_1_hit_info_html"><div class="ttname"><a href="struct_component_physics_1_1_hit_info.html">ComponentPhysics::HitInfo</a></div><div class="ttdoc">ヒット情報</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:222</div></div>
+<div class="ttc" id="astruct_component_physics_1_1_hit_info_html_a3280073a750931ebc2b0c9741511d49f"><div class="ttname"><a href="struct_component_physics_1_1_hit_info.html#a3280073a750931ebc2b0c9741511d49f">ComponentPhysics::HitInfo::hit_collision_</a></div><div class="ttdeci">ComponentPhysics * hit_collision_</div><div class="ttdoc">当たったコリジョン</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:226</div></div>
+<div class="ttc" id="astruct_component_physics_1_1_hit_info_html_aae8704cea9b18281f4bf38fb8af394ea"><div class="ttname"><a href="struct_component_physics_1_1_hit_info.html#aae8704cea9b18281f4bf38fb8af394ea">ComponentPhysics::HitInfo::hit_position_</a></div><div class="ttdeci">float3 hit_position_</div><div class="ttdoc">当たった地点</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:225</div></div>
+<div class="ttc" id="astruct_component_physics_1_1_hit_info_html_ad4d24c499f53a06194332fd2ccbcb619"><div class="ttname"><a href="struct_component_physics_1_1_hit_info.html#ad4d24c499f53a06194332fd2ccbcb619">ComponentPhysics::HitInfo::collision_</a></div><div class="ttdeci">ComponentPhysics * collision_</div><div class="ttdoc">自分のコリジョン</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:224</div></div>
+<div class="ttc" id="astruct_component_physics_1_1_hit_info_html_ae1ae33e512713c597a8c911266caa3b7"><div class="ttname"><a href="struct_component_physics_1_1_hit_info.html#ae1ae33e512713c597a8c911266caa3b7">ComponentPhysics::HitInfo::hit_</a></div><div class="ttdeci">bool hit_</div><div class="ttdoc">ヒットしたか</div><div class="ttdef"><b>Definition</b> ComponentPhysics.h:223</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="dir_62db5b8162a41e57b9d75d02d7d318ce.html">Component</a></li><li class="navelem"><a href="_component_physics_8h.html">ComponentPhysics.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+\doxysection{Object\+::Box\+Object クラス}
+\hypertarget{class_object_1_1_box_object}{}\label{class_object_1_1_box_object}\index{Object::BoxObject@{Object::BoxObject}}
+
+
+物理演算ボックスオブジェクト  
+
+
+
+
+{\ttfamily \#include $<$Box\+Object.\+h$>$}
+
+
+
+Object\+::Box\+Object の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_box_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Object\+::Box\+Object 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_box_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_1_1_box_object_a7474746fa1fc7d63396813abdcaab4fa}{Box\+Object}} (const JPH\+::\+RVec3 \&pos, JPH\+::\+Vec3 half\+Extent=JPH\+::\+Vec3(0.\+5f, 0.\+5f, 0.\+5f))
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\Hypertarget{class_object_1_1_box_object_adb2684fd994049facd316838a0db70bd}\label{class_object_1_1_box_object_adb2684fd994049facd316838a0db70bd} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Box\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+JPH\+::\+Vec3 \mbox{\hyperlink{class_object_1_1_box_object_ad38befb7a1f19333c69b65eb08a31d25}{Get\+Half\+Extent}} () const
+\begin{DoxyCompactList}\small\item\em ボックスの半サイズを取得する \end{DoxyCompactList}\item 
+JPH\+::\+Vec3 \mbox{\hyperlink{class_object_1_1_box_object_a51e5167a6f94e80d157f6f335ca5fc0f}{Get\+Linear\+Velocity}} () const
+\begin{DoxyCompactList}\small\item\em 現在の速度を取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_box_object_af088e5e22ff11de52774c7c7f76e2af4}{Set\+Linear\+Velocity}} (const JPH\+::\+Vec3 \&velocity)
+\begin{DoxyCompactList}\small\item\em 速度を直接設定する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_box_object_a62cf7f23eaae1be7fb66fc9dac482bbd}{Set\+Player\+Controlled}} (bool controlled)
+\begin{DoxyCompactList}\small\item\em プレイヤー操作モードを設定する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_object_1_1_box_object_ae51fa4a5298d9360565bad13c05550a5}{Is\+Player\+Controlled}} () const
+\begin{DoxyCompactList}\small\item\em プレイヤー操作モードかどうかを取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_box_object_a55e52faf79fc24ae72a79e6b14b9e6fc}{Set\+Move\+Speed}} (float speed)
+\begin{DoxyCompactList}\small\item\em 矢印キー / WASD 移動の速度を設定する \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_object_1_1_box_object_a9215f38cf6940d802f9baaa97943d294}{Get\+Move\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em 矢印キー / WASD 移動の速度を取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_box_object_aa82f0bf4bcf20923df7dc808d956c7ba}{Set\+Jump\+Speed}} (float speed)
+\begin{DoxyCompactList}\small\item\em ジャンプ初速を設定する \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_object_1_1_box_object_a098aaec52ed4a2249a21722ff6b82a4d}{Get\+Jump\+Speed}} () const
+\begin{DoxyCompactList}\small\item\em ジャンプ初速を取得する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries Get\+Position} () const
+\item 
+void {\bfseries Set\+Position} (const JPH\+::\+RVec3 \&pos)
+\item 
+JPH\+::\+Quat {\bfseries Get\+Rotation} () const
+\item 
+void {\bfseries Set\+Rotation} (const JPH\+::\+Quat \&rot)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_1_1_object_base_af53775f0db55e72971bd8bfed4ba6809}{\texorpdfstring{$\sim$}{\string~}\+Object\+Base}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_1_1_object_base_a16b478109bc4787d7095706ba6d7cdfb}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名の取得 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Name} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名の設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Add\+Component} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_object_1_1_object_base_ac6b0a1cda5413d3b3d110d2316bd7536}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em ライフサイクル呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\item 
+void {\bfseries Draw\+Debug} ()
+\item 
+void {\bfseries Draw} ()
+\item 
+void {\bfseries End} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_object_1_1_box_object_a653b6a011cbf8d53b5dcd7ce87feb3ab}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_box_object_a95900caab45ce1461fdee47d8c662ea3}{On\+Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_box_object_a4a6bed1aee9748ec462e88fffa522ed1}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_box_object_a68d6da000a16a3ff8514484bd7eff1b3}{On\+End}} () override
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries On\+Draw\+Debug} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries m\+\_\+pos} = JPH\+::\+RVec3(0.\+0f, 0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em 手動設定の座標 \end{DoxyCompactList}\item 
+JPH\+::\+Quat {\bfseries m\+\_\+rot} = JPH\+::\+Quat\+::s\+Identity()
+\begin{DoxyCompactList}\small\item\em 手動設定の回転 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+物理演算ボックスオブジェクト 
+
+Box\+Collider を持ち Jolt 物理シミュレーションで動作する。 Set\+Player\+Controlled(true) を呼ぶと、矢印キー / WASD キーでの XZ移動・スペースキーでジャンプができる「プレイヤー操作モード」になる。 
+
+\label{doc-constructors}
+\Hypertarget{class_object_1_1_box_object_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_object_1_1_box_object_a7474746fa1fc7d63396813abdcaab4fa}\index{Object::BoxObject@{Object::BoxObject}!BoxObject@{BoxObject}}
+\index{BoxObject@{BoxObject}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{BoxObject()}{BoxObject()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a7474746fa1fc7d63396813abdcaab4fa} 
+Object\+::\+Box\+Object\+::\+Box\+Object (\begin{DoxyParamCaption}\item[{const JPH\+::\+RVec3 \&}]{pos}{, }\item[{JPH\+::\+Vec3}]{half\+Extent}{ = {\ttfamily JPH\+:\+:Vec3(0.5f,~0.5f,~0.5f)}}\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+値の保存のみ行う。コライダーの生成は \doxylink{class_object_1_1_box_object_a653b6a011cbf8d53b5dcd7ce87feb3ab}{On\+Init()} で行う。 
+\begin{DoxyParams}{引数}
+{\em pos} & 初期スポーン座標 \\
+\hline
+{\em half\+Extent} & ボックスの半サイズ（デフォルト 0.\+5f 立方体） \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_object_1_1_box_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_object_1_1_box_object_ad38befb7a1f19333c69b65eb08a31d25}\index{Object::BoxObject@{Object::BoxObject}!GetHalfExtent@{GetHalfExtent}}
+\index{GetHalfExtent@{GetHalfExtent}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{GetHalfExtent()}{GetHalfExtent()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_ad38befb7a1f19333c69b65eb08a31d25} 
+JPH\+::\+Vec3 Object\+::\+Box\+Object\+::\+Get\+Half\+Extent (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ボックスの半サイズを取得する 
+
+\begin{DoxyReturn}{戻り値}
+半サイズ（\+Jolt Vec3） 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_box_object_a098aaec52ed4a2249a21722ff6b82a4d}\index{Object::BoxObject@{Object::BoxObject}!GetJumpSpeed@{GetJumpSpeed}}
+\index{GetJumpSpeed@{GetJumpSpeed}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{GetJumpSpeed()}{GetJumpSpeed()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a098aaec52ed4a2249a21722ff6b82a4d} 
+float Object\+::\+Box\+Object\+::\+Get\+Jump\+Speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ジャンプ初速を取得する 
+
+\begin{DoxyReturn}{戻り値}
+ジャンプ初速（m/秒） 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_box_object_a51e5167a6f94e80d157f6f335ca5fc0f}\index{Object::BoxObject@{Object::BoxObject}!GetLinearVelocity@{GetLinearVelocity}}
+\index{GetLinearVelocity@{GetLinearVelocity}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{GetLinearVelocity()}{GetLinearVelocity()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a51e5167a6f94e80d157f6f335ca5fc0f} 
+JPH\+::\+Vec3 Object\+::\+Box\+Object\+::\+Get\+Linear\+Velocity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+現在の速度を取得する 
+
+\begin{DoxyReturn}{戻り値}
+線形速度（\+Jolt Vec3） 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_box_object_a9215f38cf6940d802f9baaa97943d294}\index{Object::BoxObject@{Object::BoxObject}!GetMoveSpeed@{GetMoveSpeed}}
+\index{GetMoveSpeed@{GetMoveSpeed}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{GetMoveSpeed()}{GetMoveSpeed()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a9215f38cf6940d802f9baaa97943d294} 
+float Object\+::\+Box\+Object\+::\+Get\+Move\+Speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+矢印キー / WASD 移動の速度を取得する 
+
+\begin{DoxyReturn}{戻り値}
+移動速度（m/秒） 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_box_object_ae51fa4a5298d9360565bad13c05550a5}\index{Object::BoxObject@{Object::BoxObject}!IsPlayerControlled@{IsPlayerControlled}}
+\index{IsPlayerControlled@{IsPlayerControlled}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{IsPlayerControlled()}{IsPlayerControlled()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_ae51fa4a5298d9360565bad13c05550a5} 
+bool Object\+::\+Box\+Object\+::\+Is\+Player\+Controlled (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+プレイヤー操作モードかどうかを取得する 
+
+\begin{DoxyReturn}{戻り値}
+true ならプレイヤー操作モード 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_box_object_a4a6bed1aee9748ec462e88fffa522ed1}\index{Object::BoxObject@{Object::BoxObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a4a6bed1aee9748ec462e88fffa522ed1} 
+void Object\+::\+Box\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_box_object_a68d6da000a16a3ff8514484bd7eff1b3}\index{Object::BoxObject@{Object::BoxObject}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a68d6da000a16a3ff8514484bd7eff1b3} 
+void Object\+::\+Box\+Object\+::\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_box_object_a653b6a011cbf8d53b5dcd7ce87feb3ab}\index{Object::BoxObject@{Object::BoxObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a653b6a011cbf8d53b5dcd7ce87feb3ab} 
+void Object\+::\+Box\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_box_object_a95900caab45ce1461fdee47d8c662ea3}\index{Object::BoxObject@{Object::BoxObject}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a95900caab45ce1461fdee47d8c662ea3} 
+void Object\+::\+Box\+Object\+::\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+プレイヤー操作モードの場合のみ、キー入力を読み取る 
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_box_object_aa82f0bf4bcf20923df7dc808d956c7ba}\index{Object::BoxObject@{Object::BoxObject}!SetJumpSpeed@{SetJumpSpeed}}
+\index{SetJumpSpeed@{SetJumpSpeed}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{SetJumpSpeed()}{SetJumpSpeed()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_aa82f0bf4bcf20923df7dc808d956c7ba} 
+void Object\+::\+Box\+Object\+::\+Set\+Jump\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ジャンプ初速を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em speed} & ジャンプ初速（m/秒） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_1_1_box_object_af088e5e22ff11de52774c7c7f76e2af4}\index{Object::BoxObject@{Object::BoxObject}!SetLinearVelocity@{SetLinearVelocity}}
+\index{SetLinearVelocity@{SetLinearVelocity}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{SetLinearVelocity()}{SetLinearVelocity()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_af088e5e22ff11de52774c7c7f76e2af4} 
+void Object\+::\+Box\+Object\+::\+Set\+Linear\+Velocity (\begin{DoxyParamCaption}\item[{const JPH\+::\+Vec3 \&}]{velocity}{}\end{DoxyParamCaption})}
+
+
+
+速度を直接設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em velocity} & 設定する線形速度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_1_1_box_object_a55e52faf79fc24ae72a79e6b14b9e6fc}\index{Object::BoxObject@{Object::BoxObject}!SetMoveSpeed@{SetMoveSpeed}}
+\index{SetMoveSpeed@{SetMoveSpeed}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{SetMoveSpeed()}{SetMoveSpeed()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a55e52faf79fc24ae72a79e6b14b9e6fc} 
+void Object\+::\+Box\+Object\+::\+Set\+Move\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+矢印キー / WASD 移動の速度を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em speed} & 移動速度（m/秒） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_1_1_box_object_a62cf7f23eaae1be7fb66fc9dac482bbd}\index{Object::BoxObject@{Object::BoxObject}!SetPlayerControlled@{SetPlayerControlled}}
+\index{SetPlayerControlled@{SetPlayerControlled}!Object::BoxObject@{Object::BoxObject}}
+\doxysubsubsection{\texorpdfstring{SetPlayerControlled()}{SetPlayerControlled()}}
+{\footnotesize\ttfamily \label{class_object_1_1_box_object_a62cf7f23eaae1be7fb66fc9dac482bbd} 
+void Object\+::\+Box\+Object\+::\+Set\+Player\+Controlled (\begin{DoxyParamCaption}\item[{bool}]{controlled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+プレイヤー操作モードを設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em controlled} & true\+: プレイヤー操作を有効化 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_box_object_8h}{Box\+Object.\+h}}\end{DoxyCompactItemize}

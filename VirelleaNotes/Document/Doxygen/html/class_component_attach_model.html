@@ -1,0 +1,499 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: ComponentAttachModel クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_component_attach_model.html','','class_component_attach_model-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentAttachModel クラス</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+ComponentAttachModel の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_component_attach_model.png" usemap="#ComponentAttachModel_map" alt=""/>
+  <map id="ComponentAttachModel_map" name="ComponentAttachModel_map">
+<area href="class_component.html" title="コンポーネント" alt="Component" shape="rect" coords="0,56,263,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a4751d9ce09323c804ea0e008d88d2ce4" id="r_a4751d9ce09323c804ea0e008d88d2ce4"><td class="memItemLeft" align="right" valign="top">enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4751d9ce09323c804ea0e008d88d2ce4">AttachModelBit</a> : u32 { <a class="el" href="#a4751d9ce09323c804ea0e008d88d2ce4a59d87a4758a9d35fbaf6b204341bb399">Initialized</a>
+ }</td></tr>
+<tr class="memdesc:a4751d9ce09323c804ea0e008d88d2ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">モデルステータス  <a href="#a4751d9ce09323c804ea0e008d88d2ce4">[詳解]</a><br /></td></tr>
+<tr class="memitem:a5db1ecd55985da494e7a2fb1cfb0e9e0" id="r_a5db1ecd55985da494e7a2fb1cfb0e9e0"><td class="memItemLeft" align="right" valign="top">enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0">StatusBit</a> : u64 { <br />
+&#160;&#160;<a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0abd9f7c5d6ab4201b138a3e51dab7056f">Alive</a> = 0
+, <a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0ac5475a8fae2fa421403e56f7ae0de108">ChangePrio</a>
+, <a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0a552f244367a4f2e2ef9e4e5ff2c52ea0">ShowGUI</a>
+, <a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0a59d87a4758a9d35fbaf6b204341bb399">Initialized</a>
+, <br />
+&#160;&#160;<a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0af3413da9e97ed78dada82d1330fde5f1">NoUpdate</a>
+, <a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0add349546b418e50c23e2d88a3342a68f">NoDraw</a>
+, <a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0ad0b20a6cab952ae657cd06d2c956a7ea">DisablePause</a>
+, <a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0a7c572e80f65d4b3a29bc954dd03225b6">IsPause</a>
+, <br />
+&#160;&#160;<a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0a6b554ca9a13e5407990948d4c68e8229">SameType</a>
+, <a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0a268ce394e277db759f5d6ee76c59f0e7">Exited</a>
+, <a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0a2b59321169346822ab33b2c61dbb9975">Serialized</a>
+, <a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0a0698adfc6182853d3bf40771142a42d1">NoSerialize</a>
+, <br />
+&#160;&#160;<a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0a2faec1f9f8cc7f8f40d521c4dd574f49">Enable</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2d3b0f76d5a248d3dc676b757188e343" id="r_a2d3b0f76d5a248d3dc676b757188e343"><td class="memItemLeft" align="right" valign="top"><a id="a2d3b0f76d5a248d3dc676b757188e343" name="a2d3b0f76d5a248d3dc676b757188e343"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>BP_COMPONENT_DECL</b> (<a class="el" href="class_component_attach_model.html">ComponentAttachModel</a>, u8&quot;AttachModel機能クラス&quot;)</td></tr>
+<tr class="memitem:a7c9a7ac992950e2fd77f621f5874fe4d" id="r_a7c9a7ac992950e2fd77f621f5874fe4d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c9a7ac992950e2fd77f621f5874fe4d">Init</a> () override</td></tr>
+<tr class="memdesc:a7c9a7ac992950e2fd77f621f5874fe4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化  <br /></td></tr>
+<tr class="memitem:ad7413e471a768dacd504645d01026ed7" id="r_ad7413e471a768dacd504645d01026ed7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7413e471a768dacd504645d01026ed7">Update</a> () override</td></tr>
+<tr class="memdesc:ad7413e471a768dacd504645d01026ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新  <br /></td></tr>
+<tr class="memitem:a77c6b1cfe3e00ab15988582df20ba383" id="r_a77c6b1cfe3e00ab15988582df20ba383"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77c6b1cfe3e00ab15988582df20ba383">PostUpdate</a> () override</td></tr>
+<tr class="memdesc:a77c6b1cfe3e00ab15988582df20ba383"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新  <br /></td></tr>
+<tr class="memitem:a22baa6e4762c50311aa937c2dbea0b4f" id="r_a22baa6e4762c50311aa937c2dbea0b4f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22baa6e4762c50311aa937c2dbea0b4f">Draw</a> () override</td></tr>
+<tr class="memdesc:a22baa6e4762c50311aa937c2dbea0b4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ描画  <br /></td></tr>
+<tr class="memitem:adacbe643d31b9ce803e6e0f9d5dfc1b9" id="r_adacbe643d31b9ce803e6e0f9d5dfc1b9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adacbe643d31b9ce803e6e0f9d5dfc1b9">Exit</a> () override</td></tr>
+<tr class="memdesc:adacbe643d31b9ce803e6e0f9d5dfc1b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了処理  <br /></td></tr>
+<tr class="memitem:ac722fcf40a7c1b5d92a4937e163002d5" id="r_ac722fcf40a7c1b5d92a4937e163002d5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac722fcf40a7c1b5d92a4937e163002d5">GUI</a> () override</td></tr>
+<tr class="memdesc:ac722fcf40a7c1b5d92a4937e163002d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">GUI処理  <br /></td></tr>
+<tr class="memitem:a5c145a7a89368f86e648fba0500f38d3" id="r_a5c145a7a89368f86e648fba0500f38d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c145a7a89368f86e648fba0500f38d3">GetPutOnMatrix</a> () const</td></tr>
+<tr class="memdesc:a5c145a7a89368f86e648fba0500f38d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">アタッチするノードの位置の取得  <br /></td></tr>
+<tr class="memitem:a35a72144cb28d564c90689b7bf2e1d99" id="r_a35a72144cb28d564c90689b7bf2e1d99"><td class="memItemLeft" align="right" valign="top"><a id="a35a72144cb28d564c90689b7bf2e1d99" name="a35a72144cb28d564c90689b7bf2e1d99"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAttachModelStatus</b> (<a class="el" href="#a4751d9ce09323c804ea0e008d88d2ce4">AttachModelBit</a> bit, bool on)</td></tr>
+<tr class="memitem:a413cc6fb8e3a78dcde0214565fba3e2c" id="r_a413cc6fb8e3a78dcde0214565fba3e2c"><td class="memItemLeft" align="right" valign="top"><a id="a413cc6fb8e3a78dcde0214565fba3e2c" name="a413cc6fb8e3a78dcde0214565fba3e2c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetAttachModelStatus</b> (<a class="el" href="#a4751d9ce09323c804ea0e008d88d2ce4">AttachModelBit</a> bit)</td></tr>
+<tr class="memitem:adb518a51fc1e8a6b0a6741e86979eb24" id="r_adb518a51fc1e8a6b0a6741e86979eb24"><td class="memItemLeft" align="right" valign="top"><a id="adb518a51fc1e8a6b0a6741e86979eb24" name="adb518a51fc1e8a6b0a6741e86979eb24"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAttachObject</b> (ObjectPtr object, std::string_view node=&quot;&quot;)</td></tr>
+<tr class="memitem:abc0b120e2a669732b21d59f3b0b952c9" id="r_abc0b120e2a669732b21d59f3b0b952c9"><td class="memItemLeft" align="right" valign="top"><a id="abc0b120e2a669732b21d59f3b0b952c9" name="abc0b120e2a669732b21d59f3b0b952c9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAttachObject</b> (std::string_view name, std::string_view node=&quot;&quot;)</td></tr>
+<tr class="memitem:ae8823d41897363133e232930c5a81359" id="r_ae8823d41897363133e232930c5a81359"><td class="memItemLeft" align="right" valign="top"><a id="ae8823d41897363133e232930c5a81359" name="ae8823d41897363133e232930c5a81359"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAttachRotate</b> (float3 rot)</td></tr>
+<tr class="memitem:ad57dc9c075e1828ca77c104de2cd3538" id="r_ad57dc9c075e1828ca77c104de2cd3538"><td class="memItemLeft" align="right" valign="top"><a id="ad57dc9c075e1828ca77c104de2cd3538" name="ad57dc9c075e1828ca77c104de2cd3538"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAttachOffset</b> (float3 offset)</td></tr>
+<tr class="memitem:a887a622f00389a3711a5f7e9e866bedc" id="r_a887a622f00389a3711a5f7e9e866bedc"><td class="memItemLeft" align="right" valign="top"><a id="a887a622f00389a3711a5f7e9e866bedc" name="a887a622f00389a3711a5f7e9e866bedc"></a>
+ObjectWeakPtr&#160;</td><td class="memItemRight" valign="bottom"><b>GetAttachObject</b> ()</td></tr>
+<tr class="inherit_header pub_methods_class_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_component.html">Component</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:adb62ff5ea025950fd85bae2a0b889684 inherit pub_methods_class_component" id="r_adb62ff5ea025950fd85bae2a0b889684"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>BP_COMPONENT_DECL</b> (<a class="el" href="class_component.html">Component</a>, u8&quot;Componentクラス&quot;)</td></tr>
+<tr class="memitem:adc1b85b65e84e7b0a7b8382c90aae9ee inherit pub_methods_class_component" id="r_adc1b85b65e84e7b0a7b8382c90aae9ee"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="class_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetOwner</b> ()</td></tr>
+<tr class="memdesc:adc1b85b65e84e7b0a7b8382c90aae9ee inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">オーナー(従属しているオブジェクト)の取得 <br /></td></tr>
+<tr class="memitem:a7f71642489149e36f3235c9404498fd9 inherit pub_methods_class_component" id="r_a7f71642489149e36f3235c9404498fd9"><td class="memItemLeft" align="right" valign="top">
+const <a class="el" href="class_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetOwner</b> () const</td></tr>
+<tr class="memdesc:a7f71642489149e36f3235c9404498fd9 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">オーナー(従属しているオブジェクト)の取得 <br /></td></tr>
+<tr class="memitem:a57cc071d7db3b45f07525ac25acccae0 inherit pub_methods_class_component" id="r_a57cc071d7db3b45f07525ac25acccae0"><td class="memItemLeft" align="right" valign="top">
+ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><b>GetOwnerPtr</b> ()</td></tr>
+<tr class="memdesc:a57cc071d7db3b45f07525ac25acccae0 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">オーナー(従属しているオブジェクト)の取得(SharedPtr) <br /></td></tr>
+<tr class="memitem:ac9aa8330e8fd2d9da6c4cdee2e410d42 inherit pub_methods_class_component" id="r_ac9aa8330e8fd2d9da6c4cdee2e410d42"><td class="memItemLeft" align="right" valign="top">
+const ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><b>GetOwnerPtr</b> () const</td></tr>
+<tr class="memdesc:ac9aa8330e8fd2d9da6c4cdee2e410d42 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">オーナー(従属しているオブジェクト)の取得(SharedPtr) <br /></td></tr>
+<tr class="memitem:a1145f56e14701c2815af40f958967973 inherit pub_methods_class_component" id="r_a1145f56e14701c2815af40f958967973"><td class="memTemplParams" colspan="2">
+template&lt;class T&gt; </td></tr>
+<tr class="memitem:a1145f56e14701c2815af40f958967973 inherit pub_methods_class_component template"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>SetName</b> (const std::string_view &amp;name)</td></tr>
+<tr class="memitem:ad5a384f663536404131f72db57712b5f inherit pub_methods_class_component" id="r_ad5a384f663536404131f72db57712b5f"><td class="memItemLeft" align="right" valign="top">
+const std::string_view&#160;</td><td class="memItemRight" valign="bottom"><b>GetName</b> () const</td></tr>
+<tr class="memitem:a1020899c4cee8796a2bb29d960f05daf inherit pub_methods_class_component" id="r_a1020899c4cee8796a2bb29d960f05daf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a1020899c4cee8796a2bb29d960f05daf">LateUpdate</a> ()</td></tr>
+<tr class="memdesc:a1020899c4cee8796a2bb29d960f05daf inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">遅いアップデート  <br /></td></tr>
+<tr class="memitem:a2b8b4b39ea327d53fd3690fc1f4b4bcd inherit pub_methods_class_component" id="r_a2b8b4b39ea327d53fd3690fc1f4b4bcd"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>LateDraw</b> ()</td></tr>
+<tr class="memdesc:a2b8b4b39ea327d53fd3690fc1f4b4bcd inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">遅い描画 <br /></td></tr>
+<tr class="memitem:a01c7688b95056ecdba07d997750c8987 inherit pub_methods_class_component" id="r_a01c7688b95056ecdba07d997750c8987"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a01c7688b95056ecdba07d997750c8987">PreUpdate</a> ()</td></tr>
+<tr class="memdesc:a01c7688b95056ecdba07d997750c8987 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新前処理  <br /></td></tr>
+<tr class="memitem:a6f408ccab86b5c9f548eccbc75276d68 inherit pub_methods_class_component" id="r_a6f408ccab86b5c9f548eccbc75276d68"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreDraw</b> ()</td></tr>
+<tr class="memdesc:a6f408ccab86b5c9f548eccbc75276d68 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画前処理 <br /></td></tr>
+<tr class="memitem:a0d13a8c49b0930544fc8b67b7e9407f4 inherit pub_methods_class_component" id="r_a0d13a8c49b0930544fc8b67b7e9407f4"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PostDraw</b> ()</td></tr>
+<tr class="memdesc:a0d13a8c49b0930544fc8b67b7e9407f4 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画後処理 <br /></td></tr>
+<tr class="memitem:a28834daa627c5e81e93d40f064a19249 inherit pub_methods_class_component" id="r_a28834daa627c5e81e93d40f064a19249"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a28834daa627c5e81e93d40f064a19249">PrePhysics</a> ()</td></tr>
+<tr class="memdesc:a28834daa627c5e81e93d40f064a19249 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Physics前処理  <br /></td></tr>
+<tr class="memitem:a25dd8e0fdfebc4f68e5fc08738e3c7ae inherit pub_methods_class_component" id="r_a25dd8e0fdfebc4f68e5fc08738e3c7ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a25dd8e0fdfebc4f68e5fc08738e3c7ae">PostPhysics</a> ()</td></tr>
+<tr class="memdesc:a25dd8e0fdfebc4f68e5fc08738e3c7ae inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Physics後処理  <br /></td></tr>
+<tr class="memitem:a88168951cc135b19c28b98761fb838a1 inherit pub_methods_class_component" id="r_a88168951cc135b19c28b98761fb838a1"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>InitSerialize</b> ()</td></tr>
+<tr class="memdesc:a88168951cc135b19c28b98761fb838a1 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">シリアライズでもどらないユーザー処理関数などを設定 <br /></td></tr>
+<tr class="memitem:ab044143f18c8a2515277f16976333569 inherit pub_methods_class_component" id="r_ab044143f18c8a2515277f16976333569"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPriority</b> (<a class="el" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing, <a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> priority)</td></tr>
+<tr class="memitem:a6c804af89307a39a230d6162558b2e48 inherit pub_methods_class_component" id="r_a6c804af89307a39a230d6162558b2e48"><td class="memItemLeft" align="right" valign="top">
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>UniqueText</b> (const std::string_view &amp;name, int id=0)</td></tr>
+<tr class="memitem:ad38c1afab3025ddfde646361afc8b5f1 inherit pub_methods_class_component" id="r_ad38c1afab3025ddfde646361afc8b5f1"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="struct_slot_proc.html">SlotProc</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetProc</b> (const std::string &amp;proc_name, <a class="el" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing)</td></tr>
+<tr class="memdesc:ad38c1afab3025ddfde646361afc8b5f1 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">処理を取得 <br /></td></tr>
+<tr class="memitem:a51e8f7a16e8bc0d4c464ff6f2bdd0ea1 inherit pub_methods_class_component" id="r_a51e8f7a16e8bc0d4c464ff6f2bdd0ea1"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="struct_slot_proc.html">SlotProc</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>SetProc</b> (const std::string &amp;proc_name, ProcTimingFunc func, <a class="el" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing=ProcTiming::Update, <a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> prio=<a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>)</td></tr>
+<tr class="memitem:a124b45faefe26787b3dddb4d1fd15941 inherit pub_methods_class_component" id="r_a124b45faefe26787b3dddb4d1fd15941"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="struct_slot_proc.html">SlotProc</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>SetPriority</b> (const std::string &amp;proc_name, <a class="el" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing=ProcTiming::Update, <a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> prio=<a class="el" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>)</td></tr>
+<tr class="memitem:aa37207856aae13ad5992616643e5fca4 inherit pub_methods_class_component" id="r_aa37207856aae13ad5992616643e5fca4"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetProc</b> (const std::string &amp;proc_name)</td></tr>
+<tr class="memitem:a51a3be48b6ce46575adb2c154357b8a6 inherit pub_methods_class_component" id="r_a51a3be48b6ce46575adb2c154357b8a6"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveThisComponent</b> ()</td></tr>
+<tr class="memdesc:a51a3be48b6ce46575adb2c154357b8a6 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">自分の消去 <br /></td></tr>
+<tr class="memitem:aac4e8d8c91f13222669b6066f50f6ab9 inherit pub_methods_class_component" id="r_aac4e8d8c91f13222669b6066f50f6ab9"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetStatus</b> (<a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0">StatusBit</a> b, bool on)</td></tr>
+<tr class="memdesc:aac4e8d8c91f13222669b6066f50f6ab9 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステータスの設定 <br /></td></tr>
+<tr class="memitem:a5d0f46197b5848036645711f7b079cb5 inherit pub_methods_class_component" id="r_a5d0f46197b5848036645711f7b079cb5"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetStatus</b> (<a class="el" href="class_component.html#a5db1ecd55985da494e7a2fb1cfb0e9e0">StatusBit</a> b)</td></tr>
+<tr class="memdesc:a5d0f46197b5848036645711f7b079cb5 inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">ステータスの取得 <br /></td></tr>
+<tr class="memitem:adbc18f9498cb30d5aa14d6178b961fc5 inherit pub_methods_class_component" id="r_adbc18f9498cb30d5aa14d6178b961fc5"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Construct</b> (ObjectPtr owner)</td></tr>
+<tr class="memitem:a8e41b07538bf037981574f4f011d773a inherit pub_methods_class_component" id="r_a8e41b07538bf037981574f4f011d773a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a8e41b07538bf037981574f4f011d773a">OnHitComponent</a> (const <a class="el" href="struct_component_1_1_hit_info.html">HitInfo</a> &amp;)</td></tr>
+<tr class="memitem:abf3ecb35846d5bc939fca4ce914d9212 inherit pub_methods_class_component" id="r_abf3ecb35846d5bc939fca4ce914d9212"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnHitComponent</b> (const <a class="el" href="struct_component_1_1_hit_info_physics.html">HitInfoPhysics</a> &amp;)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+フレンド</h2></td></tr>
+<tr class="memitem:a0720b5f434e636e22a3ed34f847eec57" id="r_a0720b5f434e636e22a3ed34f847eec57"><td class="memItemLeft" align="right" valign="top"><a id="a0720b5f434e636e22a3ed34f847eec57" name="a0720b5f434e636e22a3ed34f847eec57"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Object</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="memitem:abeb8b5fb2ca31a185f96d343af1ccd22" id="r_abeb8b5fb2ca31a185f96d343af1ccd22"><td class="memItemLeft" align="right" valign="top"><a id="abeb8b5fb2ca31a185f96d343af1ccd22" name="abeb8b5fb2ca31a185f96d343af1ccd22"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterToObject</b> (ComponentPtr cmp, ObjectPtr obj)</td></tr>
+<tr class="memitem:a04910312b4e9ad3959892ff5e231629e" id="r_a04910312b4e9ad3959892ff5e231629e"><td class="memItemLeft" align="right" valign="top"><a id="a04910312b4e9ad3959892ff5e231629e" name="a04910312b4e9ad3959892ff5e231629e"></a>
+std::function&lt; void(const <a class="el" href="struct_component_1_1_hit_info.html">HitInfo</a> &amp;hit_info)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnHitComponentFunc</b></td></tr>
+<tr class="memitem:a91d5cc2893166a196e1d5e550391cf58" id="r_a91d5cc2893166a196e1d5e550391cf58"><td class="memItemLeft" align="right" valign="top"><a id="a91d5cc2893166a196e1d5e550391cf58" name="a91d5cc2893166a196e1d5e550391cf58"></a>
+std::function&lt; void(const <a class="el" href="struct_component_1_1_hit_info_physics.html">HitInfoPhysics</a> &amp;hit_info)&gt;&#160;</td><td class="memItemRight" valign="bottom"><b>OnHitComponentPhysicsFunc</b></td></tr>
+<tr class="memitem:aaf224b0e73780a9c3cbad323a0ec59f5" id="r_aaf224b0e73780a9c3cbad323a0ec59f5"><td class="memItemLeft" align="right" valign="top"><a id="aaf224b0e73780a9c3cbad323a0ec59f5" name="aaf224b0e73780a9c3cbad323a0ec59f5"></a>
+ObjectPtr&#160;</td><td class="memItemRight" valign="bottom"><b>owner_</b> = nullptr</td></tr>
+<tr class="memdesc:aaf224b0e73780a9c3cbad323a0ec59f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">オーナー <br /></td></tr>
+<tr class="memitem:aa075f1283763194b7b15660ceb626196" id="r_aa075f1283763194b7b15660ceb626196"><td class="memItemLeft" align="right" valign="top"><a id="aa075f1283763194b7b15660ceb626196" name="aa075f1283763194b7b15660ceb626196"></a>
+SlotProcs&#160;</td><td class="memItemRight" valign="bottom"><b>proc_timings_</b></td></tr>
+<tr class="memdesc:aa075f1283763194b7b15660ceb626196"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録処理(update) <br /></td></tr>
+<tr class="memitem:af89da12b7dd26576a4b896a785103e04" id="r_af89da12b7dd26576a4b896a785103e04"><td class="memItemLeft" align="right" valign="top"><a id="af89da12b7dd26576a4b896a785103e04" name="af89da12b7dd26576a4b896a785103e04"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>update_delta_time_</b> = 0.0f</td></tr>
+<tr class="memdesc:af89da12b7dd26576a4b896a785103e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">update以外で使用できるように <br /></td></tr>
+<tr class="memitem:aaafe1a5010b858a2c66379bcd6faa80b" id="r_aaafe1a5010b858a2c66379bcd6faa80b"><td class="memItemLeft" align="right" valign="top"><a id="aaafe1a5010b858a2c66379bcd6faa80b" name="aaafe1a5010b858a2c66379bcd6faa80b"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name_</b></td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型メンバ詳解</h2>
+<a id="a4751d9ce09323c804ea0e008d88d2ce4" name="a4751d9ce09323c804ea0e008d88d2ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4751d9ce09323c804ea0e008d88d2ce4">&#9670;&#160;</a></span>AttachModelBit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum struct <a class="el" href="#a4751d9ce09323c804ea0e008d88d2ce4">ComponentAttachModel::AttachModelBit</a> : <a class="el" href="_typedef_8h.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>モデルステータス </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a4751d9ce09323c804ea0e008d88d2ce4a59d87a4758a9d35fbaf6b204341bb399" name="a4751d9ce09323c804ea0e008d88d2ce4a59d87a4758a9d35fbaf6b204341bb399"></a>Initialized&#160;</td><td class="fielddoc"><p>初期化済み </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a22baa6e4762c50311aa937c2dbea0b4f" name="a22baa6e4762c50311aa937c2dbea0b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22baa6e4762c50311aa937c2dbea0b4f">&#9670;&#160;</a></span>Draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ComponentAttachModel::Draw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デバッグ描画 </p>
+
+<p><a class="el" href="class_component.html#a8622ccd5f24035d48e33292717299313">Component</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="adacbe643d31b9ce803e6e0f9d5dfc1b9" name="adacbe643d31b9ce803e6e0f9d5dfc1b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adacbe643d31b9ce803e6e0f9d5dfc1b9">&#9670;&#160;</a></span>Exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ComponentAttachModel::Exit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了処理 </p>
+
+<p><a class="el" href="class_component.html#a336a670bf5c6e49062b0ea3a7367c5d7">Component</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a5c145a7a89368f86e648fba0500f38d3" name="a5c145a7a89368f86e648fba0500f38d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c145a7a89368f86e648fba0500f38d3">&#9670;&#160;</a></span>GetPutOnMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> ComponentAttachModel::GetPutOnMatrix </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アタッチするノードの位置の取得 </p>
+<dl class="section return"><dt>戻り値</dt><dd>位置の取得 </dd></dl>
+
+</div>
+</div>
+<a id="ac722fcf40a7c1b5d92a4937e163002d5" name="ac722fcf40a7c1b5d92a4937e163002d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac722fcf40a7c1b5d92a4937e163002d5">&#9670;&#160;</a></span>GUI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ComponentAttachModel::GUI </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>GUI処理 </p>
+
+<p><a class="el" href="class_component.html#ae6895fe308d9365dd629b2e46a2ddf62">Component</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a7c9a7ac992950e2fd77f621f5874fe4d" name="a7c9a7ac992950e2fd77f621f5874fe4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c9a7ac992950e2fd77f621f5874fe4d">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ComponentAttachModel::Init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化 </p>
+
+<p><a class="el" href="class_component.html#a5a5e595fab62ba757f03becc5b101732">Component</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a77c6b1cfe3e00ab15988582df20ba383" name="a77c6b1cfe3e00ab15988582df20ba383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77c6b1cfe3e00ab15988582df20ba383">&#9670;&#160;</a></span>PostUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ComponentAttachModel::PostUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新 </p>
+
+<p><a class="el" href="class_component.html#a5ca9fb606c77392f74f4e80c3043d3fe">Component</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="ad7413e471a768dacd504645d01026ed7" name="ad7413e471a768dacd504645d01026ed7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7413e471a768dacd504645d01026ed7">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ComponentAttachModel::Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新 </p>
+
+<p><a class="el" href="class_component.html#aaf2ce6dc5752072492f790ad4c7955bb">Component</a>を再実装しています。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/<a class="el" href="_component_attach_model_8h_source.html">ComponentAttachModel.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_component_attach_model.html">ComponentAttachModel</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

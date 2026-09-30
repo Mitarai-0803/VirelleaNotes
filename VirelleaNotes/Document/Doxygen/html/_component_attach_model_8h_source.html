@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentAttachModel.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_component_attach_model_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentAttachModel.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="_component_8h.html">System/Component/Component.h</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="_cereal_8h.html">System/Cereal.h</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>USING_PTR(<a class="code hl_class" href="class_component_attach_model.html">ComponentAttachModel</a>);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_component_attach_model.html">    8</a></span><span class="keyword">class </span>ComponentAttachModel : <span class="keyword">public</span> Component</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">friend</span> <span class="keyword">class </span>Object;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_define" href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a>(ComponentAttachModel, <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;AttachModel機能クラス&quot;</span>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    ComponentAttachModel() {}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_component_attach_model.html#a7c9a7ac992950e2fd77f621f5874fe4d">   16</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_attach_model.html#a7c9a7ac992950e2fd77f621f5874fe4d">Init</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_component_attach_model.html#ad7413e471a768dacd504645d01026ed7">   17</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_attach_model.html#ad7413e471a768dacd504645d01026ed7">Update</a>() <span class="keyword">override</span>;        </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_component_attach_model.html#a77c6b1cfe3e00ab15988582df20ba383">   18</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_attach_model.html#a77c6b1cfe3e00ab15988582df20ba383">PostUpdate</a>() <span class="keyword">override</span>;    </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_component_attach_model.html#a22baa6e4762c50311aa937c2dbea0b4f">   19</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_attach_model.html#a22baa6e4762c50311aa937c2dbea0b4f">Draw</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_component_attach_model.html#adacbe643d31b9ce803e6e0f9d5dfc1b9">   20</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_attach_model.html#adacbe643d31b9ce803e6e0f9d5dfc1b9">Exit</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_component_attach_model.html#ac722fcf40a7c1b5d92a4937e163002d5">   21</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_attach_model.html#ac722fcf40a7c1b5d92a4937e163002d5">GUI</a>() <span class="keyword">override</span>;           </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_component_attach_model.html#a5c145a7a89368f86e648fba0500f38d3">   25</a></span>    <a class="code hl_class" href="classmatrix.html">matrix</a> <a class="code hl_function" href="class_component_attach_model.html#a5c145a7a89368f86e648fba0500f38d3">GetPutOnMatrix</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_component_attach_model.html#a4751d9ce09323c804ea0e008d88d2ce4">   30</a></span>    <span class="keyword">enum struct</span> <a class="code hl_enumeration" href="class_component_attach_model.html#a4751d9ce09323c804ea0e008d88d2ce4">AttachModelBit</a> : <a class="code hl_typedef" href="_typedef_8h.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_component_attach_model.html#a4751d9ce09323c804ea0e008d88d2ce4a59d87a4758a9d35fbaf6b204341bb399">   32</a></span>        <a class="code hl_enumvalue" href="class_component_attach_model.html#a4751d9ce09323c804ea0e008d88d2ce4a59d87a4758a9d35fbaf6b204341bb399">Initialized</a>,    </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    };</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> SetAttachModelStatus(<a class="code hl_enumeration" href="class_component_attach_model.html#a4751d9ce09323c804ea0e008d88d2ce4">AttachModelBit</a> bit, <span class="keywordtype">bool</span> on) { attach_model_status_.set(bit, on); }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">bool</span> GetAttachModelStatus(<a class="code hl_enumeration" href="class_component_attach_model.html#a4751d9ce09323c804ea0e008d88d2ce4">AttachModelBit</a> bit) { <span class="keywordflow">return</span> attach_model_status_.is(bit); }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> SetAttachObject(ObjectPtr <span class="keywordtype">object</span>, std::string_view node = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordtype">void</span> SetAttachObject(std::string_view name, std::string_view node = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> SetAttachRotate(float3 rot) { attach_model_rotate_ = rot; }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> SetAttachOffset(float3 offset) { attach_model_offset_ = offset; }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    ObjectWeakPtr GetAttachObject() { <span class="keywordflow">return</span> object_; }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    Status&lt;AttachModelBit&gt; attach_model_status_;    </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    float3 attach_model_rotate_{0, 0, 0};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    float3 attach_model_offset_{0, 0, 0};</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    ObjectWeakPtr object_;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::string   object_name_{};</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">int</span>         object_node_index_ = 0;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::string object_node_name_{};</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">bool</span> node_manipulate_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// @param arc アーカイバ</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// @param ver バージョン</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_define" href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a>(arc, ver)</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        arc(cereal::make_nvp(<span class="stringliteral">&quot;owner&quot;</span>, <a class="code hl_variable" href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">owner_</a>));                                      <span class="comment">//&lt; オーナー</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        arc(cereal::make_nvp(<span class="stringliteral">&quot;attach_model_status&quot;</span>, attach_model_status_.get()));    <span class="comment">//&lt; カメラステート</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        arc(CEREAL_NVP(attach_model_rotate_));</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        arc(CEREAL_NVP(attach_model_offset_));</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        arc(CEREAL_NVP(object_name_));</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        arc(CEREAL_NVP(object_node_index_));</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        arc(CEREAL_NVP(object_node_name_));</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>};</div>
+</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>CEREAL_REGISTER_TYPE(<a class="code hl_class" href="class_component_attach_model.html">ComponentAttachModel</a>)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>CEREAL_REGISTER_POLYMORPHIC_RELATION(<a class="code hl_class" href="class_component.html">Component</a>, <a class="code hl_class" href="class_component_attach_model.html">ComponentAttachModel</a>)</div>
+<div class="ttc" id="a_cereal_8h_html"><div class="ttname"><a href="_cereal_8h.html">Cereal.h</a></div><div class="ttdoc">シリアル組み込み用</div></div>
+<div class="ttc" id="a_cereal_8h_html_a7df5c4a4fa530d0bf2831fc2180f0386"><div class="ttname"><a href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a></div><div class="ttdeci">#define CEREAL_SAVELOAD(arc, ver)</div><div class="ttdoc">Cereal</div><div class="ttdef"><b>Definition</b> Cereal.h:79</div></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">コンポーネント ベースクラス</div></div>
+<div class="ttc" id="a_component_8h_html_a544c31f98b90b38818b27eff6683eef6"><div class="ttname"><a href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a></div><div class="ttdeci">#define BP_COMPONENT_DECL(CLASS,...)</div><div class="ttdef"><b>Definition</b> Component.h:77</div></div>
+<div class="ttc" id="a_typedef_8h_html_a70c1fcc1a4e96af8f6580f708657cd41"><div class="ttname"><a href="_typedef_8h.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a></div><div class="ttdeci">uint32_t u32</div><div class="ttdoc">32bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:23</div></div>
+<div class="ttc" id="a_typedef_8h_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:21</div></div>
+<div class="ttc" id="aclass_component_attach_model_html"><div class="ttname"><a href="class_component_attach_model.html">ComponentAttachModel</a></div><div class="ttdef"><b>Definition</b> ComponentAttachModel.h:9</div></div>
+<div class="ttc" id="aclass_component_attach_model_html_a22baa6e4762c50311aa937c2dbea0b4f"><div class="ttname"><a href="class_component_attach_model.html#a22baa6e4762c50311aa937c2dbea0b4f">ComponentAttachModel::Draw</a></div><div class="ttdeci">virtual void Draw() override</div><div class="ttdoc">デバッグ描画</div></div>
+<div class="ttc" id="aclass_component_attach_model_html_a4751d9ce09323c804ea0e008d88d2ce4"><div class="ttname"><a href="class_component_attach_model.html#a4751d9ce09323c804ea0e008d88d2ce4">ComponentAttachModel::AttachModelBit</a></div><div class="ttdeci">AttachModelBit</div><div class="ttdoc">モデルステータス</div><div class="ttdef"><b>Definition</b> ComponentAttachModel.h:31</div></div>
+<div class="ttc" id="aclass_component_attach_model_html_a4751d9ce09323c804ea0e008d88d2ce4a59d87a4758a9d35fbaf6b204341bb399"><div class="ttname"><a href="class_component_attach_model.html#a4751d9ce09323c804ea0e008d88d2ce4a59d87a4758a9d35fbaf6b204341bb399">ComponentAttachModel::AttachModelBit::Initialized</a></div><div class="ttdeci">@ Initialized</div><div class="ttdoc">初期化済み</div><div class="ttdef"><b>Definition</b> ComponentAttachModel.h:32</div></div>
+<div class="ttc" id="aclass_component_attach_model_html_a5c145a7a89368f86e648fba0500f38d3"><div class="ttname"><a href="class_component_attach_model.html#a5c145a7a89368f86e648fba0500f38d3">ComponentAttachModel::GetPutOnMatrix</a></div><div class="ttdeci">matrix GetPutOnMatrix() const</div><div class="ttdoc">アタッチするノードの位置の取得</div></div>
+<div class="ttc" id="aclass_component_attach_model_html_a77c6b1cfe3e00ab15988582df20ba383"><div class="ttname"><a href="class_component_attach_model.html#a77c6b1cfe3e00ab15988582df20ba383">ComponentAttachModel::PostUpdate</a></div><div class="ttdeci">virtual void PostUpdate() override</div><div class="ttdoc">更新</div></div>
+<div class="ttc" id="aclass_component_attach_model_html_a7c9a7ac992950e2fd77f621f5874fe4d"><div class="ttname"><a href="class_component_attach_model.html#a7c9a7ac992950e2fd77f621f5874fe4d">ComponentAttachModel::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdoc">初期化</div></div>
+<div class="ttc" id="aclass_component_attach_model_html_ac722fcf40a7c1b5d92a4937e163002d5"><div class="ttname"><a href="class_component_attach_model.html#ac722fcf40a7c1b5d92a4937e163002d5">ComponentAttachModel::GUI</a></div><div class="ttdeci">virtual void GUI() override</div><div class="ttdoc">GUI処理</div></div>
+<div class="ttc" id="aclass_component_attach_model_html_ad7413e471a768dacd504645d01026ed7"><div class="ttname"><a href="class_component_attach_model.html#ad7413e471a768dacd504645d01026ed7">ComponentAttachModel::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdoc">更新</div></div>
+<div class="ttc" id="aclass_component_attach_model_html_adacbe643d31b9ce803e6e0f9d5dfc1b9"><div class="ttname"><a href="class_component_attach_model.html#adacbe643d31b9ce803e6e0f9d5dfc1b9">ComponentAttachModel::Exit</a></div><div class="ttdeci">virtual void Exit() override</div><div class="ttdoc">終了処理</div></div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">コンポーネント</div><div class="ttdef"><b>Definition</b> Component.h:163</div></div>
+<div class="ttc" id="aclass_component_html_aaf224b0e73780a9c3cbad323a0ec59f5"><div class="ttname"><a href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">Component::owner_</a></div><div class="ttdeci">ObjectPtr owner_</div><div class="ttdoc">オーナー</div><div class="ttdef"><b>Definition</b> Component.h:309</div></div>
+<div class="ttc" id="aclassmatrix_html"><div class="ttname"><a href="classmatrix.html">matrix</a></div><div class="ttdoc">4x4行列</div><div class="ttdef"><b>Definition</b> VectorMath.h:93</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="dir_62db5b8162a41e57b9d75d02d7d318ce.html">Component</a></li><li class="navelem"><b>ComponentAttachModel.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

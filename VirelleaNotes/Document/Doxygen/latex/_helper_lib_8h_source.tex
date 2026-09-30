@@ -1,0 +1,76 @@
+\doxysection{Helper\+Lib.\+h}
+\hypertarget{_helper_lib_8h_source}{}\label{_helper_lib_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Utils/HelperLib.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Utils/HelperLib.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }HelperLib::File\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ }Files\_t\ =\ std::vector<std::string>;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ std::string\ GetDirectory(std::string\_view\ filepath);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ std::string\ GetFileExtension(std::string\_view\ filepath);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ std::string\ GetOnlyFileName(std::string\_view\ filepath);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ std::string\ GetOnlyFileNameWithoutExtension(std::string\_view\ filepath);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ Files\_t\ GetFilesFromDirectory(std::string\_view\ dirname,\ std::string\_view\ ext\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{bool}\ CheckFileExistence(std::string\_view\ path);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{bool}\ CreateFolder(std::string\_view\ path);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{bool}\ IsFileNewerThan(\textcolor{keyword}{const}\ std::filesystem::path\&\ file\_path,\ \textcolor{keyword}{const}\ std::string\&\ date\_str);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ HelperLib::File}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{namespace\ }HelperLib::String\ \{}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ std::wstring\ ToWString(std::string\_view\ \textcolor{keywordtype}{string});}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ std::string\ ToString(std::wstring\_view\ wstring);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ std::u16string\ To16Str(std::wstring\_view\ wstring);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ std::vector<std::string>\ Split(std::string\_view\ \textcolor{keywordtype}{string},\ \textcolor{keywordtype}{char}\ separator);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ std::string\ Trim(std::string\_view\ str,\ std::string\_view\ chars\ =\ \textcolor{stringliteral}{"{}\ "{}});}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00086\ std::string\ format(\textcolor{keyword}{const}\ std::string\&\ fmt,\ Args...\ args)}
+\DoxyCodeLine{00087\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \ \ \ \ \ \ \ \ \ \ \ len\ =\ std::snprintf(\textcolor{keyword}{nullptr},\ 0,\ fmt.c\_str(),\ args...);}
+\DoxyCodeLine{00089\ \ \ \ \ std::vector<char>\ buf(len\ +\ 1);}
+\DoxyCodeLine{00090\ \ \ \ \ std::snprintf(\&buf[0],\ len\ +\ 1,\ fmt.c\_str(),\ args...);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{return}\ std::string(\&buf[0],\ \&buf[0]\ +\ len);}
+\DoxyCodeLine{00092\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ HelperLib::String}}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{namespace\ }HelperLib::OS\ \{}
+\DoxyCodeLine{00100\ \textcolor{keywordtype}{bool}\ IsWindows11();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{bool}\ IsWindows10OrGreater();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ HelperLib::OS}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{keyword}{namespace\ }HelperLib::Math\ \{}
+\DoxyCodeLine{00110\ \textcolor{keywordtype}{bool}\ NearlyEqual(\textcolor{keywordtype}{float}\ f1,\ \textcolor{keywordtype}{float}\ f2);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ matrix\ CreateMatrixByFrontVector(float3\ front,\ float3\ up\ =\ float3\{0,\ 1,\ 0\},\ \textcolor{keywordtype}{bool}\ upremake\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00123\ matrix\ LookAtMatrixForObject(float3\ my\_object\_pos,\ float3\ target\_object\_pos);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00130\ matrix\ ToMatrix(\textcolor{keyword}{const}\ float3\&\ translate,\ \textcolor{keyword}{const}\ float3\&\ rotate\_xyz,\ \textcolor{keyword}{const}\ float3\&\ scale\_xyz);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{bool}\ FromMatrix(\textcolor{keyword}{const}\ matrix\&\ mat,\ float3\&\ translate,\ float3\&\ rotate\_xyz,\ float3\&\ scale\_xyz);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ HelperLib::Math}}
+
+\end{DoxyCode}

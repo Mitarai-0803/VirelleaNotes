@@ -1,0 +1,718 @@
+\doxysection{IMatrix\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} クラステンプレート}
+\hypertarget{class_i_matrix}{}\label{class_i_matrix}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{Matrix}} ()=0
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{Get\+Matrix}} () const =0
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+\Hypertarget{class_i_matrix_a34eaf3f561f25cfa64c1b1ef25782a1f}\label{class_i_matrix_a34eaf3f561f25cfa64c1b1ef25782a1f} 
+virtual std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Shared\+This} ()=0
+\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{Get\+World\+Matrix}} () const =0
+\begin{DoxyCompactList}\small\item\em ワールド\+Matrixの取得 \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_i_matrix_aba0d23d8c1c3cb1b5963e9ca06d56236}{Get\+Old\+World\+Matrix}} () const =0
+\begin{DoxyCompactList}\small\item\em 1フレーム前のワールド\+Matrixの取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_i_matrix_a76fdee0594b93555b078e7182923e17e}\label{class_i_matrix_a76fdee0594b93555b078e7182923e17e} 
+auto {\bfseries Set\+Matrix} (const \mbox{\hyperlink{classmatrix}{matrix}} \&mat)
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{Get\+Matrix\+Float}} ()
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a714ba34bafae6ad18adc512a12bfd88c}{Set\+Translate}} (float3 translate)
+\begin{DoxyCompactList}\small\item\em 位置をセットします \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_ae7c4c3c592258a62946b51b4ddd3b9f4}{Add\+Translate}} (float3 translate, bool local=false, bool direct=false)
+\begin{DoxyCompactList}\small\item\em 現在の位置から移動させます \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_ab67ba5ffdc38b759a3cb4a4d37dbd69e}{Get\+Translate}} () const
+\begin{DoxyCompactList}\small\item\em 現在の位置を取得 \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a9964f98393c131d9aeaca9a2394dc2a0}{Translate}} ()
+\begin{DoxyCompactList}\small\item\em 現在の位置を取得 \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_aefa89e636dcd4f4c2f128fbd690829ed}{Get\+Vector\+AxisX}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_ac940f73d639aab045fef9c7ab9b0c001}{Get\+Vector\+AxisY}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_a521c543b440fd67361317096d075d230}{Get\+Vector\+AxisZ}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a781040f918546a43c53fe908f78749ab}{Vector\+AxisX}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a85f8892147948781655c3cdfef6b56a4}{Vector\+AxisY}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a13ca80b18abe18006c5963d182837ef4}{Vector\+AxisZ}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_ad3c834a912db364ad3da23ddfa865156}{Translate\+Float}} ()
+\begin{DoxyCompactList}\small\item\em 位置を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a634a043c1cbcdf122104ec3a5677b2a5}{Vector\+Axis\+XFloat}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a310e16cb1bcea89de3f5792c9a1256e4}{Vector\+Axis\+YFloat}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_ac85c3df7009e77d500be39547f08fc59}{Vector\+Axis\+ZFloat}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a714521197cdaf88b10263628c5d6b6e1}{Set\+Vector\+AxisX}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em X軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_affd008e5bc3f162771f65f6ccd0f4212}{Set\+Vector\+AxisY}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em Y軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a650a67e0bd69073dbf2540566436a6a8}{Set\+Vector\+AxisZ}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em Z軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_aabebf94bb7ad5c922f06a5718af1c3b7}{Set\+Rotation\+To\+Position}} (float3 position, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ポジションの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a626db18f4ef2eef12a3d94e7467e5d47}{Set\+Rotation\+To\+Vector}} (float3 vec, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a1c2365a4d13bae038007b507d987a019}{Set\+Rotation\+To\+Vector\+On\+Parent}} (float3 vec, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a64d76c423bcaf1509cdd0d59853db9a2}{Set\+Rotation\+To\+Position\+With\+Limit}} (float3 position, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ポジションの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a4033fc43ac7e0f5c3d2e2cc584fcc1d3}{Set\+Rotation\+To\+Vector\+With\+Limit}} (float3 vec, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_ab69f027e3f44e4a62fc51fd45372b766}{Set\+Rotation\+To\+Vector\+On\+Parent\+With\+Limit}} (float3 vec, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a79080df693fc6ca32a4d0cf00d277bf1}{Set\+Rotation\+Axis\+XYZ}} (float3 xyz)
+\begin{DoxyCompactList}\small\item\em 軸回転量を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a00baa4ac15c3a377d63b11a4ac694736}{Add\+Rotation\+Axis\+XYZ}} (float3 xyz)
+\begin{DoxyCompactList}\small\item\em 軸回転量を現在の状態から追加する \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_a33669a9c95add8d80d310fc7ef9a0bf7}{Get\+Rotation\+Axis\+XYZ}} (bool local=true)
+\begin{DoxyCompactList}\small\item\em 軸回転量を取得する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a1bf7f616a7fe4c9dfc975cf0a2748304}{Set\+Scale\+Axis\+XYZ}} (float3 scale)
+\begin{DoxyCompactList}\small\item\em スケールの設定 \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_aa710c9aafe9fcfed378d3242329c45b3}{Mul\+Scale\+Axis\+XYZ}} (float3 scale)
+\begin{DoxyCompactList}\small\item\em 現在のスケールから掛け合わせ倍率スケール \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_a9d823777983c3ca5e917c8ca8b879054}{Get\+Scale\+Axis\+XYZ}} (bool local=true)
+\begin{DoxyCompactList}\small\item\em スケールの取得 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_i_matrix_a34cd0c9a971a79694ff25330ed3431d3}{Get\+Degree\+To\+Position}} (float3 target\+\_\+position)
+\begin{DoxyCompactList}\small\item\em 向いている角度をもとめます \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_i_matrix_a938bf6fa6d01cc0945c0e7899aa03fc8}{Get\+Degree\+To\+Vector}} (float3 target\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em 向いている角度をもとめます \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_i_matrix_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_i_matrix_a00baa4ac15c3a377d63b11a4ac694736}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!AddRotationAxisXYZ@{AddRotationAxisXYZ}}
+\index{AddRotationAxisXYZ@{AddRotationAxisXYZ}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AddRotationAxisXYZ()}{AddRotationAxisXYZ()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a00baa4ac15c3a377d63b11a4ac694736} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Add\+Rotation\+Axis\+XYZ (\begin{DoxyParamCaption}\item[{float3}]{xyz}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+軸回転量を現在の状態から追加する 
+
+
+\begin{DoxyParams}{引数}
+{\em xyz} & 軸に合わせた回転量 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_ae7c4c3c592258a62946b51b4ddd3b9f4}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!AddTranslate@{AddTranslate}}
+\index{AddTranslate@{AddTranslate}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AddTranslate()}{AddTranslate()}}
+{\footnotesize\ttfamily \label{class_i_matrix_ae7c4c3c592258a62946b51b4ddd3b9f4} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Add\+Translate (\begin{DoxyParamCaption}\item[{float3}]{translate}{, }\item[{bool}]{local}{ = {\ttfamily false}, }\item[{bool}]{direct}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+現在の位置から移動させます 
+
+
+\begin{DoxyParams}{引数}
+{\em translate} & 移動させたい量 \\
+\hline
+{\em local} & ローカル移動 \\
+\hline
+{\em direct} & FPSに関係なく移動させる \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a34cd0c9a971a79694ff25330ed3431d3}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetDegreeToPosition@{GetDegreeToPosition}}
+\index{GetDegreeToPosition@{GetDegreeToPosition}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetDegreeToPosition()}{GetDegreeToPosition()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a34cd0c9a971a79694ff25330ed3431d3} 
+template$<$class T$>$ \\
+float \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Degree\+To\+Position (\begin{DoxyParamCaption}\item[{float3}]{target\+\_\+position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+向いている角度をもとめます 
+
+
+\begin{DoxyParams}{引数}
+{\em target\+\_\+position} & ターゲットのポジション \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+前方向との角度 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a938bf6fa6d01cc0945c0e7899aa03fc8}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetDegreeToVector@{GetDegreeToVector}}
+\index{GetDegreeToVector@{GetDegreeToVector}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetDegreeToVector()}{GetDegreeToVector()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a938bf6fa6d01cc0945c0e7899aa03fc8} 
+template$<$class T$>$ \\
+float \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Degree\+To\+Vector (\begin{DoxyParamCaption}\item[{float3}]{target\+\_\+vector}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+向いている角度をもとめます 
+
+
+\begin{DoxyParams}{引数}
+{\em target\+\_\+vector} & ターゲットの方向 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+前方向との角度 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetMatrix@{GetMatrix}}
+\index{GetMatrix@{GetMatrix}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetMatrix()}{GetMatrix()}}
+{\footnotesize\ttfamily \label{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e} 
+template$<$class T$>$ \\
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Transformの\+Matrix情報を取得します 
+
+\begin{DoxyReturn}{戻り値}
+Transform の Matrix 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_component_collision_capsule_a191bc99e000675ac5713ed1a7f18af0a}{Component\+Collision\+Capsule}}, \mbox{\hyperlink{class_component_collision_line_a3b354d9c485b8c8582eaf639182d48e0}{Component\+Collision\+Line}}, \mbox{\hyperlink{class_component_collision_model_a1e221af364835b89b88cac02da21c124}{Component\+Collision\+Model}}, \mbox{\hyperlink{class_component_collision_sphere_a15b7b1eb056538fd7cc334c0984454a3}{Component\+Collision\+Sphere}}, \mbox{\hyperlink{class_component_effect_ad9fb03f637710c92522cb0fd05f92e56}{Component\+Effect}}, \mbox{\hyperlink{class_component_model_afbda1d71032f27815259fbe83fa447fb}{Component\+Model}}, \mbox{\hyperlink{class_component_physics_ad3abcf3fcde9d1c53351a03dddec42d3}{Component\+Physics}}, \mbox{\hyperlink{class_component_transform_ab8d4c1ff6819a996246335b9b7478113}{Component\+Transform}}, \mbox{\hyperlink{class_object_adf6dced49ce8a4842803046c51d00566}{Object}}, \mbox{\hyperlink{class_sequence_object_a2abc35ac9acc15479c7e569aaadc5fed}{Sequence\+Object}}で実装されています。
+
+\Hypertarget{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetMatrixFloat@{GetMatrixFloat}}
+\index{GetMatrixFloat@{GetMatrixFloat}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetMatrixFloat()}{GetMatrixFloat()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a32adebd780e1df07b4a504913e7342fc} 
+template$<$class T$>$ \\
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Matrix\+Float (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transformの\+Matrix情報を取得します 
+
+\begin{DoxyReturn}{戻り値}
+Transform の Matrix 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_aba0d23d8c1c3cb1b5963e9ca06d56236}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetOldWorldMatrix@{GetOldWorldMatrix}}
+\index{GetOldWorldMatrix@{GetOldWorldMatrix}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetOldWorldMatrix()}{GetOldWorldMatrix()}}
+{\footnotesize\ttfamily \label{class_i_matrix_aba0d23d8c1c3cb1b5963e9ca06d56236} 
+template$<$class T$>$ \\
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Old\+World\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+1フレーム前のワールド\+Matrixの取得 
+
+\begin{DoxyReturn}{戻り値}
+他のコンポーネントも含めた位置 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_component_collision_capsule_a32af0556871f073262135753491e157c}{Component\+Collision\+Capsule}}, \mbox{\hyperlink{class_component_collision_line_a2cfb0954378b0a733f4e8a0e1faa0f69}{Component\+Collision\+Line}}, \mbox{\hyperlink{class_component_collision_model_a47c2a8ae38aa18d6aca89c8671f5304c}{Component\+Collision\+Model}}, \mbox{\hyperlink{class_component_collision_sphere_a9c64ec9a56db48407f5978d664710ab3}{Component\+Collision\+Sphere}}, \mbox{\hyperlink{class_component_effect_a5edcf7a3101da820d00b1411056a5501}{Component\+Effect}}, \mbox{\hyperlink{class_component_model_a6cb7dad0a4fd41837d63b5ea800eeb26}{Component\+Model}}, \mbox{\hyperlink{class_component_physics_ace082813af3713655f975674e849dbde}{Component\+Physics}}, \mbox{\hyperlink{class_component_transform_ac85379e34c4a6bf5d3f20ef08fe86e72}{Component\+Transform}}, \mbox{\hyperlink{class_object_ac523bbd5c14fe9d19c89e8824bdc799c}{Object}}, \mbox{\hyperlink{class_sequence_object_ad11bf9ffba5f90770f13d1c9e10dfa58}{Sequence\+Object}}で実装されています。
+
+\Hypertarget{class_i_matrix_a33669a9c95add8d80d310fc7ef9a0bf7}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetRotationAxisXYZ@{GetRotationAxisXYZ}}
+\index{GetRotationAxisXYZ@{GetRotationAxisXYZ}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetRotationAxisXYZ()}{GetRotationAxisXYZ()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a33669a9c95add8d80d310fc7ef9a0bf7} 
+template$<$class T$>$ \\
+const float3 \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Rotation\+Axis\+XYZ (\begin{DoxyParamCaption}\item[{bool}]{local}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+軸回転量を取得する 
+
+変数としては存在しないため代入は不可 \begin{DoxyReturn}{戻り値}
+xyzローテート量 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a9d823777983c3ca5e917c8ca8b879054}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetScaleAxisXYZ@{GetScaleAxisXYZ}}
+\index{GetScaleAxisXYZ@{GetScaleAxisXYZ}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetScaleAxisXYZ()}{GetScaleAxisXYZ()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a9d823777983c3ca5e917c8ca8b879054} 
+template$<$class T$>$ \\
+const float3 \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Scale\+Axis\+XYZ (\begin{DoxyParamCaption}\item[{bool}]{local}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+スケールの取得 
+
+変数としては存在しないため代入は不可 \begin{DoxyReturn}{戻り値}
+スケール値 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_ab67ba5ffdc38b759a3cb4a4d37dbd69e}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetTranslate@{GetTranslate}}
+\index{GetTranslate@{GetTranslate}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetTranslate()}{GetTranslate()}}
+{\footnotesize\ttfamily \label{class_i_matrix_ab67ba5ffdc38b759a3cb4a4d37dbd69e} 
+template$<$class T$>$ \\
+const float3 \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Translate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+現在の位置を取得 
+
+\begin{DoxyReturn}{戻り値}
+Transformの位置 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_aefa89e636dcd4f4c2f128fbd690829ed}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetVectorAxisX@{GetVectorAxisX}}
+\index{GetVectorAxisX@{GetVectorAxisX}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetVectorAxisX()}{GetVectorAxisX()}}
+{\footnotesize\ttfamily \label{class_i_matrix_aefa89e636dcd4f4c2f128fbd690829ed} 
+template$<$class T$>$ \\
+float3 \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Vector\+AxisX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+X軸を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Transformの\+X軸 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_ac940f73d639aab045fef9c7ab9b0c001}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetVectorAxisY@{GetVectorAxisY}}
+\index{GetVectorAxisY@{GetVectorAxisY}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetVectorAxisY()}{GetVectorAxisY()}}
+{\footnotesize\ttfamily \label{class_i_matrix_ac940f73d639aab045fef9c7ab9b0c001} 
+template$<$class T$>$ \\
+float3 \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Vector\+AxisY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Y軸を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Transformの\+Y軸 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a521c543b440fd67361317096d075d230}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetVectorAxisZ@{GetVectorAxisZ}}
+\index{GetVectorAxisZ@{GetVectorAxisZ}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetVectorAxisZ()}{GetVectorAxisZ()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a521c543b440fd67361317096d075d230} 
+template$<$class T$>$ \\
+float3 \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+Vector\+AxisZ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Z軸を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Transformの\+Z軸 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!GetWorldMatrix@{GetWorldMatrix}}
+\index{GetWorldMatrix@{GetWorldMatrix}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetWorldMatrix()}{GetWorldMatrix()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407} 
+template$<$class T$>$ \\
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Get\+World\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+ワールド\+Matrixの取得 
+
+\begin{DoxyReturn}{戻り値}
+自分にかかわる他のコンポーネントも含めた位置 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_component_collision_capsule_a64c76acb3bc608cedbea5840ea30545b}{Component\+Collision\+Capsule}}, \mbox{\hyperlink{class_component_collision_line_ae1a78dbc43405915cbcc94d1355fbeb4}{Component\+Collision\+Line}}, \mbox{\hyperlink{class_component_collision_model_ad5971bb9fa6425716ee6f441f57e4bdc}{Component\+Collision\+Model}}, \mbox{\hyperlink{class_component_collision_sphere_a77210e60369be17b311747ff07800aa1}{Component\+Collision\+Sphere}}, \mbox{\hyperlink{class_component_effect_a4fa10bc58cdefdedf7d7b953bac67b6c}{Component\+Effect}}, \mbox{\hyperlink{class_component_model_a301ed9483ce9583110be951cfcc45c87}{Component\+Model}}, \mbox{\hyperlink{class_component_physics_a5153bb9dd6c72be7f1f6f65341c03b73}{Component\+Physics}}, \mbox{\hyperlink{class_component_transform_a4d40a531141fa18fe81f3c8bd813971c}{Component\+Transform}}, \mbox{\hyperlink{class_object_a6b073e19ae1a3ef015379ecce3424d16}{Object}}, \mbox{\hyperlink{class_sequence_object_a04ab554a7028abd74a31e1ac1a491c28}{Sequence\+Object}}で実装されています。
+
+\Hypertarget{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c} 
+template$<$class T$>$ \\
+virtual \mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Transformの\+Matrix情報を取得します 
+
+\begin{DoxyReturn}{戻り値}
+Transform の Matrix 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_component_collision_capsule_a7870e9ef9d713f6fe45828bb3991aad6}{Component\+Collision\+Capsule}}, \mbox{\hyperlink{class_component_collision_line_a335a7ceff1067c1320d10e8b3078edd1}{Component\+Collision\+Line}}, \mbox{\hyperlink{class_component_collision_model_ab099b447ccdb92a370c2ce145774e42e}{Component\+Collision\+Model}}, \mbox{\hyperlink{class_component_collision_sphere_a2fc0ee6a00274ebc98c7bb8774eb3db9}{Component\+Collision\+Sphere}}, \mbox{\hyperlink{class_component_effect_aa99f466188f3587b2180295cf8b9b39a}{Component\+Effect}}, \mbox{\hyperlink{class_component_model_a180c3e9700bed237f8ec50ee9789cc5f}{Component\+Model}}, \mbox{\hyperlink{class_component_physics_a2c571cadbb9e3b3babe40b6caaecb7a6}{Component\+Physics}}, \mbox{\hyperlink{class_component_transform_a67a8f55575ec1eaa8aac8485e12d33aa}{Component\+Transform}}, \mbox{\hyperlink{class_object_a892f01e51795b8dbebd6b52805e5951a}{Object}}, \mbox{\hyperlink{class_sequence_object_aa4f6a47f160860e2b5c2f60197f56aa4}{Sequence\+Object}}で実装されています。
+
+\Hypertarget{class_i_matrix_aa710c9aafe9fcfed378d3242329c45b3}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!MulScaleAxisXYZ@{MulScaleAxisXYZ}}
+\index{MulScaleAxisXYZ@{MulScaleAxisXYZ}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MulScaleAxisXYZ()}{MulScaleAxisXYZ()}}
+{\footnotesize\ttfamily \label{class_i_matrix_aa710c9aafe9fcfed378d3242329c45b3} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Mul\+Scale\+Axis\+XYZ (\begin{DoxyParamCaption}\item[{float3}]{scale}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+現在のスケールから掛け合わせ倍率スケール 
+
+
+\begin{DoxyParams}{引数}
+{\em xyz} & スケール \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a79080df693fc6ca32a4d0cf00d277bf1}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetRotationAxisXYZ@{SetRotationAxisXYZ}}
+\index{SetRotationAxisXYZ@{SetRotationAxisXYZ}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRotationAxisXYZ()}{SetRotationAxisXYZ()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a79080df693fc6ca32a4d0cf00d277bf1} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Rotation\+Axis\+XYZ (\begin{DoxyParamCaption}\item[{float3}]{xyz}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+軸回転量を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em xyz} & 軸に合わせた回転量 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_aabebf94bb7ad5c922f06a5718af1c3b7}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetRotationToPosition@{SetRotationToPosition}}
+\index{SetRotationToPosition@{SetRotationToPosition}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRotationToPosition()}{SetRotationToPosition()}}
+{\footnotesize\ttfamily \label{class_i_matrix_aabebf94bb7ad5c922f06a5718af1c3b7} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Rotation\+To\+Position (\begin{DoxyParamCaption}\item[{float3}]{position}{, }\item[{float3}]{up}{ = {\ttfamily \{0,~1,~0\}}, }\item[{bool}]{up\+\_\+change}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ポジションの方向へ向ける 
+
+
+\begin{DoxyParams}{引数}
+{\em position} & 向きたいポジション \\
+\hline
+{\em up\+\_\+change} & Y軸も変更するか? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a64d76c423bcaf1509cdd0d59853db9a2}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetRotationToPositionWithLimit@{SetRotationToPositionWithLimit}}
+\index{SetRotationToPositionWithLimit@{SetRotationToPositionWithLimit}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRotationToPositionWithLimit()}{SetRotationToPositionWithLimit()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a64d76c423bcaf1509cdd0d59853db9a2} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Rotation\+To\+Position\+With\+Limit (\begin{DoxyParamCaption}\item[{float3}]{position}{, }\item[{float}]{limit}{, }\item[{float3}]{up}{ = {\ttfamily \{0,~1,~0\}}, }\item[{bool}]{up\+\_\+change}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ポジションの方向へ向ける 
+
+
+\begin{DoxyParams}{引数}
+{\em position} & 向きたいポジション \\
+\hline
+{\em up\+\_\+change} & Y軸も変更するか? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a626db18f4ef2eef12a3d94e7467e5d47}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetRotationToVector@{SetRotationToVector}}
+\index{SetRotationToVector@{SetRotationToVector}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRotationToVector()}{SetRotationToVector()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a626db18f4ef2eef12a3d94e7467e5d47} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Rotation\+To\+Vector (\begin{DoxyParamCaption}\item[{float3}]{vec}{, }\item[{float3}]{up}{ = {\ttfamily \{0,~1,~0\}}, }\item[{bool}]{up\+\_\+change}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ベクトルの方向へ向ける 
+
+
+\begin{DoxyParams}{引数}
+{\em position} & 向きたいベクトル \\
+\hline
+{\em up\+\_\+change} & Y軸も変更するか? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a1c2365a4d13bae038007b507d987a019}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetRotationToVectorOnParent@{SetRotationToVectorOnParent}}
+\index{SetRotationToVectorOnParent@{SetRotationToVectorOnParent}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRotationToVectorOnParent()}{SetRotationToVectorOnParent()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a1c2365a4d13bae038007b507d987a019} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Rotation\+To\+Vector\+On\+Parent (\begin{DoxyParamCaption}\item[{float3}]{vec}{, }\item[{float3}]{up}{ = {\ttfamily \{0,~1,~0\}}, }\item[{bool}]{up\+\_\+change}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ベクトルの方向へ向ける 
+
+
+\begin{DoxyParams}{引数}
+{\em position} & 向きたいベクトル \\
+\hline
+{\em up\+\_\+change} & Y軸も変更するか? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_ab69f027e3f44e4a62fc51fd45372b766}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetRotationToVectorOnParentWithLimit@{SetRotationToVectorOnParentWithLimit}}
+\index{SetRotationToVectorOnParentWithLimit@{SetRotationToVectorOnParentWithLimit}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRotationToVectorOnParentWithLimit()}{SetRotationToVectorOnParentWithLimit()}}
+{\footnotesize\ttfamily \label{class_i_matrix_ab69f027e3f44e4a62fc51fd45372b766} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Rotation\+To\+Vector\+On\+Parent\+With\+Limit (\begin{DoxyParamCaption}\item[{float3}]{vec}{, }\item[{float}]{limit}{, }\item[{float3}]{up}{ = {\ttfamily \{0,~1,~0\}}, }\item[{bool}]{up\+\_\+change}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ベクトルの方向へ向ける 
+
+
+\begin{DoxyParams}{引数}
+{\em vec} & 向きたいベクトル \\
+\hline
+{\em limit} & 向ける限界角度 \\
+\hline
+{\em up\+\_\+change} & Y軸も変更するか? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a4033fc43ac7e0f5c3d2e2cc584fcc1d3}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetRotationToVectorWithLimit@{SetRotationToVectorWithLimit}}
+\index{SetRotationToVectorWithLimit@{SetRotationToVectorWithLimit}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetRotationToVectorWithLimit()}{SetRotationToVectorWithLimit()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a4033fc43ac7e0f5c3d2e2cc584fcc1d3} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Rotation\+To\+Vector\+With\+Limit (\begin{DoxyParamCaption}\item[{float3}]{vec}{, }\item[{float}]{limit}{, }\item[{float3}]{up}{ = {\ttfamily \{0,~1,~0\}}, }\item[{bool}]{up\+\_\+change}{ = {\ttfamily false}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ベクトルの方向へ向ける 
+
+
+\begin{DoxyParams}{引数}
+{\em vec} & 向きたいベクトル \\
+\hline
+{\em limit} & 向ける限界角度 \\
+\hline
+{\em up\+\_\+change} & Y軸も変更するか? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a1bf7f616a7fe4c9dfc975cf0a2748304}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetScaleAxisXYZ@{SetScaleAxisXYZ}}
+\index{SetScaleAxisXYZ@{SetScaleAxisXYZ}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetScaleAxisXYZ()}{SetScaleAxisXYZ()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a1bf7f616a7fe4c9dfc975cf0a2748304} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Scale\+Axis\+XYZ (\begin{DoxyParamCaption}\item[{float3}]{scale}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+スケールの設定 
+
+
+\begin{DoxyParams}{引数}
+{\em xyz} & スケール \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a714ba34bafae6ad18adc512a12bfd88c}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetTranslate@{SetTranslate}}
+\index{SetTranslate@{SetTranslate}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetTranslate()}{SetTranslate()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a714ba34bafae6ad18adc512a12bfd88c} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Translate (\begin{DoxyParamCaption}\item[{float3}]{translate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+位置をセットします 
+
+
+\begin{DoxyParams}{引数}
+{\em translate} & 位置 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a714521197cdaf88b10263628c5d6b6e1}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetVectorAxisX@{SetVectorAxisX}}
+\index{SetVectorAxisX@{SetVectorAxisX}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetVectorAxisX()}{SetVectorAxisX()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a714521197cdaf88b10263628c5d6b6e1} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Vector\+AxisX (\begin{DoxyParamCaption}\item[{float3}]{vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+X軸を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em vec} & ベクトル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_affd008e5bc3f162771f65f6ccd0f4212}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetVectorAxisY@{SetVectorAxisY}}
+\index{SetVectorAxisY@{SetVectorAxisY}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetVectorAxisY()}{SetVectorAxisY()}}
+{\footnotesize\ttfamily \label{class_i_matrix_affd008e5bc3f162771f65f6ccd0f4212} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Vector\+AxisY (\begin{DoxyParamCaption}\item[{float3}]{vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Y軸を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em vec} & ベクトル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a650a67e0bd69073dbf2540566436a6a8}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!SetVectorAxisZ@{SetVectorAxisZ}}
+\index{SetVectorAxisZ@{SetVectorAxisZ}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetVectorAxisZ()}{SetVectorAxisZ()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a650a67e0bd69073dbf2540566436a6a8} 
+template$<$class T$>$ \\
+auto \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Set\+Vector\+AxisZ (\begin{DoxyParamCaption}\item[{float3}]{vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Z軸を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em vec} & ベクトル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+自分の\+Shared\+Ptr 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a9964f98393c131d9aeaca9a2394dc2a0}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!Translate@{Translate}}
+\index{Translate@{Translate}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Translate()}{Translate()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a9964f98393c131d9aeaca9a2394dc2a0} 
+template$<$class T$>$ \\
+auto \& \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Translate (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+現在の位置を取得 
+
+\begin{DoxyReturn}{戻り値}
+Transformの位置 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_ad3c834a912db364ad3da23ddfa865156}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!TranslateFloat@{TranslateFloat}}
+\index{TranslateFloat@{TranslateFloat}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{TranslateFloat()}{TranslateFloat()}}
+{\footnotesize\ttfamily \label{class_i_matrix_ad3c834a912db364ad3da23ddfa865156} 
+template$<$class T$>$ \\
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Translate\+Float (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+位置を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Transformの位置 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a781040f918546a43c53fe908f78749ab}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!VectorAxisX@{VectorAxisX}}
+\index{VectorAxisX@{VectorAxisX}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{VectorAxisX()}{VectorAxisX()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a781040f918546a43c53fe908f78749ab} 
+template$<$class T$>$ \\
+auto \& \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Vector\+AxisX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+X軸を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Transformの\+X軸 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a634a043c1cbcdf122104ec3a5677b2a5}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!VectorAxisXFloat@{VectorAxisXFloat}}
+\index{VectorAxisXFloat@{VectorAxisXFloat}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{VectorAxisXFloat()}{VectorAxisXFloat()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a634a043c1cbcdf122104ec3a5677b2a5} 
+template$<$class T$>$ \\
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Vector\+Axis\+XFloat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+X軸を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Component\+Transformの\+X軸 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a85f8892147948781655c3cdfef6b56a4}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!VectorAxisY@{VectorAxisY}}
+\index{VectorAxisY@{VectorAxisY}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{VectorAxisY()}{VectorAxisY()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a85f8892147948781655c3cdfef6b56a4} 
+template$<$class T$>$ \\
+auto \& \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Vector\+AxisY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Y軸を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Transformの\+Y軸 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a310e16cb1bcea89de3f5792c9a1256e4}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!VectorAxisYFloat@{VectorAxisYFloat}}
+\index{VectorAxisYFloat@{VectorAxisYFloat}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{VectorAxisYFloat()}{VectorAxisYFloat()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a310e16cb1bcea89de3f5792c9a1256e4} 
+template$<$class T$>$ \\
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Vector\+Axis\+YFloat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Y軸を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Component\+Transformの\+Y軸 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_a13ca80b18abe18006c5963d182837ef4}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!VectorAxisZ@{VectorAxisZ}}
+\index{VectorAxisZ@{VectorAxisZ}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{VectorAxisZ()}{VectorAxisZ()}}
+{\footnotesize\ttfamily \label{class_i_matrix_a13ca80b18abe18006c5963d182837ef4} 
+template$<$class T$>$ \\
+auto \& \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Vector\+AxisZ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Z軸を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Transformの\+Z軸 
+\end{DoxyReturn}
+\Hypertarget{class_i_matrix_ac85c3df7009e77d500be39547f08fc59}\index{IMatrix$<$ T $>$@{IMatrix$<$ T $>$}!VectorAxisZFloat@{VectorAxisZFloat}}
+\index{VectorAxisZFloat@{VectorAxisZFloat}!IMatrix$<$ T $>$@{IMatrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{VectorAxisZFloat()}{VectorAxisZFloat()}}
+{\footnotesize\ttfamily \label{class_i_matrix_ac85c3df7009e77d500be39547f08fc59} 
+template$<$class T$>$ \\
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix}{IMatrix}}$<$ T $>$\+::\+Vector\+Axis\+ZFloat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Z軸を取得する 
+
+\begin{DoxyReturn}{戻り値}
+Component\+Transformの\+Z軸 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/\mbox{\hyperlink{_component_transform_8h}{Component\+Transform.\+h}}\end{DoxyCompactItemize}

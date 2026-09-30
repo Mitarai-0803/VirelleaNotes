@@ -1,0 +1,68 @@
+\doxysection{Shader クラス}
+\hypertarget{class_shader}{}\label{class_shader}\index{Shader@{Shader}}
+
+
+シェーダー基底  
+
+
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+Shader の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_shader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shader_a923b5310167557ae4a2eec65cad7641a}{Shader}} (std\+::string\+\_\+view \mbox{\hyperlink{class_shader_a3806b8f7f7ccbaa3825de95e1a4b0ada}{path}}, u32 dxlib\+\_\+shader\+\_\+type, u32 variant\+\_\+count=0)
+\item 
+\Hypertarget{class_shader_ab1a83c380130e5f0c5ae3318793a938e}\label{class_shader_ab1a83c380130e5f0c5ae3318793a938e} 
+{\bfseries operator int} () const
+\item 
+\Hypertarget{class_shader_ac90102e7d6b054e5840bef43521d6679}\label{class_shader_ac90102e7d6b054e5840bef43521d6679} 
+int {\bfseries variant} (u32 variant\+\_\+index) const
+\item 
+\Hypertarget{class_shader_ae50a4dd87b8e4117d4b025b6dccf00bf}\label{class_shader_ae50a4dd87b8e4117d4b025b6dccf00bf} 
+std\+::tuple$<$ const void \texorpdfstring{$\ast$}{*}, size\+\_\+t $>$ {\bfseries shader\+\_\+bytecode} (u32 variant\+\_\+index=0) const
+\item 
+\Hypertarget{class_shader_a3806b8f7f7ccbaa3825de95e1a4b0ada}\label{class_shader_a3806b8f7f7ccbaa3825de95e1a4b0ada} 
+const std\+::wstring \& {\bfseries path} () const
+\begin{DoxyCompactList}\small\item\em ファイルパスを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shader_ac70d9076ef88cbade65de48fd5be9fbc}\label{class_shader_ac70d9076ef88cbade65de48fd5be9fbc} 
+static void {\bfseries update\+File\+Watcher} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+シェーダー基底 
+
+\label{doc-constructors}
+\Hypertarget{class_shader_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_shader_a923b5310167557ae4a2eec65cad7641a}\index{Shader@{Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{Shader()}{Shader()}}
+{\footnotesize\ttfamily \label{class_shader_a923b5310167557ae4a2eec65cad7641a} 
+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path}{, }\item[{u32}]{dxlib\+\_\+shader\+\_\+type}{, }\item[{u32}]{variant\+\_\+count}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em path} & ファイルパス \\
+\hline
+\mbox{\texttt{in}}  & {\em dxlib\+\_\+shader\+\_\+type} & \mbox{[}Dx\+Lib\mbox{]} シェーダーの種類(DX\+\_\+\+SHADERTYPE\+\_\+\+VERTEXなど) \\
+\hline
+\mbox{\texttt{in}}  & {\em variant\+\_\+count} & シェーダーバリエーション数(default\+:0) \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/\+Engine/src/\+Graphics/\mbox{\hyperlink{_shader_8h}{Shader.\+h}}\end{DoxyCompactItemize}

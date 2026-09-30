@@ -1,0 +1,17 @@
+<map id="Object::ObjectBase3D" name="Object::ObjectBase3D">
+<area shape="rect" id="Node000001" title=" " alt="" coords="423,443,565,640"/>
+<area shape="rect" id="Node000003" href="$class_object_1_1_box_object.html" title="物理演算ボックスオブジェクト" alt="" coords="5,720,153,1088"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="406,563,350,582,286,609,223,644,168,690,143,722,138,719,164,686,220,640,283,604,348,577,411,560"/>
+<area shape="rect" id="Node000004" href="$class_object_1_1_camera_object.html" title=" " alt="" coords="178,752,330,1056"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="410,611,377,648,344,689,308,754,304,751,340,687,373,645,414,607"/>
+<area shape="rect" id="Node000005" href="$class_object_1_1_floor_object.html" title=" " alt="" coords="354,816,477,992"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="471,652,437,817,432,815,468,656"/>
+<area shape="rect" id="Node000006" href="$class_object_1_1_platform_object.html" title="増水パズル用の静的な足場オブジェクト" alt="" coords="501,805,644,1003"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="520,652,554,806,549,805,517,657"/>
+<area shape="rect" id="Node000007" href="$class_object_1_1_sphere_object.html" title="物理演算球オブジェクト" alt="" coords="669,795,804,1013"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="576,600,621,641,659,686,688,739,711,796,705,794,683,741,654,690,617,644,576,605"/>
+<area shape="rect" id="Node000008" href="$class_object_1_1_water_object.html" title="波紋シミュレーションを行う水面オブジェクト" alt="" coords="829,688,999,1120"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="579,560,638,580,701,606,763,642,818,686,832,702,827,701,815,690,760,646,699,611,636,585,580,566"/>
+<area shape="rect" id="Node000002" href="$class_object_1_1_object_base.html" title=" " alt="" coords="432,5,556,395"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="495,407,497,443,491,442,493,412"/>
+</map>

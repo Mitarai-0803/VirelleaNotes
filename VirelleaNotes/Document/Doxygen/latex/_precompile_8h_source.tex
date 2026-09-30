@@ -1,0 +1,65 @@
+\doxysection{Precompile.\+h}
+\hypertarget{_precompile_8h_source}{}\label{_precompile_8h_source}\index{F:/sg mitarai/ReoEngine/src/Precompile.h@{F:/sg mitarai/ReoEngine/src/Precompile.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//\ 必ずインクルードされるヘッダーと定義}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ ※注意※\ このヘッダーが参照されているファイル更新されるとフルビルドになるため}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ 更新頻度が高いソースは追加しないこと。}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Windows}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ NOMINMAX}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ WIN32\_LEAN\_AND\_MEAN}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ C\ Runtime}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <cassert>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ STL}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <deque>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#include\ <optional>}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#include\ <variant>}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ DXライブラリ}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#include\ <DxLib.h>}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ HLSL++}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#include\ <hlsl++.h>}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ ImGui}}
+\DoxyCodeLine{00058\ \textcolor{comment}{//==============================================================}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#include\ <imgui.h>}}
+
+\end{DoxyCode}

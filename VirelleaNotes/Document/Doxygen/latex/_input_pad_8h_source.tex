@@ -1,0 +1,99 @@
+\doxysection{Input\+Pad.\+h}
+\hypertarget{_input_pad_8h_source}{}\label{_input_pad_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Input/InputPad.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Input/InputPad.h}}
+\mbox{\hyperlink{_input_pad_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ :\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ PAD\_NO1\ =\ 0,}
+\DoxyCodeLine{00015\ \ \ \ \ PAD\_NO2,}
+\DoxyCodeLine{00016\ \ \ \ \ PAD\_NO3,}
+\DoxyCodeLine{00017\ \ \ \ \ PAD\_NO4,}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ PAD\_NO\_MAX}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00025\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00027\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_input_pad_8h_ad6469a833a311f7525249964ff3ff3fd}{PAD\_ID}}\ :\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ PAD\_A\ =\ 0,\ \ \ \ \ \textcolor{comment}{//\ Aキー}}
+\DoxyCodeLine{00030\ \ \ \ \ PAD\_B,\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Bキー}}
+\DoxyCodeLine{00031\ \ \ \ \ PAD\_X,\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Xキー}}
+\DoxyCodeLine{00032\ \ \ \ \ PAD\_Y,\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Yキー}}
+\DoxyCodeLine{00033\ \ \ \ \ PAD\_L,\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LBボタン（左人差し指側）}}
+\DoxyCodeLine{00034\ \ \ \ \ PAD\_R,\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ RBボタン（右人差し指側）}}
+\DoxyCodeLine{00035\ \ \ \ \ PAD\_START,\ \ \ \ \ \textcolor{comment}{//\ STARTボタン}}
+\DoxyCodeLine{00036\ \ \ \ \ PAD\_BACK,\ \ \ \ \ \ \textcolor{comment}{//\ BACKボタン}}
+\DoxyCodeLine{00037\ \ \ \ \ PAD\_L\_PUSH,\ \ \ \ \textcolor{comment}{//\ 左アナログスティック押し込み}}
+\DoxyCodeLine{00038\ \ \ \ \ PAD\_R\_PUSH,\ \ \ \ \textcolor{comment}{//\ 右アナログスティック押し込み}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ 左アナログスティック}}
+\DoxyCodeLine{00041\ \ \ \ \ PAD\_UP,\ \ \ \ \ \ \ \textcolor{comment}{//\ 上}}
+\DoxyCodeLine{00042\ \ \ \ \ PAD\_DOWN,\ \ \ \ \ \textcolor{comment}{//\ 下}}
+\DoxyCodeLine{00043\ \ \ \ \ PAD\_LEFT,\ \ \ \ \ \textcolor{comment}{//\ 左}}
+\DoxyCodeLine{00044\ \ \ \ \ PAD\_RIGHT,\ \ \ \ \textcolor{comment}{//\ 右}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//\ 右アナログスティック}}
+\DoxyCodeLine{00047\ \ \ \ \ PAD\_R\_UP,\ \ \ \ \ \ \ \textcolor{comment}{//\ 上}}
+\DoxyCodeLine{00048\ \ \ \ \ PAD\_R\_DOWN,\ \ \ \ \ \textcolor{comment}{//\ 下}}
+\DoxyCodeLine{00049\ \ \ \ \ PAD\_R\_LEFT,\ \ \ \ \ \textcolor{comment}{//\ 左}}
+\DoxyCodeLine{00050\ \ \ \ \ PAD\_R\_RIGHT,\ \ \ \ \textcolor{comment}{//\ 右}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ 方向キー}}
+\DoxyCodeLine{00053\ \ \ \ \ PAD\_D\_UP,\ \ \ \ \ \ \ \textcolor{comment}{//\ 上}}
+\DoxyCodeLine{00054\ \ \ \ \ PAD\_D\_RIGHT,\ \ \ \ \textcolor{comment}{//\ 右}}
+\DoxyCodeLine{00055\ \ \ \ \ PAD\_D\_DOWN,\ \ \ \ \ \textcolor{comment}{//\ 下}}
+\DoxyCodeLine{00056\ \ \ \ \ PAD\_D\_LEFT,\ \ \ \ \ \textcolor{comment}{//\ 左}}
+\DoxyCodeLine{00057\ \ \ \ \ PAD\_D\_ALL,\ \ \ \ \ \ \textcolor{comment}{//\ 方向キー全て}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ PAD\_ID\_MAX,}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{//\ 場所不明}}
+\DoxyCodeLine{00062\ \ \ \ \ PAD\_C,\ \ \ \ \textcolor{comment}{//\ 対応キーなし}}
+\DoxyCodeLine{00063\ \ \ \ \ PAD\_Z,\ \ \ \ \textcolor{comment}{//\ 対応キーなし}}
+\DoxyCodeLine{00064\ \ \ \ \ PAD\_M,\ \ \ \ \textcolor{comment}{//\ 対応キーなし}}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00070\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_input_pad_8h_a8df9a55c398e46803d151180a326b91a}{InputPadInit}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_input_pad_8h_a0e1498a05f33c8c4e386385e377248a8}{InputPadUpdate}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00080\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_input_pad_8h_af1b030bc6d8103403f0bac065f674ed1}{InputPadExit}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00085\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_input_pad_8h_aed36b547a6be499a6c0cfd42f68d2d1c}{IsPadOn}}(\mbox{\hyperlink{_input_pad_8h_ad6469a833a311f7525249964ff3ff3fd}{PAD\_ID}}\ pad\_id,\ \mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ pad\_no\ =\ PAD\_NO::PAD\_NO1);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_input_pad_8h_abcc4d868f268541f682aa128df577946}{IsPadRelease}}(\mbox{\hyperlink{_input_pad_8h_ad6469a833a311f7525249964ff3ff3fd}{PAD\_ID}}\ pad\_id,\ \mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ pad\_no\ =\ PAD\_NO::PAD\_NO1);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00107\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_input_pad_8h_a76009340dd30e98a2d82b7c3fec591e0}{IsPadRepeat}}(\mbox{\hyperlink{_input_pad_8h_ad6469a833a311f7525249964ff3ff3fd}{PAD\_ID}}\ pad\_id,\ \mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ pad\_no\ =\ PAD\_NO::PAD\_NO1);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00110\ \textcolor{comment}{//\ \ \ \ \ \ 新規追加}}
+\DoxyCodeLine{00117\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_input_pad_8h_a981b3d874be80eb2e59403d860ff8936}{GetPadInputState}}(DINPUT\_JOYSTATE\&\ pad\_state,\ \mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ pad\_no\ =\ PAD\_NO::PAD\_NO1);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \mbox{\hyperlink{_typedef_8h_ae5300ed9eabeae78ee9d0c704a9c412a}{s32}}\ \mbox{\hyperlink{_input_pad_8h_aac7ea8d0df13237b2f2e0541b8e73564}{GetConnecetdPadNum}}();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00127\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \mbox{\hyperlink{_input_pad_8h_af5318a3659f7d2bec1b9c13de84bdfb3}{GetPadInputAnalogLX}}(\mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ pad\_no\ =\ PAD\_NO::PAD\_NO1);}
+\DoxyCodeLine{00131\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \mbox{\hyperlink{_input_pad_8h_a852f759d8b381997ffec3761f116e709}{GetPadInputAnalogLY}}(\mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ pad\_no\ =\ PAD\_NO::PAD\_NO1);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \mbox{\hyperlink{_input_pad_8h_aea853c4a251b9be8748b9f50ef1f8409}{GetPadInputAnalogRX}}(\mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ pad\_no\ =\ PAD\_NO::PAD\_NO1);}
+\DoxyCodeLine{00140\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \mbox{\hyperlink{_input_pad_8h_a8a6446e2e99a574144b1fdc4b6bcf7ae}{GetPadInputAnalogRY}}(\mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ pad\_no\ =\ PAD\_NO::PAD\_NO1);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00145\ \mbox{\hyperlink{_typedef_8h_ae5300ed9eabeae78ee9d0c704a9c412a}{s32}}\ \mbox{\hyperlink{_input_pad_8h_a535dd76db63b44b061e0431373bfb94e}{GetPadInputAnalogLDirection}}(\mbox{\hyperlink{_input_pad_8h_aa65ba2dd311da7d3bc2cc92d8634d015}{PAD\_NO}}\ pad\_no\ =\ PAD\_NO::PAD\_NO1);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{comment}{//\ Debug}}
+\DoxyCodeLine{00148\ \textcolor{comment}{//void\ InputPadRender();}}
+\DoxyCodeLine{00149\ }
+
+\end{DoxyCode}

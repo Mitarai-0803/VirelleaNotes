@@ -1,0 +1,67 @@
+\doxysection{System\+Main.\+h}
+\hypertarget{_system_main_8h_source}{}\label{_system_main_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/SystemMain.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/SystemMain.h}}
+\mbox{\hyperlink{_system_main_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture}{Texture}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ 初期化}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ SystemInit();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ 更新}}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ SystemUpdate();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ 描画}}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ SystemDraw();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ \ 終了}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ SystemExit();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ \ フレームの開始}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ SystemBeginFrame();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ フレームの終了}}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ SystemEndFrame();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00041\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ \ パフォーマンスカウンターを取得\ (単位:μsec)}}
+\DoxyCodeLine{00045\ \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}\ GetPerformanceCounterMicroSec();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ \ 経過時間計測をリセット}}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ ResetDeltaTime();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{comment}{//\ 経過した時間を取得}}
+\DoxyCodeLine{00051\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ GetDeltaTime();}
+\DoxyCodeLine{00052\ \textcolor{comment}{//\ これを掛けると60FPSと同じ速度になる}}
+\DoxyCodeLine{00053\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ GetDeltaTime60();}
+\DoxyCodeLine{00054\ \textcolor{comment}{//\ ツールなどで使用する際強制的にFPSを変更する}}
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ SetDeltaTime(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}});}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{//\ \ グリッドの表示をON/OFFします}}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_system_main_8h_abacdb1869fa1d49d870768a351e9ce51}{ShowGrid}}(\textcolor{keywordtype}{bool}\ active);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_system_main_8h_a1fa0f7a5b88018c7712103b0fd083698}{IsShowMenu}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_system_main_8h_a7fef4433a1be2515e02ad473b0a51d3c}{IsShowDebug}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00071\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_system_main_8h_aff0cdcdf54d7590802122fecaedcc6b7}{IsShowGUI}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_system_main_8h_aa7df6c5579c08529a3012470b542cdc8}{IsShowFPS}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_system_main_8h_a270fe73d7ed5828035a8d5e50fb4f97b}{IsShowGrid}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \mbox{\hyperlink{class_texture}{Texture}}*\ \mbox{\hyperlink{_system_main_8h_a39d0273ca5e8a239a7d5d73f8a330695}{GetHdrBuffer}}();}
+\DoxyCodeLine{00083\ }
+
+\end{DoxyCode}

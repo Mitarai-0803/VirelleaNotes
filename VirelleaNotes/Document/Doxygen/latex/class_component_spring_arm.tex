@@ -1,0 +1,377 @@
+\doxysection{Component\+Spring\+Arm クラス}
+\hypertarget{class_component_spring_arm}{}\label{class_component_spring_arm}\index{ComponentSpringArm@{ComponentSpringArm}}
+Component\+Spring\+Arm の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_component_spring_arm}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838}{Spring\+Arm\+Bit}} \+: u32 \{ \mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838a59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838adf948fb94ab60cab4be0783d6e7f50a1}{Enable\+Time\+Line}}
+ \}
+\begin{DoxyCompactList}\small\item\em モデルステータス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} \+: u64 \{ \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0abd9f7c5d6ab4201b138a3e51dab7056f}{Alive}} = 0
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ac5475a8fae2fa421403e56f7ae0de108}{Change\+Prio}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a552f244367a4f2e2ef9e4e5ff2c52ea0}{Show\+GUI}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0af3413da9e97ed78dada82d1330fde5f1}{No\+Update}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0add349546b418e50c23e2d88a3342a68f}{No\+Draw}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ad0b20a6cab952ae657cd06d2c956a7ea}{Disable\+Pause}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a7c572e80f65d4b3a29bc954dd03225b6}{Is\+Pause}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a6b554ca9a13e5407990948d4c68e8229}{Same\+Type}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a268ce394e277db759f5d6ee76c59f0e7}{Exited}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2b59321169346822ab33b2c61dbb9975}{Serialized}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a0698adfc6182853d3bf40771142a42d1}{No\+Serialize}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2faec1f9f8cc7f8f40d521c4dd574f49}{Enable}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_spring_arm_a07058eaf05930c0466ce57340cb6f8c7}\label{class_component_spring_arm_a07058eaf05930c0466ce57340cb6f8c7} 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component_spring_arm}{Component\+Spring\+Arm}}, u8"{}\+Spring\+Arm機能クラス"{})
+\item 
+virtual void \mbox{\hyperlink{class_component_spring_arm_af8eda61cdb478f64fbe80e01bcad54d0}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_spring_arm_a3a571d13f8de2802e87662131eab9780}{Pre\+Physics}} () override
+\begin{DoxyCompactList}\small\item\em 更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_spring_arm_abe1e3bce143ae566e32d34a9c438c76e}{Post\+Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_spring_arm_abbf024eca02f2d611a0cf75e3600b2ce}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em デバッグ描画 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_spring_arm_a0e2774124852d8b338e18495ea3c1bf8}{Exit}} () override
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_spring_arm_ab45f3f6d273528ebc4ca4852155bd428}{GUI}} () override
+\begin{DoxyCompactList}\small\item\em GUI処理 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_component_spring_arm_a4d9a77029d2fd0e660159b9aaf97e3f4}{Get\+Put\+On\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em スプリングアームの先の位置の取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_component_spring_arm_a5f950c696d1bf8835a549e7ff348f143}\label{class_component_spring_arm_a5f950c696d1bf8835a549e7ff348f143} 
+void {\bfseries Set\+Spring\+Arm\+Status} (\mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838}{Spring\+Arm\+Bit}} bit, bool on)
+\item 
+\Hypertarget{class_component_spring_arm_aae0f721dfd8055f099f5578936c39a80}\label{class_component_spring_arm_aae0f721dfd8055f099f5578936c39a80} 
+bool {\bfseries Get\+Spring\+Arm\+Status} (\mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838}{Spring\+Arm\+Bit}} bit)
+\item 
+\Hypertarget{class_component_spring_arm_a493538ba7cd0bae7c5d24f2e2fa7fdbf}\label{class_component_spring_arm_a493538ba7cd0bae7c5d24f2e2fa7fdbf} 
+void {\bfseries Set\+Spring\+Arm\+Object} (Object\+Ptr object)
+\item 
+\Hypertarget{class_component_spring_arm_ab51f41dcc22b4afa55f59bfd172a5bc4}\label{class_component_spring_arm_ab51f41dcc22b4afa55f59bfd172a5bc4} 
+void {\bfseries Set\+Spring\+Arm\+Object} (std\+::string\+\_\+view name)
+\item 
+Component\+Spring\+Arm\+Ptr \mbox{\hyperlink{class_component_spring_arm_aec1e103ca473cf41a0edace65fa88743}{Set\+Spring\+Arm\+Rotate}} (float3 rot)
+\begin{DoxyCompactList}\small\item\em アームの向きを3軸回転で向ける方式 \end{DoxyCompactList}\item 
+Component\+Spring\+Arm\+Ptr \mbox{\hyperlink{class_component_spring_arm_a22f36e0b21c94bdf7907ead9838513c0}{Set\+Spring\+Arm\+Vector}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em アームの向きをベクトルで向ける方式 \end{DoxyCompactList}\item 
+\Hypertarget{class_component_spring_arm_a2e1122d477d4c2c68baef4376751fa04}\label{class_component_spring_arm_a2e1122d477d4c2c68baef4376751fa04} 
+Component\+Spring\+Arm\+Ptr {\bfseries Set\+Spring\+Arm\+Offset} (float3 offset)
+\item 
+\Hypertarget{class_component_spring_arm_a03aaf1d1504dfdb258c09c01945ab5d6}\label{class_component_spring_arm_a03aaf1d1504dfdb258c09c01945ab5d6} 
+Component\+Spring\+Arm\+Ptr {\bfseries Set\+Spring\+Arm\+Position\+Offset} (float3 offset)
+\item 
+\Hypertarget{class_component_spring_arm_ad1f7ddd3c00127254449e55fcb93a10e}\label{class_component_spring_arm_ad1f7ddd3c00127254449e55fcb93a10e} 
+Component\+Spring\+Arm\+Ptr {\bfseries Set\+Spring\+Arm\+Look\+Offset} (float3 offset)
+\item 
+\Hypertarget{class_component_spring_arm_a7d2c562ac029d8eb3b70169c4655a518}\label{class_component_spring_arm_a7d2c562ac029d8eb3b70169c4655a518} 
+Component\+Spring\+Arm\+Ptr {\bfseries Set\+Spring\+Arm\+Length} (float len)
+\item 
+\Hypertarget{class_component_spring_arm_abf07620b83a046f85eb0e5888f14301e}\label{class_component_spring_arm_abf07620b83a046f85eb0e5888f14301e} 
+float {\bfseries Get\+Spring\+Arm\+Length} ()
+\item 
+\Hypertarget{class_component_spring_arm_a591bd5f05bf1943013b49dba9a517d33}\label{class_component_spring_arm_a591bd5f05bf1943013b49dba9a517d33} 
+Object\+Weak\+Ptr {\bfseries Get\+Spring\+Arm\+Object} ()
+\item 
+\Hypertarget{class_component_spring_arm_a3385a92a66212e1dc65d0afde8b208bc}\label{class_component_spring_arm_a3385a92a66212e1dc65d0afde8b208bc} 
+Component\+Spring\+Arm\+Ptr {\bfseries Set\+Spring\+Arm\+Strong} (float strong)
+\item 
+\Hypertarget{class_component_spring_arm_a880ec5c43176608b4c36e5230cfab9a2}\label{class_component_spring_arm_a880ec5c43176608b4c36e5230cfab9a2} 
+Component\+Spring\+Arm\+Ptr {\bfseries Set\+Spring\+Arm\+Return} (float ret)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component}{Component}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component}{Component}}, u8"{}\+Componentクラス"{})
+\item 
+\mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+Object\+Ptr {\bfseries Get\+Owner\+Ptr} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+const Object\+Ptr {\bfseries Get\+Owner\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Set\+Name} (const std\+::string\+\_\+view \&name)
+\item 
+const std\+::string\+\_\+view {\bfseries Get\+Name} () const
+\item 
+virtual void \mbox{\hyperlink{class_component_aaf2ce6dc5752072492f790ad4c7955bb}{Update}} ()
+\begin{DoxyCompactList}\small\item\em アップデート \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a1020899c4cee8796a2bb29d960f05daf}{Late\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 遅いアップデート \end{DoxyCompactList}\item 
+virtual void {\bfseries Late\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 遅い描画 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a01c7688b95056ecdba07d997750c8987}{Pre\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新前処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Pre\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画前処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Post\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画後処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a25dd8e0fdfebc4f68e5fc08738e3c7ae}{Post\+Physics}} ()
+\begin{DoxyCompactList}\small\item\em Physics後処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Init\+Serialize} ()
+\begin{DoxyCompactList}\small\item\em シリアライズでもどらないユーザー処理関数などを設定 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Priority} (\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} priority)
+\item 
+std\+::string {\bfseries Unique\+Text} (const std\+::string\+\_\+view \&name, int id=0)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Get\+Proc} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing)
+\begin{DoxyCompactList}\small\item\em 処理を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Proc} (const std\+::string \&proc\+\_\+name, Proc\+Timing\+Func func, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Priority} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Reset\+Proc} (const std\+::string \&proc\+\_\+name)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Remove\+This\+Component} ()
+\begin{DoxyCompactList}\small\item\em 自分の消去 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Set\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b, bool on)
+\begin{DoxyCompactList}\small\item\em ステータスの設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Get\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b)
+\begin{DoxyCompactList}\small\item\em ステータスの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Construct} (Object\+Ptr owner)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_a8e41b07538bf037981574f4f011d773a}{On\+Hit\+Component}} (const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries On\+Hit\+Component} (const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_spring_arm_a0720b5f434e636e22a3ed34f847eec57}\label{class_component_spring_arm_a0720b5f434e636e22a3ed34f847eec57} 
+class {\bfseries Object}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_abeb8b5fb2ca31a185f96d343af1ccd22}\label{class_component_abeb8b5fb2ca31a185f96d343af1ccd22} 
+static void {\bfseries Register\+To\+Object} (Component\+Ptr cmp, Object\+Ptr obj)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a04910312b4e9ad3959892ff5e231629e}\label{class_component_a04910312b4e9ad3959892ff5e231629e} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Func}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a91d5cc2893166a196e1d5e550391cf58}\label{class_component_a91d5cc2893166a196e1d5e550391cf58} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Physics\+Func}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}\label{class_component_aaf224b0e73780a9c3cbad323a0ec59f5} 
+Object\+Ptr {\bfseries owner\+\_\+} = nullptr
+\begin{DoxyCompactList}\small\item\em オーナー \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aa075f1283763194b7b15660ceb626196}\label{class_component_aa075f1283763194b7b15660ceb626196} 
+Slot\+Procs {\bfseries proc\+\_\+timings\+\_\+}
+\begin{DoxyCompactList}\small\item\em 登録処理(update) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_af89da12b7dd26576a4b896a785103e04}\label{class_component_af89da12b7dd26576a4b896a785103e04} 
+float {\bfseries update\+\_\+delta\+\_\+time\+\_\+} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em update以外で使用できるように \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaafe1a5010b858a2c66379bcd6faa80b}\label{class_component_aaafe1a5010b858a2c66379bcd6faa80b} 
+std\+::string {\bfseries name\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{class_component_spring_arm_doc-enum-members}
+\doxysubsection{列挙型メンバ詳解}
+\Hypertarget{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838}\index{ComponentSpringArm@{ComponentSpringArm}!SpringArmBit@{SpringArmBit}}
+\index{SpringArmBit@{SpringArmBit}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{SpringArmBit}{SpringArmBit}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838} 
+enum struct \mbox{\hyperlink{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838}{Component\+Spring\+Arm\+::\+Spring\+Arm\+Bit}} \+: \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+モデルステータス 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Initialized@{Initialized}!ComponentSpringArm@{ComponentSpringArm}}\index{ComponentSpringArm@{ComponentSpringArm}!Initialized@{Initialized}}}\Hypertarget{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838a59d87a4758a9d35fbaf6b204341bb399}\label{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838a59d87a4758a9d35fbaf6b204341bb399} 
+Initialized&初期化済み \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EnableTimeLine@{EnableTimeLine}!ComponentSpringArm@{ComponentSpringArm}}\index{ComponentSpringArm@{ComponentSpringArm}!EnableTimeLine@{EnableTimeLine}}}\Hypertarget{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838adf948fb94ab60cab4be0783d6e7f50a1}\label{class_component_spring_arm_abe07ce35bbaa01f1b0342f0b54ac5838adf948fb94ab60cab4be0783d6e7f50a1} 
+Enable\+Time\+Line&Timeline\+Componentを利用して移動する \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{class_component_spring_arm_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_component_spring_arm_abbf024eca02f2d611a0cf75e3600b2ce}\index{ComponentSpringArm@{ComponentSpringArm}!Draw@{Draw}}
+\index{Draw@{Draw}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_abbf024eca02f2d611a0cf75e3600b2ce} 
+virtual void Component\+Spring\+Arm\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+デバッグ描画 
+
+
+
+\mbox{\hyperlink{class_component_a8622ccd5f24035d48e33292717299313}{Component}}を再実装しています。
+
+\Hypertarget{class_component_spring_arm_a0e2774124852d8b338e18495ea3c1bf8}\index{ComponentSpringArm@{ComponentSpringArm}!Exit@{Exit}}
+\index{Exit@{Exit}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{Exit()}{Exit()}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_a0e2774124852d8b338e18495ea3c1bf8} 
+virtual void Component\+Spring\+Arm\+::\+Exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+
+
+\mbox{\hyperlink{class_component_a336a670bf5c6e49062b0ea3a7367c5d7}{Component}}を再実装しています。
+
+\Hypertarget{class_component_spring_arm_a4d9a77029d2fd0e660159b9aaf97e3f4}\index{ComponentSpringArm@{ComponentSpringArm}!GetPutOnMatrix@{GetPutOnMatrix}}
+\index{GetPutOnMatrix@{GetPutOnMatrix}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{GetPutOnMatrix()}{GetPutOnMatrix()}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_a4d9a77029d2fd0e660159b9aaf97e3f4} 
+\mbox{\hyperlink{classmatrix}{matrix}} Component\+Spring\+Arm\+::\+Get\+Put\+On\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+スプリングアームの先の位置の取得 
+
+\begin{DoxyReturn}{戻り値}
+位置の取得 
+\end{DoxyReturn}
+\Hypertarget{class_component_spring_arm_ab45f3f6d273528ebc4ca4852155bd428}\index{ComponentSpringArm@{ComponentSpringArm}!GUI@{GUI}}
+\index{GUI@{GUI}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{GUI()}{GUI()}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_ab45f3f6d273528ebc4ca4852155bd428} 
+virtual void Component\+Spring\+Arm\+::\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+GUI処理 
+
+
+
+\mbox{\hyperlink{class_component_ae6895fe308d9365dd629b2e46a2ddf62}{Component}}を再実装しています。
+
+\Hypertarget{class_component_spring_arm_af8eda61cdb478f64fbe80e01bcad54d0}\index{ComponentSpringArm@{ComponentSpringArm}!Init@{Init}}
+\index{Init@{Init}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_af8eda61cdb478f64fbe80e01bcad54d0} 
+virtual void Component\+Spring\+Arm\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化 
+
+
+
+\mbox{\hyperlink{class_component_a5a5e595fab62ba757f03becc5b101732}{Component}}を再実装しています。
+
+\Hypertarget{class_component_spring_arm_abe1e3bce143ae566e32d34a9c438c76e}\index{ComponentSpringArm@{ComponentSpringArm}!PostUpdate@{PostUpdate}}
+\index{PostUpdate@{PostUpdate}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{PostUpdate()}{PostUpdate()}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_abe1e3bce143ae566e32d34a9c438c76e} 
+virtual void Component\+Spring\+Arm\+::\+Post\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新 
+
+
+
+\mbox{\hyperlink{class_component_a5ca9fb606c77392f74f4e80c3043d3fe}{Component}}を再実装しています。
+
+\Hypertarget{class_component_spring_arm_a3a571d13f8de2802e87662131eab9780}\index{ComponentSpringArm@{ComponentSpringArm}!PrePhysics@{PrePhysics}}
+\index{PrePhysics@{PrePhysics}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{PrePhysics()}{PrePhysics()}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_a3a571d13f8de2802e87662131eab9780} 
+virtual void Component\+Spring\+Arm\+::\+Pre\+Physics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新 
+
+
+
+\mbox{\hyperlink{class_component_a28834daa627c5e81e93d40f064a19249}{Component}}を再実装しています。
+
+\Hypertarget{class_component_spring_arm_aec1e103ca473cf41a0edace65fa88743}\index{ComponentSpringArm@{ComponentSpringArm}!SetSpringArmRotate@{SetSpringArmRotate}}
+\index{SetSpringArmRotate@{SetSpringArmRotate}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{SetSpringArmRotate()}{SetSpringArmRotate()}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_aec1e103ca473cf41a0edace65fa88743} 
+Component\+Spring\+Arm\+Ptr Component\+Spring\+Arm\+::\+Set\+Spring\+Arm\+Rotate (\begin{DoxyParamCaption}\item[{float3}]{rot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+アームの向きを3軸回転で向ける方式 
+
+
+\begin{DoxyParams}{引数}
+{\em rot} & \{ X軸, Y軸, Z軸 \} 回転量 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_spring_arm_a22f36e0b21c94bdf7907ead9838513c0}\index{ComponentSpringArm@{ComponentSpringArm}!SetSpringArmVector@{SetSpringArmVector}}
+\index{SetSpringArmVector@{SetSpringArmVector}!ComponentSpringArm@{ComponentSpringArm}}
+\doxysubsubsection{\texorpdfstring{SetSpringArmVector()}{SetSpringArmVector()}}
+{\footnotesize\ttfamily \label{class_component_spring_arm_a22f36e0b21c94bdf7907ead9838513c0} 
+Component\+Spring\+Arm\+Ptr Component\+Spring\+Arm\+::\+Set\+Spring\+Arm\+Vector (\begin{DoxyParamCaption}\item[{float3}]{vec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+アームの向きをベクトルで向ける方式 
+
+
+\begin{DoxyParams}{引数}
+{\em vec} & 向ける方向 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/Component\+Spring\+Arm.\+h\end{DoxyCompactItemize}

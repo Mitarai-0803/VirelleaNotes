@@ -1,0 +1,123 @@
+\doxysection{Job\+Group クラス}
+\hypertarget{class_job_group}{}\label{class_job_group}\index{JobGroup@{JobGroup}}
+
+
+ジョブグループ  
+
+
+
+
+{\ttfamily \#include $<$Job\+Scheduler.\+h$>$}
+
+Job\+Group の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_job_group}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_job_group_a30bbab267a7c076c7894044742bf1cf3}\label{class_job_group_a30bbab267a7c076c7894044742bf1cf3} 
+void {\bfseries execute} ()
+\item 
+\mbox{\hyperlink{struct_job_handle}{Job\+Handle}} \mbox{\hyperlink{class_job_group_a66b72665825d66068ed3da48c65e2f3e}{register\+Job}} (const \mbox{\hyperlink{struct_priority}{Priority}} \&priority, const std\+::function$<$ void()$>$ \&func)
+\item 
+void \mbox{\hyperlink{class_job_group_a8b34a6d175b3e0d699716d3f300a5182}{unregister\+Job}} (const \mbox{\hyperlink{struct_job_handle}{Job\+Handle}} \&job\+\_\+handle)
+\item 
+void \mbox{\hyperlink{class_job_group_adb2845cb194e0af55549e0c4838e38dd}{enable\+Job}} (const \mbox{\hyperlink{struct_job_handle}{Job\+Handle}} \&job\+\_\+handle)
+\item 
+void \mbox{\hyperlink{class_job_group_ad092361ce59002d8c17ca5942111bedd}{disable\+Job}} (const \mbox{\hyperlink{struct_job_handle}{Job\+Handle}} \&job\+\_\+handle)
+\item 
+\mbox{\hyperlink{class_job_group_a563c88b786e3bebe668cc242898c8ff9}{Job\+Group}} (\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} job\+\_\+max\+\_\+count=10000)
+\item 
+\Hypertarget{class_job_group_aa7fca90d8c58bd00c456c8f78b59252b}\label{class_job_group_aa7fca90d8c58bd00c456c8f78b59252b} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Job\+Group} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ジョブグループ 
+
+\label{doc-constructors}
+\Hypertarget{class_job_group_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_job_group_a563c88b786e3bebe668cc242898c8ff9}\index{JobGroup@{JobGroup}!JobGroup@{JobGroup}}
+\index{JobGroup@{JobGroup}!JobGroup@{JobGroup}}
+\doxysubsubsection{\texorpdfstring{JobGroup()}{JobGroup()}}
+{\footnotesize\ttfamily \label{class_job_group_a563c88b786e3bebe668cc242898c8ff9} 
+Job\+Group\+::\+Job\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}]{job\+\_\+max\+\_\+count}{ = {\ttfamily 10000}}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em job\+\_\+max\+\_\+count} & ジョブ登録最大数 \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_job_group_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_job_group_ad092361ce59002d8c17ca5942111bedd}\index{JobGroup@{JobGroup}!disableJob@{disableJob}}
+\index{disableJob@{disableJob}!JobGroup@{JobGroup}}
+\doxysubsubsection{\texorpdfstring{disableJob()}{disableJob()}}
+{\footnotesize\ttfamily \label{class_job_group_ad092361ce59002d8c17ca5942111bedd} 
+void Job\+Group\+::disable\+Job (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_job_handle}{Job\+Handle}} \&}]{job\+\_\+handle}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em job\+\_\+handle} & ジョブハンドル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{覚え書き}
+無効化されたジョブは登録状態のまま呼び出しが停止されます 
+\end{DoxyNote}
+\Hypertarget{class_job_group_adb2845cb194e0af55549e0c4838e38dd}\index{JobGroup@{JobGroup}!enableJob@{enableJob}}
+\index{enableJob@{enableJob}!JobGroup@{JobGroup}}
+\doxysubsubsection{\texorpdfstring{enableJob()}{enableJob()}}
+{\footnotesize\ttfamily \label{class_job_group_adb2845cb194e0af55549e0c4838e38dd} 
+void Job\+Group\+::enable\+Job (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_job_handle}{Job\+Handle}} \&}]{job\+\_\+handle}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em job\+\_\+handle} & ジョブハンドル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{覚え書き}
+初期状態は「有効」になっていますが、disable\+Job()で無効化されたジョブを再び有効化できます。 
+\end{DoxyNote}
+\Hypertarget{class_job_group_a66b72665825d66068ed3da48c65e2f3e}\index{JobGroup@{JobGroup}!registerJob@{registerJob}}
+\index{registerJob@{registerJob}!JobGroup@{JobGroup}}
+\doxysubsubsection{\texorpdfstring{registerJob()}{registerJob()}}
+{\footnotesize\ttfamily \label{class_job_group_a66b72665825d66068ed3da48c65e2f3e} 
+\mbox{\hyperlink{struct_job_handle}{Job\+Handle}} Job\+Group\+::register\+Job (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_priority}{Priority}} \&}]{priority}{, }\item[{const std\+::function$<$ void()$>$ \&}]{func}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em priority} & 実行優先順位 \\
+\hline
+\mbox{\texttt{in}}  & {\em func} & 実行する関数 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+登録されたジョブハンドル (0なら登録失敗) 
+\end{DoxyReturn}
+\begin{DoxyNote}{覚え書き}
+一度登録状態になったジョブは常に登録されたままになります。 
+\end{DoxyNote}
+\Hypertarget{class_job_group_a8b34a6d175b3e0d699716d3f300a5182}\index{JobGroup@{JobGroup}!unregisterJob@{unregisterJob}}
+\index{unregisterJob@{unregisterJob}!JobGroup@{JobGroup}}
+\doxysubsubsection{\texorpdfstring{unregisterJob()}{unregisterJob()}}
+{\footnotesize\ttfamily \label{class_job_group_a8b34a6d175b3e0d699716d3f300a5182} 
+void Job\+Group\+::unregister\+Job (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_job_handle}{Job\+Handle}} \&}]{job\+\_\+handle}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em ジョブハンドル} & \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\mbox{\hyperlink{_job_scheduler_8h}{Job\+Scheduler.\+h}}\end{DoxyCompactItemize}

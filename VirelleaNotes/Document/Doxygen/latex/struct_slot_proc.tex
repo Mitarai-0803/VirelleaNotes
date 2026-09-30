@@ -1,0 +1,70 @@
+\doxysection{Slot\+Proc 構造体}
+\hypertarget{struct_slot_proc}{}\label{struct_slot_proc}\index{SlotProc@{SlotProc}}
+
+
+スロット  
+
+
+
+
+{\ttfamily \#include $<$Proc\+Timing.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_slot_proc_a6e31651108be324da0d7ef98160aa86f}\label{struct_slot_proc_a6e31651108be324da0d7ef98160aa86f} 
+bool {\bfseries Is\+Dirty} () const
+\item 
+\Hypertarget{struct_slot_proc_a17f51c187f80269a3017c74d7c7d96d8}\label{struct_slot_proc_a17f51c187f80269a3017c74d7c7d96d8} 
+void {\bfseries Reset\+Dirty} ()
+\item 
+\Hypertarget{struct_slot_proc_a4fbadfdc7cf4e854bce6f34ba85f2ec2}\label{struct_slot_proc_a4fbadfdc7cf4e854bce6f34ba85f2ec2} 
+const \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} {\bfseries Get\+Timing} () const
+\item 
+\Hypertarget{struct_slot_proc_a4b86adfbfe7db824d13a2e5be0964fb1}\label{struct_slot_proc_a4b86adfbfe7db824d13a2e5be0964fb1} 
+const \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} {\bfseries Get\+Priority} () const
+\item 
+\Hypertarget{struct_slot_proc_a8138ddc0ef831e2dfa2324b855d110ae}\label{struct_slot_proc_a8138ddc0ef831e2dfa2324b855d110ae} 
+auto {\bfseries Get\+Add\+Proc} ()
+\item 
+\Hypertarget{struct_slot_proc_ac2d722ea06bcb57d3baec44b2f405191}\label{struct_slot_proc_ac2d722ea06bcb57d3baec44b2f405191} 
+const auto {\bfseries Get\+Name} () const
+\item 
+\Hypertarget{struct_slot_proc_a0863c82d1f9f46520560a840a0307c47}\label{struct_slot_proc_a0863c82d1f9f46520560a840a0307c47} 
+const bool {\bfseries Is\+Update} () const
+\item 
+\Hypertarget{struct_slot_proc_ad202ed56a44aafb537c4b326d4f64b83}\label{struct_slot_proc_ad202ed56a44aafb537c4b326d4f64b83} 
+const bool {\bfseries Is\+Draw} () const
+\item 
+\Hypertarget{struct_slot_proc_a2a9b70104762f29629d831cfd1450de7}\label{struct_slot_proc_a2a9b70104762f29629d831cfd1450de7} 
+void {\bfseries Set\+Proc} (std\+::string name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio, Proc\+Timing\+Func func)
+\item 
+\Hypertarget{struct_slot_proc_a608bcfe41f9c95ef37b612f4406ee6c5}\label{struct_slot_proc_a608bcfe41f9c95ef37b612f4406ee6c5} 
+void {\bfseries Set\+Priority} (\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio)
+\item 
+\Hypertarget{struct_slot_proc_ac86dbdd3ddef0738a72754ce134284d1}\label{struct_slot_proc_ac86dbdd3ddef0738a72754ce134284d1} 
+Proc\+Timing\+Func \& {\bfseries Get\+Proc} ()
+\item 
+\Hypertarget{struct_slot_proc_a6571b3112b514ce8d4b72ea94d4a3b3e}\label{struct_slot_proc_a6571b3112b514ce8d4b72ea94d4a3b3e} 
+void {\bfseries Set\+Add\+Proc} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_callable}{Callable}} $>$ func, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{フレンド}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_slot_proc_a032858ae1fe02d2d1170981c2af2d67c}\label{struct_slot_proc_a032858ae1fe02d2d1170981c2af2d67c} 
+class {\bfseries Scene}
+\item 
+\Hypertarget{struct_slot_proc_a0720b5f434e636e22a3ed34f847eec57}\label{struct_slot_proc_a0720b5f434e636e22a3ed34f847eec57} 
+class {\bfseries Object}
+\item 
+\Hypertarget{struct_slot_proc_a90717717700965c100968cff0188e244}\label{struct_slot_proc_a90717717700965c100968cff0188e244} 
+class {\bfseries Component}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+スロット 
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\mbox{\hyperlink{_proc_timing_8h}{Proc\+Timing.\+h}}\end{DoxyCompactItemize}

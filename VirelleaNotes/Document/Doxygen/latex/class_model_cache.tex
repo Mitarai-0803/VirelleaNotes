@@ -1,0 +1,105 @@
+\doxysection{Model\+Cache クラス}
+\hypertarget{class_model_cache}{}\label{class_model_cache}\index{ModelCache@{ModelCache}}
+
+
+3Dモデルキャッシュ  
+
+
+
+
+{\ttfamily \#include $<$Model\+Cache.\+h$>$}
+
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_model_cache_1_1_desc}{Desc}}
+\begin{DoxyCompactList}\small\item\em ファイル情報 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{Indent}\textbf{ 初期化}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_model_cache_ae272d31a9fcfc9f3d7ae3af7e701909b}{Model\+Cache}} (std\+::string\+\_\+view path)
+\item 
+\Hypertarget{class_model_cache_a6a5e0f82c6fcefc1f7d379e2aaba1eeb}\label{class_model_cache_a6a5e0f82c6fcefc1f7d379e2aaba1eeb} 
+bool {\bfseries save} (int mv1\+\_\+handle) const
+\item 
+\Hypertarget{class_model_cache_a06646cecfc9af1624fc887a9f3260bc5}\label{class_model_cache_a06646cecfc9af1624fc887a9f3260bc5} 
+bool {\bfseries load} ()
+\item 
+\Hypertarget{class_model_cache_af60cdf27f82ded5f65729282b12b40f3}\label{class_model_cache_af60cdf27f82ded5f65729282b12b40f3} 
+const \mbox{\hyperlink{struct_model_cache_1_1_desc}{Model\+Cache\+::\+Desc}} \& {\bfseries desc} () const
+\begin{DoxyCompactList}\small\item\em ファイル情報を取得します \end{DoxyCompactList}\item 
+\Hypertarget{class_model_cache_ae3ba53ee3f87c339f6816b934318af7f}\label{class_model_cache_ae3ba53ee3f87c339f6816b934318af7f} 
+const std\+::vector$<$ VECTOR $>$ \& {\bfseries vertices} () const
+\begin{DoxyCompactList}\small\item\em 頂点配列を取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_model_cache_aabdbd5e1df763606afccb1a1c8d9464a}\label{class_model_cache_aabdbd5e1df763606afccb1a1c8d9464a} 
+const std\+::vector$<$ u32 $>$ \& {\bfseries indices} () const
+\begin{DoxyCompactList}\small\item\em インデックス配列を取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_model_cache_a82042893479e4c480b0334718c2608f5}\label{class_model_cache_a82042893479e4c480b0334718c2608f5} 
+bool {\bfseries is\+Valid} () const
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_model_cache_a6580cc38b0b63ab7c5b9e63dd8eac39c}\label{class_model_cache_a6580cc38b0b63ab7c5b9e63dd8eac39c} 
+static constexpr u32 {\bfseries VERSION} = 3
+\begin{DoxyCompactList}\small\item\em モデルキャッシュのバージョン \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{操作}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_model_cache_a185ff38e999091d3c34af7c7f605930a}{render}} (const \mbox{\hyperlink{classmatrix}{matrix}} \&mat\+\_\+world) const
+\item 
+bool \mbox{\hyperlink{class_model_cache_acf354da665d89de5a5838033f602fa0c}{is\+Exist}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+3Dモデルキャッシュ 
+
+\label{doc-constructors}
+\Hypertarget{class_model_cache_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_model_cache_ae272d31a9fcfc9f3d7ae3af7e701909b}\index{ModelCache@{ModelCache}!ModelCache@{ModelCache}}
+\index{ModelCache@{ModelCache}!ModelCache@{ModelCache}}
+\doxysubsubsection{\texorpdfstring{ModelCache()}{ModelCache()}}
+{\footnotesize\ttfamily \label{class_model_cache_ae272d31a9fcfc9f3d7ae3af7e701909b} 
+Model\+Cache\+::\+Model\+Cache (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em path} & モデルファイルパス \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_model_cache_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_model_cache_acf354da665d89de5a5838033f602fa0c}\index{ModelCache@{ModelCache}!isExist@{isExist}}
+\index{isExist@{isExist}!ModelCache@{ModelCache}}
+\doxysubsubsection{\texorpdfstring{isExist()}{isExist()}}
+{\footnotesize\ttfamily \label{class_model_cache_acf354da665d89de5a5838033f602fa0c} 
+bool Model\+Cache\+::is\+Exist (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em model\+\_\+path} & モデルファイルパス \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_cache_a185ff38e999091d3c34af7c7f605930a}\index{ModelCache@{ModelCache}!render@{render}}
+\index{render@{render}!ModelCache@{ModelCache}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_model_cache_a185ff38e999091d3c34af7c7f605930a} 
+void Model\+Cache\+::render (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmatrix}{matrix}} \&}]{mat\+\_\+world}{}\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em mat\+\_\+world} & ワールド行列 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/\mbox{\hyperlink{_model_cache_8h}{Model\+Cache.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/MyLibraryFunctions.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_my_library_functions_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MyLibraryFunctions.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_my_library_functions_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_dx_main_8h.html">DxMain.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;hlsl++.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>hlslpp;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span>my_library</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// 定数</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#aef779f68d95d3abb3c8893bcbf786530">   20</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_my_library_functions_8h.html#aef779f68d95d3abb3c8893bcbf786530">MS_PER_SEC</a> = 1000;   </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#aecee5f1861bdacc101b8349e2f3f5132">   21</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_my_library_functions_8h.html#aecee5f1861bdacc101b8349e2f3f5132">MS_PER_MIN</a> = 60000;  </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#aac1123ca1e98b5b650ea934bd9e37a91">   23</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="_my_library_functions_8h.html#aac1123ca1e98b5b650ea934bd9e37a91">PI</a> = 3.14159265358979323846f; </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#ab2ec42bb2ae81d508b0f70a5fe8cc87a">   30</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_my_library_functions_8h.html#ab2ec42bb2ae81d508b0f70a5fe8cc87a">ConvertMilliToSec</a>(<span class="keywordtype">int</span> milli);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a57628622976ab63c7a247532d7e12944">   37</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_my_library_functions_8h.html#a57628622976ab63c7a247532d7e12944">ConvertMilliToMinute</a>(<span class="keywordtype">int</span> milli);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a625ed9f2929dcb45c1a0fb06e47f628b">   44</a></span>    std::string <a class="code hl_function" href="_my_library_functions_8h.html#a625ed9f2929dcb45c1a0fb06e47f628b">GetFileExtension</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filepath);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#aac3917763df2f6d4a2b7f7ced4b3e843">   54</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_my_library_functions_8h.html#aac3917763df2f6d4a2b7f7ced4b3e843">ObjectPointToDirection</a>(float2 now_pos, float2 goal_pos, <span class="keywordtype">float</span> dir, <span class="keywordtype">float</span> rot_speed);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#af70c818946d10344c99400a3fdaa7004">   65</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="_my_library_functions_8h.html#af70c818946d10344c99400a3fdaa7004">CameraStop</a>(<span class="keywordtype">float</span> pos_x, <span class="keywordtype">float</span> pos_y, <span class="keywordtype">float</span> w, <span class="keywordtype">float</span> h, <span class="keywordtype">float</span>&amp; cam_x, <span class="keywordtype">float</span>&amp; cam_y);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a79d60073bdbaa8b8e0b91c601764928a">   75</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="_my_library_functions_8h.html#a79d60073bdbaa8b8e0b91c601764928a">ClampPositionToArea</a>(float2&amp; target_pos, <span class="keywordtype">int</span> target_w, <span class="keywordtype">int</span> target_h, <span class="keywordtype">float</span> area_w, <span class="keywordtype">float</span> area_h);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#aa547c63786fd8ee09818f965b9709bc9">   84</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_my_library_functions_8h.html#aa547c63786fd8ee09818f965b9709bc9">CheckPointBoxHitF</a>(<span class="keyword">const</span> float2&amp; point, <span class="keyword">const</span> float2&amp; pos, <span class="keyword">const</span> float2&amp; size);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a33c123d6269797d0228da5ffdd2d0aca">   89</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_my_library_functions_8h.html#a33c123d6269797d0228da5ffdd2d0aca">CheckPointBoxHit</a>(<span class="keywordtype">float</span> point_x, <span class="keywordtype">float</span> point_y, <span class="keywordtype">float</span> box_x, <span class="keywordtype">float</span> box_y, <span class="keywordtype">float</span> box_w, <span class="keywordtype">float</span> box_h);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a16fd756dd8743046a310900329e1de6b">   94</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_my_library_functions_8h.html#a16fd756dd8743046a310900329e1de6b">CheckBoxHit</a>(<span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> w1, <span class="keywordtype">float</span> h1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2, <span class="keywordtype">float</span> w2, <span class="keywordtype">float</span> h2);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a399fe08a8e4f1cf94dc06fd839851c99">   99</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_my_library_functions_8h.html#a399fe08a8e4f1cf94dc06fd839851c99">CheckCircleHit</a>(<span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> r1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2, <span class="keywordtype">float</span> r2);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a621372a86bfc3005571fd27eff84d6ea">  104</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="_my_library_functions_8h.html#a621372a86bfc3005571fd27eff84d6ea">CheckPointCircleHit</a>(<span class="keywordtype">float</span> point_x, <span class="keywordtype">float</span> point_y, <span class="keywordtype">float</span> circle_x, <span class="keywordtype">float</span> circle_y, <span class="keywordtype">float</span> circle_r);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#af01e746999fe08759849b137264ff478">  111</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_my_library_functions_8h.html#af01e746999fe08759849b137264ff478">ToRadian</a>(<span class="keywordtype">float</span> degree);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a339bda10a663dfeaf0be4aa614f6a9e8">  118</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_my_library_functions_8h.html#a339bda10a663dfeaf0be4aa614f6a9e8">ToDegree</a>(<span class="keywordtype">float</span> radian);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a50b4fda0be57780b8691a7d3b97f96c4">  123</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_my_library_functions_8h.html#a50b4fda0be57780b8691a7d3b97f96c4">GetLengthAlongRotation</a>(<span class="keywordtype">float</span> rot);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">//---------------------------------------------------------------</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="_my_library_functions_8h.html#a710e50495831d0418df53cdd19dd1522">  128</a></span>    <span class="keywordtype">float</span> <a class="code hl_function" href="_my_library_functions_8h.html#a710e50495831d0418df53cdd19dd1522">GetLengthOppositeRotation</a>(<span class="keywordtype">float</span> rot);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
+<div class="ttc" id="a_dx_main_8h_html"><div class="ttname"><a href="_dx_main_8h.html">DxMain.h</a></div><div class="ttdoc">アプリケーションの基本設定。画面サイズや背景色などの定数を定義します。</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a16fd756dd8743046a310900329e1de6b"><div class="ttname"><a href="_my_library_functions_8h.html#a16fd756dd8743046a310900329e1de6b">my_library::CheckBoxHit</a></div><div class="ttdeci">bool CheckBoxHit(float x1, float y1, float w1, float h1, float x2, float y2, float w2, float h2)</div><div class="ttdoc">矩形同士の当たり判定</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a339bda10a663dfeaf0be4aa614f6a9e8"><div class="ttname"><a href="_my_library_functions_8h.html#a339bda10a663dfeaf0be4aa614f6a9e8">my_library::ToDegree</a></div><div class="ttdeci">float ToDegree(float radian)</div><div class="ttdoc">ラジアンを度に変換する</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a33c123d6269797d0228da5ffdd2d0aca"><div class="ttname"><a href="_my_library_functions_8h.html#a33c123d6269797d0228da5ffdd2d0aca">my_library::CheckPointBoxHit</a></div><div class="ttdeci">bool CheckPointBoxHit(float point_x, float point_y, float box_x, float box_y, float box_w, float box_h)</div><div class="ttdoc">点と矩形の当たり判定（座標指定版）</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a399fe08a8e4f1cf94dc06fd839851c99"><div class="ttname"><a href="_my_library_functions_8h.html#a399fe08a8e4f1cf94dc06fd839851c99">my_library::CheckCircleHit</a></div><div class="ttdeci">bool CheckCircleHit(float x1, float y1, float r1, float x2, float y2, float r2)</div><div class="ttdoc">円同士の当たり判定</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a50b4fda0be57780b8691a7d3b97f96c4"><div class="ttname"><a href="_my_library_functions_8h.html#a50b4fda0be57780b8691a7d3b97f96c4">my_library::GetLengthAlongRotation</a></div><div class="ttdeci">float GetLengthAlongRotation(float rot)</div><div class="ttdoc">回転角から cos を取得（X 成分）</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a57628622976ab63c7a247532d7e12944"><div class="ttname"><a href="_my_library_functions_8h.html#a57628622976ab63c7a247532d7e12944">my_library::ConvertMilliToMinute</a></div><div class="ttdeci">float ConvertMilliToMinute(int milli)</div><div class="ttdoc">ミリ秒を分に変換する</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a621372a86bfc3005571fd27eff84d6ea"><div class="ttname"><a href="_my_library_functions_8h.html#a621372a86bfc3005571fd27eff84d6ea">my_library::CheckPointCircleHit</a></div><div class="ttdeci">bool CheckPointCircleHit(float point_x, float point_y, float circle_x, float circle_y, float circle_r)</div><div class="ttdoc">点と円の当たり判定</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a625ed9f2929dcb45c1a0fb06e47f628b"><div class="ttname"><a href="_my_library_functions_8h.html#a625ed9f2929dcb45c1a0fb06e47f628b">my_library::GetFileExtension</a></div><div class="ttdeci">std::string GetFileExtension(const char *filepath)</div><div class="ttdoc">ファイルパスから拡張子を取り出す</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a710e50495831d0418df53cdd19dd1522"><div class="ttname"><a href="_my_library_functions_8h.html#a710e50495831d0418df53cdd19dd1522">my_library::GetLengthOppositeRotation</a></div><div class="ttdeci">float GetLengthOppositeRotation(float rot)</div><div class="ttdoc">回転角から sin を取得（Y 成分）</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_a79d60073bdbaa8b8e0b91c601764928a"><div class="ttname"><a href="_my_library_functions_8h.html#a79d60073bdbaa8b8e0b91c601764928a">my_library::ClampPositionToArea</a></div><div class="ttdeci">void ClampPositionToArea(float2 &amp;target_pos, int target_w, int target_h, float area_w, float area_h)</div><div class="ttdoc">対象位置を指定領域内にクランプする</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_aa547c63786fd8ee09818f965b9709bc9"><div class="ttname"><a href="_my_library_functions_8h.html#aa547c63786fd8ee09818f965b9709bc9">my_library::CheckPointBoxHitF</a></div><div class="ttdeci">bool CheckPointBoxHitF(const float2 &amp;point, const float2 &amp;pos, const float2 &amp;size)</div><div class="ttdoc">浮動小数点版：点と矩形の当たり判定</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_aac1123ca1e98b5b650ea934bd9e37a91"><div class="ttname"><a href="_my_library_functions_8h.html#aac1123ca1e98b5b650ea934bd9e37a91">my_library::PI</a></div><div class="ttdeci">constexpr float PI</div><div class="ttdoc">円周率</div><div class="ttdef"><b>Definition</b> MyLibraryFunctions.h:23</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_aac3917763df2f6d4a2b7f7ced4b3e843"><div class="ttname"><a href="_my_library_functions_8h.html#aac3917763df2f6d4a2b7f7ced4b3e843">my_library::ObjectPointToDirection</a></div><div class="ttdeci">float ObjectPointToDirection(float2 now_pos, float2 goal_pos, float dir, float rot_speed)</div><div class="ttdoc">目標地点に向かうための角度調整計算</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_ab2ec42bb2ae81d508b0f70a5fe8cc87a"><div class="ttname"><a href="_my_library_functions_8h.html#ab2ec42bb2ae81d508b0f70a5fe8cc87a">my_library::ConvertMilliToSec</a></div><div class="ttdeci">float ConvertMilliToSec(int milli)</div><div class="ttdoc">ミリ秒を秒に変換する</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_aecee5f1861bdacc101b8349e2f3f5132"><div class="ttname"><a href="_my_library_functions_8h.html#aecee5f1861bdacc101b8349e2f3f5132">my_library::MS_PER_MIN</a></div><div class="ttdeci">constexpr int MS_PER_MIN</div><div class="ttdoc">1分あたりのミリ秒</div><div class="ttdef"><b>Definition</b> MyLibraryFunctions.h:21</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_aef779f68d95d3abb3c8893bcbf786530"><div class="ttname"><a href="_my_library_functions_8h.html#aef779f68d95d3abb3c8893bcbf786530">my_library::MS_PER_SEC</a></div><div class="ttdeci">constexpr int MS_PER_SEC</div><div class="ttdoc">1秒あたりのミリ秒</div><div class="ttdef"><b>Definition</b> MyLibraryFunctions.h:20</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_af01e746999fe08759849b137264ff478"><div class="ttname"><a href="_my_library_functions_8h.html#af01e746999fe08759849b137264ff478">my_library::ToRadian</a></div><div class="ttdeci">float ToRadian(float degree)</div><div class="ttdoc">度をラジアンに変換する</div></div>
+<div class="ttc" id="a_my_library_functions_8h_html_af70c818946d10344c99400a3fdaa7004"><div class="ttname"><a href="_my_library_functions_8h.html#af70c818946d10344c99400a3fdaa7004">my_library::CameraStop</a></div><div class="ttdeci">void CameraStop(float pos_x, float pos_y, float w, float h, float &amp;cam_x, float &amp;cam_y)</div><div class="ttdoc">カメラの停止処理（ワールド境界内でキャラを追従）</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_my_library_functions_8h.html">MyLibraryFunctions.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

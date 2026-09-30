@@ -1,0 +1,136 @@
+\doxysection{UI\+::Image\+Object クラス}
+\hypertarget{class_u_i_1_1_image_object}{}\label{class_u_i_1_1_image_object}\index{UI::ImageObject@{UI::ImageObject}}
+
+
+\doxylink{class_u_i_1_1_image_object}{Image\+Object} クラス  
+
+
+
+
+{\ttfamily \#include $<$Image\+Object.\+h$>$}
+
+UI\+::Image\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_image_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_image_object_ae6305e0460ef46b1d767471dfb73fb75}\label{class_u_i_1_1_image_object_ae6305e0460ef46b1d767471dfb73fb75} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Image\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_object_a7e076ef1a4dbffa73d310bbd23290784}{Set\+Path}} (const char \texorpdfstring{$\ast$}{*}path)
+\begin{DoxyCompactList}\small\item\em 読み込む画像パスの設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_object_aadf2c4e31489b9ea1a2deba42bf465ad}\label{class_u_i_1_1_image_object_aadf2c4e31489b9ea1a2deba42bf465ad} 
+void {\bfseries Set\+Pos} (\mbox{\hyperlink{struct_float_pos}{Float\+Pos}} pos)
+\begin{DoxyCompactList}\small\item\em 座標の設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}{On\+Draw}} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_object_a89deaa4f62846a6051681710d0319d2f}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_object_ac749193cdbfab19f901b7eb78ee0319f}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a1ac2a73147f469ff7371971560a4dd0a}{On\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71}{On\+End}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_image_object_a65e3ac705734ae1a6e0e45c4c600ca5c}\label{class_u_i_1_1_image_object_a65e3ac705734ae1a6e0e45c4c600ca5c} 
+\mbox{\hyperlink{struct_float_pos}{Float\+Pos}} {\bfseries pos\+\_\+} \{ 0.\+0f, 0.\+0f \}
+\begin{DoxyCompactList}\small\item\em 座標 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_object_ada5149b4d682185e2c2618f0ad10cee1}\label{class_u_i_1_1_image_object_ada5149b4d682185e2c2618f0ad10cee1} 
+int {\bfseries image\+\_\+handle\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em 画像ハンドル \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\doxylink{class_u_i_1_1_image_object}{Image\+Object} クラス 
+
+画像を読み込み座標を設定して描画する Game\+Objectクラス 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_image_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_image_object_ac749193cdbfab19f901b7eb78ee0319f}\index{UI::ImageObject@{UI::ImageObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!UI::ImageObject@{UI::ImageObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_object_ac749193cdbfab19f901b7eb78ee0319f} 
+void UI\+::\+Image\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_image_object_a89deaa4f62846a6051681710d0319d2f}\index{UI::ImageObject@{UI::ImageObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!UI::ImageObject@{UI::ImageObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_object_a89deaa4f62846a6051681710d0319d2f} 
+void UI\+::\+Image\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_image_object_a7e076ef1a4dbffa73d310bbd23290784}\index{UI::ImageObject@{UI::ImageObject}!SetPath@{SetPath}}
+\index{SetPath@{SetPath}!UI::ImageObject@{UI::ImageObject}}
+\doxysubsubsection{\texorpdfstring{SetPath()}{SetPath()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_object_a7e076ef1a4dbffa73d310bbd23290784} 
+void UI\+::\+Image\+Object\+::\+Set\+Path (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{path}{}\end{DoxyParamCaption})}
+
+
+
+読み込む画像パスの設定 
+
+
+\begin{DoxyParams}{引数}
+{\em path} & 画像パス \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Image\+Object.\+h\end{DoxyCompactItemize}

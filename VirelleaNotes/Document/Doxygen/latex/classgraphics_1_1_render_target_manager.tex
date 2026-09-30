@@ -1,0 +1,137 @@
+\doxysection{graphics\+::Render\+Target\+Manager クラス}
+\hypertarget{classgraphics_1_1_render_target_manager}{}\label{classgraphics_1_1_render_target_manager}\index{graphics::RenderTargetManager@{graphics::RenderTargetManager}}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgraphics_1_1_render_target_manager_a0fec4d3033042a3773809e73ea1b8d98}{‾\+Render\+Target\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgraphics_1_1_render_target_manager_a2b328b0fdbac23cf3fa415c0b1ea5a19}{Create\+Render\+Target}} (const std\+::string \&name, int width, int height, bool use\+Alpha=true)
+\begin{DoxyCompactList}\small\item\em レンダーターゲット（オフスクリーン）を作成して登録する \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classgraphics_1_1_render_target_manager_ac750714f85f8c83a9746c14fa8680961}{Set\+Active}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em 指定した名前のレンダーターゲットを描画先として設定する \end{DoxyCompactList}\item 
+\Hypertarget{classgraphics_1_1_render_target_manager_a14eb6c2d3c00e0fb1619ea8ae0f4b871}\label{classgraphics_1_1_render_target_manager_a14eb6c2d3c00e0fb1619ea8ae0f4b871} 
+void {\bfseries Reset\+To\+Screen} ()
+\begin{DoxyCompactList}\small\item\em 描画先をデフォルトのスクリーン（バックバッファ）に戻す \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgraphics_1_1_render_target_manager_a66f6954206192e9dba27143b779a12eb}{Present}} (const std\+::string \&name, int x=0, int y=0)
+\begin{DoxyCompactList}\small\item\em 指定したレンダーターゲットを画面上に描画する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classgraphics_1_1_render_target_manager_a5b800e523699586249e46acbf5467c59}{Release}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em 指定したレンダーターゲットを解放して登録から削除する \end{DoxyCompactList}\item 
+\Hypertarget{classgraphics_1_1_render_target_manager_a80acd526e89fb8c473bc560aa4d1326d}\label{classgraphics_1_1_render_target_manager_a80acd526e89fb8c473bc560aa4d1326d} 
+void {\bfseries Release\+All} ()
+\begin{DoxyCompactList}\small\item\em 登録されている全てのレンダーターゲットを解放する \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classgraphics_1_1_render_target_manager_ab8fde8ca86f5a663220725a20716b349}{Get\+Handle}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em 登録名に紐づくハンドルを取得する \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classgraphics_1_1_render_target_manager_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classgraphics_1_1_render_target_manager_a0fec4d3033042a3773809e73ea1b8d98}\index{graphics::RenderTargetManager@{graphics::RenderTargetManager}!‾RenderTargetManager@{‾RenderTargetManager}}
+\index{‾RenderTargetManager@{‾RenderTargetManager}!graphics::RenderTargetManager@{graphics::RenderTargetManager}}
+\doxysubsubsection{\texorpdfstring{‾RenderTargetManager()}{‾RenderTargetManager()}}
+{\footnotesize\ttfamily \label{classgraphics_1_1_render_target_manager_a0fec4d3033042a3773809e73ea1b8d98} 
+graphics\+::\+Render\+Target\+Manager\+::‾\+Render\+Target\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+保持している全てのレンダーターゲットを解放します。 \Hypertarget{classgraphics_1_1_render_target_manager_a2b328b0fdbac23cf3fa415c0b1ea5a19}\index{graphics::RenderTargetManager@{graphics::RenderTargetManager}!CreateRenderTarget@{CreateRenderTarget}}
+\index{CreateRenderTarget@{CreateRenderTarget}!graphics::RenderTargetManager@{graphics::RenderTargetManager}}
+\doxysubsubsection{\texorpdfstring{CreateRenderTarget()}{CreateRenderTarget()}}
+{\footnotesize\ttfamily \label{classgraphics_1_1_render_target_manager_a2b328b0fdbac23cf3fa415c0b1ea5a19} 
+int graphics\+::\+Render\+Target\+Manager\+::\+Create\+Render\+Target (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{int}]{width}{, }\item[{int}]{height}{, }\item[{bool}]{use\+Alpha}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+レンダーターゲット（オフスクリーン）を作成して登録する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em name} & 登録名（ユニークであること） \\
+\hline
+\mbox{\texttt{in}}  & {\em width} & 生成するターゲットの幅（ピクセル） \\
+\hline
+\mbox{\texttt{in}}  & {\em height} & 生成するターゲットの高さ（ピクセル） \\
+\hline
+\mbox{\texttt{in}}  & {\em use\+Alpha} & アルファチャンネルを含める場合は true \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+作成に成功したハンドル、失敗時は -\/1 を返す 
+\end{DoxyReturn}
+\Hypertarget{classgraphics_1_1_render_target_manager_ab8fde8ca86f5a663220725a20716b349}\index{graphics::RenderTargetManager@{graphics::RenderTargetManager}!GetHandle@{GetHandle}}
+\index{GetHandle@{GetHandle}!graphics::RenderTargetManager@{graphics::RenderTargetManager}}
+\doxysubsubsection{\texorpdfstring{GetHandle()}{GetHandle()}}
+{\footnotesize\ttfamily \label{classgraphics_1_1_render_target_manager_ab8fde8ca86f5a663220725a20716b349} 
+int graphics\+::\+Render\+Target\+Manager\+::\+Get\+Handle (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption}) const}
+
+
+
+登録名に紐づくハンドルを取得する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em name} & 登録名 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+存在すればハンドル（\texorpdfstring{$>$}{>}=0）、存在しなければ -\/1 
+\end{DoxyReturn}
+\Hypertarget{classgraphics_1_1_render_target_manager_a66f6954206192e9dba27143b779a12eb}\index{graphics::RenderTargetManager@{graphics::RenderTargetManager}!Present@{Present}}
+\index{Present@{Present}!graphics::RenderTargetManager@{graphics::RenderTargetManager}}
+\doxysubsubsection{\texorpdfstring{Present()}{Present()}}
+{\footnotesize\ttfamily \label{classgraphics_1_1_render_target_manager_a66f6954206192e9dba27143b779a12eb} 
+void graphics\+::\+Render\+Target\+Manager\+::\+Present (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{int}]{x}{ = {\ttfamily 0}, }\item[{int}]{y}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+指定したレンダーターゲットを画面上に描画する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em name} & 登録名 \\
+\hline
+\mbox{\texttt{in}}  & {\em x} & 描画先 X 座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em y} & 描画先 Y 座標 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgraphics_1_1_render_target_manager_a5b800e523699586249e46acbf5467c59}\index{graphics::RenderTargetManager@{graphics::RenderTargetManager}!Release@{Release}}
+\index{Release@{Release}!graphics::RenderTargetManager@{graphics::RenderTargetManager}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily \label{classgraphics_1_1_render_target_manager_a5b800e523699586249e46acbf5467c59} 
+void graphics\+::\+Render\+Target\+Manager\+::\+Release (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+指定したレンダーターゲットを解放して登録から削除する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em name} & 登録名 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classgraphics_1_1_render_target_manager_ac750714f85f8c83a9746c14fa8680961}\index{graphics::RenderTargetManager@{graphics::RenderTargetManager}!SetActive@{SetActive}}
+\index{SetActive@{SetActive}!graphics::RenderTargetManager@{graphics::RenderTargetManager}}
+\doxysubsubsection{\texorpdfstring{SetActive()}{SetActive()}}
+{\footnotesize\ttfamily \label{classgraphics_1_1_render_target_manager_ac750714f85f8c83a9746c14fa8680961} 
+bool graphics\+::\+Render\+Target\+Manager\+::\+Set\+Active (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+指定した名前のレンダーターゲットを描画先として設定する 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em name} & 登録名 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+指定名のターゲットが存在すれば true、存在しなければ false 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\mbox{\hyperlink{_render_target_manager_8h}{Render\+Target\+Manager.\+h}}\end{DoxyCompactItemize}

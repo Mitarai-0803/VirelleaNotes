@@ -1,0 +1,79 @@
+\doxysection{Line.\+h}
+\hypertarget{_line_8h_source}{}\label{_line_8h_source}\index{E:/sg mitarai/自作エンジン/自作エンジン/src/Line.h@{E:/sg mitarai/自作エンジン/自作エンジン/src/Line.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Struct.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ 定数}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ JUDGE\_MAX\ \ \ =\ 4;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//最大判定数}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ UI\_LINE\_MAX\ =\ 2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//UIのライン}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ LINE\_MAX\ \ \ \ =\ 4;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ライン数(幅の分割数)}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ ONE\_LINE\_W\ =\ (float)SCREEN\_W\ /\ (\textcolor{keywordtype}{float})(UI\_LINE\_MAX\ +\ LINE\_MAX);\ \textcolor{comment}{//1ラインの幅(少数点以下で細かく取得)}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ ONE\_LINE\_HALF\_W\ =\ ONE\_LINE\_W\ /\ 2.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//1ラインの半分の幅}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//判定番号}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ PERFECT\ =\ 0,\textcolor{comment}{//0}}
+\DoxyCodeLine{00017\ \ \ \ \ GOOD,\ \ \ \ \ \ \ \textcolor{comment}{//1}}
+\DoxyCodeLine{00018\ \ \ \ \ BAD,\ \ \ \ \ \ \ \ \textcolor{comment}{//2}}
+\DoxyCodeLine{00019\ \ \ \ \ MISS,\ \ \ \ \ \ \ \textcolor{comment}{//3}}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ 関数}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ Line\_Init();\ \ \ \textcolor{comment}{//初期化処理}}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ Line\_Update();\ \textcolor{comment}{//更新処理}}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ Line\_Render(RGB\ ui\_color);\ \textcolor{comment}{//描画処理}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//値を返すメンバ関数}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{int}\ Line\_Check\_Button(\textcolor{keywordtype}{int}\ line\_num);\textcolor{comment}{//入力キー}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ \ Line\ class}}
+\DoxyCodeLine{00034\ \textcolor{comment}{//　ラインと判定ラインを作成するクラス}}
+\DoxyCodeLine{00035\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00036\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_line}{Line}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//メンバ関数}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ Init(\textcolor{keywordtype}{float}\ pos\_x,\ \textcolor{keywordtype}{float}\ pos\_y,\ Box\_F\ line\_box,\ Box\_F\ judge\_line\_box);\ \ \textcolor{comment}{//初期化処理}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ Update(\textcolor{keywordtype}{int}\ notes\_index,\ \textcolor{keywordtype}{int}\ key,\ \textcolor{keywordtype}{int}\ notes\_type,\ \textcolor{keywordtype}{int}\ line);\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//更新処理}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ Render(RGB\ ui\_color);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//描画処理}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//デストラクタ}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//値を代入するメンバ関数}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ Set\_Pos\_(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);\textcolor{comment}{//座標}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ Set\_Line\_Size(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h);\textcolor{comment}{//ラインサイズ}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ Set\_Judge\_Size(\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h);\textcolor{comment}{//判定サイズ}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//値を返すメンバ関数}}
+\DoxyCodeLine{00052\ \ \ \ \ Box\_F\ Line\_Box();\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ラインサイズ}}
+\DoxyCodeLine{00053\ \ \ \ \ Box\_F\ Judge\_Line\_Box();\ \ \ \ \ \textcolor{comment}{//判定ラインサイズ}}
+\DoxyCodeLine{00054\ \ \ \ \ Box\_F\ Judge\_Box(\textcolor{keywordtype}{int}\ index);\ \textcolor{comment}{//判定サイズ}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ Key();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//入力キー}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//メンバ変数}}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//座標}}
+\DoxyCodeLine{00060\ \ \ \ \ Float\_Pos\ pos\_\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//ラインサイズ}}
+\DoxyCodeLine{00063\ \ \ \ \ Box\_F\ line\_box\_\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//判定ラインサイズ}}
+\DoxyCodeLine{00066\ \ \ \ \ Box\_F\ judge\_line\_box\_\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//判定サイズ}}
+\DoxyCodeLine{00069\ \ \ \ \ Box\_F\ judge\_box\_[JUDGE\_MAX]\ =\ \{\ 0\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//入力キー}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ key\_\ =\ 0;}
+\DoxyCodeLine{00073\ \};}
+
+\end{DoxyCode}

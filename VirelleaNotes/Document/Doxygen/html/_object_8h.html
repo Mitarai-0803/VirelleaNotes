@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Object.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_object_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Object.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>オブジェクト ベースクラス  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_priority_8h_source.html">Priority.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_status_8h_source.html">Status.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_type_info_8h_source.html">TypeInfo.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="_component_8h_source.html">System/Component/Component.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_component_collision_8h_source.html">System/Component/ComponentCollision.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_component_physics_8h_source.html">System/Component/ComponentPhysics.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_component_transform_8h_source.html">System/Component/ComponentTransform.h</a>&gt;</code><br />
+<code>#include &lt;System/Utils/HelperLib.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_cereal_8h_source.html">System/Cereal.h</a>&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+</div>
+<p><a href="_object_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:ObjTypeInfo" id="r_ObjTypeInfo"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj_type_info.html">ObjTypeInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Objectルートの型情報  <a href="class_obj_type_info.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:ObjClass" id="r_ObjClass"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_obj_class.html">ObjClass</a></td></tr>
+<tr class="memitem:ClassObjectType_3C_20T_20_3E" id="r_ClassObjectType_3C_20T_20_3E"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_class_object_type.html">ClassObjectType&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">クラス用型情報 <a class="el" href="class_class_object_type.html" title="クラス用型情報 ClassObjectType&lt;T&gt;">ClassObjectType&lt;T&gt;</a>  <a href="class_class_object_type.html#details">[詳解]</a><br /></td></tr>
+<tr class="memitem:Object" id="r_Object"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object.html">Object</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクトクラス  <a href="class_object.html#details">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a843cde70e575d7c181c3bc710b41ac13" id="r_a843cde70e575d7c181c3bc710b41ac13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a843cde70e575d7c181c3bc710b41ac13">BP_OBJECT_DECL</a>(CLASS, ...)</td></tr>
+<tr class="memitem:a1bc5ef476cc39af17f82e24466382c77" id="r_a1bc5ef476cc39af17f82e24466382c77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1bc5ef476cc39af17f82e24466382c77">BP_OBJECT_BASE_TYPE</a>(CLASS)</td></tr>
+<tr class="memitem:ab1ce88e865285112af7d0c6f008b99e8" id="r_ab1ce88e865285112af7d0c6f008b99e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1ce88e865285112af7d0c6f008b99e8">BP_OBJECT_TYPE</a>(CLASS,  PARENT_CLASS)</td></tr>
+<tr class="memitem:aa109985e9769bfdba8a613023cb3b529" id="r_aa109985e9769bfdba8a613023cb3b529"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa109985e9769bfdba8a613023cb3b529">BP_OBJECT_BASE_IMPL</a>(CLASS,  DESC_NAME)</td></tr>
+<tr class="memitem:a6caf9ecb0124fd798d18543e581ded05" id="r_a6caf9ecb0124fd798d18543e581ded05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6caf9ecb0124fd798d18543e581ded05">BP_OBJECT_IMPL</a>(CLASS,  DESC_NAME)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a2deff0220e6921920b821b718ebc8b94" id="r_a2deff0220e6921920b821b718ebc8b94"><td class="memItemLeft" align="right" valign="top"><a id="a2deff0220e6921920b821b718ebc8b94" name="a2deff0220e6921920b821b718ebc8b94"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>USING_PTR</b> (<a class="el" href="class_object.html">Object</a>)</td></tr>
+<tr class="memitem:acf719dccd2f400d5bef112558e3ab522" id="r_acf719dccd2f400d5bef112558e3ab522"><td class="memItemLeft" align="right" valign="top"><a id="acf719dccd2f400d5bef112558e3ab522" name="acf719dccd2f400d5bef112558e3ab522"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>USING_PTR</b> (<a class="el" href="class_component.html">Component</a>)</td></tr>
+<tr class="memitem:a08a2d1a769f487fc0c4a0ef5d67d78e0" id="r_a08a2d1a769f487fc0c4a0ef5d67d78e0"><td class="memItemLeft" align="right" valign="top"><a id="a08a2d1a769f487fc0c4a0ef5d67d78e0" name="a08a2d1a769f487fc0c4a0ef5d67d78e0"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>CEREAL_CLASS_VERSION</b> (<a class="el" href="class_object.html">Object</a>, 0)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>オブジェクト ベースクラス </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">マクロ定義詳解</h2>
+<a id="aa109985e9769bfdba8a613023cb3b529" name="aa109985e9769bfdba8a613023cb3b529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa109985e9769bfdba8a613023cb3b529">&#9670;&#160;</a></span>BP_OBJECT_BASE_IMPL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BP_OBJECT_BASE_IMPL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>CLASS</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>DESC_NAME</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">                       \</div>
+<div class="line">    <a class="code hl_class" href="class_class_object_type.html">ClassObjectType&lt;CLASS&gt;</a> CLASS::Type(#CLASS, <span class="keyword">sizeof</span>(CLASS), <span class="keyword">nullptr</span>, DESC_NAME);</div>
+<div class="ttc" id="aclass_class_object_type_html"><div class="ttname"><a href="class_class_object_type.html">ClassObjectType</a></div><div class="ttdoc">クラス用型情報 ClassObjectType&lt;T&gt;</div><div class="ttdef"><b>Definition</b> Object.h:56</div></div>
+</div><!-- fragment --><p>クラス内cpp宣言 グローバル変数で BP_OBJECT_IMPL(クラス名, u8任意の名前文字列) で宣言します </p><div class="fragment"><div class="line">BP_OBJECT_IMPL(B, <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;クラスB&quot;</span>)</div>
+<div class="ttc" id="a_typedef_8h_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:21</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a1bc5ef476cc39af17f82e24466382c77" name="a1bc5ef476cc39af17f82e24466382c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc5ef476cc39af17f82e24466382c77">&#9670;&#160;</a></span>BP_OBJECT_BASE_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BP_OBJECT_BASE_TYPE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>CLASS</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">    <span class="keyword">using </span>MyClass = CLASS;                                                                                                                    \</div>
+<div class="line">                                                                                                                                                                 \                                                                                                                                                \</div>
+<div class="line">    [[deprecated(                                                                                                                                                \</div>
+<div class="line">        <span class="stringliteral">&quot;BP_OBJECT_TYPE() と BP_OBJECT_BASE_TYPE() は古い宣言です。BP_OBJECT_DECL(クラス名, u8\&quot;解説文\&quot;) に置換してください。&quot;</span>)]] <span class="keyword">static</span> <a class="code hl_class" href="class_class_object_type.html">ClassObjectType&lt;CLASS&gt;</a> \</div>
+<div class="line">        Type;                                                                                                                                                    \</div>
+<div class="line">                                                                                                                                                                 \                                                                                                                                          \</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="class_obj_type_info.html">ObjTypeInfo</a>* typeInfo() const                                                                                                                  \</div>
+<div class="line">    {                                                                                                                                                            \</div>
+<div class="line">        <span class="keywordflow">return</span> &amp;Type;                                                                                                                                            \</div>
+<div class="line">    }</div>
+<div class="ttc" id="aclass_obj_type_info_html"><div class="ttname"><a href="class_obj_type_info.html">ObjTypeInfo</a></div><div class="ttdoc">Objectルートの型情報</div><div class="ttdef"><b>Definition</b> Object.h:31</div></div>
+</div><!-- fragment --><p>Objectクラス内ヘッダー宣言 基底クラス用 publicで BP_BASE_TYPE(クラス名) で宣言します</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>A</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <a class="code hl_define" href="#a1bc5ef476cc39af17f82e24466382c77">BP_OBJECT_BASE_TYPE</a>(A)</div>
+<div class="ttc" id="a_object_8h_html_a1bc5ef476cc39af17f82e24466382c77"><div class="ttname"><a href="#a1bc5ef476cc39af17f82e24466382c77">BP_OBJECT_BASE_TYPE</a></div><div class="ttdeci">#define BP_OBJECT_BASE_TYPE(CLASS)</div><div class="ttdef"><b>Definition</b> Object.h:123</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a843cde70e575d7c181c3bc710b41ac13" name="a843cde70e575d7c181c3bc710b41ac13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843cde70e575d7c181c3bc710b41ac13">&#9670;&#160;</a></span>BP_OBJECT_DECL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BP_OBJECT_DECL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>CLASS</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">    <span class="keyword">using </span>Super    = <a class="code hl_class" href="class_obj_class.html">ObjClass</a>;  \</div>
+<div class="line">    <span class="keyword">using </span><a class="code hl_class" href="class_obj_class.html">ObjClass</a> = CLASS;                          \</div>
+<div class="line">                                                                                                                   \                                                                                                  \</div>
+<div class="line">    <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="class_class_object_type.html">ClassObjectType&lt;CLASS&gt;</a> Type = <a class="code hl_class" href="class_class_object_type.html">ClassObjectType&lt;CLASS&gt;</a>(#CLASS, &amp;Super::Type, __VA_ARGS__);         \</div>
+<div class="line">                                                                                                                   \                                                                                            \</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code hl_class" href="class_obj_type_info.html">ObjTypeInfo</a>* typeInfo() const                                                                    \</div>
+<div class="line">    {                                                                                                              \</div>
+<div class="line">        <span class="keywordflow">return</span> &amp;Type;                                                                                              \</div>
+<div class="line">    }                                                                                                              \</div>
+<div class="line">    <span class="keywordtype">void</span>* createObjectPtr()                                                                                        \</div>
+<div class="line">    {                                                                                                              \</div>
+<div class="line">        <span class="keywordflow">return</span> Type.createObjectPtr();                                                                             \</div>
+<div class="line">    }</div>
+<div class="ttc" id="aclass_obj_class_html"><div class="ttname"><a href="class_obj_class.html">ObjClass</a></div><div class="ttdef"><b>Definition</b> Object.h:45</div></div>
+</div><!-- fragment --><p>クラス内ヘッダー宣言 publicで BP_OBJECT_DECL(クラス名, <a class="el" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6" title="8bit 符号なし整数">u8</a>"任意の解説文字列") で宣言します</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>B : <span class="keyword">public</span> A</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <a class="code hl_define" href="#a843cde70e575d7c181c3bc710b41ac13">BP_OBJECT_DECL</a>(B, <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;オブジェクト&quot;</span>);</div>
+<div class="ttc" id="a_object_8h_html_a843cde70e575d7c181c3bc710b41ac13"><div class="ttname"><a href="#a843cde70e575d7c181c3bc710b41ac13">BP_OBJECT_DECL</a></div><div class="ttdeci">#define BP_OBJECT_DECL(CLASS,...)</div><div class="ttdef"><b>Definition</b> Object.h:90</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a6caf9ecb0124fd798d18543e581ded05" name="a6caf9ecb0124fd798d18543e581ded05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6caf9ecb0124fd798d18543e581ded05">&#9670;&#160;</a></span>BP_OBJECT_IMPL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BP_OBJECT_IMPL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>CLASS</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>DESC_NAME</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">                  \</div>
+<div class="line">    <a class="code hl_class" href="class_class_object_type.html">ClassObjectType&lt;CLASS&gt;</a> CLASS::Type(#CLASS, &amp;Super::Type, DESC_NAME);</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab1ce88e865285112af7d0c6f008b99e8" name="ab1ce88e865285112af7d0c6f008b99e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ce88e865285112af7d0c6f008b99e8">&#9670;&#160;</a></span>BP_OBJECT_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BP_OBJECT_TYPE</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>CLASS</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>PARENT_CLASS</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">    <span class="keyword">using </span>Super = PARENT_CLASS; <span class="comment">/* 親クラスの型 */</span> \</div>
+<div class="line">    BP_OBJECT_BASE_TYPE(CLASS);</div>
+</div><!-- fragment --><p>インスタンスを作成(クラスをnewしてポインタを返す)</p>
+<p>クラス内ヘッダー宣言 publicで BP_BASE_TYPE(クラス名, 親クラス名) で宣言します</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>B : <span class="keyword">public</span> A</div>
+<div class="line">{</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">    <a class="code hl_define" href="#ab1ce88e865285112af7d0c6f008b99e8">BP_OBJECT_TYPE</a>(B, A);</div>
+<div class="ttc" id="a_object_8h_html_ab1ce88e865285112af7d0c6f008b99e8"><div class="ttname"><a href="#ab1ce88e865285112af7d0c6f008b99e8">BP_OBJECT_TYPE</a></div><div class="ttdeci">#define BP_OBJECT_TYPE(CLASS, PARENT_CLASS)</div><div class="ttdef"><b>Definition</b> Object.h:151</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="_object_8h.html">Object.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

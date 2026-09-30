@@ -1,0 +1,39 @@
+\doxysection{Shot.\+h}
+\hypertarget{_shot_8h_source}{}\label{_shot_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/GameSample/Scenes/Game/Objects/Shot.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/GameSample/Scenes/Game/Objects/Shot.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_collision_sphere_8h}{System/Component/ComponentCollisionSphere.h}}>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }Sample::GameSample\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ USING\_PTR(\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_shot}{Shot}});}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_shot}{Shot}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object_a40860402e64d8008fb42329df7097cdb}{Object}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{_object_8h_a843cde70e575d7c181c3bc710b41ac13}{BP\_OBJECT\_DECL}}(\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_shot}{Shot}},\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}GameSample/Shot"{}});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ ShotPtr\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_shot_a4428c8ba2a638103446a8638021fb56a}{Create}}(\textcolor{keyword}{const}\ float3\&\ pos,\ \textcolor{keyword}{const}\ float3\&\ vec);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_shot_a85470667094563da4309a3c3caae8540}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_shot_a701778e0376bdb3295fe2e5ca5167900}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_shot_a0608b590911f2a6f20bdc4847cf38ef4}{Draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_shot_aaa0fea057f79f270013dbfc9bc1f1342}{OnHit}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\&\ hitInfo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ SetPositionAndDirection(\textcolor{keyword}{const}\ float3\&\ pos,\ \textcolor{keyword}{const}\ float3\&\ vec);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ float3\ vec\_\ \ \ \ =\ \{0,\ 0,\ 0\};\ \ \ \ \textcolor{comment}{//<\ 進む方向}}
+\DoxyCodeLine{00034\ \ \ \ \ float3\ speed\_\ \ =\ 100.0f;\ \ \ \ \ \ \ \textcolor{comment}{//<\ 1秒間に進む量}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ \ radius\_\ =\ 1.0f;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//<\ 弾の大きさ}}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ Sample::GameSample}}
+
+\end{DoxyCode}

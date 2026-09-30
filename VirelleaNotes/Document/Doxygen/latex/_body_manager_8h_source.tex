@@ -1,0 +1,39 @@
+\doxysection{Body\+Manager.\+h}
+\hypertarget{_body_manager_8h_source}{}\label{_body_manager_8h_source}\index{F:/sg mitarai/ReoEngine/src/BodyManager.h@{F:/sg mitarai/ReoEngine/src/BodyManager.h}}
+\mbox{\hyperlink{_body_manager_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <Jolt/Jolt.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <Jolt/Physics/Body/BodyID.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collision_component}{CollisionComponent}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }BodyManager}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ BodyManager()\ \ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ \ \ \ \ \string~BodyManager()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_body_manager_a4c5981aa2f35adbc5b79e84bd2f91e68}{RegisterComponent}}(JPH::BodyID\ \textcolor{keywordtype}{id},\ \mbox{\hyperlink{class_collision_component}{CollisionComponent}}*\ component)\ \{\ mComponentMap[id]\ =\ component;\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_body_manager_a9df000541e03456c5e33fc8b06fa9c65}{UnregisterComponent}}(JPH::BodyID\ \textcolor{keywordtype}{id})\ \{\ mComponentMap.erase(\textcolor{keywordtype}{id});\ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_collision_component}{CollisionComponent}}*\ \mbox{\hyperlink{class_body_manager_a4900da6262322d68bb65ac0546e0e57d}{FindComponent}}(JPH::BodyID\ \textcolor{keywordtype}{id})\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00032\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ mComponentMap.find(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(it\ !=\ mComponentMap.end())\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ it-\/>second;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \ std::unordered\_map<JPH::BodyID,\ CollisionComponent*>\ mComponentMap;}
+\DoxyCodeLine{00042\ \};}
+
+\end{DoxyCode}

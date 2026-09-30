@@ -1,0 +1,139 @@
+\doxysection{UI\+::Draw\+Box\+Component クラス}
+\hypertarget{class_u_i_1_1_draw_box_component}{}\label{class_u_i_1_1_draw_box_component}\index{UI::DrawBoxComponent@{UI::DrawBoxComponent}}
+
+
+ズーム制御コンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Draw\+Box\+Component.\+h$>$}
+
+UI\+::Draw\+Box\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_draw_box_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_1_1_draw_box_component_a72305b21985ea755a2e3111518397e4e}{Draw\+Box\+Component}} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_box_component_aed0fb7bed47b0119e0691ad791750334}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_box_component_a836ea6af3cb0bec1621861db2f4a32e4}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_box_component_ac36b5fee17d9e020ef5bd5d87ce8c0bc}{Set\+Box\+Size}} (float x, float y, float w, float h)
+\begin{DoxyCompactList}\small\item\em サイズを設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_draw_box_component_a365abd631fd3d8e39569a884789dcb6e}{Set\+Color}} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em 色を設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_base_a24e99a122f01df33d2914cd8e5abff63}{Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_component_base_a4c25df37cf7ca24e8cd55889bab19aef}{‾\+Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em フレーム更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ズーム制御コンポーネント 
+
+ボックスを描画する 
+
+\label{doc-constructors}
+\Hypertarget{class_u_i_1_1_draw_box_component_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_u_i_1_1_draw_box_component_a72305b21985ea755a2e3111518397e4e}\index{UI::DrawBoxComponent@{UI::DrawBoxComponent}!DrawBoxComponent@{DrawBoxComponent}}
+\index{DrawBoxComponent@{DrawBoxComponent}!UI::DrawBoxComponent@{UI::DrawBoxComponent}}
+\doxysubsubsection{\texorpdfstring{DrawBoxComponent()}{DrawBoxComponent()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_box_component_a72305b21985ea755a2e3111518397e4e} 
+UI\+::\+Draw\+Box\+Component\+::\+Draw\+Box\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+メンバー変数を初期化 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_draw_box_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_draw_box_component_a836ea6af3cb0bec1621861db2f4a32e4}\index{UI::DrawBoxComponent@{UI::DrawBoxComponent}!Draw@{Draw}}
+\index{Draw@{Draw}!UI::DrawBoxComponent@{UI::DrawBoxComponent}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_box_component_a836ea6af3cb0bec1621861db2f4a32e4} 
+void UI\+::\+Draw\+Box\+Component\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_draw_box_component_aed0fb7bed47b0119e0691ad791750334}\index{UI::DrawBoxComponent@{UI::DrawBoxComponent}!Init@{Init}}
+\index{Init@{Init}!UI::DrawBoxComponent@{UI::DrawBoxComponent}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_box_component_aed0fb7bed47b0119e0691ad791750334} 
+void UI\+::\+Draw\+Box\+Component\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_draw_box_component_ac36b5fee17d9e020ef5bd5d87ce8c0bc}\index{UI::DrawBoxComponent@{UI::DrawBoxComponent}!SetBoxSize@{SetBoxSize}}
+\index{SetBoxSize@{SetBoxSize}!UI::DrawBoxComponent@{UI::DrawBoxComponent}}
+\doxysubsubsection{\texorpdfstring{SetBoxSize()}{SetBoxSize()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_box_component_ac36b5fee17d9e020ef5bd5d87ce8c0bc} 
+void UI\+::\+Draw\+Box\+Component\+::\+Set\+Box\+Size (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{, }\item[{float}]{w}{, }\item[{float}]{h}{}\end{DoxyParamCaption})}
+
+
+
+サイズを設定 
+
+
+\begin{DoxyParams}{引数}
+{\em x} & X座標 \\
+\hline
+{\em y} & Y座標 \\
+\hline
+{\em w} & 幅 \\
+\hline
+{\em h} & 高さ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_draw_box_component_a365abd631fd3d8e39569a884789dcb6e}\index{UI::DrawBoxComponent@{UI::DrawBoxComponent}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!UI::DrawBoxComponent@{UI::DrawBoxComponent}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_draw_box_component_a365abd631fd3d8e39569a884789dcb6e} 
+void UI\+::\+Draw\+Box\+Component\+::\+Set\+Color (\begin{DoxyParamCaption}\item[{int}]{r}{, }\item[{int}]{g}{, }\item[{int}]{b}{}\end{DoxyParamCaption})}
+
+
+
+色を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em r} & 赤 \\
+\hline
+{\em g} & 緑 \\
+\hline
+{\em b} & 青 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Draw\+Box\+Component.\+h\end{DoxyCompactItemize}

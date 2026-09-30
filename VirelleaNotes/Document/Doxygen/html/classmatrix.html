@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: matrix クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classmatrix.html','','classmatrix-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">matrix クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>4x4行列  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_vector_math_8h_source.html">VectorMath.h</a>&gt;</code></p>
+<div class="dynheader">
+matrix の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="classmatrix__inherit__graph.png" border="0" usemap="#amatrix_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="amatrix_inherit__map" id="amatrix_inherit__map">
+<area shape="rect" title="4x4行列" alt="" coords="5,123,181,1280"/>
+<area shape="rect" title=" " alt="" coords="65,5,122,75"/>
+<area shape="poly" title=" " alt="" coords="93,87,96,123,91,123,93,92"/>
+</map>
+</div>
+<div class="dynheader">
+matrix 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="classmatrix__coll__graph.png" border="0" usemap="#amatrix_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="amatrix_coll__map" id="amatrix_coll__map">
+<area shape="rect" title="4x4行列" alt="" coords="5,123,181,1280"/>
+<area shape="rect" title=" " alt="" coords="65,5,122,75"/>
+<area shape="poly" title=" " alt="" coords="93,87,96,123,91,123,93,92"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a73ef15efc56465db46f2f36986da629d" id="r_a73ef15efc56465db46f2f36986da629d"><td class="memItemLeft" align="right" valign="top"><a id="a73ef15efc56465db46f2f36986da629d" name="a73ef15efc56465db46f2f36986da629d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>matrix</b> (const float4x4 &amp;m)</td></tr>
+<tr class="memdesc:a73ef15efc56465db46f2f36986da629d"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">要素ベクトル参照</div></td></tr>
+<tr><td colspan="2" class="ititle"><div class="groupText"><p>各要素へのアクセスはこのアクセサを利用します。 float4で列ベクトルfloat4で直接操作を必要とする場合は 下記メンバーを利用してください</p><ul>
+<li>_11_12_13_14</li>
+<li>_21_22_23_24</li>
+<li>_31_32_33_34</li>
+<li>_41_42_43_44 </li>
+</ul>
+</div></td></tr>
+<tr class="memitem:acbc751a8985a8f5d962f3256acea59df" id="r_acbc751a8985a8f5d962f3256acea59df"><td class="memItemLeft" align="right" valign="top"><a id="acbc751a8985a8f5d962f3256acea59df" name="acbc751a8985a8f5d962f3256acea59df"></a>
+float3&#160;</td><td class="memItemRight" valign="bottom"><b>axisX</b> () const</td></tr>
+<tr class="memitem:a8cacc60f5c84e6354664ffe9349b1257" id="r_a8cacc60f5c84e6354664ffe9349b1257"><td class="memItemLeft" align="right" valign="top"><a id="a8cacc60f5c84e6354664ffe9349b1257" name="a8cacc60f5c84e6354664ffe9349b1257"></a>
+float3&#160;</td><td class="memItemRight" valign="bottom"><b>axisY</b> () const</td></tr>
+<tr class="memitem:ab76eb4b005f28f1db5e3dfb3b8a4ad15" id="r_ab76eb4b005f28f1db5e3dfb3b8a4ad15"><td class="memItemLeft" align="right" valign="top"><a id="ab76eb4b005f28f1db5e3dfb3b8a4ad15" name="ab76eb4b005f28f1db5e3dfb3b8a4ad15"></a>
+float3&#160;</td><td class="memItemRight" valign="bottom"><b>axisZ</b> () const</td></tr>
+<tr class="memitem:aea54cccd84b3b11f01cb54d5e448b41a" id="r_aea54cccd84b3b11f01cb54d5e448b41a"><td class="memItemLeft" align="right" valign="top"><a id="aea54cccd84b3b11f01cb54d5e448b41a" name="aea54cccd84b3b11f01cb54d5e448b41a"></a>
+float3&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> () const</td></tr>
+<tr class="memitem:a93e7596281903043e248c52ffedf7c9c" id="r_a93e7596281903043e248c52ffedf7c9c"><td class="memItemLeft" align="right" valign="top"><a id="a93e7596281903043e248c52ffedf7c9c" name="a93e7596281903043e248c52ffedf7c9c"></a>
+auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>axisVectorX</b> ()</td></tr>
+<tr class="memdesc:a93e7596281903043e248c52ffedf7c9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">X軸ベクトル参照を取得 <br /></td></tr>
+<tr class="memitem:af26e34a9858c79655c828a0e82ca6f60" id="r_af26e34a9858c79655c828a0e82ca6f60"><td class="memItemLeft" align="right" valign="top"><a id="af26e34a9858c79655c828a0e82ca6f60" name="af26e34a9858c79655c828a0e82ca6f60"></a>
+auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>axisVectorY</b> ()</td></tr>
+<tr class="memdesc:af26e34a9858c79655c828a0e82ca6f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Y軸ベクトル参照を取得 <br /></td></tr>
+<tr class="memitem:a1aae7438793b15d6403e98fd27c1d324" id="r_a1aae7438793b15d6403e98fd27c1d324"><td class="memItemLeft" align="right" valign="top"><a id="a1aae7438793b15d6403e98fd27c1d324" name="a1aae7438793b15d6403e98fd27c1d324"></a>
+auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>axisVectorZ</b> ()</td></tr>
+<tr class="memdesc:a1aae7438793b15d6403e98fd27c1d324"><td class="mdescLeft">&#160;</td><td class="mdescRight">Z軸ベクトル参照を取得 <br /></td></tr>
+<tr class="memitem:a61209a50a3cca44a15434beaf2db6b5b" id="r_a61209a50a3cca44a15434beaf2db6b5b"><td class="memItemLeft" align="right" valign="top"><a id="a61209a50a3cca44a15434beaf2db6b5b" name="a61209a50a3cca44a15434beaf2db6b5b"></a>
+auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>translateVector</b> ()</td></tr>
+<tr class="memdesc:a61209a50a3cca44a15434beaf2db6b5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">平行移動ベクトル参照を取得 <br /></td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">DxLib関連</div></td></tr>
+<tr class="memitem:ad98201f67dd7c577ca05c84880d4698a" id="r_ad98201f67dd7c577ca05c84880d4698a"><td class="memItemLeft" align="right" valign="top"><a id="ad98201f67dd7c577ca05c84880d4698a" name="ad98201f67dd7c577ca05c84880d4698a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>matrix</b> (const DxLib::MATRIX &amp;<a class="el" href="classmatrix.html">matrix</a>)</td></tr>
+<tr class="memdesc:ad98201f67dd7c577ca05c84880d4698a"><td class="mdescLeft">&#160;</td><td class="mdescRight">[DxLib] DxLib::MATRIXから初期化 <br /></td></tr>
+<tr class="memitem:a2567c4cb61b2b1f05b4cd0ae655be83e" id="r_a2567c4cb61b2b1f05b4cd0ae655be83e"><td class="memItemLeft" align="right" valign="top"><a id="a2567c4cb61b2b1f05b4cd0ae655be83e" name="a2567c4cb61b2b1f05b4cd0ae655be83e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator DxLib::MATRIX const</b> ()</td></tr>
+<tr class="memdesc:a2567c4cb61b2b1f05b4cd0ae655be83e"><td class="mdescLeft">&#160;</td><td class="mdescRight">[DxLib] DxLib::MATRIXへキャスト <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr id="pub-static-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">行列作成</div></td></tr>
+<tr class="memitem:a563189f24256e032ef34dd12b5141461" id="r_a563189f24256e032ef34dd12b5141461"><td class="memItemLeft" align="right" valign="top"><a id="a563189f24256e032ef34dd12b5141461" name="a563189f24256e032ef34dd12b5141461"></a>
+static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>identity</b> ()</td></tr>
+<tr class="memdesc:a563189f24256e032ef34dd12b5141461"><td class="mdescLeft">&#160;</td><td class="mdescRight">単位行列 <br /></td></tr>
+<tr class="memitem:aec948f3554d73f56a0e9a4dd3604d46f" id="r_aec948f3554d73f56a0e9a4dd3604d46f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec948f3554d73f56a0e9a4dd3604d46f">translate</a> (const float3 &amp;v)</td></tr>
+<tr class="memitem:aedcc8bc0ce110957615c0fd3e9053002" id="r_aedcc8bc0ce110957615c0fd3e9053002"><td class="memItemLeft" align="right" valign="top"><a id="aedcc8bc0ce110957615c0fd3e9053002" name="aedcc8bc0ce110957615c0fd3e9053002"></a>
+static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>translate</b> (float x, float y, float z)</td></tr>
+<tr class="memitem:a77943ad632099406ed3a3ec04d772a9c" id="r_a77943ad632099406ed3a3ec04d772a9c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77943ad632099406ed3a3ec04d772a9c">scale</a> (const float3 &amp;s)</td></tr>
+<tr class="memitem:a52dab5d0f95d1fdbf6ab1f66a0fd1963" id="r_a52dab5d0f95d1fdbf6ab1f66a0fd1963"><td class="memItemLeft" align="right" valign="top"><a id="a52dab5d0f95d1fdbf6ab1f66a0fd1963" name="a52dab5d0f95d1fdbf6ab1f66a0fd1963"></a>
+static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b> (float sx, float sy, float sz)</td></tr>
+<tr class="memitem:ac41ce7890fdb2588e8a95583741b2b4b" id="r_ac41ce7890fdb2588e8a95583741b2b4b"><td class="memItemLeft" align="right" valign="top"><a id="ac41ce7890fdb2588e8a95583741b2b4b" name="ac41ce7890fdb2588e8a95583741b2b4b"></a>
+static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>scale</b> (float s)</td></tr>
+<tr class="memitem:a368f9088c35a97b2b3689c4f17bc7c22" id="r_a368f9088c35a97b2b3689c4f17bc7c22"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a368f9088c35a97b2b3689c4f17bc7c22">rotateX</a> (float radian)</td></tr>
+<tr class="memitem:a813389a687218884597e96aeb34358c3" id="r_a813389a687218884597e96aeb34358c3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a813389a687218884597e96aeb34358c3">rotateY</a> (float radian)</td></tr>
+<tr class="memitem:af3869c5076d612bbfe29e21abeab1847" id="r_af3869c5076d612bbfe29e21abeab1847"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3869c5076d612bbfe29e21abeab1847">rotateZ</a> (float radian)</td></tr>
+<tr class="memitem:ad4c15b4b3432a7d15dca39fcd6076a2c" id="r_ad4c15b4b3432a7d15dca39fcd6076a2c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4c15b4b3432a7d15dca39fcd6076a2c">rotateAxis</a> (const float3 &amp;axis, float radian)</td></tr>
+<tr class="memitem:afa0c2aacb9575808899a5797ad83eaea" id="r_afa0c2aacb9575808899a5797ad83eaea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa0c2aacb9575808899a5797ad83eaea">lookAtLH</a> (const float3 &amp;eye, const float3 &amp;look_at, const float3 &amp;world_up=float3(0.0f, 1.0f, 0.0f))</td></tr>
+<tr class="memitem:af4bdc9f63f750f2840832211ecf3113a" id="r_af4bdc9f63f750f2840832211ecf3113a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4bdc9f63f750f2840832211ecf3113a">perspectiveFovLH</a> (float fovy, float aspect_ratio, float near_z, float far_z)</td></tr>
+<tr class="memitem:a4aedb41fd343fb179e65fa4fba06a20d" id="r_a4aedb41fd343fb179e65fa4fba06a20d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4aedb41fd343fb179e65fa4fba06a20d">perspectiveFovInfiniteFarPlaneLH</a> (float fovy, float aspect_ratio, float near_z)</td></tr>
+<tr class="memitem:a75281117d2449c2873e030dd3447236f" id="r_a75281117d2449c2873e030dd3447236f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75281117d2449c2873e030dd3447236f">orthographicOffCenterLH</a> (float left, float right, float bottom, float top, float near_z, float far_z)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>4x4行列 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="afa0c2aacb9575808899a5797ad83eaea" name="afa0c2aacb9575808899a5797ad83eaea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa0c2aacb9575808899a5797ad83eaea">&#9670;&#160;</a></span>lookAtLH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::lookAtLH </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>eye</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>look_at</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>world_up</em></span><span class="paramdefsep"> = </span><span class="paramdefval">float3(0.0f,&#160;1.0f,&#160;0.0f)</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">eye</td><td>視点座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">look_at</td><td>注視点 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">world_up</td><td>世界の上方向のベクトル(default:(0.0f, 1.0f, 0.0f)) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a75281117d2449c2873e030dd3447236f" name="a75281117d2449c2873e030dd3447236f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75281117d2449c2873e030dd3447236f">&#9670;&#160;</a></span>orthographicOffCenterLH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::orthographicOffCenterLH </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>right</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>bottom</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>top</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>near_z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>far_z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>左側の幅 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>右側の幅 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>下側の幅 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>上側の幅 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">near_z</td><td>近クリップZ値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">far_z</td><td>遠クリップZ値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>InverseZにしたい場合はnearZの値とfarZの値を交換して指定。 </dd></dl>
+
+</div>
+</div>
+<a id="a4aedb41fd343fb179e65fa4fba06a20d" name="a4aedb41fd343fb179e65fa4fba06a20d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aedb41fd343fb179e65fa4fba06a20d">&#9670;&#160;</a></span>perspectiveFovInfiniteFarPlaneLH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::perspectiveFovInfiniteFarPlaneLH </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fovy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>aspect_ratio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>near_z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>遠クリップ面を廃止して無限遠まで描画可能にする行列。 浮動小数点の丸め誤差を低減。Z=0.0fで描画すると無限遠。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fovy</td><td>画角(単位:radian) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aspect_ratio</td><td>アスペクト比 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">near_z</td><td>近クリップZ値</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参照</dt><dd>GDC'07 「Projection Matrix Tricks」 </dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>InverseZ前提の投影にになるため注意。 </dd></dl>
+
+</div>
+</div>
+<a id="af4bdc9f63f750f2840832211ecf3113a" name="af4bdc9f63f750f2840832211ecf3113a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4bdc9f63f750f2840832211ecf3113a">&#9670;&#160;</a></span>perspectiveFovLH()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::perspectiveFovLH </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>fovy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>aspect_ratio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>near_z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>far_z</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fovy</td><td>画角(単位:radian) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">aspect_ratio</td><td>アスペクト比 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">near_z</td><td>近クリップZ値 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">far_z</td><td>遠クリップZ値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>InverseZにしたい場合はnearZの値とfarZの値を交換して指定。 </dd></dl>
+
+</div>
+</div>
+<a id="ad4c15b4b3432a7d15dca39fcd6076a2c" name="ad4c15b4b3432a7d15dca39fcd6076a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4c15b4b3432a7d15dca39fcd6076a2c">&#9670;&#160;</a></span>rotateAxis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::rotateAxis </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>axis</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>radian</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">axis</td><td>回転の中心軸 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">radian</td><td>回転角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a368f9088c35a97b2b3689c4f17bc7c22" name="a368f9088c35a97b2b3689c4f17bc7c22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368f9088c35a97b2b3689c4f17bc7c22">&#9670;&#160;</a></span>rotateX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::rotateX </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>radian</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">radian</td><td>回転角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>参照</dt><dd><a href="https://ja.wikipedia.org/wiki/%E5%9B%9E%E8%BB%A2%E8%A1%8C%E5%88%97">https://ja.wikipedia.org/wiki/%E5%9B%9E%E8%BB%A2%E8%A1%8C%E5%88%97</a> </dd></dl>
+
+</div>
+</div>
+<a id="a813389a687218884597e96aeb34358c3" name="a813389a687218884597e96aeb34358c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813389a687218884597e96aeb34358c3">&#9670;&#160;</a></span>rotateY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::rotateY </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>radian</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">radian</td><td>回転角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af3869c5076d612bbfe29e21abeab1847" name="af3869c5076d612bbfe29e21abeab1847"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3869c5076d612bbfe29e21abeab1847">&#9670;&#160;</a></span>rotateZ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::rotateZ </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>radian</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">radian</td><td>回転角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a77943ad632099406ed3a3ec04d772a9c" name="a77943ad632099406ed3a3ec04d772a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77943ad632099406ed3a3ec04d772a9c">&#9670;&#160;</a></span>scale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::scale </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>スケール値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aec948f3554d73f56a0e9a4dd3604d46f" name="aec948f3554d73f56a0e9a4dd3604d46f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec948f3554d73f56a0e9a4dd3604d46f">&#9670;&#160;</a></span>translate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classmatrix.html">matrix</a> matrix::translate </td>
+          <td>(</td>
+          <td class="paramtype">const float3 &amp;</td>          <td class="paramname"><span class="paramname"><em>v</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>移動ベクトル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>F:/sg mitarai/ReoEngine/src/<a class="el" href="_vector_math_8h_source.html">VectorMath.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="classmatrix.html">matrix</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

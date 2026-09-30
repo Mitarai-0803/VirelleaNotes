@@ -1,0 +1,157 @@
+\doxysection{UI\+::Play\+Time\+Indicator\+Object クラス}
+\hypertarget{class_u_i_1_1_play_time_indicator_object}{}\label{class_u_i_1_1_play_time_indicator_object}\index{UI::PlayTimeIndicatorObject@{UI::PlayTimeIndicatorObject}}
+
+
+再生中の文字と横線で現在再生位置を表示する \doxylink{class_game_object}{Game\+Object}  
+
+
+
+
+{\ttfamily \#include $<$Play\+Time\+Indicator\+Object.\+h$>$}
+
+UI\+::Play\+Time\+Indicator\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_play_time_indicator_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_a9cdc1795128351cf6ab64ae91fd1e1fe}\label{class_u_i_1_1_play_time_indicator_object_a9cdc1795128351cf6ab64ae91fd1e1fe} 
+{\bfseries ‾\+Play\+Time\+Indicator\+Object} ()=default
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_play_time_indicator_object_a002b674f18a31abae5adb69a9e3c7d7b}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_play_time_indicator_object_afe83cde0e65781ffacf366b34699fe5e}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_a8a94044fbe09c18aebe75605ac2574ad}\label{class_u_i_1_1_play_time_indicator_object_a8a94044fbe09c18aebe75605ac2574ad} 
+void {\bfseries Set\+Play\+Time} (int sample\+\_\+time)
+\begin{DoxyCompactList}\small\item\em 再生位置（ミリ秒）を設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_afce893ae63cfa3c7f3f8c880f52ecd45}\label{class_u_i_1_1_play_time_indicator_object_afce893ae63cfa3c7f3f8c880f52ecd45} 
+void {\bfseries Set\+Max\+Play\+Time} (int max\+\_\+play\+\_\+time)
+\begin{DoxyCompactList}\small\item\em 最大再生時間（ミリ秒）を設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_a109d67277288f5b88b446fc5e243ffb6}\label{class_u_i_1_1_play_time_indicator_object_a109d67277288f5b88b446fc5e243ffb6} 
+void {\bfseries Set\+Position} (int x, int y)
+\begin{DoxyCompactList}\small\item\em 描画基準位置を設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_aa1aee9082542b4378aac4dbe9341ed4f}\label{class_u_i_1_1_play_time_indicator_object_aa1aee9082542b4378aac4dbe9341ed4f} 
+void {\bfseries Set\+Height} (int height)
+\begin{DoxyCompactList}\small\item\em 横線が動く範囲の高さを設定（ピクセル） \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_af996ccb0b770b7dea7e2bd0b4f4ac72a}\label{class_u_i_1_1_play_time_indicator_object_af996ccb0b770b7dea7e2bd0b4f4ac72a} 
+void {\bfseries Set\+Font\+Handle} (int handle)
+\begin{DoxyCompactList}\small\item\em 文字描画に使うフォントハンドルを設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_a1d97967edebaf72a0728edfab262bf69}\label{class_u_i_1_1_play_time_indicator_object_a1d97967edebaf72a0728edfab262bf69} 
+void {\bfseries Set\+Is\+Playing} (bool is\+\_\+playing)
+\begin{DoxyCompactList}\small\item\em 再生中かどうかを設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_play_time_indicator_object_a7a8184baf091740848ad3bdd407f5ff8}{Set\+Zoom}} (float zoom)
+\begin{DoxyCompactList}\small\item\em ズーム値を設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_play_time_indicator_object_a522357570cb311b416494bd36ccf61a5}{Set\+ScrollY}} (int scroll\+\_\+y)
+\begin{DoxyCompactList}\small\item\em スクロール\+Y値を設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}{On\+Draw}} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a1ac2a73147f469ff7371971560a4dd0a}{On\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71}{On\+End}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+再生中の文字と横線で現在再生位置を表示する \doxylink{class_game_object}{Game\+Object} 
+
+シーンに配置することで、外部から再生位置（ミリ秒）と最大再生時間を渡すと 画面上に「再生中」の文字を表示し、横線を楽曲再生位置に合わせて縦方向に 移動して描画する\+Game\+Object です。 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_afe83cde0e65781ffacf366b34699fe5e}\index{UI::PlayTimeIndicatorObject@{UI::PlayTimeIndicatorObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!UI::PlayTimeIndicatorObject@{UI::PlayTimeIndicatorObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_play_time_indicator_object_afe83cde0e65781ffacf366b34699fe5e} 
+void UI\+::\+Play\+Time\+Indicator\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_a002b674f18a31abae5adb69a9e3c7d7b}\index{UI::PlayTimeIndicatorObject@{UI::PlayTimeIndicatorObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!UI::PlayTimeIndicatorObject@{UI::PlayTimeIndicatorObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_play_time_indicator_object_a002b674f18a31abae5adb69a9e3c7d7b} 
+void UI\+::\+Play\+Time\+Indicator\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_a522357570cb311b416494bd36ccf61a5}\index{UI::PlayTimeIndicatorObject@{UI::PlayTimeIndicatorObject}!SetScrollY@{SetScrollY}}
+\index{SetScrollY@{SetScrollY}!UI::PlayTimeIndicatorObject@{UI::PlayTimeIndicatorObject}}
+\doxysubsubsection{\texorpdfstring{SetScrollY()}{SetScrollY()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_play_time_indicator_object_a522357570cb311b416494bd36ccf61a5} 
+void UI\+::\+Play\+Time\+Indicator\+Object\+::\+Set\+ScrollY (\begin{DoxyParamCaption}\item[{int}]{scroll\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+スクロール\+Y値を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em scroll\+\_\+y} & スクロール\+Y値 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_play_time_indicator_object_a7a8184baf091740848ad3bdd407f5ff8}\index{UI::PlayTimeIndicatorObject@{UI::PlayTimeIndicatorObject}!SetZoom@{SetZoom}}
+\index{SetZoom@{SetZoom}!UI::PlayTimeIndicatorObject@{UI::PlayTimeIndicatorObject}}
+\doxysubsubsection{\texorpdfstring{SetZoom()}{SetZoom()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_play_time_indicator_object_a7a8184baf091740848ad3bdd407f5ff8} 
+void UI\+::\+Play\+Time\+Indicator\+Object\+::\+Set\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom}{}\end{DoxyParamCaption})}
+
+
+
+ズーム値を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em zoom} & ズーム値 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Play\+Time\+Indicator\+Object.\+h\end{DoxyCompactItemize}

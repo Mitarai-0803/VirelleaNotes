@@ -1,0 +1,31 @@
+\doxysection{Component\+Hit\+Info.\+h}
+\hypertarget{_component_hit_info_8h_source}{}\label{_component_hit_info_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentHitInfo.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentHitInfo.h}}
+\mbox{\hyperlink{_component_hit_info_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_collision_8h}{ComponentCollision.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_component_physics_8h}{ComponentPhysics.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ USING\_PTR(\mbox{\hyperlink{class_component_collision}{ComponentCollision}});}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_component_1_1_hit_info}{Component::HitInfo}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_1_1_hit_info_ae1d8e7ae628d23c9c48c56c49e574bec}{hit\_}}\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ ComponentCollisionPtr\ \mbox{\hyperlink{struct_component_1_1_hit_info_ae45e95364ce737a2ca1b6601dea94ec4}{collision\_}}\ \ \ \ \ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_1_1_hit_info_a1d546086ffe5f773b162585a37bcfb47}{push\_}}\ \ \ \ \ \ \ \ \ \ =\ \{0.0f,\ 0.0f,\ 0.0f\};\ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_1_1_hit_info_a1ff55bcf8ac5b8c23e938c3ce0425dc5}{hit\_position\_}}\ \ =\ \{0.0f,\ 0.0f,\ 0.0f\};\ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ ComponentCollisionPtr\ \mbox{\hyperlink{struct_component_1_1_hit_info_a81445b04c7a58c9d850fe238dc0b34a4}{hit\_collision\_}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Component::HitInfoPhysics}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_1_1_hit_info_physics_ae459244dfeb4fe8be0dfeee78dcdf27c}{hit\_}}\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_component_physics}{ComponentPhysics}}*\ \mbox{\hyperlink{struct_component_1_1_hit_info_physics_a1dcb8fdc1b6925c520bc96278bb5f287}{collision\_}}\ \ \ \ \ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_1_1_hit_info_physics_affece78102a9aa69069955111279732f}{push\_}}\ \ \ \ \ \ \ \ \ \ =\ \{0.0f,\ 0.0f,\ 0.0f\};\ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_1_1_hit_info_physics_a16f6dc371a1474e03ae03e77e181c8a9}{hit\_position\_}}\ \ =\ \{0.0f,\ 0.0f,\ 0.0f\};\ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_component_physics}{ComponentPhysics}}*\ \mbox{\hyperlink{struct_component_1_1_hit_info_physics_a3bfa2206307fb56c1ecf1f9638275f3c}{hit\_collision\_}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \};}
+
+\end{DoxyCode}

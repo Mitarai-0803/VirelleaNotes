@@ -1,0 +1,218 @@
+\doxysection{Animation.\+h}
+\hypertarget{_animation_8h_source}{}\label{_animation_8h_source}\index{G:/sg mitarai/自作エンジン/Engine/src/Graphics/Animation.h@{G:/sg mitarai/自作エンジン/Engine/src/Graphics/Animation.h}}
+\mbox{\hyperlink{_animation_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_animation_modifier}{AnimationModifier}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_resource_animation}{ResourceAnimation}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}\ final}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_animation_1_1_desc}{Desc}}}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_animation_1_1_desc_a1eb8e7ec5423d96ad38b5440004728cf}{name\_}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{struct_animation_1_1_desc_a5cb33df7af978804a68ee183c90543fc}{file\_path\_}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ u32\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_animation_1_1_desc_a1b0b8b8d096e0eef6c3e6fc28326b470}{animation\_index\_}}\ =\ 0;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ f32\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_animation_1_1_desc_a0daee15ff65259fb8798e2a03dee1ea5}{animation\_speed\_}}\ =\ 1.0f;\ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ コンストラクタ}}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_animation_aec50f923a7aeed8d0ea9773c4790642d}{Animation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_animation_1_1_desc}{Animation::Desc}}*\ \mbox{\hyperlink{class_animation_a72840bf73ce08ce4e2900fde6aa1c5b9}{desc}},\ \textcolor{keywordtype}{size\_t}\ desc\_count);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ デストラクタ}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{\string~Animation}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ 作成}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_animation_aad81a38c683c60841bbdd1d05eac7720}{load}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_animation_1_1_desc}{Animation::Desc}}*\ \mbox{\hyperlink{class_animation_a72840bf73ce08ce4e2900fde6aa1c5b9}{desc}},\ \textcolor{keywordtype}{size\_t}\ desc\_count);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::shared\_ptr<AnimationModifier>\ \mbox{\hyperlink{class_animation_ae4d5e4b5e31e0f6be6684cc73183ae45}{createAnimationModifier}}(s32\ frame\_index);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{//\ \ 更新}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_aebce1593fc3fcdef36eaf9360d9d4e7e}{update}}(f32\ dt);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ \ アニメーション再生するモデルを設定する}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_a496bc3c8cd47b3154e02d3bcd56284b3}{bindModel}}(\mbox{\hyperlink{class_model}{Model}}*\ model);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ \ アニメーションを再生する}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_animation_a5feebcd58369d4601270b7070f87856f}{play}}(std::string\_view\ name,\ \textcolor{keywordtype}{bool}\ is\_loop\ =\ \textcolor{keyword}{false},\ f32\ blend\_time\ =\ 1.0f,\ f32\ start\_time\ =\ 0.0f);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ アニメーションを一時停止する}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_a78c13e95acbf5fcaa1c8a9b209dd1ad1}{pause}}(\textcolor{keywordtype}{bool}\ active\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_animation_ac5cebb572b387c70ed694302f4f27428}{model\_mv1\_handle}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00095\ \ \ \ \ s32\ \mbox{\hyperlink{class_animation_afed388358df1d0c89d100089aa0798c3}{animationIndex}}(std::string\_view\ name)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_animation_1_1_desc}{Animation::Desc}}*\ \mbox{\hyperlink{class_animation_a72840bf73ce08ce4e2900fde6aa1c5b9}{desc}}(s32\ animation\_index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_animation_ab59282c807a07a8b5a71921f2885c4fe}{animation\_mv1\_handle}}(s32\ animation\_index)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{//\ \ 再生中かどうかを取得}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPlaying()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ \ 一時停止中かどうかを取得}}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPaused()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//\ 初期化が正しく成功しているかどうかを取得}}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ isValid()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{comment}{//\ 利用可能な状態かどうか取得}}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_animation_a02e3cc6b3a52627093ab052227575d78}{isActive}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}\&)\ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}(\mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}\&\&)\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\mbox{\hyperlink{class_animation_a4c294d8ee848291f5da25a7d6360601f}{Animation}}\&\&)\ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00131\ \ \ \ \ std::wstring\ path\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ is\_valid\_\ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ \ \ }
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_model}{Model}}*\ \ \ \ \ \ \ model\_\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{nullptr};\ \ \ \ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ model\_mv1\_handle\_\ =\ -\/1;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ std::vector<Animation::Desc>\ descs\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00137\ \ \ \ \ std::vector<int>\ \ \ \ \ \ \ \ \ \ \ \ \ animation\_mv1\_handles\_;\ \ \ \ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00140\ \ \ \ \ std::unordered\_map<std::string,\ u32>\ name\_table\_;}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00143\ \ \ \ \ std::vector<std::shared\_ptr<AnimationModifier>>\ modifiers\_;}
+\DoxyCodeLine{00144\ \};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00148\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00149\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}{AnimationModifier}}}
+\DoxyCodeLine{00150\ \{}
+\DoxyCodeLine{00151\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}{AnimationModifier}}(\mbox{\hyperlink{class_animation}{Animation}}*\ owner,\ s32\ frame\_index);}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00157\ \ \ \ \ \mbox{\hyperlink{class_animation_modifier_a3ec4e0d386a91bd67f3d6638961f033c}{\string~AnimationModifier}}();}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{comment}{//\ \ アニメーションを割り当て}}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_animation_modifier_a6b89487841f33c3b321520db5c5e035f}{attachAnimation}}(s32\ context\_index);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{comment}{//\ \ アニメーション割り当てを解除}}
+\DoxyCodeLine{00165\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_modifier_a3b5d5b548bc22b68f808efab991517f1}{detachAnimation}}(s32\ context\_index);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{comment}{//\ \ 更新}}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_modifier_a20c3bec37755abf703ec61250db59071}{update}}(f32\ dt);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{//\ \ アニメーションを再生する}}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_animation_modifier_a2e78c12207b55a4c9b12d57c8dabdd5a}{play}}(std::string\_view\ name,\ \textcolor{keywordtype}{bool}\ is\_loop\ =\ \textcolor{keyword}{false},\ f32\ blend\_time\ =\ 1.0f,\ f32\ start\_time\ =\ 0.0f);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//\ アニメーションを一時停止する}}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_animation_modifier_adb2a56f3ea47ae76324914b4f7ca7475}{pause}}(\textcolor{keywordtype}{bool}\ active\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \ \ \ \ \textcolor{comment}{//\ \ 再生中かどうかを取得}}
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPlaying()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{comment}{//\ \ 一時停止中かどうかを取得}}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPaused()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00208\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00214\ \ \ \ \ \mbox{\hyperlink{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}{AnimationModifier}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}{AnimationModifier}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00215\ \ \ \ \ \mbox{\hyperlink{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}{AnimationModifier}}(\mbox{\hyperlink{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}{AnimationModifier}}\&\&)\ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}{AnimationModifier}}\&)\ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\mbox{\hyperlink{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}{AnimationModifier}}\&\&)\ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00220\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00221\ \ \ \ \ \mbox{\hyperlink{class_animation}{Animation}}*\ owner\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{nullptr};\ \ \ \ }
+\DoxyCodeLine{00222\ \ \ \ \ s32\ \ \ \ \ \ \ \ target\_frame\_index\_\ =\ -\/1;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00226\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_paused\_\ =\ \textcolor{keyword}{false};\ \ \ \ }
+\DoxyCodeLine{00230\ }
+\DoxyCodeLine{00232\ \ \ \ \ \textcolor{keyword}{struct\ }Context}
+\DoxyCodeLine{00233\ \ \ \ \ \{}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_playing\_\ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ }
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_loop\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ }
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ s32\ \ animation\_index\_\ \ \ \ \ \ \ \ =\ -\/1;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ animation\_attach\_index\_\ =\ -\/1;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ f32\ \ animation\_total\_time\_\ \ \ =\ 0.0f;\ \ \ \ \ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ f32\ \ play\_time\_\ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ 0.0f;\ \ \ \ \ }
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ f32\ \ blend\_ratio\_\ \ \ \ \ \ \ \ \ \ \ \ =\ 0.0f;\ \ \ \ \ }
+\DoxyCodeLine{00241\ \ \ \ \ \};}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ u32\ CONTEXT\_COUNT\ =\ 4;}
+\DoxyCodeLine{00244\ \ \ \ \ Context\ \ \ \ \ \ \ \ \ \ \ \ \ \ contexts\_[CONTEXT\_COUNT];\ \ \ \ }
+\DoxyCodeLine{00245\ \ \ \ \ f32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ blend\_time\_\ =\ 1.0f;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00248\ \};}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00252\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00253\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}{ResourceAnimation}}\ final}
+\DoxyCodeLine{00254\ \{}
+\DoxyCodeLine{00255\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00257\ \ \ \ \ \mbox{\hyperlink{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}{ResourceAnimation}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00259\ \ \ \ \ \textcolor{comment}{//\ \ コンストラクタ}}
+\DoxyCodeLine{00261\ \ \ \ \ \mbox{\hyperlink{class_resource_animation_afcccaa752e31408fe89587e27b198648}{ResourceAnimation}}(std::string\_view\ path);}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00263\ \ \ \ \ \textcolor{comment}{//\ \ デストラクタ}}
+\DoxyCodeLine{00264\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}{\string~ResourceAnimation}}();}
+\DoxyCodeLine{00265\ }
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{comment}{//\ 初期化が正しく成功しているかどうかを取得}}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{bool}\ isValid()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00269\ \ \ \ \ \textcolor{comment}{//\ 利用可能な状態かどうか取得}}
+\DoxyCodeLine{00271\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_resource_animation_af18a53a955907e27afb34b776a531034}{isActive}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00272\ }
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{comment}{//\ [DxLib]\ MV1ハンドルを取得}}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keyword}{operator}\ int()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00276\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00278\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00281\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00282\ \ \ \ \ \mbox{\hyperlink{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}{ResourceAnimation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}{ResourceAnimation}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00283\ \ \ \ \ \mbox{\hyperlink{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}{ResourceAnimation}}(\mbox{\hyperlink{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}{ResourceAnimation}}\&\&)\ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}{ResourceAnimation}}\&)\ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\mbox{\hyperlink{class_resource_animation_ac71fb94ea8f65f1d88baf88d45ab801e}{ResourceAnimation}}\&\&)\ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00288\ }
+\DoxyCodeLine{00289\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00290\ \ \ \ \ std::wstring\ \ \ \ \ \ path\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mv1\_handle\_\ =\ -\/1;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00292\ \ \ \ \ std::atomic<bool>\ active\_\ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ }
+\DoxyCodeLine{00293\ \};}
+
+\end{DoxyCode}

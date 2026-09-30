@@ -1,0 +1,63 @@
+\doxysection{Gauge.\+h}
+\hypertarget{_gauge_8h_source}{}\label{_gauge_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/GameSample/Scenes/Game/Gauge.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/GameSample/Scenes/Game/Gauge.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{namespace\ }Sample::GameSample\ \{}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }HP\ \{}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_a8fc8f49b43ada813af91dd6b70cabac1}{Gauge}}\ final}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ DEF\_HP\_VALUE\ =\ 100;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_a8fc8f49b43ada813af91dd6b70cabac1}{Gauge}}(\textcolor{keywordtype}{float}\ hp\ =\ DEF\_HP\_VALUE);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_a8fc8f49b43ada813af91dd6b70cabac1}{\string~Gauge}}();}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_acebc73392a26fd7e556506f3bbefc279}{Update}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_a527e3dacbaf002cb9aed3338212ec3d0}{Draw}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_a1152aa5c25bbd0200e5e09d79425ae89}{Reset}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_a8fc8f49b43ada813af91dd6b70cabac1}{Gauge}}\&\ operator++();}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_a8fc8f49b43ada813af91dd6b70cabac1}{Gauge}}\ \ operator++(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_a8fc8f49b43ada813af91dd6b70cabac1}{Gauge}}\&\ operator-\/-\/();}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge_a8fc8f49b43ada813af91dd6b70cabac1}{Gauge}}\ \ operator-\/-\/(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ operator-\/=(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ operator+=(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator<=(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator<(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator>=(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator>(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ operator!=(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\&\ Value()\ \{\ \textcolor{keywordflow}{return}\ hp\_;\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ float3\ pos\_\ \ \ \ \ \ \ \ \ \ \ =\ float3(0,\ 0,\ 0);\ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{float}\ \ hp\_\ \ \ \ \ \ \ \ \ \ \ \ =\ DEF\_HP\_VALUE;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ \ org\_hp\_\ \ \ \ \ \ \ \ =\ DEF\_HP\_VALUE;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{float}\ \ damage\_\ \ \ \ \ \ \ \ =\ 0.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{float}\ \ damage\_frame\_\ \ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ \ damage\_delta\_\ \ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ \ recover\_\ \ \ \ \ \ \ =\ 0.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{float}\ \ recover\_frame\_\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{float}\ \ recover\_delta\_\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{float}\ ToPerValue(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ procDamageGauge(\textcolor{keywordtype}{float}\ delta);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ procRecoverGauge(\textcolor{keywordtype}{float}\ delta);}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ HP}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ Sample::GameSample}}
+
+\end{DoxyCode}

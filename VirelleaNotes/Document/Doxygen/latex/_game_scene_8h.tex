@@ -1,0 +1,35 @@
+\doxysection{F\+:/sg mitarai/\+Reo\+Engine/src/\+Game\+Scene.h ファイル}
+\hypertarget{_game_scene_8h}{}\label{_game_scene_8h}\index{F:/sg mitarai/ReoEngine/src/GameScene.h@{F:/sg mitarai/ReoEngine/src/GameScene.h}}
+
+
+増水パズルゲームシーンクラスの宣言  
+
+
+{\ttfamily \#include "{}Scene\+Base.\+h"{}}\newline
+{\ttfamily \#include "{}Water\+Object.\+h"{}}\newline
+{\ttfamily \#include "{}Box\+Object.\+h"{}}\newline
+{\ttfamily \#include "{}Platform\+Object.\+h"{}}\newline
+{\ttfamily \#include "{}Water\+Puzzle\+Config.\+h"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Game\+Scene.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_game_scene_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_scene_1_1_game_scene}{Scene\+::\+Game\+Scene}}
+\begin{DoxyCompactList}\small\item\em 増水パズルのゲームプレイシーンクラス \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+増水パズルゲームシーンクラスの宣言 
+
+時間経過とともに水位が上昇していき、プレイヤー（\+Box\+Object）は 矢印キー＋ジャンプで階段状の足場を渡り歩いて逃げ続ける。 水没したらゲームオーバーとなり、生存時間をランキングに記録した後、 Enterキーで再戦できる。 \begin{DoxyAuthor}{著者}
+レオ 
+\end{DoxyAuthor}

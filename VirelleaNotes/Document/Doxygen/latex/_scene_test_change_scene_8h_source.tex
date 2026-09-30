@@ -1,0 +1,33 @@
+\doxysection{Scene\+Test\+Change\+Scene.\+h}
+\hypertarget{_scene_test_change_scene_8h_source}{}\label{_scene_test_change_scene_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneTest/SceneTestChangeScene.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneTest/SceneTestChangeScene.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_test_change_scene}{SceneTestChangeScene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_1_1_base}{Scene::Base}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ 継承している形をここでも書いておく(プログラム的に使用する)}}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{_type_info_8h_aed9c544bcefbc45da9189a4c3d3e4d6c}{BP\_CLASS\_DECL}}(\mbox{\hyperlink{class_scene_test_change_scene}{SceneTestChangeScene}},\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}SceneTest\ /\ シーン切り替えサンプル"{}});}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scene_test_change_scene_afe205a64d36cf5c84857d43b2a3dabfd}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_test_change_scene_abe9c12729f73059443bf28878a0f3e6e}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ 切り替えるためのシーンをここに用意している}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ 本来は別ファイルにするべきです}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_test_change_scene2}{SceneTestChangeScene2}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_1_1_base}{Scene::Base}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ メニューに出したくない場合はここは書かない}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ BP\_CLASS\_DECL(SceneTestChangeScene,\ u8"{}"{});}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scene_test_change_scene2_a8da1e2025491a8aac10aac1aaf1d2a72}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_test_change_scene2_a3f775cbdd010f418067e3645eb066958}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \};}
+
+\end{DoxyCode}

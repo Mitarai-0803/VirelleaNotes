@@ -1,0 +1,282 @@
+\doxysection{Sequence\+Object クラス}
+\hypertarget{class_sequence_object}{}\label{class_sequence_object}\index{SequenceObject@{SequenceObject}}
+Sequence\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sequence_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_sequence_object_aa4f6a47f160860e2b5c2f60197f56aa4}{Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_sequence_object_a2abc35ac9acc15479c7e569aaadc5fed}{Get\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sequence_object}{Sequence\+Object}} $>$ \mbox{\hyperlink{class_sequence_object_a5b0cf2310bda33b905f42cd6aabbcfd4}{Shared\+This}} ()
+\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_sequence_object_a04ab554a7028abd74a31e1ac1a491c28}{Get\+World\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em ワールド\+Matrixの取得 \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_sequence_object_ad11bf9ffba5f90770f13d1c9e10dfa58}{Get\+Old\+World\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em 1フレーム前のワールド\+Matrixの取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_sequence_object_a80995113b36e23eaddbe89006edb3d30}\label{class_sequence_object_a80995113b36e23eaddbe89006edb3d30} 
+std\+::string {\bfseries Get\+Name} ()
+\item 
+\Hypertarget{class_sequence_object_a97f3c83ac7a26bd517d3a5596fb7fa67}\label{class_sequence_object_a97f3c83ac7a26bd517d3a5596fb7fa67} 
+std\+::string {\bfseries Get\+Name\+Label} ()
+\item 
+\Hypertarget{class_sequence_object_a15ccd9b96f5f1fd48bee7f1e6a0889f3}\label{class_sequence_object_a15ccd9b96f5f1fd48bee7f1e6a0889f3} 
+bool {\bfseries Is\+Open} ()
+\item 
+void \mbox{\hyperlink{class_sequence_object_a7ffa6a5df0c9f86b4171963a4c0ce35f}{Set\+Animation\+From\+Frame}} (int frame)
+\begin{DoxyCompactList}\small\item\em フレーム情報からアニメーションを取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sequence_object_a56a0a30f1dd31e78a1187c77f5c9634a}{Set\+Effect\+From\+Frame}} (int frame)
+\begin{DoxyCompactList}\small\item\em フレーム情報からエフェクトを取得 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_sequence_object_ab94d1ae5f3b563d6e21f2c668b359cbd}{Get\+Transform\+From\+Frame}} (int frame)
+\begin{DoxyCompactList}\small\item\em フレーム情報から姿勢(位置・回転・スケール)を取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_sequence_object_ad00af77d10583f4cdc9dde5c4bfc2800}\label{class_sequence_object_ad00af77d10583f4cdc9dde5c4bfc2800} 
+void {\bfseries Show\+Guizmo} ()
+\begin{DoxyCompactList}\small\item\em 三軸ギズモを表示する \end{DoxyCompactList}\item 
+\Hypertarget{class_sequence_object_a74a0bcf64e7801dc9cdc6f4930b9bf96}\label{class_sequence_object_a74a0bcf64e7801dc9cdc6f4930b9bf96} 
+void {\bfseries Sort} ()
+\begin{DoxyCompactList}\small\item\em データを並び替えます \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sequence_object_a4ece6d2ef1671f7680890819201ef324}{Update}} (bool playing, float frame)
+\begin{DoxyCompactList}\small\item\em シーケンサ内部オブジェクトの更新 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_sequence_object_a8799ef05e74459b8a020a625f45d42c0}{GUI}} (uint32\+\_\+t start, uint32\+\_\+t end)
+\begin{DoxyCompactList}\small\item\em GUI表示 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_i_matrix}{IMatrix$<$ Sequence\+Object $>$}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+auto {\bfseries Set\+Matrix} (const \mbox{\hyperlink{classmatrix}{matrix}} \&mat)
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{Get\+Matrix\+Float}} ()
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a714ba34bafae6ad18adc512a12bfd88c}{Set\+Translate}} (float3 translate)
+\begin{DoxyCompactList}\small\item\em 位置をセットします \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_ae7c4c3c592258a62946b51b4ddd3b9f4}{Add\+Translate}} (float3 translate, bool local=false, bool direct=false)
+\begin{DoxyCompactList}\small\item\em 現在の位置から移動させます \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_ab67ba5ffdc38b759a3cb4a4d37dbd69e}{Get\+Translate}} () const
+\begin{DoxyCompactList}\small\item\em 現在の位置を取得 \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a9964f98393c131d9aeaca9a2394dc2a0}{Translate}} ()
+\begin{DoxyCompactList}\small\item\em 現在の位置を取得 \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_aefa89e636dcd4f4c2f128fbd690829ed}{Get\+Vector\+AxisX}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_ac940f73d639aab045fef9c7ab9b0c001}{Get\+Vector\+AxisY}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_a521c543b440fd67361317096d075d230}{Get\+Vector\+AxisZ}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a781040f918546a43c53fe908f78749ab}{Vector\+AxisX}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a85f8892147948781655c3cdfef6b56a4}{Vector\+AxisY}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a13ca80b18abe18006c5963d182837ef4}{Vector\+AxisZ}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_ad3c834a912db364ad3da23ddfa865156}{Translate\+Float}} ()
+\begin{DoxyCompactList}\small\item\em 位置を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a634a043c1cbcdf122104ec3a5677b2a5}{Vector\+Axis\+XFloat}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a310e16cb1bcea89de3f5792c9a1256e4}{Vector\+Axis\+YFloat}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_ac85c3df7009e77d500be39547f08fc59}{Vector\+Axis\+ZFloat}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a714521197cdaf88b10263628c5d6b6e1}{Set\+Vector\+AxisX}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em X軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_affd008e5bc3f162771f65f6ccd0f4212}{Set\+Vector\+AxisY}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em Y軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a650a67e0bd69073dbf2540566436a6a8}{Set\+Vector\+AxisZ}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em Z軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_aabebf94bb7ad5c922f06a5718af1c3b7}{Set\+Rotation\+To\+Position}} (float3 position, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ポジションの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a626db18f4ef2eef12a3d94e7467e5d47}{Set\+Rotation\+To\+Vector}} (float3 vec, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a1c2365a4d13bae038007b507d987a019}{Set\+Rotation\+To\+Vector\+On\+Parent}} (float3 vec, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a64d76c423bcaf1509cdd0d59853db9a2}{Set\+Rotation\+To\+Position\+With\+Limit}} (float3 position, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ポジションの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a4033fc43ac7e0f5c3d2e2cc584fcc1d3}{Set\+Rotation\+To\+Vector\+With\+Limit}} (float3 vec, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_ab69f027e3f44e4a62fc51fd45372b766}{Set\+Rotation\+To\+Vector\+On\+Parent\+With\+Limit}} (float3 vec, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a79080df693fc6ca32a4d0cf00d277bf1}{Set\+Rotation\+Axis\+XYZ}} (float3 xyz)
+\begin{DoxyCompactList}\small\item\em 軸回転量を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a00baa4ac15c3a377d63b11a4ac694736}{Add\+Rotation\+Axis\+XYZ}} (float3 xyz)
+\begin{DoxyCompactList}\small\item\em 軸回転量を現在の状態から追加する \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_a33669a9c95add8d80d310fc7ef9a0bf7}{Get\+Rotation\+Axis\+XYZ}} (bool local=true)
+\begin{DoxyCompactList}\small\item\em 軸回転量を取得する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a1bf7f616a7fe4c9dfc975cf0a2748304}{Set\+Scale\+Axis\+XYZ}} (float3 scale)
+\begin{DoxyCompactList}\small\item\em スケールの設定 \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_aa710c9aafe9fcfed378d3242329c45b3}{Mul\+Scale\+Axis\+XYZ}} (float3 scale)
+\begin{DoxyCompactList}\small\item\em 現在のスケールから掛け合わせ倍率スケール \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_a9d823777983c3ca5e917c8ca8b879054}{Get\+Scale\+Axis\+XYZ}} (bool local=true)
+\begin{DoxyCompactList}\small\item\em スケールの取得 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_i_matrix_a34cd0c9a971a79694ff25330ed3431d3}{Get\+Degree\+To\+Position}} (float3 target\+\_\+position)
+\begin{DoxyCompactList}\small\item\em 向いている角度をもとめます \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_i_matrix_a938bf6fa6d01cc0945c0e7899aa03fc8}{Get\+Degree\+To\+Vector}} (float3 target\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em 向いている角度をもとめます \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_sequence_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_sequence_object_a2abc35ac9acc15479c7e569aaadc5fed}\index{SequenceObject@{SequenceObject}!GetMatrix@{GetMatrix}}
+\index{GetMatrix@{GetMatrix}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{GetMatrix()}{GetMatrix()}}
+{\footnotesize\ttfamily \label{class_sequence_object_a2abc35ac9acc15479c7e569aaadc5fed} 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \& Sequence\+Object\+::\+Get\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Transformの\+Matrix情報を取得します 
+
+\begin{DoxyReturn}{戻り値}
+Transform の Matrix 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{IMatrix$<$ Sequence\+Object $>$}}を実装しています。
+
+\Hypertarget{class_sequence_object_ad11bf9ffba5f90770f13d1c9e10dfa58}\index{SequenceObject@{SequenceObject}!GetOldWorldMatrix@{GetOldWorldMatrix}}
+\index{GetOldWorldMatrix@{GetOldWorldMatrix}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{GetOldWorldMatrix()}{GetOldWorldMatrix()}}
+{\footnotesize\ttfamily \label{class_sequence_object_ad11bf9ffba5f90770f13d1c9e10dfa58} 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} Sequence\+Object\+::\+Get\+Old\+World\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+1フレーム前のワールド\+Matrixの取得 
+
+\begin{DoxyReturn}{戻り値}
+他のコンポーネントも含めた位置 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_aba0d23d8c1c3cb1b5963e9ca06d56236}{IMatrix$<$ Sequence\+Object $>$}}を実装しています。
+
+\Hypertarget{class_sequence_object_ab94d1ae5f3b563d6e21f2c668b359cbd}\index{SequenceObject@{SequenceObject}!GetTransformFromFrame@{GetTransformFromFrame}}
+\index{GetTransformFromFrame@{GetTransformFromFrame}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{GetTransformFromFrame()}{GetTransformFromFrame()}}
+{\footnotesize\ttfamily \label{class_sequence_object_ab94d1ae5f3b563d6e21f2c668b359cbd} 
+\mbox{\hyperlink{classmatrix}{matrix}} Sequence\+Object\+::\+Get\+Transform\+From\+Frame (\begin{DoxyParamCaption}\item[{int}]{frame}{}\end{DoxyParamCaption})}
+
+
+
+フレーム情報から姿勢(位置・回転・スケール)を取得 
+
+
+\begin{DoxyParams}{引数}
+{\em frame} & フレーム \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sequence_object_a04ab554a7028abd74a31e1ac1a491c28}\index{SequenceObject@{SequenceObject}!GetWorldMatrix@{GetWorldMatrix}}
+\index{GetWorldMatrix@{GetWorldMatrix}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{GetWorldMatrix()}{GetWorldMatrix()}}
+{\footnotesize\ttfamily \label{class_sequence_object_a04ab554a7028abd74a31e1ac1a491c28} 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} Sequence\+Object\+::\+Get\+World\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+ワールド\+Matrixの取得 
+
+\begin{DoxyReturn}{戻り値}
+自分にかかわる他のコンポーネントも含めた位置 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{IMatrix$<$ Sequence\+Object $>$}}を実装しています。
+
+\Hypertarget{class_sequence_object_a8799ef05e74459b8a020a625f45d42c0}\index{SequenceObject@{SequenceObject}!GUI@{GUI}}
+\index{GUI@{GUI}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{GUI()}{GUI()}}
+{\footnotesize\ttfamily \label{class_sequence_object_a8799ef05e74459b8a020a625f45d42c0} 
+void Sequence\+Object\+::\+GUI (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{start}{, }\item[{uint32\+\_\+t}]{end}{}\end{DoxyParamCaption})}
+
+
+
+GUI表示 
+
+
+\begin{DoxyParams}{引数}
+{\em start} & スタートフレーム \\
+\hline
+{\em end} & 終了フレーム \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sequence_object_aa4f6a47f160860e2b5c2f60197f56aa4}\index{SequenceObject@{SequenceObject}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}}
+{\footnotesize\ttfamily \label{class_sequence_object_aa4f6a47f160860e2b5c2f60197f56aa4} 
+virtual \mbox{\hyperlink{classmatrix}{matrix}} \& Sequence\+Object\+::\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Transformの\+Matrix情報を取得します 
+
+\begin{DoxyReturn}{戻り値}
+Transform の Matrix 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{IMatrix$<$ Sequence\+Object $>$}}を実装しています。
+
+\Hypertarget{class_sequence_object_a7ffa6a5df0c9f86b4171963a4c0ce35f}\index{SequenceObject@{SequenceObject}!SetAnimationFromFrame@{SetAnimationFromFrame}}
+\index{SetAnimationFromFrame@{SetAnimationFromFrame}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{SetAnimationFromFrame()}{SetAnimationFromFrame()}}
+{\footnotesize\ttfamily \label{class_sequence_object_a7ffa6a5df0c9f86b4171963a4c0ce35f} 
+void Sequence\+Object\+::\+Set\+Animation\+From\+Frame (\begin{DoxyParamCaption}\item[{int}]{frame}{}\end{DoxyParamCaption})}
+
+
+
+フレーム情報からアニメーションを取得 
+
+
+\begin{DoxyParams}{引数}
+{\em frame} & フレーム \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sequence_object_a56a0a30f1dd31e78a1187c77f5c9634a}\index{SequenceObject@{SequenceObject}!SetEffectFromFrame@{SetEffectFromFrame}}
+\index{SetEffectFromFrame@{SetEffectFromFrame}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{SetEffectFromFrame()}{SetEffectFromFrame()}}
+{\footnotesize\ttfamily \label{class_sequence_object_a56a0a30f1dd31e78a1187c77f5c9634a} 
+void Sequence\+Object\+::\+Set\+Effect\+From\+Frame (\begin{DoxyParamCaption}\item[{int}]{frame}{}\end{DoxyParamCaption})}
+
+
+
+フレーム情報からエフェクトを取得 
+
+
+\begin{DoxyParams}{引数}
+{\em frame} & フレーム \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_sequence_object_a5b0cf2310bda33b905f42cd6aabbcfd4}\index{SequenceObject@{SequenceObject}!SharedThis@{SharedThis}}
+\index{SharedThis@{SharedThis}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{SharedThis()}{SharedThis()}}
+{\footnotesize\ttfamily \label{class_sequence_object_a5b0cf2310bda33b905f42cd6aabbcfd4} 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sequence_object}{Sequence\+Object}} $>$ Sequence\+Object\+::\+Shared\+This (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_matrix}{IMatrix$<$ Sequence\+Object $>$}}を実装しています。
+
+\Hypertarget{class_sequence_object_a4ece6d2ef1671f7680890819201ef324}\index{SequenceObject@{SequenceObject}!Update@{Update}}
+\index{Update@{Update}!SequenceObject@{SequenceObject}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_sequence_object_a4ece6d2ef1671f7680890819201ef324} 
+void Sequence\+Object\+::\+Update (\begin{DoxyParamCaption}\item[{bool}]{playing}{, }\item[{float}]{frame}{}\end{DoxyParamCaption})}
+
+
+
+シーケンサ内部オブジェクトの更新 
+
+
+\begin{DoxyParams}{引数}
+{\em playing} & 実行中か \\
+\hline
+{\em frame} & フレーム数 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/Component\+Sequencer.\+h\end{DoxyCompactItemize}

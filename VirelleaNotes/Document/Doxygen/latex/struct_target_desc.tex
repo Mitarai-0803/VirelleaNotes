@@ -1,0 +1,31 @@
+\doxysection{Target\+Desc 構造体}
+\hypertarget{struct_target_desc}{}\label{struct_target_desc}\index{TargetDesc@{TargetDesc}}
+
+
+Render\+Target情報  
+
+
+
+
+{\ttfamily \#include $<$Render.\+h$>$}
+
+\doxysubsubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_target_desc_a5e387289cfbe02d81f19656cab3bfa67}\label{struct_target_desc_a5e387289cfbe02d81f19656cab3bfa67} 
+u32 {\bfseries color\+\_\+count\+\_\+} = 0
+\item 
+\Hypertarget{struct_target_desc_a40b7294492aa9a06521f2521c211078c}\label{struct_target_desc_a40b7294492aa9a06521f2521c211078c} 
+std\+::array$<$ \mbox{\hyperlink{class_texture}{Texture}} \texorpdfstring{$\ast$}{*}, D3\+D11\+\_\+\+SIMULTANEOUS\+\_\+\+RENDER\+\_\+\+TARGET\+\_\+\+COUNT $>$ {\bfseries color\+\_\+targets\+\_\+} = \{\}
+\item 
+\Hypertarget{struct_target_desc_a058498dfb0e8846a3fd12573b4d9adaa}\label{struct_target_desc_a058498dfb0e8846a3fd12573b4d9adaa} 
+\mbox{\hyperlink{class_texture}{Texture}} \texorpdfstring{$\ast$}{*} {\bfseries depth\+\_\+stencil\+\_\+} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Render\+Target情報 
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/Render.\+h\end{DoxyCompactItemize}

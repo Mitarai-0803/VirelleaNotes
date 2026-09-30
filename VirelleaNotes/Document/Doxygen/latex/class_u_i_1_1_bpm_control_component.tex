@@ -1,0 +1,71 @@
+\doxysection{UI\+::Bpm\+Control\+Component クラス}
+\hypertarget{class_u_i_1_1_bpm_control_component}{}\label{class_u_i_1_1_bpm_control_component}\index{UI::BpmControlComponent@{UI::BpmControlComponent}}
+
+
+BPM制御コンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Bpm\+Control\+Component.\+h$>$}
+
+UI\+::Bpm\+Control\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_bpm_control_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_bpm_control_component_a236d0d8d8ed48a7dd70c5a276b571f74}\label{class_u_i_1_1_bpm_control_component_a236d0d8d8ed48a7dd70c5a276b571f74} 
+{\bfseries Bpm\+Control\+Component} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_bpm_control_component_a6d1e47ae8703b36504b23ed143cc0267}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_bpm_control_component_af4b507c046e88cd54ef0ca58a37f3107}\label{class_u_i_1_1_bpm_control_component_af4b507c046e88cd54ef0ca58a37f3107} 
+int {\bfseries Get\+Bpm} () const
+\begin{DoxyCompactList}\small\item\em 現在\+BPM取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_bpm_control_component_a75b0db835b5c5c18e50548d78a9dcfa3}\label{class_u_i_1_1_bpm_control_component_a75b0db835b5c5c18e50548d78a9dcfa3} 
+void {\bfseries Set\+Bpm} (int bpm)
+\begin{DoxyCompactList}\small\item\em BPM設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_base_a24e99a122f01df33d2914cd8e5abff63}{Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_component_base_a4c25df37cf7ca24e8cd55889bab19aef}{‾\+Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+BPM制御コンポーネント 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_bpm_control_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_bpm_control_component_a6d1e47ae8703b36504b23ed143cc0267}\index{UI::BpmControlComponent@{UI::BpmControlComponent}!Update@{Update}}
+\index{Update@{Update}!UI::BpmControlComponent@{UI::BpmControlComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_bpm_control_component_a6d1e47ae8703b36504b23ed143cc0267} 
+void UI\+::\+Bpm\+Control\+Component\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+左右キーで\+BPMを調整 
+
+\mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Component\+Base}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Bpm\+Control\+Component.\+h\end{DoxyCompactItemize}

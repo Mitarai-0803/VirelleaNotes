@@ -1,0 +1,44 @@
+\doxysection{Status.\+h}
+\hypertarget{_status_8h_source}{}\label{_status_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Status.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Status.h}}
+\mbox{\hyperlink{_status_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T,\ \textcolor{keyword}{class}\ V\ =\ u32>}
+\DoxyCodeLine{00011\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_status}{Status}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{enum\ struct}\ \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0}{Bit}}\ :\ V}
+\DoxyCodeLine{00014\ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0abd9f7c5d6ab4201b138a3e51dab7056f}{Alive}}\ =\ 0,\ \ \ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0ac5475a8fae2fa421403e56f7ae0de108}{ChangePrio}},\ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a552f244367a4f2e2ef9e4e5ff2c52ea0}{ShowGUI}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a59d87a4758a9d35fbaf6b204341bb399}{Initialized}},\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0af3413da9e97ed78dada82d1330fde5f1}{NoUpdate}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0add349546b418e50c23e2d88a3342a68f}{NoDraw}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0ad0b20a6cab952ae657cd06d2c956a7ea}{DisablePause}},\ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a7c572e80f65d4b3a29bc954dd03225b6}{IsPause}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{inline}\ V\ on(T\ b)}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ status\_bit\_\ |=\ 1ui64\ <<\ static\_cast<V>(b);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ status\_bit\_;}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{inline}\ V\ off(T\ b)}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ status\_bit\_\ \&=\ \string~(1ui64\ <<\ static\_cast<V>(b));}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ status\_bit\_;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{inline}\ V\ \ set(T\ b,\ \textcolor{keywordtype}{bool}\ \_on)\ \{\ \textcolor{keywordflow}{return}\ \_on\ ?\ on(b)\ :\ off(b);\ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{inline}\ V\ \ is(T\ b)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ status\_bit\_\ \&\ (1ui64\ <<\ static\_cast<int>(b));\ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{inline}\ V\&\ get()\ \{\ \textcolor{keywordflow}{return}\ status\_bit\_;\ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ V\ status\_bit\_\ =\ 0;}
+\DoxyCodeLine{00041\ \};}
+
+\end{DoxyCode}

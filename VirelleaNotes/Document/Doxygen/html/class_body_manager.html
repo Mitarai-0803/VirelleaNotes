@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: BodyManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_body_manager.html','','class_body_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BodyManager クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>物理ボディ管理クラス  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_body_manager_8h_source.html">BodyManager.h</a>&gt;</code></p>
+<div class="dynheader">
+BodyManager 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_body_manager__coll__graph.png" border="0" usemap="#a_body_manager_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_body_manager_coll__map" id="a_body_manager_coll__map">
+<area shape="rect" title="物理ボディ管理クラス" alt="" coords="5,5,164,160"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4c5981aa2f35adbc5b79e84bd2f91e68" id="r_a4c5981aa2f35adbc5b79e84bd2f91e68"><td class="memItemLeft" align="right" valign="top"><a id="a4c5981aa2f35adbc5b79e84bd2f91e68" name="a4c5981aa2f35adbc5b79e84bd2f91e68"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RegisterComponent</b> (JPH::BodyID id, <a class="el" href="class_collision_component.html">CollisionComponent</a> *component)</td></tr>
+<tr class="memdesc:a4c5981aa2f35adbc5b79e84bd2f91e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネントの登録 <br /></td></tr>
+<tr class="memitem:a9df000541e03456c5e33fc8b06fa9c65" id="r_a9df000541e03456c5e33fc8b06fa9c65"><td class="memItemLeft" align="right" valign="top"><a id="a9df000541e03456c5e33fc8b06fa9c65" name="a9df000541e03456c5e33fc8b06fa9c65"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>UnregisterComponent</b> (JPH::BodyID id)</td></tr>
+<tr class="memdesc:a9df000541e03456c5e33fc8b06fa9c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネントの解除 <br /></td></tr>
+<tr class="memitem:a4900da6262322d68bb65ac0546e0e57d" id="r_a4900da6262322d68bb65ac0546e0e57d"><td class="memItemLeft" align="right" valign="top"><a id="a4900da6262322d68bb65ac0546e0e57d" name="a4900da6262322d68bb65ac0546e0e57d"></a>
+<a class="el" href="class_collision_component.html">CollisionComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>FindComponent</b> (JPH::BodyID id) const</td></tr>
+<tr class="memdesc:a4900da6262322d68bb65ac0546e0e57d"><td class="mdescLeft">&#160;</td><td class="mdescRight">BodyIDからコンポーネントを取得 <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>物理ボディ管理クラス </p>
+</div><hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>F:/sg mitarai/ReoEngine/src/<a class="el" href="_body_manager_8h_source.html">BodyManager.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_body_manager.html">BodyManager</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

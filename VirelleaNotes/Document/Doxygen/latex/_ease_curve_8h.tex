@@ -1,0 +1,83 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Ease\+Curve.h ファイル}
+\hypertarget{_ease_curve_8h}{}\label{_ease_curve_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/EaseCurve.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/EaseCurve.h}}
+
+
+Easeカーブ補間  
+
+
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_ease_curve_8h_a87e8af974637ab7e4251fb31bfc0857c}\label{_ease_curve_8h_a87e8af974637ab7e4251fb31bfc0857c} 
+enum class \mbox{\hyperlink{_ease_curve_8h_a87e8af974637ab7e4251fb31bfc0857c}{Ease\+Type}} \+: u32 \{ \newline
+{\bfseries In\+Sine}
+, {\bfseries Out\+Sine}
+, {\bfseries In\+Out\+Sine}
+, {\bfseries In\+Quad}
+, \newline
+{\bfseries Out\+Quad}
+, {\bfseries In\+Out\+Quad}
+, {\bfseries In\+Cubic}
+, {\bfseries Out\+Cubic}
+, \newline
+{\bfseries In\+Out\+Cubic}
+, {\bfseries In\+Quart}
+, {\bfseries Out\+Quart}
+, {\bfseries In\+Out\+Quart}
+, \newline
+{\bfseries In\+Quint}
+, {\bfseries Out\+Quint}
+, {\bfseries In\+Out\+Quint}
+, {\bfseries In\+Expo}
+, \newline
+{\bfseries Out\+Expo}
+, {\bfseries In\+Out\+Expo}
+, {\bfseries In\+Circ}
+, {\bfseries Out\+Circ}
+, \newline
+{\bfseries In\+Out\+Circ}
+, {\bfseries In\+Back}
+, {\bfseries Out\+Back}
+, {\bfseries In\+Out\+Back}
+, \newline
+{\bfseries In\+Elastic}
+, {\bfseries Out\+Elastic}
+, {\bfseries In\+Out\+Elastic}
+, {\bfseries In\+Bounce}
+, \newline
+{\bfseries Out\+Bounce}
+, {\bfseries In\+Out\+Bounce}
+ \}
+\begin{DoxyCompactList}\small\item\em Easeカーブの種類 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_ease_curve_8h_af45cf17a4f1e94b1f6c5f694c94d39cf}\label{_ease_curve_8h_af45cf17a4f1e94b1f6c5f694c94d39cf} 
+size\+\_\+t {\bfseries Get\+Ease\+Function\+Max\+Count} ()
+\item 
+std\+::function$<$ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}})$>$ \mbox{\hyperlink{_ease_curve_8h_a00802d546dcaec1c1826e449719a7419}{Get\+Ease\+Function}} (\mbox{\hyperlink{_ease_curve_8h_a87e8af974637ab7e4251fb31bfc0857c}{Ease\+Type}} type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Easeカーブ補間 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_ease_curve_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_ease_curve_8h_a00802d546dcaec1c1826e449719a7419}\index{EaseCurve.h@{EaseCurve.h}!GetEaseFunction@{GetEaseFunction}}
+\index{GetEaseFunction@{GetEaseFunction}!EaseCurve.h@{EaseCurve.h}}
+\doxysubsubsection{\texorpdfstring{GetEaseFunction()}{GetEaseFunction()}}
+{\footnotesize\ttfamily \label{_ease_curve_8h_a00802d546dcaec1c1826e449719a7419} 
+std\+::function$<$ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}})$>$ Get\+Ease\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ease_curve_8h_a87e8af974637ab7e4251fb31bfc0857c}{Ease\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em type} & カーブの種類 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+カーブ関数。std\+::function$<$f32(f32)$>$で受け取ります。 
+\end{DoxyReturn}

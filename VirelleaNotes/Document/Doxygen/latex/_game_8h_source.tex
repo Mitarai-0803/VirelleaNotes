@@ -1,0 +1,40 @@
+\doxysection{Game.\+h}
+\hypertarget{_game_8h_source}{}\label{_game_8h_source}\index{E:/sg mitarai/自作エンジン/自作エンジン/src/Game.h@{E:/sg mitarai/自作エンジン/自作エンジン/src/Game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ SCREEN\_W\ \ \ \ 1300}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ SCREEN\_H\ \ \ \ 700}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//定数}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ FPS\ =\ 60;\textcolor{comment}{//フレームレート}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//ノーツタイプ}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ NORMAL\_NOTES,\ \ \ \textcolor{comment}{//普通ノーツ}}
+\DoxyCodeLine{00013\ \ \ \ \ TWO\_NOTES,\ \ \ \ \ \ \textcolor{comment}{//同時押し}}
+\DoxyCodeLine{00014\ \ \ \ \ LONG\_NOTES\ \ \ \ \ \ \textcolor{comment}{//長押し}}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//判定文字列の座標}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ JUDGE\_STR\_POS\_X\ =\ 50;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//X座標}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ JUDGE\_STR\_POS\_Y\ =\ SCREEN\_H\ -\/\ 150;\ \textcolor{comment}{//Y座標}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//当たってるかを返す判定関数}}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{bool}\ Check\_Judge\_Line(\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{float}\ judge\_line\_x,\ \textcolor{keywordtype}{float}\ judge\_line\_y,\ \textcolor{keywordtype}{float}\ judge\_line\_w,\ \textcolor{keywordtype}{float}\ judge\_line\_h);}
+\DoxyCodeLine{00023\ \textcolor{comment}{//ノーツタイプを返す}}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ Notets\_Type();}
+\DoxyCodeLine{00025\ \textcolor{comment}{//ライン番号を返す}}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ Line\_Num();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//ドラッグ＆ドロップされたハンドルを返す関数}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ Get\_GrHandle();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ GameInit();\ \ \ \ \textcolor{comment}{//\ \ 初期化処理}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ GameUpdate();\ \ \textcolor{comment}{//\ \ 更新処理}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ GameRender();\ \ \textcolor{comment}{//\ \ 描画処理}}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ GameExit();\ \ \ \ \textcolor{comment}{//\ \ 終了処理\ }}
+
+\end{DoxyCode}

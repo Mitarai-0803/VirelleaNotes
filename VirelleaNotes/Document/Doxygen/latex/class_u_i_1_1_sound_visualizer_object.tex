@@ -1,0 +1,166 @@
+\doxysection{UI\+::Sound\+Visualizer\+Object クラス}
+\hypertarget{class_u_i_1_1_sound_visualizer_object}{}\label{class_u_i_1_1_sound_visualizer_object}\index{UI::SoundVisualizerObject@{UI::SoundVisualizerObject}}
+
+
+{\ttfamily \#include $<$Sound\+Visualizer\+Object.\+h$>$}
+
+UI\+::Sound\+Visualizer\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_sound_visualizer_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_a66d9d0416c9343c650c1f4a499b9ce01}\label{class_u_i_1_1_sound_visualizer_object_a66d9d0416c9343c650c1f4a499b9ce01} 
+{\bfseries Sound\+Visualizer\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタを定義します。 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_a33e89d78c597cb035d9ca4f1cc62fe6a}\label{class_u_i_1_1_sound_visualizer_object_a33e89d78c597cb035d9ca4f1cc62fe6a} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Sound\+Visualizer\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタを定義します。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_sound_visualizer_object_aa96ab66b3aaf2358a788ca8ef80faf17}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理を行います。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_sound_visualizer_object_a3b18bc958a56f0fd4a37348c1745b721}{On\+Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理を行います。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_sound_visualizer_object_a38ffeab1ee371635c159820a173ba735}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理を行います。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_sound_visualizer_object_ad53bb5424abe8b51a324b455ee1f5c40}{On\+End}} () override
+\begin{DoxyCompactList}\small\item\em 終了処理を行います。 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_sound_visualizer_object_a10455f12bc4c5dc42bddf419e90a588d}{Set\+Soft\+Handle}} (int handle)
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_sound_visualizer_object_a458c85e27888dab766cade8cf2177cd5}{Set\+Sample\+Time}} (int sample\+\_\+time)
+\item 
+void \mbox{\hyperlink{class_u_i_1_1_sound_visualizer_object_a9d860e6ebc067bb8fe03d9eb4b2db5f7}{Set\+Position}} (int x, int y)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}{On\+Draw}} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+音声のスペクトラムを描画するためのオブジェクトです。 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_a38ffeab1ee371635c159820a173ba735}\index{UI::SoundVisualizerObject@{UI::SoundVisualizerObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!UI::SoundVisualizerObject@{UI::SoundVisualizerObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sound_visualizer_object_a38ffeab1ee371635c159820a173ba735} 
+void UI\+::\+Sound\+Visualizer\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理を行います。 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_ad53bb5424abe8b51a324b455ee1f5c40}\index{UI::SoundVisualizerObject@{UI::SoundVisualizerObject}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!UI::SoundVisualizerObject@{UI::SoundVisualizerObject}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sound_visualizer_object_ad53bb5424abe8b51a324b455ee1f5c40} 
+void UI\+::\+Sound\+Visualizer\+Object\+::\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了処理を行います。 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_aa96ab66b3aaf2358a788ca8ef80faf17}\index{UI::SoundVisualizerObject@{UI::SoundVisualizerObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!UI::SoundVisualizerObject@{UI::SoundVisualizerObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sound_visualizer_object_aa96ab66b3aaf2358a788ca8ef80faf17} 
+void UI\+::\+Sound\+Visualizer\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理を行います。 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_a3b18bc958a56f0fd4a37348c1745b721}\index{UI::SoundVisualizerObject@{UI::SoundVisualizerObject}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!UI::SoundVisualizerObject@{UI::SoundVisualizerObject}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sound_visualizer_object_a3b18bc958a56f0fd4a37348c1745b721} 
+void UI\+::\+Sound\+Visualizer\+Object\+::\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新処理を行います。 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_a9d860e6ebc067bb8fe03d9eb4b2db5f7}\index{UI::SoundVisualizerObject@{UI::SoundVisualizerObject}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!UI::SoundVisualizerObject@{UI::SoundVisualizerObject}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sound_visualizer_object_a9d860e6ebc067bb8fe03d9eb4b2db5f7} 
+void UI\+::\+Sound\+Visualizer\+Object\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+ビジュアライザーの描画位置を設定します。 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em x} & 描画基準X \\
+\hline
+\mbox{\texttt{in}}  & {\em y} & 描画基準Y \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_a458c85e27888dab766cade8cf2177cd5}\index{UI::SoundVisualizerObject@{UI::SoundVisualizerObject}!SetSampleTime@{SetSampleTime}}
+\index{SetSampleTime@{SetSampleTime}!UI::SoundVisualizerObject@{UI::SoundVisualizerObject}}
+\doxysubsubsection{\texorpdfstring{SetSampleTime()}{SetSampleTime()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sound_visualizer_object_a458c85e27888dab766cade8cf2177cd5} 
+void UI\+::\+Sound\+Visualizer\+Object\+::\+Set\+Sample\+Time (\begin{DoxyParamCaption}\item[{int}]{sample\+\_\+time}{}\end{DoxyParamCaption})}
+
+再生位置を設定します。 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em sample\+\_\+time} & 再生位置（サンプル単位） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_sound_visualizer_object_a10455f12bc4c5dc42bddf419e90a588d}\index{UI::SoundVisualizerObject@{UI::SoundVisualizerObject}!SetSoftHandle@{SetSoftHandle}}
+\index{SetSoftHandle@{SetSoftHandle}!UI::SoundVisualizerObject@{UI::SoundVisualizerObject}}
+\doxysubsubsection{\texorpdfstring{SetSoftHandle()}{SetSoftHandle()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_sound_visualizer_object_a10455f12bc4c5dc42bddf419e90a588d} 
+void UI\+::\+Sound\+Visualizer\+Object\+::\+Set\+Soft\+Handle (\begin{DoxyParamCaption}\item[{int}]{handle}{}\end{DoxyParamCaption})}
+
+解析音源ハンドルを設定します。 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em handle} & 音声解析に使用するソフトサウンドのハンドル \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/\mbox{\hyperlink{_sound_visualizer_object_8h}{Sound\+Visualizer\+Object.\+h}}\end{DoxyCompactItemize}

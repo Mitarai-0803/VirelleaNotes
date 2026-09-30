@@ -1,0 +1,68 @@
+\doxysection{physics\+::Character\+::Contact\+Listener クラス}
+\hypertarget{classphysics_1_1_character_1_1_contact_listener}{}\label{classphysics_1_1_character_1_1_contact_listener}\index{physics::Character::ContactListener@{physics::Character::ContactListener}}
+
+
+{\ttfamily \#include $<$Physics\+Character.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classphysics_1_1_character_1_1_contact_listener_aab7f10b8906ef7b2c0691d0dcf22eb23}\label{classphysics_1_1_character_1_1_contact_listener_aab7f10b8906ef7b2c0691d0dcf22eb23} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Contact\+Listener} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener_aa9f498cc746fd128013e9b2e2da5c16a}{on\+Contact\+Validate}} (const \mbox{\hyperlink{classphysics_1_1_character}{physics\+::\+Character}} \texorpdfstring{$\ast$}{*}character, \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}} other\+\_\+body\+\_\+id)
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener_a10137e9acf5d583049b6e6b681b94290}{on\+Contact\+Added}} (const \mbox{\hyperlink{classphysics_1_1_character}{physics\+::\+Character}} \texorpdfstring{$\ast$}{*}character, \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}} other\+\_\+body\+\_\+id, const float3 \&contact\+\_\+position, const float3 \&contact\+\_\+normal, \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_settings}{physics\+::\+Character\+::\+Contact\+Settings}} \&result)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+キャラクターコンタクトリスナー キャラクターに登録することでイベントをコールバックで受け取ることができます 
+
+\label{doc-func-members}
+\Hypertarget{classphysics_1_1_character_1_1_contact_listener_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classphysics_1_1_character_1_1_contact_listener_a10137e9acf5d583049b6e6b681b94290}\index{physics::Character::ContactListener@{physics::Character::ContactListener}!onContactAdded@{onContactAdded}}
+\index{onContactAdded@{onContactAdded}!physics::Character::ContactListener@{physics::Character::ContactListener}}
+\doxysubsubsection{\texorpdfstring{onContactAdded()}{onContactAdded()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_character_1_1_contact_listener_a10137e9acf5d583049b6e6b681b94290} 
+virtual void physics\+::\+Character\+::\+Contact\+Listener\+::on\+Contact\+Added (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysics_1_1_character}{physics\+::\+Character}} \texorpdfstring{$\ast$}{*}}]{character}{, }\item[{\mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}}]{other\+\_\+body\+\_\+id}{, }\item[{const float3 \&}]{contact\+\_\+position}{, }\item[{const float3 \&}]{contact\+\_\+normal}{, }\item[{\mbox{\hyperlink{classphysics_1_1_character_1_1_contact_settings}{physics\+::\+Character\+::\+Contact\+Settings}} \&}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em character} & 対象のキャラクター \\
+\hline
+\mbox{\texttt{in}}  & {\em other\+\_\+body\+\_\+id} & 相手のボディ\+ID \\
+\hline
+\mbox{\texttt{in}}  & {\em contact\+\_\+position} & 衝突位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em contact\+\_\+normal} & 衝突法線 \\
+\hline
+\mbox{\texttt{out}}  & {\em result} & 衝突許可情報 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_character_1_1_contact_listener_aa9f498cc746fd128013e9b2e2da5c16a}\index{physics::Character::ContactListener@{physics::Character::ContactListener}!onContactValidate@{onContactValidate}}
+\index{onContactValidate@{onContactValidate}!physics::Character::ContactListener@{physics::Character::ContactListener}}
+\doxysubsubsection{\texorpdfstring{onContactValidate()}{onContactValidate()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_character_1_1_contact_listener_aa9f498cc746fd128013e9b2e2da5c16a} 
+virtual bool physics\+::\+Character\+::\+Contact\+Listener\+::on\+Contact\+Validate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classphysics_1_1_character}{physics\+::\+Character}} \texorpdfstring{$\ast$}{*}}]{character}{, }\item[{\mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}}]{other\+\_\+body\+\_\+id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em character} & 対象のキャラクター \\
+\hline
+\mbox{\texttt{in}}  & {\em other\+\_\+body\+\_\+id} & 相手のボディ\+ID \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 衝突可能 \\
+\hline
+{\em false} & 衝突しない \\
+\hline
+\end{DoxyRetVals}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Physics/\mbox{\hyperlink{_physics_character_8h}{Physics\+Character.\+h}}\end{DoxyCompactItemize}

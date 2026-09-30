@@ -1,0 +1,28 @@
+\doxysection{F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/\+Zoom\+Component.h ファイル}
+\hypertarget{_zoom_component_8h}{}\label{_zoom_component_8h}\index{F:/1新規プロジェクト作成用/音ゲー制作エンジン/src/ZoomComponent.h@{F:/1新規プロジェクト作成用/音ゲー制作エンジン/src/ZoomComponent.h}}
+
+
+\texorpdfstring{$<$}{<} DXライブラリの利用  
+
+
+{\ttfamily \#include "{}Component\+Base.\+h"{}}\newline
+{\ttfamily \#include "{}Game\+Constants.\+h"{}}\newline
+{\ttfamily \#include $<$Dx\+Lib.\+h$>$}\newline
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_system_1_1_zoom_component}{System\+::\+Zoom\+Component}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{名前空間}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_system}{System}}
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} DXライブラリ利用（描画・入力など） \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\texorpdfstring{$<$}{<} DXライブラリの利用 
+
+\texorpdfstring{$<$}{<} \doxylink{class_component_base}{Component\+Base} を継承するため ズーム関連の定数（\+ZOOM\+\_\+\+DEFAULT, ZOOM\+\_\+\+STEP など）
+
+ズーム制御コンポーネントの宣言 @detail Ctrl + マウスホイールでズームを変更するためのコンポーネントを定義します。 ズーム倍率の取得・設定および入力に応じた更新処理を提供します。 

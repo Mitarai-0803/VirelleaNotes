@@ -1,0 +1,193 @@
+\doxysection{Audio\+::Audio\+Manager\+Component クラス}
+\hypertarget{class_audio_1_1_audio_manager_component}{}\label{class_audio_1_1_audio_manager_component}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+
+
+音源管理コンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Audio\+Manager\+Component.\+h$>$}
+
+Audio\+::Audio\+Manager\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_audio_1_1_audio_manager_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_audio_1_1_audio_manager_component_ab847be8abe85e2f92cb41e1e5d2d0d14}\label{class_audio_1_1_audio_manager_component_ab847be8abe85e2f92cb41e1e5d2d0d14} 
+{\bfseries Audio\+Manager\+Component} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_1_1_audio_manager_component_ad1d3f251f03a9dc0f62fc7c20da3f518}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_1_1_audio_manager_component_acb2dbee76901e34cba7c96d73cd3bc5c}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_1_1_audio_manager_component_a84c742a50dbb3c08aa8df6284e4f1948}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_audio_1_1_audio_manager_component_a1dfdee126396460ba0fa794cc0647448}\label{class_audio_1_1_audio_manager_component_a1dfdee126396460ba0fa794cc0647448} 
+void {\bfseries Handle\+Play\+Sound} ()
+\begin{DoxyCompactList}\small\item\em 音源の再生 \end{DoxyCompactList}\item 
+\Hypertarget{class_audio_1_1_audio_manager_component_a81b21d2d7ec7113e9696690633138ec9}\label{class_audio_1_1_audio_manager_component_a81b21d2d7ec7113e9696690633138ec9} 
+void {\bfseries Handle\+Stop\+Sound} ()
+\begin{DoxyCompactList}\small\item\em 音源の停止 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_1_1_audio_manager_component_af8820a7a0d04c84dc585f741aa0dc8bd}{Set\+Handle}} (int handle)
+\begin{DoxyCompactList}\small\item\em 音源ハンドルを設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_1_1_audio_manager_component_a1de8f45f92510d074733690d65e4da63}{Set\+Sound\+Volume}} (int volume)
+\begin{DoxyCompactList}\small\item\em 音源の音量を設定 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_audio_1_1_audio_manager_component_a0a4b6838235a90016b5c8b57c0c121f8}{Get\+Stop\+Position}} () const
+\begin{DoxyCompactList}\small\item\em 音源の停止位置を取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_audio_1_1_audio_manager_component_a0b7db9db6dbf142ad6ce526e8ba6e4db}{Get\+Sample\+Time}} () const
+\begin{DoxyCompactList}\small\item\em 再生位置取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_audio_1_1_audio_manager_component_a37f4b992b57f96138381311c20885510}{Get\+Ms\+Time}} () const
+\begin{DoxyCompactList}\small\item\em 再生位置取得（ミリ秒単位） \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_audio_1_1_audio_manager_component_acd6eba715f12d127307ce2a759abe77c}{Get\+Playe\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em 再生中かどうかの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_base_a24e99a122f01df33d2914cd8e5abff63}{Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_component_base_a4c25df37cf7ca24e8cd55889bab19aef}{‾\+Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+音源管理コンポーネント 
+
+\label{doc-func-members}
+\Hypertarget{class_audio_1_1_audio_manager_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_audio_1_1_audio_manager_component_a84c742a50dbb3c08aa8df6284e4f1948}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}!End@{End}}
+\index{End@{End}!Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \label{class_audio_1_1_audio_manager_component_a84c742a50dbb3c08aa8df6284e4f1948} 
+void Audio\+::\+Audio\+Manager\+Component\+::\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+
+
+\mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_audio_1_1_audio_manager_component_a37f4b992b57f96138381311c20885510}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}!GetMsTime@{GetMsTime}}
+\index{GetMsTime@{GetMsTime}!Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{GetMsTime()}{GetMsTime()}}
+{\footnotesize\ttfamily \label{class_audio_1_1_audio_manager_component_a37f4b992b57f96138381311c20885510} 
+int Audio\+::\+Audio\+Manager\+Component\+::\+Get\+Ms\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+再生位置取得（ミリ秒単位） 
+
+\begin{DoxyReturn}{戻り値}
+再生位置（ミリ秒単位） 
+\end{DoxyReturn}
+\Hypertarget{class_audio_1_1_audio_manager_component_acd6eba715f12d127307ce2a759abe77c}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}!GetPlayeMode@{GetPlayeMode}}
+\index{GetPlayeMode@{GetPlayeMode}!Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{GetPlayeMode()}{GetPlayeMode()}}
+{\footnotesize\ttfamily \label{class_audio_1_1_audio_manager_component_acd6eba715f12d127307ce2a759abe77c} 
+bool Audio\+::\+Audio\+Manager\+Component\+::\+Get\+Playe\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+再生中かどうかの取得 
+
+\begin{DoxyReturn}{戻り値}
+再生中かどうか 
+\end{DoxyReturn}
+\Hypertarget{class_audio_1_1_audio_manager_component_a0b7db9db6dbf142ad6ce526e8ba6e4db}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}!GetSampleTime@{GetSampleTime}}
+\index{GetSampleTime@{GetSampleTime}!Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{GetSampleTime()}{GetSampleTime()}}
+{\footnotesize\ttfamily \label{class_audio_1_1_audio_manager_component_a0b7db9db6dbf142ad6ce526e8ba6e4db} 
+int Audio\+::\+Audio\+Manager\+Component\+::\+Get\+Sample\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+再生位置取得 
+
+\begin{DoxyReturn}{戻り値}
+再生位置（サンプル単位） 
+\end{DoxyReturn}
+\Hypertarget{class_audio_1_1_audio_manager_component_a0a4b6838235a90016b5c8b57c0c121f8}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}!GetStopPosition@{GetStopPosition}}
+\index{GetStopPosition@{GetStopPosition}!Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{GetStopPosition()}{GetStopPosition()}}
+{\footnotesize\ttfamily \label{class_audio_1_1_audio_manager_component_a0a4b6838235a90016b5c8b57c0c121f8} 
+int Audio\+::\+Audio\+Manager\+Component\+::\+Get\+Stop\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+音源の停止位置を取得 
+
+\begin{DoxyReturn}{戻り値}
+停止位置（ミリ秒） 
+\end{DoxyReturn}
+\Hypertarget{class_audio_1_1_audio_manager_component_ad1d3f251f03a9dc0f62fc7c20da3f518}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}!Init@{Init}}
+\index{Init@{Init}!Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_audio_1_1_audio_manager_component_ad1d3f251f03a9dc0f62fc7c20da3f518} 
+void Audio\+::\+Audio\+Manager\+Component\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_audio_1_1_audio_manager_component_af8820a7a0d04c84dc585f741aa0dc8bd}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}!SetHandle@{SetHandle}}
+\index{SetHandle@{SetHandle}!Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{SetHandle()}{SetHandle()}}
+{\footnotesize\ttfamily \label{class_audio_1_1_audio_manager_component_af8820a7a0d04c84dc585f741aa0dc8bd} 
+void Audio\+::\+Audio\+Manager\+Component\+::\+Set\+Handle (\begin{DoxyParamCaption}\item[{int}]{handle}{}\end{DoxyParamCaption})}
+
+
+
+音源ハンドルを設定 
+
+
+\begin{DoxyParams}{引数}
+{\em handle} & 設定する音源ハンドル \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_audio_1_1_audio_manager_component_a1de8f45f92510d074733690d65e4da63}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}!SetSoundVolume@{SetSoundVolume}}
+\index{SetSoundVolume@{SetSoundVolume}!Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{SetSoundVolume()}{SetSoundVolume()}}
+{\footnotesize\ttfamily \label{class_audio_1_1_audio_manager_component_a1de8f45f92510d074733690d65e4da63} 
+void Audio\+::\+Audio\+Manager\+Component\+::\+Set\+Sound\+Volume (\begin{DoxyParamCaption}\item[{int}]{volume}{}\end{DoxyParamCaption})}
+
+
+
+音源の音量を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em volume} & 設定する音量 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_audio_1_1_audio_manager_component_acb2dbee76901e34cba7c96d73cd3bc5c}\index{Audio::AudioManagerComponent@{Audio::AudioManagerComponent}!Update@{Update}}
+\index{Update@{Update}!Audio::AudioManagerComponent@{Audio::AudioManagerComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_audio_1_1_audio_manager_component_acb2dbee76901e34cba7c96d73cd3bc5c} 
+void Audio\+::\+Audio\+Manager\+Component\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+
+
+\mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Component\+Base}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Audio\+Manager\+Component.\+h\end{DoxyCompactItemize}

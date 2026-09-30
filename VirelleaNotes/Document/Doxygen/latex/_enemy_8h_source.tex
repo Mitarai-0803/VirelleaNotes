@@ -1,0 +1,49 @@
+\doxysection{Enemy.\+h}
+\hypertarget{_enemy_8h_source}{}\label{_enemy_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/GameSample/Scenes/Game/Objects/Enemy.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/GameSample/Scenes/Game/Objects/Enemy.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }Sample::GameSample\ \{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ USING\_PTR(\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy}{Enemy}});}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ ObjectPtr\ TrackingNearEnemy(ObjectPtr\ obj);}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy}{Enemy}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object_a40860402e64d8008fb42329df7097cdb}{Object}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{_object_8h_a843cde70e575d7c181c3bc710b41ac13}{BP\_OBJECT\_DECL}}(\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy}{Enemy}},\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}Enemy"{}});}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{static}\ EnemyPtr\ Create(\textcolor{keyword}{const}\ float3\&\ pos,\ \textcolor{keyword}{const}\ float3\&\ front\ =\ \{0,\ 0,\ 1\});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy_a27e95f3c4a91d7ecec03ad187a7833f6}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy_a3661736ed318585fc5a0b9f8a62fa526}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy_ac7b4d911d9238dbce595ea1e74856c44}{GUI}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy_adbf988008c46a4b78ffbc43690df0d17}{OnHit}}([[maybe\_unused]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\&\ hitInfo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ @\{}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy_aaeeb938f08313d649a83f9fc3829793f}{SetSpeed}}(\textcolor{keywordtype}{float}\ s);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy_a286c5638c8f7558baa7a86ad1d4795ea}{GetSpeed}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}\&\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_enemy_aa49e0a23750712b439c1ed3328c0b6a6}{Speed}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ @\}}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{float}\ speed\_\ =\ 1.0f;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{float}\ rot\_y\_\ =\ 0.0f;}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ Sample::GameSample}}
+
+\end{DoxyCode}

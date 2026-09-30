@@ -1,0 +1,65 @@
+\doxysection{Scene\+::Scene\+Manager クラス}
+\hypertarget{class_scene_1_1_scene_manager}{}\label{class_scene_1_1_scene_manager}\index{Scene::SceneManager@{Scene::SceneManager}}
+
+
+シーンの登録と一括処理を行うマネージャ  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Manager.\+h$>$}
+
+
+
+Scene\+::Scene\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_scene_1_1_scene_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scene_1_1_scene_manager_ab54e913d2c1543e16dc69df940105644}{Add\+Scene}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_scene_1_1_scene_base}{Scene\+Base}} $>$ scene)
+\begin{DoxyCompactList}\small\item\em シーンを登録します（所有権を受け取る） \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_1_1_scene_manager_a507df912e1d6543843b7c5e4fda2edcc}\label{class_scene_1_1_scene_manager_a507df912e1d6543843b7c5e4fda2edcc} 
+void {\bfseries Init\+All} ()
+\begin{DoxyCompactList}\small\item\em 登録されている全シーンを初期化します \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_1_1_scene_manager_a2d9b14db84038d5d9a16228a71076931}\label{class_scene_1_1_scene_manager_a2d9b14db84038d5d9a16228a71076931} 
+void {\bfseries Update\+All} ()
+\begin{DoxyCompactList}\small\item\em 登録されている全シーンを更新します \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_1_1_scene_manager_a88e5169a68fedd66782748ab969693f8}\label{class_scene_1_1_scene_manager_a88e5169a68fedd66782748ab969693f8} 
+void {\bfseries Draw\+All} ()
+\begin{DoxyCompactList}\small\item\em 登録されている全シーンを描画します \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_1_1_scene_manager_a329d8e68d980f9634de33d6df12691a6}\label{class_scene_1_1_scene_manager_a329d8e68d980f9634de33d6df12691a6} 
+void {\bfseries End\+All} ()
+\begin{DoxyCompactList}\small\item\em 登録されている全シーンの終了処理を行います \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+シーンの登録と一括処理を行うマネージャ 
+
+\label{doc-func-members}
+\Hypertarget{class_scene_1_1_scene_manager_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_scene_1_1_scene_manager_ab54e913d2c1543e16dc69df940105644}\index{Scene::SceneManager@{Scene::SceneManager}!AddScene@{AddScene}}
+\index{AddScene@{AddScene}!Scene::SceneManager@{Scene::SceneManager}}
+\doxysubsubsection{\texorpdfstring{AddScene()}{AddScene()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_manager_ab54e913d2c1543e16dc69df940105644} 
+void Scene\+::\+Scene\+Manager\+::\+Add\+Scene (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_scene_1_1_scene_base}{Scene\+Base}} $>$}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+シーンを登録します（所有権を受け取る） 
+
+
+\begin{DoxyParams}{引数}
+{\em scene} & 登録するシーン（unique\+\_\+ptr） \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_scene_manager_8h}{Scene\+Manager.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,124 @@
+\doxysection{F\+:/sg mitarai/\+Reo\+Engine/src/\+Water\+Puzzle\+Config.h ファイル}
+\hypertarget{_water_puzzle_config_8h}{}\label{_water_puzzle_config_8h}\index{F:/sg mitarai/ReoEngine/src/WaterPuzzleConfig.h@{F:/sg mitarai/ReoEngine/src/WaterPuzzleConfig.h}}
+
+
+増水パズル（\+Game\+Scene）専用の調整値を集約した定数ファイル  
+
+
+{\ttfamily \#include $<$Jolt/\+Jolt.\+h$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+Water\+Puzzle\+Config.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{_water_puzzle_config_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{_water_puzzle_config_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_water_puzzle_config_1_1_platform_config}{Water\+Puzzle\+Config\+::\+Platform\+Config}}
+\begin{DoxyCompactList}\small\item\em 足場1つ分の設定（生成位置とサイズ） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_water_puzzle_config_8h_a614a2f06a20015beb1dfe8267457b4d0}\label{_water_puzzle_config_8h_a614a2f06a20015beb1dfe8267457b4d0} 
+constexpr int {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+GRID\+\_\+\+WIDTH} = 82
+\begin{DoxyCompactList}\small\item\em 水面グリッド横分割数 \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a457bc03f17328c1b1541e9ab081fe7b0}\label{_water_puzzle_config_8h_a457bc03f17328c1b1541e9ab081fe7b0} 
+constexpr int {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+GRID\+\_\+\+HEIGHT} = 82
+\begin{DoxyCompactList}\small\item\em 水面グリッド縦分割数 \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a27ce4c2acbd2304f5020d24de3d01092}\label{_water_puzzle_config_8h_a27ce4c2acbd2304f5020d24de3d01092} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+GRID\+\_\+\+SCALE} = 0.\+125f
+\begin{DoxyCompactList}\small\item\em グリッド1マスのワールドサイズ \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a071cb6b07c02d0803ec3a43b530a85f9}\label{_water_puzzle_config_8h_a071cb6b07c02d0803ec3a43b530a85f9} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+ORIGIN\+\_\+X} = -\/5.\+0f
+\begin{DoxyCompactList}\small\item\em 水面の描画原点X \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_adabf97d227c120b549d7ef46d2c32aff}\label{_water_puzzle_config_8h_adabf97d227c120b549d7ef46d2c32aff} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+ORIGIN\+\_\+Z} = -\/5.\+0f
+\begin{DoxyCompactList}\small\item\em 水面の描画原点Z \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a19b33edbe22e25374d05889b69e5be65}\label{_water_puzzle_config_8h_a19b33edbe22e25374d05889b69e5be65} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+INITIAL\+\_\+Y} = -\/1.\+0f
+\begin{DoxyCompactList}\small\item\em ゲーム開始時の水面の高さ \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a2faaf9569c99d2371c462a3e8584c0fe}\label{_water_puzzle_config_8h_a2faaf9569c99d2371c462a3e8584c0fe} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+RISE\+\_\+\+SPEED\+\_\+\+BASE} = 0.\+05f
+\begin{DoxyCompactList}\small\item\em 水位上昇の初期速度（m/秒） \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a883fe37d3a5bab67b376b504faf85133}\label{_water_puzzle_config_8h_a883fe37d3a5bab67b376b504faf85133} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+RISE\+\_\+\+ACCEL} = 0.\+0015f
+\begin{DoxyCompactList}\small\item\em 経過時間に対する上昇速度の加速度（m/秒\texorpdfstring{$^\wedge$}{\string^}2） \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a7b5e4ec082a4244702cedd6b4848f35c}\label{_water_puzzle_config_8h_a7b5e4ec082a4244702cedd6b4848f35c} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+RISE\+\_\+\+SPEED\+\_\+\+MAX} = 0.\+6f
+\begin{DoxyCompactList}\small\item\em 水位上昇速度の上限（m/秒） \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a745a12fa8254cec2a42b5f15af0e3924}\label{_water_puzzle_config_8h_a745a12fa8254cec2a42b5f15af0e3924} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+IMPULSE\+\_\+\+VELOCITY\+\_\+\+SCALE} = 0.\+4f
+\begin{DoxyCompactList}\small\item\em 衝突速度から波紋の大きさへの変換係数 \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_ab495c3d1a219335d54e676546f29098d}\label{_water_puzzle_config_8h_ab495c3d1a219335d54e676546f29098d} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+IMPULSE\+\_\+\+MIN} = 0.\+1f
+\begin{DoxyCompactList}\small\item\em 波紋の最小値 \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_aa51a0e14eaf65143840d18dcf8bc4208}\label{_water_puzzle_config_8h_aa51a0e14eaf65143840d18dcf8bc4208} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+WATER\+\_\+\+IMPULSE\+\_\+\+MAX} = 2.\+0f
+\begin{DoxyCompactList}\small\item\em 波紋の最大値 \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_ab7198f33ca2bd299dba546f46bb1eabf}\label{_water_puzzle_config_8h_ab7198f33ca2bd299dba546f46bb1eabf} 
+const JPH\+::\+RVec3 {\bfseries Water\+Puzzle\+Config\+::\+PLAYER\+\_\+\+SPAWN\+\_\+\+POS} = JPH\+::\+RVec3(-\/3.\+0f, 1.\+5f, -\/3.\+0f)
+\begin{DoxyCompactList}\small\item\em プレイヤーの初期スポーン座標 \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a77abddbaf0f9ba1fc78d18617e506d51}\label{_water_puzzle_config_8h_a77abddbaf0f9ba1fc78d18617e506d51} 
+const JPH\+::\+Vec3 {\bfseries Water\+Puzzle\+Config\+::\+PLAYER\+\_\+\+HALF\+\_\+\+EXTENT} = JPH\+::\+Vec3(0.\+4f, 0.\+4f, 0.\+4f)
+\begin{DoxyCompactList}\small\item\em プレイヤーの半サイズ \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a61f6e38c49df87ad99b7999827ac50a5}\label{_water_puzzle_config_8h_a61f6e38c49df87ad99b7999827ac50a5} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+PLAYER\+\_\+\+MOVE\+\_\+\+SPEED} = 4.\+0f
+\begin{DoxyCompactList}\small\item\em 矢印キー移動の速度（m/秒） \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a4b7d36af77ac266afa8151dbb4aaef36}\label{_water_puzzle_config_8h_a4b7d36af77ac266afa8151dbb4aaef36} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+PLAYER\+\_\+\+JUMP\+\_\+\+SPEED} = 6.\+0f
+\begin{DoxyCompactList}\small\item\em スペースキージャンプの初速（m/秒） \end{DoxyCompactList}\item 
+const std\+::array$<$ \mbox{\hyperlink{struct_water_puzzle_config_1_1_platform_config}{Platform\+Config}}, 5 $>$ \mbox{\hyperlink{_water_puzzle_config_8h_a575e4ff0659cc40dd44a3eb837c0c151}{Water\+Puzzle\+Config\+::\+PLATFORM\+\_\+\+CONFIGS}}
+\begin{DoxyCompactList}\small\item\em 足場の配置一覧（階段状に高く・小さくしていく） \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_a72bebdcefede141df40c99d3bd15aebe}\label{_water_puzzle_config_8h_a72bebdcefede141df40c99d3bd15aebe} 
+constexpr float {\bfseries Water\+Puzzle\+Config\+::\+FIXED\+\_\+\+DELTA\+\_\+\+TIME} = 1.\+0f / 60.\+0f
+\begin{DoxyCompactList}\small\item\em 1フレームあたりの経過時間（固定60fps想定） \end{DoxyCompactList}\item 
+\Hypertarget{_water_puzzle_config_8h_ab40fd0493a5b80e6836f7ca1e03a5bbe}\label{_water_puzzle_config_8h_ab40fd0493a5b80e6836f7ca1e03a5bbe} 
+constexpr int {\bfseries Water\+Puzzle\+Config\+::\+RANKING\+\_\+\+MAX\+\_\+\+ENTRIES} = 5
+\begin{DoxyCompactList}\small\item\em ランキングに保持する最大件数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+増水パズル（\+Game\+Scene）専用の調整値を集約した定数ファイル 
+
+Game\+Scene.\+cpp に直書きされていたマジックナンバーをここへ集約する。 \doxylink{_constants_game_8h}{Constants\+Game.\+h} は画面サイズなどアプリ全体の定数を扱うのに対し、 このファイルは「水パズル」という1機能に閉じた調整値のみを置く。 \begin{DoxyAuthor}{著者}
+レオ 
+\end{DoxyAuthor}
+
+
+\label{doc-var-members}
+\Hypertarget{_water_puzzle_config_8h_doc-var-members}
+\doxysubsection{変数詳解}
+\Hypertarget{_water_puzzle_config_8h_a575e4ff0659cc40dd44a3eb837c0c151}\index{WaterPuzzleConfig.h@{WaterPuzzleConfig.h}!PLATFORM\_CONFIGS@{PLATFORM\_CONFIGS}}
+\index{PLATFORM\_CONFIGS@{PLATFORM\_CONFIGS}!WaterPuzzleConfig.h@{WaterPuzzleConfig.h}}
+\doxysubsubsection{\texorpdfstring{PLATFORM\_CONFIGS}{PLATFORM\_CONFIGS}}
+{\footnotesize\ttfamily \label{_water_puzzle_config_8h_a575e4ff0659cc40dd44a3eb837c0c151} 
+const std\+::array$<$Platform\+Config, 5$>$ Water\+Puzzle\+Config\+::\+PLATFORM\+\_\+\+CONFIGS\hspace{0.3cm}{\ttfamily [inline]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{\{}
+\DoxyCodeLine{\ \ \ \ \{\ JPH::RVec3(-\/3.0f,\ 0.5f,\ -\/3.0f),\ JPH::Vec3(1.0f,\ 0.5f,\ 1.0f)\ \},\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{\ JPH::RVec3(\ 0.0f,\ 1.5f,\ -\/1.0f),\ JPH::Vec3(0.8f,\ 0.5f,\ 0.8f)\ \},\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{\ JPH::RVec3(\ 3.0f,\ 2.5f,\ \ 1.0f),\ JPH::Vec3(0.8f,\ 0.5f,\ 0.8f)\ \},\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{\ JPH::RVec3(\ 0.0f,\ 3.5f,\ \ 3.0f),\ JPH::Vec3(0.7f,\ 0.5f,\ 0.7f)\ \},\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{\ JPH::RVec3(-\/3.0f,\ 4.5f,\ \ 0.0f),\ JPH::Vec3(0.6f,\ 0.5f,\ 0.6f)\ \},\ \ \ \ }
+\DoxyCodeLine{\}\}}
+
+\end{DoxyCode}
+
+
+足場の配置一覧（階段状に高く・小さくしていく） 
+
+水位が上がるにつれ低い足場から順に水没していく構成になっている 

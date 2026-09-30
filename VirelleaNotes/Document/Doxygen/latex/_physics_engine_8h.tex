@@ -1,0 +1,42 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Physics/\+Physics\+Engine.h ファイル}
+\hypertarget{_physics_engine_8h}{}\label{_physics_engine_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsEngine.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsEngine.h}}
+
+
+物理シミュレーション  
+
+
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structphysics_1_1_ray_cast_result}{physics\+::\+Ray\+Cast\+Result}}
+\begin{DoxyCompactList}\small\item\em レイキャストの結果 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classphysics_1_1_engine}{physics\+::\+Engine}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{Indent}\textbf{ 生成}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_physics_engine_8h_ab56dd186fdba2f715f4f076a4e71486f}\label{_physics_engine_8h_ab56dd186fdba2f715f4f076a4e71486f} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classphysics_1_1_engine}{physics\+::\+Engine}} $>$ {\bfseries physics\+::create\+Physics} ()
+\item 
+\Hypertarget{_physics_engine_8h_a7b2897ae22f415bf7f0bcc8079bf90da}\label{_physics_engine_8h_a7b2897ae22f415bf7f0bcc8079bf90da} 
+JPH\+::\+Vec3 {\bfseries physics\+::cast\+JPH} (const float3 \&v)
+\item 
+\Hypertarget{_physics_engine_8h_ac54bad230e864c4807b2e96d69e9bca1}\label{_physics_engine_8h_ac54bad230e864c4807b2e96d69e9bca1} 
+float3 {\bfseries physics\+::cast\+JPH} (const JPH\+::\+Vec3 \&v)
+\item 
+\Hypertarget{_physics_engine_8h_a8e71141ecb5eb31efdb06c5a9d82240a}\label{_physics_engine_8h_a8e71141ecb5eb31efdb06c5a9d82240a} 
+JPH\+::\+Quat {\bfseries physics\+::cast\+JPH} (const quaternion \&q)
+\item 
+\Hypertarget{_physics_engine_8h_afa2dba9557c424fe00d0c87185fd88e1}\label{_physics_engine_8h_afa2dba9557c424fe00d0c87185fd88e1} 
+quaternion {\bfseries physics\+::cast\+JPH} (const JPH\+::\+Quat \&v)
+\item 
+\Hypertarget{_physics_engine_8h_a44b780f4639ede00d44cb37c9a039c22}\label{_physics_engine_8h_a44b780f4639ede00d44cb37c9a039c22} 
+\mbox{\hyperlink{classmatrix}{matrix}} {\bfseries physics\+::cast\+JPH} (const JPH\+::\+Mat44 \&mat44)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+物理シミュレーション 
+

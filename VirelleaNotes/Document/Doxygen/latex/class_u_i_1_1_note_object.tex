@@ -1,0 +1,178 @@
+\doxysection{UI\+::Note\+Object クラス}
+\hypertarget{class_u_i_1_1_note_object}{}\label{class_u_i_1_1_note_object}\index{UI::NoteObject@{UI::NoteObject}}
+UI\+::Note\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_note_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_note_object_af4e7a1cc49bdbc77cb78db572e7cabf5}\label{class_u_i_1_1_note_object_af4e7a1cc49bdbc77cb78db572e7cabf5} 
+{\bfseries Note\+Object} (int note\+\_\+type, float x, float y, int time\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_note_object_afda1e996f0f09ad8b28d5edf0c1a46ba}{Set\+Position}} (float x, float y)
+\begin{DoxyCompactList}\small\item\em ノーツの位置をセット \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_note_object_ab3e149d4a79b042d0a0f58a7fede2160}{On\+Draw}} (float scroll, float zoom) override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_u_i_1_1_note_object_a8487a172939b3947cb550a59a7b66bf4}{Get\+PosX}} () const
+\begin{DoxyCompactList}\small\item\em ノーツの\+X座標を取得 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_u_i_1_1_note_object_ac072bdd3e473de7082e97861d1e949c8}{Get\+PosY}} () const
+\begin{DoxyCompactList}\small\item\em ノーツの\+Y座標を取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_u_i_1_1_note_object_a8fa4c32a7bddf6208c503b81771c5ef8}{Get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em ノーツのライン番号を取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_u_i_1_1_note_object_a8f5efbcc020256d40c84a706e2039966}{Get\+Time\+Ms}} () const
+\begin{DoxyCompactList}\small\item\em ノーツの生成秒数を取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_u_i_1_1_note_object_a2c961e0bd878fd2bb786685f9db111c5}{Get\+Line\+Index}} () const
+\begin{DoxyCompactList}\small\item\em ノーツのライン番号を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_object_aa3bb1b264bcd9b1762365b56892f9e1e}{On\+Init}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a1ac2a73147f469ff7371971560a4dd0a}{On\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a622809423da053a4ce995e270547d06c}{On\+Draw}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71}{On\+End}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_note_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_note_object_a2c961e0bd878fd2bb786685f9db111c5}\index{UI::NoteObject@{UI::NoteObject}!GetLineIndex@{GetLineIndex}}
+\index{GetLineIndex@{GetLineIndex}!UI::NoteObject@{UI::NoteObject}}
+\doxysubsubsection{\texorpdfstring{GetLineIndex()}{GetLineIndex()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_note_object_a2c961e0bd878fd2bb786685f9db111c5} 
+int UI\+::\+Note\+Object\+::\+Get\+Line\+Index (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+ノーツのライン番号を取得 
+
+\begin{DoxyReturn}{戻り値}
+ライン番号 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_note_object_a8487a172939b3947cb550a59a7b66bf4}\index{UI::NoteObject@{UI::NoteObject}!GetPosX@{GetPosX}}
+\index{GetPosX@{GetPosX}!UI::NoteObject@{UI::NoteObject}}
+\doxysubsubsection{\texorpdfstring{GetPosX()}{GetPosX()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_note_object_a8487a172939b3947cb550a59a7b66bf4} 
+float UI\+::\+Note\+Object\+::\+Get\+PosX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+ノーツの\+X座標を取得 
+
+\begin{DoxyReturn}{戻り値}
+X座標 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_note_object_ac072bdd3e473de7082e97861d1e949c8}\index{UI::NoteObject@{UI::NoteObject}!GetPosY@{GetPosY}}
+\index{GetPosY@{GetPosY}!UI::NoteObject@{UI::NoteObject}}
+\doxysubsubsection{\texorpdfstring{GetPosY()}{GetPosY()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_note_object_ac072bdd3e473de7082e97861d1e949c8} 
+float UI\+::\+Note\+Object\+::\+Get\+PosY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+ノーツの\+Y座標を取得 
+
+\begin{DoxyReturn}{戻り値}
+Y座標 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_note_object_a8f5efbcc020256d40c84a706e2039966}\index{UI::NoteObject@{UI::NoteObject}!GetTimeMs@{GetTimeMs}}
+\index{GetTimeMs@{GetTimeMs}!UI::NoteObject@{UI::NoteObject}}
+\doxysubsubsection{\texorpdfstring{GetTimeMs()}{GetTimeMs()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_note_object_a8f5efbcc020256d40c84a706e2039966} 
+int UI\+::\+Note\+Object\+::\+Get\+Time\+Ms (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+ノーツの生成秒数を取得 
+
+\begin{DoxyReturn}{戻り値}
+生成秒数 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_note_object_a8fa4c32a7bddf6208c503b81771c5ef8}\index{UI::NoteObject@{UI::NoteObject}!GetType@{GetType}}
+\index{GetType@{GetType}!UI::NoteObject@{UI::NoteObject}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_note_object_a8fa4c32a7bddf6208c503b81771c5ef8} 
+int UI\+::\+Note\+Object\+::\+Get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+ノーツのライン番号を取得 
+
+\begin{DoxyReturn}{戻り値}
+ライン番号 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_note_object_ab3e149d4a79b042d0a0f58a7fede2160}\index{UI::NoteObject@{UI::NoteObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!UI::NoteObject@{UI::NoteObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_note_object_ab3e149d4a79b042d0a0f58a7fede2160} 
+void UI\+::\+Note\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}\item[{float}]{scroll}{, }\item[{float}]{zoom}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+\begin{DoxyParams}{引数}
+{\em scroll} & スクロール量 \\
+\hline
+{\em zoom} & ズーム量 \\
+\hline
+\end{DoxyParams}
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_note_object_afda1e996f0f09ad8b28d5edf0c1a46ba}\index{UI::NoteObject@{UI::NoteObject}!SetPosition@{SetPosition}}
+\index{SetPosition@{SetPosition}!UI::NoteObject@{UI::NoteObject}}
+\doxysubsubsection{\texorpdfstring{SetPosition()}{SetPosition()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_note_object_afda1e996f0f09ad8b28d5edf0c1a46ba} 
+void UI\+::\+Note\+Object\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{float}]{x}{, }\item[{float}]{y}{}\end{DoxyParamCaption})}
+
+
+
+ノーツの位置をセット 
+
+
+\begin{DoxyParams}{引数}
+{\em x} & X座標 \\
+\hline
+{\em y} & Y座標 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Note\+Object.\+h\end{DoxyCompactItemize}

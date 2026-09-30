@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: physics::Engine クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classphysics_1_1_engine.html','','classphysics_1_1_engine-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">physics::Engine クラス<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9de3345e6bce21c52b45b47d7f9a60c0" id="r_a9de3345e6bce21c52b45b47d7f9a60c0"><td class="memItemLeft" align="right" valign="top"><a id="a9de3345e6bce21c52b45b47d7f9a60c0" name="a9de3345e6bce21c52b45b47d7f9a60c0"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Engine</b> ()=default</td></tr>
+<tr class="memdesc:a9de3345e6bce21c52b45b47d7f9a60c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:a96a24878ea8a67f35ebfef84e804f1cf" id="r_a96a24878ea8a67f35ebfef84e804f1cf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a96a24878ea8a67f35ebfef84e804f1cf">update</a> (<a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> dt)=0</td></tr>
+<tr class="memitem:ad87d160a08543e440af348a00be309cd" id="r_ad87d160a08543e440af348a00be309cd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad87d160a08543e440af348a00be309cd">castRay</a> (const <a class="el" href="class_ray.html">Ray</a> &amp;ray, <a class="el" href="structphysics_1_1_ray_cast_result.html">RayCastResult</a> &amp;result)=0</td></tr>
+<tr class="memitem:abbc4494b9eca276c577867230d10b304" id="r_abbc4494b9eca276c577867230d10b304"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc4494b9eca276c577867230d10b304">optimize</a> ()=0</td></tr>
+<tr class="memitem:a4ed415ef1b0a43a39bc75eab7d9e83b2" id="r_a4ed415ef1b0a43a39bc75eab7d9e83b2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ed415ef1b0a43a39bc75eab7d9e83b2">setLayerAlias</a> (const std::pair&lt; <a class="el" href="_physics_layer_8h.html#a8f3495d58817a58553d47f58730267ba">physics::ObjectLayers</a>, <a class="el" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> &gt; *layers, size_t layerCount)=0</td></tr>
+<tr class="memitem:ad67bc7551d7da8b923967e983260af0d" id="r_ad67bc7551d7da8b923967e983260af0d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad67bc7551d7da8b923967e983260af0d">overrideLayerCollide</a> (std::function&lt; bool(<a class="el" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>, <a class="el" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>)&gt; callback)=0</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr id="pub-static-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">JoltPhysics用のネイティブ情報取得インターフェイス</div></td></tr>
+<tr class="memitem:a3306f98b56010abde22227702730f61a" id="r_a3306f98b56010abde22227702730f61a"><td class="memItemLeft" align="right" valign="top"><a id="a3306f98b56010abde22227702730f61a" name="a3306f98b56010abde22227702730f61a"></a>
+static JPH::PhysicsSystem *&#160;</td><td class="memItemRight" valign="bottom"><b>physicsSystem</b> ()</td></tr>
+<tr class="memdesc:a3306f98b56010abde22227702730f61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">[JPH] Physicsシステムを取得 <br /></td></tr>
+<tr class="memitem:a4241a537ffe1b9642f134bb88f65c1af" id="r_a4241a537ffe1b9642f134bb88f65c1af"><td class="memItemLeft" align="right" valign="top"><a id="a4241a537ffe1b9642f134bb88f65c1af" name="a4241a537ffe1b9642f134bb88f65c1af"></a>
+static JPH::BodyInterface *&#160;</td><td class="memItemRight" valign="bottom"><b>bodyInterface</b> ()</td></tr>
+<tr class="memdesc:a4241a537ffe1b9642f134bb88f65c1af"><td class="mdescLeft">&#160;</td><td class="mdescRight">[JPH] ボディインターフェイスを取得 <br /></td></tr>
+<tr class="memitem:abd023769b83f598a83dfab2d116443ea" id="r_abd023769b83f598a83dfab2d116443ea"><td class="memItemLeft" align="right" valign="top"><a id="abd023769b83f598a83dfab2d116443ea" name="abd023769b83f598a83dfab2d116443ea"></a>
+static JPH::TempAllocator *&#160;</td><td class="memItemRight" valign="bottom"><b>tempAllocator</b> ()</td></tr>
+<tr class="memdesc:abd023769b83f598a83dfab2d116443ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">[JPH] テンポラリアロケーターを取得 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a08b42b6b3fc88a1a8afd47efde3823cb" id="r_a08b42b6b3fc88a1a8afd47efde3823cb"><td class="memItemLeft" align="right" valign="top"><a id="a08b42b6b3fc88a1a8afd47efde3823cb" name="a08b42b6b3fc88a1a8afd47efde3823cb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Engine</b> ()=default</td></tr>
+<tr class="memdesc:a08b42b6b3fc88a1a8afd47efde3823cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+参照</h2></td></tr>
+<tr class="memitem:af553ad1f2213303c889854b95e3b2a75" id="r_af553ad1f2213303c889854b95e3b2a75"><td class="memItemLeft" align="right" valign="top"><a id="af553ad1f2213303c889854b95e3b2a75" name="af553ad1f2213303c889854b95e3b2a75"></a>
+virtual float3&#160;</td><td class="memItemRight" valign="bottom"><b>gravity</b> () const =0</td></tr>
+<tr class="memdesc:af553ad1f2213303c889854b95e3b2a75"><td class="mdescLeft">&#160;</td><td class="mdescRight">重力を取得 <br /></td></tr>
+<tr class="memitem:a7b10220f9e53630cb19fc6da12cf0317" id="r_a7b10220f9e53630cb19fc6da12cf0317"><td class="memItemLeft" align="right" valign="top"><a id="a7b10220f9e53630cb19fc6da12cf0317" name="a7b10220f9e53630cb19fc6da12cf0317"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> () const =0</td></tr>
+<tr class="memdesc:a7b10220f9e53630cb19fc6da12cf0317"><td class="mdescLeft">&#160;</td><td class="mdescRight">正常に初期化されているかどうかを取得 <br /></td></tr>
+<tr class="memitem:a78aea17182a7ed3a7082f5660a491cfb" id="r_a78aea17182a7ed3a7082f5660a491cfb"><td class="memItemLeft" align="right" valign="top"><a id="a78aea17182a7ed3a7082f5660a491cfb" name="a78aea17182a7ed3a7082f5660a491cfb"></a>
+static <a class="el" href="classphysics_1_1_engine.html">Engine</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>instance</b> ()</td></tr>
+<tr class="memdesc:a78aea17182a7ed3a7082f5660a491cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Physicsインスタンスを取得 <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ad87d160a08543e440af348a00be309cd" name="ad87d160a08543e440af348a00be309cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87d160a08543e440af348a00be309cd">&#9670;&#160;</a></span>castRay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool physics::Engine::castRay </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_ray.html">Ray</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ray</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structphysics_1_1_ray_cast_result.html">RayCastResult</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ray</td><td>シーンに飛ばすレイ </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>衝突結果 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>衝突あり。resultに結果が格納されています </td></tr>
+    <tr><td class="paramname">false</td><td>衝突なし。結果は無効 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abbc4494b9eca276c577867230d10b304" name="abbc4494b9eca276c577867230d10b304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc4494b9eca276c577867230d10b304">&#9670;&#160;</a></span>optimize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::Engine::optimize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>シーン最適化を実行</p>
+<p>これによって衝突検出のパフォーマンスが向上します </p><dl class="section attention"><dt>注意</dt><dd>かなり重い処理のため、毎フレームまたは新しいレベルセクションのストリーミング時などには </dd>
+<dd>
+絶対に呼び出さない方がよいでしょう。 </dd></dl>
+
+</div>
+</div>
+<a id="ad67bc7551d7da8b923967e983260af0d" name="ad67bc7551d7da8b923967e983260af0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad67bc7551d7da8b923967e983260af0d">&#9670;&#160;</a></span>overrideLayerCollide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::Engine::overrideLayerCollide </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; bool(<a class="el" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>, <a class="el" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>)&gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトレイヤー同士が衝突するかどうかをカスタマイズ コールバック関数の [第1引数] 対象のレイヤー [第2引数] 相手のレイヤー [戻り値] true:衝突する false:衝突しない </p>
+
+</div>
+</div>
+<a id="a4ed415ef1b0a43a39bc75eab7d9e83b2" name="a4ed415ef1b0a43a39bc75eab7d9e83b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ed415ef1b0a43a39bc75eab7d9e83b2">&#9670;&#160;</a></span>setLayerAlias()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::Engine::setLayerAlias </td>
+          <td>(</td>
+          <td class="paramtype">const std::pair&lt; <a class="el" href="_physics_layer_8h.html#a8f3495d58817a58553d47f58730267ba">physics::ObjectLayers</a>, <a class="el" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> &gt; *</td>          <td class="paramname"><span class="paramname"><em>layers</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>layerCount</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>オブジェクトレイヤーをカスタム設定 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">layers</td><td>自前レイヤーとphysics::ObjectLayersが対応するペアの配列先頭(nullptrで解除) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">layerCount</td><td>配列数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a96a24878ea8a67f35ebfef84e804f1cf" name="a96a24878ea8a67f35ebfef84e804f1cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96a24878ea8a67f35ebfef84e804f1cf">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void physics::Engine::update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>更新 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>経過時間⊿t </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/<a class="el" href="_physics_engine_8h_source.html">PhysicsEngine.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>physics</b></li><li class="navelem"><a href="classphysics_1_1_engine.html">Engine</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

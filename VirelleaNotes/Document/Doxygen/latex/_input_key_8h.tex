@@ -1,0 +1,157 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Input/\+Input\+Key.h ファイル}
+\hypertarget{_input_key_8h}{}\label{_input_key_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Input/InputKey.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Input/InputKey.h}}
+
+
+キー入力管理  
+
+
+\doxysubsubsection*{関数}
+\begin{Indent}\textbf{ システム関数}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_input_key_8h_aac4788b27f2c02e6c0621746ba2de5ff}\label{_input_key_8h_aac4788b27f2c02e6c0621746ba2de5ff} 
+void {\bfseries Input\+::\+Input\+Key\+Init} ()
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+\Hypertarget{_input_key_8h_a02afa7425951cf2b68c38127a534b043}\label{_input_key_8h_a02afa7425951cf2b68c38127a534b043} 
+int {\bfseries Input\+::\+Input\+Key\+Update} ()
+\begin{DoxyCompactList}\small\item\em 更新 \end{DoxyCompactList}\item 
+\Hypertarget{_input_key_8h_abc9f1c26c3e8d9d5df328cf9394cb4d4}\label{_input_key_8h_abc9f1c26c3e8d9d5df328cf9394cb4d4} 
+void {\bfseries Input\+::\+Input\+Key\+Exit} ()
+\begin{DoxyCompactList}\small\item\em 終了 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 入力関連関数}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_input_key_8h_ad33d344cca5fcd9a5cac96787c844ab4}{Input\+::\+Is\+Key\+On}} (int key\+ID)
+\item 
+bool \mbox{\hyperlink{_input_key_8h_a09ec2b450f028d0eaf1f9c63161cd199}{Input\+::\+Is\+Key\+Release}} (int key\+ID)
+\item 
+bool \mbox{\hyperlink{_input_key_8h_a074707e776cf5b36178750f2ed9bd1e7}{Input\+::\+Is\+Key\+Repeat}} (int key\+ID, \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} frame=2)
+\item 
+bool \mbox{\hyperlink{_input_key_8h_a305ec74ae382e8fea72de7fdf95f0700}{Input\+::\+Is\+Key}} (int key\+ID)
+\item 
+bool \mbox{\hyperlink{_input_key_8h_a6ad3803459c23f32a3e0050d0b978882}{Input\+::\+Is\+Key\+Down}} (int key\+ID)
+\item 
+bool \mbox{\hyperlink{_input_key_8h_a85cfc9e42b142b312bb853e0802043ea}{Input\+::\+Is\+Key\+Up}} (int key\+ID)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+キー入力管理 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_input_key_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_input_key_8h_a305ec74ae382e8fea72de7fdf95f0700}\index{InputKey.h@{InputKey.h}!IsKey@{IsKey}}
+\index{IsKey@{IsKey}!InputKey.h@{InputKey.h}}
+\doxysubsubsection{\texorpdfstring{IsKey()}{IsKey()}}
+{\footnotesize\ttfamily \label{_input_key_8h_a305ec74ae382e8fea72de7fdf95f0700} 
+bool Input\+::\+Is\+Key (\begin{DoxyParamCaption}\item[{int}]{key\+ID}{}\end{DoxyParamCaption})}
+
+指定キーの長押し検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em key\+ID} & キー種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたキーが押しされている \\
+\hline
+{\em false} & 引数に指定されたキーが押されていない \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_key_8h_a6ad3803459c23f32a3e0050d0b978882}\index{InputKey.h@{InputKey.h}!IsKeyDown@{IsKeyDown}}
+\index{IsKeyDown@{IsKeyDown}!InputKey.h@{InputKey.h}}
+\doxysubsubsection{\texorpdfstring{IsKeyDown()}{IsKeyDown()}}
+{\footnotesize\ttfamily \label{_input_key_8h_a6ad3803459c23f32a3e0050d0b978882} 
+bool Input\+::\+Is\+Key\+Down (\begin{DoxyParamCaption}\item[{int}]{key\+ID}{}\end{DoxyParamCaption})}
+
+指定キーの1回だけ押下検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em key\+ID} & キー種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたキーが押された \\
+\hline
+{\em false} & 引数に指定されたキーが押されていない \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_key_8h_ad33d344cca5fcd9a5cac96787c844ab4}\index{InputKey.h@{InputKey.h}!IsKeyOn@{IsKeyOn}}
+\index{IsKeyOn@{IsKeyOn}!InputKey.h@{InputKey.h}}
+\doxysubsubsection{\texorpdfstring{IsKeyOn()}{IsKeyOn()}}
+{\footnotesize\ttfamily \label{_input_key_8h_ad33d344cca5fcd9a5cac96787c844ab4} 
+bool Input\+::\+Is\+Key\+On (\begin{DoxyParamCaption}\item[{int}]{key\+ID}{}\end{DoxyParamCaption})}
+
+指定キーの1回だけ押下検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em key\+ID} & キー種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたキーが押された \\
+\hline
+{\em false} & 引数に指定されたキーが押されていない \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_key_8h_a09ec2b450f028d0eaf1f9c63161cd199}\index{InputKey.h@{InputKey.h}!IsKeyRelease@{IsKeyRelease}}
+\index{IsKeyRelease@{IsKeyRelease}!InputKey.h@{InputKey.h}}
+\doxysubsubsection{\texorpdfstring{IsKeyRelease()}{IsKeyRelease()}}
+{\footnotesize\ttfamily \label{_input_key_8h_a09ec2b450f028d0eaf1f9c63161cd199} 
+bool Input\+::\+Is\+Key\+Release (\begin{DoxyParamCaption}\item[{int}]{key\+ID}{}\end{DoxyParamCaption})}
+
+指定キーが押されていない検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em key\+ID} & キー種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたキーが離されている \\
+\hline
+{\em false} & 引数に指定されたキーが押されている \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_key_8h_a074707e776cf5b36178750f2ed9bd1e7}\index{InputKey.h@{InputKey.h}!IsKeyRepeat@{IsKeyRepeat}}
+\index{IsKeyRepeat@{IsKeyRepeat}!InputKey.h@{InputKey.h}}
+\doxysubsubsection{\texorpdfstring{IsKeyRepeat()}{IsKeyRepeat()}}
+{\footnotesize\ttfamily \label{_input_key_8h_a074707e776cf5b36178750f2ed9bd1e7} 
+bool Input\+::\+Is\+Key\+Repeat (\begin{DoxyParamCaption}\item[{int}]{key\+ID}{, }\item[{\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}]{frame}{ = {\ttfamily 2}}\end{DoxyParamCaption})}
+
+指定キーの長押し検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em key\+ID} & キー種別 \\
+\hline
+\mbox{\texttt{in}}  & {\em frame} & 指定フレーム以上押されている\mbox{[}Default=2\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたキーが長押し（指定フレーム以上）されている \\
+\hline
+{\em false} & 引数に指定されたキーが押されていない（押されているフレーム数が指定数未満） \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_key_8h_a85cfc9e42b142b312bb853e0802043ea}\index{InputKey.h@{InputKey.h}!IsKeyUp@{IsKeyUp}}
+\index{IsKeyUp@{IsKeyUp}!InputKey.h@{InputKey.h}}
+\doxysubsubsection{\texorpdfstring{IsKeyUp()}{IsKeyUp()}}
+{\footnotesize\ttfamily \label{_input_key_8h_a85cfc9e42b142b312bb853e0802043ea} 
+bool Input\+::\+Is\+Key\+Up (\begin{DoxyParamCaption}\item[{int}]{key\+ID}{}\end{DoxyParamCaption})}
+
+指定キーが押されていない検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em key\+ID} & キー種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたキーが離されている \\
+\hline
+{\em false} & 引数に指定されたキーが押されている \\
+\hline
+\end{DoxyRetVals}

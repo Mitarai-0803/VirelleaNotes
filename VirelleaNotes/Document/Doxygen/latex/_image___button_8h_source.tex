@@ -1,0 +1,53 @@
+\doxysection{Image\+\_\+\+Button.\+h}
+\hypertarget{_image___button_8h_source}{}\label{_image___button_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Image\_Button.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Image\_Button.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Struct.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ 定数}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{enum}\ }
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \ \ \ \ MODE\_OFF,\ \ \ \textcolor{comment}{//押されていない}}
+\DoxyCodeLine{00009\ \ \ \ \ MODE\_ON,\ \ \ \ \textcolor{comment}{//押されている}}
+\DoxyCodeLine{00010\ \};}
+\DoxyCodeLine{00011\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ 関数}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ Image\_ButtonInit\ \ ();}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ Image\_ButtonUpdate();}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ Image\_ButtonRender();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ 画像ボタンclass}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ 画像を読み込みボタンとして使えるようにするクラス}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_image___botton}{Image\_Botton}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//メンバ関数\ }}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ Init(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ path,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y);\textcolor{comment}{//初期化処理}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();\textcolor{comment}{//更新処理}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ Render();\textcolor{comment}{//描画処理}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//デストラクタ}}
+\DoxyCodeLine{00031\ \ \ \ \ ‾Image\_Botton();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//値を返すメンバ関数}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ Push\_Mode();\textcolor{comment}{//クリックの状態}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ \ W();\ \ \ \ \ \ \textcolor{comment}{//幅}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ \ H();\ \ \ \ \ \ \textcolor{comment}{//高さ}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//メンバ変数}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ image\_\ \ \ \ \ =\ 0;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//画像}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ scale\_\ \ \ \ \ =\ 0;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//拡大率}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ push\_mode\_\ =\ MODE\_OFF;\ \ \textcolor{comment}{//ボタンが押されているか}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ drawmode\_\ \ =\ \textcolor{keyword}{true};\ \ \ \ \ \ \textcolor{comment}{//描画するか}}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\ size\_\ \ \ \ \ \ =\ \{\ 0.0f\ \};\ \ \textcolor{comment}{//幅と高さ}}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\ pos\_\ \ \ \ \ \ \ =\ \{\ 0.0f\ \};\ \ \textcolor{comment}{//座標}}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+
+\end{DoxyCode}

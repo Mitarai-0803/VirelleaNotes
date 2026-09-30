@@ -1,0 +1,23 @@
+[System]
+
+; タイトル名
+Title=BaseProject2025
+
+; エディタ起動
+GUIEditor=True
+ShowGrid=True
+ShowFPS=True
+ShowMouse=True
+
+; フルスクリーン起動
+FullScreen=False
+
+; スクリーンサイズ
+ScreenSize = {1280, 720}
+
+
+; シーン
+[Scene]
+
+; 初期に読み込むシーン
+Start = "Tutorial_01"

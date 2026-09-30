@@ -1,0 +1,123 @@
+\doxysection{physics\+::Engine クラス}
+\hypertarget{classphysics_1_1_engine}{}\label{classphysics_1_1_engine}\index{physics::Engine@{physics::Engine}}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classphysics_1_1_engine_a9de3345e6bce21c52b45b47d7f9a60c0}\label{classphysics_1_1_engine_a9de3345e6bce21c52b45b47d7f9a60c0} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Engine} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_engine_a96a24878ea8a67f35ebfef84e804f1cf}{update}} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} dt)=0
+\item 
+virtual bool \mbox{\hyperlink{classphysics_1_1_engine_ad87d160a08543e440af348a00be309cd}{cast\+Ray}} (const \mbox{\hyperlink{class_ray}{Ray}} \&ray, \mbox{\hyperlink{structphysics_1_1_ray_cast_result}{Ray\+Cast\+Result}} \&result)=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_engine_abbc4494b9eca276c577867230d10b304}{optimize}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_engine_a4ed415ef1b0a43a39bc75eab7d9e83b2}{set\+Layer\+Alias}} (const std\+::pair$<$ \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267ba}{physics\+::\+Object\+Layers}}, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} $>$ \texorpdfstring{$\ast$}{*}layers, size\+\_\+t layer\+Count)=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_engine_ad67bc7551d7da8b923967e983260af0d}{override\+Layer\+Collide}} (std\+::function$<$ bool(\mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}})$>$ callback)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{Indent}\textbf{ Jolt\+Physics用のネイティブ情報取得インターフェイス}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classphysics_1_1_engine_a3306f98b56010abde22227702730f61a}\label{classphysics_1_1_engine_a3306f98b56010abde22227702730f61a} 
+static JPH\+::\+Physics\+System \texorpdfstring{$\ast$}{*} {\bfseries physics\+System} ()
+\begin{DoxyCompactList}\small\item\em \mbox{[}JPH\mbox{]} Physicsシステムを取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_engine_a4241a537ffe1b9642f134bb88f65c1af}\label{classphysics_1_1_engine_a4241a537ffe1b9642f134bb88f65c1af} 
+static JPH\+::\+Body\+Interface \texorpdfstring{$\ast$}{*} {\bfseries body\+Interface} ()
+\begin{DoxyCompactList}\small\item\em \mbox{[}JPH\mbox{]} ボディインターフェイスを取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_engine_abd023769b83f598a83dfab2d116443ea}\label{classphysics_1_1_engine_abd023769b83f598a83dfab2d116443ea} 
+static JPH\+::\+Temp\+Allocator \texorpdfstring{$\ast$}{*} {\bfseries temp\+Allocator} ()
+\begin{DoxyCompactList}\small\item\em \mbox{[}JPH\mbox{]} テンポラリアロケーターを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classphysics_1_1_engine_a08b42b6b3fc88a1a8afd47efde3823cb}\label{classphysics_1_1_engine_a08b42b6b3fc88a1a8afd47efde3823cb} 
+{\bfseries Engine} ()=default
+\begin{DoxyCompactList}\small\item\em デフォルトコンストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{参照}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classphysics_1_1_engine_af553ad1f2213303c889854b95e3b2a75}\label{classphysics_1_1_engine_af553ad1f2213303c889854b95e3b2a75} 
+virtual float3 {\bfseries gravity} () const =0
+\begin{DoxyCompactList}\small\item\em 重力を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_engine_a7b10220f9e53630cb19fc6da12cf0317}\label{classphysics_1_1_engine_a7b10220f9e53630cb19fc6da12cf0317} 
+virtual bool {\bfseries is\+Valid} () const =0
+\begin{DoxyCompactList}\small\item\em 正常に初期化されているかどうかを取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_engine_a78aea17182a7ed3a7082f5660a491cfb}\label{classphysics_1_1_engine_a78aea17182a7ed3a7082f5660a491cfb} 
+static \mbox{\hyperlink{classphysics_1_1_engine}{Engine}} \texorpdfstring{$\ast$}{*} {\bfseries instance} ()
+\begin{DoxyCompactList}\small\item\em Physicsインスタンスを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{classphysics_1_1_engine_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classphysics_1_1_engine_ad87d160a08543e440af348a00be309cd}\index{physics::Engine@{physics::Engine}!castRay@{castRay}}
+\index{castRay@{castRay}!physics::Engine@{physics::Engine}}
+\doxysubsubsection{\texorpdfstring{castRay()}{castRay()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_engine_ad87d160a08543e440af348a00be309cd} 
+virtual bool physics\+::\+Engine\+::cast\+Ray (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray}{, }\item[{\mbox{\hyperlink{structphysics_1_1_ray_cast_result}{Ray\+Cast\+Result}} \&}]{result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em ray} & シーンに飛ばすレイ \\
+\hline
+\mbox{\texttt{out}}  & {\em result} & 衝突結果 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 衝突あり。resultに結果が格納されています \\
+\hline
+{\em false} & 衝突なし。結果は無効 \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{classphysics_1_1_engine_abbc4494b9eca276c577867230d10b304}\index{physics::Engine@{physics::Engine}!optimize@{optimize}}
+\index{optimize@{optimize}!physics::Engine@{physics::Engine}}
+\doxysubsubsection{\texorpdfstring{optimize()}{optimize()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_engine_abbc4494b9eca276c577867230d10b304} 
+virtual void physics\+::\+Engine\+::optimize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+シーン最適化を実行
+
+これによって衝突検出のパフォーマンスが向上します \begin{DoxyAttention}{注意}
+かなり重い処理のため、毎フレームまたは新しいレベルセクションのストリーミング時などには 
+
+絶対に呼び出さない方がよいでしょう。 
+\end{DoxyAttention}
+\Hypertarget{classphysics_1_1_engine_ad67bc7551d7da8b923967e983260af0d}\index{physics::Engine@{physics::Engine}!overrideLayerCollide@{overrideLayerCollide}}
+\index{overrideLayerCollide@{overrideLayerCollide}!physics::Engine@{physics::Engine}}
+\doxysubsubsection{\texorpdfstring{overrideLayerCollide()}{overrideLayerCollide()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_engine_ad67bc7551d7da8b923967e983260af0d} 
+virtual void physics\+::\+Engine\+::override\+Layer\+Collide (\begin{DoxyParamCaption}\item[{std\+::function$<$ bool(\mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}})$>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+オブジェクトレイヤー同士が衝突するかどうかをカスタマイズ コールバック関数の \mbox{[}第1引数\mbox{]} 対象のレイヤー \mbox{[}第2引数\mbox{]} 相手のレイヤー \mbox{[}戻り値\mbox{]} true\+:衝突する false\+:衝突しない \Hypertarget{classphysics_1_1_engine_a4ed415ef1b0a43a39bc75eab7d9e83b2}\index{physics::Engine@{physics::Engine}!setLayerAlias@{setLayerAlias}}
+\index{setLayerAlias@{setLayerAlias}!physics::Engine@{physics::Engine}}
+\doxysubsubsection{\texorpdfstring{setLayerAlias()}{setLayerAlias()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_engine_a4ed415ef1b0a43a39bc75eab7d9e83b2} 
+virtual void physics\+::\+Engine\+::set\+Layer\+Alias (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267ba}{physics\+::\+Object\+Layers}}, \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} $>$ \texorpdfstring{$\ast$}{*}}]{layers}{, }\item[{size\+\_\+t}]{layer\+Count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+オブジェクトレイヤーをカスタム設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em layers} & 自前レイヤーとphysics\+::\+Object\+Layersが対応するペアの配列先頭(nullptrで解除) \\
+\hline
+\mbox{\texttt{in}}  & {\em layer\+Count} & 配列数 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_engine_a96a24878ea8a67f35ebfef84e804f1cf}\index{physics::Engine@{physics::Engine}!update@{update}}
+\index{update@{update}!physics::Engine@{physics::Engine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_engine_a96a24878ea8a67f35ebfef84e804f1cf} 
+virtual void physics\+::\+Engine\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}}]{dt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+更新 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em dt} & 経過時間⊿t \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Physics/\mbox{\hyperlink{_physics_engine_8h}{Physics\+Engine.\+h}}\end{DoxyCompactItemize}

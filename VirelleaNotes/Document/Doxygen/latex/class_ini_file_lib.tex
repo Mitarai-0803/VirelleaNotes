@@ -1,0 +1,249 @@
+\doxysection{Ini\+File\+Lib クラス}
+\hypertarget{class_ini_file_lib}{}\label{class_ini_file_lib}\index{IniFileLib@{IniFileLib}}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ini_file_lib_a4ea3e5d8d6f4fbb1ec3172892e77362c}{Ini\+File\+Lib}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Iniファイル初期設定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ini_file_lib_a1d9ade163a187c08bc33cc4d14aaec20}{File}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Iniファイルロード \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{class_ini_file_lib_ad5aead3804668b48b314aa59db383080}{Get\+Int}} (const std\+::string \&section, const std\+::string \&key, int def=0) const
+\begin{DoxyCompactList}\small\item\em 整数値取得 \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{class_ini_file_lib_a8afcf6e8ccd1c56c7ef32848ab3f02f6}{Get\+Float}} (const std\+::string \&section, const std\+::string \&key, float def=0.\+0f) const
+\begin{DoxyCompactList}\small\item\em 浮動小数点数取得 \end{DoxyCompactList}\item 
+const float2 \mbox{\hyperlink{class_ini_file_lib_addd6bd793d37de98419a20cc9c904966}{Get\+Float2}} (const std\+::string \&section, const std\+::string \&key, float2 def=\{0.\+0f, 0.\+0f\}) const
+\begin{DoxyCompactList}\small\item\em 浮動小数点数取得(2要素) \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_ini_file_lib_a9e048040fb332aa1ec543db5ee3398aa}{Get\+Float3}} (const std\+::string \&section, const std\+::string \&key, float3 def=\{0, 0, 0\}) const
+\begin{DoxyCompactList}\small\item\em 浮動小数点数取得(3要素) \end{DoxyCompactList}\item 
+const float4 \mbox{\hyperlink{class_ini_file_lib_a6e96253b3d330a53405091381e99d5c8}{Get\+Float4}} (const std\+::string \&section, const std\+::string \&key, float4 def=\{0, 0, 0, 0\}) const
+\begin{DoxyCompactList}\small\item\em 浮動小数点数取得(4要素) \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{class_ini_file_lib_a6fe617bae29c0519eec14c7a1acbd3d3}{Get\+String}} (const std\+::string \&section, const std\+::string \&key, std\+::string def="{}"{}) const
+\begin{DoxyCompactList}\small\item\em 文字列の取得 \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_ini_file_lib_a22e7416801d89a4ffb8290e2ecfe911d}{Get\+Strings}} (const std\+::string \&section, const std\+::string \&key) const
+\begin{DoxyCompactList}\small\item\em 文字列の取得 \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{class_ini_file_lib_a5ed86e936ea338d55dfc3ff6d74539ea}{Get\+Bool}} (const std\+::string \&section, const std\+::string \&key, bool def=false) const
+\begin{DoxyCompactList}\small\item\em 文字列の取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_ini_file_lib_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_ini_file_lib_a4ea3e5d8d6f4fbb1ec3172892e77362c}\index{IniFileLib@{IniFileLib}!IniFileLib@{IniFileLib}}
+\index{IniFileLib@{IniFileLib}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{IniFileLib()}{IniFileLib()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_a4ea3e5d8d6f4fbb1ec3172892e77362c} 
+Ini\+File\+Lib\+::\+Ini\+File\+Lib (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iniファイル初期設定 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & ファイル名 \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ini_file_lib_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_ini_file_lib_a1d9ade163a187c08bc33cc4d14aaec20}\index{IniFileLib@{IniFileLib}!File@{File}}
+\index{File@{File}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{File()}{File()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_a1d9ade163a187c08bc33cc4d14aaec20} 
+bool Ini\+File\+Lib\+::\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Iniファイルロード 
+
+Iniファイル名の設定 
+\begin{DoxyParams}{引数}
+{\em name} & ファイル名 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+ファイル名の存在 
+\end{DoxyReturn}
+\Hypertarget{class_ini_file_lib_a5ed86e936ea338d55dfc3ff6d74539ea}\index{IniFileLib@{IniFileLib}!GetBool@{GetBool}}
+\index{GetBool@{GetBool}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{GetBool()}{GetBool()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_a5ed86e936ea338d55dfc3ff6d74539ea} 
+const bool Ini\+File\+Lib\+::\+Get\+Bool (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{section}{, }\item[{const std\+::string \&}]{key}{, }\item[{bool}]{def}{ = {\ttfamily false}}\end{DoxyParamCaption}) const}
+
+
+
+文字列の取得 
+
+
+\begin{DoxyParams}{引数}
+{\em section} & セクション名 \\
+\hline
+{\em key} & キー名 \\
+\hline
+{\em def} & デフォルト数値(ないとき選ばれる) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+文字列 
+\end{DoxyReturn}
+\Hypertarget{class_ini_file_lib_a8afcf6e8ccd1c56c7ef32848ab3f02f6}\index{IniFileLib@{IniFileLib}!GetFloat@{GetFloat}}
+\index{GetFloat@{GetFloat}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{GetFloat()}{GetFloat()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_a8afcf6e8ccd1c56c7ef32848ab3f02f6} 
+const float Ini\+File\+Lib\+::\+Get\+Float (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{section}{, }\item[{const std\+::string \&}]{key}{, }\item[{float}]{def}{ = {\ttfamily 0.0f}}\end{DoxyParamCaption}) const}
+
+
+
+浮動小数点数取得 
+
+
+\begin{DoxyParams}{引数}
+{\em section} & セクション名 \\
+\hline
+{\em key} & キー名 \\
+\hline
+{\em def} & デフォルト数値(ないとき選ばれる) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+数値 
+\end{DoxyReturn}
+\Hypertarget{class_ini_file_lib_addd6bd793d37de98419a20cc9c904966}\index{IniFileLib@{IniFileLib}!GetFloat2@{GetFloat2}}
+\index{GetFloat2@{GetFloat2}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{GetFloat2()}{GetFloat2()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_addd6bd793d37de98419a20cc9c904966} 
+const float2 Ini\+File\+Lib\+::\+Get\+Float2 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{section}{, }\item[{const std\+::string \&}]{key}{, }\item[{float2}]{def}{ = {\ttfamily \{0.0f,~0.0f\}}}\end{DoxyParamCaption}) const}
+
+
+
+浮動小数点数取得(2要素) 
+
+
+\begin{DoxyParams}{引数}
+{\em section} & セクション名 \\
+\hline
+{\em key} & キー名 \\
+\hline
+{\em def} & デフォルト数値(ないとき選ばれる) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+数値 
+\end{DoxyReturn}
+\Hypertarget{class_ini_file_lib_a9e048040fb332aa1ec543db5ee3398aa}\index{IniFileLib@{IniFileLib}!GetFloat3@{GetFloat3}}
+\index{GetFloat3@{GetFloat3}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{GetFloat3()}{GetFloat3()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_a9e048040fb332aa1ec543db5ee3398aa} 
+const float3 Ini\+File\+Lib\+::\+Get\+Float3 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{section}{, }\item[{const std\+::string \&}]{key}{, }\item[{float3}]{def}{ = {\ttfamily \{0,~0,~0\}}}\end{DoxyParamCaption}) const}
+
+
+
+浮動小数点数取得(3要素) 
+
+
+\begin{DoxyParams}{引数}
+{\em section} & セクション名 \\
+\hline
+{\em key} & キー名 \\
+\hline
+{\em def} & デフォルト数値(ないとき選ばれる) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+数値 
+\end{DoxyReturn}
+\Hypertarget{class_ini_file_lib_a6e96253b3d330a53405091381e99d5c8}\index{IniFileLib@{IniFileLib}!GetFloat4@{GetFloat4}}
+\index{GetFloat4@{GetFloat4}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{GetFloat4()}{GetFloat4()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_a6e96253b3d330a53405091381e99d5c8} 
+const float4 Ini\+File\+Lib\+::\+Get\+Float4 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{section}{, }\item[{const std\+::string \&}]{key}{, }\item[{float4}]{def}{ = {\ttfamily \{0,~0,~0,~0\}}}\end{DoxyParamCaption}) const}
+
+
+
+浮動小数点数取得(4要素) 
+
+
+\begin{DoxyParams}{引数}
+{\em section} & セクション名 \\
+\hline
+{\em key} & キー名 \\
+\hline
+{\em def} & デフォルト数値(ないとき選ばれる) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+数値 
+\end{DoxyReturn}
+\Hypertarget{class_ini_file_lib_ad5aead3804668b48b314aa59db383080}\index{IniFileLib@{IniFileLib}!GetInt@{GetInt}}
+\index{GetInt@{GetInt}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{GetInt()}{GetInt()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_ad5aead3804668b48b314aa59db383080} 
+const int Ini\+File\+Lib\+::\+Get\+Int (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{section}{, }\item[{const std\+::string \&}]{key}{, }\item[{int}]{def}{ = {\ttfamily 0}}\end{DoxyParamCaption}) const}
+
+
+
+整数値取得 
+
+整数を取得します 
+\begin{DoxyParams}{引数}
+{\em section} & セクション名 \\
+\hline
+{\em key} & キー名 \\
+\hline
+{\em def} & デフォルト数値(ないとき選ばれる) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+数値 
+\end{DoxyReturn}
+\Hypertarget{class_ini_file_lib_a6fe617bae29c0519eec14c7a1acbd3d3}\index{IniFileLib@{IniFileLib}!GetString@{GetString}}
+\index{GetString@{GetString}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{GetString()}{GetString()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_a6fe617bae29c0519eec14c7a1acbd3d3} 
+const std\+::string Ini\+File\+Lib\+::\+Get\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{section}{, }\item[{const std\+::string \&}]{key}{, }\item[{std\+::string}]{def}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption}) const}
+
+
+
+文字列の取得 
+
+
+\begin{DoxyParams}{引数}
+{\em section} & セクション名 \\
+\hline
+{\em key} & キー名 \\
+\hline
+{\em def} & デフォルト数値(ないとき選ばれる) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+文字列 
+\end{DoxyReturn}
+\Hypertarget{class_ini_file_lib_a22e7416801d89a4ffb8290e2ecfe911d}\index{IniFileLib@{IniFileLib}!GetStrings@{GetStrings}}
+\index{GetStrings@{GetStrings}!IniFileLib@{IniFileLib}}
+\doxysubsubsection{\texorpdfstring{GetStrings()}{GetStrings()}}
+{\footnotesize\ttfamily \label{class_ini_file_lib_a22e7416801d89a4ffb8290e2ecfe911d} 
+const std\+::vector$<$ std\+::string $>$ Ini\+File\+Lib\+::\+Get\+Strings (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{section}{, }\item[{const std\+::string \&}]{key}{}\end{DoxyParamCaption}) const}
+
+
+
+文字列の取得 
+
+
+\begin{DoxyParams}{引数}
+{\em section} & セクション名 \\
+\hline
+{\em key} & キー名 \\
+\hline
+{\em def} & デフォルト数値(ないとき選ばれる) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+文字列 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Utils/\mbox{\hyperlink{_ini_file_lib_8h}{Ini\+File\+Lib.\+h}}\end{DoxyCompactItemize}

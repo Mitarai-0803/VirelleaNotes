@@ -1,0 +1,325 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentCamera.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_component_camera_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentCamera.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="_frustum_8h.html">System/Graphics/Frustum.h</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="_component_8h.html">System/Component/Component.h</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="_cereal_8h.html">System/Cereal.h</a>&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>USING_PTR(<a class="code hl_class" href="class_component_camera.html">ComponentCamera</a>);</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_component_camera.html">    9</a></span><span class="keyword">class </span>ComponentCamera : <span class="keyword">public</span> Component</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">friend</span> <span class="keyword">class </span>Object;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_define" href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a>(ComponentCamera, <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;Camera機能クラス&quot;</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    ComponentCamera() {}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_component_camera.html#a1b4c401f67cf5fa135bf2fa55ce92107">   18</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_camera.html#a1b4c401f67cf5fa135bf2fa55ce92107">Init</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_component_camera.html#abd76877ec286da9edb346c64b2fbc444">   19</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_camera.html#abd76877ec286da9edb346c64b2fbc444">PreUpdate</a>() <span class="keyword">override</span>;     </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_component_camera.html#adade95b9b6a98b9142eed18bfd405f30">   20</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_camera.html#adade95b9b6a98b9142eed18bfd405f30">Update</a>() <span class="keyword">override</span>;        </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_component_camera.html#a064e4c4e9af1bdaf2c7584fe433e5dc0">   21</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_camera.html#a064e4c4e9af1bdaf2c7584fe433e5dc0">PostUpdate</a>() <span class="keyword">override</span>;    </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_component_camera.html#a139ae1e56ce9a072595ec1a436c6d12e">   22</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_camera.html#a139ae1e56ce9a072595ec1a436c6d12e">Draw</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_component_camera.html#a8b2bda59875fe546d1ec4fc894021238">   23</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_camera.html#a8b2bda59875fe546d1ec4fc894021238">Exit</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_component_camera.html#ad65c89dadeed5d94b60da349934e2e67">   24</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_camera.html#ad65c89dadeed5d94b60da349934e2e67">GUI</a>() <span class="keyword">override</span>;           </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_component_camera.html#a1f7cb13c939d554fe0555da6924dc791">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_camera.html#a1f7cb13c939d554fe0555da6924dc791">SetCameraTransform</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2078822e1be00930762e103eb00aa55d">   30</a></span>    ComponentCameraPtr <a class="code hl_function" href="class_component_camera.html#a2078822e1be00930762e103eb00aa55d">SetCurrentCamera</a>()</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        camera_status_.on(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa1168725d440a45b4db14a1591f972815">CameraBit::ChangeReq</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;ComponentCamera&gt;(shared_from_this());</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">static</span> ComponentCameraWeakPtr GetCurrentCamera() { <span class="keywordflow">return</span> current_camera_; }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_component_camera.html#a0442691eefc86d49c12434bb45637c22">   41</a></span>    std::shared_ptr&lt;ComponentCamera&gt; <a class="code hl_function" href="class_component_camera.html#a0442691eefc86d49c12434bb45637c22">SetPerspective</a>(<span class="keywordtype">float</span> fov, <span class="keywordtype">float</span> aspect_ratio = 16.0f / 9.0f)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        fovy_         = fov;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        aspect_ratio_ = aspect_ratio;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;ComponentCamera&gt;(shared_from_this());</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_component_camera.html#aa731d4bb9df9e83a9c09b44eb47cac56">   52</a></span>    std::shared_ptr&lt;ComponentCamera&gt; <a class="code hl_function" href="class_component_camera.html#aa731d4bb9df9e83a9c09b44eb47cac56">SetPositionAndTarget</a>(float3 position, float3 look_at, float3 up = {0.0f, 1.0f, 0.0f})</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        position_ = position;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        look_at_  = look_at;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        up_       = up;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;ComponentCamera&gt;(shared_from_this());</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_component_camera.html#a69a38d077b11e4193f47860755547f5b">   64</a></span>    std::shared_ptr&lt;ComponentCamera&gt; <a class="code hl_function" href="class_component_camera.html#a69a38d077b11e4193f47860755547f5b">SetNearFar</a>(<span class="keywordtype">float</span> near_z, <span class="keywordtype">float</span> far_z)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        near_z_ = near_z;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        far_z_  = far_z;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;ComponentCamera&gt;(shared_from_this());</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_component_camera.html#aa5e4733947d6f6a8472f77608b13bc5e">   76</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_camera.html#aa5e4733947d6f6a8472f77608b13bc5e">SetUpdateTiming</a>(<a class="code hl_enumeration" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordflow">if</span>(timing == ProcTiming::Update) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            camera_status_.on(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa7a58cf175935b06cc472242ef54a17de">CameraBit::UpdateOnUpdate</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            camera_status_.off(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fabf8ba2207d498c5939c2aa3773b08799">CameraBit::UpdateOnPreUpdate</a>);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            camera_status_.off(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fad13dc178b8345b31c5fceb91b760c794">CameraBit::UpdateOnPostUpdate</a>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(timing == ProcTiming::PreUpdate) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            camera_status_.on(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fabf8ba2207d498c5939c2aa3773b08799">CameraBit::UpdateOnPreUpdate</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            camera_status_.off(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa7a58cf175935b06cc472242ef54a17de">CameraBit::UpdateOnUpdate</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            camera_status_.off(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fad13dc178b8345b31c5fceb91b760c794">CameraBit::UpdateOnPostUpdate</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(timing == ProcTiming::PostUpdate) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            camera_status_.on(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fad13dc178b8345b31c5fceb91b760c794">CameraBit::UpdateOnPostUpdate</a>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            camera_status_.off(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fabf8ba2207d498c5939c2aa3773b08799">CameraBit::UpdateOnPreUpdate</a>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            camera_status_.off(<a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa7a58cf175935b06cc472242ef54a17de">CameraBit::UpdateOnUpdate</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_component_camera.html#a9852b990506a61ed569b15a17a327d66">   97</a></span>    float3 <a class="code hl_function" href="class_component_camera.html#a9852b990506a61ed569b15a17a327d66">GetPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_component_camera.html#a193d994778a0b47909817f6fe2039a95">  101</a></span>    float3 <a class="code hl_function" href="class_component_camera.html#a193d994778a0b47909817f6fe2039a95">GetTarget</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="};">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="struct_component_camera_1_1_camera_ray.html">  103</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_component_camera_1_1_camera_ray.html">CameraRay</a></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        float3 start;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        float3 end;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    };</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_component_camera.html#ac20792653392089a2a385b460f631eea">  113</a></span>    <a class="code hl_struct" href="struct_component_camera_1_1_camera_ray.html">CameraRay</a> <a class="code hl_function" href="class_component_camera.html#ac20792653392089a2a385b460f631eea">MousePositionRay</a>(<span class="keywordtype">int</span> mouse_pos_x, <span class="keywordtype">int</span> mouse_pos_y);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="};">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936f">  118</a></span>    <span class="keyword">enum struct</span> <a class="code hl_enumeration" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936f">CameraBit</a> : <a class="code hl_typedef" href="_typedef_8h.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa59d87a4758a9d35fbaf6b204341bb399">  120</a></span>        <a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa59d87a4758a9d35fbaf6b204341bb399">Initialized</a>,           </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fadf948fb94ab60cab4be0783d6e7f50a1">  121</a></span>        <a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fadf948fb94ab60cab4be0783d6e7f50a1">EnableTimeLine</a>,        </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa1168725d440a45b4db14a1591f972815">  122</a></span>        <a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa1168725d440a45b4db14a1591f972815">ChangeReq</a>,             </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa222a267cc5778206b253be35ee3ddab5">  123</a></span>        <a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa222a267cc5778206b253be35ee3ddab5">Current</a>,               </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fabf8ba2207d498c5939c2aa3773b08799">  124</a></span>        <a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fabf8ba2207d498c5939c2aa3773b08799">UpdateOnPreUpdate</a>,     </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa7a58cf175935b06cc472242ef54a17de">  125</a></span>        <a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa7a58cf175935b06cc472242ef54a17de">UpdateOnUpdate</a>,        </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fad13dc178b8345b31c5fceb91b760c794">  126</a></span>        <a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fad13dc178b8345b31c5fceb91b760c794">UpdateOnPostUpdate</a>,    </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa0a74e56a18669233abd34a237825d6d8">  127</a></span>        <a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa0a74e56a18669233abd34a237825d6d8">ShowFrustum</a>,           </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa9cc55728caf6cde84f46e8e517b84ada">  128</a></span>        <a class="code hl_enumvalue" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa9cc55728caf6cde84f46e8e517b84ada">DebugCamera</a>,           </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    };</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">void</span> SetCameraStatus(<a class="code hl_enumeration" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936f">CameraBit</a> bit, <span class="keywordtype">bool</span> on) { camera_status_.set(bit, on); }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">bool</span> GetCameraStatus(<a class="code hl_enumeration" href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936f">CameraBit</a> bit) { <span class="keywordflow">return</span> camera_status_.is(bit); }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keyword">const</span> matrix&amp; GetViewMatrix()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mat_view_; }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keyword">const</span> matrix&amp; GetViewMatrix() { <span class="keywordflow">return</span> mat_view_; }</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keyword">const</span> matrix&amp; GetProjectionMatrix()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mat_proj_; }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">const</span> matrix&amp; GetProjectionMatrix() { <span class="keywordflow">return</span> mat_proj_; }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    Status&lt;CameraBit&gt; camera_status_;    </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    float3 position_ = {0, 5, -10};    </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    float3 look_at_  = {0, 0, 0};      </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    float3 up_       = {0, 1, 0};      </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keywordtype">float</span> aspect_ratio_ = 16.0f / 9.0f;    </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">float</span> fovy_         = 45.0f;           </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordtype">float</span> near_z_       = 0.01f;           </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordtype">float</span> far_z_        = 10000.0f;        </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    matrix mat_view_;    </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    matrix mat_proj_;    </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    Frustum frustum_{};</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keyword">static</span> ComponentCameraWeakPtr current_camera_;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">struct </span>CameraInfo</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        matrix mat_view_;        </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        matrix mat_proj_;        </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        float3 eye_position_;    </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    };</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordtype">int</span> cb_camera_info_ = -1;    </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <a class="code hl_define" href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a>(arc, ver)</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    {</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        arc(CEREAL_NVP(<a class="code hl_variable" href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">owner_</a>));                                              <span class="comment">//&lt; オーナー</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        arc(CEREAL_NVP(camera_status_.get()));                                <span class="comment">//&lt; カメラステート</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        arc(CEREAL_NVP(position_), CEREAL_NVP(look_at_), CEREAL_NVP(up_));    <span class="comment">//&lt; カメラ位置とターゲット</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        arc(CEREAL_NVP(aspect_ratio_), CEREAL_NVP(fovy_));                    <span class="comment">//&lt; アスペクト比と画角</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        arc(CEREAL_NVP(near_z_), CEREAL_NVP(far_z_));                         <span class="comment">//&lt; Near/Far</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        arc(CEREAL_NVP(current_camera_));</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        arc(cereal::make_nvp(<span class="stringliteral">&quot;Component&quot;</span>, cereal::base_class&lt;Component&gt;(<span class="keyword">this</span>)));</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <a class="code hl_function" href="class_component_camera.html#a1b4c401f67cf5fa135bf2fa55ce92107">Init</a>();</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    }</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>};</div>
+</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>CEREAL_REGISTER_TYPE(<a class="code hl_class" href="class_component_camera.html">ComponentCamera</a>)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>CEREAL_REGISTER_POLYMORPHIC_RELATION(<a class="code hl_class" href="class_component.html">Component</a>, <a class="code hl_class" href="class_component_camera.html">ComponentCamera</a>)</div>
+<div class="ttc" id="a_cereal_8h_html"><div class="ttname"><a href="_cereal_8h.html">Cereal.h</a></div><div class="ttdoc">シリアル組み込み用</div></div>
+<div class="ttc" id="a_cereal_8h_html_a7df5c4a4fa530d0bf2831fc2180f0386"><div class="ttname"><a href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a></div><div class="ttdeci">#define CEREAL_SAVELOAD(arc, ver)</div><div class="ttdoc">Cereal</div><div class="ttdef"><b>Definition</b> Cereal.h:79</div></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">コンポーネント ベースクラス</div></div>
+<div class="ttc" id="a_component_8h_html_a544c31f98b90b38818b27eff6683eef6"><div class="ttname"><a href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a></div><div class="ttdeci">#define BP_COMPONENT_DECL(CLASS,...)</div><div class="ttdef"><b>Definition</b> Component.h:77</div></div>
+<div class="ttc" id="a_frustum_8h_html"><div class="ttname"><a href="_frustum_8h.html">Frustum.h</a></div><div class="ttdoc">視錐台</div></div>
+<div class="ttc" id="a_proc_timing_8h_html_ad69e549667e66f71bd785b024e931d6b"><div class="ttname"><a href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a></div><div class="ttdeci">ProcTiming</div><div class="ttdoc">タイミング</div><div class="ttdef"><b>Definition</b> ProcTiming.h:21</div></div>
+<div class="ttc" id="a_typedef_8h_html_a70c1fcc1a4e96af8f6580f708657cd41"><div class="ttname"><a href="_typedef_8h.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a></div><div class="ttdeci">uint32_t u32</div><div class="ttdoc">32bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:23</div></div>
+<div class="ttc" id="a_typedef_8h_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:21</div></div>
+<div class="ttc" id="aclass_component_camera_html"><div class="ttname"><a href="class_component_camera.html">ComponentCamera</a></div><div class="ttdef"><b>Definition</b> ComponentCamera.h:10</div></div>
+<div class="ttc" id="aclass_component_camera_html_a0442691eefc86d49c12434bb45637c22"><div class="ttname"><a href="class_component_camera.html#a0442691eefc86d49c12434bb45637c22">ComponentCamera::SetPerspective</a></div><div class="ttdeci">std::shared_ptr&lt; ComponentCamera &gt; SetPerspective(float fov, float aspect_ratio=16.0f/9.0f)</div><div class="ttdoc">画角設定</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:41</div></div>
+<div class="ttc" id="aclass_component_camera_html_a064e4c4e9af1bdaf2c7584fe433e5dc0"><div class="ttname"><a href="class_component_camera.html#a064e4c4e9af1bdaf2c7584fe433e5dc0">ComponentCamera::PostUpdate</a></div><div class="ttdeci">virtual void PostUpdate() override</div><div class="ttdoc">カメラ更新</div></div>
+<div class="ttc" id="aclass_component_camera_html_a139ae1e56ce9a072595ec1a436c6d12e"><div class="ttname"><a href="class_component_camera.html#a139ae1e56ce9a072595ec1a436c6d12e">ComponentCamera::Draw</a></div><div class="ttdeci">virtual void Draw() override</div><div class="ttdoc">標準カメラや別のカメラから見た時のカメラモデルを表示する</div></div>
+<div class="ttc" id="aclass_component_camera_html_a193d994778a0b47909817f6fe2039a95"><div class="ttname"><a href="class_component_camera.html#a193d994778a0b47909817f6fe2039a95">ComponentCamera::GetTarget</a></div><div class="ttdeci">float3 GetTarget() const</div><div class="ttdoc">カメラターゲットの取得</div></div>
+<div class="ttc" id="aclass_component_camera_html_a1b4c401f67cf5fa135bf2fa55ce92107"><div class="ttname"><a href="class_component_camera.html#a1b4c401f67cf5fa135bf2fa55ce92107">ComponentCamera::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdoc">カメラ初期化</div></div>
+<div class="ttc" id="aclass_component_camera_html_a1f7cb13c939d554fe0555da6924dc791"><div class="ttname"><a href="class_component_camera.html#a1f7cb13c939d554fe0555da6924dc791">ComponentCamera::SetCameraTransform</a></div><div class="ttdeci">void SetCameraTransform()</div><div class="ttdoc">カメラの位置設定</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2078822e1be00930762e103eb00aa55d"><div class="ttname"><a href="class_component_camera.html#a2078822e1be00930762e103eb00aa55d">ComponentCamera::SetCurrentCamera</a></div><div class="ttdeci">ComponentCameraPtr SetCurrentCamera()</div><div class="ttdoc">カレントカメラに設定します</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:30</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936f"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936f">ComponentCamera::CameraBit</a></div><div class="ttdeci">CameraBit</div><div class="ttdoc">モデルステータス</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:119</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936fa0a74e56a18669233abd34a237825d6d8"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa0a74e56a18669233abd34a237825d6d8">ComponentCamera::CameraBit::ShowFrustum</a></div><div class="ttdeci">@ ShowFrustum</div><div class="ttdoc">Frustumを描画する</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:127</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936fa1168725d440a45b4db14a1591f972815"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa1168725d440a45b4db14a1591f972815">ComponentCamera::CameraBit::ChangeReq</a></div><div class="ttdeci">@ ChangeReq</div><div class="ttdoc">カレントカメラ変更リクエスト</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:122</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936fa222a267cc5778206b253be35ee3ddab5"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa222a267cc5778206b253be35ee3ddab5">ComponentCamera::CameraBit::Current</a></div><div class="ttdeci">@ Current</div><div class="ttdoc">現状のカレントのカメラ</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:123</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936fa59d87a4758a9d35fbaf6b204341bb399"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa59d87a4758a9d35fbaf6b204341bb399">ComponentCamera::CameraBit::Initialized</a></div><div class="ttdeci">@ Initialized</div><div class="ttdoc">初期化済み</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:120</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936fa7a58cf175935b06cc472242ef54a17de"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa7a58cf175935b06cc472242ef54a17de">ComponentCamera::CameraBit::UpdateOnUpdate</a></div><div class="ttdeci">@ UpdateOnUpdate</div><div class="ttdoc">Update時に更新する</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:125</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936fa9cc55728caf6cde84f46e8e517b84ada"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fa9cc55728caf6cde84f46e8e517b84ada">ComponentCamera::CameraBit::DebugCamera</a></div><div class="ttdeci">@ DebugCamera</div><div class="ttdoc">自分がデバッグカメラ</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:128</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936fabf8ba2207d498c5939c2aa3773b08799"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fabf8ba2207d498c5939c2aa3773b08799">ComponentCamera::CameraBit::UpdateOnPreUpdate</a></div><div class="ttdeci">@ UpdateOnPreUpdate</div><div class="ttdoc">PreUpdate時に更新する</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:124</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936fad13dc178b8345b31c5fceb91b760c794"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fad13dc178b8345b31c5fceb91b760c794">ComponentCamera::CameraBit::UpdateOnPostUpdate</a></div><div class="ttdeci">@ UpdateOnPostUpdate</div><div class="ttdoc">PostUpdate時に更新する</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:126</div></div>
+<div class="ttc" id="aclass_component_camera_html_a2edc0795adccac4e1611ec70b690936fadf948fb94ab60cab4be0783d6e7f50a1"><div class="ttname"><a href="class_component_camera.html#a2edc0795adccac4e1611ec70b690936fadf948fb94ab60cab4be0783d6e7f50a1">ComponentCamera::CameraBit::EnableTimeLine</a></div><div class="ttdeci">@ EnableTimeLine</div><div class="ttdoc">TimelineComponentを利用して移動する</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:121</div></div>
+<div class="ttc" id="aclass_component_camera_html_a69a38d077b11e4193f47860755547f5b"><div class="ttname"><a href="class_component_camera.html#a69a38d077b11e4193f47860755547f5b">ComponentCamera::SetNearFar</a></div><div class="ttdeci">std::shared_ptr&lt; ComponentCamera &gt; SetNearFar(float near_z, float far_z)</div><div class="ttdoc">Near/Farの設定</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:64</div></div>
+<div class="ttc" id="aclass_component_camera_html_a8b2bda59875fe546d1ec4fc894021238"><div class="ttname"><a href="class_component_camera.html#a8b2bda59875fe546d1ec4fc894021238">ComponentCamera::Exit</a></div><div class="ttdeci">virtual void Exit() override</div><div class="ttdoc">カメラ終了処理</div></div>
+<div class="ttc" id="aclass_component_camera_html_a9852b990506a61ed569b15a17a327d66"><div class="ttname"><a href="class_component_camera.html#a9852b990506a61ed569b15a17a327d66">ComponentCamera::GetPosition</a></div><div class="ttdeci">float3 GetPosition() const</div><div class="ttdoc">カメラ位置の取得</div></div>
+<div class="ttc" id="aclass_component_camera_html_aa5e4733947d6f6a8472f77608b13bc5e"><div class="ttname"><a href="class_component_camera.html#aa5e4733947d6f6a8472f77608b13bc5e">ComponentCamera::SetUpdateTiming</a></div><div class="ttdeci">void SetUpdateTiming(ProcTiming timing)</div><div class="ttdoc">カメラの更新タイミングを設定する</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:76</div></div>
+<div class="ttc" id="aclass_component_camera_html_aa731d4bb9df9e83a9c09b44eb47cac56"><div class="ttname"><a href="class_component_camera.html#aa731d4bb9df9e83a9c09b44eb47cac56">ComponentCamera::SetPositionAndTarget</a></div><div class="ttdeci">std::shared_ptr&lt; ComponentCamera &gt; SetPositionAndTarget(float3 position, float3 look_at, float3 up={0.0f, 1.0f, 0.0f})</div><div class="ttdoc">カメラポジションとターゲットの設定</div><div class="ttdef"><b>Definition</b> ComponentCamera.h:52</div></div>
+<div class="ttc" id="aclass_component_camera_html_abd76877ec286da9edb346c64b2fbc444"><div class="ttname"><a href="class_component_camera.html#abd76877ec286da9edb346c64b2fbc444">ComponentCamera::PreUpdate</a></div><div class="ttdeci">virtual void PreUpdate() override</div><div class="ttdoc">カメラ更新</div></div>
+<div class="ttc" id="aclass_component_camera_html_ac20792653392089a2a385b460f631eea"><div class="ttname"><a href="class_component_camera.html#ac20792653392089a2a385b460f631eea">ComponentCamera::MousePositionRay</a></div><div class="ttdeci">CameraRay MousePositionRay(int mouse_pos_x, int mouse_pos_y)</div><div class="ttdoc">マウス位置からカメラレイを取得します</div></div>
+<div class="ttc" id="aclass_component_camera_html_ad65c89dadeed5d94b60da349934e2e67"><div class="ttname"><a href="class_component_camera.html#ad65c89dadeed5d94b60da349934e2e67">ComponentCamera::GUI</a></div><div class="ttdeci">virtual void GUI() override</div><div class="ttdoc">カメラGUI処理</div></div>
+<div class="ttc" id="aclass_component_camera_html_adade95b9b6a98b9142eed18bfd405f30"><div class="ttname"><a href="class_component_camera.html#adade95b9b6a98b9142eed18bfd405f30">ComponentCamera::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdoc">カメラ更新</div></div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">コンポーネント</div><div class="ttdef"><b>Definition</b> Component.h:163</div></div>
+<div class="ttc" id="aclass_component_html_aaf224b0e73780a9c3cbad323a0ec59f5"><div class="ttname"><a href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">Component::owner_</a></div><div class="ttdeci">ObjectPtr owner_</div><div class="ttdoc">オーナー</div><div class="ttdef"><b>Definition</b> Component.h:309</div></div>
+<div class="ttc" id="astruct_component_camera_1_1_camera_ray_html"><div class="ttname"><a href="struct_component_camera_1_1_camera_ray.html">ComponentCamera::CameraRay</a></div><div class="ttdef"><b>Definition</b> ComponentCamera.h:104</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="dir_62db5b8162a41e57b9d75d02d7d318ce.html">Component</a></li><li class="navelem"><b>ComponentCamera.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

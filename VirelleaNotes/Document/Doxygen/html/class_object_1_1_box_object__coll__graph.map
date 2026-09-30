@@ -1,0 +1,7 @@
+<map id="Object::BoxObject" name="Object::BoxObject">
+<area shape="rect" id="Node000001" title="物理演算ボックスオブジェクト" alt="" coords="5,688,153,1056"/>
+<area shape="rect" id="Node000002" href="$class_object_1_1_object_base3_d.html" title=" " alt="" coords="8,443,150,640"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,652,82,689,77,688,79,658"/>
+<area shape="rect" id="Node000003" href="$class_object_1_1_object_base.html" title=" " alt="" coords="17,5,142,395"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="80,407,82,443,77,443,79,412"/>
+</map>

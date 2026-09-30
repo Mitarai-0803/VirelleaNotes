@@ -1,0 +1,35 @@
+\doxysection{Scene\+Attach\+Model.\+h}
+\hypertarget{_scene_attach_model_8h_source}{}\label{_scene_attach_model_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneAttachModel.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneAttachModel.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_attach_model}{SceneAttachModel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_1_1_base}{Scene::Base}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{comment}{//\ 継承している形をここでも書いておく(プログラム的に使用する)}}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{_type_info_8h_aed9c544bcefbc45da9189a4c3d3e4d6c}{BP\_CLASS\_DECL}}(\mbox{\hyperlink{class_scene_attach_model}{SceneAttachModel}},\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}AttachModel\ 使用サンプル"{}});}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scene_attach_model_a22a80e154fa43f54c01f8c5b74a0aee4}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_attach_model_a21dd2ab2db7ef3a2599a4ffb5fcd7a16}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_attach_model_a567ca25efecc4e503e51e0ab1eb1e680}{Exit}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#if\ 0}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{struct\ }Material}
+\DoxyCodeLine{00027\ \ \ \ \ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::shared\_ptr<Texture>\ albedo\_;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ std::shared\_ptr<Texture>\ normal\_;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::shared\_ptr<Texture>\ roughness\_;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ std::shared\_ptr<Texture>\ metalness\_;}
+\DoxyCodeLine{00032\ \ \ \ \ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<Material>\ materials\_;}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00036\ \};}
+
+\end{DoxyCode}

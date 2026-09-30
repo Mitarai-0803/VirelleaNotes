@@ -1,0 +1,224 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Input/\+Input\+Mouse.h ファイル}
+\hypertarget{_input_mouse_8h}{}\label{_input_mouse_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Input/InputMouse.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Input/InputMouse.h}}
+
+
+マウス入力管理  
+
+
+\doxysubsubsection*{関数}
+\begin{Indent}\textbf{ システム関数}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_input_mouse_8h_ace48617ec6b17a74843e4228715354e6}\label{_input_mouse_8h_ace48617ec6b17a74843e4228715354e6} 
+void {\bfseries Input\+Mouse\+Init} ()
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+\Hypertarget{_input_mouse_8h_a8025d04f4a2b8192de14213af138547e}\label{_input_mouse_8h_a8025d04f4a2b8192de14213af138547e} 
+void {\bfseries Input\+Mouse\+Update} ()
+\begin{DoxyCompactList}\small\item\em 更新 \end{DoxyCompactList}\item 
+\Hypertarget{_input_mouse_8h_a1bf33577ba700ff85965a4aa93649de3}\label{_input_mouse_8h_a1bf33577ba700ff85965a4aa93649de3} 
+void {\bfseries Input\+Mouse\+Exit} ()
+\begin{DoxyCompactList}\small\item\em 終了 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 入力関連関数}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_input_mouse_8h_a2d050ab7bdcddc7df958018d34e85950}{Is\+Mouse\+On}} (int mouse\+ID)
+\item 
+bool \mbox{\hyperlink{_input_mouse_8h_abe1e073ff4468b830f520d39f2ce2cd7}{Is\+Mouse\+Release}} (int mouse\+ID)
+\item 
+bool \mbox{\hyperlink{_input_mouse_8h_ac4fb3ced74a8b0067b2435ac801c2134}{Is\+Mouse\+Repeat}} (int mouse\+ID, \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} frame=2)
+\item 
+bool \mbox{\hyperlink{_input_mouse_8h_a024b429a4e60af65d6326f5d06e70597}{Is\+Mouse\+Down}} (int mouse\+ID)
+\item 
+bool \mbox{\hyperlink{_input_mouse_8h_aa7ec522a4cb1fcee016b43b0e0363b0e}{Is\+Mouse\+Up}} (int mouse\+ID)
+\item 
+bool \mbox{\hyperlink{_input_mouse_8h_acce52f6e70141a9b93af009243b1a273}{Is\+Mouse}} (int mouse\+ID)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ マウス位置関数}\par
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_input_mouse_8h_ad49a1cdce195e24c9b248bd6e89d4581}{Get\+MouseX}} ()
+\item 
+int \mbox{\hyperlink{_input_mouse_8h_ac2f8b66e77bec9c3ca6d3d2b2a594821}{Get\+MouseY}} ()
+\item 
+int \mbox{\hyperlink{_input_mouse_8h_adedff2d29b88b38cf27bfd8bb57c9e8a}{Get\+Mouse\+MoveX}} ()
+\item 
+int \mbox{\hyperlink{_input_mouse_8h_ab88c83560c25fd3080fbd761a1463b05}{Get\+Mouse\+MoveY}} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ マウス状態変化関数}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_input_mouse_8h_af51e274f556175b3e84da7a23f651304}{Hide\+Mouse}} (bool \+\_\+hide=true)
+\begin{DoxyCompactList}\small\item\em マウスを消去する ( 真ん中に置いておく ) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+マウス入力管理 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_input_mouse_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_input_mouse_8h_adedff2d29b88b38cf27bfd8bb57c9e8a}\index{InputMouse.h@{InputMouse.h}!GetMouseMoveX@{GetMouseMoveX}}
+\index{GetMouseMoveX@{GetMouseMoveX}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{GetMouseMoveX()}{GetMouseMoveX()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_adedff2d29b88b38cf27bfd8bb57c9e8a} 
+int Get\+Mouse\+MoveX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+マウスの\+X座標 取得 \begin{DoxyReturn}{戻り値}
+マウスの\+X移動量 
+\end{DoxyReturn}
+\Hypertarget{_input_mouse_8h_ab88c83560c25fd3080fbd761a1463b05}\index{InputMouse.h@{InputMouse.h}!GetMouseMoveY@{GetMouseMoveY}}
+\index{GetMouseMoveY@{GetMouseMoveY}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{GetMouseMoveY()}{GetMouseMoveY()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_ab88c83560c25fd3080fbd761a1463b05} 
+int Get\+Mouse\+MoveY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+マウスの\+Y座標 取得 \begin{DoxyReturn}{戻り値}
+マウスの\+Y移動量 
+\end{DoxyReturn}
+\Hypertarget{_input_mouse_8h_ad49a1cdce195e24c9b248bd6e89d4581}\index{InputMouse.h@{InputMouse.h}!GetMouseX@{GetMouseX}}
+\index{GetMouseX@{GetMouseX}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{GetMouseX()}{GetMouseX()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_ad49a1cdce195e24c9b248bd6e89d4581} 
+int Get\+MouseX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+マウスの\+X座標 取得 \begin{DoxyReturn}{戻り値}
+マウスの\+X座標 
+\end{DoxyReturn}
+\Hypertarget{_input_mouse_8h_ac2f8b66e77bec9c3ca6d3d2b2a594821}\index{InputMouse.h@{InputMouse.h}!GetMouseY@{GetMouseY}}
+\index{GetMouseY@{GetMouseY}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{GetMouseY()}{GetMouseY()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_ac2f8b66e77bec9c3ca6d3d2b2a594821} 
+int Get\+MouseY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+マウスの\+Y座標 取得 \begin{DoxyReturn}{戻り値}
+マウスの\+Y座標 
+\end{DoxyReturn}
+\Hypertarget{_input_mouse_8h_af51e274f556175b3e84da7a23f651304}\index{InputMouse.h@{InputMouse.h}!HideMouse@{HideMouse}}
+\index{HideMouse@{HideMouse}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{HideMouse()}{HideMouse()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_af51e274f556175b3e84da7a23f651304} 
+void Hide\+Mouse (\begin{DoxyParamCaption}\item[{bool}]{\+\_\+hide}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+マウスを消去する ( 真ん中に置いておく ) 
+
+
+\begin{DoxyParams}{引数}
+{\em hide} & 消すかどうか \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_input_mouse_8h_acce52f6e70141a9b93af009243b1a273}\index{InputMouse.h@{InputMouse.h}!IsMouse@{IsMouse}}
+\index{IsMouse@{IsMouse}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{IsMouse()}{IsMouse()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_acce52f6e70141a9b93af009243b1a273} 
+bool Is\+Mouse (\begin{DoxyParamCaption}\item[{int}]{mouse\+ID}{}\end{DoxyParamCaption})}
+
+指定マウスボタンの検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em mouse\+ID} & マウスのボタン種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたマウスのボタンが長されている \\
+\hline
+{\em false} & 引数に指定されたマウスのボタンが押されていない \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_mouse_8h_a024b429a4e60af65d6326f5d06e70597}\index{InputMouse.h@{InputMouse.h}!IsMouseDown@{IsMouseDown}}
+\index{IsMouseDown@{IsMouseDown}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{IsMouseDown()}{IsMouseDown()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_a024b429a4e60af65d6326f5d06e70597} 
+bool Is\+Mouse\+Down (\begin{DoxyParamCaption}\item[{int}]{mouse\+ID}{}\end{DoxyParamCaption})}
+
+指定マウスボタンの1回だけ押下検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em mouse\+ID} & マウスのボタン種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたマウスのボタンが押された \\
+\hline
+{\em false} & 引数に指定されたマウスのボタンが押されていない \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_mouse_8h_a2d050ab7bdcddc7df958018d34e85950}\index{InputMouse.h@{InputMouse.h}!IsMouseOn@{IsMouseOn}}
+\index{IsMouseOn@{IsMouseOn}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{IsMouseOn()}{IsMouseOn()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_a2d050ab7bdcddc7df958018d34e85950} 
+bool Is\+Mouse\+On (\begin{DoxyParamCaption}\item[{int}]{mouse\+ID}{}\end{DoxyParamCaption})}
+
+指定マウスボタンの1回だけ押下検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em mouse\+ID} & マウスのボタン種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたマウスのボタンが押された \\
+\hline
+{\em false} & 引数に指定されたマウスのボタンが押されていない \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_mouse_8h_abe1e073ff4468b830f520d39f2ce2cd7}\index{InputMouse.h@{InputMouse.h}!IsMouseRelease@{IsMouseRelease}}
+\index{IsMouseRelease@{IsMouseRelease}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{IsMouseRelease()}{IsMouseRelease()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_abe1e073ff4468b830f520d39f2ce2cd7} 
+bool Is\+Mouse\+Release (\begin{DoxyParamCaption}\item[{int}]{mouse\+ID}{}\end{DoxyParamCaption})}
+
+指定マウスボタンが押されていない検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em mouse\+ID} & マウスのボタン種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたマウスのボタンが離されている \\
+\hline
+{\em false} & 引数に指定されたマウスのボタンが押されている \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_mouse_8h_ac4fb3ced74a8b0067b2435ac801c2134}\index{InputMouse.h@{InputMouse.h}!IsMouseRepeat@{IsMouseRepeat}}
+\index{IsMouseRepeat@{IsMouseRepeat}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{IsMouseRepeat()}{IsMouseRepeat()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_ac4fb3ced74a8b0067b2435ac801c2134} 
+bool Is\+Mouse\+Repeat (\begin{DoxyParamCaption}\item[{int}]{mouse\+ID}{, }\item[{\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}]{frame}{ = {\ttfamily 2}}\end{DoxyParamCaption})}
+
+指定マウスボタンの長押し検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em mouse\+ID} & マウスのボタン種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたマウスのボタンが長押し（2フレーム以上）されている \\
+\hline
+{\em false} & 引数に指定されたマウスのボタンが押されていない（押されているフレーム数が1以下） \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{_input_mouse_8h_aa7ec522a4cb1fcee016b43b0e0363b0e}\index{InputMouse.h@{InputMouse.h}!IsMouseUp@{IsMouseUp}}
+\index{IsMouseUp@{IsMouseUp}!InputMouse.h@{InputMouse.h}}
+\doxysubsubsection{\texorpdfstring{IsMouseUp()}{IsMouseUp()}}
+{\footnotesize\ttfamily \label{_input_mouse_8h_aa7ec522a4cb1fcee016b43b0e0363b0e} 
+bool Is\+Mouse\+Up (\begin{DoxyParamCaption}\item[{int}]{mouse\+ID}{}\end{DoxyParamCaption})}
+
+指定マウスボタンが押されていない検証 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em mouse\+ID} & マウスのボタン種別 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 引数に指定されたマウスのボタンが離されている \\
+\hline
+{\em false} & 引数に指定されたマウスのボタンが押されている \\
+\hline
+\end{DoxyRetVals}

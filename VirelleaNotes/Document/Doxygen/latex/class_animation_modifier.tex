@@ -1,0 +1,144 @@
+\doxysection{Animation\+Modifier クラス}
+\hypertarget{class_animation_modifier}{}\label{class_animation_modifier}\index{AnimationModifier@{AnimationModifier}}
+
+
+アニメーション操作クラス  
+
+
+
+
+{\ttfamily \#include $<$Animation.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}{Animation\+Modifier}} (\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*}owner, s32 frame\+\_\+index)
+\item 
+\Hypertarget{class_animation_modifier_a3ec4e0d386a91bd67f3d6638961f033c}\label{class_animation_modifier_a3ec4e0d386a91bd67f3d6638961f033c} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Animation\+Modifier} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_animation_modifier_a6b89487841f33c3b321520db5c5e035f}{attach\+Animation}} (s32 context\+\_\+index)
+\item 
+void \mbox{\hyperlink{class_animation_modifier_a3b5d5b548bc22b68f808efab991517f1}{detach\+Animation}} (s32 context\+\_\+index)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ 更新}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_animation_modifier_a20c3bec37755abf703ec61250db59071}{update}} (f32 dt)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 設定}\par
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_animation_modifier_a2e78c12207b55a4c9b12d57c8dabdd5a}{play}} (std\+::string\+\_\+view name, bool is\+\_\+loop=false, f32 blend\+\_\+time=1.\+0f, f32 start\+\_\+time=0.\+0f)
+\item 
+void \mbox{\hyperlink{class_animation_modifier_adb2a56f3ea47ae76324914b4f7ca7475}{pause}} (bool active=true)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 取得}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animation_modifier_a287f7b983cd4f68822898da44d7db783}\label{class_animation_modifier_a287f7b983cd4f68822898da44d7db783} 
+bool {\bfseries is\+Playing} () const
+\item 
+\Hypertarget{class_animation_modifier_a1c8e77795e3514bc240fdd734fe686ba}\label{class_animation_modifier_a1c8e77795e3514bc240fdd734fe686ba} 
+bool {\bfseries is\+Paused} () const
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+アニメーション操作クラス 
+
+\label{doc-constructors}
+\Hypertarget{class_animation_modifier_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f}\index{AnimationModifier@{AnimationModifier}!AnimationModifier@{AnimationModifier}}
+\index{AnimationModifier@{AnimationModifier}!AnimationModifier@{AnimationModifier}}
+\doxysubsubsection{\texorpdfstring{AnimationModifier()}{AnimationModifier()}}
+{\footnotesize\ttfamily \label{class_animation_modifier_af654d7f96cc6f1b52b1bee555e51e86f} 
+Animation\+Modifier\+::\+Animation\+Modifier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*}}]{owner}{, }\item[{s32}]{frame\+\_\+index}{}\end{DoxyParamCaption})}
+
+コンストラクタ 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em owner} & 親のアニメーションクラス \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_animation_modifier_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_animation_modifier_a6b89487841f33c3b321520db5c5e035f}\index{AnimationModifier@{AnimationModifier}!attachAnimation@{attachAnimation}}
+\index{attachAnimation@{attachAnimation}!AnimationModifier@{AnimationModifier}}
+\doxysubsubsection{\texorpdfstring{attachAnimation()}{attachAnimation()}}
+{\footnotesize\ttfamily \label{class_animation_modifier_a6b89487841f33c3b321520db5c5e035f} 
+bool Animation\+Modifier\+::attach\+Animation (\begin{DoxyParamCaption}\item[{s32}]{context\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em context\+\_\+index} & コンテキスト番号 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_modifier_a3b5d5b548bc22b68f808efab991517f1}\index{AnimationModifier@{AnimationModifier}!detachAnimation@{detachAnimation}}
+\index{detachAnimation@{detachAnimation}!AnimationModifier@{AnimationModifier}}
+\doxysubsubsection{\texorpdfstring{detachAnimation()}{detachAnimation()}}
+{\footnotesize\ttfamily \label{class_animation_modifier_a3b5d5b548bc22b68f808efab991517f1} 
+void Animation\+Modifier\+::detach\+Animation (\begin{DoxyParamCaption}\item[{s32}]{context\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em context\+\_\+index} & コンテキスト番号 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_modifier_adb2a56f3ea47ae76324914b4f7ca7475}\index{AnimationModifier@{AnimationModifier}!pause@{pause}}
+\index{pause@{pause}!AnimationModifier@{AnimationModifier}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily \label{class_animation_modifier_adb2a56f3ea47ae76324914b4f7ca7475} 
+void Animation\+Modifier\+::pause (\begin{DoxyParamCaption}\item[{bool}]{active}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em active} & 停止フラグ(true\+:停止 false\+:再開) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_modifier_a2e78c12207b55a4c9b12d57c8dabdd5a}\index{AnimationModifier@{AnimationModifier}!play@{play}}
+\index{play@{play}!AnimationModifier@{AnimationModifier}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily \label{class_animation_modifier_a2e78c12207b55a4c9b12d57c8dabdd5a} 
+bool Animation\+Modifier\+::play (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name}{, }\item[{bool}]{is\+\_\+loop}{ = {\ttfamily false}, }\item[{f32}]{blend\+\_\+time}{ = {\ttfamily 1.0f}, }\item[{f32}]{start\+\_\+time}{ = {\ttfamily 0.0f}}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em name} & アニメーション名 \\
+\hline
+\mbox{\texttt{in}}  & {\em is\+\_\+loop} & ループ再生するかどうか(default\+:false) \\
+\hline
+\mbox{\texttt{in}}  & {\em blend\+\_\+time} & ブレンドする時間 (default\+:1.\+0秒) \\
+\hline
+\mbox{\texttt{in}}  & {\em start\+\_\+time} & 再生開始時間(default\+:0.\+0f) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 成功(正常終了) \\
+\hline
+{\em false} & 失敗(nameで指定した名前が見つからなかった場合) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_animation_modifier_a20c3bec37755abf703ec61250db59071}\index{AnimationModifier@{AnimationModifier}!update@{update}}
+\index{update@{update}!AnimationModifier@{AnimationModifier}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_animation_modifier_a20c3bec37755abf703ec61250db59071} 
+void Animation\+Modifier\+::update (\begin{DoxyParamCaption}\item[{f32}]{dt}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em dt} & 経過時間(単位\+:秒) \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/\mbox{\hyperlink{_animation_8h}{Animation.\+h}}\end{DoxyCompactItemize}

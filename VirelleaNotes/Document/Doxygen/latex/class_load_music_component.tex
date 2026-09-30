@@ -1,0 +1,120 @@
+\doxysection{Load\+Music\+Component クラス}
+\hypertarget{class_load_music_component}{}\label{class_load_music_component}\index{LoadMusicComponent@{LoadMusicComponent}}
+
+
+音源読み込みコンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Load\+Music\+Component.\+h$>$}
+
+Load\+Music\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_load_music_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_load_music_component_a609330b64b8c6346d3b7aa172142d890}{‾\+Load\+Music\+Component}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_load_music_component_a82ed58a57d1d4b47cd8b2870c77b823c}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_load_music_component_a94926a29e4d1284b3c32a6a16af1b9c5}{Update}} (int \&max\+Play\+Time)
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_load_music_component_af5839c199f94aa257a3c12b642075378}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_load_music_component_a6f5e4aa58911be4f55aa644ccac14665}{Get\+Load\+Handle}} () const
+\begin{DoxyCompactList}\small\item\em 音源ハンドル取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries ‾\+Component\+Base} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em フレーム更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+音源読み込みコンポーネント 
+
+ドラッグ＆ドロップされた音源の読み込み、 音源ハンドルの取得・再読み込み管理を担当 
+
+\label{doc-func-members}
+\Hypertarget{class_load_music_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_load_music_component_a609330b64b8c6346d3b7aa172142d890}\index{LoadMusicComponent@{LoadMusicComponent}!‾LoadMusicComponent@{‾LoadMusicComponent}}
+\index{‾LoadMusicComponent@{‾LoadMusicComponent}!LoadMusicComponent@{LoadMusicComponent}}
+\doxysubsubsection{\texorpdfstring{‾LoadMusicComponent()}{‾LoadMusicComponent()}}
+{\footnotesize\ttfamily \label{class_load_music_component_a609330b64b8c6346d3b7aa172142d890} 
+Load\+Music\+Component\+::‾\+Load\+Music\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+読み込み済み音源ハンドルを解放 \Hypertarget{class_load_music_component_af5839c199f94aa257a3c12b642075378}\index{LoadMusicComponent@{LoadMusicComponent}!Draw@{Draw}}
+\index{Draw@{Draw}!LoadMusicComponent@{LoadMusicComponent}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_load_music_component_af5839c199f94aa257a3c12b642075378} 
+void Load\+Music\+Component\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+読み込み状態に応じたメッセージ表示 
+
+\mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_load_music_component_a6f5e4aa58911be4f55aa644ccac14665}\index{LoadMusicComponent@{LoadMusicComponent}!GetLoadHandle@{GetLoadHandle}}
+\index{GetLoadHandle@{GetLoadHandle}!LoadMusicComponent@{LoadMusicComponent}}
+\doxysubsubsection{\texorpdfstring{GetLoadHandle()}{GetLoadHandle()}}
+{\footnotesize\ttfamily \label{class_load_music_component_a6f5e4aa58911be4f55aa644ccac14665} 
+int Load\+Music\+Component\+::\+Get\+Load\+Handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+音源ハンドル取得 
+
+\begin{DoxyReturn}{戻り値}
+音源ハンドル 
+\end{DoxyReturn}
+\Hypertarget{class_load_music_component_a82ed58a57d1d4b47cd8b2870c77b823c}\index{LoadMusicComponent@{LoadMusicComponent}!Init@{Init}}
+\index{Init@{Init}!LoadMusicComponent@{LoadMusicComponent}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_load_music_component_a82ed58a57d1d4b47cd8b2870c77b823c} 
+void Load\+Music\+Component\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_load_music_component_a94926a29e4d1284b3c32a6a16af1b9c5}\index{LoadMusicComponent@{LoadMusicComponent}!Update@{Update}}
+\index{Update@{Update}!LoadMusicComponent@{LoadMusicComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_load_music_component_a94926a29e4d1284b3c32a6a16af1b9c5} 
+void Load\+Music\+Component\+::\+Update (\begin{DoxyParamCaption}\item[{int \&}]{max\+Play\+Time}{}\end{DoxyParamCaption})}
+
+
+
+更新処理 
+
+
+\begin{DoxyParams}{引数}
+{\em max\+Play\+Time} & 音源の最大再生時間(ms) \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/自作ゲーム/音ゲー制作エンジン -\/ コピー/src/\+Components/\+Load\+Music\+Component/Load\+Music\+Component.\+h\end{DoxyCompactItemize}

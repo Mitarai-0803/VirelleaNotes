@@ -1,0 +1,192 @@
+\doxysection{Scene\+::Scene クラス}
+\hypertarget{class_scene_1_1_scene}{}\label{class_scene_1_1_scene}\index{Scene::Scene@{Scene::Scene}}
+
+
+シーン基底クラス  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
+Scene\+::Scene の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_1_1_scene}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_scene_1_1_scene_af67d20b43392ae1786d6a4a6a1cab848}\label{class_scene_1_1_scene_af67d20b43392ae1786d6a4a6a1cab848} 
+virtual {\bfseries ‾\+Scene} ()=default
+\item 
+virtual void \mbox{\hyperlink{class_scene_1_1_scene_acae6e4a23b001c9edb99a68f88249743}{Init}} ()
+\begin{DoxyCompactList}\small\item\em シーンの初期化処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_1_1_scene_a73f23e5f404cd6faec726954a713fa5e}{Update}} ()
+\begin{DoxyCompactList}\small\item\em シーンの更新処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_1_1_scene_ad2932a19dfb64c2b0f5ed54f4abf6209}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em シーンの描画処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_1_1_scene_a970087c92adcda46adc8c9eb5b93079c}{End}} ()
+\begin{DoxyCompactList}\small\item\em シーンの終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_scene_1_1_scene_a0276ae14023f76a6120427f4e0b76594}{Scene\+Init}} ()
+\begin{DoxyCompactList}\small\item\em シーン固有の初期化処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_1_1_scene_afe1ef3b216b799a087065f83994e6f14}{Scene\+Update}} ()
+\begin{DoxyCompactList}\small\item\em シーン固有の更新処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_1_1_scene_a2a34e5eb678573136d7bf7193743f48b}{Scene\+Draw}} ()
+\begin{DoxyCompactList}\small\item\em シーン固有の描画処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_scene_1_1_scene_a50f548646a99229d829606780084c3ec}{Scene\+End}} ()
+\begin{DoxyCompactList}\small\item\em シーン固有の終了処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_scene_1_1_scene_a7869b5fc4d3260a7a535514fa992ad1b}{Add\+Object}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ obj)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_game_object}{Game\+Object} を追加 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ \mbox{\hyperlink{class_scene_1_1_scene_a277316f14c75f2e7538d06098e332477}{Get\+Scene\+Object}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em 名前指定で \doxylink{class_game_object}{Game\+Object} を取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_1_1_scene_a38a30daa7d205ef211e6f9a9cdc26369}\label{class_scene_1_1_scene_a38a30daa7d205ef211e6f9a9cdc26369} 
+void {\bfseries Object\+Init} ()
+\begin{DoxyCompactList}\small\item\em 全オブジェクトの初期化処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_1_1_scene_a9744fae015844dc05a9d11d7f5dda69f}\label{class_scene_1_1_scene_a9744fae015844dc05a9d11d7f5dda69f} 
+void {\bfseries Object\+Update} ()
+\begin{DoxyCompactList}\small\item\em 全オブジェクトの更新処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_1_1_scene_a5723214808144d0128790c70951600e5}\label{class_scene_1_1_scene_a5723214808144d0128790c70951600e5} 
+void {\bfseries Object\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 全オブジェクトの描画処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_1_1_scene_ab1dbde6dc9fa1eea06ffe54880c9cf44}\label{class_scene_1_1_scene_ab1dbde6dc9fa1eea06ffe54880c9cf44} 
+void {\bfseries Object\+End} ()
+\begin{DoxyCompactList}\small\item\em 全オブジェクトの終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_scene_1_1_scene_aa793b2fc8dd3f5eda574d77e02f89d37}\label{class_scene_1_1_scene_aa793b2fc8dd3f5eda574d77e02f89d37} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ $>$ {\bfseries scene\+\_\+objects\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+シーン基底クラス 
+
+各シーン（メニューやゲーム本編など）で継承して使用 
+
+\label{doc-func-members}
+\Hypertarget{class_scene_1_1_scene_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_scene_1_1_scene_a7869b5fc4d3260a7a535514fa992ad1b}\index{Scene::Scene@{Scene::Scene}!AddObject@{AddObject}}
+\index{AddObject@{AddObject}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{AddObject()}{AddObject()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_a7869b5fc4d3260a7a535514fa992ad1b} 
+void Scene\+::\+Scene\+::\+Add\+Object (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$}]{obj}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\doxylink{class_game_object}{Game\+Object} を追加 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & 追加するゲームオブジェクト \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_1_1_scene_ad2932a19dfb64c2b0f5ed54f4abf6209}\index{Scene::Scene@{Scene::Scene}!Draw@{Draw}}
+\index{Draw@{Draw}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_ad2932a19dfb64c2b0f5ed54f4abf6209} 
+virtual void Scene\+::\+Scene\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+シーンの描画処理 
+
+シーン内の全オブジェクトを描画した後、 シーン固有の描画処理を実行する \Hypertarget{class_scene_1_1_scene_a970087c92adcda46adc8c9eb5b93079c}\index{Scene::Scene@{Scene::Scene}!End@{End}}
+\index{End@{End}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_a970087c92adcda46adc8c9eb5b93079c} 
+virtual void Scene\+::\+Scene\+::\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+シーンの終了処理 
+
+シーン内の全オブジェクトを終了処理した後、 シーン固有の終了処理を実行する \Hypertarget{class_scene_1_1_scene_a277316f14c75f2e7538d06098e332477}\index{Scene::Scene@{Scene::Scene}!GetSceneObject@{GetSceneObject}}
+\index{GetSceneObject@{GetSceneObject}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{GetSceneObject()}{GetSceneObject()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_a277316f14c75f2e7538d06098e332477} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ Scene\+::\+Scene\+::\+Get\+Scene\+Object (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+名前指定で \doxylink{class_game_object}{Game\+Object} を取得 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 取得したいオブジェクト名 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+指定された Game\+Object（存在しない場合は nullptr） 
+\end{DoxyReturn}
+\Hypertarget{class_scene_1_1_scene_acae6e4a23b001c9edb99a68f88249743}\index{Scene::Scene@{Scene::Scene}!Init@{Init}}
+\index{Init@{Init}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_acae6e4a23b001c9edb99a68f88249743} 
+virtual void Scene\+::\+Scene\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+シーンの初期化処理 
+
+シーン内の全オブジェクトを初期化した後、 シーン固有の初期化処理を実行する \Hypertarget{class_scene_1_1_scene_a2a34e5eb678573136d7bf7193743f48b}\index{Scene::Scene@{Scene::Scene}!SceneDraw@{SceneDraw}}
+\index{SceneDraw@{SceneDraw}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{SceneDraw()}{SceneDraw()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_a2a34e5eb678573136d7bf7193743f48b} 
+virtual void Scene\+::\+Scene\+::\+Scene\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+シーン固有の描画処理 
+
+継承先で必要に応じてオーバーライドして使用 \Hypertarget{class_scene_1_1_scene_a50f548646a99229d829606780084c3ec}\index{Scene::Scene@{Scene::Scene}!SceneEnd@{SceneEnd}}
+\index{SceneEnd@{SceneEnd}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{SceneEnd()}{SceneEnd()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_a50f548646a99229d829606780084c3ec} 
+virtual void Scene\+::\+Scene\+::\+Scene\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+シーン固有の終了処理 
+
+継承先で必要に応じてオーバーライドして使用 \Hypertarget{class_scene_1_1_scene_a0276ae14023f76a6120427f4e0b76594}\index{Scene::Scene@{Scene::Scene}!SceneInit@{SceneInit}}
+\index{SceneInit@{SceneInit}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{SceneInit()}{SceneInit()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_a0276ae14023f76a6120427f4e0b76594} 
+virtual void Scene\+::\+Scene\+::\+Scene\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+シーン固有の初期化処理 
+
+継承先で必要に応じてオーバーライドして使用 \Hypertarget{class_scene_1_1_scene_afe1ef3b216b799a087065f83994e6f14}\index{Scene::Scene@{Scene::Scene}!SceneUpdate@{SceneUpdate}}
+\index{SceneUpdate@{SceneUpdate}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{SceneUpdate()}{SceneUpdate()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_afe1ef3b216b799a087065f83994e6f14} 
+virtual void Scene\+::\+Scene\+::\+Scene\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+シーン固有の更新処理 
+
+継承先で必要に応じてオーバーライドして使用 \Hypertarget{class_scene_1_1_scene_a73f23e5f404cd6faec726954a713fa5e}\index{Scene::Scene@{Scene::Scene}!Update@{Update}}
+\index{Update@{Update}!Scene::Scene@{Scene::Scene}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_scene_1_1_scene_a73f23e5f404cd6faec726954a713fa5e} 
+virtual void Scene\+::\+Scene\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+シーンの更新処理 
+
+シーン内の全オブジェクトを更新した後、 シーン固有の更新処理を実行する 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/自作ゲーム/音ゲー制作エンジン -\/ コピー/src/Scene.\+h\end{DoxyCompactItemize}

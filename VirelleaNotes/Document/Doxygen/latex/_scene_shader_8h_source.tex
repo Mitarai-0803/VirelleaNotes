@@ -1,0 +1,37 @@
+\doxysection{Scene\+Shader.\+h}
+\hypertarget{_scene_shader_8h_source}{}\label{_scene_shader_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneShader.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneShader.h}}
+\mbox{\hyperlink{_scene_shader_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_component_model}{ComponentModel}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_component_filter_fade}{ComponentFilterFade}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_shader}{SceneShader}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_1_1_base}{Scene::Base}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{_type_info_8h_aed9c544bcefbc45da9189a4c3d3e4d6c}{BP\_CLASS\_DECL}}(\mbox{\hyperlink{class_scene_shader}{SceneShader}},\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}シェーダーサンプル"{}});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scene_shader_a9ee5c3909568c87e8ffbe30e4b02a06b}{Init}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_shader_a96a9c0abbcfd8dde84ae70ad5c9b7328}{Update}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_shader_a6a3f417ca4c4cb61767c50692fce8e96}{Draw}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_shader_a1c3983d76b76fa6a37b0f501703fa637}{Exit}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_shader_a57c8e178c88314f6cc753854bf20ab43}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ std::shared\_ptr<ComponentModel>\ \ \ \ \ \ model\_;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ std::shared\_ptr<ComponentFilterFade>\ filter\_fade\_;\ \ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ std::shared\_ptr<Texture>\ \ texture\_;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ std::shared\_ptr<ShaderVs>\ shader\_vs\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<ShaderPs>\ shader\_ps\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<ShaderPs>\ shader\_ps\_3d\_;\ \ \ \ }
+\DoxyCodeLine{00034\ \};}
+
+\end{DoxyCode}

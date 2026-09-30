@@ -1,0 +1,11 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="Node000000" href="$class_component_base.html" title="コンポーネント基底クラス" alt="" coords="5,56,124,83"/>
+<area shape="rect" id="Node000001" href="$class_collision_component.html" title="&lt; Shape" alt="" coords="172,56,310,83"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="139,67,174,69,169,70,140,72"/>
+<area shape="rect" id="Node000002" href="$class_box_collider_component.html" title=" " alt="" coords="358,5,513,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="309,49,384,32,379,33,311,54"/>
+<area shape="rect" id="Node000003" href="$class_capsule_collider.html" title="&lt; PhysicsSystem" alt="" coords="379,56,492,83"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="325,67,382,69,376,70,326,72"/>
+<area shape="rect" id="Node000004" href="$class_sphere_collider.html" title="&lt; PhysicsSystem" alt="" coords="382,107,489,133"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="310,85,385,106,379,106,310,90"/>
+</map>

@@ -1,0 +1,53 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/\+Component\+Model.h ファイル}
+\hypertarget{_component_model_8h}{}\label{_component_model_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentModel.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentModel.h}}
+
+
+モデルコンポーネント  
+
+
+{\ttfamily \#include $<$System/\+Component/\+Component.\+h$>$}\newline
+{\ttfamily \#include $<$System/\+Component/\+Component\+Transform.\+h$>$}\newline
+{\ttfamily \#include $<$System/\+Graphics/\+Animation.\+h$>$}\newline
+{\ttfamily \#include $<$Im\+Guizmo/\+Im\+Guizmo.\+h$>$}\newline
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_component_model}{Component\+Model}}
+\begin{DoxyCompactList}\small\item\em モデルコンポーネントクラス \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_component_model_1_1_material}{Component\+Model\+::\+Material}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_component_model_8h_a269c713c1baeaa711e90c307551ce8ce}\label{_component_model_8h_a269c713c1baeaa711e90c307551ce8ce} 
+{\bfseries USING\+\_\+\+PTR} (\mbox{\hyperlink{class_component_model}{Component\+Model}})
+\item 
+\mbox{\hyperlink{_component_model_8h_a5b2d65fb9bfe3c33c28b555d96abc56d}{CEREAL\+\_\+\+SAVELOAD\+\_\+\+OTHER}} (\mbox{\hyperlink{struct_animation_1_1_desc}{Animation\+::\+Desc}}, arc, other)
+\begin{DoxyCompactList}\small\item\em 外部\+Animation\+::\+Descのセーブロード \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+モデルコンポーネント 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_component_model_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_component_model_8h_a5b2d65fb9bfe3c33c28b555d96abc56d}\index{ComponentModel.h@{ComponentModel.h}!CEREAL\_SAVELOAD\_OTHER@{CEREAL\_SAVELOAD\_OTHER}}
+\index{CEREAL\_SAVELOAD\_OTHER@{CEREAL\_SAVELOAD\_OTHER}!ComponentModel.h@{ComponentModel.h}}
+\doxysubsubsection{\texorpdfstring{CEREAL\_SAVELOAD\_OTHER()}{CEREAL\_SAVELOAD\_OTHER()}}
+{\footnotesize\ttfamily \label{_component_model_8h_a5b2d65fb9bfe3c33c28b555d96abc56d} 
+CEREAL\+\_\+\+SAVELOAD\+\_\+\+OTHER (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_animation_1_1_desc}{Animation\+::\+Desc}}}]{}{, }\item[{arc}]{}{, }\item[{other}]{}{}\end{DoxyParamCaption})}
+
+
+
+外部\+Animation\+::\+Descのセーブロード 
+
+\texorpdfstring{$<$}{<} アニメーション名(任意)
+
+\texorpdfstring{$<$}{<} ファイルパス
+
+\texorpdfstring{$<$}{<} ファイル内のアニメーション番号
+
+\texorpdfstring{$<$}{<} アニメーションの再生速度(default\+:1.\+0f)

@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Object::WaterObject クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_object_1_1_water_object.html','','class_object_1_1_water_object-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Object::WaterObject クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>波紋シミュレーションを行う水面オブジェクト  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_water_object_8h_source.html">WaterObject.h</a>&gt;</code></p>
+<div class="dynheader">
+Object::WaterObject の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_1_1_water_object__inherit__graph.png" border="0" usemap="#a_object_1_1_water_object_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="a_object_1_1_water_object_inherit__map" id="a_object_1_1_water_object_inherit__map">
+<area shape="rect" title="波紋シミュレーションを行う水面オブジェクト" alt="" coords="5,688,175,1120"/>
+<area shape="rect" href="class_object_1_1_object_base3_d.html" title=" " alt="" coords="20,443,161,640"/>
+<area shape="poly" title=" " alt="" coords="91,652,93,688,88,688,90,657"/>
+<area shape="rect" href="class_object_1_1_object_base.html" title=" " alt="" coords="28,5,153,395"/>
+<area shape="poly" title=" " alt="" coords="91,407,93,443,88,443,90,412"/>
+</map>
+</div>
+<div class="dynheader">
+Object::WaterObject 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="class_object_1_1_water_object__coll__graph.png" border="0" usemap="#a_object_1_1_water_object_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_object_1_1_water_object_coll__map" id="a_object_1_1_water_object_coll__map">
+<area shape="rect" title="波紋シミュレーションを行う水面オブジェクト" alt="" coords="5,688,175,1120"/>
+<area shape="rect" href="class_object_1_1_object_base3_d.html" title=" " alt="" coords="20,443,161,640"/>
+<area shape="poly" title=" " alt="" coords="91,652,93,688,88,688,90,657"/>
+<area shape="rect" href="class_object_1_1_object_base.html" title=" " alt="" coords="28,5,153,395"/>
+<area shape="poly" title=" " alt="" coords="91,407,93,443,88,443,90,412"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a00d60e92d4b07497ac4f2c5ddf1c4332" id="r_a00d60e92d4b07497ac4f2c5ddf1c4332"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00d60e92d4b07497ac4f2c5ddf1c4332">WaterObject</a> (int width, int height, VECTOR pos, float scale=0.125f)</td></tr>
+<tr class="memdesc:a00d60e92d4b07497ac4f2c5ddf1c4332"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ  <br /></td></tr>
+<tr class="memitem:ad63d9b50b24b4ac6f56aed6a25a2556e" id="r_ad63d9b50b24b4ac6f56aed6a25a2556e"><td class="memItemLeft" align="right" valign="top"><a id="ad63d9b50b24b4ac6f56aed6a25a2556e" name="ad63d9b50b24b4ac6f56aed6a25a2556e"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~WaterObject</b> ()=default</td></tr>
+<tr class="memdesc:ad63d9b50b24b4ac6f56aed6a25a2556e"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr class="memitem:a1d6c44013bdc6f102a9dfd01c9b90e66" id="r_a1d6c44013bdc6f102a9dfd01c9b90e66"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1d6c44013bdc6f102a9dfd01c9b90e66">GetWidth</a> () const</td></tr>
+<tr class="memdesc:a1d6c44013bdc6f102a9dfd01c9b90e66"><td class="mdescLeft">&#160;</td><td class="mdescRight">水面グリッドの横分割数を取得する  <br /></td></tr>
+<tr class="memitem:adee16fbf36ed27e37e97ccd6b286d989" id="r_adee16fbf36ed27e37e97ccd6b286d989"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adee16fbf36ed27e37e97ccd6b286d989">GetHeight</a> () const</td></tr>
+<tr class="memdesc:adee16fbf36ed27e37e97ccd6b286d989"><td class="mdescLeft">&#160;</td><td class="mdescRight">水面グリッドの縦分割数を取得する  <br /></td></tr>
+<tr class="memitem:a4c494228ef1c600f9f8d76f353f4c0a2" id="r_a4c494228ef1c600f9f8d76f353f4c0a2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c494228ef1c600f9f8d76f353f4c0a2">GetScale</a> () const</td></tr>
+<tr class="memdesc:a4c494228ef1c600f9f8d76f353f4c0a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッド1マスのワールドサイズを取得する  <br /></td></tr>
+<tr class="memitem:aa160fe0115da17a082e8dbd4c2aa4506" id="r_aa160fe0115da17a082e8dbd4c2aa4506"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa160fe0115da17a082e8dbd4c2aa4506">SetScale</a> (float scale)</td></tr>
+<tr class="memdesc:aa160fe0115da17a082e8dbd4c2aa4506"><td class="mdescLeft">&#160;</td><td class="mdescRight">グリッド1マスのワールドサイズを設定する  <br /></td></tr>
+<tr class="memitem:a6c5d96f2ebc7f1b913a991a3c4e15ab2" id="r_a6c5d96f2ebc7f1b913a991a3c4e15ab2"><td class="memItemLeft" align="right" valign="top">VECTOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c5d96f2ebc7f1b913a991a3c4e15ab2">GetDrawPosition</a> () const</td></tr>
+<tr class="memdesc:a6c5d96f2ebc7f1b913a991a3c4e15ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">水面の描画原点座標を取得する  <br /></td></tr>
+<tr class="memitem:a01f631f0c2fbb078d140091508f8b299" id="r_a01f631f0c2fbb078d140091508f8b299"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01f631f0c2fbb078d140091508f8b299">SetDrawPosition</a> (const VECTOR &amp;pos)</td></tr>
+<tr class="memdesc:a01f631f0c2fbb078d140091508f8b299"><td class="mdescLeft">&#160;</td><td class="mdescRight">水面の描画原点座標を設定する  <br /></td></tr>
+<tr class="memitem:aa2d5e74cac950132593deb3693104e40" id="r_aa2d5e74cac950132593deb3693104e40"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2d5e74cac950132593deb3693104e40">GetSurfaceY</a> () const</td></tr>
+<tr class="memdesc:aa2d5e74cac950132593deb3693104e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">水面のワールドY座標を取得する  <br /></td></tr>
+<tr class="memitem:afa21ba50de5c75fcbe201ac06bf7d517" id="r_afa21ba50de5c75fcbe201ac06bf7d517"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa21ba50de5c75fcbe201ac06bf7d517">SetSurfaceY</a> (float y)</td></tr>
+<tr class="memdesc:afa21ba50de5c75fcbe201ac06bf7d517"><td class="mdescLeft">&#160;</td><td class="mdescRight">水面のワールドY座標のみを設定する  <br /></td></tr>
+<tr class="memitem:ac6803802252ab7f1d4d515a8f6e85d8f" id="r_ac6803802252ab7f1d4d515a8f6e85d8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6803802252ab7f1d4d515a8f6e85d8f">Reset</a> ()</td></tr>
+<tr class="memdesc:ac6803802252ab7f1d4d515a8f6e85d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">水面の高さをすべてリセットする  <br /></td></tr>
+<tr class="memitem:a7b0c0de7f4f3cf3406ec2af4a271961a" id="r_a7b0c0de7f4f3cf3406ec2af4a271961a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b0c0de7f4f3cf3406ec2af4a271961a">AddImpulse</a> (int x, int z, float impulse)</td></tr>
+<tr class="memdesc:a7b0c0de7f4f3cf3406ec2af4a271961a"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定グリッド座標に衝撃（波）を与える  <br /></td></tr>
+<tr class="memitem:ad690d6b5e9160065c126f388c84a25c6" id="r_ad690d6b5e9160065c126f388c84a25c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad690d6b5e9160065c126f388c84a25c6">AddImpulseAtWorldPos</a> (float wx, float wz, float impulse)</td></tr>
+<tr class="memdesc:ad690d6b5e9160065c126f388c84a25c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド座標を使って波紋を起こす  <br /></td></tr>
+<tr class="memitem:a01ede4425c7d3e6ba6a7344d6b2660f2" id="r_a01ede4425c7d3e6ba6a7344d6b2660f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01ede4425c7d3e6ba6a7344d6b2660f2">GetHeightAtWorldPos</a> (float wx, float wz) const</td></tr>
+<tr class="memdesc:a01ede4425c7d3e6ba6a7344d6b2660f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ワールド座標の波高（水位からの相対高さ）を取得する  <br /></td></tr>
+<tr class="inherit_header pub_methods_class_object_1_1_object_base3_d"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_object_1_1_object_base3_d')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_object_1_1_object_base3_d.html">Object::ObjectBase3D</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a91e00e78cef7b17900b25a2a876589b8 inherit pub_methods_class_object_1_1_object_base3_d" id="r_a91e00e78cef7b17900b25a2a876589b8"><td class="memItemLeft" align="right" valign="top">
+JPH::RVec3&#160;</td><td class="memItemRight" valign="bottom"><b>GetPosition</b> () const</td></tr>
+<tr class="memitem:a0bf37715155b8cfaab34018e150c1a9f inherit pub_methods_class_object_1_1_object_base3_d" id="r_a0bf37715155b8cfaab34018e150c1a9f"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPosition</b> (const JPH::RVec3 &amp;pos)</td></tr>
+<tr class="memitem:ae349c401bb863d78ac830393717f4ad7 inherit pub_methods_class_object_1_1_object_base3_d" id="r_ae349c401bb863d78ac830393717f4ad7"><td class="memItemLeft" align="right" valign="top">
+JPH::Quat&#160;</td><td class="memItemRight" valign="bottom"><b>GetRotation</b> () const</td></tr>
+<tr class="memitem:a836fb9779e01308f6f2c01875761f9f1 inherit pub_methods_class_object_1_1_object_base3_d" id="r_a836fb9779e01308f6f2c01875761f9f1"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRotation</b> (const JPH::Quat &amp;rot)</td></tr>
+<tr class="inherit_header pub_methods_class_object_1_1_object_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_object_1_1_object_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_object_1_1_object_base.html">Object::ObjectBase</a> に属する継承公開メンバ関数</td></tr>
+<tr class="memitem:a3159a0a90973e5da88ebc0cc2d64e713 inherit pub_methods_class_object_1_1_object_base" id="r_a3159a0a90973e5da88ebc0cc2d64e713"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>ObjectBase</b> ()=default</td></tr>
+<tr class="memdesc:a3159a0a90973e5da88ebc0cc2d64e713 inherit pub_methods_class_object_1_1_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンストラクタ <br /></td></tr>
+<tr class="memitem:af53775f0db55e72971bd8bfed4ba6809 inherit pub_methods_class_object_1_1_object_base" id="r_af53775f0db55e72971bd8bfed4ba6809"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_1_1_object_base.html#af53775f0db55e72971bd8bfed4ba6809">~ObjectBase</a> ()</td></tr>
+<tr class="memdesc:af53775f0db55e72971bd8bfed4ba6809 inherit pub_methods_class_object_1_1_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <br /></td></tr>
+<tr class="memitem:a16b478109bc4787d7095706ba6d7cdfb inherit pub_methods_class_object_1_1_object_base" id="r_a16b478109bc4787d7095706ba6d7cdfb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_1_1_object_base.html#a16b478109bc4787d7095706ba6d7cdfb">GetName</a> () const</td></tr>
+<tr class="memdesc:a16b478109bc4787d7095706ba6d7cdfb inherit pub_methods_class_object_1_1_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト名の取得  <br /></td></tr>
+<tr class="memitem:a43a3db5dead3b21fedc32ad1145d7966 inherit pub_methods_class_object_1_1_object_base" id="r_a43a3db5dead3b21fedc32ad1145d7966"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetName</b> (const std::string &amp;n)</td></tr>
+<tr class="memdesc:a43a3db5dead3b21fedc32ad1145d7966 inherit pub_methods_class_object_1_1_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">オブジェクト名の設定 <br /></td></tr>
+<tr class="memitem:a422cbe7d856b9292d4a45ec4c135c792 inherit pub_methods_class_object_1_1_object_base" id="r_a422cbe7d856b9292d4a45ec4c135c792"><td class="memTemplParams" colspan="2">
+template&lt;typename T, typename... Args&gt; </td></tr>
+<tr class="memitem:a422cbe7d856b9292d4a45ec4c135c792 inherit pub_methods_class_object_1_1_object_base template"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>AddComponent</b> (Args &amp;&amp;... args)</td></tr>
+<tr class="memdesc:a422cbe7d856b9292d4a45ec4c135c792 inherit pub_methods_class_object_1_1_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネント追加 <br /></td></tr>
+<tr class="memitem:ac6b0a1cda5413d3b3d110d2316bd7536 inherit pub_methods_class_object_1_1_object_base" id="r_ac6b0a1cda5413d3b3d110d2316bd7536"><td class="memTemplParams" colspan="2">template&lt;typename T&gt; </td></tr>
+<tr class="memitem:ac6b0a1cda5413d3b3d110d2316bd7536 inherit pub_methods_class_object_1_1_object_base template"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_object_1_1_object_base.html#ac6b0a1cda5413d3b3d110d2316bd7536">GetComponent</a> () const</td></tr>
+<tr class="memdesc:ac6b0a1cda5413d3b3d110d2316bd7536 inherit pub_methods_class_object_1_1_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">コンポーネント取得  <br /></td></tr>
+<tr class="memitem:a5c14cf4ce43fdee3ca1a97ef7c564d88 inherit pub_methods_class_object_1_1_object_base" id="r_a5c14cf4ce43fdee3ca1a97ef7c564d88"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> ()</td></tr>
+<tr class="memdesc:a5c14cf4ce43fdee3ca1a97ef7c564d88 inherit pub_methods_class_object_1_1_object_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライフサイクル呼び出し <br /></td></tr>
+<tr class="memitem:a3e066e420019edf3b5013b135cf7150b inherit pub_methods_class_object_1_1_object_base" id="r_a3e066e420019edf3b5013b135cf7150b"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:a072d864e918492bacd4204e2bc20d79e inherit pub_methods_class_object_1_1_object_base" id="r_a072d864e918492bacd4204e2bc20d79e"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawDebug</b> ()</td></tr>
+<tr class="memitem:a8352b0b45f5ec31d9bd98654012e0e9a inherit pub_methods_class_object_1_1_object_base" id="r_a8352b0b45f5ec31d9bd98654012e0e9a"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Draw</b> ()</td></tr>
+<tr class="memitem:a953c837527492a698c985224d4c0a0c4 inherit pub_methods_class_object_1_1_object_base" id="r_a953c837527492a698c985224d4c0a0c4"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>End</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a9fa6dcf14538f81833138290c4a2b05d" id="r_a9fa6dcf14538f81833138290c4a2b05d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9fa6dcf14538f81833138290c4a2b05d">OnInit</a> () override</td></tr>
+<tr class="memdesc:a9fa6dcf14538f81833138290c4a2b05d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化処理  <br /></td></tr>
+<tr class="memitem:ab4be64ca39fab150fcf8e8b0a72049bd" id="r_ab4be64ca39fab150fcf8e8b0a72049bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4be64ca39fab150fcf8e8b0a72049bd">OnUpdate</a> () override</td></tr>
+<tr class="memdesc:ab4be64ca39fab150fcf8e8b0a72049bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新処理  <br /></td></tr>
+<tr class="memitem:a59cf25769549d5744da6526ca79d9b86" id="r_a59cf25769549d5744da6526ca79d9b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59cf25769549d5744da6526ca79d9b86">OnDraw</a> () override</td></tr>
+<tr class="memdesc:a59cf25769549d5744da6526ca79d9b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画処理  <br /></td></tr>
+<tr class="memitem:a8a485d874c57a5aba8fcbd7a8c8604c4" id="r_a8a485d874c57a5aba8fcbd7a8c8604c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a485d874c57a5aba8fcbd7a8c8604c4">OnEnd</a> () override</td></tr>
+<tr class="memdesc:a8a485d874c57a5aba8fcbd7a8c8604c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了処理  <br /></td></tr>
+<tr class="inherit_header pro_methods_class_object_1_1_object_base"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_object_1_1_object_base')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_object_1_1_object_base.html">Object::ObjectBase</a> に属する継承限定公開メンバ関数</td></tr>
+<tr class="memitem:a379beeaa6ff2a3f15f6d008359fabe64 inherit pro_methods_class_object_1_1_object_base" id="r_a379beeaa6ff2a3f15f6d008359fabe64"><td class="memItemLeft" align="right" valign="top">
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDrawDebug</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
+その他の継承メンバ</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_object_1_1_object_base3_d"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_object_1_1_object_base3_d')"><span class="dynarrow"><span class="arrowhead closed"></span></span>基底クラス <a class="el" href="class_object_1_1_object_base3_d.html">Object::ObjectBase3D</a> に属する継承限定公開変数類</td></tr>
+<tr class="memitem:af5104ab6bd0505926fdbed1716ccfb84 inherit pro_attribs_class_object_1_1_object_base3_d" id="r_af5104ab6bd0505926fdbed1716ccfb84"><td class="memItemLeft" align="right" valign="top">
+JPH::RVec3&#160;</td><td class="memItemRight" valign="bottom"><b>m_pos</b> = JPH::RVec3(0.0f, 0.0f, 0.0f)</td></tr>
+<tr class="memdesc:af5104ab6bd0505926fdbed1716ccfb84 inherit pro_attribs_class_object_1_1_object_base3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">手動設定の座標 <br /></td></tr>
+<tr class="memitem:afa7eaa164db533a4cba9b735db62ba7c inherit pro_attribs_class_object_1_1_object_base3_d" id="r_afa7eaa164db533a4cba9b735db62ba7c"><td class="memItemLeft" align="right" valign="top">
+JPH::Quat&#160;</td><td class="memItemRight" valign="bottom"><b>m_rot</b> = JPH::Quat::sIdentity()</td></tr>
+<tr class="memdesc:afa7eaa164db533a4cba9b735db62ba7c inherit pro_attribs_class_object_1_1_object_base3_d"><td class="mdescLeft">&#160;</td><td class="mdescRight">手動設定の回転 <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>波紋シミュレーションを行う水面オブジェクト </p>
+<ul>
+<li>コンストラクタは引数を保存するだけに留め、 実際のバッファ確保や初期波生成は <a class="el" href="#a9fa6dcf14538f81833138290c4a2b05d" title="初期化処理">OnInit()</a> で行う</li>
+<li>グリッド状の高さバッファ(現在・前・次フレーム)を使い 有限差分法で波の伝播を毎フレーム更新する</li>
+<li>描画用の頂点バッファも <a class="el" href="#a9fa6dcf14538f81833138290c4a2b05d" title="初期化処理">OnInit()</a> で一度だけ確保し、 <a class="el" href="#a59cf25769549d5744da6526ca79d9b86" title="描画処理">OnDraw()</a> では値の書き換えのみ行う（毎フレームのヒープ確保を避けるため）</li>
+<li>DXLib の TriangleStrip でグリッドをリアルタイム描画する</li>
+<li><a class="el" href="class_object_1_1_object_base3_d.html">ObjectBase3D</a> を継承し、シーンのオブジェクトリストで ライフサイクル管理(Init / Update / Draw / End)される</li>
+<li>外部から状態を変更する場合は必ず Set 系メソッドを使用し、 メンバ変数への直接アクセスは行わない（カプセル化を維持する） </li>
+</ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="a00d60e92d4b07497ac4f2c5ddf1c4332" name="a00d60e92d4b07497ac4f2c5ddf1c4332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d60e92d4b07497ac4f2c5ddf1c4332">&#9670;&#160;</a></span>WaterObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Object::WaterObject::WaterObject </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">VECTOR</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0.125f</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コンストラクタ </p>
+<p>値の保存のみ行い、バッファ確保などの重い処理は行わない。 実際の初期化は <a class="el" href="#a9fa6dcf14538f81833138290c4a2b05d" title="初期化処理">OnInit()</a> で行われる。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>水面グリッドの横分割数（頂点数） </td></tr>
+    <tr><td class="paramname">height</td><td>水面グリッドの縦分割数（頂点数） </td></tr>
+    <tr><td class="paramname">pos</td><td>水面の描画原点座標（DXLib VECTOR） </td></tr>
+    <tr><td class="paramname">scale</td><td>グリッド1マスのワールドサイズ（デフォルト 0.125f） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a7b0c0de7f4f3cf3406ec2af4a271961a" name="a7b0c0de7f4f3cf3406ec2af4a271961a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b0c0de7f4f3cf3406ec2af4a271961a">&#9670;&#160;</a></span>AddImpulse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::AddImpulse </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>impulse</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定グリッド座標に衝撃（波）を与える </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>衝撃を与えるグリッドX座標（1 〜 width-2） </td></tr>
+    <tr><td class="paramname">z</td><td>衝撃を与えるグリッドZ座標（1 〜 height-2） </td></tr>
+    <tr><td class="paramname">impulse</td><td>現在フレームの高さに加算する値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>境界ピクセルには加算されない（シミュレーションの安定性のため） </dd></dl>
+
+</div>
+</div>
+<a id="ad690d6b5e9160065c126f388c84a25c6" name="ad690d6b5e9160065c126f388c84a25c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad690d6b5e9160065c126f388c84a25c6">&#9670;&#160;</a></span>AddImpulseAtWorldPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::AddImpulseAtWorldPos </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>wx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>wz</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>impulse</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ワールド座標を使って波紋を起こす </p>
+<p>ワールドXZ座標をグリッド座標に変換して AddImpulse を呼ぶ。 コライダーの位置をそのまま渡せるため、衝突検出との連携が簡単になる。 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wx</td><td>ワールドX座標 </td></tr>
+    <tr><td class="paramname">wz</td><td>ワールドZ座標 </td></tr>
+    <tr><td class="paramname">impulse</td><td>高さへの加算値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>グリッド範囲外の座標は AddImpulse 内で安全に弾かれる </dd></dl>
+
+</div>
+</div>
+<a id="a6c5d96f2ebc7f1b913a991a3c4e15ab2" name="a6c5d96f2ebc7f1b913a991a3c4e15ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c5d96f2ebc7f1b913a991a3c4e15ab2">&#9670;&#160;</a></span>GetDrawPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VECTOR Object::WaterObject::GetDrawPosition </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>水面の描画原点座標を取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>描画原点座標（DXLib VECTOR） </dd></dl>
+
+</div>
+</div>
+<a id="adee16fbf36ed27e37e97ccd6b286d989" name="adee16fbf36ed27e37e97ccd6b286d989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee16fbf36ed27e37e97ccd6b286d989">&#9670;&#160;</a></span>GetHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Object::WaterObject::GetHeight </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>水面グリッドの縦分割数を取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>グリッド縦分割数 </dd></dl>
+
+</div>
+</div>
+<a id="a01ede4425c7d3e6ba6a7344d6b2660f2" name="a01ede4425c7d3e6ba6a7344d6b2660f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01ede4425c7d3e6ba6a7344d6b2660f2">&#9670;&#160;</a></span>GetHeightAtWorldPos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Object::WaterObject::GetHeightAtWorldPos </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>wx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>wz</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定ワールド座標の波高（水位からの相対高さ）を取得する </p>
+<p>浮力計算（オブジェクトを水面に浮かせる演出）などに利用できる </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wx</td><td>ワールドX座標 </td></tr>
+    <tr><td class="paramname">wz</td><td>ワールドZ座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>波高（範囲外の場合は 0.0f を返す） </dd></dl>
+
+</div>
+</div>
+<a id="a4c494228ef1c600f9f8d76f353f4c0a2" name="a4c494228ef1c600f9f8d76f353f4c0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c494228ef1c600f9f8d76f353f4c0a2">&#9670;&#160;</a></span>GetScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Object::WaterObject::GetScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>グリッド1マスのワールドサイズを取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>スケール値 </dd></dl>
+
+</div>
+</div>
+<a id="aa2d5e74cac950132593deb3693104e40" name="aa2d5e74cac950132593deb3693104e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2d5e74cac950132593deb3693104e40">&#9670;&#160;</a></span>GetSurfaceY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Object::WaterObject::GetSurfaceY </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>水面のワールドY座標を取得する </p>
+<p>衝突判定の閾値として外部から参照するために用意している </p><dl class="section return"><dt>戻り値</dt><dd>描画原点の Y 値（静水面の高さ） </dd></dl>
+
+</div>
+</div>
+<a id="a1d6c44013bdc6f102a9dfd01c9b90e66" name="a1d6c44013bdc6f102a9dfd01c9b90e66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d6c44013bdc6f102a9dfd01c9b90e66">&#9670;&#160;</a></span>GetWidth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Object::WaterObject::GetWidth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>水面グリッドの横分割数を取得する </p>
+<dl class="section return"><dt>戻り値</dt><dd>グリッド横分割数 </dd></dl>
+
+</div>
+</div>
+<a id="a59cf25769549d5744da6526ca79d9b86" name="a59cf25769549d5744da6526ca79d9b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59cf25769549d5744da6526ca79d9b86">&#9670;&#160;</a></span>OnDraw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::OnDraw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>描画処理 </p>
+<p><a class="el" href="#a9fa6dcf14538f81833138290c4a2b05d" title="初期化処理">OnInit()</a> で確保済みの m_vertexBuffer の値だけを書き換えて描画する。 毎フレームの std::vector ヒープ確保を避けるための最適化。 ObjectBase::Draw() から呼ばれる </p>
+
+<p><a class="el" href="class_object_1_1_object_base.html">Object::ObjectBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a8a485d874c57a5aba8fcbd7a8c8604c4" name="a8a485d874c57a5aba8fcbd7a8c8604c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a485d874c57a5aba8fcbd7a8c8604c4">&#9670;&#160;</a></span>OnEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::OnEnd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>終了処理 </p>
+<p>使用リソースを解放する ObjectBase::End() から呼ばれる </p>
+
+<p><a class="el" href="class_object_1_1_object_base.html">Object::ObjectBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="a9fa6dcf14538f81833138290c4a2b05d" name="a9fa6dcf14538f81833138290c4a2b05d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fa6dcf14538f81833138290c4a2b05d">&#9670;&#160;</a></span>OnInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::OnInit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>初期化処理 </p>
+<p>高さバッファのリサイズ、中央への初期波生成に加えて、 描画用頂点バッファ（m_vertexBuffer）の事前確保もここで行う。 <a class="el" href="class_object_1_1_object_base.html#a5c14cf4ce43fdee3ca1a97ef7c564d88" title="ライフサイクル呼び出し">ObjectBase::Init()</a> から呼ばれる。 </p>
+
+<p><a class="el" href="class_object_1_1_object_base.html">Object::ObjectBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="ab4be64ca39fab150fcf8e8b0a72049bd" name="ab4be64ca39fab150fcf8e8b0a72049bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4be64ca39fab150fcf8e8b0a72049bd">&#9670;&#160;</a></span>OnUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::OnUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>更新処理 </p>
+<p>有限差分法で波の伝播を1ステップ進める ObjectBase::Update() から呼ばれる </p>
+
+<p><a class="el" href="class_object_1_1_object_base.html">Object::ObjectBase</a>を再実装しています。</p>
+
+</div>
+</div>
+<a id="ac6803802252ab7f1d4d515a8f6e85d8f" name="ac6803802252ab7f1d4d515a8f6e85d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6803802252ab7f1d4d515a8f6e85d8f">&#9670;&#160;</a></span>Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::Reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>水面の高さをすべてリセットする </p>
+<p>現フレームバッファと前フレームバッファを 0 でクリアする </p>
+
+</div>
+</div>
+<a id="a01f631f0c2fbb078d140091508f8b299" name="a01f631f0c2fbb078d140091508f8b299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01f631f0c2fbb078d140091508f8b299">&#9670;&#160;</a></span>SetDrawPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::SetDrawPosition </td>
+          <td>(</td>
+          <td class="paramtype">const VECTOR &amp;</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>水面の描画原点座標を設定する </p>
+<p>水面を別の位置へ丸ごと移動させたい場合に使用する </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>新しい描画原点座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa160fe0115da17a082e8dbd4c2aa4506" name="aa160fe0115da17a082e8dbd4c2aa4506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa160fe0115da17a082e8dbd4c2aa4506">&#9670;&#160;</a></span>SetScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::SetScale </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>グリッド1マスのワールドサイズを設定する </p>
+<p>0以下の値は無視する（0除算防止） </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scale</td><td>新しいスケール値 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afa21ba50de5c75fcbe201ac06bf7d517" name="afa21ba50de5c75fcbe201ac06bf7d517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa21ba50de5c75fcbe201ac06bf7d517">&#9670;&#160;</a></span>SetSurfaceY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Object::WaterObject::SetSurfaceY </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>y</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>水面のワールドY座標のみを設定する </p>
+<p>増水パズルなど、水位を時間経過で上下させる演出に使用する </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">y</td><td>新しい水面の高さ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>F:/sg mitarai/ReoEngine/src/<a class="el" href="_water_object_8h_source.html">WaterObject.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Object</b></li><li class="navelem"><a href="class_object_1_1_water_object.html">WaterObject</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

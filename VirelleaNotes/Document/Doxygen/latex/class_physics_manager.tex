@@ -1,0 +1,60 @@
+\doxysection{Physics\+Manager クラス}
+\hypertarget{class_physics_manager}{}\label{class_physics_manager}\index{PhysicsManager@{PhysicsManager}}
+
+
+\texorpdfstring{$<$}{<} ★\+Body\+Managerを使えるようにインクルード  
+
+
+
+
+{\ttfamily \#include $<$Jolt\+Physics.\+h$>$}
+
+
+
+Physics\+Manager 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_physics_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_physics_manager_aab262ac40685486b71bdacb6c4d41250}\label{class_physics_manager_aab262ac40685486b71bdacb6c4d41250} 
+{\bfseries Physics\+Manager} (const \mbox{\hyperlink{class_physics_manager}{Physics\+Manager}} \&)=delete
+\item 
+\Hypertarget{class_physics_manager_a8ccca15acc8c7e4efcf92abd047e8edc}\label{class_physics_manager_a8ccca15acc8c7e4efcf92abd047e8edc} 
+\mbox{\hyperlink{class_physics_manager}{Physics\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_physics_manager}{Physics\+Manager}} \&)=delete
+\item 
+\Hypertarget{class_physics_manager_a302f58451d4b9542530324e976dc6294}\label{class_physics_manager_a302f58451d4b9542530324e976dc6294} 
+bool {\bfseries Physics\+Manager\+Init} ()
+\item 
+\Hypertarget{class_physics_manager_af50f3441b1c373ad144c8a489e88c6c8}\label{class_physics_manager_af50f3441b1c373ad144c8a489e88c6c8} 
+void {\bfseries Physics\+Manager\+Update} ()
+\item 
+\Hypertarget{class_physics_manager_af466d4baa2c54b8a9d8ffa5df08c4c08}\label{class_physics_manager_af466d4baa2c54b8a9d8ffa5df08c4c08} 
+void {\bfseries Physics\+Manager\+End} ()
+\item 
+\Hypertarget{class_physics_manager_a04f69c3269834c22dae7fd89eff606b2}\label{class_physics_manager_a04f69c3269834c22dae7fd89eff606b2} 
+JPH\+::\+Physics\+System \texorpdfstring{$\ast$}{*} {\bfseries Get\+System} () const
+\item 
+\Hypertarget{class_physics_manager_a73bd82f5384724e98b799f5fffbab5d1}\label{class_physics_manager_a73bd82f5384724e98b799f5fffbab5d1} 
+\mbox{\hyperlink{class_body_manager}{Body\+Manager}} \& {\bfseries Get\+Body\+Manager} ()
+\begin{DoxyCompactList}\small\item\em ★追加：\+Body\+Managerを外部から使えるようにする \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_physics_manager_ad9acfdbad2931f6ddd907e4068df12bc}\label{class_physics_manager_ad9acfdbad2931f6ddd907e4068df12bc} 
+static \mbox{\hyperlink{class_physics_manager}{Physics\+Manager}} \& {\bfseries Get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\texorpdfstring{$<$}{<} ★\+Body\+Managerを使えるようにインクルード 
+
+物理システム（\+Jolt）を1つだけで安全に管理するクラス（シングルトン） 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/Jolt\+Physics.\+h\end{DoxyCompactItemize}

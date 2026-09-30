@@ -1,0 +1,85 @@
+\doxysection{Component\+Attach\+Model.\+h}
+\hypertarget{_component_attach_model_8h_source}{}\label{_component_attach_model_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentAttachModel.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentAttachModel.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_8h}{System/Component/Component.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_cereal_8h}{System/Cereal.h}}>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ USING\_PTR(\mbox{\hyperlink{class_component_attach_model}{ComponentAttachModel}});}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }ComponentAttachModel\ :\ \textcolor{keyword}{public}\ Component}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }Object;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{_component_8h_a544c31f98b90b38818b27eff6683eef6}{BP\_COMPONENT\_DECL}}(ComponentAttachModel,\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}AttachModel機能クラス"{}});}
+\DoxyCodeLine{00014\ \ \ \ \ ComponentAttachModel()\ \{\}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_attach_model_a7c9a7ac992950e2fd77f621f5874fe4d}{Init}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_attach_model_ad7413e471a768dacd504645d01026ed7}{Update}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_attach_model_a77c6b1cfe3e00ab15988582df20ba383}{PostUpdate}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_attach_model_a22baa6e4762c50311aa937c2dbea0b4f}{Draw}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_attach_model_adacbe643d31b9ce803e6e0f9d5dfc1b9}{Exit}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_attach_model_ac722fcf40a7c1b5d92a4937e163002d5}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_attach_model_a5c145a7a89368f86e648fba0500f38d3}{GetPutOnMatrix}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{enum\ struct}\ \mbox{\hyperlink{class_component_attach_model_a4751d9ce09323c804ea0e008d88d2ce4}{AttachModelBit}}\ :\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_attach_model_a4751d9ce09323c804ea0e008d88d2ce4a59d87a4758a9d35fbaf6b204341bb399}{Initialized}},\ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ SetAttachModelStatus(\mbox{\hyperlink{class_component_attach_model_a4751d9ce09323c804ea0e008d88d2ce4}{AttachModelBit}}\ bit,\ \textcolor{keywordtype}{bool}\ on)\ \{\ attach\_model\_status\_.set(bit,\ on);\ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ GetAttachModelStatus(\mbox{\hyperlink{class_component_attach_model_a4751d9ce09323c804ea0e008d88d2ce4}{AttachModelBit}}\ bit)\ \{\ \textcolor{keywordflow}{return}\ attach\_model\_status\_.is(bit);\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ SetAttachObject(ObjectPtr\ \textcolor{keywordtype}{object},\ std::string\_view\ node\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ SetAttachObject(std::string\_view\ name,\ std::string\_view\ node\ =\ \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ SetAttachRotate(float3\ rot)\ \{\ attach\_model\_rotate\_\ =\ rot;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ SetAttachOffset(float3\ offset)\ \{\ attach\_model\_offset\_\ =\ offset;\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ ObjectWeakPtr\ GetAttachObject()\ \{\ \textcolor{keywordflow}{return}\ object\_;\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ Status<AttachModelBit>\ attach\_model\_status\_;\ \ \ \ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ float3\ attach\_model\_rotate\_\{0,\ 0,\ 0\};}
+\DoxyCodeLine{00052\ \ \ \ \ float3\ attach\_model\_offset\_\{0,\ 0,\ 0\};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ ObjectWeakPtr\ object\_;}
+\DoxyCodeLine{00055\ \ \ \ \ std::string\ \ \ object\_name\_\{\};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ object\_node\_index\_\ =\ 0;}
+\DoxyCodeLine{00058\ \ \ \ \ std::string\ object\_node\_name\_\{\};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ node\_manipulate\_\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{//\ @param\ arc\ アーカイバ}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{//\ @param\ ver\ バージョン}}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{_cereal_8h_a7df5c4a4fa530d0bf2831fc2180f0386}{CEREAL\_SAVELOAD}}(arc,\ ver)}
+\DoxyCodeLine{00072\ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}owner"{}},\ \mbox{\hyperlink{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}{owner\_}}));\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//<\ オーナー}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}attach\_model\_status"{}},\ attach\_model\_status\_.get()));\ \ \ \ \textcolor{comment}{//<\ カメラステート}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(attach\_model\_rotate\_));}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(attach\_model\_offset\_));}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(object\_name\_));}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(object\_node\_index\_));}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(object\_node\_name\_));}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ CEREAL\_REGISTER\_TYPE(\mbox{\hyperlink{class_component_attach_model}{ComponentAttachModel}})}
+\DoxyCodeLine{00086\ CEREAL\_REGISTER\_POLYMORPHIC\_RELATION(\mbox{\hyperlink{class_component}{Component}},\ \mbox{\hyperlink{class_component_attach_model}{ComponentAttachModel}})}
+
+\end{DoxyCode}

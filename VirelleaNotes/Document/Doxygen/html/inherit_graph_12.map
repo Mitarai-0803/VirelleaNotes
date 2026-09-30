@@ -1,0 +1,19 @@
+<map id="クラス階層図" name="クラス階層図">
+<area shape="rect" id="Node000000" href="$class_object_1_1_object_base.html" title=" " alt="" coords="5,107,141,133"/>
+<area shape="rect" id="Node000001" href="$class_object_1_1_object_base2_d.html" title=" " alt="" coords="189,81,341,108"/>
+<area shape="poly" id="edge9_Node000000_Node000001" title=" " alt="" coords="155,107,191,103,186,106,157,111"/>
+<area shape="rect" id="Node000002" href="$class_object_1_1_object_base3_d.html" title=" " alt="" coords="189,132,341,159"/>
+<area shape="poly" id="edge10_Node000000_Node000002" title=" " alt="" coords="155,128,191,134,186,136,157,134"/>
+<area shape="rect" id="Node000003" href="$class_object_1_1_box_object.html" title="物理演算ボックスオブジェクト" alt="" coords="402,5,530,32"/>
+<area shape="poly" id="edge11_Node000002_Node000003" title=" " alt="" coords="333,122,339,118,355,100,363,81,370,61,387,42,411,31,406,34,391,46,375,64,367,83,360,103,343,122,336,127"/>
+<area shape="rect" id="Node000004" href="$class_object_1_1_camera_object.html" title=" " alt="" coords="390,56,542,83"/>
+<area shape="poly" id="edge12_Node000002_Node000004" title=" " alt="" coords="324,124,340,118,388,92,422,82,417,84,390,97,342,122,326,129"/>
+<area shape="rect" id="Node000005" href="$class_object_1_1_floor_object.html" title=" " alt="" coords="399,107,533,133"/>
+<area shape="poly" id="edge13_Node000002_Node000005" title=" " alt="" coords="355,131,401,128,396,129,357,136"/>
+<area shape="rect" id="Node000006" href="$class_object_1_1_platform_object.html" title="増水パズル用の静的な足場オブジェクト" alt="" coords="389,157,543,184"/>
+<area shape="poly" id="edge14_Node000002_Node000006" title=" " alt="" coords="356,154,392,161,386,161,357,160"/>
+<area shape="rect" id="Node000007" href="$class_object_1_1_sphere_object.html" title="物理演算球オブジェクト" alt="" coords="393,208,539,235"/>
+<area shape="poly" id="edge15_Node000002_Node000007" title=" " alt="" coords="312,162,390,194,424,207,419,207,388,198,311,168"/>
+<area shape="rect" id="Node000008" href="$class_object_1_1_water_object.html" title="波紋シミュレーションを行う水面オブジェクト" alt="" coords="396,259,536,285"/>
+<area shape="poly" id="edge16_Node000002_Node000008" title=" " alt="" coords="291,167,336,207,390,244,417,258,412,258,388,249,333,211,289,172"/>
+</map>

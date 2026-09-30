@@ -1,0 +1,80 @@
+\doxysection{Light\+Manager.\+h}
+\hypertarget{_light_manager_8h_source}{}\label{_light_manager_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/LightManager.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/LightManager.h}}
+\mbox{\hyperlink{_light_manager_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_light_manager_a2d7ba319fd8a2a3de82fb7ab353cf3ad}{LightManager}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_light_manager_a2d7ba319fd8a2a3de82fb7ab353cf3ad}{LightManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_light_manager_a662bb44330a903cea1625faa8c366bfe}{initialize}}();}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_manager_a03c8e2489cae1fa2be557df1667bf0b9}{update}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_manager_ad403c77e25929b0778cafa0c32a224e5}{finalize}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_light_manager_a2d7ba319fd8a2a3de82fb7ab353cf3ad}{LightManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_light_manager_a2d7ba319fd8a2a3de82fb7ab353cf3ad}{LightManager}}\&)\ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_light_manager_a2d7ba319fd8a2a3de82fb7ab353cf3ad}{LightManager}}(\mbox{\hyperlink{class_light_manager_a2d7ba319fd8a2a3de82fb7ab353cf3ad}{LightManager}}\&\&)\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_light_manager_a2d7ba319fd8a2a3de82fb7ab353cf3ad}{LightManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\mbox{\hyperlink{class_light_manager_a2d7ba319fd8a2a3de82fb7ab353cf3ad}{LightManager}}\&\&)\ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ 定数バッファのデーターとして共用}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ 注意:16バイトの境界にサイズを統一}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ 平行光源\ Directional\ Light}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{struct\ }LightDirectional}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ float3\ color\_\ \ \ \ \ =\ float3(1.0f,\ 1.0f,\ 1.0f);\ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ float3\ light\_dir\_\ =\ float3(0.0f,\ 1.0f,\ 0.0f);\ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ 点光源\ Point\ Light}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{struct\ }LightPoint}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ float3\ color\_\ \ \ \ =\ float3(1.0f,\ 1.0f,\ 1.0f);\ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ float3\ position\_\ =\ float3(0.0f,\ 5.0f,\ 0.0f);\ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ radius\_\ \ \ =\ 10.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ unused1\_\ \ =\ 0;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ unused2\_\ \ =\ 0;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ unused3\_\ \ =\ 0;}
+\DoxyCodeLine{00058\ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ スポット光源\ Spot\ Light}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{struct\ }LightSpot}
+\DoxyCodeLine{00062\ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ float3\ color\_\ \ \ \ \ =\ float3(1.0f,\ 1.0f,\ 1.0f);\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ float3\ position\_\ \ =\ float3(0.0f,\ 5.0f,\ 0.0f);\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ float3\ dir\_\ \ \ \ \ \ \ =\ float3(0.0f,\ -\/1.0f,\ 0.0f);\ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ radius\_\ \ \ \ =\ 10.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ angle\_in\_\ \ =\ 30.0f\ *\ DegToRad;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ angle\_out\_\ =\ 45.0f\ *\ DegToRad;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ unused0\_\ \ \ =\ 0;}
+\DoxyCodeLine{00070\ \ \ \ \ \};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{struct\ }LightInfo}
+\DoxyCodeLine{00073\ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ LightDirectional\ light\_directional\_[4];}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ LightPoint\ \ \ \ \ \ \ light\_point\_[8];}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ LightSpot\ \ \ \ \ \ \ \ light\_spot\_;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ light\_count\_directional\_\ =\ 0;\ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ light\_count\_point\_\ \ \ \ \ \ \ =\ 0;\ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ \ \ \ \ \ \ \ light\_count\_spot\_\ \ \ \ \ \ \ \ =\ 0;\ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ LightInfo\ info\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ cb\_handle\_\ =\ -\/1;\ \ \ \ }
+\DoxyCodeLine{00084\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,10 @@
+<map id="Class" name="Class">
+<area shape="rect" id="Node000001" title=" " alt="" coords="106,585,150,655"/>
+<area shape="rect" id="Node000002" href="$class_type_info.html" title="型情報基底" alt="" coords="69,231,187,513"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,511,131,569,125,568,126,515"/>
+<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="186,339,206,349,212,359,214,372,211,386,205,396,200,393,206,384,208,372,207,361,202,353,188,344"/>
+<area shape="rect" id="Node000003" href="$classnoncopyable.html" title=" " alt="" coords="5,5,117,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,193,97,231,92,231,86,199"/>
+<area shape="rect" id="Node000004" href="$classnonmovable.html" title="move禁止" alt="" coords="142,5,250,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="172,193,165,232,160,230,170,198"/>
+</map>

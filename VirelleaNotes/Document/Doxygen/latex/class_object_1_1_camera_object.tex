@@ -1,0 +1,260 @@
+\doxysection{Object\+::Camera\+Object クラス}
+\hypertarget{class_object_1_1_camera_object}{}\label{class_object_1_1_camera_object}\index{Object::CameraObject@{Object::CameraObject}}
+
+
+Object\+::Camera\+Object の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_camera_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Object\+::Camera\+Object 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_camera_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_object_1_1_camera_object_ab74433c247e23a1783963f7a0a65cd01}{Camera\+Object}} (VECTOR pos, VECTOR target)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\Hypertarget{class_object_1_1_camera_object_ad8b793d64843861e3734a3b6b671c393}\label{class_object_1_1_camera_object_ad8b793d64843861e3734a3b6b671c393} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Camera\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_camera_object_a2e9b510ed591d22889d20e6c7b141e03}{Set\+Cam\+Pos}} (VECTOR pos)
+\begin{DoxyCompactList}\small\item\em カメラ位置を設定する \end{DoxyCompactList}\item 
+VECTOR \mbox{\hyperlink{class_object_1_1_camera_object_a2863d700858bb78cbab787fb88b6ccac}{Get\+Cam\+Pos}} () const
+\begin{DoxyCompactList}\small\item\em カメラ位置を取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_camera_object_a87ce356175f495bad6ddd236587e1fec}{Set\+Target}} (VECTOR target)
+\begin{DoxyCompactList}\small\item\em 注視点を設定する \end{DoxyCompactList}\item 
+VECTOR \mbox{\hyperlink{class_object_1_1_camera_object_a026279d9ba9fecc59e4237b17c1b3908}{Get\+Target}} () const
+\begin{DoxyCompactList}\small\item\em 注視点を取得する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_camera_object_a2992c757e2f8db3038dee66e56db4576}{Set\+Move\+Speed}} (float speed)
+\begin{DoxyCompactList}\small\item\em カメラ移動速度を設定する \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_object_1_1_camera_object_a253272a1cf7b15768a575326bcc1f655}{Set\+Mouse\+Sensitivity}} (float sensitivity)
+\begin{DoxyCompactList}\small\item\em マウス感度を設定する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries Get\+Position} () const
+\item 
+void {\bfseries Set\+Position} (const JPH\+::\+RVec3 \&pos)
+\item 
+JPH\+::\+Quat {\bfseries Get\+Rotation} () const
+\item 
+void {\bfseries Set\+Rotation} (const JPH\+::\+Quat \&rot)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_1_1_object_base_af53775f0db55e72971bd8bfed4ba6809}{\texorpdfstring{$\sim$}{\string~}\+Object\+Base}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_1_1_object_base_a16b478109bc4787d7095706ba6d7cdfb}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名の取得 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Name} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名の設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Add\+Component} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_object_1_1_object_base_ac6b0a1cda5413d3b3d110d2316bd7536}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em ライフサイクル呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\item 
+void {\bfseries Draw\+Debug} ()
+\item 
+void {\bfseries Draw} ()
+\item 
+void {\bfseries End} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_object_1_1_camera_object_aed10c5177cbf14df292637640190027f}{On\+Init}} () override
+\item 
+void \mbox{\hyperlink{class_object_1_1_camera_object_aab944432063d9ed6d0bc667b4bc8a96e}{On\+Update}} () override
+\item 
+void \mbox{\hyperlink{class_object_1_1_camera_object_ab19672a9b3588beb9a307e70900a19db}{On\+Draw}} () override
+\item 
+void \mbox{\hyperlink{class_object_1_1_camera_object_a4d8433d71bb48c2399825b2349328f3b}{On\+End}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries On\+Draw\+Debug} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries m\+\_\+pos} = JPH\+::\+RVec3(0.\+0f, 0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em 手動設定の座標 \end{DoxyCompactList}\item 
+JPH\+::\+Quat {\bfseries m\+\_\+rot} = JPH\+::\+Quat\+::s\+Identity()
+\begin{DoxyCompactList}\small\item\em 手動設定の回転 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_object_1_1_camera_object_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_object_1_1_camera_object_ab74433c247e23a1783963f7a0a65cd01}\index{Object::CameraObject@{Object::CameraObject}!CameraObject@{CameraObject}}
+\index{CameraObject@{CameraObject}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{CameraObject()}{CameraObject()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_ab74433c247e23a1783963f7a0a65cd01} 
+Object\+::\+Camera\+Object\+::\+Camera\+Object (\begin{DoxyParamCaption}\item[{VECTOR}]{pos}{, }\item[{VECTOR}]{target}{}\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+
+\begin{DoxyParams}{引数}
+{\em pos} & 初期カメラ位置 \\
+\hline
+{\em target} & 初期注視点 \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_object_1_1_camera_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_object_1_1_camera_object_a2863d700858bb78cbab787fb88b6ccac}\index{Object::CameraObject@{Object::CameraObject}!GetCamPos@{GetCamPos}}
+\index{GetCamPos@{GetCamPos}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{GetCamPos()}{GetCamPos()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_a2863d700858bb78cbab787fb88b6ccac} 
+VECTOR Object\+::\+Camera\+Object\+::\+Get\+Cam\+Pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+カメラ位置を取得する 
+
+\begin{DoxyReturn}{戻り値}
+現在のカメラ位置 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_camera_object_a026279d9ba9fecc59e4237b17c1b3908}\index{Object::CameraObject@{Object::CameraObject}!GetTarget@{GetTarget}}
+\index{GetTarget@{GetTarget}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{GetTarget()}{GetTarget()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_a026279d9ba9fecc59e4237b17c1b3908} 
+VECTOR Object\+::\+Camera\+Object\+::\+Get\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+注視点を取得する 
+
+\begin{DoxyReturn}{戻り値}
+現在の注視点 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_camera_object_ab19672a9b3588beb9a307e70900a19db}\index{Object::CameraObject@{Object::CameraObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_ab19672a9b3588beb9a307e70900a19db} 
+void Object\+::\+Camera\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_camera_object_a4d8433d71bb48c2399825b2349328f3b}\index{Object::CameraObject@{Object::CameraObject}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_a4d8433d71bb48c2399825b2349328f3b} 
+void Object\+::\+Camera\+Object\+::\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_camera_object_aed10c5177cbf14df292637640190027f}\index{Object::CameraObject@{Object::CameraObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_aed10c5177cbf14df292637640190027f} 
+void Object\+::\+Camera\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_camera_object_aab944432063d9ed6d0bc667b4bc8a96e}\index{Object::CameraObject@{Object::CameraObject}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_aab944432063d9ed6d0bc667b4bc8a96e} 
+void Object\+::\+Camera\+Object\+::\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_camera_object_a2e9b510ed591d22889d20e6c7b141e03}\index{Object::CameraObject@{Object::CameraObject}!SetCamPos@{SetCamPos}}
+\index{SetCamPos@{SetCamPos}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{SetCamPos()}{SetCamPos()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_a2e9b510ed591d22889d20e6c7b141e03} 
+void Object\+::\+Camera\+Object\+::\+Set\+Cam\+Pos (\begin{DoxyParamCaption}\item[{VECTOR}]{pos}{}\end{DoxyParamCaption})}
+
+
+
+カメラ位置を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em pos} & 新しいカメラ位置 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_1_1_camera_object_a253272a1cf7b15768a575326bcc1f655}\index{Object::CameraObject@{Object::CameraObject}!SetMouseSensitivity@{SetMouseSensitivity}}
+\index{SetMouseSensitivity@{SetMouseSensitivity}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{SetMouseSensitivity()}{SetMouseSensitivity()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_a253272a1cf7b15768a575326bcc1f655} 
+void Object\+::\+Camera\+Object\+::\+Set\+Mouse\+Sensitivity (\begin{DoxyParamCaption}\item[{float}]{sensitivity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+マウス感度を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em sensitivity} & マウス移動1ピクセルあたりの回転角度（ラジアン） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_1_1_camera_object_a2992c757e2f8db3038dee66e56db4576}\index{Object::CameraObject@{Object::CameraObject}!SetMoveSpeed@{SetMoveSpeed}}
+\index{SetMoveSpeed@{SetMoveSpeed}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{SetMoveSpeed()}{SetMoveSpeed()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_a2992c757e2f8db3038dee66e56db4576} 
+void Object\+::\+Camera\+Object\+::\+Set\+Move\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+カメラ移動速度を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em speed} & 移動速度（m/秒） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_object_1_1_camera_object_a87ce356175f495bad6ddd236587e1fec}\index{Object::CameraObject@{Object::CameraObject}!SetTarget@{SetTarget}}
+\index{SetTarget@{SetTarget}!Object::CameraObject@{Object::CameraObject}}
+\doxysubsubsection{\texorpdfstring{SetTarget()}{SetTarget()}}
+{\footnotesize\ttfamily \label{class_object_1_1_camera_object_a87ce356175f495bad6ddd236587e1fec} 
+void Object\+::\+Camera\+Object\+::\+Set\+Target (\begin{DoxyParamCaption}\item[{VECTOR}]{target}{}\end{DoxyParamCaption})}
+
+
+
+注視点を設定する 
+
+
+\begin{DoxyParams}{引数}
+{\em target} & 新しい注視点 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_camera_object_8h}{Camera\+Object.\+h}}\end{DoxyCompactItemize}

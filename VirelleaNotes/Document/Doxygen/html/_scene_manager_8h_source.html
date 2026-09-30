@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: F:/sg mitarai/ReoEngine/src/SceneManager.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_scene_manager_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SceneManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_scene_manager_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_scene_base_8h.html">SceneBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span>Scene</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">//============================================================================</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">//============================================================================</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_scene_1_1_scene_manager.html">   18</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_scene_1_1_scene_manager.html">SceneManager</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_scene_1_1_scene_manager.html#ab54e913d2c1543e16dc69df940105644">   25</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_scene_manager.html#ab54e913d2c1543e16dc69df940105644">AddScene</a>(std::unique_ptr&lt;SceneBase&gt; scene);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_scene_1_1_scene_manager.html#a507df912e1d6543843b7c5e4fda2edcc">   30</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_scene_manager.html#a507df912e1d6543843b7c5e4fda2edcc">InitAll</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_scene_1_1_scene_manager.html#a2d9b14db84038d5d9a16228a71076931">   35</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_scene_manager.html#a2d9b14db84038d5d9a16228a71076931">UpdateAll</a>();</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_scene_1_1_scene_manager.html#a88e5169a68fedd66782748ab969693f8">   40</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_scene_manager.html#a88e5169a68fedd66782748ab969693f8">DrawAll</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_scene_1_1_scene_manager.html#a329d8e68d980f9634de33d6df12691a6">   45</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_scene_manager.html#a329d8e68d980f9634de33d6df12691a6">EndAll</a>();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::vector&lt;std::unique_ptr&lt;SceneBase&gt;&gt; m_scenes; </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    };</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="ttc" id="a_scene_base_8h_html"><div class="ttname"><a href="_scene_base_8h.html">SceneBase.h</a></div><div class="ttdoc">シーン基底クラスの宣言</div></div>
+<div class="ttc" id="aclass_scene_1_1_scene_manager_html"><div class="ttname"><a href="class_scene_1_1_scene_manager.html">Scene::SceneManager</a></div><div class="ttdoc">シーンの登録と一括処理を行うマネージャ</div><div class="ttdef"><b>Definition</b> SceneManager.h:19</div></div>
+<div class="ttc" id="aclass_scene_1_1_scene_manager_html_a2d9b14db84038d5d9a16228a71076931"><div class="ttname"><a href="class_scene_1_1_scene_manager.html#a2d9b14db84038d5d9a16228a71076931">Scene::SceneManager::UpdateAll</a></div><div class="ttdeci">void UpdateAll()</div><div class="ttdoc">登録されている全シーンを更新します</div></div>
+<div class="ttc" id="aclass_scene_1_1_scene_manager_html_a329d8e68d980f9634de33d6df12691a6"><div class="ttname"><a href="class_scene_1_1_scene_manager.html#a329d8e68d980f9634de33d6df12691a6">Scene::SceneManager::EndAll</a></div><div class="ttdeci">void EndAll()</div><div class="ttdoc">登録されている全シーンの終了処理を行います</div></div>
+<div class="ttc" id="aclass_scene_1_1_scene_manager_html_a507df912e1d6543843b7c5e4fda2edcc"><div class="ttname"><a href="class_scene_1_1_scene_manager.html#a507df912e1d6543843b7c5e4fda2edcc">Scene::SceneManager::InitAll</a></div><div class="ttdeci">void InitAll()</div><div class="ttdoc">登録されている全シーンを初期化します</div></div>
+<div class="ttc" id="aclass_scene_1_1_scene_manager_html_a88e5169a68fedd66782748ab969693f8"><div class="ttname"><a href="class_scene_1_1_scene_manager.html#a88e5169a68fedd66782748ab969693f8">Scene::SceneManager::DrawAll</a></div><div class="ttdeci">void DrawAll()</div><div class="ttdoc">登録されている全シーンを描画します</div></div>
+<div class="ttc" id="aclass_scene_1_1_scene_manager_html_ab54e913d2c1543e16dc69df940105644"><div class="ttname"><a href="class_scene_1_1_scene_manager.html#ab54e913d2c1543e16dc69df940105644">Scene::SceneManager::AddScene</a></div><div class="ttdeci">void AddScene(std::unique_ptr&lt; SceneBase &gt; scene)</div><div class="ttdoc">シーンを登録します（所有権を受け取る）</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_scene_manager_8h.html">SceneManager.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+\doxysection{font\+::Font\+Manager クラス}
+\hypertarget{classfont_1_1_font_manager}{}\label{classfont_1_1_font_manager}\index{font::FontManager@{font::FontManager}}
+
+
+フォントを管理するクラスの宣言  
+
+
+
+
+{\ttfamily \#include $<$Font.\+h$>$}
+
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classfont_1_1_font_manager_a550821375c6f508e11547557f988b7e1}\label{classfont_1_1_font_manager_a550821375c6f508e11547557f988b7e1} 
+static void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em フォントハンドルの初期化と読み込み \end{DoxyCompactList}\item 
+\Hypertarget{classfont_1_1_font_manager_aef09e2ca43f798b78de33e45190d5cd4}\label{classfont_1_1_font_manager_aef09e2ca43f798b78de33e45190d5cd4} 
+static void {\bfseries Exit} ()
+\begin{DoxyCompactList}\small\item\em フォントハンドルの破棄 \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classfont_1_1_font_manager_aa0f9142e20e2f75d734cebc4e3f1be84}{Get\+Font}} (int font\+\_\+index)
+\begin{DoxyCompactList}\small\item\em フォントハンドルの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+フォントを管理するクラスの宣言 
+
+フォントハンドルを配列領域として保持し、 初期化・終了・取得機能を提供する 
+
+\label{doc-func-members}
+\Hypertarget{classfont_1_1_font_manager_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classfont_1_1_font_manager_aa0f9142e20e2f75d734cebc4e3f1be84}\index{font::FontManager@{font::FontManager}!GetFont@{GetFont}}
+\index{GetFont@{GetFont}!font::FontManager@{font::FontManager}}
+\doxysubsubsection{\texorpdfstring{GetFont()}{GetFont()}}
+{\footnotesize\ttfamily \label{classfont_1_1_font_manager_aa0f9142e20e2f75d734cebc4e3f1be84} 
+int font\+::\+Font\+Manager\+::\+Get\+Font (\begin{DoxyParamCaption}\item[{int}]{font\+\_\+index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+フォントハンドルの取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em font\+\_\+index} & 取得したいフォントのインデックス \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+フォントハンドル 
+\end{DoxyReturn}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\mbox{\hyperlink{_font_8h}{Font.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\doxysection{F\+:/sg mitarai/\+Reo\+Engine/src/\+Typedef.h ファイル}
+\hypertarget{_typedef_8h}{}\label{_typedef_8h}\index{F:/sg mitarai/ReoEngine/src/Typedef.h@{F:/sg mitarai/ReoEngine/src/Typedef.h}}
+
+
+型定義  
+
+
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+Typedef.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{_typedef_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnoncopyable}{noncopyable}}
+\item 
+class \mbox{\hyperlink{classnonmovable}{nonmovable}}
+\begin{DoxyCompactList}\small\item\em move禁止 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{マクロ定義}
+\begin{Indent}\textbf{ ポインタ定義}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_typedef_8h_ae1b2d029be4658cd85fd1bc379e76178}{USING\+\_\+\+PTR}}(obj)
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{型定義}
+\begin{Indent}\textbf{ 数値型定義}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_typedef_8h_a6107abbafe492024afa341df26a61709}\label{_typedef_8h_a6107abbafe492024afa341df26a61709} 
+using {\bfseries s8} = int8\+\_\+t
+\begin{DoxyCompactList}\small\item\em 8bit 符号あり整数 \end{DoxyCompactList}\item 
+\Hypertarget{_typedef_8h_a38965495c67998cf330d16c6ae30ced5}\label{_typedef_8h_a38965495c67998cf330d16c6ae30ced5} 
+using {\bfseries s16} = int16\+\_\+t
+\begin{DoxyCompactList}\small\item\em 16bit 符号あり整数 \end{DoxyCompactList}\item 
+\Hypertarget{_typedef_8h_ae5300ed9eabeae78ee9d0c704a9c412a}\label{_typedef_8h_ae5300ed9eabeae78ee9d0c704a9c412a} 
+using {\bfseries s32} = int32\+\_\+t
+\begin{DoxyCompactList}\small\item\em 32bit 符号あり整数 \end{DoxyCompactList}\item 
+\Hypertarget{_typedef_8h_aaab2ef2ca1576408739fdb8e9f52ae0f}\label{_typedef_8h_aaab2ef2ca1576408739fdb8e9f52ae0f} 
+using {\bfseries s64} = int64\+\_\+t
+\begin{DoxyCompactList}\small\item\em 64bit 符号あり整数 \end{DoxyCompactList}\item 
+\Hypertarget{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}\label{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6} 
+using {\bfseries u8} = uint8\+\_\+t
+\begin{DoxyCompactList}\small\item\em 8bit 符号なし整数 \end{DoxyCompactList}\item 
+\Hypertarget{_typedef_8h_a6dbf9516e516c901604625282c174aa4}\label{_typedef_8h_a6dbf9516e516c901604625282c174aa4} 
+using {\bfseries u16} = uint16\+\_\+t
+\begin{DoxyCompactList}\small\item\em 16bit 符号なし整数 \end{DoxyCompactList}\item 
+\Hypertarget{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}\label{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41} 
+using {\bfseries u32} = uint32\+\_\+t
+\begin{DoxyCompactList}\small\item\em 32bit 符号なし整数 \end{DoxyCompactList}\item 
+\Hypertarget{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}\label{_typedef_8h_a1af9f95651e921615e75917a6dd1b574} 
+using {\bfseries u64} = uint64\+\_\+t
+\begin{DoxyCompactList}\small\item\em 64bit 符号なし整数 \end{DoxyCompactList}\item 
+\Hypertarget{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}\label{_typedef_8h_ad34d88453d37b65a09797bad37f2f527} 
+using {\bfseries f32} = float
+\begin{DoxyCompactList}\small\item\em 単精度浮動小数点数 \end{DoxyCompactList}\item 
+\Hypertarget{_typedef_8h_abc2f107791bd7c1d49ecf0f168c085a3}\label{_typedef_8h_abc2f107791bd7c1d49ecf0f168c085a3} 
+using {\bfseries f64} = double
+\begin{DoxyCompactList}\small\item\em 倍精度浮動小数点数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+型定義 
+
+
+
+\label{doc-define-members}
+\Hypertarget{_typedef_8h_doc-define-members}
+\doxysubsection{マクロ定義詳解}
+\Hypertarget{_typedef_8h_ae1b2d029be4658cd85fd1bc379e76178}\index{Typedef.h@{Typedef.h}!USING\_PTR@{USING\_PTR}}
+\index{USING\_PTR@{USING\_PTR}!Typedef.h@{Typedef.h}}
+\doxysubsubsection{\texorpdfstring{USING\_PTR}{USING\_PTR}}
+{\footnotesize\ttfamily \label{_typedef_8h_ae1b2d029be4658cd85fd1bc379e76178} 
+\#define USING\+\_\+\+PTR(\begin{DoxyParamCaption}\item[{}]{obj}{}\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{class\ }obj;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }obj\#\#Ptr\ \ \ \ \ \ \ \ \ \ =\ std::shared\_ptr<obj>;\ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }obj\#\#WeakPtr\ \ \ \ \ \ =\ std::weak\_ptr<obj>;\ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }obj\#\#UniquePtr\ \ \ \ =\ std::unique\_ptr<obj>;\ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }obj\#\#PtrVec\ \ \ \ \ \ \ =\ std::vector<obj\#\#Ptr>;\ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }obj\#\#WeakPtrVec\ \ \ =\ std::vector<obj\#\#WeakPtr>;\ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }obj\#\#UniquePtrVec\ =\ std::vector<obj\#\#UniquePtr>;\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }obj\#\#Vec\ \ \ \ \ \ \ \ \ \ =\ std::vector<obj*>;\ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }obj\#\#PtrMap\ \ \ \ \ \ \ =\ std::unordered\_map<std::string,\ obj\#\#Ptr>}
+
+\end{DoxyCode}

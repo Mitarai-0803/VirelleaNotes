@@ -1,0 +1,73 @@
+\doxysection{Obj\+Type\+Info クラス}
+\hypertarget{class_obj_type_info}{}\label{class_obj_type_info}\index{ObjTypeInfo@{ObjTypeInfo}}
+
+
+Objectルートの型情報  
+
+
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+Obj\+Type\+Info の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_obj_type_info}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_obj_type_info_a9dfc3a576977a890c027bf2243bbc589}\label{class_obj_type_info_a9dfc3a576977a890c027bf2243bbc589} 
+{\bfseries Obj\+Type\+Info} (const char \texorpdfstring{$\ast$}{*}class\+\_\+name, size\+\_\+t class\+\_\+size, \mbox{\hyperlink{class_obj_type_info}{Obj\+Type\+Info}} \texorpdfstring{$\ast$}{*}parent\+\_\+type=nullptr, const char \texorpdfstring{$\ast$}{*}desc\+\_\+name="{}"{})
+\item 
+\Hypertarget{class_obj_type_info_a95af04b668e162608328a83994fe0ecf}\label{class_obj_type_info_a95af04b668e162608328a83994fe0ecf} 
+virtual void \texorpdfstring{$\ast$}{*} {\bfseries create\+Object\+Ptr} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_type_info}{Type\+Info}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_type_info_a3fea5e44c795c92d7a294eeaffaaa36e}{Type\+Info}} (const char \texorpdfstring{$\ast$}{*}class\+\_\+name, size\+\_\+t class\+\_\+size, \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*}parent\+\_\+type=nullptr, const char \texorpdfstring{$\ast$}{*}desc\+\_\+name="{}"{})
+\item 
+virtual void \texorpdfstring{$\ast$}{*} {\bfseries create\+Instance} () const
+\item 
+const char \texorpdfstring{$\ast$}{*} {\bfseries class\+Name} () const
+\item 
+const char \texorpdfstring{$\ast$}{*} {\bfseries desc\+Name} () const
+\item 
+size\+\_\+t {\bfseries class\+Size} () const
+\item 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_type_info_a8be2922a8d831c706073a0a320fa3860}{parent}} () const
+\item 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_type_info_a7c25eb4cb6570d8d5c46d3715822adc8}{child}} () const
+\item 
+const \mbox{\hyperlink{class_type_info}{Type\+Info}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_type_info_a5a7cd1c13530aca4cb9fb9d78fa5a6c0}{siblings}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_obj_type_info_a76c13e1559a2775a1c4828c9e255d5d2}\label{class_obj_type_info_a76c13e1559a2775a1c4828c9e255d5d2} 
+Object\+Ptr {\bfseries tmp} = std\+::shared\+\_\+ptr$<$class \mbox{\hyperlink{class_object}{Object}}$>$((\mbox{\hyperlink{class_object}{Object}}\texorpdfstring{$\ast$}{*})create\+Instance())
+\item 
+\Hypertarget{class_obj_type_info_a327753457ef1707804e9cafb9847b262}\label{class_obj_type_info_a327753457ef1707804e9cafb9847b262} 
+Object\+Weak\+Ptr {\bfseries ptr} = tmp
+\end{DoxyCompactItemize}
+\doxysubsubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_obj_type_info_a13274b9f14d9e5f43876c873f8b906d7}\label{class_obj_type_info_a13274b9f14d9e5f43876c873f8b906d7} 
+static \mbox{\hyperlink{class_obj_type_info}{Obj\+Type\+Info}} {\bfseries obj\+\_\+root}
+\begin{DoxyCompactList}\small\item\em ルートの型情報 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_type_info}{Type\+Info}} に属する継承静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_type_info}{Type\+Info}} {\bfseries Root}
+\begin{DoxyCompactList}\small\item\em ルートの型情報 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+Objectルートの型情報 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\mbox{\hyperlink{_object_8h}{Object.\+h}}\end{DoxyCompactItemize}

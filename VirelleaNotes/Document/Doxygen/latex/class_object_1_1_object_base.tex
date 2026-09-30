@@ -1,0 +1,161 @@
+\doxysection{Object\+::Object\+Base クラス}
+\hypertarget{class_object_1_1_object_base}{}\label{class_object_1_1_object_base}\index{Object::ObjectBase@{Object::ObjectBase}}
+
+
+Object\+::Object\+Base の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_object_1_1_object_base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Object\+::Object\+Base 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{class_object_1_1_object_base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_object_1_1_object_base_a3159a0a90973e5da88ebc0cc2d64e713}\label{class_object_1_1_object_base_a3159a0a90973e5da88ebc0cc2d64e713} 
+{\bfseries Object\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_1_1_object_base_af53775f0db55e72971bd8bfed4ba6809}{\texorpdfstring{$\sim$}{\string~}\+Object\+Base}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_1_1_object_base_a16b478109bc4787d7095706ba6d7cdfb}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名の取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_object_1_1_object_base_a43a3db5dead3b21fedc32ad1145d7966}\label{class_object_1_1_object_base_a43a3db5dead3b21fedc32ad1145d7966} 
+void {\bfseries Set\+Name} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名の設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_object_1_1_object_base_a422cbe7d856b9292d4a45ec4c135c792}\label{class_object_1_1_object_base_a422cbe7d856b9292d4a45ec4c135c792} 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Add\+Component} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_object_1_1_object_base_ac6b0a1cda5413d3b3d110d2316bd7536}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_object_1_1_object_base_a5c14cf4ce43fdee3ca1a97ef7c564d88}\label{class_object_1_1_object_base_a5c14cf4ce43fdee3ca1a97ef7c564d88} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em ライフサイクル呼び出し \end{DoxyCompactList}\item 
+\Hypertarget{class_object_1_1_object_base_a3e066e420019edf3b5013b135cf7150b}\label{class_object_1_1_object_base_a3e066e420019edf3b5013b135cf7150b} 
+void {\bfseries Update} ()
+\item 
+\Hypertarget{class_object_1_1_object_base_a072d864e918492bacd4204e2bc20d79e}\label{class_object_1_1_object_base_a072d864e918492bacd4204e2bc20d79e} 
+void {\bfseries Draw\+Debug} ()
+\item 
+\Hypertarget{class_object_1_1_object_base_a8352b0b45f5ec31d9bd98654012e0e9a}\label{class_object_1_1_object_base_a8352b0b45f5ec31d9bd98654012e0e9a} 
+void {\bfseries Draw} ()
+\item 
+\Hypertarget{class_object_1_1_object_base_a953c837527492a698c985224d4c0a0c4}\label{class_object_1_1_object_base_a953c837527492a698c985224d4c0a0c4} 
+void {\bfseries End} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_object_1_1_object_base_a411f4015ff78bdad51ed979feb6f071e}{On\+Init}} ()
+\item 
+virtual void \mbox{\hyperlink{class_object_1_1_object_base_a4d695309d1ef84228aab59296ea82876}{On\+Update}} ()
+\item 
+\Hypertarget{class_object_1_1_object_base_a379beeaa6ff2a3f15f6d008359fabe64}\label{class_object_1_1_object_base_a379beeaa6ff2a3f15f6d008359fabe64} 
+virtual void {\bfseries On\+Draw\+Debug} ()
+\item 
+virtual void \mbox{\hyperlink{class_object_1_1_object_base_a105baf255136617256756f729ef42700}{On\+Draw}} ()
+\item 
+virtual void \mbox{\hyperlink{class_object_1_1_object_base_a585b193a6dd280c458205cff27ec27c4}{On\+End}} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_object_1_1_object_base_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_object_1_1_object_base_af53775f0db55e72971bd8bfed4ba6809}\index{Object::ObjectBase@{Object::ObjectBase}!````~ObjectBase@{\texorpdfstring{$\sim$}{\string~}ObjectBase}}
+\index{````~ObjectBase@{\texorpdfstring{$\sim$}{\string~}ObjectBase}!Object::ObjectBase@{Object::ObjectBase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ObjectBase()}{\string~ObjectBase()}}
+{\footnotesize\ttfamily \label{class_object_1_1_object_base_af53775f0db55e72971bd8bfed4ba6809} 
+virtual Object\+::\+Object\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Object\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+デストラクタ 
+
+基底クラスのポインタから削除した場合でも、 派生クラスのデストラクタが正しく呼ばれるようにする。 リソースの解放は End() で明示的に行うため、 デストラクタでは終了処理を行わない。 
+
+\label{doc-func-members}
+\Hypertarget{class_object_1_1_object_base_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_object_1_1_object_base_ac6b0a1cda5413d3b3d110d2316bd7536}\index{Object::ObjectBase@{Object::ObjectBase}!GetComponent@{GetComponent}}
+\index{GetComponent@{GetComponent}!Object::ObjectBase@{Object::ObjectBase}}
+\doxysubsubsection{\texorpdfstring{GetComponent()}{GetComponent()}}
+{\footnotesize\ttfamily \label{class_object_1_1_object_base_ac6b0a1cda5413d3b3d110d2316bd7536} 
+template$<$typename T$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Object\+::\+Object\+Base\+::\+Get\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+コンポーネント取得 
+
+\begin{DoxyReturn}{戻り値}
+見つかれば shared\+\_\+ptr$<$\+T$>$、なければ nullptr 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_object_base_a16b478109bc4787d7095706ba6d7cdfb}\index{Object::ObjectBase@{Object::ObjectBase}!GetName@{GetName}}
+\index{GetName@{GetName}!Object::ObjectBase@{Object::ObjectBase}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily \label{class_object_1_1_object_base_a16b478109bc4787d7095706ba6d7cdfb} 
+std\+::string Object\+::\+Object\+Base\+::\+Get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+オブジェクト名の取得 
+
+\begin{DoxyReturn}{戻り値}
+オブジェクト名 
+\end{DoxyReturn}
+\Hypertarget{class_object_1_1_object_base_a105baf255136617256756f729ef42700}\index{Object::ObjectBase@{Object::ObjectBase}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!Object::ObjectBase@{Object::ObjectBase}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_object_1_1_object_base_a105baf255136617256756f729ef42700} 
+virtual void Object\+::\+Object\+Base\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_box_object_a4a6bed1aee9748ec462e88fffa522ed1}{Object\+::\+Box\+Object}}, \mbox{\hyperlink{class_object_1_1_platform_object_aad6e7132894bd2ca2fec967beb1b0775}{Object\+::\+Platform\+Object}}, \mbox{\hyperlink{class_object_1_1_sphere_object_aa5e854badeefbf898751622f80a20aa2}{Object\+::\+Sphere\+Object}}, \mbox{\hyperlink{class_object_1_1_water_object_a59cf25769549d5744da6526ca79d9b86}{Object\+::\+Water\+Object}}で再実装されています。
+
+\Hypertarget{class_object_1_1_object_base_a585b193a6dd280c458205cff27ec27c4}\index{Object::ObjectBase@{Object::ObjectBase}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!Object::ObjectBase@{Object::ObjectBase}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_object_1_1_object_base_a585b193a6dd280c458205cff27ec27c4} 
+virtual void Object\+::\+Object\+Base\+::\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_box_object_a68d6da000a16a3ff8514484bd7eff1b3}{Object\+::\+Box\+Object}}, \mbox{\hyperlink{class_object_1_1_platform_object_a1bafc1fa10818fd302c5181f98aa03aa}{Object\+::\+Platform\+Object}}, \mbox{\hyperlink{class_object_1_1_sphere_object_abd6b18e76e8c1df026199ec717236e07}{Object\+::\+Sphere\+Object}}, \mbox{\hyperlink{class_object_1_1_water_object_a8a485d874c57a5aba8fcbd7a8c8604c4}{Object\+::\+Water\+Object}}で再実装されています。
+
+\Hypertarget{class_object_1_1_object_base_a411f4015ff78bdad51ed979feb6f071e}\index{Object::ObjectBase@{Object::ObjectBase}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!Object::ObjectBase@{Object::ObjectBase}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_object_1_1_object_base_a411f4015ff78bdad51ed979feb6f071e} 
+virtual void Object\+::\+Object\+Base\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_box_object_a653b6a011cbf8d53b5dcd7ce87feb3ab}{Object\+::\+Box\+Object}}, \mbox{\hyperlink{class_object_1_1_platform_object_abaa8c41d3d6622fdc08481bdb7ba1456}{Object\+::\+Platform\+Object}}, \mbox{\hyperlink{class_object_1_1_sphere_object_a994635364937413dc37cf5f2e03de07a}{Object\+::\+Sphere\+Object}}, \mbox{\hyperlink{class_object_1_1_water_object_a9fa6dcf14538f81833138290c4a2b05d}{Object\+::\+Water\+Object}}で再実装されています。
+
+\Hypertarget{class_object_1_1_object_base_a4d695309d1ef84228aab59296ea82876}\index{Object::ObjectBase@{Object::ObjectBase}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Object::ObjectBase@{Object::ObjectBase}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_object_1_1_object_base_a4d695309d1ef84228aab59296ea82876} 
+virtual void Object\+::\+Object\+Base\+::\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_box_object_a95900caab45ce1461fdee47d8c662ea3}{Object\+::\+Box\+Object}}, \mbox{\hyperlink{class_object_1_1_water_object_ab4be64ca39fab150fcf8e8b0a72049bd}{Object\+::\+Water\+Object}}で再実装されています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_object_base_8h}{Object\+Base.\+h}}\end{DoxyCompactItemize}

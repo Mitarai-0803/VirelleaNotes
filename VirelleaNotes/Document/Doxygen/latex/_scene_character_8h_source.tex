@@ -1,0 +1,37 @@
+\doxysection{Scene\+Character.\+h}
+\hypertarget{_scene_character_8h_source}{}\label{_scene_character_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneCharacter.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/SceneCharacter.h}}
+\mbox{\hyperlink{_scene_character_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }physics\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classphysics_1_1_character}{Character}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classphysics_1_1_rigid_body}{RigidBody}};}
+\DoxyCodeLine{00012\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ physics}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_character}{SceneCharacter}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_1_1_base}{Scene::Base}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{_type_info_8h_aed9c544bcefbc45da9189a4c3d3e4d6c}{BP\_CLASS\_DECL}}(\mbox{\hyperlink{class_scene_character}{SceneCharacter}},\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}キャラクター操作サンプル"{}});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scene_character_aa41ff8341bcab8048f27bf6fb19f7533}{Init}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \textcolor{comment}{//\ 初期化}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_character_acb7bce0f09e1ff93c18ad8e27f17c74b}{Update}}()\ \textcolor{keyword}{override};\ \ \ \ \textcolor{comment}{//\ 更新}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_character_a600ba75e2370a879d3382eccee17c3f2}{Draw}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \textcolor{comment}{//\ 描画}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_character_afa37e0b21d3102ed1785ee07753447ae}{Exit}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \textcolor{comment}{//\ 終了}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_character_aa17ed5afbc40a460f94cf82877788079}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \textcolor{comment}{//\ GUI表示}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ std::shared\_ptr<Model>\ \ \ \ \ \ \ \ \ \ \ \ \ \ model\_env\_;\ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ std::shared\_ptr<physics::RigidBody>\ body\_mesh\_;\ \ \ \ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<physics::Character>\ character\_;\ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<physics::RigidBody>\ body\_env\_;\ \ \ \ \ }
+\DoxyCodeLine{00034\ \};}
+
+\end{DoxyCode}

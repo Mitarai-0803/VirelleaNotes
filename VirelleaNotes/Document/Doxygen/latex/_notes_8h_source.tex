@@ -1,0 +1,95 @@
+\doxysection{Notes.\+h}
+\hypertarget{_notes_8h_source}{}\label{_notes_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Notes.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Notes.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ 定数}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ NOTES\_DEFAULT\_SPEED\ =\ 10.0f;\textcolor{comment}{//ノーツのデフォルトのスピード}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ NOTES\_W\ =\ 50.0f;\textcolor{comment}{//ノーツの幅}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ NOTES\_H\ =\ 10.0f;\textcolor{comment}{//ノーツの高さ}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ NOTES\_MAX\ =\ 20;\ \textcolor{comment}{//ノーツの数}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//モード}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ MOVE\_MODE\ =\ 0,\textcolor{comment}{//動く状態}}
+\DoxyCodeLine{00015\ \ \ \ \ STOP\_MODE,\ \ \ \ \textcolor{comment}{//動かない状態}}
+\DoxyCodeLine{00016\ \ \ \ \ RESET\_MODE\ \ \ \ \textcolor{comment}{//上に戻す状態(Y座標)}}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ 関数}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ Notes\_Init();\ \ \ \ \ \ \textcolor{comment}{//初期化処理}}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ Notes\_Update();\ \ \ \ \textcolor{comment}{//更新処理}}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ Notes\_Render();\ \ \ \ \textcolor{comment}{//描画処理}}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ Notes\_Exit();\ \ \ \ \ \ \textcolor{comment}{//終了処理\ }}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//値を代入するメンバ関数}}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ Notes\_Set\_Pos\_X(\textcolor{keywordtype}{float}\ pos\_x,\ \textcolor{keywordtype}{int}\ index);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//X座標の設定}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ Notes\_Set\_Pos\_Y(\textcolor{keywordtype}{float}\ pos\_y,\ \textcolor{keywordtype}{int}\ index);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Y座標の設定}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ Notes\_Set\_Pos(\textcolor{keywordtype}{float}\ pos\_x,\ \textcolor{keywordtype}{float}\ pos\_y,\ \textcolor{keywordtype}{int}\ index);\ \ \ \ \textcolor{comment}{//座標の設定}}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ Notes\_Set\_Mode(\textcolor{keywordtype}{int}\ mode,\ \textcolor{keywordtype}{int}\ index);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//モードの設定}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ Notes\_Set\_Speed(\textcolor{keywordtype}{float}\ speed,\ \textcolor{keywordtype}{int}\ index);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//スピードの設定}}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{void}\ Notes\_Reset\_Speed(\textcolor{keywordtype}{int}\ index);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//スピードのリセット(デフォルト値に設定)}}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ Notes\_Set\_Color(\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{int}\ r,\ \textcolor{keywordtype}{int}\ g,\ \textcolor{keywordtype}{int}\ b);\ \ \ \ \ \ \ \textcolor{comment}{//ノーツの色を設定}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{comment}{//値を返す関数}}
+\DoxyCodeLine{00037\ \textcolor{keywordtype}{float}\ Notes\_Pos\_X(\textcolor{keywordtype}{int}\ index);\textcolor{comment}{//X座標}}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{float}\ Notes\_Pos\_Y(\textcolor{keywordtype}{int}\ index);\textcolor{comment}{//Y座標}}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \ \ Notes\_Mode(\textcolor{keywordtype}{int}\ index);\ \textcolor{comment}{//モード}}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{int}\ \ \ Judge\_Str\_Frame\_Num();\ \textcolor{comment}{//判定文字列を描画するフレーム数}}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \ \ Judge\_Num();\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//判定番号}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//その他関数}}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ Notes\_Judge(\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{int}\ judge\_mode);\textcolor{comment}{//ノーツの判定処理関数}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00048\ \textcolor{comment}{//\ \ ノーツclass}}
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ \ 音ゲーのノーツの動きや画像を設定するクラス}}
+\DoxyCodeLine{00050\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00051\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_notes}{Notes}}}
+\DoxyCodeLine{00052\ \{}
+\DoxyCodeLine{00053\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//メンバ関数}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ Init();\ \ \ \ \textcolor{comment}{//初期化処理}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ Update();\ \ \textcolor{comment}{//更新処理}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ Render();\ \ \textcolor{comment}{//描画処理}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//デストラクタ}}
+\DoxyCodeLine{00060\ \ \ \ \ ‾Notes();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//値を代入するメンバ関数}}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ Set\_Pos\_X(\textcolor{keywordtype}{float}\ pos\_x);\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//X座標の設定}}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ Set\_Pos\_Y(\textcolor{keywordtype}{float}\ pos\_y);\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Y座標の設定}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ Set\_Pos(\textcolor{keywordtype}{float}\ pos\_x,\ \textcolor{keywordtype}{float}\ pos\_y);\ \ \textcolor{comment}{//座標の設定}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ Set\_Mode(\textcolor{keywordtype}{int}\ mode);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//座標の設定}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ Set\_Speed(\textcolor{keywordtype}{float}\ speed);\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//スピードの設定}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ Reset\_Speed();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//スピードのリセット(デフォルト値に設定)}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ Set\_Color(\mbox{\hyperlink{struct_r_g_b}{RGB}}\ color);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//ノーツの色を設定}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//値を返すメンバ関数}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{float}\ Pos\_X();\textcolor{comment}{//X座標}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{float}\ Pos\_Y();\textcolor{comment}{//Y座標}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ Mode();\ \textcolor{comment}{//モード}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//構造体}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{struct\ }PosF\textcolor{comment}{//座標用構造体}}
+\DoxyCodeLine{00079\ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ 0.0f;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ 0.0f;}
+\DoxyCodeLine{00082\ \ \ \ \ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//メンバ変数}}
+\DoxyCodeLine{00085\ \ \ \ \ PosF\ \ \ pos\_;\ \ \ \ \textcolor{comment}{//座標}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ mode\_;\ \ \ \textcolor{comment}{//モード}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{float}\ \ speed\_;\ \ \textcolor{comment}{//スピード}}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{struct_r_g_b}{RGB}}\ \ \ \ \ color\_;\ \ \textcolor{comment}{//色}}
+\DoxyCodeLine{00089\ \};}
+
+\end{DoxyCode}

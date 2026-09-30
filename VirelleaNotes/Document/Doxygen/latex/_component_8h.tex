@@ -1,0 +1,182 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/\+Component.h ファイル}
+\hypertarget{_component_8h}{}\label{_component_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/Component.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/Component.h}}
+
+
+コンポーネント ベースクラス  
+
+
+{\ttfamily \#include $<$System/\+Proc\+Timing.\+h$>$}\newline
+{\ttfamily \#include $<$System/\+Status.\+h$>$}\newline
+{\ttfamily \#include $<$cereal/cereal.\+hpp$>$}\newline
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_component_type_info}{Component\+Type\+Info}}
+\begin{DoxyCompactList}\small\item\em Componentルートの型情報 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_component_class}{Component\+Class}}
+\item 
+class \mbox{\hyperlink{class_class_component_type}{Class\+Component\+Type$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em クラス用型情報 \doxylink{class_class_component_type}{Class\+Component\+Type$<$\+T$>$} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_component}{Component}}
+\begin{DoxyCompactList}\small\item\em コンポーネント \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_component_8h_a544c31f98b90b38818b27eff6683eef6}{BP\+\_\+\+COMPONENT\+\_\+\+DECL}}(CLASS, ...)
+\item 
+\#define \mbox{\hyperlink{_component_8h_a14d986d5dcf46e290a0c32a137878be6}{BP\+\_\+\+COMPONENT\+\_\+\+BASE\+\_\+\+TYPE}}(CLASS)
+\item 
+\#define \mbox{\hyperlink{_component_8h_ae5e9b7470814a3a37d802d342aeb16f6}{BP\+\_\+\+COMPONENT\+\_\+\+TYPE}}(CLASS,  PARENT\+\_\+\+CLASS)
+\item 
+\#define \mbox{\hyperlink{_component_8h_a89e3e9116b153cce4732a2b9e14528f9}{BP\+\_\+\+COMPONENT\+\_\+\+BASE\+\_\+\+IMPL}}(CLASS,  DESC\+\_\+\+NAME)
+\item 
+\#define \mbox{\hyperlink{_component_8h_acb5da28bae949d7ba8d6a74c97e1e394}{BP\+\_\+\+COMPONENT\+\_\+\+IMPL}}(CLASS,  DESC\+\_\+\+NAME)
+\item 
+\#define \mbox{\hyperlink{_component_8h_a117fd7d8dc0e8a462119907dec50616a}{UNIQUE\+\_\+\+TEXT}}(n)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_component_8h_acf719dccd2f400d5bef112558e3ab522}\label{_component_8h_acf719dccd2f400d5bef112558e3ab522} 
+{\bfseries USING\+\_\+\+PTR} (\mbox{\hyperlink{class_component}{Component}})
+\item 
+\Hypertarget{_component_8h_a2deff0220e6921920b821b718ebc8b94}\label{_component_8h_a2deff0220e6921920b821b718ebc8b94} 
+{\bfseries USING\+\_\+\+PTR} (\mbox{\hyperlink{class_object}{Object}})
+\item 
+\Hypertarget{_component_8h_a7cbedca9245c925969ac9525d6d0f9e2}\label{_component_8h_a7cbedca9245c925969ac9525d6d0f9e2} 
+{\bfseries CEREAL\+\_\+\+CLASS\+\_\+\+VERSION} (\mbox{\hyperlink{class_component}{Component}}, 2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+コンポーネント ベースクラス 
+
+
+
+\label{doc-define-members}
+\Hypertarget{_component_8h_doc-define-members}
+\doxysubsection{マクロ定義詳解}
+\Hypertarget{_component_8h_a89e3e9116b153cce4732a2b9e14528f9}\index{Component.h@{Component.h}!BP\_COMPONENT\_BASE\_IMPL@{BP\_COMPONENT\_BASE\_IMPL}}
+\index{BP\_COMPONENT\_BASE\_IMPL@{BP\_COMPONENT\_BASE\_IMPL}!Component.h@{Component.h}}
+\doxysubsubsection{\texorpdfstring{BP\_COMPONENT\_BASE\_IMPL}{BP\_COMPONENT\_BASE\_IMPL}}
+{\footnotesize\ttfamily \label{_component_8h_a89e3e9116b153cce4732a2b9e14528f9} 
+\#define BP\+\_\+\+COMPONENT\+\_\+\+BASE\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{CLASS}{, }\item[{}]{DESC\+\_\+\+NAME}{}\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_class_component_type}{ClassComponentType<CLASS>}}\ CLASS::Type(\#CLASS,\ \textcolor{keyword}{sizeof}(CLASS),\ \textcolor{keyword}{nullptr},\ DESC\_NAME);}
+
+\end{DoxyCode}
+クラス内cpp宣言 グローバル変数で BP\+\_\+\+OBJECT\+\_\+\+IMPL(クラス名, u8任意の名前文字列) で宣言します 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{BP\_OBJECT\_IMPL(B,\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}クラスB"{}})}
+
+\end{DoxyCode}
+ \Hypertarget{_component_8h_a14d986d5dcf46e290a0c32a137878be6}\index{Component.h@{Component.h}!BP\_COMPONENT\_BASE\_TYPE@{BP\_COMPONENT\_BASE\_TYPE}}
+\index{BP\_COMPONENT\_BASE\_TYPE@{BP\_COMPONENT\_BASE\_TYPE}!Component.h@{Component.h}}
+\doxysubsubsection{\texorpdfstring{BP\_COMPONENT\_BASE\_TYPE}{BP\_COMPONENT\_BASE\_TYPE}}
+{\footnotesize\ttfamily \label{_component_8h_a14d986d5dcf46e290a0c32a137878be6} 
+\#define BP\+\_\+\+COMPONENT\+\_\+\+BASE\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{CLASS}{}\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }MyClass\ =\ CLASS;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ [[deprecated(\textcolor{stringliteral}{"{}BP\_COMPONENT\_TYPE()\ と\ BP\_COMPONENT\_BASE\_TYPE()\ は古い宣言です。BP\_COMPONENT\_DECL(クラス名,\ u8\(\backslash\)"{}解説文\(\backslash\)"{})\ に置換してください。"{}})]]\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_class_component_type}{ClassComponentType}}<\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ CLASS>\ Type;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_component_type_info}{ComponentTypeInfo}}*\ typeInfo()\ const\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&Type;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+Componentクラス内ヘッダー宣言 基底クラス用 publicで BP\+\_\+\+COMPONENT\+\_\+\+BASE\+\_\+\+TYPE(クラス名) で宣言します
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }A}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_component_8h_a14d986d5dcf46e290a0c32a137878be6}{BP\_COMPONENT\_BASE\_TYPE}}(A)}
+
+\end{DoxyCode}
+ \Hypertarget{_component_8h_a544c31f98b90b38818b27eff6683eef6}\index{Component.h@{Component.h}!BP\_COMPONENT\_DECL@{BP\_COMPONENT\_DECL}}
+\index{BP\_COMPONENT\_DECL@{BP\_COMPONENT\_DECL}!Component.h@{Component.h}}
+\doxysubsubsection{\texorpdfstring{BP\_COMPONENT\_DECL}{BP\_COMPONENT\_DECL}}
+{\footnotesize\ttfamily \label{_component_8h_a544c31f98b90b38818b27eff6683eef6} 
+\#define BP\+\_\+\+COMPONENT\+\_\+\+DECL(\begin{DoxyParamCaption}\item[{}]{CLASS}{, }\item[{}]{}...{}\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }Super\ \ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_component_class}{ComponentClass}};\ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }\mbox{\hyperlink{class_component_class}{ComponentClass}}\ =\ CLASS;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{inline}\ \mbox{\hyperlink{class_class_component_type}{ClassComponentType<CLASS>}}\ Type\ =\ \mbox{\hyperlink{class_class_component_type}{ClassComponentType<CLASS>}}(\#CLASS,\ \&Super::Type,\ \_\_VA\_ARGS\_\_);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_component_type_info}{ComponentTypeInfo}}*\ typeInfo()\ const\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \&Type;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{void}*\ createComponentPtr(\textcolor{keyword}{const}\ ObjectPtr\&\ obj)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Type.createComponentPtr(obj);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+クラス内ヘッダー宣言 publicで BP\+\_\+\+COMPONENT\+\_\+\+DECL(クラス名, \doxylink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}"{}任意の解説文字列"{}) で宣言します
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }B\ :\ \textcolor{keyword}{public}\ A}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_component_8h_a544c31f98b90b38818b27eff6683eef6}{BP\_COMPONENT\_DECL}}(B,\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}コンポーネント"{}});}
+
+\end{DoxyCode}
+ \Hypertarget{_component_8h_acb5da28bae949d7ba8d6a74c97e1e394}\index{Component.h@{Component.h}!BP\_COMPONENT\_IMPL@{BP\_COMPONENT\_IMPL}}
+\index{BP\_COMPONENT\_IMPL@{BP\_COMPONENT\_IMPL}!Component.h@{Component.h}}
+\doxysubsubsection{\texorpdfstring{BP\_COMPONENT\_IMPL}{BP\_COMPONENT\_IMPL}}
+{\footnotesize\ttfamily \label{_component_8h_acb5da28bae949d7ba8d6a74c97e1e394} 
+\#define BP\+\_\+\+COMPONENT\+\_\+\+IMPL(\begin{DoxyParamCaption}\item[{}]{CLASS}{, }\item[{}]{DESC\+\_\+\+NAME}{}\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{class_class_component_type}{ClassComponentType<CLASS>}}\ CLASS::Type(\#CLASS,\ \&Super::Type,\ DESC\_NAME);}
+
+\end{DoxyCode}
+\Hypertarget{_component_8h_ae5e9b7470814a3a37d802d342aeb16f6}\index{Component.h@{Component.h}!BP\_COMPONENT\_TYPE@{BP\_COMPONENT\_TYPE}}
+\index{BP\_COMPONENT\_TYPE@{BP\_COMPONENT\_TYPE}!Component.h@{Component.h}}
+\doxysubsubsection{\texorpdfstring{BP\_COMPONENT\_TYPE}{BP\_COMPONENT\_TYPE}}
+{\footnotesize\ttfamily \label{_component_8h_ae5e9b7470814a3a37d802d342aeb16f6} 
+\#define BP\+\_\+\+COMPONENT\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{CLASS}{, }\item[{}]{PARENT\+\_\+\+CLASS}{}\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{using\ }Super\ =\ PARENT\_CLASS;\ \textcolor{comment}{/*\ 親クラスの型\ */}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ BP\_COMPONENT\_BASE\_TYPE(CLASS);}
+
+\end{DoxyCode}
+クラス内ヘッダー宣言 publicで BP\+\_\+\+COMPONENT\+\_\+\+TYPE(クラス名, 親クラス名) で宣言します
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class\ }B\ :\ \textcolor{keyword}{public}\ A}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{_component_8h_ae5e9b7470814a3a37d802d342aeb16f6}{BP\_COMPONENT\_TYPE}}(B,\ A);}
+
+\end{DoxyCode}
+ \Hypertarget{_component_8h_a117fd7d8dc0e8a462119907dec50616a}\index{Component.h@{Component.h}!UNIQUE\_TEXT@{UNIQUE\_TEXT}}
+\index{UNIQUE\_TEXT@{UNIQUE\_TEXT}!Component.h@{Component.h}}
+\doxysubsubsection{\texorpdfstring{UNIQUE\_TEXT}{UNIQUE\_TEXT}}
+{\footnotesize\ttfamily \label{_component_8h_a117fd7d8dc0e8a462119907dec50616a} 
+\#define UNIQUE\+\_\+\+TEXT(\begin{DoxyParamCaption}\item[{}]{n}{}\end{DoxyParamCaption})}
+
+{\bfseries 値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{UniqueText(n).c\_str()}
+
+\end{DoxyCode}

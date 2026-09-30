@@ -1,0 +1,67 @@
+\doxysection{F\+:/sg mitarai/\+Reo\+Engine/src/\+Vector\+Math.h ファイル}
+\hypertarget{_vector_math_8h}{}\label{_vector_math_8h}\index{F:/sg mitarai/ReoEngine/src/VectorMath.h@{F:/sg mitarai/ReoEngine/src/VectorMath.h}}
+
+
+ベクトル算術演算  
+
+
+{\ttfamily \#include "{}hlsl++.\+h"{}}\newline
+Vector\+Math.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{_vector_math_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmatrix}{matrix}}
+\begin{DoxyCompactList}\small\item\em 4x4行列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{Indent}\textbf{ Dx\+Lib相互キャスト処理}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}\label{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76} 
+Dx\+Lib\+::\+FLOAT2 {\bfseries cast} (const float2 \&v)
+\begin{DoxyCompactList}\small\item\em Dx\+Lib\+::\+FLOAT2へキャスト \end{DoxyCompactList}\item 
+\Hypertarget{_vector_math_8h_af225719d25df601bb1f8cfb8832b3578}\label{_vector_math_8h_af225719d25df601bb1f8cfb8832b3578} 
+Dx\+Lib\+::\+FLOAT3 {\bfseries cast} (const float3 \&v)
+\begin{DoxyCompactList}\small\item\em Dx\+Lib\+::\+VECTOR/\+FLOAT3へキャスト \end{DoxyCompactList}\item 
+\Hypertarget{_vector_math_8h_abdd91097aaa20b7f04bfe06e8af94ccf}\label{_vector_math_8h_abdd91097aaa20b7f04bfe06e8af94ccf} 
+Dx\+Lib\+::\+FLOAT4 {\bfseries cast} (const float4 \&v)
+\begin{DoxyCompactList}\small\item\em Dx\+Lib\+::\+FLOAT4へキャスト \end{DoxyCompactList}\item 
+\Hypertarget{_vector_math_8h_ad6acc7323b2f4406ac4c3e70a6e2575d}\label{_vector_math_8h_ad6acc7323b2f4406ac4c3e70a6e2575d} 
+Dx\+Lib\+::\+INT4 {\bfseries cast} (const int4 \&v)
+\begin{DoxyCompactList}\small\item\em Dx\+Lib\+::\+INT4へキャスト \end{DoxyCompactList}\item 
+\Hypertarget{_vector_math_8h_ad50fc03a0312fcdffacbbde80f3e3430}\label{_vector_math_8h_ad50fc03a0312fcdffacbbde80f3e3430} 
+Dx\+Lib\+::\+MATRIX {\bfseries cast} (const float4x4 \&m)
+\begin{DoxyCompactList}\small\item\em Dx\+Lib\+::\+MATRIXへキャスト \end{DoxyCompactList}\item 
+\Hypertarget{_vector_math_8h_aa5e7ca84aeca70390f27da4a2b2bea74}\label{_vector_math_8h_aa5e7ca84aeca70390f27da4a2b2bea74} 
+float2 {\bfseries cast} (const Dx\+Lib\+::\+FLOAT2 \&v)
+\begin{DoxyCompactList}\small\item\em float2へキャスト \end{DoxyCompactList}\item 
+\Hypertarget{_vector_math_8h_a95c9740648838ebc82e8a5691f4e23b1}\label{_vector_math_8h_a95c9740648838ebc82e8a5691f4e23b1} 
+float3 {\bfseries cast} (const Dx\+Lib\+::\+FLOAT3 \&v)
+\begin{DoxyCompactList}\small\item\em float3へキャスト \end{DoxyCompactList}\item 
+\Hypertarget{_vector_math_8h_af1b44a3c0e33569c25933e937debabf3}\label{_vector_math_8h_af1b44a3c0e33569c25933e937debabf3} 
+float4 {\bfseries cast} (const Dx\+Lib\+::\+FLOAT4 \&v)
+\begin{DoxyCompactList}\small\item\em float4へキャスト \end{DoxyCompactList}\item 
+\Hypertarget{_vector_math_8h_aca6dd18b88776290653485d24a4162a8}\label{_vector_math_8h_aca6dd18b88776290653485d24a4162a8} 
+int4 {\bfseries cast} (const Dx\+Lib\+::\+INT4 \&v)
+\begin{DoxyCompactList}\small\item\em int4へキャスト \end{DoxyCompactList}\item 
+\Hypertarget{_vector_math_8h_a93f8847088bf7c3b51eee6aa46577bd5}\label{_vector_math_8h_a93f8847088bf7c3b51eee6aa46577bd5} 
+float4x4 {\bfseries cast} (const Dx\+Lib\+::\+MATRIX \&m)
+\begin{DoxyCompactList}\small\item\em float4x4へキャスト \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ hlslppの追加関数}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_vector_math_8h_ab151ff244ab06b4f346d5827dde650e0}\label{_vector_math_8h_ab151ff244ab06b4f346d5827dde650e0} 
+hlslpp\+\_\+inline float3 {\bfseries mul} (const float3x4 \&m1, const float4 \&v)
+\begin{DoxyCompactList}\small\item\em 3x4行列 ✕ float4 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+ベクトル算術演算 
+

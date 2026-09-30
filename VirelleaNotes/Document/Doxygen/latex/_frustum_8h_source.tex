@@ -1,0 +1,134 @@
+\doxysection{Frustum.\+h}
+\hypertarget{_frustum_8h_source}{}\label{_frustum_8h_source}\index{G:/sg mitarai/自作エンジン/Engine/src/Graphics/Frustum.h@{G:/sg mitarai/自作エンジン/Engine/src/Graphics/Frustum.h}}
+\mbox{\hyperlink{_frustum_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{DepthMode}}\ :\ s32}
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67}{Default}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda67f115c1fddc4ce1aeb1c754001585bc}{Reverse}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda859477cd2af414695fa54772f08fbcc9}{ReverseInfinite}},\ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ \ コンストラクタ\ (行列を指定して初期化)}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ mat\_view,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ mat\_proj,\ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{Frustum::DepthMode}}\ depth\_mode\ =\ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67}{Frustum::DepthMode::Default}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_frustum_abf37ae7096fb44609b6e4b04a63cbe08}{\string~Frustum}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ \ 更新}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ update();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ \ デバッグ描画}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ renderDebug();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ \ 位置を設定}}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}\&\ setPosition(\textcolor{keyword}{const}\ float3\&\ position);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ \ 注視点を設定}}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}\&\ setLookAt(\textcolor{keyword}{const}\ float3\&\ look\_at);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ \ 世界の上方向のベクトルを設定}}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}\&\ setWorldUp(\textcolor{keyword}{const}\ float3\&\ world\_up);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{//\ \ 上下左右の角度から注視点を設定}}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}\&\ \mbox{\hyperlink{class_frustum_ad9aeaa231f512ff9e89aa28c0d1a4660}{setLookAt}}(f32\ horizontal\_angle,\ f32\ vertical\_angle);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ \ 画角を設定}}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}\&\ setFov(f32\ fovy);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{//\ \ アスペクト比を設定}}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}\&\ setAspectRatio(f32\ aspect\_ratio);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//\ \ 近クリップ距離を設定}}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}\&\ setNearZ(f32\ z\_near);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{comment}{//\ \ 遠クリップ距離を設定}}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}\&\ setFarZ(f32\ z\_far);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ \ デプス動作モードを設定}}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{class_frustum_ab225c6aa54200beee8ec378f2314e413}{Frustum}}\&\ setDepthMode(\mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{Frustum::DepthMode}}\ mode);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ \ 位置を取得}}
+\DoxyCodeLine{00090\ \ \ \ \ [[nodiscard]]\ float3\ position()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{comment}{//\ \ 注視点を取得}}
+\DoxyCodeLine{00093\ \ \ \ \ [[nodiscard]]\ float3\ lookAt()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{//\ \ 世界の上方向のベクトルを取得}}
+\DoxyCodeLine{00096\ \ \ \ \ [[nodiscard]]\ float3\ worldUp()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{comment}{//\ \ 画角を取得}}
+\DoxyCodeLine{00099\ \ \ \ \ [[nodiscard]]\ f32\ fov()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{comment}{//\ \ アスペクト比を取得}}
+\DoxyCodeLine{00102\ \ \ \ \ [[nodiscard]]\ f32\ aspectRatio()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{comment}{//\ \ 近クリップ距離を取得}}
+\DoxyCodeLine{00105\ \ \ \ \ [[nodiscard]]\ f32\ nearZ()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{comment}{//\ \ 遠クリップ距離を取得}}
+\DoxyCodeLine{00108\ \ \ \ \ [[nodiscard]]\ f32\ farZ()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{comment}{//\ \ スクリーンまでの距離を取得}}
+\DoxyCodeLine{00112\ \ \ \ \ [[nodiscard]]\ f32\ \mbox{\hyperlink{class_frustum_abb0ebfbbcb843f9d17667fdc66227b6e}{screenDistance}}(u32\ resolution\_height)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ \ デプス動作モードを取得}}
+\DoxyCodeLine{00115\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{Frustum::DepthMode}}\ depthMode()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{comment}{//\ \ 反転Zを利用するかどうかを取得}}
+\DoxyCodeLine{00118\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ useReverseDepth()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//\ \ スクリーン座標からレイを取得}}
+\DoxyCodeLine{00123\ \ \ \ \ [[nodiscard]]\ float3\ \mbox{\hyperlink{class_frustum_a93cfb3b15eba1eac9b79a25b8daedcfd}{rayFromScreenPosition}}(float2\ screen\_position);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//\ \ カメラのワールド行列を取得}}
+\DoxyCodeLine{00126\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ matCameraWorld()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{comment}{//\ \ ビュー行列を取得}}
+\DoxyCodeLine{00129\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ matView()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{comment}{//\ \ 投影行列を取得}}
+\DoxyCodeLine{00132\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ matProj()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//\ \ ビュー\ ✕\ 投影行列を取得}}
+\DoxyCodeLine{00135\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmatrix}{matrix}}\&\ matViewProj()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00140\ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \ position\_\ \ \ \ \ \ \ \ \ =\ float3(0.0f,\ 5.0f,\ -\/15.0f);\ \ \ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \ look\_at\_\ \ \ \ \ \ \ \ \ \ =\ float3(0.0f,\ 0.0f,\ 0.0f);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00142\ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \ world\_up\_\ \ \ \ \ \ \ \ \ =\ float3(0.0f,\ 1.0f,\ 0.0f);\ \ \ \ \ \ \ }
+\DoxyCodeLine{00143\ \ \ \ \ f32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fovy\_\ \ \ \ \ \ \ \ \ \ \ \ \ =\ 60.0f\ *\ DegToRad;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00144\ \ \ \ \ f32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ aspect\_ratio\_\ \ \ \ \ =\ 16.0f\ /\ 9.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00145\ \ \ \ \ f32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ z\_near\_\ \ \ \ \ \ \ \ \ \ \ =\ 0.01f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00146\ \ \ \ \ f32\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ z\_far\_\ \ \ \ \ \ \ \ \ \ \ \ =\ 1000.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00147\ \ \ \ \ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{Frustum::DepthMode}}\ depth\_mode\_\ \ \ \ \ \ \ =\ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67}{Frustum::DepthMode::Default}};\ \ \ \ }
+\DoxyCodeLine{00148\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ \ \ \ \ \ \ \ \ \ \ \ \ mat\_camera\_world\_\ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ \ \ \ \ \ \ \ \ \ \ \ \ mat\_view\_\ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00150\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ \ \ \ \ \ \ \ \ \ \ \ \ mat\_proj\_\ \ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ \ \ \ \ \ \ \ \ \ \ \ \ mat\_view\_proj\_\ \ \ \ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00152\ \};}
+
+\end{DoxyCode}

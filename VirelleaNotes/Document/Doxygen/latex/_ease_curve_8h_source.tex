@@ -1,0 +1,51 @@
+\doxysection{Ease\+Curve.\+h}
+\hypertarget{_ease_curve_8h_source}{}\label{_ease_curve_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/EaseCurve.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/EaseCurve.h}}
+\mbox{\hyperlink{_ease_curve_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_ease_curve_8h_a87e8af974637ab7e4251fb31bfc0857c}{EaseType}}\ :\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ InSine,}
+\DoxyCodeLine{00013\ \ \ \ \ OutSine,}
+\DoxyCodeLine{00014\ \ \ \ \ InOutSine,}
+\DoxyCodeLine{00015\ \ \ \ \ InQuad,}
+\DoxyCodeLine{00016\ \ \ \ \ OutQuad,}
+\DoxyCodeLine{00017\ \ \ \ \ InOutQuad,}
+\DoxyCodeLine{00018\ \ \ \ \ InCubic,}
+\DoxyCodeLine{00019\ \ \ \ \ OutCubic,}
+\DoxyCodeLine{00020\ \ \ \ \ InOutCubic,}
+\DoxyCodeLine{00021\ \ \ \ \ InQuart,}
+\DoxyCodeLine{00022\ \ \ \ \ OutQuart,}
+\DoxyCodeLine{00023\ \ \ \ \ InOutQuart,}
+\DoxyCodeLine{00024\ \ \ \ \ InQuint,}
+\DoxyCodeLine{00025\ \ \ \ \ OutQuint,}
+\DoxyCodeLine{00026\ \ \ \ \ InOutQuint,}
+\DoxyCodeLine{00027\ \ \ \ \ InExpo,}
+\DoxyCodeLine{00028\ \ \ \ \ OutExpo,}
+\DoxyCodeLine{00029\ \ \ \ \ InOutExpo,}
+\DoxyCodeLine{00030\ \ \ \ \ InCirc,}
+\DoxyCodeLine{00031\ \ \ \ \ OutCirc,}
+\DoxyCodeLine{00032\ \ \ \ \ InOutCirc,}
+\DoxyCodeLine{00033\ \ \ \ \ InBack,}
+\DoxyCodeLine{00034\ \ \ \ \ OutBack,}
+\DoxyCodeLine{00035\ \ \ \ \ InOutBack,}
+\DoxyCodeLine{00036\ \ \ \ \ InElastic,}
+\DoxyCodeLine{00037\ \ \ \ \ OutElastic,}
+\DoxyCodeLine{00038\ \ \ \ \ InOutElastic,}
+\DoxyCodeLine{00039\ \ \ \ \ InBounce,}
+\DoxyCodeLine{00040\ \ \ \ \ OutBounce,}
+\DoxyCodeLine{00041\ \ \ \ \ InOutBounce}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ \ Easeカーブ関数の種類の最大個数を取得}}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{size\_t}\ GetEaseFunctionMaxCount();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ \ Easeカーブ関数を取得}}
+\DoxyCodeLine{00050\ std::function<\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}})>\ \mbox{\hyperlink{_ease_curve_8h_a00802d546dcaec1c1826e449719a7419}{GetEaseFunction}}(\mbox{\hyperlink{_ease_curve_8h_a87e8af974637ab7e4251fb31bfc0857c}{EaseType}}\ type);}
+
+\end{DoxyCode}

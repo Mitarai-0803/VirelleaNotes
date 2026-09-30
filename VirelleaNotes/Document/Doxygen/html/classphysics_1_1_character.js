@@ -1,0 +1,38 @@
+var classphysics_1_1_character =
+[
+    [ "ContactListener", "classphysics_1_1_character_1_1_contact_listener.html", "classphysics_1_1_character_1_1_contact_listener" ],
+    [ "ContactSettings", "classphysics_1_1_character_1_1_contact_settings.html", "classphysics_1_1_character_1_1_contact_settings" ],
+    [ "GroundState", "classphysics_1_1_character.html#a64bf4eb4653df1dfeefb2443f2fa4873", [
+      [ "OnGround", "classphysics_1_1_character.html#a64bf4eb4653df1dfeefb2443f2fa4873a2b9beed57034f5727573d7ded76cf777", null ],
+      [ "OnSteepGround", "classphysics_1_1_character.html#a64bf4eb4653df1dfeefb2443f2fa4873a50f80f8d96a6d65de73ba8a6b9910761", null ],
+      [ "NotSupported", "classphysics_1_1_character.html#a64bf4eb4653df1dfeefb2443f2fa4873a9ed2d871602556951e39f3cebd08d6cb", null ],
+      [ "InAir", "classphysics_1_1_character.html#a64bf4eb4653df1dfeefb2443f2fa4873aee4e669a07b061d70b9b79dfed9cb5e7", null ]
+    ] ],
+    [ "canWalkStairs", "classphysics_1_1_character.html#a2258c4316e1079fa738005bfbf502316", null ],
+    [ "centerOfMassTransform", "classphysics_1_1_character.html#a2e47b974eaaf62e982e657e251b26201", null ],
+    [ "characterPadding", "classphysics_1_1_character.html#ab76bde2e4a93c6be241012d48b19bd74", null ],
+    [ "groundBodyID", "classphysics_1_1_character.html#afefff07cea497a369bca10f06f202809", null ],
+    [ "groundNormal", "classphysics_1_1_character.html#a44010813f6325b7ab5965052d1a711fe", null ],
+    [ "groundPosition", "classphysics_1_1_character.html#a75ef2bba3278c6effed998b2f61c71e0", null ],
+    [ "groundState", "classphysics_1_1_character.html#a8a24875f6882a34c25776422cc83ff13", null ],
+    [ "groundVelocity", "classphysics_1_1_character.html#a7a562edf20007702fae5f8a25c7fc9b8", null ],
+    [ "linearVelocity", "classphysics_1_1_character.html#a8e6a4bb7757c969fb3fc3a35ff866696", null ],
+    [ "listener", "classphysics_1_1_character.html#af75d79d7efe3e5a592474b1f9bdc542f", null ],
+    [ "move", "classphysics_1_1_character.html#a07bd7bb40708ed1beb8f2d06d5f9daca", null ],
+    [ "position", "classphysics_1_1_character.html#a4dd722578045fe3b4f9343efa7f1f9a4", null ],
+    [ "refleshContacts", "classphysics_1_1_character.html#a1c8eab5932aa07a6c7777b05658c7a2a", null ],
+    [ "rotation", "classphysics_1_1_character.html#a6af7cf39f8ca37c9009003875bb06468", null ],
+    [ "setLinearVelocity", "classphysics_1_1_character.html#a7a466020621512467bf8b2c99cbd7410", null ],
+    [ "setListener", "classphysics_1_1_character.html#a312ff4bf8d4d23672f70481de601e174", null ],
+    [ "setMass", "classphysics_1_1_character.html#a35601f6453ac278e80f3fb81157ad7a5", null ],
+    [ "setMaxSlopeAngle", "classphysics_1_1_character.html#aff28ca0b1c3abccb44914e43f54eeefd", null ],
+    [ "setMaxStrength", "classphysics_1_1_character.html#a1850bc55a8663491fee199f7fb31f3d8", null ],
+    [ "setPosition", "classphysics_1_1_character.html#ade4826fc25e3722627329a79fad55302", null ],
+    [ "setRotation", "classphysics_1_1_character.html#af06acd9d0fe75db90f2b82282c5b283f", null ],
+    [ "setShape", "classphysics_1_1_character.html#add6b0d15ca001aec9f26747094859ea2", null ],
+    [ "shape", "classphysics_1_1_character.html#ac27dc5721dd843a3b4dd182fd55fd101", null ],
+    [ "shapeOffset", "classphysics_1_1_character.html#a2e72aef2bd84dff611547cdb640e1c2e", null ],
+    [ "update", "classphysics_1_1_character.html#a6368798da0919a9f9d39db5b13e23edd", null ],
+    [ "walkStairs", "classphysics_1_1_character.html#a5c310f6ab55042491d41f831634199c1", null ],
+    [ "worldMatrix", "classphysics_1_1_character.html#a2eeffe7b11fe0663f455e198bc3681c3", null ]
+];

@@ -1,0 +1,37 @@
+\doxysection{Object\+Base3\+D.\+h}
+\hypertarget{_object_base3_d_8h_source}{}\label{_object_base3_d_8h_source}\index{F:/sg mitarai/ReoEngine/src/ObjectBase3D.h@{F:/sg mitarai/ReoEngine/src/ObjectBase3D.h}}
+\mbox{\hyperlink{_object_base3_d_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_object_base_8h}{ObjectBase.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <Jolt/Jolt.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <Jolt/Physics/Body/BodyID.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <Jolt/Physics/Body/MotionType.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ CollisionComponent\ はグローバル名前空間の前方宣言}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_collision_component}{CollisionComponent}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }Object\ \{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }ObjectBase3D\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object_1_1_object_base_a3159a0a90973e5da88ebc0cc2d64e713}{ObjectBase}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ ObjectBase3D()\ \ \ \ \ \ \ \ \ \ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~ObjectBase3D()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ JPH::RVec3\ GetPosition()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ SetPosition(\textcolor{keyword}{const}\ JPH::RVec3\&\ pos);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ JPH::Quat\ GetRotation()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ SetRotation(\textcolor{keyword}{const}\ JPH::Quat\&\ rot);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00030\ \ \ \ \ JPH::RVec3\ \mbox{\hyperlink{class_object_1_1_object_base3_d_af5104ab6bd0505926fdbed1716ccfb84}{m\_pos}}\ =\ JPH::RVec3(0.0f,\ 0.0f,\ 0.0f);\ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ JPH::Quat\ \ \mbox{\hyperlink{class_object_1_1_object_base3_d_afa7eaa164db533a4cba9b735db62ba7c}{m\_rot}}\ =\ JPH::Quat::sIdentity();\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ Object}}
+
+\end{DoxyCode}

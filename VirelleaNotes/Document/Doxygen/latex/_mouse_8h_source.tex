@@ -1,0 +1,54 @@
+\doxysection{Mouse.\+h}
+\hypertarget{_mouse_8h_source}{}\label{_mouse_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/GameSample/Scenes/Game/Objects/Mouse.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/GameSample/Scenes/Game/Objects/Mouse.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../Gauge.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }Sample::GameSample\ \{}
+\DoxyCodeLine{00007\ USING\_PTR(\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse}{Mouse}});}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse}{Mouse}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_object_a40860402e64d8008fb42329df7097cdb}{Object}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{_object_8h_a843cde70e575d7c181c3bc710b41ac13}{BP\_OBJECT\_DECL}}(\mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse}{Mouse}},\ \textcolor{stringliteral}{"{}GameSample/Mouse"{}});}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ MousePtr\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse_abb4bbace29da0f6a7c11387641c566e3}{Create}}(\textcolor{keyword}{const}\ float3\&\ pos,\ \textcolor{keyword}{const}\ float3\&\ front\ =\ \{0,\ 0,\ 1\});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ @\{}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse_ae3b84575dff1a41671e59ed3c27fbb44}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse_acdca47ad9b8e12bbdadb5f3e59dff460}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ 基本描画の後に処理します}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse_af752a2193e2f5749fedf5aa9ad746a22}{LateDraw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse_a6fbdc09a186e87bfab8a1c46e790e08d}{GUI}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse_a141ab76d7b3afd679100006c81cdb49b}{OnHit}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\&\ hitInfo)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ @\}}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ @\{}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse_a856e0fe952f04422f13555e6df173c2d}{SetSpeed}}(\textcolor{keywordtype}{float}\ s);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse_aa78a691d9ab4959ade74f0a699dfb960}{GetSpeed}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{float}\&\ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_mouse_ab00920642d96ef91d67e6c41377af7a0}{Speed}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ @\}}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ speed\_\ =\ 1.0f;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ rot\_y\_\ =\ 0.0f;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{float}\ rot\_x\_\ =\ 0.0f;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_sample_1_1_game_sample_1_1_h_p_1_1_gauge}{HP::Gauge}}\ gauge\_;}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ Sample::GameSample}}
+
+\end{DoxyCode}

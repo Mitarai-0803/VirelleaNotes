@@ -1,0 +1,904 @@
+\doxysection{F\+:/sg mitarai/\+Reo\+Engine/src/\+Functions.h ファイル}
+\hypertarget{_functions_8h}{}\label{_functions_8h}\index{F:/sg mitarai/ReoEngine/src/Functions.h@{F:/sg mitarai/ReoEngine/src/Functions.h}}
+
+
+ユーティリティ関数群の宣言  
+
+
+{\ttfamily \#include "{}Dx\+Main.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$numbers$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include "{}hlsl++.\+h"{}}\newline
+Functions.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_functions_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{_functions_8h_a8a2adf07bf8824fea2d1bac762beeba5}{My\+Library\+::\+Convert\+Milli\+To\+Sec}} (int milli)
+\begin{DoxyCompactList}\small\item\em ミリ秒を秒に変換 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_a11ad2cb307b33ed8f6734f71531495ff}{My\+Library\+::\+Convert\+Milli\+To\+Minute}} (int milli)
+\begin{DoxyCompactList}\small\item\em ミリ秒を分に変換 \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{_functions_8h_a34bf399b028db4d522ad95b8e8f60fa2}{My\+Library\+::\+Get\+File\+Extension}} (const char \texorpdfstring{$\ast$}{*}filepath)
+\begin{DoxyCompactList}\small\item\em ファイルパスから拡張子を取得 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_a356af782d61b73620bbb01327fd23251}{My\+Library\+::\+Object\+Point\+To\+Direction}} (hlslpp\+::float2 now\+\_\+pos, hlslpp\+::float2 goal\+\_\+pos, float dir, float rot\+\_\+speed)
+\begin{DoxyCompactList}\small\item\em オブジェクトの向き（ラジアン）を求める（回転補間あり） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_functions_8h_ad394290ecb9f00771408de37e0f6af0b}{My\+Library\+::\+Camera\+Stop}} (float pos\+\_\+x, float pos\+\_\+y, float w, float h, float \&cam\+\_\+x, float \&cam\+\_\+y)
+\begin{DoxyCompactList}\small\item\em カメラの停止制御（指定範囲外ではスクロールしない） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_functions_8h_a48e677bf38724a67f3e7dbcbe281adcd}{My\+Library\+::\+Clamp\+Position\+To\+Area}} (hlslpp\+::float2 \&target\+\_\+pos, int target\+\_\+w, int target\+\_\+h, float area\+\_\+w, float area\+\_\+h)
+\begin{DoxyCompactList}\small\item\em 位置を指定エリア内に制限します \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a82e5d9abf80512667d716aa12e3244b6}{My\+Library\+::\+Check\+Point\+Box\+HitF}} (const hlslpp\+::float2 \&point, const hlslpp\+::float2 \&pos, const hlslpp\+::float2 \&size)
+\begin{DoxyCompactList}\small\item\em 点と矩形の当たり判定（浮動小数） \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a6b8437bd2f41fb636c2d941fd96fd680}{My\+Library\+::\+Check\+Point\+Box\+Hit}} (float point\+\_\+x, float point\+\_\+y, float box\+\_\+x, float box\+\_\+y, float box\+\_\+w, float box\+\_\+h)
+\begin{DoxyCompactList}\small\item\em 点と矩形の当たり判定（座標指定） \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_ad4fa23e98022b95b096707154e0eec8f}{My\+Library\+::\+Check\+Box\+Hit}} (float x1, float y1, float w1, float h1, float x2, float y2, float w2, float h2)
+\begin{DoxyCompactList}\small\item\em 矩形同士の当たり判定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_adb8075e18371aa759f6715c6af09a4f8}{My\+Library\+::\+Check\+Circle\+Hit}} (float x1, float y1, float r1, float x2, float y2, float r2)
+\begin{DoxyCompactList}\small\item\em 円同士の当たり判定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a500b9529d523340b6fc5a488afd60370}{My\+Library\+::\+Check\+Point\+Circle\+Hit}} (float point\+\_\+x, float point\+\_\+y, float circle\+\_\+x, float circle\+\_\+y, float circle\+\_\+r)
+\begin{DoxyCompactList}\small\item\em 点と円の当たり判定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_functions_8h_a1c49abf2627b3232b4e7537983d97763}{My\+Library\+::\+Draw\+Circle3\+D\+\_\+\+XZ}} (hlslpp\+::float3 center, float radius, int color, bool fill=false)
+\begin{DoxyCompactList}\small\item\em 円を描画（\+XZ平面） \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_functions_8h_aedc76ca98d82929b4fa7121fae63b063}{My\+Library\+::\+Draw\+Box3\+D\+\_\+\+XZ}} (hlslpp\+::float3 center, float half\+\_\+w, float half\+\_\+h, int color, bool fill=false)
+\begin{DoxyCompactList}\small\item\em 矩形を描画（\+XZ方向） \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a2871034a77584f022a26fc8f44c15536}{My\+Library\+::\+Check\+Circle\+XZHit}} (hlslpp\+::float3 \&center1, float radius1, hlslpp\+::float3 \&center2, float radius2)
+\begin{DoxyCompactList}\small\item\em XZ 平面上の円同士の当たり判定を行なう \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a88b98eec2ce940255b03d451536f6402}{My\+Library\+::\+Check\+Ball\+Hit}} (hlslpp\+::float3 \&center1, float radius1, hlslpp\+::float3 \&center2, float radius2)
+\begin{DoxyCompactList}\small\item\em 球同士の当たり判定を行なう \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a7164ec6a9f699d4fc91a00005a6d46b6}{My\+Library\+::\+Check\+Box\+Hit3D}} (hlslpp\+::float3 \&box\+\_\+pos1, hlslpp\+::float3 \&box\+\_\+size1, hlslpp\+::float3 \&box\+\_\+pos2, hlslpp\+::float3 \&box\+\_\+size2)
+\begin{DoxyCompactList}\small\item\em 3D の AABB 同士の当たり判定を行なう \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a0bf99e8cfa813a2cc9740f4ebbba294e}{My\+Library\+::\+Check\+Point\+Box\+Hit3D}} (hlslpp\+::float3 \&point, hlslpp\+::float3 \&box\+\_\+pos, hlslpp\+::float3 \&box\+\_\+size)
+\begin{DoxyCompactList}\small\item\em 点と 3D ボックスの当たり判定を行なう \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_aaeeb36939c06526b184a5805482eace4}{My\+Library\+::\+Check\+Ball\+Box\+Hit}} (hlslpp\+::float3 \&ball\+\_\+pos, float ball\+\_\+radius, hlslpp\+::float3 \&box\+\_\+pos, hlslpp\+::float3 \&box\+\_\+size)
+\begin{DoxyCompactList}\small\item\em 球と AABB（ボックス）の当たり判定を行なう \end{DoxyCompactList}\item 
+hlslpp\+::float3 \mbox{\hyperlink{_functions_8h_abbee8a5614da3529f2382dce2ca877d4}{My\+Library\+::\+Get\+Float3\+Line\+Point\+Near\+Position}} (hlslpp\+::float3 \&line\+\_\+start, hlslpp\+::float3 \&line\+\_\+goal, hlslpp\+::float3 \&point)
+\begin{DoxyCompactList}\small\item\em 線分と点の最近接位置を取得します（3\+D） \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_a666f06a040a8a1a31b9ff822ca2b6898}{My\+Library\+::\+Get\+Float3\+Line\+Point\+Near\+Distance}} (hlslpp\+::float3 \&line\+\_\+start, hlslpp\+::float3 \&line\+\_\+goal, hlslpp\+::float3 \&point)
+\begin{DoxyCompactList}\small\item\em 線分と点の最近接距離を返す（3\+D） \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_functions_8h_a3835bc39c49fb83dc641783689bac5e5}{My\+Library\+::\+Check\+Line\+Ball\+Hit}} (hlslpp\+::float3 \&line\+\_\+start, hlslpp\+::float3 \&line\+\_\+goal, hlslpp\+::float3 \&ball\+\_\+pos, float ball\+\_\+radius)
+\begin{DoxyCompactList}\small\item\em 線分と球の当たり判定を行なう（3\+D） \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_aaaf97c1d3b7c9913d88473ecedba038a}{My\+Library\+::\+Get\+Float2\+Distance}} (hlslpp\+::float2 \&pos1, hlslpp\+::float2 \&pos2)
+\begin{DoxyCompactList}\small\item\em ２つの float2 の距離を求める \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_a7e07cc042a8278de41244b0dc35880d7}{My\+Library\+::\+Get\+Float2\+Dot}} (hlslpp\+::float2 \&v1, hlslpp\+::float2 \&v2)
+\begin{DoxyCompactList}\small\item\em ２つの float2 の内積を求める \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_a1b2d20882ad1fcbb7c61bed8c8b318e1}{My\+Library\+::\+Get\+Float2\+Cross}} (hlslpp\+::float2 \&v1, hlslpp\+::float2 \&v2)
+\begin{DoxyCompactList}\small\item\em ２つの float2 の外積を求める \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_a5e3ef6341b62511f6df1f983b6bc7278}{My\+Library\+::\+Get\+Float3\+Distance}} (hlslpp\+::float3 \&pos1, hlslpp\+::float3 \&pos2)
+\begin{DoxyCompactList}\small\item\em ２つの float3 の距離を求める \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_a2159dde943661687b28ef8fb3896c1bc}{My\+Library\+::\+Get\+Float3\+Dot}} (hlslpp\+::float3 \&v1, hlslpp\+::float3 \&v2)
+\begin{DoxyCompactList}\small\item\em ２つの float3 の内積を求める \end{DoxyCompactList}\item 
+hlslpp\+::float3 \mbox{\hyperlink{_functions_8h_a50bc1ac5296a83a07f251ebe810b1b49}{My\+Library\+::\+Get\+Float3\+Cross}} (hlslpp\+::float3 \&v1, hlslpp\+::float3 \&v2)
+\begin{DoxyCompactList}\small\item\em ２つの float3 の外積を求める \end{DoxyCompactList}\item 
+hlslpp\+::float3 \mbox{\hyperlink{_functions_8h_abe44852bf4efba66f14374ad2b366138}{My\+Library\+::\+Get\+Float3\+VTransform}} (hlslpp\+::float3 \&v, MATRIX \&mat)
+\begin{DoxyCompactList}\small\item\em float3 を MATRIX で変換した float3 を返す \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_ac463dd1d1f838df327535d388ec51416}\label{_functions_8h_ac463dd1d1f838df327535d388ec51416} 
+bool {\bfseries My\+Library\+::\+Check\+Circle\+Hit} (hlslpp\+::float2 \&center1, float radius1, hlslpp\+::float2 \&center2, float radius2)
+\begin{DoxyCompactList}\small\item\em 平面上の円同士の当たり判定を行なう（float2 版） \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_a43e3e577321f4ba3f7f023b46d001cae}\label{_functions_8h_a43e3e577321f4ba3f7f023b46d001cae} 
+bool {\bfseries My\+Library\+::\+Check\+Point\+Circle\+Hit} (hlslpp\+::float2 \&point, hlslpp\+::float2 \&center, float radius)
+\begin{DoxyCompactList}\small\item\em 点と円の当たり判定を行なう（float2 版） \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_a51a55aba15b4783106eeac947fb60f69}\label{_functions_8h_a51a55aba15b4783106eeac947fb60f69} 
+bool {\bfseries My\+Library\+::\+Check\+Box\+Hit} (hlslpp\+::float2 \&box\+\_\+pos1, hlslpp\+::float2 \&box\+\_\+size1, hlslpp\+::float2 \&box\+\_\+pos2, hlslpp\+::float2 \&box\+\_\+size2)
+\begin{DoxyCompactList}\small\item\em 四角同士の当たり判定を行なう（float2 版） \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_ad965165d3692754a11a84d219dd0b85b}\label{_functions_8h_ad965165d3692754a11a84d219dd0b85b} 
+bool {\bfseries My\+Library\+::\+Check\+Point\+Box\+Hit} (hlslpp\+::float2 \&point, hlslpp\+::float2 \&box\+\_\+pos, hlslpp\+::float2 \&box\+\_\+size)
+\begin{DoxyCompactList}\small\item\em 点と四角の当たり判定を行なう（float2 版） \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_a083f02978d9c6f3e7fc199d8ccf2af9e}\label{_functions_8h_a083f02978d9c6f3e7fc199d8ccf2af9e} 
+bool {\bfseries My\+Library\+::\+Check\+Circle\+Box\+Hit} (hlslpp\+::float2 \&circle, float radius, hlslpp\+::float2 \&box\+\_\+pos, hlslpp\+::float2 \&box\+\_\+size)
+\begin{DoxyCompactList}\small\item\em 円と四角の当たり判定を行なう（float2 版） \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_ab35cecb42ff427e43c53fd74aca81195}\label{_functions_8h_ab35cecb42ff427e43c53fd74aca81195} 
+bool {\bfseries My\+Library\+::\+Check\+Point\+Triangle\+Hit} (hlslpp\+::float2 \&point, hlslpp\+::float2 \&triangle\+\_\+pos1, hlslpp\+::float2 \&triangle\+\_\+pos2, hlslpp\+::float2 \&triangle\+\_\+pos3)
+\begin{DoxyCompactList}\small\item\em 点と三角形の当たり判定を行なう（2\+D） \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_a1f4033a8e747d29898f24b2ba80010fd}\label{_functions_8h_a1f4033a8e747d29898f24b2ba80010fd} 
+hlslpp\+::float2 {\bfseries My\+Library\+::\+Get\+Float2\+Line\+Point\+Near\+Position} (hlslpp\+::float2 \&line\+\_\+start, hlslpp\+::float2 \&line\+\_\+goal, hlslpp\+::float2 \&point)
+\begin{DoxyCompactList}\small\item\em 線分と点の最近接位置を取得します（2\+D） \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_a3fdcc82df11bbbf72d1bf21f893885b8}\label{_functions_8h_a3fdcc82df11bbbf72d1bf21f893885b8} 
+float {\bfseries My\+Library\+::\+Get\+Float2\+Line\+Point\+Near\+Distance} (hlslpp\+::float2 \&line\+\_\+start, hlslpp\+::float2 \&line\+\_\+goal, hlslpp\+::float2 \&point)
+\begin{DoxyCompactList}\small\item\em 線分と点の最近接距離を返す（2\+D） \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_a4268ab332e6d006f0908271ac8b6532f}\label{_functions_8h_a4268ab332e6d006f0908271ac8b6532f} 
+bool {\bfseries My\+Library\+::\+Check\+Line\+Circle\+Hit} (hlslpp\+::float2 \&line\+\_\+start, hlslpp\+::float2 \&line\+\_\+goal, hlslpp\+::float2 \&circle\+\_\+pos, float circle\+\_\+radius)
+\begin{DoxyCompactList}\small\item\em 線分と円の当たり判定を行なう（2\+D） \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_afcb6486e8022a727b6e8576e71f2ce09}{My\+Library\+::\+Get\+Distance}} (float x1, float y1, float x2, float y2)
+\begin{DoxyCompactList}\small\item\em 2 点間の距離を返す \end{DoxyCompactList}\item 
+\Hypertarget{_functions_8h_afb8500ca81d37305b1b70079b09afd16}\label{_functions_8h_afb8500ca81d37305b1b70079b09afd16} 
+bool {\bfseries My\+Library\+::\+Check\+Circle\+Box\+Hit} (float circle\+\_\+x, float circle\+\_\+y, float circle\+\_\+r, float box\+\_\+x, float box\+\_\+y, float box\+\_\+w, float box\+\_\+h)
+\begin{DoxyCompactList}\small\item\em 円と四角の当たり判定を行う（float 版） \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_ae6c02d71f2f1f908f26f6c0e8d0498eb}{My\+Library\+::\+TORADIAN}} (float degree)
+\begin{DoxyCompactList}\small\item\em 度をラジアンに変換 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_a87e76d507513413bb000cadf62cbbbe0}{My\+Library\+::\+TODEGREE}} (float radian)
+\begin{DoxyCompactList}\small\item\em ラジアンを度に変換 \end{DoxyCompactList}\item 
+hlslpp\+::float2 \mbox{\hyperlink{_functions_8h_a669855e38c0e1b78cefe62a7f17a6897}{My\+Library\+::\+Normalize}} (const hlslpp\+::float2 \&vec)
+\begin{DoxyCompactList}\small\item\em 正規化（float2） \end{DoxyCompactList}\item 
+hlslpp\+::float3 \mbox{\hyperlink{_functions_8h_a7268206d6ad56ac6d9cd39a0b74c1d92}{My\+Library\+::\+Normalize}} (const hlslpp\+::float3 \&vec)
+\begin{DoxyCompactList}\small\item\em 正規化（float3） \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_aef06017594cd1c4ae4244efdea9fb3c1}{My\+Library\+::\+Get\+Length\+Along\+Rotation}} (float rot)
+\begin{DoxyCompactList}\small\item\em 回転に沿った長さ（cos）を取得 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{_functions_8h_a6c257008439735d19ef3e2ff73353997}{My\+Library\+::\+Get\+Length\+Opposite\+Rotation}} (float rot)
+\begin{DoxyCompactList}\small\item\em 回転に垂直な長さ（sin）を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ユーティリティ関数群の宣言 
+
+\begin{DoxyAuthor}{著者}
+レオ 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{_functions_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_functions_8h_ad394290ecb9f00771408de37e0f6af0b}\index{Functions.h@{Functions.h}!CameraStop@{CameraStop}}
+\index{CameraStop@{CameraStop}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CameraStop()}{CameraStop()}}
+{\footnotesize\ttfamily \label{_functions_8h_ad394290ecb9f00771408de37e0f6af0b} 
+void My\+Library\+::\+Camera\+Stop (\begin{DoxyParamCaption}\item[{float}]{pos\+\_\+x}{, }\item[{float}]{pos\+\_\+y}{, }\item[{float}]{w}{, }\item[{float}]{h}{, }\item[{float \&}]{cam\+\_\+x}{, }\item[{float \&}]{cam\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+カメラの停止制御（指定範囲外ではスクロールしない） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em pos\+\_\+x} & 対象 X 座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em pos\+\_\+y} & 対象 Y 座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em w} & 対象幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em h} & 対象高さ \\
+\hline
+\mbox{\texttt{in,out}}  & {\em cam\+\_\+x} & カメラ X（参照で更新） \\
+\hline
+\mbox{\texttt{in,out}}  & {\em cam\+\_\+y} & カメラ Y（参照で更新） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_functions_8h_aaeeb36939c06526b184a5805482eace4}\index{Functions.h@{Functions.h}!CheckBallBoxHit@{CheckBallBoxHit}}
+\index{CheckBallBoxHit@{CheckBallBoxHit}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckBallBoxHit()}{CheckBallBoxHit()}}
+{\footnotesize\ttfamily \label{_functions_8h_aaeeb36939c06526b184a5805482eace4} 
+bool My\+Library\+::\+Check\+Ball\+Box\+Hit (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{ball\+\_\+pos}{, }\item[{float}]{ball\+\_\+radius}{, }\item[{hlslpp\+::float3 \&}]{box\+\_\+pos}{, }\item[{hlslpp\+::float3 \&}]{box\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+球と AABB（ボックス）の当たり判定を行なう 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em ball\+\_\+pos} & 球の中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em ball\+\_\+radius} & 球の半径 \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+pos} & ボックスの中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+size} & ボックスの半サイズ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a88b98eec2ce940255b03d451536f6402}\index{Functions.h@{Functions.h}!CheckBallHit@{CheckBallHit}}
+\index{CheckBallHit@{CheckBallHit}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckBallHit()}{CheckBallHit()}}
+{\footnotesize\ttfamily \label{_functions_8h_a88b98eec2ce940255b03d451536f6402} 
+bool My\+Library\+::\+Check\+Ball\+Hit (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{center1}{, }\item[{float}]{radius1}{, }\item[{hlslpp\+::float3 \&}]{center2}{, }\item[{float}]{radius2}{}\end{DoxyParamCaption})}
+
+
+
+球同士の当たり判定を行なう 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em center1} & 球 1 の中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em radius1} & 球 1 の半径 \\
+\hline
+\mbox{\texttt{in}}  & {\em center2} & 球 2 の中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em radius2} & 球 2 の半径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_ad4fa23e98022b95b096707154e0eec8f}\index{Functions.h@{Functions.h}!CheckBoxHit@{CheckBoxHit}}
+\index{CheckBoxHit@{CheckBoxHit}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckBoxHit()}{CheckBoxHit()}}
+{\footnotesize\ttfamily \label{_functions_8h_ad4fa23e98022b95b096707154e0eec8f} 
+bool My\+Library\+::\+Check\+Box\+Hit (\begin{DoxyParamCaption}\item[{float}]{x1}{, }\item[{float}]{y1}{, }\item[{float}]{w1}{, }\item[{float}]{h1}{, }\item[{float}]{x2}{, }\item[{float}]{y2}{, }\item[{float}]{w2}{, }\item[{float}]{h2}{}\end{DoxyParamCaption})}
+
+
+
+矩形同士の当たり判定 
+
+四角同士の当たり判定を行なう（float 版）
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em x1} & 矩形1の左上 X \\
+\hline
+\mbox{\texttt{in}}  & {\em y1} & 矩形1の左上 Y \\
+\hline
+\mbox{\texttt{in}}  & {\em w1} & 矩形1の幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em h1} & 矩形1の高さ \\
+\hline
+\mbox{\texttt{in}}  & {\em x2} & 矩形2の左上 X \\
+\hline
+\mbox{\texttt{in}}  & {\em y2} & 矩形2の左上 Y \\
+\hline
+\mbox{\texttt{in}}  & {\em w2} & 矩形2の幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em h2} & 矩形2の高さ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a7164ec6a9f699d4fc91a00005a6d46b6}\index{Functions.h@{Functions.h}!CheckBoxHit3D@{CheckBoxHit3D}}
+\index{CheckBoxHit3D@{CheckBoxHit3D}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckBoxHit3D()}{CheckBoxHit3D()}}
+{\footnotesize\ttfamily \label{_functions_8h_a7164ec6a9f699d4fc91a00005a6d46b6} 
+bool My\+Library\+::\+Check\+Box\+Hit3D (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{box\+\_\+pos1}{, }\item[{hlslpp\+::float3 \&}]{box\+\_\+size1}{, }\item[{hlslpp\+::float3 \&}]{box\+\_\+pos2}{, }\item[{hlslpp\+::float3 \&}]{box\+\_\+size2}{}\end{DoxyParamCaption})}
+
+
+
+3D の AABB 同士の当たり判定を行なう 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em box\+\_\+pos1} & ボックス 1 の中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+size1} & ボックス 1 の半サイズ \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+pos2} & ボックス 2 の中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+size2} & ボックス 2 の半サイズ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_adb8075e18371aa759f6715c6af09a4f8}\index{Functions.h@{Functions.h}!CheckCircleHit@{CheckCircleHit}}
+\index{CheckCircleHit@{CheckCircleHit}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckCircleHit()}{CheckCircleHit()}}
+{\footnotesize\ttfamily \label{_functions_8h_adb8075e18371aa759f6715c6af09a4f8} 
+bool My\+Library\+::\+Check\+Circle\+Hit (\begin{DoxyParamCaption}\item[{float}]{x1}{, }\item[{float}]{y1}{, }\item[{float}]{r1}{, }\item[{float}]{x2}{, }\item[{float}]{y2}{, }\item[{float}]{r2}{}\end{DoxyParamCaption})}
+
+
+
+円同士の当たり判定 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em x1} & 円1の中心 X \\
+\hline
+\mbox{\texttt{in}}  & {\em y1} & 円1の中心 Y \\
+\hline
+\mbox{\texttt{in}}  & {\em r1} & 円1の半径 \\
+\hline
+\mbox{\texttt{in}}  & {\em x2} & 円2の中心 X \\
+\hline
+\mbox{\texttt{in}}  & {\em y2} & 円2の中心 Y \\
+\hline
+\mbox{\texttt{in}}  & {\em r2} & 円2の半径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a2871034a77584f022a26fc8f44c15536}\index{Functions.h@{Functions.h}!CheckCircleXZHit@{CheckCircleXZHit}}
+\index{CheckCircleXZHit@{CheckCircleXZHit}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckCircleXZHit()}{CheckCircleXZHit()}}
+{\footnotesize\ttfamily \label{_functions_8h_a2871034a77584f022a26fc8f44c15536} 
+bool My\+Library\+::\+Check\+Circle\+XZHit (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{center1}{, }\item[{float}]{radius1}{, }\item[{hlslpp\+::float3 \&}]{center2}{, }\item[{float}]{radius2}{}\end{DoxyParamCaption})}
+
+
+
+XZ 平面上の円同士の当たり判定を行なう 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em center1} & 円 1 の中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em radius1} & 円 1 の半径 \\
+\hline
+\mbox{\texttt{in}}  & {\em center2} & 円 2 の中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em radius2} & 円 2 の半径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a3835bc39c49fb83dc641783689bac5e5}\index{Functions.h@{Functions.h}!CheckLineBallHit@{CheckLineBallHit}}
+\index{CheckLineBallHit@{CheckLineBallHit}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckLineBallHit()}{CheckLineBallHit()}}
+{\footnotesize\ttfamily \label{_functions_8h_a3835bc39c49fb83dc641783689bac5e5} 
+bool My\+Library\+::\+Check\+Line\+Ball\+Hit (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{line\+\_\+start}{, }\item[{hlslpp\+::float3 \&}]{line\+\_\+goal}{, }\item[{hlslpp\+::float3 \&}]{ball\+\_\+pos}{, }\item[{float}]{ball\+\_\+radius}{}\end{DoxyParamCaption})}
+
+
+
+線分と球の当たり判定を行なう（3\+D） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em line\+\_\+start} & 線分の開始位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em line\+\_\+goal} & 線分の終了位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em ball\+\_\+pos} & 球の中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em ball\+\_\+radius} & 球の半径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a6b8437bd2f41fb636c2d941fd96fd680}\index{Functions.h@{Functions.h}!CheckPointBoxHit@{CheckPointBoxHit}}
+\index{CheckPointBoxHit@{CheckPointBoxHit}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckPointBoxHit()}{CheckPointBoxHit()}}
+{\footnotesize\ttfamily \label{_functions_8h_a6b8437bd2f41fb636c2d941fd96fd680} 
+bool My\+Library\+::\+Check\+Point\+Box\+Hit (\begin{DoxyParamCaption}\item[{float}]{point\+\_\+x}{, }\item[{float}]{point\+\_\+y}{, }\item[{float}]{box\+\_\+x}{, }\item[{float}]{box\+\_\+y}{, }\item[{float}]{box\+\_\+w}{, }\item[{float}]{box\+\_\+h}{}\end{DoxyParamCaption})}
+
+
+
+点と矩形の当たり判定（座標指定） 
+
+点と四角の当たり判定を行なう（float 版）
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em point\+\_\+x} & 点の X \\
+\hline
+\mbox{\texttt{in}}  & {\em point\+\_\+y} & 点の Y \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+x} & 矩形左上 X \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+y} & 矩形左上 Y \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+w} & 矩形幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+h} & 矩形高 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a0bf99e8cfa813a2cc9740f4ebbba294e}\index{Functions.h@{Functions.h}!CheckPointBoxHit3D@{CheckPointBoxHit3D}}
+\index{CheckPointBoxHit3D@{CheckPointBoxHit3D}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckPointBoxHit3D()}{CheckPointBoxHit3D()}}
+{\footnotesize\ttfamily \label{_functions_8h_a0bf99e8cfa813a2cc9740f4ebbba294e} 
+bool My\+Library\+::\+Check\+Point\+Box\+Hit3D (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{point}{, }\item[{hlslpp\+::float3 \&}]{box\+\_\+pos}{, }\item[{hlslpp\+::float3 \&}]{box\+\_\+size}{}\end{DoxyParamCaption})}
+
+
+
+点と 3D ボックスの当たり判定を行なう 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em point} & 判定対象の点 \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+pos} & ボックスの中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em box\+\_\+size} & ボックスの半サイズ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a82e5d9abf80512667d716aa12e3244b6}\index{Functions.h@{Functions.h}!CheckPointBoxHitF@{CheckPointBoxHitF}}
+\index{CheckPointBoxHitF@{CheckPointBoxHitF}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckPointBoxHitF()}{CheckPointBoxHitF()}}
+{\footnotesize\ttfamily \label{_functions_8h_a82e5d9abf80512667d716aa12e3244b6} 
+bool My\+Library\+::\+Check\+Point\+Box\+HitF (\begin{DoxyParamCaption}\item[{const hlslpp\+::float2 \&}]{point}{, }\item[{const hlslpp\+::float2 \&}]{pos}{, }\item[{const hlslpp\+::float2 \&}]{size}{}\end{DoxyParamCaption})}
+
+
+
+点と矩形の当たり判定（浮動小数） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em point} & 判定点 \\
+\hline
+\mbox{\texttt{in}}  & {\em pos} & 矩形左上位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em size} & 矩形サイズ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a500b9529d523340b6fc5a488afd60370}\index{Functions.h@{Functions.h}!CheckPointCircleHit@{CheckPointCircleHit}}
+\index{CheckPointCircleHit@{CheckPointCircleHit}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{CheckPointCircleHit()}{CheckPointCircleHit()}}
+{\footnotesize\ttfamily \label{_functions_8h_a500b9529d523340b6fc5a488afd60370} 
+bool My\+Library\+::\+Check\+Point\+Circle\+Hit (\begin{DoxyParamCaption}\item[{float}]{point\+\_\+x}{, }\item[{float}]{point\+\_\+y}{, }\item[{float}]{circle\+\_\+x}{, }\item[{float}]{circle\+\_\+y}{, }\item[{float}]{circle\+\_\+r}{}\end{DoxyParamCaption})}
+
+
+
+点と円の当たり判定 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em point\+\_\+x} & 点の X \\
+\hline
+\mbox{\texttt{in}}  & {\em point\+\_\+y} & 点の Y \\
+\hline
+\mbox{\texttt{in}}  & {\em circle\+\_\+x} & 円の中心 X \\
+\hline
+\mbox{\texttt{in}}  & {\em circle\+\_\+y} & 円の中心 Y \\
+\hline
+\mbox{\texttt{in}}  & {\em circle\+\_\+r} & 円の半径 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+当たっていれば true 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a48e677bf38724a67f3e7dbcbe281adcd}\index{Functions.h@{Functions.h}!ClampPositionToArea@{ClampPositionToArea}}
+\index{ClampPositionToArea@{ClampPositionToArea}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{ClampPositionToArea()}{ClampPositionToArea()}}
+{\footnotesize\ttfamily \label{_functions_8h_a48e677bf38724a67f3e7dbcbe281adcd} 
+void My\+Library\+::\+Clamp\+Position\+To\+Area (\begin{DoxyParamCaption}\item[{hlslpp\+::float2 \&}]{target\+\_\+pos}{, }\item[{int}]{target\+\_\+w}{, }\item[{int}]{target\+\_\+h}{, }\item[{float}]{area\+\_\+w}{, }\item[{float}]{area\+\_\+h}{}\end{DoxyParamCaption})}
+
+
+
+位置を指定エリア内に制限します 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in,out}}  & {\em target\+\_\+pos} & 対象位置（参照で更新） \\
+\hline
+\mbox{\texttt{in}}  & {\em target\+\_\+w} & 対象幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em target\+\_\+h} & 対象高さ \\
+\hline
+\mbox{\texttt{in}}  & {\em area\+\_\+w} & エリア幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em area\+\_\+h} & エリア高さ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_functions_8h_a11ad2cb307b33ed8f6734f71531495ff}\index{Functions.h@{Functions.h}!ConvertMilliToMinute@{ConvertMilliToMinute}}
+\index{ConvertMilliToMinute@{ConvertMilliToMinute}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{ConvertMilliToMinute()}{ConvertMilliToMinute()}}
+{\footnotesize\ttfamily \label{_functions_8h_a11ad2cb307b33ed8f6734f71531495ff} 
+float My\+Library\+::\+Convert\+Milli\+To\+Minute (\begin{DoxyParamCaption}\item[{int}]{milli}{}\end{DoxyParamCaption})}
+
+
+
+ミリ秒を分に変換 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em milli} & ミリ秒 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+分表記の浮動小数点値 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a8a2adf07bf8824fea2d1bac762beeba5}\index{Functions.h@{Functions.h}!ConvertMilliToSec@{ConvertMilliToSec}}
+\index{ConvertMilliToSec@{ConvertMilliToSec}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{ConvertMilliToSec()}{ConvertMilliToSec()}}
+{\footnotesize\ttfamily \label{_functions_8h_a8a2adf07bf8824fea2d1bac762beeba5} 
+float My\+Library\+::\+Convert\+Milli\+To\+Sec (\begin{DoxyParamCaption}\item[{int}]{milli}{}\end{DoxyParamCaption})}
+
+
+
+ミリ秒を秒に変換 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em milli} & ミリ秒 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+秒表記の浮動小数点値 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_aedc76ca98d82929b4fa7121fae63b063}\index{Functions.h@{Functions.h}!DrawBox3D\_XZ@{DrawBox3D\_XZ}}
+\index{DrawBox3D\_XZ@{DrawBox3D\_XZ}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{DrawBox3D\_XZ()}{DrawBox3D\_XZ()}}
+{\footnotesize\ttfamily \label{_functions_8h_aedc76ca98d82929b4fa7121fae63b063} 
+void My\+Library\+::\+Draw\+Box3\+D\+\_\+\+XZ (\begin{DoxyParamCaption}\item[{hlslpp\+::float3}]{center}{, }\item[{float}]{half\+\_\+w}{, }\item[{float}]{half\+\_\+h}{, }\item[{int}]{color}{, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+矩形を描画（\+XZ方向） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em center} & 中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em half\+\_\+w} & 半分の幅 \\
+\hline
+\mbox{\texttt{in}}  & {\em half\+\_\+h} & 半分の高さ \\
+\hline
+\mbox{\texttt{in}}  & {\em color} & 色 \\
+\hline
+\mbox{\texttt{in}}  & {\em fill} & 塗りつぶしフラグ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_functions_8h_a1c49abf2627b3232b4e7537983d97763}\index{Functions.h@{Functions.h}!DrawCircle3D\_XZ@{DrawCircle3D\_XZ}}
+\index{DrawCircle3D\_XZ@{DrawCircle3D\_XZ}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{DrawCircle3D\_XZ()}{DrawCircle3D\_XZ()}}
+{\footnotesize\ttfamily \label{_functions_8h_a1c49abf2627b3232b4e7537983d97763} 
+void My\+Library\+::\+Draw\+Circle3\+D\+\_\+\+XZ (\begin{DoxyParamCaption}\item[{hlslpp\+::float3}]{center}{, }\item[{float}]{radius}{, }\item[{int}]{color}{, }\item[{bool}]{fill}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+円を描画（\+XZ平面） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em center} & 中心位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em radius} & 半径 \\
+\hline
+\mbox{\texttt{in}}  & {\em color} & 色 \\
+\hline
+\mbox{\texttt{in}}  & {\em fill} & 塗りつぶしフラグ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_functions_8h_afcb6486e8022a727b6e8576e71f2ce09}\index{Functions.h@{Functions.h}!GetDistance@{GetDistance}}
+\index{GetDistance@{GetDistance}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetDistance()}{GetDistance()}}
+{\footnotesize\ttfamily \label{_functions_8h_afcb6486e8022a727b6e8576e71f2ce09} 
+float My\+Library\+::\+Get\+Distance (\begin{DoxyParamCaption}\item[{float}]{x1}{, }\item[{float}]{y1}{, }\item[{float}]{x2}{, }\item[{float}]{y2}{}\end{DoxyParamCaption})}
+
+
+
+2 点間の距離を返す 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em x1} & 点1 の X 座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em y1} & 点1 の Y 座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em x2} & 点2 の X 座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em y2} & 点2 の Y 座標 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+2 点間の距離（float） 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a34bf399b028db4d522ad95b8e8f60fa2}\index{Functions.h@{Functions.h}!GetFileExtension@{GetFileExtension}}
+\index{GetFileExtension@{GetFileExtension}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFileExtension()}{GetFileExtension()}}
+{\footnotesize\ttfamily \label{_functions_8h_a34bf399b028db4d522ad95b8e8f60fa2} 
+std\+::string My\+Library\+::\+Get\+File\+Extension (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{filepath}{}\end{DoxyParamCaption})}
+
+
+
+ファイルパスから拡張子を取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em filepath} & ファイルパス（nullptr可） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+拡張子文字列（見つからない場合は空文字） 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a1b2d20882ad1fcbb7c61bed8c8b318e1}\index{Functions.h@{Functions.h}!GetFloat2Cross@{GetFloat2Cross}}
+\index{GetFloat2Cross@{GetFloat2Cross}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFloat2Cross()}{GetFloat2Cross()}}
+{\footnotesize\ttfamily \label{_functions_8h_a1b2d20882ad1fcbb7c61bed8c8b318e1} 
+float My\+Library\+::\+Get\+Float2\+Cross (\begin{DoxyParamCaption}\item[{hlslpp\+::float2 \&}]{v1}{, }\item[{hlslpp\+::float2 \&}]{v2}{}\end{DoxyParamCaption})}
+
+
+
+２つの float2 の外積を求める 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em v1} & 1つ目のベクトル \\
+\hline
+\mbox{\texttt{in}}  & {\em v2} & 2つ目のベクトル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+外積（スカラー） 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_aaaf97c1d3b7c9913d88473ecedba038a}\index{Functions.h@{Functions.h}!GetFloat2Distance@{GetFloat2Distance}}
+\index{GetFloat2Distance@{GetFloat2Distance}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFloat2Distance()}{GetFloat2Distance()}}
+{\footnotesize\ttfamily \label{_functions_8h_aaaf97c1d3b7c9913d88473ecedba038a} 
+float My\+Library\+::\+Get\+Float2\+Distance (\begin{DoxyParamCaption}\item[{hlslpp\+::float2 \&}]{pos1}{, }\item[{hlslpp\+::float2 \&}]{pos2}{}\end{DoxyParamCaption})}
+
+
+
+２つの float2 の距離を求める 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em pos1} & 1つ目の座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em pos2} & 2つ目の座標 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+2点間の距離 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a7e07cc042a8278de41244b0dc35880d7}\index{Functions.h@{Functions.h}!GetFloat2Dot@{GetFloat2Dot}}
+\index{GetFloat2Dot@{GetFloat2Dot}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFloat2Dot()}{GetFloat2Dot()}}
+{\footnotesize\ttfamily \label{_functions_8h_a7e07cc042a8278de41244b0dc35880d7} 
+float My\+Library\+::\+Get\+Float2\+Dot (\begin{DoxyParamCaption}\item[{hlslpp\+::float2 \&}]{v1}{, }\item[{hlslpp\+::float2 \&}]{v2}{}\end{DoxyParamCaption})}
+
+
+
+２つの float2 の内積を求める 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em v1} & 1つ目のベクトル \\
+\hline
+\mbox{\texttt{in}}  & {\em v2} & 2つ目のベクトル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+内積（float） 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a50bc1ac5296a83a07f251ebe810b1b49}\index{Functions.h@{Functions.h}!GetFloat3Cross@{GetFloat3Cross}}
+\index{GetFloat3Cross@{GetFloat3Cross}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFloat3Cross()}{GetFloat3Cross()}}
+{\footnotesize\ttfamily \label{_functions_8h_a50bc1ac5296a83a07f251ebe810b1b49} 
+hlslpp\+::float3 My\+Library\+::\+Get\+Float3\+Cross (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{v1}{, }\item[{hlslpp\+::float3 \&}]{v2}{}\end{DoxyParamCaption})}
+
+
+
+２つの float3 の外積を求める 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em v1} & 1つ目のベクトル \\
+\hline
+\mbox{\texttt{in}}  & {\em v2} & 2つ目のベクトル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+外積（float3） 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a5e3ef6341b62511f6df1f983b6bc7278}\index{Functions.h@{Functions.h}!GetFloat3Distance@{GetFloat3Distance}}
+\index{GetFloat3Distance@{GetFloat3Distance}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFloat3Distance()}{GetFloat3Distance()}}
+{\footnotesize\ttfamily \label{_functions_8h_a5e3ef6341b62511f6df1f983b6bc7278} 
+float My\+Library\+::\+Get\+Float3\+Distance (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{pos1}{, }\item[{hlslpp\+::float3 \&}]{pos2}{}\end{DoxyParamCaption})}
+
+
+
+２つの float3 の距離を求める 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em pos1} & 1つ目の座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em pos2} & 2つ目の座標 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+2点間の距離（float） 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a2159dde943661687b28ef8fb3896c1bc}\index{Functions.h@{Functions.h}!GetFloat3Dot@{GetFloat3Dot}}
+\index{GetFloat3Dot@{GetFloat3Dot}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFloat3Dot()}{GetFloat3Dot()}}
+{\footnotesize\ttfamily \label{_functions_8h_a2159dde943661687b28ef8fb3896c1bc} 
+float My\+Library\+::\+Get\+Float3\+Dot (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{v1}{, }\item[{hlslpp\+::float3 \&}]{v2}{}\end{DoxyParamCaption})}
+
+
+
+２つの float3 の内積を求める 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em v1} & 1つ目のベクトル \\
+\hline
+\mbox{\texttt{in}}  & {\em v2} & 2つ目のベクトル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+内積（float） 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a666f06a040a8a1a31b9ff822ca2b6898}\index{Functions.h@{Functions.h}!GetFloat3LinePointNearDistance@{GetFloat3LinePointNearDistance}}
+\index{GetFloat3LinePointNearDistance@{GetFloat3LinePointNearDistance}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFloat3LinePointNearDistance()}{GetFloat3LinePointNearDistance()}}
+{\footnotesize\ttfamily \label{_functions_8h_a666f06a040a8a1a31b9ff822ca2b6898} 
+float My\+Library\+::\+Get\+Float3\+Line\+Point\+Near\+Distance (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{line\+\_\+start}{, }\item[{hlslpp\+::float3 \&}]{line\+\_\+goal}{, }\item[{hlslpp\+::float3 \&}]{point}{}\end{DoxyParamCaption})}
+
+
+
+線分と点の最近接距離を返す（3\+D） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em line\+\_\+start} & 線分の開始位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em line\+\_\+goal} & 線分の終了位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em point} & 判定対象の点 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+最近接距離 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_abbee8a5614da3529f2382dce2ca877d4}\index{Functions.h@{Functions.h}!GetFloat3LinePointNearPosition@{GetFloat3LinePointNearPosition}}
+\index{GetFloat3LinePointNearPosition@{GetFloat3LinePointNearPosition}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFloat3LinePointNearPosition()}{GetFloat3LinePointNearPosition()}}
+{\footnotesize\ttfamily \label{_functions_8h_abbee8a5614da3529f2382dce2ca877d4} 
+hlslpp\+::float3 My\+Library\+::\+Get\+Float3\+Line\+Point\+Near\+Position (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{line\+\_\+start}{, }\item[{hlslpp\+::float3 \&}]{line\+\_\+goal}{, }\item[{hlslpp\+::float3 \&}]{point}{}\end{DoxyParamCaption})}
+
+
+
+線分と点の最近接位置を取得します（3\+D） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em line\+\_\+start} & 線分の開始位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em line\+\_\+goal} & 線分の終了位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em point} & 判定対象の点 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+線分上の最近接位置（float3） 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_abe44852bf4efba66f14374ad2b366138}\index{Functions.h@{Functions.h}!GetFloat3VTransform@{GetFloat3VTransform}}
+\index{GetFloat3VTransform@{GetFloat3VTransform}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetFloat3VTransform()}{GetFloat3VTransform()}}
+{\footnotesize\ttfamily \label{_functions_8h_abe44852bf4efba66f14374ad2b366138} 
+hlslpp\+::float3 My\+Library\+::\+Get\+Float3\+VTransform (\begin{DoxyParamCaption}\item[{hlslpp\+::float3 \&}]{v}{, }\item[{MATRIX \&}]{mat}{}\end{DoxyParamCaption})}
+
+
+
+float3 を MATRIX で変換した float3 を返す 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em v} & 変換するベクトル \\
+\hline
+\mbox{\texttt{in}}  & {\em mat} & 変換行列 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+変換後の float3 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_aef06017594cd1c4ae4244efdea9fb3c1}\index{Functions.h@{Functions.h}!GetLengthAlongRotation@{GetLengthAlongRotation}}
+\index{GetLengthAlongRotation@{GetLengthAlongRotation}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetLengthAlongRotation()}{GetLengthAlongRotation()}}
+{\footnotesize\ttfamily \label{_functions_8h_aef06017594cd1c4ae4244efdea9fb3c1} 
+float My\+Library\+::\+Get\+Length\+Along\+Rotation (\begin{DoxyParamCaption}\item[{float}]{rot}{}\end{DoxyParamCaption})}
+
+
+
+回転に沿った長さ（cos）を取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em rot} & 回転（ラジアン） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+cos(rot) 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a6c257008439735d19ef3e2ff73353997}\index{Functions.h@{Functions.h}!GetLengthOppositeRotation@{GetLengthOppositeRotation}}
+\index{GetLengthOppositeRotation@{GetLengthOppositeRotation}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetLengthOppositeRotation()}{GetLengthOppositeRotation()}}
+{\footnotesize\ttfamily \label{_functions_8h_a6c257008439735d19ef3e2ff73353997} 
+float My\+Library\+::\+Get\+Length\+Opposite\+Rotation (\begin{DoxyParamCaption}\item[{float}]{rot}{}\end{DoxyParamCaption})}
+
+
+
+回転に垂直な長さ（sin）を取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em rot} & 回転（ラジアン） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+sin(rot) 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a669855e38c0e1b78cefe62a7f17a6897}\index{Functions.h@{Functions.h}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{_functions_8h_a669855e38c0e1b78cefe62a7f17a6897} 
+hlslpp\+::float2 My\+Library\+::\+Normalize (\begin{DoxyParamCaption}\item[{const hlslpp\+::float2 \&}]{vec}{}\end{DoxyParamCaption})}
+
+
+
+正規化（float2） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em vec} & 正規化するベクトル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+正規化後のベクトル 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a7268206d6ad56ac6d9cd39a0b74c1d92}\index{Functions.h@{Functions.h}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{Normalize()}{Normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{_functions_8h_a7268206d6ad56ac6d9cd39a0b74c1d92} 
+hlslpp\+::float3 My\+Library\+::\+Normalize (\begin{DoxyParamCaption}\item[{const hlslpp\+::float3 \&}]{vec}{}\end{DoxyParamCaption})}
+
+
+
+正規化（float3） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em vec} & 正規化するベクトル \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+正規化後のベクトル 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a356af782d61b73620bbb01327fd23251}\index{Functions.h@{Functions.h}!ObjectPointToDirection@{ObjectPointToDirection}}
+\index{ObjectPointToDirection@{ObjectPointToDirection}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{ObjectPointToDirection()}{ObjectPointToDirection()}}
+{\footnotesize\ttfamily \label{_functions_8h_a356af782d61b73620bbb01327fd23251} 
+float My\+Library\+::\+Object\+Point\+To\+Direction (\begin{DoxyParamCaption}\item[{hlslpp\+::float2}]{now\+\_\+pos}{, }\item[{hlslpp\+::float2}]{goal\+\_\+pos}{, }\item[{float}]{dir}{, }\item[{float}]{rot\+\_\+speed}{}\end{DoxyParamCaption})}
+
+
+
+オブジェクトの向き（ラジアン）を求める（回転補間あり） 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em now\+\_\+pos} & 現在位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em goal\+\_\+pos} & 目標位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em dir} & 現在の角度（ラジアン） \\
+\hline
+\mbox{\texttt{in}}  & {\em rot\+\_\+speed} & 回転速度（度/フレーム） \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+移動後の向き（ラジアン） 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_a87e76d507513413bb000cadf62cbbbe0}\index{Functions.h@{Functions.h}!TODEGREE@{TODEGREE}}
+\index{TODEGREE@{TODEGREE}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{TODEGREE()}{TODEGREE()}}
+{\footnotesize\ttfamily \label{_functions_8h_a87e76d507513413bb000cadf62cbbbe0} 
+float My\+Library\+::\+TODEGREE (\begin{DoxyParamCaption}\item[{float}]{radian}{}\end{DoxyParamCaption})}
+
+
+
+ラジアンを度に変換 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em radian} & ラジアン \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+度 
+\end{DoxyReturn}
+\Hypertarget{_functions_8h_ae6c02d71f2f1f908f26f6c0e8d0498eb}\index{Functions.h@{Functions.h}!TORADIAN@{TORADIAN}}
+\index{TORADIAN@{TORADIAN}!Functions.h@{Functions.h}}
+\doxysubsubsection{\texorpdfstring{TORADIAN()}{TORADIAN()}}
+{\footnotesize\ttfamily \label{_functions_8h_ae6c02d71f2f1f908f26f6c0e8d0498eb} 
+float My\+Library\+::\+TORADIAN (\begin{DoxyParamCaption}\item[{float}]{degree}{}\end{DoxyParamCaption})}
+
+
+
+度をラジアンに変換 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em degree} & 度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+ラジアン 
+\end{DoxyReturn}

@@ -1,0 +1,812 @@
+\doxysection{Component\+Model クラス}
+\hypertarget{class_component_model}{}\label{class_component_model}\index{ComponentModel@{ComponentModel}}
+
+
+モデルコンポーネントクラス  
+
+
+
+
+{\ttfamily \#include $<$Component\+Model.\+h$>$}
+
+Component\+Model の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_component_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_component_model_1_1_material}{Material}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_model_ad80d1e5cf8193278a1b763310fbc04bf}\label{class_component_model_ad80d1e5cf8193278a1b763310fbc04bf} 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component_model}{Component\+Model}}, u8"{}\+Model機能クラス"{})
+\item 
+void \mbox{\hyperlink{class_component_model_a75e965608f37818a11040dc8cd2a7caf}{Construct}} (Object\+Ptr owner)
+\item 
+\Hypertarget{class_component_model_a2309a500a0d4fc5fc21c71774cb366ad}\label{class_component_model_a2309a500a0d4fc5fc21c71774cb366ad} 
+void {\bfseries Construct} (Object\+Ptr owner, std\+::string\+\_\+view path)
+\item 
+void \mbox{\hyperlink{class_component_model_a2ac0f7ab91019ae1c69166fc22224aee}{Load}} (std\+::string\+\_\+view path)
+\begin{DoxyCompactList}\small\item\em モデルロード \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_model_a026b9e3d8b9830e59e9ac7edc7c06203}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_model_a46ebc7fdcc93c63e373825f07f24045e}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_model_af86972f0fb5b19c8aa698fac47399da3}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_model_a39064bb06c021f9b96ac65da4a6ec331}{Exit}} () override
+\begin{DoxyCompactList}\small\item\em 終了 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_model_ac475f9525bc4f4cb6d03ee4edc7f5600}{GUI}} () override
+\begin{DoxyCompactList}\small\item\em GUI \end{DoxyCompactList}\item 
+\Hypertarget{class_component_model_a1c3b3c000d0e84f6f0b0f3cf99f66a8b}\label{class_component_model_a1c3b3c000d0e84f6f0b0f3cf99f66a8b} 
+Component\+Model\+Ptr {\bfseries Set\+Name} (const std\+::string \&name)
+\item 
+Component\+Model\+Ptr \mbox{\hyperlink{class_component_model_a4cbba69f570d41cce687f89d3688b017}{Set\+Animation}} (const std\+::vector$<$ \mbox{\hyperlink{struct_animation_1_1_desc}{Animation\+::\+Desc}} $>$ \&anims)
+\begin{DoxyCompactList}\small\item\em アニメーションデータ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_model_a5bf3fcbab8ae34d6208f5eb8181b6b47}{Play\+Animation\+No\+Same}} (std\+::string\+\_\+view name, bool loop=false, float blend\+\_\+time=0.\+2f, float start\+\_\+time=0.\+0f)
+\begin{DoxyCompactList}\small\item\em アニメーション再生(同じなら再再生しない) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_model_a576b5df123d22e91881bbc46a47ec1b3}{Play\+Animation}} (std\+::string\+\_\+view name, bool loop=false, float blend\+\_\+time=0.\+2f, float start\+\_\+time=0.\+0f)
+\begin{DoxyCompactList}\small\item\em アニメーション再生 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_model_a5cec6639534bfd13daafd8c6b05876f7}{Play\+Animation\+Ex}} (std\+::string\+\_\+view name, std\+::string\+\_\+view node, bool loop=false, float blend\+\_\+time=0.\+2f, float start\+\_\+time=0.\+0f)
+\begin{DoxyCompactList}\small\item\em 追加アニメーション再生 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_component_model_a96c829c34d3bb6d385dfa76399e04189}{Is\+Playing}} ()
+\begin{DoxyCompactList}\small\item\em アニメーション中かどうか \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_component_model_a99e1e0d3c5ef6aefb8d07190528a6588}{Is\+Ex\+Playing}} (std\+::string\+\_\+view node)
+\begin{DoxyCompactList}\small\item\em Exアニメーション中かどうか \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_model_acdc26807f2a400212782ee9bb02505f1}{Play\+Pause}} (bool active=true)
+\begin{DoxyCompactList}\small\item\em ポーズ処理と解除処理 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_component_model_a87ec1ef5c756f7cfe04ba12a1f5f92e9}{Is\+Paused}} ()
+\begin{DoxyCompactList}\small\item\em ポーズ中かどうか \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_component_model_a0f0495106c4e520487726a43388b3186}{Is\+Animation\+Valid}} ()
+\begin{DoxyCompactList}\small\item\em 利用可能かどうか \end{DoxyCompactList}\item 
+const std\+::string\+\_\+view \mbox{\hyperlink{class_component_model_a04b14c91e2361bad777f310391ec5db1}{Get\+Play\+Animation\+Name}} ()
+\begin{DoxyCompactList}\small\item\em 再生アニメーション名 \end{DoxyCompactList}\item 
+const std\+::string\+\_\+view \mbox{\hyperlink{class_component_model_ac1ca0d2e7d69a16258c350fcb215982a}{Get\+Old\+Play\+Animation\+Name}} ()
+\begin{DoxyCompactList}\small\item\em 前回再生したアニメーション名 \end{DoxyCompactList}\item 
+const float \mbox{\hyperlink{class_component_model_ace5c0e549af296cbc6cd3d5935f3c644}{Get\+Animation\+Time}} ()
+\begin{DoxyCompactList}\small\item\em 再生経過時間の取得 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_component_model_a03a13d396f6ab8060b494cda1d12e43f}{Get\+Model\+Class}} ()
+\begin{DoxyCompactList}\small\item\em モデル取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_component_model_a53166c4557f86caf83e30bfdea29b6b8}{Get\+Model}} ()
+\begin{DoxyCompactList}\small\item\em モデル取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component}{Component}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component}{Component}}, u8"{}\+Componentクラス"{})
+\item 
+\mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+Object\+Ptr {\bfseries Get\+Owner\+Ptr} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+const Object\+Ptr {\bfseries Get\+Owner\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Set\+Name} (const std\+::string\+\_\+view \&name)
+\item 
+const std\+::string\+\_\+view {\bfseries Get\+Name} () const
+\item 
+virtual void \mbox{\hyperlink{class_component_a1020899c4cee8796a2bb29d960f05daf}{Late\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 遅いアップデート \end{DoxyCompactList}\item 
+virtual void {\bfseries Late\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 遅い描画 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a01c7688b95056ecdba07d997750c8987}{Pre\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新前処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a5ca9fb606c77392f74f4e80c3043d3fe}{Post\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新後処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Pre\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画前処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Post\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画後処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a28834daa627c5e81e93d40f064a19249}{Pre\+Physics}} ()
+\begin{DoxyCompactList}\small\item\em Physics前処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a25dd8e0fdfebc4f68e5fc08738e3c7ae}{Post\+Physics}} ()
+\begin{DoxyCompactList}\small\item\em Physics後処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Init\+Serialize} ()
+\begin{DoxyCompactList}\small\item\em シリアライズでもどらないユーザー処理関数などを設定 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Priority} (\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} priority)
+\item 
+std\+::string {\bfseries Unique\+Text} (const std\+::string\+\_\+view \&name, int id=0)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Get\+Proc} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing)
+\begin{DoxyCompactList}\small\item\em 処理を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Proc} (const std\+::string \&proc\+\_\+name, Proc\+Timing\+Func func, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Priority} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Reset\+Proc} (const std\+::string \&proc\+\_\+name)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Remove\+This\+Component} ()
+\begin{DoxyCompactList}\small\item\em 自分の消去 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Set\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b, bool on)
+\begin{DoxyCompactList}\small\item\em ステータスの設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Get\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b)
+\begin{DoxyCompactList}\small\item\em ステータスの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_a8e41b07538bf037981574f4f011d773a}{On\+Hit\+Component}} (const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries On\+Hit\+Component} (const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_i_matrix}{IMatrix$<$ Component\+Model $>$}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+auto {\bfseries Set\+Matrix} (const \mbox{\hyperlink{classmatrix}{matrix}} \&mat)
+\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a32adebd780e1df07b4a504913e7342fc}{Get\+Matrix\+Float}} ()
+\begin{DoxyCompactList}\small\item\em Transformの\+Matrix情報を取得します \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a714ba34bafae6ad18adc512a12bfd88c}{Set\+Translate}} (float3 translate)
+\begin{DoxyCompactList}\small\item\em 位置をセットします \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_ae7c4c3c592258a62946b51b4ddd3b9f4}{Add\+Translate}} (float3 translate, bool local=false, bool direct=false)
+\begin{DoxyCompactList}\small\item\em 現在の位置から移動させます \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_ab67ba5ffdc38b759a3cb4a4d37dbd69e}{Get\+Translate}} () const
+\begin{DoxyCompactList}\small\item\em 現在の位置を取得 \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a9964f98393c131d9aeaca9a2394dc2a0}{Translate}} ()
+\begin{DoxyCompactList}\small\item\em 現在の位置を取得 \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_aefa89e636dcd4f4c2f128fbd690829ed}{Get\+Vector\+AxisX}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_ac940f73d639aab045fef9c7ab9b0c001}{Get\+Vector\+AxisY}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+float3 \mbox{\hyperlink{class_i_matrix_a521c543b440fd67361317096d075d230}{Get\+Vector\+AxisZ}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a781040f918546a43c53fe908f78749ab}{Vector\+AxisX}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a85f8892147948781655c3cdfef6b56a4}{Vector\+AxisY}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+auto \& \mbox{\hyperlink{class_i_matrix_a13ca80b18abe18006c5963d182837ef4}{Vector\+AxisZ}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_ad3c834a912db364ad3da23ddfa865156}{Translate\+Float}} ()
+\begin{DoxyCompactList}\small\item\em 位置を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a634a043c1cbcdf122104ec3a5677b2a5}{Vector\+Axis\+XFloat}} ()
+\begin{DoxyCompactList}\small\item\em X軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_a310e16cb1bcea89de3f5792c9a1256e4}{Vector\+Axis\+YFloat}} ()
+\begin{DoxyCompactList}\small\item\em Y軸を取得する \end{DoxyCompactList}\item 
+float \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_matrix_ac85c3df7009e77d500be39547f08fc59}{Vector\+Axis\+ZFloat}} ()
+\begin{DoxyCompactList}\small\item\em Z軸を取得する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a714521197cdaf88b10263628c5d6b6e1}{Set\+Vector\+AxisX}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em X軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_affd008e5bc3f162771f65f6ccd0f4212}{Set\+Vector\+AxisY}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em Y軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a650a67e0bd69073dbf2540566436a6a8}{Set\+Vector\+AxisZ}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em Z軸を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_aabebf94bb7ad5c922f06a5718af1c3b7}{Set\+Rotation\+To\+Position}} (float3 position, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ポジションの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a626db18f4ef2eef12a3d94e7467e5d47}{Set\+Rotation\+To\+Vector}} (float3 vec, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a1c2365a4d13bae038007b507d987a019}{Set\+Rotation\+To\+Vector\+On\+Parent}} (float3 vec, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a64d76c423bcaf1509cdd0d59853db9a2}{Set\+Rotation\+To\+Position\+With\+Limit}} (float3 position, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ポジションの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a4033fc43ac7e0f5c3d2e2cc584fcc1d3}{Set\+Rotation\+To\+Vector\+With\+Limit}} (float3 vec, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_ab69f027e3f44e4a62fc51fd45372b766}{Set\+Rotation\+To\+Vector\+On\+Parent\+With\+Limit}} (float3 vec, float limit, float3 up=\{0, 1, 0\}, bool up\+\_\+change=false)
+\begin{DoxyCompactList}\small\item\em ベクトルの方向へ向ける \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a79080df693fc6ca32a4d0cf00d277bf1}{Set\+Rotation\+Axis\+XYZ}} (float3 xyz)
+\begin{DoxyCompactList}\small\item\em 軸回転量を設定する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a00baa4ac15c3a377d63b11a4ac694736}{Add\+Rotation\+Axis\+XYZ}} (float3 xyz)
+\begin{DoxyCompactList}\small\item\em 軸回転量を現在の状態から追加する \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_a33669a9c95add8d80d310fc7ef9a0bf7}{Get\+Rotation\+Axis\+XYZ}} (bool local=true)
+\begin{DoxyCompactList}\small\item\em 軸回転量を取得する \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_a1bf7f616a7fe4c9dfc975cf0a2748304}{Set\+Scale\+Axis\+XYZ}} (float3 scale)
+\begin{DoxyCompactList}\small\item\em スケールの設定 \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_i_matrix_aa710c9aafe9fcfed378d3242329c45b3}{Mul\+Scale\+Axis\+XYZ}} (float3 scale)
+\begin{DoxyCompactList}\small\item\em 現在のスケールから掛け合わせ倍率スケール \end{DoxyCompactList}\item 
+const float3 \mbox{\hyperlink{class_i_matrix_a9d823777983c3ca5e917c8ca8b879054}{Get\+Scale\+Axis\+XYZ}} (bool local=true)
+\begin{DoxyCompactList}\small\item\em スケールの取得 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_i_matrix_a34cd0c9a971a79694ff25330ed3431d3}{Get\+Degree\+To\+Position}} (float3 target\+\_\+position)
+\begin{DoxyCompactList}\small\item\em 向いている角度をもとめます \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_i_matrix_a938bf6fa6d01cc0945c0e7899aa03fc8}{Get\+Degree\+To\+Vector}} (float3 target\+\_\+vector)
+\begin{DoxyCompactList}\small\item\em 向いている角度をもとめます \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{ノード関係}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_component_model_aba44fbea838d7896b88a0acaee2d3370}{Model\+Bit}} \+: u64 \{ \newline
+\mbox{\hyperlink{class_component_model_aba44fbea838d7896b88a0acaee2d3370a716dd2a7e9cc903951de87a7b74ce282}{Set\+File\+Already}}
+, \mbox{\hyperlink{class_component_model_aba44fbea838d7896b88a0acaee2d3370a59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \mbox{\hyperlink{class_component_model_aba44fbea838d7896b88a0acaee2d3370abe78aa55f62b5e1e6bd8a62ddedefcc9}{Error\+File\+Not\+Found}}
+, \mbox{\hyperlink{class_component_model_aba44fbea838d7896b88a0acaee2d3370a61f9ae7b6c79883bd678bc44907b7ea7}{Use\+Shader}}
+, \newline
+\mbox{\hyperlink{class_component_model_aba44fbea838d7896b88a0acaee2d3370ae4922a827d6d5ad185d9d8930646cf43}{Attached\+Other\+Model}}
+, \mbox{\hyperlink{class_component_model_aba44fbea838d7896b88a0acaee2d3370a845d5a75b5e39633f39ecc341ae266ab}{Use\+Model\+Node\+Scale}}
+ \}
+\begin{DoxyCompactList}\small\item\em モデルステータス \end{DoxyCompactList}\item 
+\Hypertarget{class_component_model_ad2d146a94654517301e7b068018e5eb9}\label{class_component_model_ad2d146a94654517301e7b068018e5eb9} 
+std\+::vector$<$ std\+::string\+\_\+view $>$ {\bfseries Get\+Nodes\+Name} ()
+\item 
+\Hypertarget{class_component_model_ab7261e57e4edf7448cb47bd124fcb260}\label{class_component_model_ab7261e57e4edf7448cb47bd124fcb260} 
+std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ {\bfseries Get\+Nodes\+Name\+PChar} ()
+\item 
+\Hypertarget{class_component_model_ae26fd689663739b9f0b7819c8cc45cb7}\label{class_component_model_ae26fd689663739b9f0b7819c8cc45cb7} 
+int {\bfseries Get\+Node\+Index} (std\+::string\+\_\+view name)
+\item 
+\Hypertarget{class_component_model_a60e1b3cfeeb07c7f59f9b362e2bc7848}\label{class_component_model_a60e1b3cfeeb07c7f59f9b362e2bc7848} 
+float3 {\bfseries Get\+Node\+Position} (std\+::string\+\_\+view name, bool local=false)
+\item 
+\Hypertarget{class_component_model_ac4754053567b2fb86029b8b6eeaaf9ae}\label{class_component_model_ac4754053567b2fb86029b8b6eeaaf9ae} 
+float3 {\bfseries Get\+Node\+Position} (int no, bool local=false)
+\item 
+\Hypertarget{class_component_model_a0835c5e34df1f469b388f5561776e396}\label{class_component_model_a0835c5e34df1f469b388f5561776e396} 
+\mbox{\hyperlink{classmatrix}{matrix}} {\bfseries Get\+Node\+Matrix} (std\+::string\+\_\+view name, bool local=false)
+\item 
+\Hypertarget{class_component_model_a8f689ba16ec202a099d7348eb522012d}\label{class_component_model_a8f689ba16ec202a099d7348eb522012d} 
+\mbox{\hyperlink{classmatrix}{matrix}} {\bfseries Get\+Node\+Matrix} (int no, bool local=false)
+\item 
+\Hypertarget{class_component_model_a3ccbb8ae288fffac647e0fd014c8fd96}\label{class_component_model_a3ccbb8ae288fffac647e0fd014c8fd96} 
+bool {\bfseries Is\+Valid} () const
+\begin{DoxyCompactList}\small\item\em モデルが読み込まれているか? \end{DoxyCompactList}\item 
+\Hypertarget{class_component_model_a9acc5174fe3b7db75337f914cc2af7fa}\label{class_component_model_a9acc5174fe3b7db75337f914cc2af7fa} 
+bool {\bfseries Use\+Shader} () const
+\begin{DoxyCompactList}\small\item\em シェーダーを利用するか? \end{DoxyCompactList}\item 
+\Hypertarget{class_component_model_a47779e5b5e2bfe2cbdb106dfda524d49}\label{class_component_model_a47779e5b5e2bfe2cbdb106dfda524d49} 
+void {\bfseries Use\+Shader} (bool use)
+\item 
+\Hypertarget{class_component_model_a329e6e9ea5f7b3a44f7762afcb3f4eb2}\label{class_component_model_a329e6e9ea5f7b3a44f7762afcb3f4eb2} 
+bool {\bfseries Is\+Attached\+Other\+Model} () const
+\item 
+\Hypertarget{class_component_model_a009c4cfb39ec66674eb526894b921c06}\label{class_component_model_a009c4cfb39ec66674eb526894b921c06} 
+void {\bfseries Set\+Attach\+Other\+Model} (bool link)
+\item 
+\Hypertarget{class_component_model_af1d04d1529f42918e962f417423ac8da}\label{class_component_model_af1d04d1529f42918e962f417423ac8da} 
+bool {\bfseries Attach} (const std\+::string\+\_\+view \&model, const std\+::string\+\_\+view \&node, bool use\+\_\+model\+\_\+node\+\_\+scale=false)
+\item 
+\Hypertarget{class_component_model_abdbf4325ff3edf4f17891ab67d67eeca}\label{class_component_model_abdbf4325ff3edf4f17891ab67d67eeca} 
+void {\bfseries Detach} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Materialインターフェースの利用するための定義}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_model_afaa9b61c30283df7b6b924fe86f76a79}\label{class_component_model_afaa9b61c30283df7b6b924fe86f76a79} 
+void {\bfseries Set\+Material} (int index, \mbox{\hyperlink{struct_component_model_1_1_material}{Material}} material)
+\item 
+\Hypertarget{class_component_model_a27bc6c8e17d20616f5d154f2dbc04df9}\label{class_component_model_a27bc6c8e17d20616f5d154f2dbc04df9} 
+void {\bfseries Reset\+Material} (int index)
+\item 
+\Hypertarget{class_component_model_ab84142eb91228aa8f871642e073499da}\label{class_component_model_ab84142eb91228aa8f871642e073499da} 
+void {\bfseries Reset\+Material\+All} ()
+\item 
+\Hypertarget{class_component_model_a81428994cd1d731a5300e66c1065fd63}\label{class_component_model_a81428994cd1d731a5300e66c1065fd63} 
+void {\bfseries Set\+Shader} (\mbox{\hyperlink{class_shader_vs}{Shader\+Vs}} \texorpdfstring{$\ast$}{*}vs=nullptr, \mbox{\hyperlink{class_shader_ps}{Shader\+Ps}} \texorpdfstring{$\ast$}{*}ps=nullptr)
+\begin{DoxyCompactList}\small\item\em カスタムシェーダーを設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_model_ae786d7b10197751d7f9df3b4e174362d}{Set\+Draw\+Mesh\+Index}} (const std\+::vector$<$ int $>$ \&meshes)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{IMatrixインターフェースの利用するための定義}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_component_model_a180c3e9700bed237f8ec50ee9789cc5f}{Matrix}} () override
+\begin{DoxyCompactList}\small\item\em マトリクス取得 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classmatrix}{matrix}} \& \mbox{\hyperlink{class_component_model_afbda1d71032f27815259fbe83fa447fb}{Get\+Matrix}} () const override
+\begin{DoxyCompactList}\small\item\em マトリクス取得 \end{DoxyCompactList}\item 
+Component\+Model\+Ptr \mbox{\hyperlink{class_component_model_ae693c618b826e403bebfd5ca2460d73d}{Shared\+This}} ()
+\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_component_model_a301ed9483ce9583110be951cfcc45c87}{Get\+World\+Matrix}} () const override
+\begin{DoxyCompactList}\small\item\em ワールド\+Matrixの取得 \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} \mbox{\hyperlink{class_component_model_a6cb7dad0a4fd41837d63b5ea800eeb26}{Get\+Old\+World\+Matrix}} () const override
+\begin{DoxyCompactList}\small\item\em 1フレーム前のワールド\+Matrixの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} \+: u64 \{ \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0abd9f7c5d6ab4201b138a3e51dab7056f}{Alive}} = 0
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ac5475a8fae2fa421403e56f7ae0de108}{Change\+Prio}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a552f244367a4f2e2ef9e4e5ff2c52ea0}{Show\+GUI}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0af3413da9e97ed78dada82d1330fde5f1}{No\+Update}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0add349546b418e50c23e2d88a3342a68f}{No\+Draw}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ad0b20a6cab952ae657cd06d2c956a7ea}{Disable\+Pause}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a7c572e80f65d4b3a29bc954dd03225b6}{Is\+Pause}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a6b554ca9a13e5407990948d4c68e8229}{Same\+Type}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a268ce394e277db759f5d6ee76c59f0e7}{Exited}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2b59321169346822ab33b2c61dbb9975}{Serialized}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a0698adfc6182853d3bf40771142a42d1}{No\+Serialize}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2faec1f9f8cc7f8f40d521c4dd574f49}{Enable}}
+ \}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_abeb8b5fb2ca31a185f96d343af1ccd22}\label{class_component_abeb8b5fb2ca31a185f96d343af1ccd22} 
+static void {\bfseries Register\+To\+Object} (Component\+Ptr cmp, Object\+Ptr obj)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a04910312b4e9ad3959892ff5e231629e}\label{class_component_a04910312b4e9ad3959892ff5e231629e} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Func}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a91d5cc2893166a196e1d5e550391cf58}\label{class_component_a91d5cc2893166a196e1d5e550391cf58} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Physics\+Func}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}\label{class_component_aaf224b0e73780a9c3cbad323a0ec59f5} 
+Object\+Ptr {\bfseries owner\+\_\+} = nullptr
+\begin{DoxyCompactList}\small\item\em オーナー \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aa075f1283763194b7b15660ceb626196}\label{class_component_aa075f1283763194b7b15660ceb626196} 
+Slot\+Procs {\bfseries proc\+\_\+timings\+\_\+}
+\begin{DoxyCompactList}\small\item\em 登録処理(update) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_af89da12b7dd26576a4b896a785103e04}\label{class_component_af89da12b7dd26576a4b896a785103e04} 
+float {\bfseries update\+\_\+delta\+\_\+time\+\_\+} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em update以外で使用できるように \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaafe1a5010b858a2c66379bcd6faa80b}\label{class_component_aaafe1a5010b858a2c66379bcd6faa80b} 
+std\+::string {\bfseries name\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+モデルコンポーネントクラス 
+
+\label{doc-enum-members}
+\Hypertarget{class_component_model_doc-enum-members}
+\doxysubsection{列挙型メンバ詳解}
+\Hypertarget{class_component_model_aba44fbea838d7896b88a0acaee2d3370}\index{ComponentModel@{ComponentModel}!ModelBit@{ModelBit}}
+\index{ModelBit@{ModelBit}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{ModelBit}{ModelBit}}
+{\footnotesize\ttfamily \label{class_component_model_aba44fbea838d7896b88a0acaee2d3370} 
+enum struct \mbox{\hyperlink{class_component_model_aba44fbea838d7896b88a0acaee2d3370}{Component\+Model\+::\+Model\+Bit}} \+: \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+モデルステータス 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SetFileAlready@{SetFileAlready}!ComponentModel@{ComponentModel}}\index{ComponentModel@{ComponentModel}!SetFileAlready@{SetFileAlready}}}\Hypertarget{class_component_model_aba44fbea838d7896b88a0acaee2d3370a716dd2a7e9cc903951de87a7b74ce282}\label{class_component_model_aba44fbea838d7896b88a0acaee2d3370a716dd2a7e9cc903951de87a7b74ce282} 
+Set\+File\+Already&ファイル設定済み \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Initialized@{Initialized}!ComponentModel@{ComponentModel}}\index{ComponentModel@{ComponentModel}!Initialized@{Initialized}}}\Hypertarget{class_component_model_aba44fbea838d7896b88a0acaee2d3370a59d87a4758a9d35fbaf6b204341bb399}\label{class_component_model_aba44fbea838d7896b88a0acaee2d3370a59d87a4758a9d35fbaf6b204341bb399} 
+Initialized&初期化済み \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ErrorFileNotFound@{ErrorFileNotFound}!ComponentModel@{ComponentModel}}\index{ComponentModel@{ComponentModel}!ErrorFileNotFound@{ErrorFileNotFound}}}\Hypertarget{class_component_model_aba44fbea838d7896b88a0acaee2d3370abe78aa55f62b5e1e6bd8a62ddedefcc9}\label{class_component_model_aba44fbea838d7896b88a0acaee2d3370abe78aa55f62b5e1e6bd8a62ddedefcc9} 
+Error\+File\+Not\+Found&ファイル読み込みエラー \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UseShader@{UseShader}!ComponentModel@{ComponentModel}}\index{ComponentModel@{ComponentModel}!UseShader@{UseShader}}}\Hypertarget{class_component_model_aba44fbea838d7896b88a0acaee2d3370a61f9ae7b6c79883bd678bc44907b7ea7}\label{class_component_model_aba44fbea838d7896b88a0acaee2d3370a61f9ae7b6c79883bd678bc44907b7ea7} 
+Use\+Shader&シェーダーを使用する \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AttachedOtherModel@{AttachedOtherModel}!ComponentModel@{ComponentModel}}\index{ComponentModel@{ComponentModel}!AttachedOtherModel@{AttachedOtherModel}}}\Hypertarget{class_component_model_aba44fbea838d7896b88a0acaee2d3370ae4922a827d6d5ad185d9d8930646cf43}\label{class_component_model_aba44fbea838d7896b88a0acaee2d3370ae4922a827d6d5ad185d9d8930646cf43} 
+Attached\+Other\+Model&異なるコンポーネントモデルの一部として利用する \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UseModelNodeScale@{UseModelNodeScale}!ComponentModel@{ComponentModel}}\index{ComponentModel@{ComponentModel}!UseModelNodeScale@{UseModelNodeScale}}}\Hypertarget{class_component_model_aba44fbea838d7896b88a0acaee2d3370a845d5a75b5e39633f39ecc341ae266ab}\label{class_component_model_aba44fbea838d7896b88a0acaee2d3370a845d5a75b5e39633f39ecc341ae266ab} 
+Use\+Model\+Node\+Scale&アタッチ使用する際に相手のノードのスケールに合わせる \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{class_component_model_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_component_model_a75e965608f37818a11040dc8cd2a7caf}\index{ComponentModel@{ComponentModel}!Construct@{Construct}}
+\index{Construct@{Construct}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{Construct()}{Construct()}}
+{\footnotesize\ttfamily \label{class_component_model_a75e965608f37818a11040dc8cd2a7caf} 
+void Component\+Model\+::\+Construct (\begin{DoxyParamCaption}\item[{Object\+Ptr}]{owner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_component}{Component}}を再実装しています。
+
+\Hypertarget{class_component_model_af86972f0fb5b19c8aa698fac47399da3}\index{ComponentModel@{ComponentModel}!Draw@{Draw}}
+\index{Draw@{Draw}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_component_model_af86972f0fb5b19c8aa698fac47399da3} 
+virtual void Component\+Model\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画 
+
+
+
+\mbox{\hyperlink{class_component_a8622ccd5f24035d48e33292717299313}{Component}}を再実装しています。
+
+\Hypertarget{class_component_model_a39064bb06c021f9b96ac65da4a6ec331}\index{ComponentModel@{ComponentModel}!Exit@{Exit}}
+\index{Exit@{Exit}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{Exit()}{Exit()}}
+{\footnotesize\ttfamily \label{class_component_model_a39064bb06c021f9b96ac65da4a6ec331} 
+virtual void Component\+Model\+::\+Exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了 
+
+
+
+\mbox{\hyperlink{class_component_a336a670bf5c6e49062b0ea3a7367c5d7}{Component}}を再実装しています。
+
+\Hypertarget{class_component_model_ace5c0e549af296cbc6cd3d5935f3c644}\index{ComponentModel@{ComponentModel}!GetAnimationTime@{GetAnimationTime}}
+\index{GetAnimationTime@{GetAnimationTime}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{GetAnimationTime()}{GetAnimationTime()}}
+{\footnotesize\ttfamily \label{class_component_model_ace5c0e549af296cbc6cd3d5935f3c644} 
+const float Component\+Model\+::\+Get\+Animation\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+再生経過時間の取得 
+
+\begin{DoxyReturn}{戻り値}
+再生経過時間 
+\end{DoxyReturn}
+\Hypertarget{class_component_model_afbda1d71032f27815259fbe83fa447fb}\index{ComponentModel@{ComponentModel}!GetMatrix@{GetMatrix}}
+\index{GetMatrix@{GetMatrix}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{GetMatrix()}{GetMatrix()}}
+{\footnotesize\ttfamily \label{class_component_model_afbda1d71032f27815259fbe83fa447fb} 
+const \mbox{\hyperlink{classmatrix}{matrix}} \& Component\+Model\+::\+Get\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マトリクス取得 
+
+
+
+\mbox{\hyperlink{class_i_matrix_af9bc3565e1a379fb4fdecf22d31d753e}{IMatrix$<$ Component\+Model $>$}}を実装しています。
+
+\Hypertarget{class_component_model_a53166c4557f86caf83e30bfdea29b6b8}\index{ComponentModel@{ComponentModel}!GetModel@{GetModel}}
+\index{GetModel@{GetModel}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{GetModel()}{GetModel()}}
+{\footnotesize\ttfamily \label{class_component_model_a53166c4557f86caf83e30bfdea29b6b8} 
+int Component\+Model\+::\+Get\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+モデル取得 
+
+\begin{DoxyReturn}{戻り値}
+モデル(\+Dx\+Lib) 
+\end{DoxyReturn}
+\Hypertarget{class_component_model_a03a13d396f6ab8060b494cda1d12e43f}\index{ComponentModel@{ComponentModel}!GetModelClass@{GetModelClass}}
+\index{GetModelClass@{GetModelClass}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{GetModelClass()}{GetModelClass()}}
+{\footnotesize\ttfamily \label{class_component_model_a03a13d396f6ab8060b494cda1d12e43f} 
+\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*} Component\+Model\+::\+Get\+Model\+Class (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+モデル取得 
+
+\begin{DoxyReturn}{戻り値}
+モデル 
+\end{DoxyReturn}
+\Hypertarget{class_component_model_ac1ca0d2e7d69a16258c350fcb215982a}\index{ComponentModel@{ComponentModel}!GetOldPlayAnimationName@{GetOldPlayAnimationName}}
+\index{GetOldPlayAnimationName@{GetOldPlayAnimationName}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{GetOldPlayAnimationName()}{GetOldPlayAnimationName()}}
+{\footnotesize\ttfamily \label{class_component_model_ac1ca0d2e7d69a16258c350fcb215982a} 
+const std\+::string\+\_\+view Component\+Model\+::\+Get\+Old\+Play\+Animation\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+前回再生したアニメーション名 
+
+\begin{DoxyReturn}{戻り値}
+アニメーション名 
+\end{DoxyReturn}
+\Hypertarget{class_component_model_a6cb7dad0a4fd41837d63b5ea800eeb26}\index{ComponentModel@{ComponentModel}!GetOldWorldMatrix@{GetOldWorldMatrix}}
+\index{GetOldWorldMatrix@{GetOldWorldMatrix}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{GetOldWorldMatrix()}{GetOldWorldMatrix()}}
+{\footnotesize\ttfamily \label{class_component_model_a6cb7dad0a4fd41837d63b5ea800eeb26} 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} Component\+Model\+::\+Get\+Old\+World\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+1フレーム前のワールド\+Matrixの取得 
+
+\begin{DoxyReturn}{戻り値}
+他のコンポーネントも含めた位置 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_aba0d23d8c1c3cb1b5963e9ca06d56236}{IMatrix$<$ Component\+Model $>$}}を実装しています。
+
+\Hypertarget{class_component_model_a04b14c91e2361bad777f310391ec5db1}\index{ComponentModel@{ComponentModel}!GetPlayAnimationName@{GetPlayAnimationName}}
+\index{GetPlayAnimationName@{GetPlayAnimationName}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{GetPlayAnimationName()}{GetPlayAnimationName()}}
+{\footnotesize\ttfamily \label{class_component_model_a04b14c91e2361bad777f310391ec5db1} 
+const std\+::string\+\_\+view Component\+Model\+::\+Get\+Play\+Animation\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+再生アニメーション名 
+
+\begin{DoxyReturn}{戻り値}
+アニメーション名 
+\end{DoxyReturn}
+\Hypertarget{class_component_model_a301ed9483ce9583110be951cfcc45c87}\index{ComponentModel@{ComponentModel}!GetWorldMatrix@{GetWorldMatrix}}
+\index{GetWorldMatrix@{GetWorldMatrix}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{GetWorldMatrix()}{GetWorldMatrix()}}
+{\footnotesize\ttfamily \label{class_component_model_a301ed9483ce9583110be951cfcc45c87} 
+virtual const \mbox{\hyperlink{classmatrix}{matrix}} Component\+Model\+::\+Get\+World\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+ワールド\+Matrixの取得 
+
+\begin{DoxyReturn}{戻り値}
+他のコンポーネントも含めた位置 
+\end{DoxyReturn}
+
+
+\mbox{\hyperlink{class_i_matrix_a0bf7a3dbad8c83935e587d781d448407}{IMatrix$<$ Component\+Model $>$}}を実装しています。
+
+\Hypertarget{class_component_model_ac475f9525bc4f4cb6d03ee4edc7f5600}\index{ComponentModel@{ComponentModel}!GUI@{GUI}}
+\index{GUI@{GUI}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{GUI()}{GUI()}}
+{\footnotesize\ttfamily \label{class_component_model_ac475f9525bc4f4cb6d03ee4edc7f5600} 
+virtual void Component\+Model\+::\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+GUI 
+
+
+
+\mbox{\hyperlink{class_component_ae6895fe308d9365dd629b2e46a2ddf62}{Component}}を再実装しています。
+
+\Hypertarget{class_component_model_a026b9e3d8b9830e59e9ac7edc7c06203}\index{ComponentModel@{ComponentModel}!Init@{Init}}
+\index{Init@{Init}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_component_model_a026b9e3d8b9830e59e9ac7edc7c06203} 
+virtual void Component\+Model\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化 
+
+
+
+\mbox{\hyperlink{class_component_a5a5e595fab62ba757f03becc5b101732}{Component}}を再実装しています。
+
+\Hypertarget{class_component_model_a0f0495106c4e520487726a43388b3186}\index{ComponentModel@{ComponentModel}!IsAnimationValid@{IsAnimationValid}}
+\index{IsAnimationValid@{IsAnimationValid}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{IsAnimationValid()}{IsAnimationValid()}}
+{\footnotesize\ttfamily \label{class_component_model_a0f0495106c4e520487726a43388b3186} 
+bool Component\+Model\+::\+Is\+Animation\+Valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+利用可能かどうか 
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & \+: 利用可能 \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_component_model_a99e1e0d3c5ef6aefb8d07190528a6588}\index{ComponentModel@{ComponentModel}!IsExPlaying@{IsExPlaying}}
+\index{IsExPlaying@{IsExPlaying}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{IsExPlaying()}{IsExPlaying()}}
+{\footnotesize\ttfamily \label{class_component_model_a99e1e0d3c5ef6aefb8d07190528a6588} 
+bool Component\+Model\+::\+Is\+Ex\+Playing (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{node}{}\end{DoxyParamCaption})}
+
+
+
+Exアニメーション中かどうか 
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & \+: アニメーション中 \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_component_model_a87ec1ef5c756f7cfe04ba12a1f5f92e9}\index{ComponentModel@{ComponentModel}!IsPaused@{IsPaused}}
+\index{IsPaused@{IsPaused}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{IsPaused()}{IsPaused()}}
+{\footnotesize\ttfamily \label{class_component_model_a87ec1ef5c756f7cfe04ba12a1f5f92e9} 
+bool Component\+Model\+::\+Is\+Paused (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+ポーズ中かどうか 
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & \+: ポーズ中 \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_component_model_a96c829c34d3bb6d385dfa76399e04189}\index{ComponentModel@{ComponentModel}!IsPlaying@{IsPlaying}}
+\index{IsPlaying@{IsPlaying}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{IsPlaying()}{IsPlaying()}}
+{\footnotesize\ttfamily \label{class_component_model_a96c829c34d3bb6d385dfa76399e04189} 
+bool Component\+Model\+::\+Is\+Playing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+アニメーション中かどうか 
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & \+: アニメーション中 \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_component_model_a2ac0f7ab91019ae1c69166fc22224aee}\index{ComponentModel@{ComponentModel}!Load@{Load}}
+\index{Load@{Load}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily \label{class_component_model_a2ac0f7ab91019ae1c69166fc22224aee} 
+void Component\+Model\+::\+Load (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path}{}\end{DoxyParamCaption})}
+
+
+
+モデルロード 
+
+
+\begin{DoxyParams}{引数}
+{\em path} & モデル名 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_model_a180c3e9700bed237f8ec50ee9789cc5f}\index{ComponentModel@{ComponentModel}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}}
+{\footnotesize\ttfamily \label{class_component_model_a180c3e9700bed237f8ec50ee9789cc5f} 
+\mbox{\hyperlink{classmatrix}{matrix}} \& Component\+Model\+::\+Matrix (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+マトリクス取得 
+
+
+
+\mbox{\hyperlink{class_i_matrix_a4b43c433dbe642466637c3cd21ed811c}{IMatrix$<$ Component\+Model $>$}}を実装しています。
+
+\Hypertarget{class_component_model_a576b5df123d22e91881bbc46a47ec1b3}\index{ComponentModel@{ComponentModel}!PlayAnimation@{PlayAnimation}}
+\index{PlayAnimation@{PlayAnimation}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{PlayAnimation()}{PlayAnimation()}}
+{\footnotesize\ttfamily \label{class_component_model_a576b5df123d22e91881bbc46a47ec1b3} 
+void Component\+Model\+::\+Play\+Animation (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name}{, }\item[{bool}]{loop}{ = {\ttfamily false}, }\item[{float}]{blend\+\_\+time}{ = {\ttfamily 0.2f}, }\item[{float}]{start\+\_\+time}{ = {\ttfamily 0.0f}}\end{DoxyParamCaption})}
+
+
+
+アニメーション再生 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 再生するアニメーション名 \\
+\hline
+{\em loop} & ループするかどうか(デフォルト\+:しない) \\
+\hline
+{\em speed} & 補完秒数(デフォルト\+:0.\+2秒) \\
+\hline
+{\em start\+\_\+time} & スタートする位置(デフォルト\+:0.\+0) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_model_a5cec6639534bfd13daafd8c6b05876f7}\index{ComponentModel@{ComponentModel}!PlayAnimationEx@{PlayAnimationEx}}
+\index{PlayAnimationEx@{PlayAnimationEx}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{PlayAnimationEx()}{PlayAnimationEx()}}
+{\footnotesize\ttfamily \label{class_component_model_a5cec6639534bfd13daafd8c6b05876f7} 
+void Component\+Model\+::\+Play\+Animation\+Ex (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name}{, }\item[{std\+::string\+\_\+view}]{node}{, }\item[{bool}]{loop}{ = {\ttfamily false}, }\item[{float}]{blend\+\_\+time}{ = {\ttfamily 0.2f}, }\item[{float}]{start\+\_\+time}{ = {\ttfamily 0.0f}}\end{DoxyParamCaption})}
+
+
+
+追加アニメーション再生 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 追加再生するアニメーション名 \\
+\hline
+{\em loop} & ループするかどうか(デフォルト\+:しない) \\
+\hline
+{\em speed} & 補完秒数(デフォルト\+:0.\+2秒) \\
+\hline
+{\em start\+\_\+time} & スタートする位置(デフォルト\+:0.\+0) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_model_a5bf3fcbab8ae34d6208f5eb8181b6b47}\index{ComponentModel@{ComponentModel}!PlayAnimationNoSame@{PlayAnimationNoSame}}
+\index{PlayAnimationNoSame@{PlayAnimationNoSame}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{PlayAnimationNoSame()}{PlayAnimationNoSame()}}
+{\footnotesize\ttfamily \label{class_component_model_a5bf3fcbab8ae34d6208f5eb8181b6b47} 
+void Component\+Model\+::\+Play\+Animation\+No\+Same (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name}{, }\item[{bool}]{loop}{ = {\ttfamily false}, }\item[{float}]{blend\+\_\+time}{ = {\ttfamily 0.2f}, }\item[{float}]{start\+\_\+time}{ = {\ttfamily 0.0f}}\end{DoxyParamCaption})}
+
+
+
+アニメーション再生(同じなら再再生しない) 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & 再生するアニメーション名 \\
+\hline
+{\em loop} & ループするかどうか(デフォルト\+:しない) \\
+\hline
+{\em speed} & 補完秒数(デフォルト\+:0.\+2秒) \\
+\hline
+{\em start\+\_\+time} & スタートする位置(デフォルト\+:0.\+0) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_model_acdc26807f2a400212782ee9bb02505f1}\index{ComponentModel@{ComponentModel}!PlayPause@{PlayPause}}
+\index{PlayPause@{PlayPause}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{PlayPause()}{PlayPause()}}
+{\footnotesize\ttfamily \label{class_component_model_acdc26807f2a400212782ee9bb02505f1} 
+void Component\+Model\+::\+Play\+Pause (\begin{DoxyParamCaption}\item[{bool}]{active}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+ポーズ処理と解除処理 
+
+
+\begin{DoxyParams}{引数}
+{\em active} & ポーズするかどうか \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_model_a4cbba69f570d41cce687f89d3688b017}\index{ComponentModel@{ComponentModel}!SetAnimation@{SetAnimation}}
+\index{SetAnimation@{SetAnimation}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{SetAnimation()}{SetAnimation()}}
+{\footnotesize\ttfamily \label{class_component_model_a4cbba69f570d41cce687f89d3688b017} 
+Component\+Model\+Ptr Component\+Model\+::\+Set\+Animation (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{struct_animation_1_1_desc}{Animation\+::\+Desc}} $>$ \&}]{anims}{}\end{DoxyParamCaption})}
+
+
+
+アニメーションデータ 
+
+
+\begin{DoxyParams}{引数}
+{\em anims} & アニメーション構造リスト \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_model_ae786d7b10197751d7f9df3b4e174362d}\index{ComponentModel@{ComponentModel}!SetDrawMeshIndex@{SetDrawMeshIndex}}
+\index{SetDrawMeshIndex@{SetDrawMeshIndex}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{SetDrawMeshIndex()}{SetDrawMeshIndex()}}
+{\footnotesize\ttfamily \label{class_component_model_ae786d7b10197751d7f9df3b4e174362d} 
+void Component\+Model\+::\+Set\+Draw\+Mesh\+Index (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{meshes}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{引数}
+{\em meshes} & 描画するメッシュ番号を列挙 @detail \{0, 3 \} 0,3を表示、1, 2 を非表示 \{-\/1\} だとすべて表示 \{\} だとすべて非表示 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_model_ae693c618b826e403bebfd5ca2460d73d}\index{ComponentModel@{ComponentModel}!SharedThis@{SharedThis}}
+\index{SharedThis@{SharedThis}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{SharedThis()}{SharedThis()}}
+{\footnotesize\ttfamily \label{class_component_model_ae693c618b826e403bebfd5ca2460d73d} 
+Component\+Model\+Ptr Component\+Model\+::\+Shared\+This (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_matrix}{IMatrix$<$ Component\+Model $>$}}を実装しています。
+
+\Hypertarget{class_component_model_a46ebc7fdcc93c63e373825f07f24045e}\index{ComponentModel@{ComponentModel}!Update@{Update}}
+\index{Update@{Update}!ComponentModel@{ComponentModel}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_component_model_a46ebc7fdcc93c63e373825f07f24045e} 
+virtual void Component\+Model\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新 
+
+
+
+\mbox{\hyperlink{class_component_aaf2ce6dc5752072492f790ad4c7955bb}{Component}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/\mbox{\hyperlink{_component_model_8h}{Component\+Model.\+h}}\end{DoxyCompactItemize}

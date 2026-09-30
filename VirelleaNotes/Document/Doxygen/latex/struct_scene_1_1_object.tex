@@ -1,0 +1,100 @@
+\doxysection{Scene\+::Object 構造体}
+\hypertarget{struct_scene_1_1_object}{}\label{struct_scene_1_1_object}\index{Scene::Object@{Scene::Object}}
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_scene_1_1_object_a301baac40a6df20a36d4fe4714d3d10a}\label{struct_scene_1_1_object_a301baac40a6df20a36d4fe4714d3d10a} 
+{\footnotesize template$<$class T$>$ }\\static std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Create} (const std\+::string\+\_\+view name=u8"{}object"{}, bool no\+\_\+transform=false, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} update=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} draw=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\item 
+{\footnotesize template$<$class T$>$ }\\static std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{struct_scene_1_1_object_a078b9486831a11b682570b80e93f13a4}{Create\+Delay\+Initialize}} (const std\+::string\+\_\+view name=u8"{}object"{}, bool no\+\_\+transform=false, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} update=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} draw=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\item 
+\Hypertarget{struct_scene_1_1_object_a6e2cc1039ea45b3c0ff3c6090e480da0}\label{struct_scene_1_1_object_a6e2cc1039ea45b3c0ff3c6090e480da0} 
+{\footnotesize template$<$class T$>$ }\\static void {\bfseries Release} ()
+\item 
+\Hypertarget{struct_scene_1_1_object_a778620f0993a1fb2a361e47dbb59c2fb}\label{struct_scene_1_1_object_a778620f0993a1fb2a361e47dbb59c2fb} 
+static void {\bfseries Release} (std\+::string\+\_\+view name="{}"{})
+\item 
+\Hypertarget{struct_scene_1_1_object_a2eb907e03c2da3056ddc65e5829ca201}\label{struct_scene_1_1_object_a2eb907e03c2da3056ddc65e5829ca201} 
+static void {\bfseries Release} (Object\+Ptr obj)
+\item 
+\Hypertarget{struct_scene_1_1_object_a5d3e66ddb35b44001eb7229086ba2d44}\label{struct_scene_1_1_object_a5d3e66ddb35b44001eb7229086ba2d44} 
+{\footnotesize template$<$class T$>$ }\\static void {\bfseries Release} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ objs)
+\item 
+{\footnotesize template$<$class T$>$ }\\static std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{struct_scene_1_1_object_a964e234a55f60b3989ad24a26df11c15}{Get}} (std\+::string\+\_\+view name="{}"{})
+\begin{DoxyCompactList}\small\item\em オブジェクトサーチ\&取得 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\static std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{struct_scene_1_1_object_a9748635cc87f3a1ad3b5c78767d4cc65}{Get\+Array}} ()
+\begin{DoxyCompactList}\small\item\em オブジェクトサーチ\&取得 \end{DoxyCompactList}\item 
+\Hypertarget{struct_scene_1_1_object_a1ca36972997a882f2ba6c25ba45d385d}\label{struct_scene_1_1_object_a1ca36972997a882f2ba6c25ba45d385d} 
+{\footnotesize template$<$class T$>$ }\\static std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Get\+Or\+Create} (std\+::string\+\_\+view name="{}"{})
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{struct_scene_1_1_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{struct_scene_1_1_object_a078b9486831a11b682570b80e93f13a4}\index{Scene::Object@{Scene::Object}!CreateDelayInitialize@{CreateDelayInitialize}}
+\index{CreateDelayInitialize@{CreateDelayInitialize}!Scene::Object@{Scene::Object}}
+\doxysubsubsection{\texorpdfstring{CreateDelayInitialize()}{CreateDelayInitialize()}}
+{\footnotesize\ttfamily \label{struct_scene_1_1_object_a078b9486831a11b682570b80e93f13a4} 
+template$<$class T$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Scene\+::\+Object\+::\+Create\+Delay\+Initialize (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view}]{name}{ = {\ttfamily u8"{}object"{}}, }\item[{bool}]{no\+\_\+transform}{ = {\ttfamily false}, }\item[{\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}}}]{update}{ = {\ttfamily \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}}, }\item[{\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}}}]{draw}{ = {\ttfamily \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+オブジェクトの作成 Objectをシーン上に発生させる 
+\begin{DoxyParams}{引数}
+{\em no\+\_\+transform} & Component\+Transformを作らない (true = 作らない) \\
+\hline
+{\em update} & 処理優先 \\
+\hline
+{\em draw} & 描画優先 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_scene_1_1_object_a964e234a55f60b3989ad24a26df11c15}\index{Scene::Object@{Scene::Object}!Get@{Get}}
+\index{Get@{Get}!Scene::Object@{Scene::Object}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{struct_scene_1_1_object_a964e234a55f60b3989ad24a26df11c15} 
+template$<$class T$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Scene\+::\+Object\+::\+Get (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+オブジェクトサーチ\&取得 
+
+
+\begin{DoxyTemplParams}{テンプレート引数}
+{\em T} & 取得したいオブジェクトタイプ \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em name} & 取得したいオブジェクトの名前 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクト 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{todo}
+\item[\mbox{\hyperlink{todo__todo000002}{todo}}]nullptrの時、存在しないので、ここで\+LOGでエラーを出しておく \end{DoxyRefDesc}
+\Hypertarget{struct_scene_1_1_object_a9748635cc87f3a1ad3b5c78767d4cc65}\index{Scene::Object@{Scene::Object}!GetArray@{GetArray}}
+\index{GetArray@{GetArray}!Scene::Object@{Scene::Object}}
+\doxysubsubsection{\texorpdfstring{GetArray()}{GetArray()}}
+{\footnotesize\ttfamily \label{struct_scene_1_1_object_a9748635cc87f3a1ad3b5c78767d4cc65} 
+template$<$class T$>$ \\
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ Scene\+::\+Object\+::\+Get\+Array (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+オブジェクトサーチ\&取得 
+
+
+\begin{DoxyTemplParams}{テンプレート引数}
+{\em T} & 取得したいオブジェクトタイプ\\
+\hline
+\end{DoxyTemplParams}
+同じタイプのオブジェクトが複数あると先に見つかったものを返します \begin{DoxyReturn}{戻り値}
+オブジェクト 
+\end{DoxyReturn}
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\mbox{\hyperlink{_scene_8h}{Scene.\+h}}\end{DoxyCompactItemize}

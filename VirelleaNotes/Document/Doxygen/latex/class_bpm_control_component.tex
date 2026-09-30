@@ -1,0 +1,139 @@
+\doxysection{Bpm\+Control\+Component クラス}
+\hypertarget{class_bpm_control_component}{}\label{class_bpm_control_component}\index{BpmControlComponent@{BpmControlComponent}}
+
+
+BPM操作用コンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Bpm\+Control\+Component.\+h$>$}
+
+Bpm\+Control\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bpm_control_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bpm_control_component_ad03a5ab427e990b95aeb89a0b37d06cd}\label{class_bpm_control_component_ad03a5ab427e990b95aeb89a0b37d06cd} 
+{\bfseries Bpm\+Control\+Component} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bpm_control_component_a783be01d61fd4c6250b8c9ca61361a1e}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bpm_control_component_ac8c7d0e5f2714917184f9e8440e1505e}{Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bpm_control_component_a46707b7d16e1bfd1d04d75c6825ed9ee}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bpm_control_component_ad20f5c7ef2cf28a73002c0d3b37fe99f}{End}} () override
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bpm_control_component_ac048e6e50900cb6b83a2e81d739fa593}{Get\+Bpm}} () const
+\begin{DoxyCompactList}\small\item\em 現在\+BPM取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bpm_control_component_a6011654a2b1bc14c36bc98c5f125c5ee}{Set\+Bpm}} (int bpm)
+\begin{DoxyCompactList}\small\item\em BPM設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries ‾\+Component\+Base} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+BPM操作用コンポーネント 
+
+左右キーで\+BPMを操作する機能 
+
+\label{doc-func-members}
+\Hypertarget{class_bpm_control_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_bpm_control_component_a46707b7d16e1bfd1d04d75c6825ed9ee}\index{BpmControlComponent@{BpmControlComponent}!Draw@{Draw}}
+\index{Draw@{Draw}!BpmControlComponent@{BpmControlComponent}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_bpm_control_component_a46707b7d16e1bfd1d04d75c6825ed9ee} 
+void Bpm\+Control\+Component\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_bpm_control_component_ad20f5c7ef2cf28a73002c0d3b37fe99f}\index{BpmControlComponent@{BpmControlComponent}!End@{End}}
+\index{End@{End}!BpmControlComponent@{BpmControlComponent}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \label{class_bpm_control_component_ad20f5c7ef2cf28a73002c0d3b37fe99f} 
+void Bpm\+Control\+Component\+::\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+
+
+\mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_bpm_control_component_ac048e6e50900cb6b83a2e81d739fa593}\index{BpmControlComponent@{BpmControlComponent}!GetBpm@{GetBpm}}
+\index{GetBpm@{GetBpm}!BpmControlComponent@{BpmControlComponent}}
+\doxysubsubsection{\texorpdfstring{GetBpm()}{GetBpm()}}
+{\footnotesize\ttfamily \label{class_bpm_control_component_ac048e6e50900cb6b83a2e81d739fa593} 
+int Bpm\+Control\+Component\+::\+Get\+Bpm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+現在\+BPM取得 
+
+\begin{DoxyReturn}{戻り値}
+現在の\+BPM 
+\end{DoxyReturn}
+\Hypertarget{class_bpm_control_component_a783be01d61fd4c6250b8c9ca61361a1e}\index{BpmControlComponent@{BpmControlComponent}!Init@{Init}}
+\index{Init@{Init}!BpmControlComponent@{BpmControlComponent}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_bpm_control_component_a783be01d61fd4c6250b8c9ca61361a1e} 
+void Bpm\+Control\+Component\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_bpm_control_component_a6011654a2b1bc14c36bc98c5f125c5ee}\index{BpmControlComponent@{BpmControlComponent}!SetBpm@{SetBpm}}
+\index{SetBpm@{SetBpm}!BpmControlComponent@{BpmControlComponent}}
+\doxysubsubsection{\texorpdfstring{SetBpm()}{SetBpm()}}
+{\footnotesize\ttfamily \label{class_bpm_control_component_a6011654a2b1bc14c36bc98c5f125c5ee} 
+void Bpm\+Control\+Component\+::\+Set\+Bpm (\begin{DoxyParamCaption}\item[{int}]{bpm}{}\end{DoxyParamCaption})}
+
+
+
+BPM設定 
+
+
+\begin{DoxyParams}{引数}
+{\em bpm} & 設定する\+BPM \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bpm_control_component_ac8c7d0e5f2714917184f9e8440e1505e}\index{BpmControlComponent@{BpmControlComponent}!Update@{Update}}
+\index{Update@{Update}!BpmControlComponent@{BpmControlComponent}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_bpm_control_component_ac8c7d0e5f2714917184f9e8440e1505e} 
+void Bpm\+Control\+Component\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+左右キーで\+BPMを調整 一定時間以上押すと押し続けている間増減 
+
+\mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Component\+Base}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/自作ゲーム/音ゲー制作エンジン -\/ コピー/src/\+Components/\+Bpm\+Control\+Component/Bpm\+Control\+Component.\+h\end{DoxyCompactItemize}

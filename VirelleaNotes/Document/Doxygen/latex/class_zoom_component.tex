@@ -1,0 +1,70 @@
+\doxysection{Zoom\+Component クラス}
+\hypertarget{class_zoom_component}{}\label{class_zoom_component}\index{ZoomComponent@{ZoomComponent}}
+
+
+ズーム操作用コンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Zoom\+Component.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_zoom_component_a495338ae2cd755009e5a490c4d056459}\label{class_zoom_component_a495338ae2cd755009e5a490c4d056459} 
+{\bfseries Zoom\+Component} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\Hypertarget{class_zoom_component_a072b832ddb9e22e24838cd42d6bb0133}\label{class_zoom_component_a072b832ddb9e22e24838cd42d6bb0133} 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_zoom_component_a2f66c9bd0ea15f1437d377d3c51d4f84}\label{class_zoom_component_a2f66c9bd0ea15f1437d377d3c51d4f84} 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_zoom_component_a326919dc6ae7fe6dd67c4824646b36d2}{Get\+Zoom}} () const
+\begin{DoxyCompactList}\small\item\em 現在のズーム倍率を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_zoom_component_ab4ffe9218bb5f6d7e5fc2af8edba4c89}{Set\+Zoom}} (float zoom)
+\begin{DoxyCompactList}\small\item\em ズーム倍率を設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+ズーム操作用コンポーネント 
+
+Ctrl押下時にスクロールで倍率を変更する 
+
+\label{doc-func-members}
+\Hypertarget{class_zoom_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_zoom_component_a326919dc6ae7fe6dd67c4824646b36d2}\index{ZoomComponent@{ZoomComponent}!GetZoom@{GetZoom}}
+\index{GetZoom@{GetZoom}!ZoomComponent@{ZoomComponent}}
+\doxysubsubsection{\texorpdfstring{GetZoom()}{GetZoom()}}
+{\footnotesize\ttfamily \label{class_zoom_component_a326919dc6ae7fe6dd67c4824646b36d2} 
+float Zoom\+Component\+::\+Get\+Zoom (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+現在のズーム倍率を取得 
+
+\begin{DoxyReturn}{戻り値}
+ズーム倍率 
+\end{DoxyReturn}
+\Hypertarget{class_zoom_component_ab4ffe9218bb5f6d7e5fc2af8edba4c89}\index{ZoomComponent@{ZoomComponent}!SetZoom@{SetZoom}}
+\index{SetZoom@{SetZoom}!ZoomComponent@{ZoomComponent}}
+\doxysubsubsection{\texorpdfstring{SetZoom()}{SetZoom()}}
+{\footnotesize\ttfamily \label{class_zoom_component_ab4ffe9218bb5f6d7e5fc2af8edba4c89} 
+void Zoom\+Component\+::\+Set\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom}{}\end{DoxyParamCaption})}
+
+
+
+ズーム倍率を設定 
+
+
+\begin{DoxyParams}{引数}
+{\em zoom} & 新しい倍率 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/自作ゲーム/音ゲー制作エンジン -\/ コピー/src/\+Components/\+Zoom\+Component/Zoom\+Component.\+h\end{DoxyCompactItemize}

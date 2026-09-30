@@ -1,0 +1,201 @@
+\doxysection{Animation クラス}
+\hypertarget{class_animation}{}\label{class_animation}\index{Animation@{Animation}}
+
+
+アニメーションクラス  
+
+
+
+
+{\ttfamily \#include $<$Animation.\+h$>$}
+
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_animation_1_1_desc}{Desc}}
+\begin{DoxyCompactList}\small\item\em アニメーション定義オプション \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{Indent}\textbf{ 初期化}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animation_a4c294d8ee848291f5da25a7d6360601f}\label{class_animation_a4c294d8ee848291f5da25a7d6360601f} 
+{\bfseries Animation} ()=default
+\begin{DoxyCompactList}\small\item\em デフォルトコンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_animation_aec50f923a7aeed8d0ea9773c4790642d}{Animation}} (const \mbox{\hyperlink{struct_animation_1_1_desc}{Animation\+::\+Desc}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_animation_a72840bf73ce08ce4e2900fde6aa1c5b9}{desc}}, size\+\_\+t desc\+\_\+count)
+\item 
+bool \mbox{\hyperlink{class_animation_aad81a38c683c60841bbdd1d05eac7720}{load}} (const \mbox{\hyperlink{struct_animation_1_1_desc}{Animation\+::\+Desc}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_animation_a72840bf73ce08ce4e2900fde6aa1c5b9}{desc}}, size\+\_\+t desc\+\_\+count)
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_animation_modifier}{Animation\+Modifier}} $>$ \mbox{\hyperlink{class_animation_ae4d5e4b5e31e0f6be6684cc73183ae45}{create\+Animation\+Modifier}} (s32 frame\+\_\+index)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 更新}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_animation_aebce1593fc3fcdef36eaf9360d9d4e7e}{update}} (f32 dt)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 設定}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_animation_a496bc3c8cd47b3154e02d3bcd56284b3}{bind\+Model}} (\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*}model)
+\item 
+bool \mbox{\hyperlink{class_animation_a5feebcd58369d4601270b7070f87856f}{play}} (std\+::string\+\_\+view name, bool is\+\_\+loop=false, f32 blend\+\_\+time=1.\+0f, f32 start\+\_\+time=0.\+0f)
+\item 
+void \mbox{\hyperlink{class_animation_a78c13e95acbf5fcaa1c8a9b209dd1ad1}{pause}} (bool active=true)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 取得}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_animation_ac5cebb572b387c70ed694302f4f27428}\label{class_animation_ac5cebb572b387c70ed694302f4f27428} 
+int {\bfseries model\+\_\+mv1\+\_\+handle} () const
+\begin{DoxyCompactList}\small\item\em \mbox{[}Dx\+Lib\mbox{]} モデル用\+MV1ハンドルを取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_afed388358df1d0c89d100089aa0798c3}\label{class_animation_afed388358df1d0c89d100089aa0798c3} 
+s32 {\bfseries animation\+Index} (std\+::string\+\_\+view name) const
+\begin{DoxyCompactList}\small\item\em アニメーション番号を取得(アニメーション名指定) \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_a72840bf73ce08ce4e2900fde6aa1c5b9}\label{class_animation_a72840bf73ce08ce4e2900fde6aa1c5b9} 
+const \mbox{\hyperlink{struct_animation_1_1_desc}{Animation\+::\+Desc}} \texorpdfstring{$\ast$}{*} {\bfseries desc} (s32 animation\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em アニメーション定義を取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_ab59282c807a07a8b5a71921f2885c4fe}\label{class_animation_ab59282c807a07a8b5a71921f2885c4fe} 
+int {\bfseries animation\+\_\+mv1\+\_\+handle} (s32 animation\+\_\+index) const
+\begin{DoxyCompactList}\small\item\em \mbox{[}Dx\+Lib\mbox{]} アニメーション用\+MV1ハンドルを取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_animation_aaae3356caf1bda3d0b5457e02f1475d1}\label{class_animation_aaae3356caf1bda3d0b5457e02f1475d1} 
+bool {\bfseries is\+Playing} () const
+\item 
+\Hypertarget{class_animation_a337cdf4e123b03fdb23d7a82f460637e}\label{class_animation_a337cdf4e123b03fdb23d7a82f460637e} 
+bool {\bfseries is\+Paused} () const
+\item 
+\Hypertarget{class_animation_ae091a5871009cb2481bf2fa07f99effe}\label{class_animation_ae091a5871009cb2481bf2fa07f99effe} 
+bool {\bfseries is\+Valid} () const
+\item 
+bool \mbox{\hyperlink{class_animation_a02e3cc6b3a52627093ab052227575d78}{is\+Active}} () const
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+アニメーションクラス 
+
+\label{doc-constructors}
+\Hypertarget{class_animation_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_animation_aec50f923a7aeed8d0ea9773c4790642d}\index{Animation@{Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{Animation()}{Animation()}}
+{\footnotesize\ttfamily \label{class_animation_aec50f923a7aeed8d0ea9773c4790642d} 
+Animation\+::\+Animation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_animation_1_1_desc}{Animation\+::\+Desc}} \texorpdfstring{$\ast$}{*}}]{desc}{, }\item[{size\+\_\+t}]{desc\+\_\+count}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em desc} & 定義オプション配列の先頭アドレス \\
+\hline
+\mbox{\texttt{in}}  & {\em desc\+\_\+count} & 定義オプション配列の個数 \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_animation_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_animation_a496bc3c8cd47b3154e02d3bcd56284b3}\index{Animation@{Animation}!bindModel@{bindModel}}
+\index{bindModel@{bindModel}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{bindModel()}{bindModel()}}
+{\footnotesize\ttfamily \label{class_animation_a496bc3c8cd47b3154e02d3bcd56284b3} 
+void Animation\+::bind\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*}}]{model}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em model} & 3Dモデル(nullptrで解除) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_ae4d5e4b5e31e0f6be6684cc73183ae45}\index{Animation@{Animation}!createAnimationModifier@{createAnimationModifier}}
+\index{createAnimationModifier@{createAnimationModifier}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{createAnimationModifier()}{createAnimationModifier()}}
+{\footnotesize\ttfamily \label{class_animation_ae4d5e4b5e31e0f6be6684cc73183ae45} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_animation_modifier}{Animation\+Modifier}} $>$ Animation\+::create\+Animation\+Modifier (\begin{DoxyParamCaption}\item[{s32}]{frame\+\_\+index}{}\end{DoxyParamCaption})}
+
+アニメーション操作クラスを作成 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em frame\+\_\+index} & 対象になる関節フレーム番号 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a02e3cc6b3a52627093ab052227575d78}\index{Animation@{Animation}!isActive@{isActive}}
+\index{isActive@{isActive}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily \label{class_animation_a02e3cc6b3a52627093ab052227575d78} 
+bool Animation\+::is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyNote}{覚え書き}
+利用可能になっていない状態で\+Dx\+Libアニメーション関数を呼ぶと非同期ロードがブロッキングされます 
+\end{DoxyNote}
+\Hypertarget{class_animation_aad81a38c683c60841bbdd1d05eac7720}\index{Animation@{Animation}!load@{load}}
+\index{load@{load}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{class_animation_aad81a38c683c60841bbdd1d05eac7720} 
+bool Animation\+::load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_animation_1_1_desc}{Animation\+::\+Desc}} \texorpdfstring{$\ast$}{*}}]{desc}{, }\item[{size\+\_\+t}]{desc\+\_\+count}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em desc} & 定義オプション配列の先頭アドレス \\
+\hline
+\mbox{\texttt{in}}  & {\em desc\+\_\+count} & 定義オプション配列の個数 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 成功(正常終了) \\
+\hline
+{\em false} & 失敗(エラー終了) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_animation_a78c13e95acbf5fcaa1c8a9b209dd1ad1}\index{Animation@{Animation}!pause@{pause}}
+\index{pause@{pause}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{pause()}{pause()}}
+{\footnotesize\ttfamily \label{class_animation_a78c13e95acbf5fcaa1c8a9b209dd1ad1} 
+void Animation\+::pause (\begin{DoxyParamCaption}\item[{bool}]{active}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em active} & 停止フラグ(true\+:停止 false\+:再開) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_animation_a5feebcd58369d4601270b7070f87856f}\index{Animation@{Animation}!play@{play}}
+\index{play@{play}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily \label{class_animation_a5feebcd58369d4601270b7070f87856f} 
+bool Animation\+::play (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name}{, }\item[{bool}]{is\+\_\+loop}{ = {\ttfamily false}, }\item[{f32}]{blend\+\_\+time}{ = {\ttfamily 1.0f}, }\item[{f32}]{start\+\_\+time}{ = {\ttfamily 0.0f}}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em name} & アニメーション名 \\
+\hline
+\mbox{\texttt{in}}  & {\em is\+\_\+loop} & ループ再生するかどうか(default\+:false) \\
+\hline
+\mbox{\texttt{in}}  & {\em blend\+\_\+time} & ブレンドする時間 (default\+:1.\+0秒) \\
+\hline
+\mbox{\texttt{in}}  & {\em start\+\_\+time} & 再生開始時間(default\+:0.\+0f) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 成功(正常終了) \\
+\hline
+{\em false} & 失敗(nameで指定した名前が見つからなかった場合) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_animation_aebce1593fc3fcdef36eaf9360d9d4e7e}\index{Animation@{Animation}!update@{update}}
+\index{update@{update}!Animation@{Animation}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_animation_aebce1593fc3fcdef36eaf9360d9d4e7e} 
+void Animation\+::update (\begin{DoxyParamCaption}\item[{f32}]{dt}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em dt} & 経過時間(単位\+:秒) \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/\mbox{\hyperlink{_animation_8h}{Animation.\+h}}\end{DoxyCompactItemize}

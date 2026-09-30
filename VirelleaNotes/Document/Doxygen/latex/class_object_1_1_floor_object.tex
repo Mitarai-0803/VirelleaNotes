@@ -1,0 +1,138 @@
+\doxysection{Object\+::Floor\+Object クラス}
+\hypertarget{class_object_1_1_floor_object}{}\label{class_object_1_1_floor_object}\index{Object::FloorObject@{Object::FloorObject}}
+
+
+Object\+::Floor\+Object の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_floor_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Object\+::Floor\+Object 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_object_1_1_floor_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_object_1_1_floor_object_a643eb7b1715d4664441dddf09eef86cf}\label{class_object_1_1_floor_object_a643eb7b1715d4664441dddf09eef86cf} 
+{\bfseries Floor\+Object} (const JPH\+::\+RVec3 \&pos, JPH\+::\+Vec3 half\+Extent=JPH\+::\+Vec3(25.\+0f, 0.\+5f, 25.\+0f))
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries Get\+Position} () const
+\item 
+void {\bfseries Set\+Position} (const JPH\+::\+RVec3 \&pos)
+\item 
+JPH\+::\+Quat {\bfseries Get\+Rotation} () const
+\item 
+void {\bfseries Set\+Rotation} (const JPH\+::\+Quat \&rot)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Object\+Base} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_object_1_1_object_base_af53775f0db55e72971bd8bfed4ba6809}{\texorpdfstring{$\sim$}{\string~}\+Object\+Base}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_object_1_1_object_base_a16b478109bc4787d7095706ba6d7cdfb}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名の取得 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Name} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名の設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Add\+Component} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_object_1_1_object_base_ac6b0a1cda5413d3b3d110d2316bd7536}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em ライフサイクル呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\item 
+void {\bfseries Draw\+Debug} ()
+\item 
+void {\bfseries Draw} ()
+\item 
+void {\bfseries End} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_object_1_1_floor_object_a1d9ed8a9ff90f67846648e5359f6756b}{On\+Init}} () override
+\item 
+void \mbox{\hyperlink{class_object_1_1_floor_object_a7756b8e7c7fba0078a0f64d14526162f}{On\+Update}} () override
+\item 
+void \mbox{\hyperlink{class_object_1_1_floor_object_a27a1a2125861a84da16bd952a4461696}{On\+Draw}} () override
+\item 
+void \mbox{\hyperlink{class_object_1_1_floor_object_a6ea46c86ce8609f5b0c784d5fb490d51}{On\+End}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries On\+Draw\+Debug} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_object_1_1_object_base3_d}{Object\+::\+Object\+Base3D}} に属する継承限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+JPH\+::\+RVec3 {\bfseries m\+\_\+pos} = JPH\+::\+RVec3(0.\+0f, 0.\+0f, 0.\+0f)
+\begin{DoxyCompactList}\small\item\em 手動設定の座標 \end{DoxyCompactList}\item 
+JPH\+::\+Quat {\bfseries m\+\_\+rot} = JPH\+::\+Quat\+::s\+Identity()
+\begin{DoxyCompactList}\small\item\em 手動設定の回転 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_object_1_1_floor_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_object_1_1_floor_object_a27a1a2125861a84da16bd952a4461696}\index{Object::FloorObject@{Object::FloorObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!Object::FloorObject@{Object::FloorObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_object_1_1_floor_object_a27a1a2125861a84da16bd952a4461696} 
+void Object\+::\+Floor\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_floor_object_a6ea46c86ce8609f5b0c784d5fb490d51}\index{Object::FloorObject@{Object::FloorObject}!OnEnd@{OnEnd}}
+\index{OnEnd@{OnEnd}!Object::FloorObject@{Object::FloorObject}}
+\doxysubsubsection{\texorpdfstring{OnEnd()}{OnEnd()}}
+{\footnotesize\ttfamily \label{class_object_1_1_floor_object_a6ea46c86ce8609f5b0c784d5fb490d51} 
+void Object\+::\+Floor\+Object\+::\+On\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_floor_object_a1d9ed8a9ff90f67846648e5359f6756b}\index{Object::FloorObject@{Object::FloorObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!Object::FloorObject@{Object::FloorObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_object_1_1_floor_object_a1d9ed8a9ff90f67846648e5359f6756b} 
+void Object\+::\+Floor\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+\Hypertarget{class_object_1_1_floor_object_a7756b8e7c7fba0078a0f64d14526162f}\index{Object::FloorObject@{Object::FloorObject}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Object::FloorObject@{Object::FloorObject}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_object_1_1_floor_object_a7756b8e7c7fba0078a0f64d14526162f} 
+void Object\+::\+Floor\+Object\+::\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_object_1_1_object_base}{Object\+::\+Object\+Base}}を再実装しています。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/sg mitarai/\+Reo\+Engine/src/\mbox{\hyperlink{_floor_object_8h}{Floor\+Object.\+h}}\end{DoxyCompactItemize}

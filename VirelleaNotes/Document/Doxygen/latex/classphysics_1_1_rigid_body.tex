@@ -1,0 +1,365 @@
+\doxysection{physics\+::Rigid\+Body クラス}
+\hypertarget{classphysics_1_1_rigid_body}{}\label{classphysics_1_1_rigid_body}\index{physics::RigidBody@{physics::RigidBody}}
+
+
+剛体クラス  
+
+
+
+
+{\ttfamily \#include $<$Rigid\+Body.\+h$>$}
+
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_aeaf58e0ff88940582079c3d6860f80a6}\label{classphysics_1_1_rigid_body_aeaf58e0ff88940582079c3d6860f80a6} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Rigid\+Body} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ オブジェクトレイヤー（フィルター）}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a4db561e203a7a6238b7e6dabfefacbd6}{set\+Layer}} (\mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} \mbox{\hyperlink{classphysics_1_1_rigid_body_aff03acd91146bc9a20f2a491f93d1932}{layer}})=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_aff03acd91146bc9a20f2a491f93d1932}\label{classphysics_1_1_rigid_body_aff03acd91146bc9a20f2a491f93d1932} 
+virtual \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}} {\bfseries layer} () const =0
+\begin{DoxyCompactList}\small\item\em オブジェクトレイヤーを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 位置と回転姿勢}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a5a6e6230056bbc74b6af14ecb85fbd58}{set\+Position}} (const float3 \&\mbox{\hyperlink{classphysics_1_1_rigid_body_a43919be018e0b51e9b4b9c568962181e}{position}}, bool is\+\_\+activate=true)=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_a43919be018e0b51e9b4b9c568962181e}\label{classphysics_1_1_rigid_body_a43919be018e0b51e9b4b9c568962181e} 
+virtual float3 {\bfseries position} () const =0
+\begin{DoxyCompactList}\small\item\em 位置を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_rigid_body_a670ba2bf210384276c1c4fe305d2605a}\label{classphysics_1_1_rigid_body_a670ba2bf210384276c1c4fe305d2605a} 
+virtual float3 {\bfseries center\+Of\+Mass\+Position} () const =0
+\begin{DoxyCompactList}\small\item\em 重心位置を取得 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a9deeb6a45f111d31082587d6782fa8c5}{set\+Rotation}} (const quaternion \&rot, bool is\+\_\+activate=true)=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_a191e138030612de47568431c8b6e727a}\label{classphysics_1_1_rigid_body_a191e138030612de47568431c8b6e727a} 
+virtual quaternion {\bfseries rotation} () const =0
+\begin{DoxyCompactList}\small\item\em 回転姿勢を設定 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_rigid_body_aa66ae217f95717046cc57b312e2e77a2}\label{classphysics_1_1_rigid_body_aa66ae217f95717046cc57b312e2e77a2} 
+virtual \mbox{\hyperlink{classmatrix}{matrix}} {\bfseries world\+Matrix} () const =0
+\begin{DoxyCompactList}\small\item\em ワールド行列を取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_rigid_body_a065d328b0a961382a8911805168282eb}\label{classphysics_1_1_rigid_body_a065d328b0a961382a8911805168282eb} 
+virtual \mbox{\hyperlink{classmatrix}{matrix}} {\bfseries center\+Of\+Mass\+Transform} () const =0
+\begin{DoxyCompactList}\small\item\em 重心の変換行列を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 速度と角速度}\par
+{\em Linear\+Velocityは重心の速度であり、物体の位置と一致しない場合がありますので補正してください。 }\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a7be837e25dd2f8cded86f47fa2d1d2b4}{move\+Kinematic}} (const float3 \&target\+\_\+position, const quaternion \&target\+\_\+rotation, \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} delta\+\_\+time)=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_abea074b8e238039bf3dda46a19ab0179}{set\+Linear\+Velocity}} (const float3 \&v)=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_a795c95e408ea76d6acdcec99e3bb98e4}\label{classphysics_1_1_rigid_body_a795c95e408ea76d6acdcec99e3bb98e4} 
+virtual float3 {\bfseries linear\+Velocity} () const =0
+\begin{DoxyCompactList}\small\item\em 速度を取得 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a2060d916e6bb2a292387fd90951e767b}{add\+Linear\+Velocity}} (const float3 \&v)=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_ab09d70d5181788b5893755a1e1621b7f}{set\+Angular\+Velocity}} (const float3 \&vrot)=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_aca09f2b18ac78d022623059e1dc6a2d5}\label{classphysics_1_1_rigid_body_aca09f2b18ac78d022623059e1dc6a2d5} 
+virtual float3 {\bfseries angular\+Velocity} () const =0
+\begin{DoxyCompactList}\small\item\em 角速度を取得 \end{DoxyCompactList}\item 
+virtual float3 \mbox{\hyperlink{classphysics_1_1_rigid_body_a0a0c9e6a7c5df94035190acf80b5fd28}{point\+Velocity}} (const float3 \&point) const =0
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 力を与える}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_af6c8404e91d54e8783ddb3ebb364f98b}{add\+Force}} (const float3 \&force)=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a95f0919a27bf81b0f244382734232eb7}{add\+Force}} (const float3 \&force, const float3 \&point)=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_aedfe68f1035bd0a879340d548b92a10f}{add\+Torque}} (const float3 \&torque)=0
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 撃力を与える}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a81b0c1a3b94735b1377f13bddb758156}{add\+Impulse}} (const float3 \&impulse)=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a5b626de3448224a249ced873c05e2c3e}{add\+Impulse}} (const float3 \&impulse, const float3 \&point)=0
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a4424738f3f08bfa0e3f6adf9698a04a4}{add\+Angular\+Impulse}} (const float3 \&impulse)=0
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 跳ね返り係数}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_ae5b08588113928e34e44d2a5bb04473a}{set\+Restitution}} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} coeff)=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_a633447c5e3021f47842e0e21e790e938}\label{classphysics_1_1_rigid_body_a633447c5e3021f47842e0e21e790e938} 
+virtual \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} {\bfseries restitution} () const =0
+\begin{DoxyCompactList}\small\item\em 跳ね返り係数を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 摩擦係数}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a3176341b3cd9b22e1dd62122e3e3d6b4}{set\+Friction}} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} coeff)=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_aa4acbfa32015dedfcbd04fc59e9893e6}\label{classphysics_1_1_rigid_body_aa4acbfa32015dedfcbd04fc59e9893e6} 
+virtual \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} {\bfseries friction} () const =0
+\begin{DoxyCompactList}\small\item\em 摩擦係数を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 重力係数}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a40753495537fbb8104fb953ed876fd77}{set\+Gravity\+Factor}} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} coeff)=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_aaa35fb380e89eaf36505627c723a90d0}\label{classphysics_1_1_rigid_body_aaa35fb380e89eaf36505627c723a90d0} 
+virtual \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} {\bfseries gravity\+Factor} () const =0
+\begin{DoxyCompactList}\small\item\em 重力係数を取得 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_ab4fd511bac9774e5061a2a57b40e16d3}{set\+Motion\+Type}} (\mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}{physics\+::\+Motion\+Type}} motion\+\_\+type, bool is\+\_\+activate=true)=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_a4ddd6c758d9f7a53ef5d6d20e36502b5}\label{classphysics_1_1_rigid_body_a4ddd6c758d9f7a53ef5d6d20e36502b5} 
+virtual \mbox{\hyperlink{classmatrix}{matrix}} {\bfseries inverse\+Inertia} () const =0
+\begin{DoxyCompactList}\small\item\em ワールド空間の逆慣性テンソルを取得する \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classphysics_1_1_rigid_body_a0eaf71f1f1d32abdf4f4095581061a2a}{set\+Data}} (std\+::intptr\+\_\+t s)=0
+\item 
+\Hypertarget{classphysics_1_1_rigid_body_aa06209408a89f72e2b9c37d0dbbc3369}\label{classphysics_1_1_rigid_body_aa06209408a89f72e2b9c37d0dbbc3369} 
+virtual std\+::intptr\+\_\+t {\bfseries data} () const =0
+\begin{DoxyCompactList}\small\item\em ユーザーデーターを取得 \end{DoxyCompactList}\item 
+\Hypertarget{classphysics_1_1_rigid_body_aa3aedac15bd41b6d2623fde9a7b35e8e}\label{classphysics_1_1_rigid_body_aa3aedac15bd41b6d2623fde9a7b35e8e} 
+virtual \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}} {\bfseries body\+ID} () const =0
+\begin{DoxyCompactList}\small\item\em ボディ\+IDを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+剛体クラス 
+
+\label{doc-func-members}
+\Hypertarget{classphysics_1_1_rigid_body_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{classphysics_1_1_rigid_body_a4424738f3f08bfa0e3f6adf9698a04a4}\index{physics::RigidBody@{physics::RigidBody}!addAngularImpulse@{addAngularImpulse}}
+\index{addAngularImpulse@{addAngularImpulse}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{addAngularImpulse()}{addAngularImpulse()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a4424738f3f08bfa0e3f6adf9698a04a4} 
+virtual void physics\+::\+Rigid\+Body\+::add\+Angular\+Impulse (\begin{DoxyParamCaption}\item[{const float3 \&}]{impulse}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+角力積を与える 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em angular\+\_\+impulse} & 与える角力積 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_af6c8404e91d54e8783ddb3ebb364f98b}\index{physics::RigidBody@{physics::RigidBody}!addForce@{addForce}}
+\index{addForce@{addForce}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{addForce()}{addForce()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_af6c8404e91d54e8783ddb3ebb364f98b} 
+virtual void physics\+::\+Rigid\+Body\+::add\+Force (\begin{DoxyParamCaption}\item[{const float3 \&}]{force}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+力を与える 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em force} & 与える力 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a95f0919a27bf81b0f244382734232eb7}\index{physics::RigidBody@{physics::RigidBody}!addForce@{addForce}}
+\index{addForce@{addForce}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{addForce()}{addForce()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a95f0919a27bf81b0f244382734232eb7} 
+virtual void physics\+::\+Rigid\+Body\+::add\+Force (\begin{DoxyParamCaption}\item[{const float3 \&}]{force}{, }\item[{const float3 \&}]{point}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+指定位置に力を与える 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em force} & 与える力 \\
+\hline
+\mbox{\texttt{in}}  & {\em point} & 位置 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a81b0c1a3b94735b1377f13bddb758156}\index{physics::RigidBody@{physics::RigidBody}!addImpulse@{addImpulse}}
+\index{addImpulse@{addImpulse}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{addImpulse()}{addImpulse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a81b0c1a3b94735b1377f13bddb758156} 
+virtual void physics\+::\+Rigid\+Body\+::add\+Impulse (\begin{DoxyParamCaption}\item[{const float3 \&}]{impulse}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+撃力を与える 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em impulse} & 与える撃力 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a5b626de3448224a249ced873c05e2c3e}\index{physics::RigidBody@{physics::RigidBody}!addImpulse@{addImpulse}}
+\index{addImpulse@{addImpulse}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{addImpulse()}{addImpulse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a5b626de3448224a249ced873c05e2c3e} 
+virtual void physics\+::\+Rigid\+Body\+::add\+Impulse (\begin{DoxyParamCaption}\item[{const float3 \&}]{impulse}{, }\item[{const float3 \&}]{point}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+指定位置に撃力を与える 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em impulse} & 与える撃力 \\
+\hline
+\mbox{\texttt{in}}  & {\em point} & 位置 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a2060d916e6bb2a292387fd90951e767b}\index{physics::RigidBody@{physics::RigidBody}!addLinearVelocity@{addLinearVelocity}}
+\index{addLinearVelocity@{addLinearVelocity}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{addLinearVelocity()}{addLinearVelocity()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a2060d916e6bb2a292387fd90951e767b} 
+virtual void physics\+::\+Rigid\+Body\+::add\+Linear\+Velocity (\begin{DoxyParamCaption}\item[{const float3 \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+現在の速度に速度を加算 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em v} & 加算する速度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_aedfe68f1035bd0a879340d548b92a10f}\index{physics::RigidBody@{physics::RigidBody}!addTorque@{addTorque}}
+\index{addTorque@{addTorque}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{addTorque()}{addTorque()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_aedfe68f1035bd0a879340d548b92a10f} 
+virtual void physics\+::\+Rigid\+Body\+::add\+Torque (\begin{DoxyParamCaption}\item[{const float3 \&}]{torque}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+トルクを与える 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em force} & 与える力 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a7be837e25dd2f8cded86f47fa2d1d2b4}\index{physics::RigidBody@{physics::RigidBody}!moveKinematic@{moveKinematic}}
+\index{moveKinematic@{moveKinematic}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{moveKinematic()}{moveKinematic()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a7be837e25dd2f8cded86f47fa2d1d2b4} 
+virtual void physics\+::\+Rigid\+Body\+::move\+Kinematic (\begin{DoxyParamCaption}\item[{const float3 \&}]{target\+\_\+position}{, }\item[{const quaternion \&}]{target\+\_\+rotation}{, }\item[{\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}}]{delta\+\_\+time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+速度と角速度を逆算して設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em target\+\_\+position} & 目標の位置 \\
+\hline
+\mbox{\texttt{in}}  & {\em target\+\_\+rotation} & 目標の回転姿勢 \\
+\hline
+\mbox{\texttt{in}}  & {\em delta\+\_\+time} & 所要時間 target\+\_\+position/target\+\_\+rotation に delta\+\_\+time 秒で位置するようにボディの速度を設定します。 必要に応じてボディをアクティブにします。 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a0a0c9e6a7c5df94035190acf80b5fd28}\index{physics::RigidBody@{physics::RigidBody}!pointVelocity@{pointVelocity}}
+\index{pointVelocity@{pointVelocity}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{pointVelocity()}{pointVelocity()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a0a0c9e6a7c5df94035190acf80b5fd28} 
+virtual float3 physics\+::\+Rigid\+Body\+::point\+Velocity (\begin{DoxyParamCaption}\item[{const float3 \&}]{point}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+指定座標のワールド空間での速度を取得 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em point} & 座標 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_ab09d70d5181788b5893755a1e1621b7f}\index{physics::RigidBody@{physics::RigidBody}!setAngularVelocity@{setAngularVelocity}}
+\index{setAngularVelocity@{setAngularVelocity}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setAngularVelocity()}{setAngularVelocity()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_ab09d70d5181788b5893755a1e1621b7f} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Angular\+Velocity (\begin{DoxyParamCaption}\item[{const float3 \&}]{vrot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+角速度を設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em vrot} & 角速度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a0eaf71f1f1d32abdf4f4095581061a2a}\index{physics::RigidBody@{physics::RigidBody}!setData@{setData}}
+\index{setData@{setData}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a0eaf71f1f1d32abdf4f4095581061a2a} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Data (\begin{DoxyParamCaption}\item[{std\+::intptr\+\_\+t}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+ユーザーデーターを設定 
+\begin{DoxyParams}{引数}
+{\em \mbox{[}s\mbox{]}} & ユーザーデーター(識別用に任意に設定可能です) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a3176341b3cd9b22e1dd62122e3e3d6b4}\index{physics::RigidBody@{physics::RigidBody}!setFriction@{setFriction}}
+\index{setFriction@{setFriction}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setFriction()}{setFriction()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a3176341b3cd9b22e1dd62122e3e3d6b4} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Friction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}}]{coeff}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+摩擦係数を設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em coeff} & 摩擦係数(0.\+0f\texorpdfstring{$\sim$}{\string~}) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a40753495537fbb8104fb953ed876fd77}\index{physics::RigidBody@{physics::RigidBody}!setGravityFactor@{setGravityFactor}}
+\index{setGravityFactor@{setGravityFactor}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setGravityFactor()}{setGravityFactor()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a40753495537fbb8104fb953ed876fd77} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Gravity\+Factor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}}]{coeff}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+重力係数を設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em coeff} & 摩擦係数(0.\+0f\texorpdfstring{$\sim$}{\string~}) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a4db561e203a7a6238b7e6dabfefacbd6}\index{physics::RigidBody@{physics::RigidBody}!setLayer@{setLayer}}
+\index{setLayer@{setLayer}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setLayer()}{setLayer()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a4db561e203a7a6238b7e6dabfefacbd6} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Layer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}}]{layer}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+オブジェクトレイヤーを設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em layer} & オブジェクトレイヤー \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_abea074b8e238039bf3dda46a19ab0179}\index{physics::RigidBody@{physics::RigidBody}!setLinearVelocity@{setLinearVelocity}}
+\index{setLinearVelocity@{setLinearVelocity}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setLinearVelocity()}{setLinearVelocity()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_abea074b8e238039bf3dda46a19ab0179} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Linear\+Velocity (\begin{DoxyParamCaption}\item[{const float3 \&}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+速度を設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em v} & 速度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_ab4fd511bac9774e5061a2a57b40e16d3}\index{physics::RigidBody@{physics::RigidBody}!setMotionType@{setMotionType}}
+\index{setMotionType@{setMotionType}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setMotionType()}{setMotionType()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_ab4fd511bac9774e5061a2a57b40e16d3} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Motion\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_rigid_body_8h_a7664f0ec137fcd61a578e2447e866bd3}{physics\+::\+Motion\+Type}}}]{motion\+\_\+type}{, }\item[{bool}]{is\+\_\+activate}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+動的/静的/キネマティックを切り替え 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em motion\+\_\+type} & 動作タイプ \\
+\hline
+\mbox{\texttt{in}}  & {\em is\+\_\+activate} & アクティブ化するかどうか true\+:アクティブにする false\+:アクティブにしない \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a5a6e6230056bbc74b6af14ecb85fbd58}\index{physics::RigidBody@{physics::RigidBody}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a5a6e6230056bbc74b6af14ecb85fbd58} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Position (\begin{DoxyParamCaption}\item[{const float3 \&}]{position}{, }\item[{bool}]{is\+\_\+activate}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+位置を設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em position} & 設定座標 \\
+\hline
+\mbox{\texttt{in}}  & {\em is\+\_\+activate} & アクティブ化するかどうか true\+:アクティブにする false\+:アクティブにしない \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_ae5b08588113928e34e44d2a5bb04473a}\index{physics::RigidBody@{physics::RigidBody}!setRestitution@{setRestitution}}
+\index{setRestitution@{setRestitution}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setRestitution()}{setRestitution()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_ae5b08588113928e34e44d2a5bb04473a} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Restitution (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}}]{coeff}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+跳ね返り係数を設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em coeff} & 跳ね返り係数(0.\+0f-\/1.\+0f) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classphysics_1_1_rigid_body_a9deeb6a45f111d31082587d6782fa8c5}\index{physics::RigidBody@{physics::RigidBody}!setRotation@{setRotation}}
+\index{setRotation@{setRotation}!physics::RigidBody@{physics::RigidBody}}
+\doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
+{\footnotesize\ttfamily \label{classphysics_1_1_rigid_body_a9deeb6a45f111d31082587d6782fa8c5} 
+virtual void physics\+::\+Rigid\+Body\+::set\+Rotation (\begin{DoxyParamCaption}\item[{const quaternion \&}]{rot}{, }\item[{bool}]{is\+\_\+activate}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+回転姿勢を設定 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em rot} & 設定角度 \\
+\hline
+\mbox{\texttt{in}}  & {\em is\+\_\+activate} & アクティブ化するかどうか true\+:アクティブにする false\+:アクティブにしない \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Physics/\mbox{\hyperlink{_rigid_body_8h}{Rigid\+Body.\+h}}\end{DoxyCompactItemize}

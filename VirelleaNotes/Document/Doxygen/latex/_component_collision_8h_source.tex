@@ -1,0 +1,433 @@
+\doxysection{Component\+Collision.\+h}
+\hypertarget{_component_collision_8h_source}{}\label{_component_collision_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentCollision.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentCollision.h}}
+\mbox{\hyperlink{_component_collision_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_8h}{System/Component/Component.h}}>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_hit_info_8h}{System/Component/ComponentHitInfo.h}}>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <ImGuizmo/ImGuizmo.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifdef\ USE\_JOLT\_PHYSICS}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\ \ \ \ \#include\ <\mbox{\hyperlink{_physics_engine_8h}{System/Physics/PhysicsEngine.h}}>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \ \ \ \#include\ <\mbox{\hyperlink{_physics_layer_8h}{System/Physics/PhysicsLayer.h}}>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \ \ \ \#include\ <\mbox{\hyperlink{_rigid_body_8h}{System/Physics/RigidBody.h}}>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ \#include\ <\mbox{\hyperlink{_shape_8h}{System/Physics/Shape.h}}>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \ \ \ \#include\ <\mbox{\hyperlink{_physics_character_8h}{System/Physics/PhysicsCharacter.h}}>}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }RigidBodyPtr\ =\ std::shared\_ptr<physics::RigidBody>;}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ USING\_PTR(\mbox{\hyperlink{class_component_collision}{ComponentCollision}});}
+\DoxyCodeLine{00021\ USING\_PTR(\mbox{\hyperlink{class_component_collision_capsule}{ComponentCollisionCapsule}});}
+\DoxyCodeLine{00022\ USING\_PTR(\mbox{\hyperlink{class_component_collision_sphere}{ComponentCollisionSphere}});}
+\DoxyCodeLine{00023\ USING\_PTR(\mbox{\hyperlink{class_component_collision_model}{ComponentCollisionModel}});}
+\DoxyCodeLine{00024\ USING\_PTR(\mbox{\hyperlink{class_component_collision_line}{ComponentCollisionLine}});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }ComponentCollision\ :\ \textcolor{keyword}{public}\ Component}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_component_collision_1_1_hit_info}{HitInfo}}}
+\DoxyCodeLine{00032\ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info_a7b9a306996ac481698e57804c742e732}{hit\_}}\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ ComponentCollisionPtr\ \mbox{\hyperlink{struct_component_collision_1_1_hit_info_aed5152e21fa7b0cc167160d5594d0a63}{collision\_}}\ \ \ \ \ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info_ad51ca65c2167af79e4f9bdf1cc87b99c}{push\_}}\ \ \ \ \ \ \ \ \ \ =\ \{0.0f,\ 0.0f,\ 0.0f\};\ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ float3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info_ae3bf862de2f35207f42715b8137adf97}{hit\_position\_}}\ \ =\ \{0.0f,\ 0.0f,\ 0.0f\};\ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ ComponentCollisionPtr\ \mbox{\hyperlink{struct_component_collision_1_1_hit_info_a57fe6831b0522f5114aca8b0c12486a7}{hit\_collision\_}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ ComponentCollision();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ Construct(ObjectPtr\ owner);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_a112e5c3ebd36edb531a9f533cf9aa799}{LateUpdate}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_ac245cf529ba5e9b4fbc571aaeaf827dc}{PostUpdate}}()\ \textcolor{keyword}{override};\ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_aa4072ddbe19bbaff34980ee8c81182f3}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_a7f3cf1b4259c82671d1fe0ab515dfd4f}{GUICollisionData}}(\textcolor{keywordtype}{bool}\ use\_attach\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{HitInfo}}\ \mbox{\hyperlink{class_component_collision_ae084dc4c6878df3c3eb2f925e266309f}{IsHit}}(ComponentCollisionPtr)}
+\DoxyCodeLine{00055\ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ オーバーライドしてください}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{HitInfo}}();}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_a772c56aecbc089864de0209f97c24e98}{OnHit}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{HitInfo}}\&\ hitInfo);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00066\ \ \ \ \ std::function<void(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{HitInfo}}\&\ hit\_info)>\ \mbox{\hyperlink{class_component_collision_a4d4cb14a8545d805106815ae2f52f47c}{OnHitFunc}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#if\ 0\ \ \ \ }\textcolor{comment}{//\ 通常コンポーネントへ移動}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ SetName(std::string\_view\ name);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ std::string\_view\ GetName();}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{enum\ struct}\ \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5d}{CollisionBit}}\ :\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}
+\DoxyCodeLine{00078\ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5da59d87a4758a9d35fbaf6b204341bb399}{Initialized}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5daf5dcb4a16c9cba228cbc26f01d9ab113}{DisableHit}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ ShowInGame,\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5dadbe849234308d83d4abce1d533509a70}{IsGround}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5dab31e3562242db4cb3b7cddd4107ebcfe}{UsePhysics}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5da59e340d8613e634eb85f7268601aa67d}{DisableTransform}},\ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsCollisionStatus(\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5d}{CollisionBit}}\ bit)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_a7ccef5dcf94b38e8bb2b13589ffba1ed}{collision\_status\_}}.is(bit);\ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ SetCollisionStatus(\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5d}{CollisionBit}}\ bit,\ \textcolor{keywordtype}{bool}\ b)\ \{\ \mbox{\hyperlink{class_component_collision_a7ccef5dcf94b38e8bb2b13589ffba1ed}{collision\_status\_}}.set(bit,\ b);\ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{enum\ struct}\ \mbox{\hyperlink{class_component_collision_ac871fff0db414ee6b5a1e6b3acd05ebe}{CollisionType}}\ :\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}
+\DoxyCodeLine{00093\ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ NONE\ =\ (\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}})-\/1,}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ LINE\ =\ 0,}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ TRIANGLE,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ SPHERE,}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ CAPSULE,}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ MODEL,}
+\DoxyCodeLine{00100\ \ \ \ \ \};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::string>\ \mbox{\hyperlink{class_component_collision_a9cc00683556722e2d809cd9ba1f51422}{CollisionTypeName}}\{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}LINE"{}},\ \ \ \ \ \ \ \ \textcolor{comment}{//<\ ライン}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}TRIANGLE"{}},\ \ \ \ \textcolor{comment}{//<\ トライアングル}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}SPHERE"{}},\ \ \ \ \ \ \textcolor{comment}{//<\ スフィア}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}CAPSULE"{}},\ \ \ \ \ \textcolor{comment}{//<\ カプセル}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}MODEL"{}},\ \ \ \ \ \ \ \textcolor{comment}{//<\ モデル}}
+\DoxyCodeLine{00109\ \ \ \ \ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{enum\ struct}\ CollisionGroupBit\ :\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}
+\DoxyCodeLine{00112\ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ WALL\ \ \ =\ 0,}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ GROUND\ =\ 1,}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ PLAYER\ =\ 2,}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ ENEMY\ \ =\ 3,}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ WEAPON\ =\ 4,}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ ITEM\ \ \ =\ 5,}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ CAMERA\ =\ 6,}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ ETC\ \ \ \ =\ 7,}
+\DoxyCodeLine{00121\ \textcolor{preprocessor}{\#if\ 0}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ WALL2\ \ \ =\ 8,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ GROUND2\ =\ 9,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ PLAYER2\ =\ 10,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ ENEMY2\ \ =\ 11,}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ WEAPON2\ =\ 12,}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ ITEM2\ \ \ =\ 13,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ CAMERA2\ =\ 14,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ ETC2\ \ \ \ =\ 15,}
+\DoxyCodeLine{00130\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00131\ \ \ \ \ \};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keyword}{enum\ struct}\ CollisionGroup\ :\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}}
+\DoxyCodeLine{00134\ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ WALL\ \ \ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::WALL),}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ GROUND\ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::GROUND),}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ PLAYER\ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::PLAYER),}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ ENEMY\ \ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::ENEMY),}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ WEAPON\ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::WEAPON),}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ ITEM\ \ \ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::ITEM),}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ CAMERA\ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::CAMERA),}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ ETC\ \ \ \ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::ETC),}
+\DoxyCodeLine{00143\ \textcolor{preprocessor}{\#if\ 0}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ WALL2\ \ \ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(\ CollisionGroupBit::WALL2\ ),}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ GROUND2\ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(\ CollisionGroupBit::GROUND2\ ),}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ PLAYER2\ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(\ CollisionGroupBit::PLAYER2\ ),}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ ENEMY2\ \ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(\ CollisionGroupBit::ENEMY2\ ),}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ WEAPON2\ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(\ CollisionGroupBit::WEAPON2\ ),}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ ITEM2\ \ \ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(\ CollisionGroupBit::ITEM2\ ),}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ CAMERA2\ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(\ CollisionGroupBit::CAMERA2\ ),}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ ETC2\ \ \ \ =\ 1\ <<\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(\ CollisionGroupBit::ETC2\ ),}
+\DoxyCodeLine{00152\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00153\ \ \ \ \ \};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keywordtype}{int}\ GetCollisionGroupIndex()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00156\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 26813)}}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ CollisionGroup\ grp\ =\ \mbox{\hyperlink{class_component_collision_ade25258ae0d5861b1351b37cfba62b41}{collision\_group\_}};}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ この関数では「grp」はBITを前提としておらず}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ このタイプの名前を知る必要があり、もし\&判定した場合、仮にビットが2つついていると}}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 正しい値として返してしまうためワーニングを抑制します}}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::WALL)}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::WALL);}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::GROUND)}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::GROUND);}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::PLAYER)}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::PLAYER);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::ENEMY)}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::ENEMY);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::WEAPON)}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::WEAPON);}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::ITEM)}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::ITEM);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::CAMERA)}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::CAMERA);}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::ETC)}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\textcolor{keyword}{>}(CollisionGroupBit::ETC);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 登録し忘れの可能性があります}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#pragma\ warning(default\ :\ 26813)}}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00186\ \ \ \ \ std::string\ GetCollisionGroupName()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00187\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00188\ \textcolor{preprocessor}{\#pragma\ warning(disable\ :\ 26813)}}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ CollisionGroup\ grp\ =\ \mbox{\hyperlink{class_component_collision_ade25258ae0d5861b1351b37cfba62b41}{collision\_group\_}};}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ この関数では「grp」はBITを前提としておらず}}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ このタイプの名前を知る必要があり、もし\&判定した場合、仮にビットが2つついていると}}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 正しい値として返してしまうためワーニングを抑制します}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::WALL)}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}WALL"{}};}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::GROUND)}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}GROUND"{}};}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::PLAYER)}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}PLAYER"{}};}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::ENEMY)}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}ENEMY"{}};}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::WEAPON)}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}WEAPON"{}};}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::ITEM)}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}ITEM"{}};}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::CAMERA)}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}CAMERA"{}};}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(grp\ ==\ CollisionGroup::ETC)}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}ETC"{}};}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 登録し忘れの可能性があります}}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00214\ \textcolor{preprocessor}{\#pragma\ warning(default\ :\ 26813)}}
+\DoxyCodeLine{00215\ \ \ \ \ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_component_collision_ac871fff0db414ee6b5a1e6b3acd05ebe}{CollisionType}}\ GetCollisionType()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ collision\_type\_;\ \}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ CollisionGroup\ GetCollisionGroup()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_ade25258ae0d5861b1351b37cfba62b41}{collision\_group\_}};\ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#if\ 0}}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keyword}{inline}\ ComponentCollisionPtr\ SetHitCollisionGroup(\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ hit\_group\ )}
+\DoxyCodeLine{00223\ \ \ \ \ \{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_aa2ea132001b00585d45467e08c8a0543}{collision\_hit\_}}\ =\ hit\_group;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentCollision>(\ shared\_from\_this()\ );}
+\DoxyCodeLine{00226\ \ \ \ \ \}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keyword}{inline}\ ComponentCollisionPtr\ SetCollisionGroup(CollisionGroup\ grp)}
+\DoxyCodeLine{00229\ \ \ \ \ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_ade25258ae0d5861b1351b37cfba62b41}{collision\_group\_}}\ =\ grp;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentCollision>(\ shared\_from\_this()\ );}
+\DoxyCodeLine{00232\ \ \ \ \ \}}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \ \ \ \ \textcolor{keyword}{inline}\ ComponentCollisionPtr\ SetMass(\ \textcolor{keywordtype}{float}\ mass\ )}
+\DoxyCodeLine{00235\ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_a4ee515355f686d895f4a469f2f5f8d68}{collision\_mass\_}}\ =\ mass;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::dynamic\_pointer\_cast<ComponentCollision>(\ shared\_from\_this()\ );}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ GetMass()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_a4ee515355f686d895f4a469f2f5f8d68}{collision\_mass\_}};\ \}}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \ \ \textcolor{keyword}{inline}\ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ GetId()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_af40acb66ae551af4b1282068ef0413d7}{collision\_id\_}};\ \}}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{comment}{//\ @name\ アタッチ関係}}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordtype}{void}\ AttachToModel(\textcolor{keywordtype}{int}\ node);}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \textcolor{keywordtype}{void}\ AttachToModel(\textcolor{keyword}{const}\ std::string\_view\ node);}
+\DoxyCodeLine{00251\ }
+\DoxyCodeLine{00252\ \textcolor{preprocessor}{\#if\ 1}}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{float}*\ \mbox{\hyperlink{class_component_collision_a2b635c7a87bec46499190e94f8dd5249}{GetColMatrixFloat}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_a7c35f5cbec169010e664494423e8994f}{collision\_transform\_}}.f32\_128\_0;\ \}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00256\ \ \ \ \ float3\ GetColMatrixTranslate()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_a7c35f5cbec169010e664494423e8994f}{collision\_transform\_}}.\_41\_42\_43;\ \}}
+\DoxyCodeLine{00257\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00265\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_component_collision_abf9476504d07cf38e8e5b35dce1036fa}{CalcPush}}(ComponentCollisionPtr\ collision,\ float3\ vec,\ float3*\ push,\ float3*\ other\_push)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00266\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ mass1\ =\ GetMass();}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ mass2\ =\ collision-\/>GetMass();}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(mass1\ <\ 0\ \&\&\ mass2\ <\ 0)\ \{}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 両方不動のものがぶつかった}}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ *push\ \ \ \ \ \ \ =\ vec\ *\ 0.5f;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ *other\_push\ =\ -\/vec\ *\ 0.5f;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(mass1\ <\ 0)\ \{}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 相手に跳ね返す}}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ *push\ \ \ \ \ \ \ =\ \{0,\ 0,\ 0\};}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ *other\_push\ =\ -\/vec;}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(mass2\ <\ 0)\ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 相手に跳ね返す}}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ *push\ \ \ \ \ \ \ =\ vec;}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ *other\_push\ =\ \{0,\ 0,\ 0\};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 重さに合わせて移動させる}}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ mass1\ \ \ \ \ \ \ +=\ 0.001f;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ mass2\ \ \ \ \ \ \ +=\ 0.001f;}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ all\ \ \ \ =\ mass1\ +\ mass2;}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ *push\ \ \ \ \ \ \ \ =\ vec\ *\ mass2\ /\ all;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ *other\_push\ \ =\ -\/vec\ *\ mass1\ /\ all;}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00294\ \ \ \ \ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsGroupHit(ComponentCollisionPtr\ collision)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00297\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ コリジョンが当たらない設定になっている}}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_component_collision_a7ccef5dcf94b38e8bb2b13589ffba1ed}{collision\_status\_}}.is(\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5daf5dcb4a16c9cba228cbc26f01d9ab113}{CollisionBit::DisableHit}})\ ||\ collision-\/>collision\_status\_.is(\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5daf5dcb4a16c9cba228cbc26f01d9ab113}{CollisionBit::DisableHit}}))}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00301\ }
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 自分か相手のコリジョンタイプが不定}}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(collision\_type\_\ ==\ CollisionType::NONE\ ||\ collision-\/>collision\_type\_\ ==\ CollisionType::NONE)}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 自分は相手のコリジョングループに当たらない}}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(((\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}})\mbox{\hyperlink{class_component_collision_ade25258ae0d5861b1351b37cfba62b41}{collision\_group\_}}\ \&\ collision-\/>collision\_hit\_)\ ==\ 0)}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 相手は自分のコリジョングループに当たらない}}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(((\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}})collision-\/>collision\_group\_\ \&\ \mbox{\hyperlink{class_component_collision_aa2ea132001b00585d45467e08c8a0543}{collision\_hit\_}})\ ==\ 0)}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 当たる設定となる}}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00316\ \ \ \ \ \}}
+\DoxyCodeLine{00317\ }
+\DoxyCodeLine{00318\ \ \ \ \ \textcolor{keywordtype}{void}\ UseGravity(\textcolor{keywordtype}{bool}\ b\ =\ \textcolor{keyword}{true})\ \{\ use\_gravity\_\ =\ b;\ \}}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsUseGravity()\ \{\ \textcolor{keywordflow}{return}\ use\_gravity\_;\ \}}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{keywordtype}{void}\ [[deprecated(\textcolor{stringliteral}{"{}Overlap()は古い命名です。SetOverlapCollisionGroup()を使用してください"{}})]]\ Overlap(\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ bit)\ \{\ \mbox{\hyperlink{class_component_collision_ad9c8ca02fbf7cb8c8d51624ab0678f04}{collision\_overlap\_}}\ =\ bit;\ \}}
+\DoxyCodeLine{00323\ }
+\DoxyCodeLine{00324\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsOverlap(CollisionGroup\ bit)\ \{\ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{class_component_collision_ad9c8ca02fbf7cb8c8d51624ab0678f04}{collision\_overlap\_}}\ \&\ (\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}})bit)\ !=\ 0\ ?\ true\ :\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00325\ }
+\DoxyCodeLine{00326\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5da84bc9636c1bdddab2cc7fd1c05fd8da9}{ShowInGame}}(\textcolor{keywordtype}{bool}\ b\ =\ \textcolor{keyword}{true})\ \{\ \mbox{\hyperlink{class_component_collision_a7ccef5dcf94b38e8bb2b13589ffba1ed}{collision\_status\_}}.set(\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5da84bc9636c1bdddab2cc7fd1c05fd8da9}{CollisionBit::ShowInGame}},\ b);\ \}}
+\DoxyCodeLine{00327\ }
+\DoxyCodeLine{00328\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsShowInGame()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_component_collision_a7ccef5dcf94b38e8bb2b13589ffba1ed}{collision\_status\_}}.is(\mbox{\hyperlink{class_component_collision_a09ef016a0bdbe352924b8c714b8f6e5da84bc9636c1bdddab2cc7fd1c05fd8da9}{CollisionBit::ShowInGame}});\ \}}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \textcolor{keywordtype}{void}\ SetClimbLimit(\textcolor{keywordtype}{float}\ climb\_limit)\ \{\ difficult\_to\_climb\_\ =\ climb\_limit;\ \}}
+\DoxyCodeLine{00331\ }
+\DoxyCodeLine{00332\ \ \ \ \ \textcolor{keywordtype}{float}\ GetClimbLimit()\ \{\ \textcolor{keywordflow}{return}\ difficult\_to\_climb\_;\ \}}
+\DoxyCodeLine{00333\ }
+\DoxyCodeLine{00334\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00335\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00337\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00339\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_ab2e3cf71fa639a9758de957261482b3a}{guiCollisionData}}();}
+\DoxyCodeLine{00341\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_collision_a1c400d03366108fb65ccb6877210368d}{guiCollisionDataAttach}}();}
+\DoxyCodeLine{00342\ }
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00345\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00347\ }
+\DoxyCodeLine{00352\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_ace0d31ceef4d58fcf0ffbceff4a5aa79}{isHit}}(ComponentCollisionCapsulePtr\ col1,\ ComponentCollisionSpherePtr\ col2);}
+\DoxyCodeLine{00353\ }
+\DoxyCodeLine{00358\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_a675957da5f924d6a6ee0bbfbcb52943f}{isHit}}(ComponentCollisionSpherePtr\ col1,\ ComponentCollisionCapsulePtr\ col2);}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00364\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_a854cfd26167c281516cc37561ba36c84}{isHit}}(ComponentCollisionCapsulePtr\ col1,\ ComponentCollisionCapsulePtr\ col2);}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00370\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_aa9fdb656b5a2d37818e43f5035bb33f4}{isHit}}(ComponentCollisionSpherePtr\ col1,\ ComponentCollisionSpherePtr\ col2);}
+\DoxyCodeLine{00371\ }
+\DoxyCodeLine{00376\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_a98b53043a3e2aea2969844fdbe969662}{isHit}}(ComponentCollisionModelPtr\ col1,\ ComponentCollisionSpherePtr\ col2);}
+\DoxyCodeLine{00377\ }
+\DoxyCodeLine{00382\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_a2e8994f75df34bcaa60801143d00702e}{isHit}}(ComponentCollisionSpherePtr\ col1,\ ComponentCollisionModelPtr\ col2);}
+\DoxyCodeLine{00383\ }
+\DoxyCodeLine{00388\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_a0b023a86141dae87fdd1ddc8e7e268f7}{isHit}}(ComponentCollisionModelPtr\ col1,\ ComponentCollisionCapsulePtr\ col2);}
+\DoxyCodeLine{00389\ }
+\DoxyCodeLine{00394\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_a3f6809820ad10622e13ee3dd8032cbd8}{isHit}}(ComponentCollisionCapsulePtr\ col1,\ ComponentCollisionModelPtr\ col2);}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00400\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_a6e245a1c9791affeb72a2db97b692414}{isHit}}(ComponentCollisionLinePtr\ col1,\ ComponentCollisionSpherePtr\ col2);}
+\DoxyCodeLine{00401\ }
+\DoxyCodeLine{00406\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_a49f867bd9f1c18d653f2a4dc8389c0c0}{isHit}}(ComponentCollisionLinePtr\ col1,\ ComponentCollisionCapsulePtr\ col2);}
+\DoxyCodeLine{00407\ }
+\DoxyCodeLine{00412\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_a68c3b374f827beb8ea6e9440f8fbf484}{isHit}}(ComponentCollisionLinePtr\ col1,\ ComponentCollisionModelPtr\ col2);}
+\DoxyCodeLine{00413\ }
+\DoxyCodeLine{00418\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_aa9edbc5b34ea8ac65569983451d4bf27}{isHit}}(ComponentCollisionSpherePtr\ col1,\ ComponentCollisionLinePtr\ col2);}
+\DoxyCodeLine{00419\ }
+\DoxyCodeLine{00424\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_add6bda14f0538ad2c0dc83c206a78a0e}{isHit}}(ComponentCollisionCapsulePtr\ col1,\ ComponentCollisionLinePtr\ col2);}
+\DoxyCodeLine{00425\ }
+\DoxyCodeLine{00430\ \ \ \ \ \mbox{\hyperlink{struct_component_collision_1_1_hit_info}{ComponentCollision::HitInfo}}\ \mbox{\hyperlink{class_component_collision_ad997e54e5cce00844fcc4a5307d92c18}{isHit}}(ComponentCollisionModelPtr\ col1,\ ComponentCollisionLinePtr\ col2);}
+\DoxyCodeLine{00431\ }
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00435\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_collision_a7c35f5cbec169010e664494423e8994f}{collision\_transform\_}}\ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00438\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{class_component_collision_a56fe7bf6d5b1f6e5ad9c6e48393c7fbb}{old\_transform\_}}\ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();}
+\DoxyCodeLine{00439\ }
+\DoxyCodeLine{00440\ \ \ \ \ \mbox{\hyperlink{class_component_collision_ac871fff0db414ee6b5a1e6b3acd05ebe}{CollisionType}}\ \ collision\_type\_\ \ \ \ =\ CollisionType::NONE;}
+\DoxyCodeLine{00441\ \ \ \ \ CollisionGroup\ \mbox{\hyperlink{class_component_collision_ade25258ae0d5861b1351b37cfba62b41}{collision\_group\_}}\ \ \ =\ CollisionGroup::ETC;\ \ \ \ }
+\DoxyCodeLine{00442\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_aa2ea132001b00585d45467e08c8a0543}{collision\_hit\_}}\ \ \ \ \ =\ 0xffffffff;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00443\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_component_collision_ad9c8ca02fbf7cb8c8d51624ab0678f04}{collision\_overlap\_}}\ =\ 0x00000000;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00444\ }
+\DoxyCodeLine{00445\ \ \ \ \ \mbox{\hyperlink{struct_status}{Status<CollisionBit>}}\ \mbox{\hyperlink{class_component_collision_a7ccef5dcf94b38e8bb2b13589ffba1ed}{collision\_status\_}};\ \ \ \ }
+\DoxyCodeLine{00446\ }
+\DoxyCodeLine{00447\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_component_collision_a4ee515355f686d895f4a469f2f5f8d68}{collision\_mass\_}}\ =\ 1;\ \ \ \ }
+\DoxyCodeLine{00448\ \ \ \ \ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\ \ \ \mbox{\hyperlink{class_component_collision_af40acb66ae551af4b1282068ef0413d7}{collision\_id\_}}\ \ \ =\ 0;\ \ \ \ }
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00450\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \mbox{\hyperlink{class_component_collision_abe3b52ccae56611004f143f9534a3499}{attach\_node\_}}\ \ \ \ \ \ \ \ =\ -\/1;\ \ \ \ }
+\DoxyCodeLine{00451\ \ \ \ \ \mbox{\hyperlink{classmatrix}{matrix}}\ attach\_node\_matrix\_\ =\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{matrix::identity}}();}
+\DoxyCodeLine{00452\ }
+\DoxyCodeLine{00453\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ use\_gravity\_\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00454\ \ \ \ \ \textcolor{keyword}{const}\ float3\ k\_gravity\_\ \ \ \ \ \ \ \ \ \ =\ \{0,\ 100,\ 0\};\ \ \ \ \textcolor{comment}{//\ 前の状態に合わせるための係数}}
+\DoxyCodeLine{00455\ \ \ \ \ float3\ \ \ \ \ \ \ gravity\_\ \ \ \ \ \ \ \ \ \ \ \ =\ \{0.0f,\ -\/0.98f,\ 0.0f\};}
+\DoxyCodeLine{00456\ \ \ \ \ float3\ \ \ \ \ \ \ now\_gravity\_\ \ \ \ \ \ \ \ =\ \{0.0f,\ 0.0f,\ 0.0f\};}
+\DoxyCodeLine{00457\ \ \ \ \ float3\ \ \ \ \ \ \ prev\_gravity\_\ \ \ \ \ \ \ =\ \{0.0f,\ 0.0f,\ 0.0f\};}
+\DoxyCodeLine{00458\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ difficult\_to\_climb\_\ =\ 0.5f;}
+\DoxyCodeLine{00459\ }
+\DoxyCodeLine{00460\ \ \ \ \ \textcolor{comment}{//bool\ is\_overlap\_\ =\ false;}}
+\DoxyCodeLine{00461\ }
+\DoxyCodeLine{00462\ \textcolor{preprocessor}{\#if\ 0\ \ \ \ }\textcolor{comment}{//\ 通常コンポーネントへ}}
+\DoxyCodeLine{00463\ \ \ \ \ std::string\ name\_\ =\ \textcolor{stringliteral}{"{}None"{}};}
+\DoxyCodeLine{00464\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00465\ \textcolor{preprocessor}{\#ifdef\ USE\_JOLT\_PHYSICS}}
+\DoxyCodeLine{00466\ }
+\DoxyCodeLine{00467\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00468\ \ \ \ \ RigidBodyPtr\&\ RigidBody()\ \{\ \textcolor{keywordflow}{return}\ rigid\_body\_;\ \}}
+\DoxyCodeLine{00469\ }
+\DoxyCodeLine{00470\ \ \ \ \ RigidBodyPtr\ GetRigidBody()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ rigid\_body\_;\ \}}
+\DoxyCodeLine{00471\ }
+\DoxyCodeLine{00472\ \ \ \ \ \textcolor{keywordtype}{void}\ SetRigidBody(RigidBodyPtr\ ptr)\ \{\ rigid\_body\_\ =\ ptr;\ \}}
+\DoxyCodeLine{00473\ }
+\DoxyCodeLine{00474\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00475\ \ \ \ \ RigidBodyPtr\ rigid\_body\_\{\};}
+\DoxyCodeLine{00476\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00477\ }
+\DoxyCodeLine{00478\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00479\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00481\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00483\ \ \ \ \ \mbox{\hyperlink{_cereal_8h_a7df5c4a4fa530d0bf2831fc2180f0386}{CEREAL\_SAVELOAD}}(arc,\ ver)}
+\DoxyCodeLine{00484\ \ \ \ \ \{}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}owner"{}},\ \mbox{\hyperlink{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}{owner\_}}),}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}collision\_type"{}},\ (\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}})collision\_type\_),}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}collision\_group"{}},\ (\mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}})\mbox{\hyperlink{class_component_collision_ade25258ae0d5861b1351b37cfba62b41}{collision\_group\_}}),}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}collision\_hit"{}},\ \mbox{\hyperlink{class_component_collision_aa2ea132001b00585d45467e08c8a0543}{collision\_hit\_}}),}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}collision\_mass"{}},\ \mbox{\hyperlink{class_component_collision_a4ee515355f686d895f4a469f2f5f8d68}{collision\_mass\_}}),}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}collision\_id"{}},\ \mbox{\hyperlink{class_component_collision_af40acb66ae551af4b1282068ef0413d7}{collision\_id\_}}),}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}attach\_node"{}},\ \mbox{\hyperlink{class_component_collision_abe3b52ccae56611004f143f9534a3499}{attach\_node\_}}),}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}attach\_node\_matrix"{}},\ attach\_node\_matrix\_),}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}collision\_transform"{}},\ \mbox{\hyperlink{class_component_collision_a7c35f5cbec169010e664494423e8994f}{collision\_transform\_}}),}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}old\_transform"{}},\ \mbox{\hyperlink{class_component_collision_a56fe7bf6d5b1f6e5ad9c6e48393c7fbb}{old\_transform\_}}));}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ver\ >=\ 1)\ \{}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}use\_gravity"{}},\ use\_gravity\_),}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}gravity"{}},\ gravity\_),}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}now\_gravity"{}},\ now\_gravity\_),}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cereal::make\_nvp(\textcolor{stringliteral}{"{}difficult\_to\_climb"{}},\ difficult\_to\_climb\_));}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ver\ >=\ 2)\ \{}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}collision\_overlap"{}},\ \mbox{\hyperlink{class_component_collision_ad9c8ca02fbf7cb8c8d51624ab0678f04}{collision\_overlap\_}}));}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}name"{}},\ name\_));}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00507\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00508\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}Component"{}},\ cereal::base\_class<Component>(\textcolor{keyword}{this})));}
+\DoxyCodeLine{00509\ \ \ \ \ \}}
+\DoxyCodeLine{00510\ }
+\DoxyCodeLine{00512\ \};}
+\DoxyCodeLine{00513\ }
+\DoxyCodeLine{00514\ CEREAL\_CLASS\_VERSION(\mbox{\hyperlink{class_component_collision}{ComponentCollision}},\ 3);}
+\DoxyCodeLine{00515\ }
+\DoxyCodeLine{00516\ CEREAL\_REGISTER\_TYPE(\mbox{\hyperlink{class_component_collision}{ComponentCollision}})}
+\DoxyCodeLine{00517\ CEREAL\_REGISTER\_POLYMORPHIC\_RELATION(\mbox{\hyperlink{class_component}{Component}},\ \mbox{\hyperlink{class_component_collision}{ComponentCollision}})}
+
+\end{DoxyCode}

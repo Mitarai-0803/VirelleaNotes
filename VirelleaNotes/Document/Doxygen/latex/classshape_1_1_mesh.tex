@@ -1,0 +1,72 @@
+\doxysection{shape\+::Mesh クラス}
+\hypertarget{classshape_1_1_mesh}{}\label{classshape_1_1_mesh}\index{shape::Mesh@{shape::Mesh}}
+
+
+メッシュ \doxylink{classshape_1_1_mesh}{Mesh}  
+
+
+
+
+{\ttfamily \#include $<$Shape.\+h$>$}
+
+shape\+::Mesh の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classshape_1_1_mesh}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classshape_1_1_mesh_a667955c63db978d73722260df32dcf4f}{Mesh}} (\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*}model, \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} scale=1.\+0f)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{classshape_1_1_base}{shape\+::\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Base} (\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{shape\+::\+Type}} type)
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{shape\+::\+Type}} {\bfseries shape\+Type} () const
+\begin{DoxyCompactList}\small\item\em 形状の種類を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classshape_1_1_mesh_ac33ce2433e59d084ecc254359f63e67e}\label{classshape_1_1_mesh_ac33ce2433e59d084ecc254359f63e67e} 
+std\+::vector$<$ float3 $>$ {\bfseries vertices\+\_\+}
+\item 
+\Hypertarget{classshape_1_1_mesh_a76e421a84989ed7a63e7a5f63266d713}\label{classshape_1_1_mesh_a76e421a84989ed7a63e7a5f63266d713} 
+std\+::vector$<$ \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}} $>$ {\bfseries indices\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{classshape_1_1_base}{shape\+::\+Base}} に属する継承限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{shape\+::\+Type}} {\bfseries type\+\_\+} = \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786a88183b946cc5f0e8c96b2e66e1c74a7e}{shape\+::\+Type\+::\+Unknown}}
+\item 
+\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} {\bfseries density\+\_\+} = \mbox{\hyperlink{_shape_8h_a9a3bcea560c04ba3bfdccf0bf60865d1}{default\+\_\+density\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+メッシュ \doxylink{classshape_1_1_mesh}{Mesh} 
+
+\label{doc-constructors}
+\Hypertarget{classshape_1_1_mesh_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{classshape_1_1_mesh_a667955c63db978d73722260df32dcf4f}\index{shape::Mesh@{shape::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!shape::Mesh@{shape::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}}
+{\footnotesize\ttfamily \label{classshape_1_1_mesh_a667955c63db978d73722260df32dcf4f} 
+shape\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model}{Model}} \texorpdfstring{$\ast$}{*}}]{model}{, }\item[{\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}}]{scale}{ = {\ttfamily 1.0f}}\end{DoxyParamCaption})}
+
+コンストラクタ 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em model} & モデルデーター \\
+\hline
+\mbox{\texttt{in}}  & {\em scale} & スケール値 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Physics/\mbox{\hyperlink{_shape_8h}{Shape.\+h}}\end{DoxyCompactItemize}

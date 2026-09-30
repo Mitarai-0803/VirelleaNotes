@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Input/InputPad.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_input_pad_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">InputPad.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>パッド入力管理  
+<a href="#details">[詳解]</a></p>
+
+<p><a href="_input_pad_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:aa65ba2dd311da7d3bc2cc92d8634d015" id="r_aa65ba2dd311da7d3bc2cc92d8634d015"><td class="memItemLeft" align="right" valign="top"><a id="aa65ba2dd311da7d3bc2cc92d8634d015" name="aa65ba2dd311da7d3bc2cc92d8634d015"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> : unsigned int { <br />
+&#160;&#160;<b>PAD_NO1</b> = 0
+, <b>PAD_NO2</b>
+, <b>PAD_NO3</b>
+, <b>PAD_NO4</b>
+, <br />
+&#160;&#160;<b>PAD_NO_MAX</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:aa65ba2dd311da7d3bc2cc92d8634d015"><td class="mdescLeft">&#160;</td><td class="mdescRight">パッド種別 <br /></td></tr>
+<tr class="memitem:ad6469a833a311f7525249964ff3ff3fd" id="r_ad6469a833a311f7525249964ff3ff3fd"><td class="memItemLeft" align="right" valign="top"><a id="ad6469a833a311f7525249964ff3ff3fd" name="ad6469a833a311f7525249964ff3ff3fd"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad6469a833a311f7525249964ff3ff3fd">PAD_ID</a> : unsigned int { <br />
+&#160;&#160;<b>PAD_A</b> = 0
+, <b>PAD_B</b>
+, <b>PAD_X</b>
+, <b>PAD_Y</b>
+, <br />
+&#160;&#160;<b>PAD_L</b>
+, <b>PAD_R</b>
+, <b>PAD_START</b>
+, <b>PAD_BACK</b>
+, <br />
+&#160;&#160;<b>PAD_L_PUSH</b>
+, <b>PAD_R_PUSH</b>
+, <b>PAD_UP</b>
+, <b>PAD_DOWN</b>
+, <br />
+&#160;&#160;<b>PAD_LEFT</b>
+, <b>PAD_RIGHT</b>
+, <b>PAD_R_UP</b>
+, <b>PAD_R_DOWN</b>
+, <br />
+&#160;&#160;<b>PAD_R_LEFT</b>
+, <b>PAD_R_RIGHT</b>
+, <b>PAD_D_UP</b>
+, <b>PAD_D_RIGHT</b>
+, <br />
+&#160;&#160;<b>PAD_D_DOWN</b>
+, <b>PAD_D_LEFT</b>
+, <b>PAD_D_ALL</b>
+, <b>PAD_ID_MAX</b>
+, <br />
+&#160;&#160;<b>PAD_C</b>
+, <b>PAD_Z</b>
+, <b>PAD_M</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:ad6469a833a311f7525249964ff3ff3fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボタン種別 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr id="func-members-0" class="groupHeader"><td colspan="2"><div class="groupHeader">システム関数</div></td></tr>
+<tr class="memitem:a8df9a55c398e46803d151180a326b91a" id="r_a8df9a55c398e46803d151180a326b91a"><td class="memItemLeft" align="right" valign="top"><a id="a8df9a55c398e46803d151180a326b91a" name="a8df9a55c398e46803d151180a326b91a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InputPadInit</b> ()</td></tr>
+<tr class="memdesc:a8df9a55c398e46803d151180a326b91a"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化 <br /></td></tr>
+<tr class="memitem:a0e1498a05f33c8c4e386385e377248a8" id="r_a0e1498a05f33c8c4e386385e377248a8"><td class="memItemLeft" align="right" valign="top"><a id="a0e1498a05f33c8c4e386385e377248a8" name="a0e1498a05f33c8c4e386385e377248a8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InputPadUpdate</b> ()</td></tr>
+<tr class="memdesc:a0e1498a05f33c8c4e386385e377248a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">更新 <br /></td></tr>
+<tr class="memitem:af1b030bc6d8103403f0bac065f674ed1" id="r_af1b030bc6d8103403f0bac065f674ed1"><td class="memItemLeft" align="right" valign="top"><a id="af1b030bc6d8103403f0bac065f674ed1" name="af1b030bc6d8103403f0bac065f674ed1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InputPadExit</b> ()</td></tr>
+<tr class="memdesc:af1b030bc6d8103403f0bac065f674ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了 <br /></td></tr>
+<tr id="func-members-1" class="groupHeader"><td colspan="2"><div class="groupHeader">入力関連関数</div></td></tr>
+<tr class="memitem:aed36b547a6be499a6c0cfd42f68d2d1c" id="r_aed36b547a6be499a6c0cfd42f68d2d1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed36b547a6be499a6c0cfd42f68d2d1c">IsPadOn</a> (<a class="el" href="#ad6469a833a311f7525249964ff3ff3fd">PAD_ID</a> pad_id, <a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> pad_no=PAD_NO::PAD_NO1)</td></tr>
+<tr class="memitem:abcc4d868f268541f682aa128df577946" id="r_abcc4d868f268541f682aa128df577946"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abcc4d868f268541f682aa128df577946">IsPadRelease</a> (<a class="el" href="#ad6469a833a311f7525249964ff3ff3fd">PAD_ID</a> pad_id, <a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> pad_no=PAD_NO::PAD_NO1)</td></tr>
+<tr class="memitem:a76009340dd30e98a2d82b7c3fec591e0" id="r_a76009340dd30e98a2d82b7c3fec591e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76009340dd30e98a2d82b7c3fec591e0">IsPadRepeat</a> (<a class="el" href="#ad6469a833a311f7525249964ff3ff3fd">PAD_ID</a> pad_id, <a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> pad_no=PAD_NO::PAD_NO1)</td></tr>
+<tr class="memitem:a981b3d874be80eb2e59403d860ff8936" id="r_a981b3d874be80eb2e59403d860ff8936"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a981b3d874be80eb2e59403d860ff8936">GetPadInputState</a> (DINPUT_JOYSTATE &amp;pad_state, <a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> pad_no=PAD_NO::PAD_NO1)</td></tr>
+<tr class="memitem:aac7ea8d0df13237b2f2e0541b8e73564" id="r_aac7ea8d0df13237b2f2e0541b8e73564"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_typedef_8h.html#ae5300ed9eabeae78ee9d0c704a9c412a">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac7ea8d0df13237b2f2e0541b8e73564">GetConnecetdPadNum</a> ()</td></tr>
+<tr class="memitem:af5318a3659f7d2bec1b9c13de84bdfb3" id="r_af5318a3659f7d2bec1b9c13de84bdfb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5318a3659f7d2bec1b9c13de84bdfb3">GetPadInputAnalogLX</a> (<a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> pad_no=PAD_NO::PAD_NO1)</td></tr>
+<tr class="memitem:a852f759d8b381997ffec3761f116e709" id="r_a852f759d8b381997ffec3761f116e709"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a852f759d8b381997ffec3761f116e709">GetPadInputAnalogLY</a> (<a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> pad_no=PAD_NO::PAD_NO1)</td></tr>
+<tr class="memitem:aea853c4a251b9be8748b9f50ef1f8409" id="r_aea853c4a251b9be8748b9f50ef1f8409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea853c4a251b9be8748b9f50ef1f8409">GetPadInputAnalogRX</a> (<a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> pad_no=PAD_NO::PAD_NO1)</td></tr>
+<tr class="memitem:a8a6446e2e99a574144b1fdc4b6bcf7ae" id="r_a8a6446e2e99a574144b1fdc4b6bcf7ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a6446e2e99a574144b1fdc4b6bcf7ae">GetPadInputAnalogRY</a> (<a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> pad_no=PAD_NO::PAD_NO1)</td></tr>
+<tr class="memitem:a535dd76db63b44b061e0431373bfb94e" id="r_a535dd76db63b44b061e0431373bfb94e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_typedef_8h.html#ae5300ed9eabeae78ee9d0c704a9c412a">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a535dd76db63b44b061e0431373bfb94e">GetPadInputAnalogLDirection</a> (<a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a> pad_no=PAD_NO::PAD_NO1)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>パッド入力管理 </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="aac7ea8d0df13237b2f2e0541b8e73564" name="aac7ea8d0df13237b2f2e0541b8e73564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac7ea8d0df13237b2f2e0541b8e73564">&#9670;&#160;</a></span>GetConnecetdPadNum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_typedef_8h.html#ae5300ed9eabeae78ee9d0c704a9c412a">s32</a> GetConnecetdPadNum </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>接続されているパッドの数を取得 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">なし</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="_typedef_8h.html#ae5300ed9eabeae78ee9d0c704a9c412a" title="32bit 符号あり整数">s32</a></td><td>-1: 接続されているパッドなし / それ以外: 接続されているパッドの数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a535dd76db63b44b061e0431373bfb94e" name="a535dd76db63b44b061e0431373bfb94e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a535dd76db63b44b061e0431373bfb94e">&#9670;&#160;</a></span>GetPadInputAnalogLDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_typedef_8h.html#ae5300ed9eabeae78ee9d0c704a9c412a">s32</a> GetPadInputAnalogLDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a></td>          <td class="paramname"><span class="paramname"><em>pad_no</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PAD_NO::PAD_NO1</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定パッドの左アナログスティックの方向を取得 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_no</td><td>パッドの種別(指定がなければPAD_NO1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="_typedef_8h.html#ae5300ed9eabeae78ee9d0c704a9c412a" title="32bit 符号あり整数">s32</a></td><td>-1: 入力なし / 0: 左 / 1: 右 / 2: 上 / 3: 下 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af5318a3659f7d2bec1b9c13de84bdfb3" name="af5318a3659f7d2bec1b9c13de84bdfb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5318a3659f7d2bec1b9c13de84bdfb3">&#9670;&#160;</a></span>GetPadInputAnalogLX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> GetPadInputAnalogLX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a></td>          <td class="paramname"><span class="paramname"><em>pad_no</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PAD_NO::PAD_NO1</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定パッドの左アナログスティックのX方向の入力値を取得 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_no</td><td>パッドの種別(指定がなければPAD_NO1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527" title="単精度浮動小数点数">f32</a></td><td>-1（左に100傾いている）～0（傾きなし）～1（右に100％傾いている） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a852f759d8b381997ffec3761f116e709" name="a852f759d8b381997ffec3761f116e709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a852f759d8b381997ffec3761f116e709">&#9670;&#160;</a></span>GetPadInputAnalogLY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> GetPadInputAnalogLY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a></td>          <td class="paramname"><span class="paramname"><em>pad_no</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PAD_NO::PAD_NO1</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定パッドの左アナログスティックのY方向の入力値を取得 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_no</td><td>パッドの種別(指定がなければPAD_NO1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527" title="単精度浮動小数点数">f32</a></td><td>-1（上に100傾いている）～0（傾きなし）～1（下に100％傾いている） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aea853c4a251b9be8748b9f50ef1f8409" name="aea853c4a251b9be8748b9f50ef1f8409"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea853c4a251b9be8748b9f50ef1f8409">&#9670;&#160;</a></span>GetPadInputAnalogRX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> GetPadInputAnalogRX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a></td>          <td class="paramname"><span class="paramname"><em>pad_no</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PAD_NO::PAD_NO1</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定パッドの右アナログスティックのX方向の入力値を取得 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_no</td><td>パッドの種別(指定がなければPAD_NO1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527" title="単精度浮動小数点数">f32</a></td><td>-1（左に100傾いている）～0（傾きなし）～1（右に100％傾いている） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a6446e2e99a574144b1fdc4b6bcf7ae" name="a8a6446e2e99a574144b1fdc4b6bcf7ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a6446e2e99a574144b1fdc4b6bcf7ae">&#9670;&#160;</a></span>GetPadInputAnalogRY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> GetPadInputAnalogRY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a></td>          <td class="paramname"><span class="paramname"><em>pad_no</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PAD_NO::PAD_NO1</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定パッドの右アナログスティックのY方向の入力値を取得 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_no</td><td>パッドの種別(指定がなければPAD_NO1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname"><a class="el" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527" title="単精度浮動小数点数">f32</a></td><td>-1（上に100傾いている）～0（傾きなし）～1（下に100％傾いている） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a981b3d874be80eb2e59403d860ff8936" name="a981b3d874be80eb2e59403d860ff8936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a981b3d874be80eb2e59403d860ff8936">&#9670;&#160;</a></span>GetPadInputState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GetPadInputState </td>
+          <td>(</td>
+          <td class="paramtype">DINPUT_JOYSTATE &amp;</td>          <td class="paramname"><span class="paramname"><em>pad_state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a></td>          <td class="paramname"><span class="paramname"><em>pad_no</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PAD_NO::PAD_NO1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定パッドの入力状態の詳細を取得 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_state</td><td>パッドの入力状態の詳細（参照） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_no</td><td>パッドの種別(指定がなければPAD_NO1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功 </td></tr>
+    <tr><td class="paramname">false</td><td>失敗 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aed36b547a6be499a6c0cfd42f68d2d1c" name="aed36b547a6be499a6c0cfd42f68d2d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed36b547a6be499a6c0cfd42f68d2d1c">&#9670;&#160;</a></span>IsPadOn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsPadOn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad6469a833a311f7525249964ff3ff3fd">PAD_ID</a></td>          <td class="paramname"><span class="paramname"><em>pad_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a></td>          <td class="paramname"><span class="paramname"><em>pad_no</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PAD_NO::PAD_NO1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定パッドのボタンの1回だけ押下検証 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_id</td><td>パッドのボタン種別 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_no</td><td>パッドの種別(指定がなければPAD_NO1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>引数に指定されたパッドのボタンが押された </td></tr>
+    <tr><td class="paramname">false</td><td>引数に指定されたパッドのボタンが押されていない </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abcc4d868f268541f682aa128df577946" name="abcc4d868f268541f682aa128df577946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc4d868f268541f682aa128df577946">&#9670;&#160;</a></span>IsPadRelease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsPadRelease </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad6469a833a311f7525249964ff3ff3fd">PAD_ID</a></td>          <td class="paramname"><span class="paramname"><em>pad_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a></td>          <td class="paramname"><span class="paramname"><em>pad_no</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PAD_NO::PAD_NO1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定パッドのボタンの1回だけ押下検証 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_id</td><td>パッドのボタン種別 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_no</td><td>パッドの種別(指定がなければPAD_NO1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>引数に指定されたパッドのボタンが離されている </td></tr>
+    <tr><td class="paramname">false</td><td>引数に指定されたパッドのボタンが押されている </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a76009340dd30e98a2d82b7c3fec591e0" name="a76009340dd30e98a2d82b7c3fec591e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76009340dd30e98a2d82b7c3fec591e0">&#9670;&#160;</a></span>IsPadRepeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IsPadRepeat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ad6469a833a311f7525249964ff3ff3fd">PAD_ID</a></td>          <td class="paramname"><span class="paramname"><em>pad_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#aa65ba2dd311da7d3bc2cc92d8634d015">PAD_NO</a></td>          <td class="paramname"><span class="paramname"><em>pad_no</em></span><span class="paramdefsep"> = </span><span class="paramdefval">PAD_NO::PAD_NO1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>指定パッドのボタンの1回だけ押下検証 </p><dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_id</td><td>パッドのボタン種別 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pad_no</td><td>パッドの種別(指定がなければPAD_NO1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>引数に指定されたパッドのボタンが長押し（2フレーム以上）されている </td></tr>
+    <tr><td class="paramname">false</td><td>引数に指定されたパッドのボタンが押されていない（押されているフレーム数が1以下） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="dir_fa1246c715ea0ae33e3acb8a46f21f5a.html">Input</a></li><li class="navelem"><a href="_input_pad_8h.html">InputPad.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

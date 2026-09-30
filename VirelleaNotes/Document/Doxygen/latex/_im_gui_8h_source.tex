@@ -1,0 +1,31 @@
+\doxysection{Im\+Gui.\+h}
+\hypertarget{_im_gui_8h_source}{}\label{_im_gui_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/ImGui.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/ImGui.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ IMGUI\_DEFINE\_MATH\_OPERATORS}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ ImGui}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <imgui/misc/single\_file/imgui\_single\_file.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <imgui/misc/cpp/imgui\_stdlib.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ implot}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <implot/implot.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \ 初期化}}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ ImGuiInit(\textcolor{keywordtype}{bool}\ use\_keyboard\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ 更新}}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ ImGuiUpdate();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ \ 描画}}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ ImGuiDraw();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \ 終了}}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ ImGuiExit();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Destroyが早くリーク情報が出せないため、WindowをDestroyを遅らせる}}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{bool}\ IsProcEnd();}
+
+\end{DoxyCode}

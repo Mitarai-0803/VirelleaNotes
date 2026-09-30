@@ -1,0 +1,32 @@
+\doxysection{Title\+Scene.\+h}
+\hypertarget{_title_scene_8h_source}{}\label{_title_scene_8h_source}\index{F:/sg mitarai/ReoEngine/src/TitleScene.h@{F:/sg mitarai/ReoEngine/src/TitleScene.h}}
+\mbox{\hyperlink{_title_scene_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_scene_base_8h}{SceneBase.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_camera_object_8h}{CameraObject.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_water_object_8h}{WaterObject.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }Scene\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_1_1_title_scene}{TitleScene}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_1_1_scene_base}{SceneBase}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_1_1_scene_base_a31cd1523e65464dce3b442841b886e3a}{SceneInit}}()\ \ \ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_1_1_scene_base_a516fb34023090b6a637828b0c914689d}{SceneUpdate}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_1_1_scene_base_a0dbacd839adeecfd422f1061e3511141}{SceneDraw}}()\ \ \ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_1_1_scene_base_a483c6a8fdc675c4a2abe0e8d099f1618}{SceneEnd}}()\ \ \ \ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<Object::WaterObject>\ m\_water;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_elapsedSec\ =\ 0.0f;}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ Scene}}
+
+\end{DoxyCode}

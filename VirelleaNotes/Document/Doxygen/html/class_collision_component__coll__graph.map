@@ -1,0 +1,5 @@
+<map id="CollisionComponent" name="CollisionComponent">
+<area shape="rect" id="Node000001" title="&lt; Shape" alt="" coords="5,251,162,555"/>
+<area shape="rect" id="Node000002" href="$class_component_base.html" title="コンポーネント基底クラス" alt="" coords="15,5,152,203"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,215,86,251,81,251,83,220"/>
+</map>

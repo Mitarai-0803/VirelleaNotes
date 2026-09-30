@@ -1,0 +1,231 @@
+\doxysection{UI\+::Image\+Button クラス}
+\hypertarget{class_u_i_1_1_image_button}{}\label{class_u_i_1_1_image_button}\index{UI::ImageButton@{UI::ImageButton}}
+
+
+トグル対応 \doxylink{class_u_i_1_1_image_button}{Image\+Button} クラス  
+
+
+
+
+{\ttfamily \#include $<$Image\+Button.\+h$>$}
+
+UI\+::Image\+Button の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_i_1_1_image_button}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_image_button_a5d73a519117df9308a1350991dc52cd1}\label{class_u_i_1_1_image_button_a5d73a519117df9308a1350991dc52cd1} 
+{\bfseries Image\+Button} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i_1_1_image_button_aae08644cce92054af4f69feced4aa2a7}{\texorpdfstring{$\sim$}{\string~}\+Image\+Button}} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a8e992795bc57ad682542e19f82a5e08e}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a9170b6b84f0003f6bb7b631781182407}{Update}} ()
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a5fd42e7e4a5b0bf9934d6c263e177c8c}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a69eb507707e74e7d1212b9737d56e2b8}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a4062aadf2bacbdaf26df927397ce7b29}{Set\+Input\+Type}} (\mbox{\hyperlink{namespace_u_i_affcf34a86c565c323b4be7a7ae0d3a8e}{Button\+Input\+Type}} type)
+\begin{DoxyCompactList}\small\item\em 入力タイプの設定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_u_i_1_1_image_button_a4a5bfac5145f80aaece60c9e83ec3d62}{Is\+On}} () const
+\begin{DoxyCompactList}\small\item\em ONかどうか判定 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_a24c79d4a39dfdec20450b1c58b5aab54}\label{class_u_i_1_1_image_button_a24c79d4a39dfdec20450b1c58b5aab54} 
+void {\bfseries Set\+On} ()
+\begin{DoxyCompactList}\small\item\em ON状態に変更 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_a103d7242dd2e9b1bf64f28588e466ec5}\label{class_u_i_1_1_image_button_a103d7242dd2e9b1bf64f28588e466ec5} 
+void {\bfseries Set\+Off} ()
+\begin{DoxyCompactList}\small\item\em OFF状態に変更 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_button_a83887780fb22cf81536020cd54010e9b}{Set\+Button\+Image}} (const char \texorpdfstring{$\ast$}{*}img\+\_\+on, const char \texorpdfstring{$\ast$}{*}img\+\_\+off=nullptr, const \mbox{\hyperlink{struct_float_pos}{Float\+Pos}} \&pos=\{ 0.\+0f, 0.\+0f \})
+\begin{DoxyCompactList}\small\item\em ボタン画像の設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_a2c29709c12cf0d407e087dbfc24ecd4c}\label{class_u_i_1_1_image_button_a2c29709c12cf0d407e087dbfc24ecd4c} 
+void {\bfseries Reset\+Click} ()
+\begin{DoxyCompactList}\small\item\em 前クリック状態リセット \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}{On\+Draw}} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_image_button_a8358a236d2337f77c323b1f7811ef346}\label{class_u_i_1_1_image_button_a8358a236d2337f77c323b1f7811ef346} 
+\mbox{\hyperlink{struct_float_pos}{Float\+Pos}} {\bfseries pos\+\_\+} \{ 0.\+0f, 0.\+0f \}
+\begin{DoxyCompactList}\small\item\em ボタン中央位置 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_a31513b829262156f5f48d0bee3c0be5a}\label{class_u_i_1_1_image_button_a31513b829262156f5f48d0bee3c0be5a} 
+\mbox{\hyperlink{struct_float_size}{Float\+Size}} {\bfseries size\+\_\+} \{ 0.\+0f,0.\+0f \}
+\begin{DoxyCompactList}\small\item\em ボタンサイズ（幅・高さ） \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_af3a2de10e2ecaa2b1fdc149b87cf3052}\label{class_u_i_1_1_image_button_af3a2de10e2ecaa2b1fdc149b87cf3052} 
+int {\bfseries image\+\_\+off\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em OFF状態用画像ハンドル \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_a65ec594d0c054cf6753459978c5aac78}\label{class_u_i_1_1_image_button_a65ec594d0c054cf6753459978c5aac78} 
+int {\bfseries image\+\_\+on\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em ON状態用画像ハンドル \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_a1a5e448563c07537c8ee97543c1c9cdc}\label{class_u_i_1_1_image_button_a1a5e448563c07537c8ee97543c1c9cdc} 
+\mbox{\hyperlink{namespace_u_i_affcf34a86c565c323b4be7a7ae0d3a8e}{Button\+Input\+Type}} {\bfseries input\+\_\+type\+\_\+} = \mbox{\hyperlink{namespace_u_i_affcf34a86c565c323b4be7a7ae0d3a8ea1252c45651289c0b553a30d27bb5ae9b}{Button\+Input\+Type\+::\+TOGGLE}}
+\begin{DoxyCompactList}\small\item\em 入力タイプ \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_ab923e77476ae50cdc0e00cce6b7bdeeb}\label{class_u_i_1_1_image_button_ab923e77476ae50cdc0e00cce6b7bdeeb} 
+\mbox{\hyperlink{namespace_u_i_aa228d368de3b96b402f849e8bec164d7}{Button\+State}} {\bfseries state\+\_\+} = \mbox{\hyperlink{namespace_u_i_aa228d368de3b96b402f849e8bec164d7a88559a0cfd8250c9d65970cc145c92d4}{Button\+State\+::\+OFF}}
+\begin{DoxyCompactList}\small\item\em ボタンの状態 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_a73a67e7165fdb9899c9de680ef888f4e}\label{class_u_i_1_1_image_button_a73a67e7165fdb9899c9de680ef888f4e} 
+bool {\bfseries was\+\_\+pressed\+\_\+} = false
+\begin{DoxyCompactList}\small\item\em 前フレームのクリック状態 \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_button_ab1d60dcb32d66e65bd329f099593f4c5}\label{class_u_i_1_1_image_button_ab1d60dcb32d66e65bd329f099593f4c5} 
+float {\bfseries scale\+\_\+} = 1.\+0f
+\begin{DoxyCompactList}\small\item\em 描画スケール（ホバー時変化） \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_object_aa3bb1b264bcd9b1762365b56892f9e1e}{On\+Init}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a1ac2a73147f469ff7371971560a4dd0a}{On\+Update}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_a622809423da053a4ce995e270547d06c}{On\+Draw}} ()
+\item 
+virtual void \mbox{\hyperlink{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71}{On\+End}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+トグル対応 \doxylink{class_u_i_1_1_image_button}{Image\+Button} クラス 
+
+\doxylink{class_game_object}{Game\+Object} を継承した \doxylink{namespace_u_i}{UI} ボタン基底クラス 
+
+\label{doc-constructors}
+\Hypertarget{class_u_i_1_1_image_button_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_u_i_1_1_image_button_aae08644cce92054af4f69feced4aa2a7}\index{UI::ImageButton@{UI::ImageButton}!````~ImageButton@{\texorpdfstring{$\sim$}{\string~}ImageButton}}
+\index{````~ImageButton@{\texorpdfstring{$\sim$}{\string~}ImageButton}!UI::ImageButton@{UI::ImageButton}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ImageButton()}{\string~ImageButton()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_button_aae08644cce92054af4f69feced4aa2a7} 
+UI\+::\+Image\+Button\+::\texorpdfstring{$\sim$}{\string~}\+Image\+Button (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+デストラクタ 
+
+画像ハンドルの解放を行う 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_image_button_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_image_button_a5fd42e7e4a5b0bf9934d6c263e177c8c}\index{UI::ImageButton@{UI::ImageButton}!Draw@{Draw}}
+\index{Draw@{Draw}!UI::ImageButton@{UI::ImageButton}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_button_a5fd42e7e4a5b0bf9934d6c263e177c8c} 
+void UI\+::\+Image\+Button\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+描画処理 
+
+現在の状態に応じて\+ON/\+OFF画像を描画 \Hypertarget{class_u_i_1_1_image_button_a69eb507707e74e7d1212b9737d56e2b8}\index{UI::ImageButton@{UI::ImageButton}!End@{End}}
+\index{End@{End}!UI::ImageButton@{UI::ImageButton}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_button_a69eb507707e74e7d1212b9737d56e2b8} 
+void UI\+::\+Image\+Button\+::\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+終了処理 
+
+画像ハンドルの削除 \Hypertarget{class_u_i_1_1_image_button_a8e992795bc57ad682542e19f82a5e08e}\index{UI::ImageButton@{UI::ImageButton}!Init@{Init}}
+\index{Init@{Init}!UI::ImageButton@{UI::ImageButton}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_button_a8e992795bc57ad682542e19f82a5e08e} 
+void UI\+::\+Image\+Button\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+初期化処理 
+
+メンバー変数の初期化 \Hypertarget{class_u_i_1_1_image_button_a4a5bfac5145f80aaece60c9e83ec3d62}\index{UI::ImageButton@{UI::ImageButton}!IsOn@{IsOn}}
+\index{IsOn@{IsOn}!UI::ImageButton@{UI::ImageButton}}
+\doxysubsubsection{\texorpdfstring{IsOn()}{IsOn()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_button_a4a5bfac5145f80aaece60c9e83ec3d62} 
+bool UI\+::\+Image\+Button\+::\+Is\+On (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+ONかどうか判定 
+
+\begin{DoxyReturn}{戻り値}
+ONならtrue 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_image_button_a83887780fb22cf81536020cd54010e9b}\index{UI::ImageButton@{UI::ImageButton}!SetButtonImage@{SetButtonImage}}
+\index{SetButtonImage@{SetButtonImage}!UI::ImageButton@{UI::ImageButton}}
+\doxysubsubsection{\texorpdfstring{SetButtonImage()}{SetButtonImage()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_button_a83887780fb22cf81536020cd54010e9b} 
+void UI\+::\+Image\+Button\+::\+Set\+Button\+Image (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{img\+\_\+on}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{img\+\_\+off}{ = {\ttfamily nullptr}, }\item[{const \mbox{\hyperlink{struct_float_pos}{Float\+Pos}} \&}]{pos}{ = {\ttfamily \{~0.0f,~0.0f~\}}}\end{DoxyParamCaption})}
+
+
+
+ボタン画像の設定 
+
+
+\begin{DoxyParams}{引数}
+{\em img\+\_\+on} & ON画像パス \\
+\hline
+{\em img\+\_\+off} & OFF画像パス \\
+\hline
+{\em pos} & 描画位置（中央基準） \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_image_button_a4062aadf2bacbdaf26df927397ce7b29}\index{UI::ImageButton@{UI::ImageButton}!SetInputType@{SetInputType}}
+\index{SetInputType@{SetInputType}!UI::ImageButton@{UI::ImageButton}}
+\doxysubsubsection{\texorpdfstring{SetInputType()}{SetInputType()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_button_a4062aadf2bacbdaf26df927397ce7b29} 
+void UI\+::\+Image\+Button\+::\+Set\+Input\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespace_u_i_affcf34a86c565c323b4be7a7ae0d3a8e}{Button\+Input\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+入力タイプの設定 
+
+
+\begin{DoxyParams}{引数}
+{\em type} & ONE\+\_\+\+SHOT or TOGGLE \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_image_button_a9170b6b84f0003f6bb7b631781182407}\index{UI::ImageButton@{UI::ImageButton}!Update@{Update}}
+\index{Update@{Update}!UI::ImageButton@{UI::ImageButton}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_button_a9170b6b84f0003f6bb7b631781182407} 
+void UI\+::\+Image\+Button\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+更新処理 
+
+マウスの位置・クリック状態に応じて\+ON/\+OFF切替 
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Image\+Button.\+h\end{DoxyCompactItemize}

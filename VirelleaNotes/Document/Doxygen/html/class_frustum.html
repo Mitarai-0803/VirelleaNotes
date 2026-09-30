@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Frustum クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_frustum.html','','class_frustum-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Frustum クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>カメラ  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_frustum_8h_source.html">Frustum.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a79888d6c79e6f327095ed004a5d7ebdd" id="r_a79888d6c79e6f327095ed004a5d7ebdd"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79888d6c79e6f327095ed004a5d7ebdd">DepthMode</a> : s32 { <a class="el" href="#a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67">Default</a>
+, <a class="el" href="#a79888d6c79e6f327095ed004a5d7ebdda67f115c1fddc4ce1aeb1c754001585bc">Reverse</a>
+, <a class="el" href="#a79888d6c79e6f327095ed004a5d7ebdda859477cd2af414695fa54772f08fbcc9">ReverseInfinite</a>
+ }</td></tr>
+<tr class="memdesc:a79888d6c79e6f327095ed004a5d7ebdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">デプス動作モード  <a href="#a79888d6c79e6f327095ed004a5d7ebdd">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">初期化</div></td></tr>
+<tr class="memitem:ab225c6aa54200beee8ec378f2314e413" id="r_ab225c6aa54200beee8ec378f2314e413"><td class="memItemLeft" align="right" valign="top"><a id="ab225c6aa54200beee8ec378f2314e413" name="ab225c6aa54200beee8ec378f2314e413"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frustum</b> ()=default</td></tr>
+<tr class="memdesc:ab225c6aa54200beee8ec378f2314e413"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+<tr class="memitem:aca6ea17e0260764080b7698fba755730" id="r_aca6ea17e0260764080b7698fba755730"><td class="memItemLeft" align="right" valign="top"><a id="aca6ea17e0260764080b7698fba755730" name="aca6ea17e0260764080b7698fba755730"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Frustum</b> (const <a class="el" href="classmatrix.html">matrix</a> &amp;mat_view, const <a class="el" href="classmatrix.html">matrix</a> &amp;mat_proj, <a class="el" href="#a79888d6c79e6f327095ed004a5d7ebdd">Frustum::DepthMode</a> depth_mode=<a class="el" href="#a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67">Frustum::DepthMode::Default</a>)</td></tr>
+<tr class="memitem:abf37ae7096fb44609b6e4b04a63cbe08" id="r_abf37ae7096fb44609b6e4b04a63cbe08"><td class="memItemLeft" align="right" valign="top"><a id="abf37ae7096fb44609b6e4b04a63cbe08" name="abf37ae7096fb44609b6e4b04a63cbe08"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~Frustum</b> ()=default</td></tr>
+<tr class="memdesc:abf37ae7096fb44609b6e4b04a63cbe08"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ <br /></td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">更新</div></td></tr>
+<tr class="memitem:a17a6dc854202e76bb81dc52924f91a16" id="r_a17a6dc854202e76bb81dc52924f91a16"><td class="memItemLeft" align="right" valign="top"><a id="a17a6dc854202e76bb81dc52924f91a16" name="a17a6dc854202e76bb81dc52924f91a16"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="memitem:a71f2b123d97b8322331b9accaeaf2ee1" id="r_a71f2b123d97b8322331b9accaeaf2ee1"><td class="memItemLeft" align="right" valign="top"><a id="a71f2b123d97b8322331b9accaeaf2ee1" name="a71f2b123d97b8322331b9accaeaf2ee1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>renderDebug</b> ()</td></tr>
+<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">設定</div></td></tr>
+<tr class="memitem:a310ff517b74da17453bc5062da434876" id="r_a310ff517b74da17453bc5062da434876"><td class="memItemLeft" align="right" valign="top"><a id="a310ff517b74da17453bc5062da434876" name="a310ff517b74da17453bc5062da434876"></a>
+<a class="el" href="class_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (const float3 &amp;position)</td></tr>
+<tr class="memitem:ae2a1fc953e0a117c91f93c87850586cc" id="r_ae2a1fc953e0a117c91f93c87850586cc"><td class="memItemLeft" align="right" valign="top"><a id="ae2a1fc953e0a117c91f93c87850586cc" name="ae2a1fc953e0a117c91f93c87850586cc"></a>
+<a class="el" href="class_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>setLookAt</b> (const float3 &amp;look_at)</td></tr>
+<tr class="memitem:aedc31b8c2d0b2370016ef13a6ec8344d" id="r_aedc31b8c2d0b2370016ef13a6ec8344d"><td class="memItemLeft" align="right" valign="top"><a id="aedc31b8c2d0b2370016ef13a6ec8344d" name="aedc31b8c2d0b2370016ef13a6ec8344d"></a>
+<a class="el" href="class_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldUp</b> (const float3 &amp;world_up)</td></tr>
+<tr class="memitem:ad9aeaa231f512ff9e89aa28c0d1a4660" id="r_ad9aeaa231f512ff9e89aa28c0d1a4660"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9aeaa231f512ff9e89aa28c0d1a4660">setLookAt</a> (f32 horizontal_angle, f32 vertical_angle)</td></tr>
+<tr class="memitem:a10e71748212059e09101fb721ceb3fd0" id="r_a10e71748212059e09101fb721ceb3fd0"><td class="memItemLeft" align="right" valign="top"><a id="a10e71748212059e09101fb721ceb3fd0" name="a10e71748212059e09101fb721ceb3fd0"></a>
+<a class="el" href="class_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>setFov</b> (f32 fovy)</td></tr>
+<tr class="memitem:ac9d56b6a1648a76345728f6560abb6b3" id="r_ac9d56b6a1648a76345728f6560abb6b3"><td class="memItemLeft" align="right" valign="top"><a id="ac9d56b6a1648a76345728f6560abb6b3" name="ac9d56b6a1648a76345728f6560abb6b3"></a>
+<a class="el" href="class_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>setAspectRatio</b> (f32 aspect_ratio)</td></tr>
+<tr class="memitem:ac693ebcad0cf3be7c28160f62f5b16ac" id="r_ac693ebcad0cf3be7c28160f62f5b16ac"><td class="memItemLeft" align="right" valign="top"><a id="ac693ebcad0cf3be7c28160f62f5b16ac" name="ac693ebcad0cf3be7c28160f62f5b16ac"></a>
+<a class="el" href="class_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>setNearZ</b> (f32 z_near)</td></tr>
+<tr class="memitem:a0e9e2ea8a3db13c13f625fe876c58cdf" id="r_a0e9e2ea8a3db13c13f625fe876c58cdf"><td class="memItemLeft" align="right" valign="top"><a id="a0e9e2ea8a3db13c13f625fe876c58cdf" name="a0e9e2ea8a3db13c13f625fe876c58cdf"></a>
+<a class="el" href="class_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>setFarZ</b> (f32 z_far)</td></tr>
+<tr class="memitem:aef58e5a9c01ba23dd23fcb2bff3f21ed" id="r_aef58e5a9c01ba23dd23fcb2bff3f21ed"><td class="memItemLeft" align="right" valign="top"><a id="aef58e5a9c01ba23dd23fcb2bff3f21ed" name="aef58e5a9c01ba23dd23fcb2bff3f21ed"></a>
+<a class="el" href="class_frustum.html">Frustum</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>setDepthMode</b> (<a class="el" href="#a79888d6c79e6f327095ed004a5d7ebdd">Frustum::DepthMode</a> mode)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+参照</h2></td></tr>
+<tr class="memitem:a42ac8538f373ef9732739e62f3b764d7" id="r_a42ac8538f373ef9732739e62f3b764d7"><td class="memItemLeft" align="right" valign="top"><a id="a42ac8538f373ef9732739e62f3b764d7" name="a42ac8538f373ef9732739e62f3b764d7"></a>
+float3&#160;</td><td class="memItemRight" valign="bottom"><b>position</b> () const</td></tr>
+<tr class="memitem:a955661f580aad4c45dd465ba64047895" id="r_a955661f580aad4c45dd465ba64047895"><td class="memItemLeft" align="right" valign="top"><a id="a955661f580aad4c45dd465ba64047895" name="a955661f580aad4c45dd465ba64047895"></a>
+float3&#160;</td><td class="memItemRight" valign="bottom"><b>lookAt</b> () const</td></tr>
+<tr class="memitem:a64eea3a062449447a7e2630c19a5bf5f" id="r_a64eea3a062449447a7e2630c19a5bf5f"><td class="memItemLeft" align="right" valign="top"><a id="a64eea3a062449447a7e2630c19a5bf5f" name="a64eea3a062449447a7e2630c19a5bf5f"></a>
+float3&#160;</td><td class="memItemRight" valign="bottom"><b>worldUp</b> () const</td></tr>
+<tr class="memitem:a287657bfb71c2286c37114ecdfee8d01" id="r_a287657bfb71c2286c37114ecdfee8d01"><td class="memItemLeft" align="right" valign="top"><a id="a287657bfb71c2286c37114ecdfee8d01" name="a287657bfb71c2286c37114ecdfee8d01"></a>
+f32&#160;</td><td class="memItemRight" valign="bottom"><b>fov</b> () const</td></tr>
+<tr class="memitem:aa2bcbe4d597781fa74a16aa029f1d655" id="r_aa2bcbe4d597781fa74a16aa029f1d655"><td class="memItemLeft" align="right" valign="top"><a id="aa2bcbe4d597781fa74a16aa029f1d655" name="aa2bcbe4d597781fa74a16aa029f1d655"></a>
+f32&#160;</td><td class="memItemRight" valign="bottom"><b>aspectRatio</b> () const</td></tr>
+<tr class="memitem:a2b2a3223e53813e1e289c12664b96911" id="r_a2b2a3223e53813e1e289c12664b96911"><td class="memItemLeft" align="right" valign="top"><a id="a2b2a3223e53813e1e289c12664b96911" name="a2b2a3223e53813e1e289c12664b96911"></a>
+f32&#160;</td><td class="memItemRight" valign="bottom"><b>nearZ</b> () const</td></tr>
+<tr class="memitem:a408d5d23226b9e3b27243182d0724afe" id="r_a408d5d23226b9e3b27243182d0724afe"><td class="memItemLeft" align="right" valign="top"><a id="a408d5d23226b9e3b27243182d0724afe" name="a408d5d23226b9e3b27243182d0724afe"></a>
+f32&#160;</td><td class="memItemRight" valign="bottom"><b>farZ</b> () const</td></tr>
+<tr class="memitem:abb0ebfbbcb843f9d17667fdc66227b6e" id="r_abb0ebfbbcb843f9d17667fdc66227b6e"><td class="memItemLeft" align="right" valign="top">f32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb0ebfbbcb843f9d17667fdc66227b6e">screenDistance</a> (u32 resolution_height) const</td></tr>
+<tr class="memitem:a234f5c84a0076cafb9ed3451cc973fe4" id="r_a234f5c84a0076cafb9ed3451cc973fe4"><td class="memItemLeft" align="right" valign="top"><a id="a234f5c84a0076cafb9ed3451cc973fe4" name="a234f5c84a0076cafb9ed3451cc973fe4"></a>
+<a class="el" href="#a79888d6c79e6f327095ed004a5d7ebdd">Frustum::DepthMode</a>&#160;</td><td class="memItemRight" valign="bottom"><b>depthMode</b> () const</td></tr>
+<tr class="memitem:acb47fe1f963e577883b75a3aaa73e922" id="r_acb47fe1f963e577883b75a3aaa73e922"><td class="memItemLeft" align="right" valign="top"><a id="acb47fe1f963e577883b75a3aaa73e922" name="acb47fe1f963e577883b75a3aaa73e922"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>useReverseDepth</b> () const</td></tr>
+<tr class="memitem:a93cfb3b15eba1eac9b79a25b8daedcfd" id="r_a93cfb3b15eba1eac9b79a25b8daedcfd"><td class="memItemLeft" align="right" valign="top">float3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93cfb3b15eba1eac9b79a25b8daedcfd">rayFromScreenPosition</a> (float2 screen_position)</td></tr>
+<tr class="memitem:aa1fe52ce1a07e18b3fc51aa32557ea42" id="r_aa1fe52ce1a07e18b3fc51aa32557ea42"><td class="memItemLeft" align="right" valign="top"><a id="aa1fe52ce1a07e18b3fc51aa32557ea42" name="aa1fe52ce1a07e18b3fc51aa32557ea42"></a>
+const <a class="el" href="classmatrix.html">matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>matCameraWorld</b> () const</td></tr>
+<tr class="memitem:a4de757581be6d1dbea98ce5b9a2d7466" id="r_a4de757581be6d1dbea98ce5b9a2d7466"><td class="memItemLeft" align="right" valign="top"><a id="a4de757581be6d1dbea98ce5b9a2d7466" name="a4de757581be6d1dbea98ce5b9a2d7466"></a>
+const <a class="el" href="classmatrix.html">matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>matView</b> () const</td></tr>
+<tr class="memitem:ac0d350c0fb1dec468688ce7d9a0f6f61" id="r_ac0d350c0fb1dec468688ce7d9a0f6f61"><td class="memItemLeft" align="right" valign="top"><a id="ac0d350c0fb1dec468688ce7d9a0f6f61" name="ac0d350c0fb1dec468688ce7d9a0f6f61"></a>
+const <a class="el" href="classmatrix.html">matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>matProj</b> () const</td></tr>
+<tr class="memitem:af56f0be15163bf3a4d85f0c355810249" id="r_af56f0be15163bf3a4d85f0c355810249"><td class="memItemLeft" align="right" valign="top"><a id="af56f0be15163bf3a4d85f0c355810249" name="af56f0be15163bf3a4d85f0c355810249"></a>
+const <a class="el" href="classmatrix.html">matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>matViewProj</b> () const</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>カメラ </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型メンバ詳解</h2>
+<a id="a79888d6c79e6f327095ed004a5d7ebdd" name="a79888d6c79e6f327095ed004a5d7ebdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79888d6c79e6f327095ed004a5d7ebdd">&#9670;&#160;</a></span>DepthMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a79888d6c79e6f327095ed004a5d7ebdd">Frustum::DepthMode</a> : s32</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>デプス動作モード </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67" name="a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67"></a>Default&#160;</td><td class="fielddoc"><p>通常 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a79888d6c79e6f327095ed004a5d7ebdda67f115c1fddc4ce1aeb1c754001585bc" name="a79888d6c79e6f327095ed004a5d7ebdda67f115c1fddc4ce1aeb1c754001585bc"></a>Reverse&#160;</td><td class="fielddoc"><p>反転Z </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a79888d6c79e6f327095ed004a5d7ebdda859477cd2af414695fa54772f08fbcc9" name="a79888d6c79e6f327095ed004a5d7ebdda859477cd2af414695fa54772f08fbcc9"></a>ReverseInfinite&#160;</td><td class="fielddoc"><p>反転Z (無限遠) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a93cfb3b15eba1eac9b79a25b8daedcfd" name="a93cfb3b15eba1eac9b79a25b8daedcfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93cfb3b15eba1eac9b79a25b8daedcfd">&#9670;&#160;</a></span>rayFromScreenPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float3 Frustum::rayFromScreenPosition </td>
+          <td>(</td>
+          <td class="paramtype">float2</td>          <td class="paramname"><span class="paramname"><em>screen_position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">screen_position</td><td>スクリーン座標のXY値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>カメラ位置からのレイベクトル </dd></dl>
+
+</div>
+</div>
+<a id="abb0ebfbbcb843f9d17667fdc66227b6e" name="abb0ebfbbcb843f9d17667fdc66227b6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb0ebfbbcb843f9d17667fdc66227b6e">&#9670;&#160;</a></span>screenDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">f32 Frustum::screenDistance </td>
+          <td>(</td>
+          <td class="paramtype">u32</td>          <td class="paramname"><span class="paramname"><em>resolution_height</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel nodiscard">nodiscard</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">resolution_height</td><td>画面解像度の高さ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad9aeaa231f512ff9e89aa28c0d1a4660" name="ad9aeaa231f512ff9e89aa28c0d1a4660"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9aeaa231f512ff9e89aa28c0d1a4660">&#9670;&#160;</a></span>setLookAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_frustum.html">Frustum</a> &amp; Frustum::setLookAt </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>horizontal_angle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>vertical_angle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">horizontal_angle</td><td>左右方向の水平回転角度 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertical_angle</td><td>上下方向の垂直回転角度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section attention"><dt>注意</dt><dd>位置からの相対方向から設定するため setPosition() の後に設定してください。 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/Engine/src/Graphics/<a class="el" href="_frustum_8h_source.html">Frustum.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_frustum.html">Frustum</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

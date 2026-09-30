@@ -1,0 +1,94 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Physics/\+Shape.h ファイル}
+\hypertarget{_shape_8h}{}\label{_shape_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/Shape.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/Shape.h}}
+
+
+形状  
+
+
+\doxysubsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classshape_1_1_base}{shape\+::\+Base}}
+\begin{DoxyCompactList}\small\item\em 形状基底 \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classshape_1_1_sphere}{shape\+::\+Sphere}}
+\begin{DoxyCompactList}\small\item\em 球 \doxylink{classshape_1_1_sphere}{Sphere} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classshape_1_1_box}{shape\+::\+Box}}
+\begin{DoxyCompactList}\small\item\em ボックス \doxylink{classshape_1_1_box}{Box} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classshape_1_1_capsule}{shape\+::\+Capsule}}
+\begin{DoxyCompactList}\small\item\em カプセル \doxylink{classshape_1_1_capsule}{Capsule} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classshape_1_1_cylinder}{shape\+::\+Cylinder}}
+\begin{DoxyCompactList}\small\item\em 円筒 \doxylink{classshape_1_1_cylinder}{Cylinder} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classshape_1_1_convex_hull}{shape\+::\+Convex\+Hull}}
+\begin{DoxyCompactList}\small\item\em 凸形状 \doxylink{classshape_1_1_convex_hull}{Convex\+Hull} \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classshape_1_1_mesh}{shape\+::\+Mesh}}
+\begin{DoxyCompactList}\small\item\em メッシュ \doxylink{classshape_1_1_mesh}{Mesh} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{shape\+::\+Type}} \+: s32 \{ \newline
+\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786a88183b946cc5f0e8c96b2e66e1c74a7e}{Unknown}}
+, \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786ab7095f057db3fefa7325ad93a04e14fd}{Sphere}}
+, \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786a3cfce651e667ab85486dd42a8185f98a}{Box}}
+, \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786a4880c0f12c06dd6d142e7a40b041bf1a}{Capsule}}
+, \newline
+\mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786a2ec2c2961c7ce5a114d969c1f562a563}{Cylinder}}
+, \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786a3e1ee9920ed982b5da9becaf4b5463e5}{Convex\+Hull}}
+, \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786a710fdb6adb881b408116ef95335e1961}{Mesh}}
+ \}
+\begin{DoxyCompactList}\small\item\em 形状の種類 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_shape_8h_a9a3bcea560c04ba3bfdccf0bf60865d1}\label{_shape_8h_a9a3bcea560c04ba3bfdccf0bf60865d1} 
+constexpr float {\bfseries shape\+::default\+\_\+density\+\_\+} = 1000.\+0f
+\begin{DoxyCompactList}\small\item\em デフォルト質量 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+形状 
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_shape_8h_doc-enum-members}
+\doxysubsection{列挙型詳解}
+\Hypertarget{_shape_8h_ae636a35f964aba505258a5702c159786}\index{Shape.h@{Shape.h}!Type@{Type}}
+\index{Type@{Type}!Shape.h@{Shape.h}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily \label{_shape_8h_ae636a35f964aba505258a5702c159786} 
+enum class \mbox{\hyperlink{_shape_8h_ae636a35f964aba505258a5702c159786}{shape\+::\+Type}} \+: \mbox{\hyperlink{_typedef_8h_ae5300ed9eabeae78ee9d0c704a9c412a}{s32}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+形状の種類 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!Shape.h@{Shape.h}}\index{Shape.h@{Shape.h}!Unknown@{Unknown}}}\Hypertarget{_shape_8h_ae636a35f964aba505258a5702c159786a88183b946cc5f0e8c96b2e66e1c74a7e}\label{_shape_8h_ae636a35f964aba505258a5702c159786a88183b946cc5f0e8c96b2e66e1c74a7e} 
+Unknown&未定義 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sphere@{Sphere}!Shape.h@{Shape.h}}\index{Shape.h@{Shape.h}!Sphere@{Sphere}}}\Hypertarget{_shape_8h_ae636a35f964aba505258a5702c159786ab7095f057db3fefa7325ad93a04e14fd}\label{_shape_8h_ae636a35f964aba505258a5702c159786ab7095f057db3fefa7325ad93a04e14fd} 
+Sphere&球 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Box@{Box}!Shape.h@{Shape.h}}\index{Shape.h@{Shape.h}!Box@{Box}}}\Hypertarget{_shape_8h_ae636a35f964aba505258a5702c159786a3cfce651e667ab85486dd42a8185f98a}\label{_shape_8h_ae636a35f964aba505258a5702c159786a3cfce651e667ab85486dd42a8185f98a} 
+Box&ボックス \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Capsule@{Capsule}!Shape.h@{Shape.h}}\index{Shape.h@{Shape.h}!Capsule@{Capsule}}}\Hypertarget{_shape_8h_ae636a35f964aba505258a5702c159786a4880c0f12c06dd6d142e7a40b041bf1a}\label{_shape_8h_ae636a35f964aba505258a5702c159786a4880c0f12c06dd6d142e7a40b041bf1a} 
+Capsule&カプセル \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cylinder@{Cylinder}!Shape.h@{Shape.h}}\index{Shape.h@{Shape.h}!Cylinder@{Cylinder}}}\Hypertarget{_shape_8h_ae636a35f964aba505258a5702c159786a2ec2c2961c7ce5a114d969c1f562a563}\label{_shape_8h_ae636a35f964aba505258a5702c159786a2ec2c2961c7ce5a114d969c1f562a563} 
+Cylinder&円筒 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ConvexHull@{ConvexHull}!Shape.h@{Shape.h}}\index{Shape.h@{Shape.h}!ConvexHull@{ConvexHull}}}\Hypertarget{_shape_8h_ae636a35f964aba505258a5702c159786a3e1ee9920ed982b5da9becaf4b5463e5}\label{_shape_8h_ae636a35f964aba505258a5702c159786a3e1ee9920ed982b5da9becaf4b5463e5} 
+Convex\+Hull&凸形状 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mesh@{Mesh}!Shape.h@{Shape.h}}\index{Shape.h@{Shape.h}!Mesh@{Mesh}}}\Hypertarget{_shape_8h_ae636a35f964aba505258a5702c159786a710fdb6adb881b408116ef95335e1961}\label{_shape_8h_ae636a35f964aba505258a5702c159786a710fdb6adb881b408116ef95335e1961} 
+Mesh&静的メッシュ \\
+\hline
+
+\end{DoxyEnumFields}

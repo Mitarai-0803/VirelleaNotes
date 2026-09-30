@@ -1,0 +1,149 @@
+\doxysection{Physics\+Character.\+h}
+\hypertarget{_physics_character_8h_source}{}\label{_physics_character_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsCharacter.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsCharacter.h}}
+\mbox{\hyperlink{_physics_character_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }shape\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classshape_1_1_base}{Base}};}
+\DoxyCodeLine{00009\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ shape}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }physics\ \{}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }Character}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classphysics_1_1_character_1_1_contact_settings}{ContactSettings}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener}{ContactListener}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ 接地状態}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873}{GroundState}}}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a2b9beed57034f5727573d7ded76cf777}{OnGround}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a50f80f8d96a6d65de73ba8a6b9910761}{OnSteepGround}},\ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873a9ed2d871602556951e39f3cebd08d6cb}{NotSupported}},\ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873aee4e669a07b061d70b9b79dfed9cb5e7}{InAir}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ コンストラクタ}}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classphysics_1_1_character}{Character}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_a312ff4bf8d4d23672f70481de601e174}{setListener}}(\mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener}{physics::Character::ContactListener}}*\ \mbox{\hyperlink{classphysics_1_1_character_af75d79d7efe3e5a592474b1f9bdc542f}{listener}})\ =\ 0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener}{physics::Character::ContactListener}}*\ \mbox{\hyperlink{classphysics_1_1_character_af75d79d7efe3e5a592474b1f9bdc542f}{listener}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ float3\ \mbox{\hyperlink{classphysics_1_1_character_a8e6a4bb7757c969fb3fc3a35ff866696}{linearVelocity}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_a7a466020621512467bf8b2c99cbd7410}{setLinearVelocity}}(\textcolor{keyword}{const}\ float3\&\ linear\_velocity)\ =\ 0;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ float3\ \mbox{\hyperlink{classphysics_1_1_character_a4dd722578045fe3b4f9343efa7f1f9a4}{position}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_ade4826fc25e3722627329a79fad55302}{setPosition}}(\textcolor{keyword}{const}\ float3\&\ p)\ =\ 0;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ quaternion\ \mbox{\hyperlink{classphysics_1_1_character_a6af7cf39f8ca37c9009003875bb06468}{rotation}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_af06acd9d0fe75db90f2b82282c5b283f}{setRotation}}(\textcolor{keyword}{const}\ quaternion\&\ r)\ =\ 0;}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{classphysics_1_1_character_a2eeffe7b11fe0663f455e198bc3681c3}{worldMatrix}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classmatrix}{matrix}}\ \mbox{\hyperlink{classphysics_1_1_character_a2e47b974eaaf62e982e657e251b26201}{centerOfMassTransform}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_a35601f6453ac278e80f3fb81157ad7a5}{setMass}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ mass)\ =\ 0;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_aff28ca0b1c3abccb44914e43f54eeefd}{setMaxSlopeAngle}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ max\_slope\_angle)\ =\ 0;}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_a1850bc55a8663491fee199f7fb31f3d8}{setMaxStrength}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ max\_strength)\ =\ 0;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \mbox{\hyperlink{classphysics_1_1_character_ab76bde2e4a93c6be241012d48b19bd74}{characterPadding}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_a6368798da0919a9f9d39db5b13e23edd}{update}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ delta\_time)\ =\ 0;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{virtual}\ float3\ \mbox{\hyperlink{classphysics_1_1_character_a07bd7bb40708ed1beb8f2d06d5f9daca}{move}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ delta\_time,\ \textcolor{keyword}{const}\ float3\&\ move\_vector,\ \textcolor{keyword}{const}\ float3\&\ old\_position,\ \textcolor{keyword}{const}\ float3\&\ jump\_vector\ =\ float3(0.0f,\ 0.0f,\ 0.0f))\ =\ 0;}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classphysics_1_1_character_a2258c4316e1079fa738005bfbf502316}{canWalkStairs}}(\textcolor{keyword}{const}\ float3\&\ move\_vector)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classphysics_1_1_character_a5c310f6ab55042491d41f831634199c1}{walkStairs}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ \ \ \ \ \ \ \ \ \ \ delta\_time,}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ float3\&\ step\_up,}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ float3\&\ step\_forward,}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ float3\&\ step\_forward\_test,}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ float3\&\ step\_down\_extra\ =\ float3(0.0f,\ 0.0f,\ 0.0f))\ =\ 0;}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_a1c8eab5932aa07a6c7777b05658c7a2a}{refleshContacts}}()\ =\ 0;}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classphysics_1_1_character_add6b0d15ca001aec9f26747094859ea2}{setShape}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classshape_1_1_base}{shape::Base}}\&\ \mbox{\hyperlink{classphysics_1_1_character_ac27dc5721dd843a3b4dd182fd55fd101}{shape}},\ \textcolor{keyword}{const}\ float3\&\ shape\_offset\ =\ float3(0.0f,\ 0.0f,\ 0.0f))\ =\ 0;}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classshape_1_1_base}{shape::Base}}*\ \mbox{\hyperlink{classphysics_1_1_character_ac27dc5721dd843a3b4dd182fd55fd101}{shape}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keyword}{virtual}\ float3\ \mbox{\hyperlink{classphysics_1_1_character_a2e72aef2bd84dff611547cdb640e1c2e}{shapeOffset}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classphysics_1_1_character_a64bf4eb4653df1dfeefb2443f2fa4873}{Character::GroundState}}\ \mbox{\hyperlink{classphysics_1_1_character_a8a24875f6882a34c25776422cc83ff13}{groundState}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keyword}{virtual}\ float3\ \mbox{\hyperlink{classphysics_1_1_character_a75ef2bba3278c6effed998b2f61c71e0}{groundPosition}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keyword}{virtual}\ float3\ \mbox{\hyperlink{classphysics_1_1_character_a44010813f6325b7ab5965052d1a711fe}{groundNormal}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keyword}{virtual}\ float3\ \mbox{\hyperlink{classphysics_1_1_character_a7a562edf20007702fae5f8a25c7fc9b8}{groundVelocity}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}\ \mbox{\hyperlink{classphysics_1_1_character_afefff07cea497a369bca10f06f202809}{groundBodyID}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00165\ \};}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00170\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00171\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classphysics_1_1_character_1_1_contact_settings}{Character::ContactSettings}}}
+\DoxyCodeLine{00172\ \{}
+\DoxyCodeLine{00173\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_settings_afafd22453fa36c29d797d87a7d1d3a4d}{can\_push\_character\_}}\ \ \ =\ \textcolor{keyword}{true};\ \ \ \ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_settings_a00ecf326490f2bf3db460646186a2773}{can\_receive\_impulses\_}}\ =\ \textcolor{keyword}{true};\ \ \ \ }
+\DoxyCodeLine{00176\ \};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00181\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00182\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener}{Character::ContactListener}}}
+\DoxyCodeLine{00183\ \{}
+\DoxyCodeLine{00184\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener_aab7f10b8906ef7b2c0691d0dcf22eb23}{\string~ContactListener}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{comment}{//\ \ キャラクターが指定されたボディと衝突可能かどうかをチェックします。}}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener_aa9f498cc746fd128013e9b2e2da5c16a}{onContactValidate}}([[maybe\_unused]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classphysics_1_1_character}{physics::Character}}*\ character,\ [[maybe\_unused]]\ \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}\ other\_body\_id)}
+\DoxyCodeLine{00194\ \ \ \ \ \{}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ デフォルトは常に衝突許可}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//\ \ キャラクターがボディと衝突するたびに呼び出されます}}
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_listener_a10137e9acf5d583049b6e6b681b94290}{onContactAdded}}([[maybe\_unused]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classphysics_1_1_character}{physics::Character}}*\ \ \ \ \ \ \ \ \ \ \ \ character,}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [[maybe\_unused]]\ \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ other\_body\_id,}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [[maybe\_unused]]\ \textcolor{keyword}{const}\ float3\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contact\_position,}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [[maybe\_unused]]\ \textcolor{keyword}{const}\ float3\&\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contact\_normal,}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [[maybe\_unused]]\ \mbox{\hyperlink{classphysics_1_1_character_1_1_contact_settings}{physics::Character::ContactSettings}}\&\ result)}
+\DoxyCodeLine{00210\ \ \ \ \ \{}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ result.can\_push\_character\_\ \ \ =\ \textcolor{keyword}{true};\ \ \ \ \textcolor{comment}{//\ 相手のオブジェクトから押される}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ result.can\_receive\_impulses\_\ =\ \textcolor{keyword}{true};\ \ \ \ \textcolor{comment}{//\ 相手のオブジェクトをキャラクターで押すことができる}}
+\DoxyCodeLine{00213\ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \};}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00218\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \textcolor{comment}{//\ キャラクターを作成}}
+\DoxyCodeLine{00223\ std::shared\_ptr<physics::Character>\ \mbox{\hyperlink{_physics_character_8h_a826efe90e97d11b9e77fdc5f86109f15}{createCharacter}}(\mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}\ layer);}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \}\ \ \ \ \textcolor{comment}{//\ namespace\ physics}}
+
+\end{DoxyCode}

@@ -1,0 +1,126 @@
+\doxysection{Component\+Object\+Controller.\+h}
+\hypertarget{_component_object_controller_8h_source}{}\label{_component_object_controller_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentObjectController.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentObjectController.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_component_8h}{System/Component/Component.h}}>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ USING\_PTR(\mbox{\hyperlink{class_component_object_controller}{ComponentObjectController}});}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_component_object_controller}{ComponentObjectController}}\ :\ \textcolor{keyword}{public}\ Component}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{_component_8h_a544c31f98b90b38818b27eff6683eef6}{BP\_COMPONENT\_DECL}}(\mbox{\hyperlink{class_component_object_controller}{ComponentObjectController}},\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}移動コンポーネント"{}});}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_object_controller_a47803eda4312b3a6e3955d8e385b1380}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_object_controller_a9d7478597fe68d29f79f44bf088fda6c}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ ComponentObjectControllerPtr\ [[deprecated(\textcolor{stringliteral}{"{}SetSpeed()は古い形式です。SetMoveSpeed()を使用してください"{}})]]\ SetSpeed(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ speed)}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ SetMoveSpeed(speed);}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ ComponentObjectControllerPtr\ SetMoveSpeed(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ speed);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ ComponentObjectControllerPtr\ SetRotateSpeed(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ speed);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ ComponentObjectControllerPtr\ SetKeys(\textcolor{keywordtype}{int}\ up,\ \textcolor{keywordtype}{int}\ down,\ \textcolor{keywordtype}{int}\ left,\ \textcolor{keywordtype}{int}\ right);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ ComponentObjectControllerPtr\ SetCameraKeys(\textcolor{keywordtype}{int}\ up,\ \textcolor{keywordtype}{int}\ down,\ \textcolor{keywordtype}{int}\ left,\ \textcolor{keywordtype}{int}\ right);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ ComponentObjectControllerPtr\ SetTarget(ObjectPtr\ target);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ ComponentObjectControllerPtr\ SetCameraRotate(float3\ rot);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ ComponentObjectControllerPtr\ SetUseMouse(\textcolor{keywordtype}{bool}\ use\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ [[deprecated(\textcolor{stringliteral}{"{}GetSpeed()は古い形式です。GetMoveSpeed()を使用してください"{}})]]\ GetSpeed()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ GetMoveSpeed();\ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ GetMoveSpeed()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ GetRotateSpeed()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ \ SetFrontRotate(\textcolor{keywordtype}{float}\ rotate)\ \{\ front\_rot\_\ =\ rotate;\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ GetFrontRotate()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ front\_rot\_;\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ IsUseMouse()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_component_object_controller_ac87c286dddcc5be26002f5b83972a765}{GUI}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ move\_speed\_\ =\ 1.0f;}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ rot\_speed\_\ \ =\ 5.0f;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ key\_up\_\ \ \ \ =\ KEY\_INPUT\_W;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ key\_down\_\ \ =\ KEY\_INPUT\_S;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ key\_left\_\ \ =\ KEY\_INPUT\_A;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ key\_right\_\ =\ KEY\_INPUT\_D;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ cam\_speed\_\ =\ 1.0f;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ cam\_up\_\ \ \ \ =\ KEY\_INPUT\_UP;}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ cam\_down\_\ \ =\ KEY\_INPUT\_DOWN;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ cam\_left\_\ \ =\ KEY\_INPUT\_LEFT;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ cam\_right\_\ =\ KEY\_INPUT\_RIGHT;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{float}\ cam\_rx\_\ =\ 0;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{float}\ cam\_ry\_\ =\ 0;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ use\_mouse\_\ \ \ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{float}\ mouse\_up\_down\_\ \ \ \ =\ 10.0f;}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ mouse\_left\_right\_\ =\ 10.0f;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ limit\_cam\_up\_\ \ \ =\ 5.0f;\ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ limit\_cam\_down\_\ =\ -\/45.0f;\ \ \ \ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{float}\ front\_rot\_\ =\ 0.0f;\ \ \ \ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ ObjectWeakPtr\ target\_;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ target\_cam\_side\_speed\_\ =\ 3.0f;\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ target\_cam\_up\_down\ \ \ \ \ =\ 10.0f;\ \ \ \ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{comment}{//\ @param\ arc\ アーカイバ}}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{comment}{//\ @param\ ver\ バージョン}}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{_cereal_8h_a7df5c4a4fa530d0bf2831fc2180f0386}{CEREAL\_SAVELOAD}}(arc,\ ver)}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}speed\_"{}},\ move\_speed\_),}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(rot\_speed\_),}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(key\_up\_),}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(key\_down\_),}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(key\_left\_),}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(key\_right\_),}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(cam\_speed\_),}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(cam\_up\_),}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(cam\_down\_),}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(cam\_left\_),}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(cam\_right\_),}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(cam\_rx\_),}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(cam\_ry\_),}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(limit\_cam\_up\_),}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(limit\_cam\_down\_),}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(target\_),}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(target\_cam\_side\_speed\_),}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(target\_cam\_up\_down));}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ver\ >=\ 3)\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(use\_mouse\_),\ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(mouse\_up\_down\_),}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CEREAL\_NVP(mouse\_left\_right\_));}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(ver\ >=\ 4)\ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ arc(CEREAL\_NVP(front\_rot\_));}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ arc(cereal::make\_nvp(\textcolor{stringliteral}{"{}Component"{}},\ cereal::base\_class<Component>(\textcolor{keyword}{this})));}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ CEREAL\_CLASS\_VERSION(\mbox{\hyperlink{class_component_object_controller}{ComponentObjectController}},\ 4);}
+
+\end{DoxyCode}

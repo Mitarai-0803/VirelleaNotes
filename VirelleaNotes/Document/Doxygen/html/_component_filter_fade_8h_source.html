@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentFilterFade.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_component_filter_fade_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentFilterFade.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_component_filter_fade_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="_component_8h.html">System/Component/Component.h</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//===========================================================================</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//===========================================================================</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_component_filter_fade.html">   12</a></span><span class="keyword">class </span><a class="code hl_function" href="class_component_filter_fade.html#a7defc3ca2dfdafe72c6913b3428c3ebb">ComponentFilterFade</a> : <span class="keyword">public</span> Component</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_define" href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a>(<a class="code hl_function" href="class_component_filter_fade.html#a7defc3ca2dfdafe72c6913b3428c3ebb">ComponentFilterFade</a>, <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;FilterFade機能クラス&quot;</span>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_component_filter_fade.html#a7defc3ca2dfdafe72c6913b3428c3ebb">   17</a></span>    <a class="code hl_function" href="class_component_filter_fade.html#a7defc3ca2dfdafe72c6913b3428c3ebb">ComponentFilterFade</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_component_filter_fade.html#ae339d6d14b7447ec3996fbff6d97b0cf">   19</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_filter_fade.html#ae339d6d14b7447ec3996fbff6d97b0cf">Init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">//  更新</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_component_filter_fade.html#af9c9308df0c56c1686313a3c35dea970">   22</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_filter_fade.html#af9c9308df0c56c1686313a3c35dea970">Update</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// 終了</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_component_filter_fade.html#acf7bae37aaca9f19d5337cdae277882c">   25</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_filter_fade.html#acf7bae37aaca9f19d5337cdae277882c">Exit</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// GUI描画</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_component_filter_fade.html#a49d276b7b40185caa63a759327143a02">   28</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_filter_fade.html#a49d276b7b40185caa63a759327143a02">GUI</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> StartFadeIn(<span class="keywordtype">float</span> time = 0.5f)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span>(time == 0.0f)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            time += 0.0001f;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        fade_alpha_     = 0.0f;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        fade_add_alpha_ = 1.0f / time;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        finish_fade_    = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> StartFadeOut(<span class="keywordtype">float</span> time = 0.5f)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">if</span>(time == 0.0f)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            time += 0.0001f;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        fade_alpha_     = 1.0f;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        fade_add_alpha_ = -1.0f / time;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        finish_fade_    = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">bool</span> IsFinishFade() { <span class="keywordflow">return</span> finish_fade_; }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">bool</span> IsFadeOut() { <span class="keywordflow">return</span> fade_add_alpha_ &lt; 0.0f; }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">bool</span> IsFadeIn() { <span class="keywordflow">return</span> fade_add_alpha_ &gt; 0.0f; }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    std::shared_ptr&lt;Texture&gt;  texture_work_;         </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    std::shared_ptr&lt;ShaderPs&gt; shader_ps_;            </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">int</span>                       parameter_cb_ = -1;    </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> fade_alpha_   = 1.0f;    </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">int</span> mosaic_width_ = 128;     </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>  fade_add_alpha_ = 1.0f;    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">bool</span> finish_fade_    = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_define" href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a>(arc, ver) { arc(CEREAL_NVP(<a class="code hl_variable" href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">owner_</a>), CEREAL_NVP(mosaic_width_), CEREAL_NVP(fade_alpha_)); }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>};</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>CEREAL_REGISTER_TYPE(<a class="code hl_class" href="class_component_filter_fade.html">ComponentFilterFade</a>)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>CEREAL_REGISTER_POLYMORPHIC_RELATION(<a class="code hl_class" href="class_component.html">Component</a>, <a class="code hl_class" href="class_component_filter_fade.html">ComponentFilterFade</a>)</div>
+<div class="ttc" id="a_cereal_8h_html_a7df5c4a4fa530d0bf2831fc2180f0386"><div class="ttname"><a href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a></div><div class="ttdeci">#define CEREAL_SAVELOAD(arc, ver)</div><div class="ttdoc">Cereal</div><div class="ttdef"><b>Definition</b> Cereal.h:79</div></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">コンポーネント ベースクラス</div></div>
+<div class="ttc" id="a_component_8h_html_a544c31f98b90b38818b27eff6683eef6"><div class="ttname"><a href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a></div><div class="ttdeci">#define BP_COMPONENT_DECL(CLASS,...)</div><div class="ttdef"><b>Definition</b> Component.h:77</div></div>
+<div class="ttc" id="a_typedef_8h_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:21</div></div>
+<div class="ttc" id="a_typedef_8h_html_ad34d88453d37b65a09797bad37f2f527"><div class="ttname"><a href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></div><div class="ttdeci">float f32</div><div class="ttdoc">単精度浮動小数点数</div><div class="ttdef"><b>Definition</b> Typedef.h:25</div></div>
+<div class="ttc" id="aclass_component_filter_fade_html"><div class="ttname"><a href="class_component_filter_fade.html">ComponentFilterFade</a></div><div class="ttdoc">フェードフィルター</div><div class="ttdef"><b>Definition</b> ComponentFilterFade.h:13</div></div>
+<div class="ttc" id="aclass_component_filter_fade_html_a49d276b7b40185caa63a759327143a02"><div class="ttname"><a href="class_component_filter_fade.html#a49d276b7b40185caa63a759327143a02">ComponentFilterFade::GUI</a></div><div class="ttdeci">virtual void GUI() override</div><div class="ttdoc">GUI表示</div></div>
+<div class="ttc" id="aclass_component_filter_fade_html_a7defc3ca2dfdafe72c6913b3428c3ebb"><div class="ttname"><a href="class_component_filter_fade.html#a7defc3ca2dfdafe72c6913b3428c3ebb">ComponentFilterFade::ComponentFilterFade</a></div><div class="ttdeci">ComponentFilterFade()</div><div class="ttdoc">コンストラクタ</div></div>
+<div class="ttc" id="aclass_component_filter_fade_html_acf7bae37aaca9f19d5337cdae277882c"><div class="ttname"><a href="class_component_filter_fade.html#acf7bae37aaca9f19d5337cdae277882c">ComponentFilterFade::Exit</a></div><div class="ttdeci">virtual void Exit() override</div><div class="ttdoc">終了</div></div>
+<div class="ttc" id="aclass_component_filter_fade_html_ae339d6d14b7447ec3996fbff6d97b0cf"><div class="ttname"><a href="class_component_filter_fade.html#ae339d6d14b7447ec3996fbff6d97b0cf">ComponentFilterFade::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdoc">初期化</div></div>
+<div class="ttc" id="aclass_component_filter_fade_html_af9c9308df0c56c1686313a3c35dea970"><div class="ttname"><a href="class_component_filter_fade.html#af9c9308df0c56c1686313a3c35dea970">ComponentFilterFade::Update</a></div><div class="ttdeci">virtual void Update() override</div><div class="ttdoc">アップデート</div></div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">コンポーネント</div><div class="ttdef"><b>Definition</b> Component.h:163</div></div>
+<div class="ttc" id="aclass_component_html_aaf224b0e73780a9c3cbad323a0ec59f5"><div class="ttname"><a href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">Component::owner_</a></div><div class="ttdeci">ObjectPtr owner_</div><div class="ttdoc">オーナー</div><div class="ttdef"><b>Definition</b> Component.h:309</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="dir_62db5b8162a41e57b9d75d02d7d318ce.html">Component</a></li><li class="navelem"><a href="_component_filter_fade_8h.html">ComponentFilterFade.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

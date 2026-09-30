@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Component/ComponentTargetTracking.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_component_target_tracking_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ComponentTargetTracking.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="_component_8h.html">System/Component/Component.h</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="_cereal_8h.html">System/Cereal.h</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>USING_PTR(<a class="code hl_class" href="class_component_target_tracking.html">ComponentTargetTracking</a>);</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html">    8</a></span><span class="keyword">class </span>ComponentTargetTracking : <span class="keyword">public</span> Component</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_define" href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a>(ComponentTargetTracking, <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;TargetTracking機能クラス&quot;</span>);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    ComponentTargetTracking() {}</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#a76b59fd0afa913346f02fc7f782ef23b">   14</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#a76b59fd0afa913346f02fc7f782ef23b">Init</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#ad0912897c771df1cf4ba58662e4a214b">   15</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#ad0912897c771df1cf4ba58662e4a214b">PreUpdate</a>() <span class="keyword">override</span>;     </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#adfaede86934160a6161c74dc3cf562c8">   16</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#adfaede86934160a6161c74dc3cf562c8">PostUpdate</a>() <span class="keyword">override</span>;    </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#addd4d95b960a721a8bcb1199904724e1">   17</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#addd4d95b960a721a8bcb1199904724e1">Draw</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#ac137eb92824e90b3c4c3d3890bcefa78">   18</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#ac137eb92824e90b3c4c3d3890bcefa78">Exit</a>() <span class="keyword">override</span>;          </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#a5d2cb277f8f277a114b51b9dbb954e6d">   19</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#a5d2cb277f8f277a114b51b9dbb954e6d">GUI</a>() <span class="keyword">override</span>;           </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#aae6698280230239197a773e5cf538131">   23</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#aae6698280230239197a773e5cf538131">SetTargetObjectPtr</a>(ObjectWeakPtr obj);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#addcbd3cd335d4db25ddff5ad5aab7e4e">   27</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#addcbd3cd335d4db25ddff5ad5aab7e4e">SetTargetObjectPtr</a>(<span class="keyword">const</span> std::string_view obj_name);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#a59adf20bc856a293e1b741e0bfbb572c">   31</a></span>    ObjectPtr <a class="code hl_function" href="class_component_target_tracking.html#a59adf20bc856a293e1b741e0bfbb572c">GetTargetObjectPtr</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#ad81e038c85c83342a1a4100dc95219ec">   35</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#ad81e038c85c83342a1a4100dc95219ec">SetTargetPoint</a>(float3 target);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#a3e07b9e006288545cef57b9124cc87c5">   39</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#a3e07b9e006288545cef57b9124cc87c5">SetTrackingNode</a>(<span class="keyword">const</span> std::string&amp; name);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#af639925b2c85f220c73d391ff6ec36dc">   43</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#af639925b2c85f220c73d391ff6ec36dc">SetTrackingNode</a>(<span class="keywordtype">int</span> tracking_node_index);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#abb0d359cde66787cc48d8ca13ff320c6">   47</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#abb0d359cde66787cc48d8ca13ff320c6">SetTrackingLimitLeftRight</a>(float2 left_right);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#a4116f845b7e81bb1d90f20555a5dfeb3">   51</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#a4116f845b7e81bb1d90f20555a5dfeb3">SetTrackingLimitUpDown</a>(float2 up_down);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#a5e624bf9c9d54da462d112cf699d3e2e">   55</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#a5e624bf9c9d54da462d112cf699d3e2e">SetTrackingFrameLimit</a>(<span class="keywordtype">float</span> limit);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#aa008ef47e8a1fcec755b6d488da3adbb">   59</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_component_target_tracking.html#aa008ef47e8a1fcec755b6d488da3adbb">SetFrontVector</a>(float3 vec);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2c">   64</a></span>    <span class="keyword">enum struct</span> <a class="code hl_enumeration" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2c">TrackingBit</a> : <a class="code hl_typedef" href="_typedef_8h.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca59d87a4758a9d35fbaf6b204341bb399">   66</a></span>        <a class="code hl_enumvalue" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca59d87a4758a9d35fbaf6b204341bb399">Initialized</a>,       </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca0ad455c0d6af3a8d5547cf5dec6fbd0f">   67</a></span>        <a class="code hl_enumvalue" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca0ad455c0d6af3a8d5547cf5dec6fbd0f">LimitAxisY</a>,        </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca0e75e4edd21b61adc096ff537f335a25">   68</a></span>        <a class="code hl_enumvalue" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca0e75e4edd21b61adc096ff537f335a25">LimitAxisX</a>,        </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca5746081740b464ca842f220ff58a78c5">   69</a></span>        <a class="code hl_enumvalue" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca5746081740b464ca842f220ff58a78c5">ObjectTracking</a>,    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    };</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> SetTrackingStatus(<a class="code hl_enumeration" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2c">TrackingBit</a> bit, <span class="keywordtype">bool</span> on) { tracking_status_.set(bit, on); }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">bool</span> GetTrackingStatus(<a class="code hl_enumeration" href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2c">TrackingBit</a> bit) { <span class="keywordflow">return</span> tracking_status_.is(bit); }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    Status&lt;TrackingBit&gt; tracking_status_;            </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    std::string         tracked_node_;               </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">int</span>                 tracked_node_index_ = -1;    </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    float3              front_vector_       = {0, 0, -1};</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    float3 look_at_     = {0, 0, 0};    </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    float2 limit_lr_    = {70, 70};</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    float2 limit_ud_    = {50, 50};</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">float</span>  limit_frame_ = 5.0;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    float2 now_rot_     = {0, 0};</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    matrix tracking_matrix_ = <a class="code hl_function" href="classmatrix.html#a563189f24256e032ef34dd12b5141461">matrix::identity</a>();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    ObjectWeakPtr         tracking_object_{};    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    ComponentModelWeakPtr owner_model_{};</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">// @param arc アーカイバ</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// @param ver バージョン</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_define" href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a>(arc, ver)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        arc(cereal::make_nvp(<span class="stringliteral">&quot;owner&quot;</span>, <a class="code hl_variable" href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">owner_</a>));                              <span class="comment">//&lt; オーナー</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        arc(cereal::make_nvp(<span class="stringliteral">&quot;tracking_status&quot;</span>, tracking_status_.get()));    <span class="comment">//&lt; カメラステート</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        arc(CEREAL_NVP(tracked_node_), CEREAL_NVP(tracked_node_index_));</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        arc(CEREAL_NVP(front_vector_));</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        arc(CEREAL_NVP(tracking_object_), CEREAL_NVP(look_at_));    <span class="comment">//&lt; カメラ位置とターゲット</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        arc(CEREAL_NVP(limit_lr_), CEREAL_NVP(limit_ud_), CEREAL_NVP(limit_frame_));</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_function" href="class_component_target_tracking.html#a3e07b9e006288545cef57b9124cc87c5">SetTrackingNode</a>(tracked_node_);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>};</div>
+</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>CEREAL_REGISTER_TYPE(<a class="code hl_class" href="class_component_target_tracking.html">ComponentTargetTracking</a>)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>CEREAL_REGISTER_POLYMORPHIC_RELATION(<a class="code hl_class" href="class_component.html">Component</a>, <a class="code hl_class" href="class_component_target_tracking.html">ComponentTargetTracking</a>)</div>
+<div class="ttc" id="a_cereal_8h_html"><div class="ttname"><a href="_cereal_8h.html">Cereal.h</a></div><div class="ttdoc">シリアル組み込み用</div></div>
+<div class="ttc" id="a_cereal_8h_html_a7df5c4a4fa530d0bf2831fc2180f0386"><div class="ttname"><a href="_cereal_8h.html#a7df5c4a4fa530d0bf2831fc2180f0386">CEREAL_SAVELOAD</a></div><div class="ttdeci">#define CEREAL_SAVELOAD(arc, ver)</div><div class="ttdoc">Cereal</div><div class="ttdef"><b>Definition</b> Cereal.h:79</div></div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div><div class="ttdoc">コンポーネント ベースクラス</div></div>
+<div class="ttc" id="a_component_8h_html_a544c31f98b90b38818b27eff6683eef6"><div class="ttname"><a href="_component_8h.html#a544c31f98b90b38818b27eff6683eef6">BP_COMPONENT_DECL</a></div><div class="ttdeci">#define BP_COMPONENT_DECL(CLASS,...)</div><div class="ttdef"><b>Definition</b> Component.h:77</div></div>
+<div class="ttc" id="a_typedef_8h_html_a70c1fcc1a4e96af8f6580f708657cd41"><div class="ttname"><a href="_typedef_8h.html#a70c1fcc1a4e96af8f6580f708657cd41">u32</a></div><div class="ttdeci">uint32_t u32</div><div class="ttdoc">32bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:23</div></div>
+<div class="ttc" id="a_typedef_8h_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:21</div></div>
+<div class="ttc" id="aclass_component_html"><div class="ttname"><a href="class_component.html">Component</a></div><div class="ttdoc">コンポーネント</div><div class="ttdef"><b>Definition</b> Component.h:163</div></div>
+<div class="ttc" id="aclass_component_html_aaf224b0e73780a9c3cbad323a0ec59f5"><div class="ttname"><a href="class_component.html#aaf224b0e73780a9c3cbad323a0ec59f5">Component::owner_</a></div><div class="ttdeci">ObjectPtr owner_</div><div class="ttdoc">オーナー</div><div class="ttdef"><b>Definition</b> Component.h:309</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html"><div class="ttname"><a href="class_component_target_tracking.html">ComponentTargetTracking</a></div><div class="ttdef"><b>Definition</b> ComponentTargetTracking.h:9</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_a3e07b9e006288545cef57b9124cc87c5"><div class="ttname"><a href="class_component_target_tracking.html#a3e07b9e006288545cef57b9124cc87c5">ComponentTargetTracking::SetTrackingNode</a></div><div class="ttdeci">void SetTrackingNode(const std::string &amp;name)</div><div class="ttdoc">トラッキングを行うノード名</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_a4116f845b7e81bb1d90f20555a5dfeb3"><div class="ttname"><a href="class_component_target_tracking.html#a4116f845b7e81bb1d90f20555a5dfeb3">ComponentTargetTracking::SetTrackingLimitUpDown</a></div><div class="ttdeci">void SetTrackingLimitUpDown(float2 up_down)</div><div class="ttdoc">上下の角度制限</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_a59adf20bc856a293e1b741e0bfbb572c"><div class="ttname"><a href="class_component_target_tracking.html#a59adf20bc856a293e1b741e0bfbb572c">ComponentTargetTracking::GetTargetObjectPtr</a></div><div class="ttdeci">ObjectPtr GetTargetObjectPtr()</div><div class="ttdoc">追跡オブジェクトの取得</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_a5d2cb277f8f277a114b51b9dbb954e6d"><div class="ttname"><a href="class_component_target_tracking.html#a5d2cb277f8f277a114b51b9dbb954e6d">ComponentTargetTracking::GUI</a></div><div class="ttdeci">virtual void GUI() override</div><div class="ttdoc">GUI処理</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_a5e624bf9c9d54da462d112cf699d3e2e"><div class="ttname"><a href="class_component_target_tracking.html#a5e624bf9c9d54da462d112cf699d3e2e">ComponentTargetTracking::SetTrackingFrameLimit</a></div><div class="ttdeci">void SetTrackingFrameLimit(float limit)</div><div class="ttdoc">フレーム単位の角度制限</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_a76b59fd0afa913346f02fc7f782ef23b"><div class="ttname"><a href="class_component_target_tracking.html#a76b59fd0afa913346f02fc7f782ef23b">ComponentTargetTracking::Init</a></div><div class="ttdeci">virtual void Init() override</div><div class="ttdoc">初期化</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_aa008ef47e8a1fcec755b6d488da3adbb"><div class="ttname"><a href="class_component_target_tracking.html#aa008ef47e8a1fcec755b6d488da3adbb">ComponentTargetTracking::SetFrontVector</a></div><div class="ttdeci">void SetFrontVector(float3 vec)</div><div class="ttdoc">前ベクトルのセット</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_aae6698280230239197a773e5cf538131"><div class="ttname"><a href="class_component_target_tracking.html#aae6698280230239197a773e5cf538131">ComponentTargetTracking::SetTargetObjectPtr</a></div><div class="ttdeci">void SetTargetObjectPtr(ObjectWeakPtr obj)</div><div class="ttdoc">追跡オブジェクトの設定</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_abb0d359cde66787cc48d8ca13ff320c6"><div class="ttname"><a href="class_component_target_tracking.html#abb0d359cde66787cc48d8ca13ff320c6">ComponentTargetTracking::SetTrackingLimitLeftRight</a></div><div class="ttdeci">void SetTrackingLimitLeftRight(float2 left_right)</div><div class="ttdoc">左右の角度制限</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_ac137eb92824e90b3c4c3d3890bcefa78"><div class="ttname"><a href="class_component_target_tracking.html#ac137eb92824e90b3c4c3d3890bcefa78">ComponentTargetTracking::Exit</a></div><div class="ttdeci">virtual void Exit() override</div><div class="ttdoc">終了処理</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_ad0912897c771df1cf4ba58662e4a214b"><div class="ttname"><a href="class_component_target_tracking.html#ad0912897c771df1cf4ba58662e4a214b">ComponentTargetTracking::PreUpdate</a></div><div class="ttdeci">virtual void PreUpdate() override</div><div class="ttdoc">向きの初期化</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_ad594f0dd0aefbb4c491121efe0db0a2c"><div class="ttname"><a href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2c">ComponentTargetTracking::TrackingBit</a></div><div class="ttdeci">TrackingBit</div><div class="ttdoc">トラッキングステータス</div><div class="ttdef"><b>Definition</b> ComponentTargetTracking.h:65</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_ad594f0dd0aefbb4c491121efe0db0a2ca0ad455c0d6af3a8d5547cf5dec6fbd0f"><div class="ttname"><a href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca0ad455c0d6af3a8d5547cf5dec6fbd0f">ComponentTargetTracking::TrackingBit::LimitAxisY</a></div><div class="ttdeci">@ LimitAxisY</div><div class="ttdoc">Y軸制限を有効にする</div><div class="ttdef"><b>Definition</b> ComponentTargetTracking.h:67</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_ad594f0dd0aefbb4c491121efe0db0a2ca0e75e4edd21b61adc096ff537f335a25"><div class="ttname"><a href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca0e75e4edd21b61adc096ff537f335a25">ComponentTargetTracking::TrackingBit::LimitAxisX</a></div><div class="ttdeci">@ LimitAxisX</div><div class="ttdoc">X軸制限を有効にする</div><div class="ttdef"><b>Definition</b> ComponentTargetTracking.h:68</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_ad594f0dd0aefbb4c491121efe0db0a2ca5746081740b464ca842f220ff58a78c5"><div class="ttname"><a href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca5746081740b464ca842f220ff58a78c5">ComponentTargetTracking::TrackingBit::ObjectTracking</a></div><div class="ttdeci">@ ObjectTracking</div><div class="ttdoc">オブジェクトをトラッキングする</div><div class="ttdef"><b>Definition</b> ComponentTargetTracking.h:69</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_ad594f0dd0aefbb4c491121efe0db0a2ca59d87a4758a9d35fbaf6b204341bb399"><div class="ttname"><a href="class_component_target_tracking.html#ad594f0dd0aefbb4c491121efe0db0a2ca59d87a4758a9d35fbaf6b204341bb399">ComponentTargetTracking::TrackingBit::Initialized</a></div><div class="ttdeci">@ Initialized</div><div class="ttdoc">初期化済み</div><div class="ttdef"><b>Definition</b> ComponentTargetTracking.h:66</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_ad81e038c85c83342a1a4100dc95219ec"><div class="ttname"><a href="class_component_target_tracking.html#ad81e038c85c83342a1a4100dc95219ec">ComponentTargetTracking::SetTargetPoint</a></div><div class="ttdeci">void SetTargetPoint(float3 target)</div><div class="ttdoc">追跡ポイントの設定</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_addcbd3cd335d4db25ddff5ad5aab7e4e"><div class="ttname"><a href="class_component_target_tracking.html#addcbd3cd335d4db25ddff5ad5aab7e4e">ComponentTargetTracking::SetTargetObjectPtr</a></div><div class="ttdeci">void SetTargetObjectPtr(const std::string_view obj_name)</div><div class="ttdoc">追跡オブジェクトの設定</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_addd4d95b960a721a8bcb1199904724e1"><div class="ttname"><a href="class_component_target_tracking.html#addd4d95b960a721a8bcb1199904724e1">ComponentTargetTracking::Draw</a></div><div class="ttdeci">virtual void Draw() override</div><div class="ttdoc">向きのマトリクス表示(デバッグ用)</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_adfaede86934160a6161c74dc3cf562c8"><div class="ttname"><a href="class_component_target_tracking.html#adfaede86934160a6161c74dc3cf562c8">ComponentTargetTracking::PostUpdate</a></div><div class="ttdeci">virtual void PostUpdate() override</div><div class="ttdoc">向きの更新</div></div>
+<div class="ttc" id="aclass_component_target_tracking_html_af639925b2c85f220c73d391ff6ec36dc"><div class="ttname"><a href="class_component_target_tracking.html#af639925b2c85f220c73d391ff6ec36dc">ComponentTargetTracking::SetTrackingNode</a></div><div class="ttdeci">void SetTrackingNode(int tracking_node_index)</div><div class="ttdoc">トラッキングを行うノード名</div></div>
+<div class="ttc" id="aclassmatrix_html_a563189f24256e032ef34dd12b5141461"><div class="ttname"><a href="classmatrix.html#a563189f24256e032ef34dd12b5141461">matrix::identity</a></div><div class="ttdeci">static matrix identity()</div><div class="ttdoc">単位行列</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="dir_62db5b8162a41e57b9d75d02d7d318ce.html">Component</a></li><li class="navelem"><b>ComponentTargetTracking.h</b></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

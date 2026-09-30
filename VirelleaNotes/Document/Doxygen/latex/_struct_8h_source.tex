@@ -1,0 +1,111 @@
+\doxysection{Struct.\+h}
+\hypertarget{_struct_8h_source}{}\label{_struct_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Struct.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Struct.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ 構造体}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//座標}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//float型}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_float___pos}{Float\_Pos}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{float}\ x;\ \ \ \ \textcolor{comment}{//X座標}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{float}\ y;\ \ \ \ \textcolor{comment}{//Y座標}}
+\DoxyCodeLine{00013\ \};}
+\DoxyCodeLine{00014\ \textcolor{comment}{//int型}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_int___pos}{Int\_Pos}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ x;\ \ \textcolor{comment}{//X座標}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ y;\ \ \textcolor{comment}{//Y座標}}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//画像番号,高さ,幅,角度}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//float型}}
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_image___input___f}{Image\_Input\_F}}}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ image;\ \ \ \ \textcolor{comment}{//画像}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{float}\ w;\ \ \ \ \ \ \ \ \textcolor{comment}{//幅}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{float}\ h;\ \ \ \ \ \ \ \ \textcolor{comment}{//高さ}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{float}\ rot;\ \ \ \ \ \ \textcolor{comment}{//角度(度)}}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//int型}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_image___input___i}{Image\_Input\_I}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ image;\ \ \textcolor{comment}{//画像}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ w;\ \ \ \ \ \ \textcolor{comment}{//幅}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ h;\ \ \ \ \ \ \textcolor{comment}{//高さ}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ rot;\ \ \textcolor{comment}{//角度(度)}}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{//座標,画像番号,高さ,幅,角度}}
+\DoxyCodeLine{00042\ \textcolor{comment}{//float型}}
+\DoxyCodeLine{00043\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_image___property___f}{Image\_Property\_F}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\ \ pos;\ \ \ \ \textcolor{comment}{//座標}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ image;\ \ \ \ \textcolor{comment}{//画像}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ w;\ \ \ \ \ \ \ \ \textcolor{comment}{//幅}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ \ \ \ \ h;\ \ \ \ \ \ \ \ \textcolor{comment}{//高さ}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ rot;\ \ \ \ \ \ \textcolor{comment}{//角度(度)}}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{comment}{//四角の左上座標と右下の座標}}
+\DoxyCodeLine{00053\ \textcolor{comment}{//float型}}
+\DoxyCodeLine{00054\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_box___f}{Box\_F}}}
+\DoxyCodeLine{00055\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{float}\ \ x\ =\ 0;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{float}\ \ y\ =\ 0;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{float}\ \ w\ =\ 0;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{float}\ \ h\ =\ 0;}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//int型}}
+\DoxyCodeLine{00063\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_box___i}{Box\_I}}}
+\DoxyCodeLine{00064\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{float}\ \ x\ =\ 0;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{float}\ \ y\ =\ 0;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{float}\ \ w\ =\ 0;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ \ h\ =\ 0;}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{comment}{//円の座標と半径}}
+\DoxyCodeLine{00072\ \textcolor{comment}{//float型}}
+\DoxyCodeLine{00073\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_circle___f}{Circle\_F}}}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\ pos;\textcolor{comment}{//座標}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ \ radius;\textcolor{comment}{//半径}}
+\DoxyCodeLine{00077\ \};}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{comment}{//色(RGB)}}
+\DoxyCodeLine{00080\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_r_g_b}{RGB}}}
+\DoxyCodeLine{00081\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{int}\ r\ =\ 0;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ g\ =\ 0;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ b\ =\ 0;}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{comment}{//ミサイル用(配列にするものをまとめたもの)}}
+\DoxyCodeLine{00088\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_shot___input}{Shot\_Input}}\textcolor{comment}{//座標,角度,モード(ミサイル用)}}
+\DoxyCodeLine{00089\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{float}\ x;\ \ \ \ \textcolor{comment}{//X座標}}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{float}\ y;\ \ \ \ \textcolor{comment}{//Y座標}}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{float}\ rot;\ \ \textcolor{comment}{//角度}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \ \ mode;\ \textcolor{comment}{//モード}}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{comment}{//リスト用}}
+\DoxyCodeLine{00097\ \textcolor{comment}{//float型}}
+\DoxyCodeLine{00098\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_list___box}{List\_Box}}}
+\DoxyCodeLine{00099\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{int}\ image\ =\ 0;\textcolor{comment}{//画像}}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ x\ =\ 0;\textcolor{comment}{//X座標}}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ y\ =\ 0;\textcolor{comment}{//Y座標}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ w\ =\ 0;\textcolor{comment}{//幅}}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ h\ =\ 0;\textcolor{comment}{//高さ}}
+\DoxyCodeLine{00105\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Model クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_model.html','','class_model-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Model クラス<span class="mlabels"><span class="mlabel final">final</span></span></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>3Dモデル  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_model_8h_source.html">Model.h</a>&gt;</code></p>
+<div class="dynheader">
+Model の継承関係図</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_model.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:ac127747e1f2c7fb7d6a3ff86c0dc8383" id="r_ac127747e1f2c7fb7d6a3ff86c0dc8383"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383">TextureType</a> { <br />
+&#160;&#160;<a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383a41178642cae095a6bdb909119b4d16e8">Diffuse</a>
+, <a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383a39b0044dd8789d333e7794f359406740">Specular</a>
+, <a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383a2c64c5cf613d8b9f4f7f3980d29aca10">AO</a>
+, <a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a>
+, <br />
+&#160;&#160;<a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383af879d0a27915d351a8e47c2223777710">Albedo</a>
+, <a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383a767078b82d60bc9dfaec29326b0b7c06">Roughness</a>
+, <a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383a7d8a3680c55ec85a2231e2a48ecc88f3">Metalness</a>
+, <a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383aa6b9ceeb520a512bb3184db6b54160e3">CountMax</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ac127747e1f2c7fb7d6a3ff86c0dc8383"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャの種類  <a href="#ac127747e1f2c7fb7d6a3ff86c0dc8383">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr id="pub-methods-0" class="groupHeader"><td colspan="2"><div class="groupHeader">初期化</div></td></tr>
+<tr class="memitem:ae3b375de5f6df4faf74a95d64748e048" id="r_ae3b375de5f6df4faf74a95d64748e048"><td class="memItemLeft" align="right" valign="top"><a id="ae3b375de5f6df4faf74a95d64748e048" name="ae3b375de5f6df4faf74a95d64748e048"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Model</b> ()</td></tr>
+<tr class="memdesc:ae3b375de5f6df4faf74a95d64748e048"><td class="mdescLeft">&#160;</td><td class="mdescRight">デフォルトコンストラクタ <br /></td></tr>
+<tr class="memitem:af901728cb5ba68052b87d7940dac3230" id="r_af901728cb5ba68052b87d7940dac3230"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af901728cb5ba68052b87d7940dac3230">Model</a> (std::string_view path)</td></tr>
+<tr class="memitem:a5152263c8143d2d3dc958ec04ab77e2c" id="r_a5152263c8143d2d3dc958ec04ab77e2c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5152263c8143d2d3dc958ec04ab77e2c">load</a> (std::string_view path)</td></tr>
+<tr id="pub-methods-1" class="groupHeader"><td colspan="2"><div class="groupHeader">描画</div></td></tr>
+<tr class="memitem:ab8afe0a3c375a9ca38b29d1effcce91a" id="r_ab8afe0a3c375a9ca38b29d1effcce91a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8afe0a3c375a9ca38b29d1effcce91a">update</a> (f32 dt)</td></tr>
+<tr class="memitem:aff8852b13d07a3846d612900b3fd4e5e" id="r_aff8852b13d07a3846d612900b3fd4e5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff8852b13d07a3846d612900b3fd4e5e">render</a> (<a class="el" href="class_shader_vs.html">ShaderVs</a> *override_vs=nullptr, <a class="el" href="class_shader_ps.html">ShaderPs</a> *override_ps=nullptr)</td></tr>
+<tr class="memitem:a488444a0b86c816834a3a914fdc61ec7" id="r_a488444a0b86c816834a3a914fdc61ec7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a488444a0b86c816834a3a914fdc61ec7">renderByFrame</a> (s32 frame_index, <a class="el" href="class_shader_vs.html">ShaderVs</a> *override_vs=nullptr, <a class="el" href="class_shader_ps.html">ShaderPs</a> *override_ps=nullptr)</td></tr>
+<tr id="pub-methods-2" class="groupHeader"><td colspan="2"><div class="groupHeader">設定</div></td></tr>
+<tr class="memitem:a823399bc37b8c202c1da238abf569467" id="r_a823399bc37b8c202c1da238abf569467"><td class="memItemLeft" align="right" valign="top"><a id="a823399bc37b8c202c1da238abf569467" name="a823399bc37b8c202c1da238abf569467"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setWorldMatrix</b> (const <a class="el" href="classmatrix.html">matrix</a> &amp;mat_world)</td></tr>
+<tr class="memdesc:a823399bc37b8c202c1da238abf569467"><td class="mdescLeft">&#160;</td><td class="mdescRight">ワールド行列を設定 <br /></td></tr>
+<tr class="memitem:ad4913b52989226b174e17e88fe531a97" id="r_ad4913b52989226b174e17e88fe531a97"><td class="memItemLeft" align="right" valign="top"><a id="ad4913b52989226b174e17e88fe531a97" name="ad4913b52989226b174e17e88fe531a97"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>useShader</b> (bool use)</td></tr>
+<tr class="memdesc:ad4913b52989226b174e17e88fe531a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">シェーダーを使うかどうかを設定 <br /></td></tr>
+<tr class="memitem:a2bc3ec47ebf1e447e54ade5da7b9ae95" id="r_a2bc3ec47ebf1e447e54ade5da7b9ae95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bc3ec47ebf1e447e54ade5da7b9ae95">bindAnimation</a> (<a class="el" href="class_animation.html">Animation</a> *animation)</td></tr>
+<tr class="memitem:a19f9f9806fc6502dd08853fbf0ed6cbc" id="r_a19f9f9806fc6502dd08853fbf0ed6cbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19f9f9806fc6502dd08853fbf0ed6cbc">overrideTexture</a> (<a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383">Model::TextureType</a> type, std::shared_ptr&lt; <a class="el" href="class_texture.html">Texture</a> &gt; &amp;texture)</td></tr>
+<tr class="memitem:af111655e9d3f54caa6edfa4bb4845f3e" id="r_af111655e9d3f54caa6edfa4bb4845f3e"><td class="memItemLeft" align="right" valign="top"><a id="af111655e9d3f54caa6edfa4bb4845f3e" name="af111655e9d3f54caa6edfa4bb4845f3e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>overrideTexture</b> (<a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383">Model::TextureType</a> type, nullptr_t)</td></tr>
+<tr class="memdesc:af111655e9d3f54caa6edfa4bb4845f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">テクスチャオーバーライドを解除します <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:a9089cf0cf2bc2889181f46206967b718" id="r_a9089cf0cf2bc2889181f46206967b718"><td class="memItemLeft" align="right" valign="top"><a id="a9089cf0cf2bc2889181f46206967b718" name="a9089cf0cf2bc2889181f46206967b718"></a>
+static constexpr u32&#160;</td><td class="memItemRight" valign="bottom"><b>VS_VARIANT_COUNT</b> = DX_MV1_VERTEX_TYPE_NUM</td></tr>
+<tr class="memdesc:a9089cf0cf2bc2889181f46206967b718"><td class="mdescLeft">&#160;</td><td class="mdescRight">頂点シェーダーのバリエーション数 <br /></td></tr>
+<tr class="memitem:a1ba5a63f7dcff6298a8c1ea89b12abad" id="r_a1ba5a63f7dcff6298a8c1ea89b12abad"><td class="memItemLeft" align="right" valign="top"><a id="a1ba5a63f7dcff6298a8c1ea89b12abad" name="a1ba5a63f7dcff6298a8c1ea89b12abad"></a>
+static constexpr u32&#160;</td><td class="memItemRight" valign="bottom"><b>PS_VARIANT_COUNT</b> = 1</td></tr>
+<tr class="memdesc:a1ba5a63f7dcff6298a8c1ea89b12abad"><td class="mdescLeft">&#160;</td><td class="mdescRight">ピクセルシェーダーのバリエーション数 <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-member-group" class="groupheader"><a id="member-group" name="member-group"></a>
+取得</h2></td></tr>
+<tr class="memitem:a6d6796718c2f82bb5aff6c1b6f027b95" id="r_a6d6796718c2f82bb5aff6c1b6f027b95"><td class="memItemLeft" align="right" valign="top"><a id="a6d6796718c2f82bb5aff6c1b6f027b95" name="a6d6796718c2f82bb5aff6c1b6f027b95"></a>
+s32&#160;</td><td class="memItemRight" valign="bottom"><b>frameCount</b> ()</td></tr>
+<tr class="memitem:a7cdb3b04dee78440d2f50bc5ba8f496f" id="r_a7cdb3b04dee78440d2f50bc5ba8f496f"><td class="memItemLeft" align="right" valign="top"><a id="a7cdb3b04dee78440d2f50bc5ba8f496f" name="a7cdb3b04dee78440d2f50bc5ba8f496f"></a>
+<a class="el" href="classmatrix.html">matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><b>worldMatrix</b> () const</td></tr>
+<tr class="memitem:acb78883b26b576dab9a11ab65ee36fb9" id="r_acb78883b26b576dab9a11ab65ee36fb9"><td class="memItemLeft" align="right" valign="top"><a id="acb78883b26b576dab9a11ab65ee36fb9" name="acb78883b26b576dab9a11ab65ee36fb9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator int</b> ()</td></tr>
+<tr class="memitem:accc87d0d67ed4aed6b888e231fbc77c0" id="r_accc87d0d67ed4aed6b888e231fbc77c0"><td class="memItemLeft" align="right" valign="top"><a id="accc87d0d67ed4aed6b888e231fbc77c0" name="accc87d0d67ed4aed6b888e231fbc77c0"></a>
+const std::wstring &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>path</b> () const</td></tr>
+<tr class="memitem:a436f875911534be67157ec5055ba5c4d" id="r_a436f875911534be67157ec5055ba5c4d"><td class="memItemLeft" align="right" valign="top"><a id="a436f875911534be67157ec5055ba5c4d" name="a436f875911534be67157ec5055ba5c4d"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>isValid</b> () const</td></tr>
+<tr class="memitem:a900e20ada3398b6dd12a16dd71307ae0" id="r_a900e20ada3398b6dd12a16dd71307ae0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a900e20ada3398b6dd12a16dd71307ae0">isActive</a> () const</td></tr>
+<tr class="memitem:ace0fbe89210f733a1aeb5c583316e9df" id="r_ace0fbe89210f733a1aeb5c583316e9df"><td class="memItemLeft" align="right" valign="top"><a id="ace0fbe89210f733a1aeb5c583316e9df" name="ace0fbe89210f733a1aeb5c583316e9df"></a>
+<a class="el" href="class_resource_model.html">ResourceModel</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>resource</b> () const</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>3Dモデル </p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型メンバ詳解</h2>
+<a id="ac127747e1f2c7fb7d6a3ff86c0dc8383" name="ac127747e1f2c7fb7d6a3ff86c0dc8383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac127747e1f2c7fb7d6a3ff86c0dc8383">&#9670;&#160;</a></span>TextureType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383">Model::TextureType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel strong">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>テクスチャの種類 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ac127747e1f2c7fb7d6a3ff86c0dc8383a41178642cae095a6bdb909119b4d16e8" name="ac127747e1f2c7fb7d6a3ff86c0dc8383a41178642cae095a6bdb909119b4d16e8"></a>Diffuse&#160;</td><td class="fielddoc"><p>ディフューズ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac127747e1f2c7fb7d6a3ff86c0dc8383a39b0044dd8789d333e7794f359406740" name="ac127747e1f2c7fb7d6a3ff86c0dc8383a39b0044dd8789d333e7794f359406740"></a>Specular&#160;</td><td class="fielddoc"><p>スペキュラー </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac127747e1f2c7fb7d6a3ff86c0dc8383a2c64c5cf613d8b9f4f7f3980d29aca10" name="ac127747e1f2c7fb7d6a3ff86c0dc8383a2c64c5cf613d8b9f4f7f3980d29aca10"></a>AO&#160;</td><td class="fielddoc"><p>Ambient Occlusion </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac127747e1f2c7fb7d6a3ff86c0dc8383a960b44c579bc2f6818d2daaf9e4c16f0" name="ac127747e1f2c7fb7d6a3ff86c0dc8383a960b44c579bc2f6818d2daaf9e4c16f0"></a>Normal&#160;</td><td class="fielddoc"><p>法線マップ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac127747e1f2c7fb7d6a3ff86c0dc8383af879d0a27915d351a8e47c2223777710" name="ac127747e1f2c7fb7d6a3ff86c0dc8383af879d0a27915d351a8e47c2223777710"></a>Albedo&#160;</td><td class="fielddoc"><p>アルベド </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac127747e1f2c7fb7d6a3ff86c0dc8383a767078b82d60bc9dfaec29326b0b7c06" name="ac127747e1f2c7fb7d6a3ff86c0dc8383a767078b82d60bc9dfaec29326b0b7c06"></a>Roughness&#160;</td><td class="fielddoc"><p>ラフネス </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac127747e1f2c7fb7d6a3ff86c0dc8383a7d8a3680c55ec85a2231e2a48ecc88f3" name="ac127747e1f2c7fb7d6a3ff86c0dc8383a7d8a3680c55ec85a2231e2a48ecc88f3"></a>Metalness&#160;</td><td class="fielddoc"><p>メタルネス(Metallic) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ac127747e1f2c7fb7d6a3ff86c0dc8383aa6b9ceeb520a512bb3184db6b54160e3" name="ac127747e1f2c7fb7d6a3ff86c0dc8383aa6b9ceeb520a512bb3184db6b54160e3"></a>CountMax&#160;</td><td class="fielddoc"><p>定義個数 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="af901728cb5ba68052b87d7940dac3230" name="af901728cb5ba68052b87d7940dac3230"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af901728cb5ba68052b87d7940dac3230">&#9670;&#160;</a></span>Model()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Model::Model </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a2bc3ec47ebf1e447e54ade5da7b9ae95" name="a2bc3ec47ebf1e447e54ade5da7b9ae95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc3ec47ebf1e447e54ade5da7b9ae95">&#9670;&#160;</a></span>bindAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model::bindAnimation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_animation.html">Animation</a> *</td>          <td class="paramname"><span class="paramname"><em>animation</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">animation</td><td>関連付けるアニメーション(nullptrの場合は解除する) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a900e20ada3398b6dd12a16dd71307ae0" name="a900e20ada3398b6dd12a16dd71307ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a900e20ada3398b6dd12a16dd71307ae0">&#9670;&#160;</a></span>isActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Model::isActive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section note"><dt>覚え書き</dt><dd>利用可能になっていない状態でDxLib MV1関連の関数を呼ぶと非同期ロードがブロッキングされます </dd></dl>
+
+</div>
+</div>
+<a id="a5152263c8143d2d3dc958ec04ab77e2c" name="a5152263c8143d2d3dc958ec04ab77e2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5152263c8143d2d3dc958ec04ab77e2c">&#9670;&#160;</a></span>load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Model::load </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>成功(正常終了) </td></tr>
+    <tr><td class="paramname">false</td><td>失敗(エラー終了) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a19f9f9806fc6502dd08853fbf0ed6cbc" name="a19f9f9806fc6502dd08853fbf0ed6cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f9f9806fc6502dd08853fbf0ed6cbc">&#9670;&#160;</a></span>overrideTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model::overrideTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ac127747e1f2c7fb7d6a3ff86c0dc8383">Model::TextureType</a></td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_texture.html">Texture</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>texture</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>テクスチャの種類 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">texture</td><td>オーバーライドするテクスチャ(nullptrでオーバーライド解除) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff8852b13d07a3846d612900b3fd4e5e" name="aff8852b13d07a3846d612900b3fd4e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff8852b13d07a3846d612900b3fd4e5e">&#9670;&#160;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model::render </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_shader_vs.html">ShaderVs</a> *</td>          <td class="paramname"><span class="paramname"><em>override_vs</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_shader_ps.html">ShaderPs</a> *</td>          <td class="paramname"><span class="paramname"><em>override_ps</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">override_vs</td><td>上書きする頂点シェーダー (nullptrで無効化) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">override_ps</td><td>上書きするピクセルシェーダー (nullptrで無効化) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a488444a0b86c816834a3a914fdc61ec7" name="a488444a0b86c816834a3a914fdc61ec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a488444a0b86c816834a3a914fdc61ec7">&#9670;&#160;</a></span>renderByFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model::renderByFrame </td>
+          <td>(</td>
+          <td class="paramtype">s32</td>          <td class="paramname"><span class="paramname"><em>frame_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_shader_vs.html">ShaderVs</a> *</td>          <td class="paramname"><span class="paramname"><em>override_vs</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_shader_ps.html">ShaderPs</a> *</td>          <td class="paramname"><span class="paramname"><em>override_ps</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_index</td><td>フレーム番号 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">override_vs</td><td>上書きする頂点シェーダー (nullptrで無効化) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">override_ps</td><td>上書きするピクセルシェーダー (nullptrで無効化) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>フレームの総数は frameCount() で取得することができます。 </dd></dl>
+
+</div>
+</div>
+<a id="ab8afe0a3c375a9ca38b29d1effcce91a" name="ab8afe0a3c375a9ca38b29d1effcce91a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8afe0a3c375a9ca38b29d1effcce91a">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Model::update </td>
+          <td>(</td>
+          <td class="paramtype">f32</td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dt</td><td>経過時間(単位:秒) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>覚え書き</dt><dd>速度バッファ生成用の1フレーム前の頂点を更新します </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/Engine/src/Graphics/<a class="el" href="_model_8h_source.html">Model.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_model.html">Model</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

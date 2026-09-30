@@ -1,0 +1,858 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Scene.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_scene_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Scene.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_scene_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;<a class="code" href="_object_8h.html">System/Object.h</a>&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;<a class="code" href="_component_transform_8h.html">System/Component/ComponentTransform.h</a>&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;System/Component/ComponentCamera.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;System/Utils/HelperLib.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;<a class="code" href="_cereal_8h.html">System/Cereal.h</a>&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;<a class="code" href="_type_info_8h.html">System/TypeInfo.h</a>&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;WinMain.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;sigslot/include/sigslot/signal.hpp&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// ※シーン項目に追加する場合は更新が必要となります</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">constexpr</span> <span class="keywordtype">int</span> SCENE_VERSION = 1;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_scene.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_scene.html">Scene</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">class </span>Base;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">using </span>BasePtr    = std::shared_ptr&lt;Base&gt;;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">using </span>BasePtrVec = std::vector&lt;BasePtr&gt;;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">using </span>BasePtrMap = std::unordered_map&lt;std::string, BasePtr&gt;;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#if 0</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">enum struct</span> StatusBit : <a class="code hl_typedef" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        Initialized,            </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        Serialized,             </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        AliveInAnotherScene,    </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        NoSerialize,            </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// シグナル</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">using </span>SignalsDefault = sigslot::signal&lt;&gt;;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html">   54</a></span>    <span class="keyword">class </span>Base</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">friend</span> <span class="keyword">class </span>Scene;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <a class="code hl_define" href="_type_info_8h.html#aed9c544bcefbc45da9189a4c3d3e4d6c">BP_CLASS_DECL</a>(<a class="code hl_class" href="class_scene_1_1_base.html">Scene::Base</a>, <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;シーン基底&quot;</span>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        Base();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keyword">virtual</span> ~Base();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">const</span> std::string_view GetName()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> typeInfo()-&gt;className(); }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">const</span> std::string GetGUIName()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">        </span>{</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            std::string name = <span class="stringliteral">&quot;Scene : &quot;</span> + std::string(current_scene_-&gt;typeInfo()-&gt;className());</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            <span class="keywordflow">return</span> name;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a0b3e5ef57d5a7142c71060555e2f511e">   77</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_scene_1_1_base.html#a0b3e5ef57d5a7142c71060555e2f511e">Init</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }    </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a436767ffb4cae760e2d7f4515c875efe">   79</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a436767ffb4cae760e2d7f4515c875efe">Update</a>() {}    </div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a23b645fe0ed8548384fc6ca9e322a01f">   80</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a23b645fe0ed8548384fc6ca9e322a01f">Draw</a>() {}      </div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#aea546aec5c374052aae6d7d9ac307ddf">   81</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#aea546aec5c374052aae6d7d9ac307ddf">Exit</a>() {}      </div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a604e0945cde121e2daafd9083f5969a1">   82</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a604e0945cde121e2daafd9083f5969a1">GUI</a>() {}       </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a6d8010766657dfd7e55e1a4672197e06">   84</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a6d8010766657dfd7e55e1a4672197e06">PreUpdate</a>() {}      </div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a5a6ab848cb67c7d0b644c7cbc950ba2c">   85</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a5a6ab848cb67c7d0b644c7cbc950ba2c">LateUpdate</a>() {}     </div>
+<div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#aea08d827487f7057b65609b7b9f499bf">   86</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#aea08d827487f7057b65609b7b9f499bf">PrePhysics</a>() {}     </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a320c14f22a41e294322c876e6e4d3c93">   87</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a320c14f22a41e294322c876e6e4d3c93">PostPhysics</a>() {}    </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a3d6fe564240f437764147bd750834998">   88</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a3d6fe564240f437764147bd750834998">PostUpdate</a>() {}     </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#adfd06e5a59252146b30f3c215e4bdc08">   90</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#adfd06e5a59252146b30f3c215e4bdc08">PreDraw</a>() {}     </div>
+<div class="foldopen" id="foldopen00091" data-start="{" data-end="}">
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a5e3ff265be3b00b502013944eda6f002">   91</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a5e3ff265be3b00b502013944eda6f002">LateDraw</a>() {}    </div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a77bbd7234621baaba04625a6ede8aa61">   92</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a77bbd7234621baaba04625a6ede8aa61">PostDraw</a>() {}    </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> InitSerialize() {}</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a0ede499ca7926b11efcd18a013849263">  107</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a0ede499ca7926b11efcd18a013849263">PreRegister</a>(ObjectPtr obj, <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> update = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>, <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> draw = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a0ede499ca7926b11efcd18a013849263">PreRegister</a>(T* obj, <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> update, <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> draw);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordtype">void</span> Register(ObjectPtr obj, <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> update = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>, <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> draw = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordtype">void</span> RegisterForLoad(ObjectPtr obj);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordtype">void</span> Unregister(ObjectPtr obj);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordtype">void</span> UnregisterAll();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#ae249477fac83de8b75eee5e0f28a9d72">  124</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#ae249477fac83de8b75eee5e0f28a9d72">SetPriority</a>(ObjectPtr obj, <a class="code hl_enumeration" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing, <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> priority);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a93e4eb4d09a99b641508780faa4c5086">  127</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a93e4eb4d09a99b641508780faa4c5086">SetPriority</a>(ComponentPtr commponent, <a class="code hl_enumeration" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing, <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> priority);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#aaeaacf7aeb3810c06d2da0fc026aec86">  139</a></span>        <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code hl_function" href="class_scene_1_1_base.html#aaeaacf7aeb3810c06d2da0fc026aec86">GetScene</a>();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#aadff70f4849a243e4d4856b43106b1db">  144</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#aadff70f4849a243e4d4856b43106b1db">ReleaseScene</a>();</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a980e131881724c419db9313404db840e">  147</a></span>        <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_scene_1_1_base.html#a980e131881724c419db9313404db840e">IsSceneExist</a>(<span class="keyword">const</span> BasePtr&amp; scene);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a9898e11876cbe8530faa84cf931fd717">  150</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a9898e11876cbe8530faa84cf931fd717">SetScene</a>(<span class="keyword">const</span> BasePtr&amp; scene);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#aadff70f4849a243e4d4856b43106b1db">ReleaseScene</a>(<span class="keyword">const</span> BasePtr&amp; scene);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        std::shared_ptr&lt;T&gt; <a class="code hl_function" href="class_scene_1_1_base.html#a5b7a48e79f4476c0e4cf498d8c4fb172">GetObjectPtr</a>(<span class="keyword">const</span> std::string_view name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        std::vector&lt;std::shared_ptr&lt;T&gt;&gt; <a class="code hl_function" href="class_scene_1_1_base.html#a6d21955ec981f4d1c98139de14d64998">GetObjectsPtr</a>(<span class="keyword">const</span> std::string_view name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        std::shared_ptr&lt;T&gt; GetObjectPtrWithCreate(<span class="keyword">const</span> std::string_view name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#ad1b487f83c4ec95a1fe99899dae8f98b">  173</a></span>        <span class="keyword">const</span> ObjectPtrVec <a class="code hl_function" href="class_scene_1_1_base.html#ad1b487f83c4ec95a1fe99899dae8f98b">GetObjectPtrVec</a>() { <span class="keywordflow">return</span> objects_; }</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00180" data-start="{" data-end="};">
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7">  180</a></span>        <span class="keyword">enum struct</span> <a class="code hl_enumeration" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7">StatusBit</a> : <a class="code hl_typedef" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7a59d87a4758a9d35fbaf6b204341bb399">  182</a></span>            <a class="code hl_enumvalue" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7a59d87a4758a9d35fbaf6b204341bb399">Initialized</a>,            </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7a2b59321169346822ab33b2c61dbb9975">  183</a></span>            <a class="code hl_enumvalue" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7a2b59321169346822ab33b2c61dbb9975">Serialized</a>,             </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7ac41b2d048b5d1542df09f2674fdf4649">  184</a></span>            <a class="code hl_function" href="class_scene_1_1_base.html#a4cc6bd3dc123e148708ea335e50a612b">AliveInAnotherScene</a>,    </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7a0698adfc6182853d3bf40771142a42d1">  185</a></span>            <a class="code hl_enumvalue" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7a0698adfc6182853d3bf40771142a42d1">NoSerialize</a>,            </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        };</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        <span class="keywordtype">void</span> SetStatus(<a class="code hl_enumeration" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7">StatusBit</a> b, <span class="keywordtype">bool</span> on) { on ? status_.on(b) : status_.off(b); }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <span class="keywordtype">bool</span> GetStatus(<a class="code hl_enumeration" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7">StatusBit</a> b) { <span class="keywordflow">return</span> status_.is(b); }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a4cc6bd3dc123e148708ea335e50a612b">  193</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene_1_1_base.html#a4cc6bd3dc123e148708ea335e50a612b">AliveInAnotherScene</a>(<span class="keywordtype">bool</span> alive = <span class="keyword">true</span>) { SetStatus(<a class="code hl_enumvalue" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7ac41b2d048b5d1542df09f2674fdf4649">StatusBit::AliveInAnotherScene</a>, alive); }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a32e04165973fa71845f4d1a4a1903523">  196</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_scene_1_1_base.html#a32e04165973fa71845f4d1a4a1903523">IsAliveInAnotherScene</a>() { <span class="keywordflow">return</span> GetStatus(<a class="code hl_enumvalue" href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7ac41b2d048b5d1542df09f2674fdf4649">StatusBit::AliveInAnotherScene</a>); }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        SignalsDefault&amp; GetSignals(<a class="code hl_enumeration" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing) { <span class="keywordflow">return</span> signals_[<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(timing)]; }</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        <span class="comment">//--------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a968d8f4ead2adfb84499b5cc4d4fc554">  211</a></span>        SignalsDefault&amp; <a class="code hl_function" href="class_scene_1_1_base.html#a968d8f4ead2adfb84499b5cc4d4fc554">GetSignalsShadow</a>() { <span class="keywordflow">return</span> signals_[<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ProcTiming::Shadow)]; }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a53b7e2cea3f86d1ffb0263bc6c2178f2">  214</a></span>        SignalsDefault&amp; <a class="code hl_function" href="class_scene_1_1_base.html#a53b7e2cea3f86d1ffb0263bc6c2178f2">GetSignalsGbuffer</a>() { <span class="keywordflow">return</span> signals_[<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ProcTiming::Gbuffer)]; }</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#aba38130124598c6a0c03646885ed5e02">  217</a></span>        SignalsDefault&amp; <a class="code hl_function" href="class_scene_1_1_base.html#aba38130124598c6a0c03646885ed5e02">GetSignalsLight</a>() { <span class="keywordflow">return</span> signals_[<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ProcTiming::Light)]; }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a9527ad705e8ca9d3d8c1830495ad1521">  220</a></span>        SignalsDefault&amp; <a class="code hl_function" href="class_scene_1_1_base.html#a9527ad705e8ca9d3d8c1830495ad1521">GetSignalsHDR</a>() { <span class="keywordflow">return</span> signals_[<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ProcTiming::HDR)]; }</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Save(std::string_view filename = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Load(std::string_view filename = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordtype">void</span> setProc(ObjectPtr obj, <a class="code hl_struct" href="struct_slot_proc.html">SlotProc</a>&amp; slot);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span></div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <span class="keywordtype">void</span> resetProc(ObjectPtr obj, <a class="code hl_struct" href="struct_slot_proc.html">SlotProc</a>&amp; slot);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <span class="keywordtype">void</span> setProc(ComponentPtr component, <a class="code hl_struct" href="struct_slot_proc.html">SlotProc</a>&amp; slot);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        <span class="keywordtype">void</span> resetProc(ComponentPtr component, <a class="code hl_struct" href="struct_slot_proc.html">SlotProc</a>&amp; slot);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        ObjectPtrVec      pre_objects_;    </div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        ObjectPtrVec      objects_;        </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <a class="code hl_struct" href="struct_status.html">Status&lt;StatusBit&gt;</a> status_;         </div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <span class="keywordtype">int</span> version_ = SCENE_VERSION;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>        <span class="comment">// プロセスタイミングによるシグナル (実行処理)</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        std::array&lt;SignalsDefault, static_cast&lt;int&gt;(ProcTiming::NUM)&gt; signals_;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    };</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="class_scene.html#a9c34e940e4f2ec488a0adb63b81ae67a">  265</a></span>    <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code hl_function" href="class_scene.html#a9c34e940e4f2ec488a0adb63b81ae67a">GetScene</a>()</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    {</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>        <span class="comment">// 存在する場合はシーンを返す</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        <span class="comment">// あまりよろしくはないがシーンを作成し名前を取得する</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        T           forName;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        std::string name = forName.typeInfo()-&gt;className();</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        <span class="keywordflow">if</span>(scenes_.count(name) &gt; 0) {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            <span class="keywordflow">return</span> std::dynamic_pointer_cast&lt;T&gt;(scenes_[name]);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="comment">// 存在しない場合は作成します</span></div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <span class="keyword">auto</span> scene    = std::make_shared&lt;T&gt;();</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        scenes_[name] = scene;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <span class="keywordflow">return</span> scene;</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    }</div>
+</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span></div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00284" data-start="{" data-end="}">
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno"><a class="line" href="class_scene.html#a770e8579116a453c1b263f7e34c9ce39">  284</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a770e8579116a453c1b263f7e34c9ce39">ReleaseScene</a>()</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <a class="code hl_function" href="class_scene_1_1_base.html#aadff70f4849a243e4d4856b43106b1db">Base::ReleaseScene&lt;T&gt;</a>();</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    }</div>
+</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> ReleaseScene(const ::Scene::BasePtr&amp; scene) { <a class="code hl_function" href="class_scene_1_1_base.html#aadff70f4849a243e4d4856b43106b1db">::Scene::Base::ReleaseScene</a>(scene); }</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="class_scene.html#a6c587929c515912fc5b966a115539e3e">  294</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a6c587929c515912fc5b966a115539e3e">Change</a>(BasePtr scene);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span></div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="class_scene.html#aeda746a01a50ce228d21bdb2a5b4aa5d">  297</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#aeda746a01a50ce228d21bdb2a5b4aa5d">SetNextScene</a>(BasePtr scene);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> CheckLeak();</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span></div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno"><a class="line" href="class_scene.html#a22c112358b815e776a8e282a8ee38f03">  302</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a22c112358b815e776a8e282a8ee38f03">ChangeNextScene</a>();</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="comment">//  現在アクティブなシーンを取得します</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_scene_1_1_base.html">Scene::Base</a>* GetCurrentScene();</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keyword">static</span> T* GetCurrentScene()</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>    {</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span>T*<span class="keyword">&gt;</span>(GetCurrentScene());</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    }</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span></div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
+<div class="foldopen" id="foldopen00319" data-start="{" data-end="};">
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno"><a class="line" href="struct_scene_1_1_object.html">  319</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_scene_1_1_object.html">Object</a></div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>    {</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        <span class="keyword">static</span> std::shared_ptr&lt;T&gt;    <span class="comment">//</span></div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        Create(<span class="keyword">const</span> std::string_view name         = <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;object&quot;</span>,</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>               <span class="keywordtype">bool</span>                   no_transform = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>               <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a>           update       = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>,</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>               <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a>           draw         = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>)</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordflow">if</span>(current_scene_) {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>                <span class="keyword">auto</span> tmp = std::make_shared&lt;T&gt;();</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                current_scene_-&gt;PreRegister(tmp, update, draw);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                <span class="comment">// デフォルトではComponentTransformは最初から用意する</span></div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                <span class="keywordflow">if</span>(!no_transform)</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>                    tmp-&gt;AddComponent&lt;<a class="code hl_class" href="class_component_transform.html">ComponentTransform</a>&gt;();</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                tmp-&gt;SetName(name.data());</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                <span class="comment">// Object::Init()は作成したときに行うように変更</span></div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                <span class="keywordtype">bool</span> ret = tmp-&gt;Init();</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                <span class="keywordflow">if</span>(ret) {</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    assert(<span class="stringliteral">&quot;継承先のInit()にて__super::Init()を入れてください.&quot;</span> &amp;&amp; tmp-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5a59d87a4758a9d35fbaf6b204341bb399">::Object::StatusBit::Initialized</a>));</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                }</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            }</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            assert(!<span class="stringliteral">&quot;Scene上で作成しなければなりません.&quot;</span>);</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>            <span class="keywordflow">return</span> std::shared_ptr&lt;T&gt;();</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>        }</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span></div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00354" data-start="{" data-end="}">
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="struct_scene_1_1_object.html#a078b9486831a11b682570b80e93f13a4">  354</a></span>        <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code hl_function" href="struct_scene_1_1_object.html#a078b9486831a11b682570b80e93f13a4">CreateDelayInitialize</a>(<span class="keyword">const</span> std::string_view name         = <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;object&quot;</span>,</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                                                        <span class="keywordtype">bool</span>                   no_transform = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                                                        <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a>           update       = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>,</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                                                        <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a>           draw         = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>)</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>        {</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>            <span class="keywordflow">if</span>(current_scene_) {</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>                <span class="keyword">auto</span> tmp = std::make_shared&lt;T&gt;();</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>                current_scene_-&gt;PreRegister(tmp, update, draw);</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                tmp-&gt;SetName(name.data());</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                <span class="comment">// デフォルトではComponentTransformは最初から用意する</span></div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                <span class="keywordflow">if</span>(!no_transform)</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                    tmp-&gt;AddComponent&lt;<a class="code hl_class" href="class_component_transform.html">ComponentTransform</a>&gt;();</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                <span class="keywordflow">return</span> tmp;</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>            }</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>            assert(!<span class="stringliteral">&quot;Scene上で作成しなければなりません.&quot;</span>);</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            <span class="keywordflow">return</span> std::shared_ptr&lt;T&gt;();</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        }</div>
+</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> Release()</div>
+<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>        {</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>            <span class="keyword">auto</span> obj = current_scene_-&gt;GetObjectPtr&lt;T&gt;();</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>            current_scene_-&gt;Unregister(obj);</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>        }</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> Release(std::string_view name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span> </div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> Release(ObjectPtr obj);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>        <span class="keyword">static</span> <span class="keywordtype">void</span> Release(std::vector&lt;std::shared_ptr&lt;T&gt;&gt; objs)</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>        {</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>            <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : objs) Scene::Object::Release(obj);</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        }</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span></div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00397" data-start="{" data-end="}">
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno"><a class="line" href="struct_scene_1_1_object.html#a964e234a55f60b3989ad24a26df11c15">  397</a></span>        <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code hl_function" href="struct_scene_1_1_object.html#a964e234a55f60b3989ad24a26df11c15">Get</a>(std::string_view name = <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>        {</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>            <span class="keywordflow">return</span> current_scene_-&gt;GetObjectPtr&lt;T&gt;(name);</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>        }</div>
+</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span></div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00408" data-start="{" data-end="}">
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno"><a class="line" href="struct_scene_1_1_object.html#a9748635cc87f3a1ad3b5c78767d4cc65">  408</a></span>        <span class="keyword">static</span> std::vector&lt;std::shared_ptr&lt;T&gt;&gt; <a class="code hl_function" href="struct_scene_1_1_object.html#a9748635cc87f3a1ad3b5c78767d4cc65">GetArray</a>()</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>        {</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>            <span class="keywordflow">return</span> current_scene_-&gt;GetObjectsPtr&lt;T&gt;();</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        }</div>
+</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>        <span class="keyword">static</span> std::shared_ptr&lt;T&gt; GetOrCreate(std::string_view name = <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>        {</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            <span class="keywordflow">return</span> current_scene_-&gt;GetObjectPtrWithCreate&lt;T&gt;(name);</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>        }</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>    };</div>
+</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span></div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>    [[deprecated(<span class="stringliteral">&quot;削除予定関数です　Scene::Object::Create() を利用してください&quot;</span>)]]</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>    <span class="keyword">static</span> std::shared_ptr&lt;T&gt;    <span class="comment">//</span></div>
+<div class="foldopen" id="foldopen00428" data-start="{" data-end="}">
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno"><a class="line" href="class_scene.html#a8eafc112b91ebde95fd4491d409b5334">  428</a></span>    <a class="code hl_function" href="class_scene.html#a8eafc112b91ebde95fd4491d409b5334">CreateObjectPtr</a>(<span class="keyword">const</span> std::string_view name         = <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;object&quot;</span>,</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>                    <span class="keywordtype">bool</span>                   no_transform = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>                    <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a>           update       = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>,</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>                    <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a>           draw         = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>)</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    {</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        <span class="keywordflow">return</span> Object::Create&lt;T&gt;(name, no_transform, update, draw);</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    }</div>
+</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span></div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>    [[deprecated(<span class="stringliteral">&quot;削除予定関数です　Scene::Object::CreateDelayInitialize() を利用してください&quot;</span>)]]</div>
+<div class="foldopen" id="foldopen00443" data-start="{" data-end="}">
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno"><a class="line" href="class_scene.html#a01747d00538360fded5f192a2937175b">  443</a></span>    <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code hl_function" href="class_scene.html#a01747d00538360fded5f192a2937175b">CreateObjectDelayInitialize</a>(<span class="keyword">const</span> std::string_view name         = <a class="code hl_typedef" href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a><span class="stringliteral">&quot;object&quot;</span>,</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>                                                          <span class="keywordtype">bool</span>                   no_transform = <span class="keyword">false</span>,</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>                                                          <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a>           update       = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>,</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>                                                          <a class="code hl_enumeration" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a>           draw         = <a class="code hl_enumvalue" href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">ProcPriority::NORMAL</a>)</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>    {</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="struct_scene_1_1_object.html#a078b9486831a11b682570b80e93f13a4">Object::CreateDelayInitialize&lt;T&gt;</a>(name, no_transform, update, draw);</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>    }</div>
+</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span> </div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>    [[deprecated(<span class="stringliteral">&quot;削除予定関数です　Scene::Object::Release() を利用してください&quot;</span>)]]</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> ReleaseObject()</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>    {</div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>        <span class="keyword">auto</span> obj = current_scene_-&gt;GetObjectPtr&lt;T&gt;();</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>        current_scene_-&gt;Unregister(obj);</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>    }</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span> </div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>    [[deprecated(<span class="stringliteral">&quot;削除予定関数です　Scene::Object::Release() を利用してください&quot;</span>)]]</div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> ReleaseObject(std::string_view name = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span> </div>
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>    [[deprecated(<span class="stringliteral">&quot;削除予定関数です　Scene::Object::Release() を利用してください&quot;</span>)]]</div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> ReleaseObject(ObjectPtr obj);</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span></div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span></div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno"><a class="line" href="class_scene.html#a826a3f87d3369fd96f07c5ee53e6d68d">  472</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a826a3f87d3369fd96f07c5ee53e6d68d">Init</a>();</div>
+<div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span></div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno"><a class="line" href="class_scene.html#afafc902e0171236d82a7fca75dde2133">  476</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#afafc902e0171236d82a7fca75dde2133">PreUpdate</a>();</div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span></div>
+<div class="line"><a id="l00480" name="l00480"></a><span class="lineno"><a class="line" href="class_scene.html#aa72309f8cf847a64f04ac440acf177ec">  480</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#aa72309f8cf847a64f04ac440acf177ec">Update</a>();</div>
+<div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span></div>
+<div class="line"><a id="l00484" name="l00484"></a><span class="lineno"><a class="line" href="class_scene.html#aa91900395be35598e800994cd8bd4f11">  484</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#aa91900395be35598e800994cd8bd4f11">PrePhysics</a>();</div>
+<div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span></div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno"><a class="line" href="class_scene.html#ae4235e8f87ca89870494b17d4750b8da">  488</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#ae4235e8f87ca89870494b17d4750b8da">PostPhysics</a>();</div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span></div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno"><a class="line" href="class_scene.html#a762ee910330fbab32b76e93032d229e2">  492</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a762ee910330fbab32b76e93032d229e2">PostUpdate</a>();</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span></div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno"><a class="line" href="class_scene.html#a5819841652f8cf25d474a951944a241e">  495</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a5819841652f8cf25d474a951944a241e">Draw</a>();</div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span></div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno"><a class="line" href="class_scene.html#a799864454e60bab40e690f7503ffbb4c">  498</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#a799864454e60bab40e690f7503ffbb4c">Exit</a>();</div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span></div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno"><a class="line" href="class_scene.html#ae8694d4502086d75488a0f63873daff2">  502</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#ae8694d4502086d75488a0f63873daff2">GUI</a>();</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span></div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span></div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno"><a class="line" href="class_scene.html#a193518f206eee1c3e683426005d7ca56">  513</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_scene.html#a193518f206eee1c3e683426005d7ca56">IsPause</a>();</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span></div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno"><a class="line" href="class_scene.html#ad3fac02e013073c19698b3495f8ce6f4">  517</a></span>    <span class="keyword">static</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_scene.html#ad3fac02e013073c19698b3495f8ce6f4">GetTime</a>();</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span></div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno"><a class="line" href="class_scene.html#a02f329a7c7366773d5e6ae1101464edf">  520</a></span>    <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="class_scene.html#a02f329a7c7366773d5e6ae1101464edf">GetSceneCount</a>() { <span class="keywordflow">return</span> scenes_.size(); }</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span></div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>    <span class="comment">//----------------------------------------------------------------</span></div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span></div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00533" data-start="{" data-end="}">
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno"><a class="line" href="class_scene.html#a9e143dc2e860651e852c1b45b0d9b3c3">  533</a></span>    <span class="keyword">static</span> std::shared_ptr&lt;T&gt; <a class="code hl_function" href="class_scene.html#a9e143dc2e860651e852c1b45b0d9b3c3">GetObjectPtr</a>(std::string_view name = <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>    {</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>        <span class="keywordflow">return</span> current_scene_-&gt;GetObjectPtr&lt;T&gt;(name);</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>    }</div>
+</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span></div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00544" data-start="{" data-end="}">
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno"><a class="line" href="class_scene.html#a9c9ace68b25b4ce4432a97d26dfc9271">  544</a></span>    <span class="keyword">static</span> std::vector&lt;std::shared_ptr&lt;T&gt;&gt; <a class="code hl_function" href="class_scene.html#a9c9ace68b25b4ce4432a97d26dfc9271">GetObjectsPtr</a>()</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>    {</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>        <span class="keywordflow">return</span> current_scene_-&gt;GetObjectsPtr&lt;T&gt;();</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>    }</div>
+</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span> </div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>    <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>    <span class="keyword">static</span> std::shared_ptr&lt;T&gt; GetObjectPtrWithCreate(std::string_view name = <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>    {</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>        <span class="keywordflow">return</span> current_scene_-&gt;GetObjectPtrWithCreate&lt;T&gt;(name);</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>    }</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span></div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno"><a class="line" href="class_scene.html#af593a86b122e381efc320429f34f9062">  556</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#af593a86b122e381efc320429f34f9062">CheckComponentCollisions</a>();</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span></div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno"><a class="line" href="class_scene.html#a0174d321f2cdc7506e2ffdd9861792bb">  559</a></span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_scene.html#a0174d321f2cdc7506e2ffdd9861792bb">SelectObjectWindow</a>(<span class="keyword">const</span> ObjectPtr&amp; <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span> </div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    <span class="keyword">static</span> ObjectPtr SelectObjectPtr();</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span></div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno"><a class="line" href="class_scene.html#aec9c2ca27f4d6154bced40697723d798">  565</a></span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_scene.html#aec9c2ca27f4d6154bced40697723d798">SetGUIObjectDetailSize</a>();</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>    <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span> </div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>    <span class="keyword">static</span> SignalsDefault&amp; GetSignals(<a class="code hl_enumeration" href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> timing) { <span class="keywordflow">return</span> current_scene_-&gt;GetSignals(timing); }</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span></div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SETGUI_ATTACH_LEFT   = -10000;</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SETGUI_ATTACH_RIGHT  = +10000;</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SETGUI_ATTACH_TOP    = -10000;</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SETGUI_ATTACH_BOTTOM = +10000;</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>    <span class="keyword">static</span> <span class="keywordtype">void</span>      SetGUIWindow(<span class="keywordtype">int</span> posx, <span class="keywordtype">int</span> posy, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height);</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span></div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno"><a class="line" href="class_scene.html#a371a58469c5d5a4887a0514ba5c11090">  587</a></span>    <span class="keyword">static</span> ObjectPtr <a class="code hl_function" href="class_scene.html#a371a58469c5d5a4887a0514ba5c11090">PickObject</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span></div>
+<div class="line"><a id="l00591" name="l00591"></a><span class="lineno"><a class="line" href="class_scene.html#a908202bd4ffaf8c710345e58a7e36e94">  591</a></span>    <span class="keyword">static</span> ComponentCameraWeakPtr <a class="code hl_function" href="class_scene.html#a908202bd4ffaf8c710345e58a7e36e94">GetCurrentCamera</a>();</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span></div>
+<div class="line"><a id="l00596" name="l00596"></a><span class="lineno"><a class="line" href="class_scene.html#a6b574f3017be5bb64e7e3d4c7e14aeed">  596</a></span>    <span class="keyword">static</span> ComponentCameraWeakPtr <a class="code hl_function" href="class_scene.html#a6b574f3017be5bb64e7e3d4c7e14aeed">SetCurrentCamera</a>(std::string_view name);</div>
+<div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span> </div>
+<div class="foldopen" id="foldopen00598" data-start="{" data-end="};">
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno"><a class="line" href="class_scene.html#ac92ebe1c4749abec88d8b490e8738a97">  598</a></span>    <span class="keyword">enum struct</span> <a class="code hl_enumeration" href="class_scene.html#ac92ebe1c4749abec88d8b490e8738a97">EditorStatusBit</a> : <a class="code hl_typedef" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>    {</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno"><a class="line" href="class_scene.html#ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1">  600</a></span>        <a class="code hl_enumvalue" href="class_scene.html#ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1">EditorPlacement</a>,           </div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno"><a class="line" href="class_scene.html#ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f">  601</a></span>        <a class="code hl_enumvalue" href="class_scene.html#ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f">EditorPlacement_Always</a>,    </div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>    };</div>
+</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span> </div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> SetEditorStatus(EditorStatusBit b, <span class="keywordtype">bool</span> on) { editor_status_.set(b, on); }</div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> GetEditorStatus(EditorStatusBit b) { <span class="keywordflow">return</span> editor_status_.is(b); }</div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>    <span class="keyword">static</span> Status&lt;EditorStatusBit&gt;&amp; SceneStatus() { <span class="keywordflow">return</span> editor_status_; }</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span> </div>
+<div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>    <span class="comment">//----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span> </div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> SaveEditor();</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span> </div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> LoadEditor();</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span> </div>
+<div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> Save(std::string_view filename = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span> </div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> Load(std::string_view filename = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span></div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span> </div>
+<div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>    <span class="keyword">static</span> Status&lt;EditorStatusBit&gt; editor_status_;    </div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>    <span class="keyword">static</span> float2                  inspector_size;</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>    <span class="keyword">static</span> float2                  object_detail_size;</div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span> </div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> functionSerialize(ObjectPtr obj);</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span> </div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>    <span class="comment">// シリアライズされてないものがないかチェックします</span></div>
+<div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> checkSerialized(ObjectPtr obj);</div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> checkSerialized(ComponentPtr comp);</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span> </div>
+<div class="line"><a id="l00638" name="l00638"></a><span class="lineno">  638</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> checkNextAlive();</div>
+<div class="line"><a id="l00639" name="l00639"></a><span class="lineno">  639</span> </div>
+<div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>    <span class="keyword">static</span> BasePtr current_scene_;    </div>
+<div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>    <span class="keyword">static</span> BasePtr next_scene_;       </div>
+<div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span> </div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>    <span class="keyword">static</span> BasePtrMap scenes_;    </div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>};</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span></div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00650" data-start="{" data-end="}">
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a5b7a48e79f4476c0e4cf498d8c4fb172">  650</a></span>std::shared_ptr&lt;T&gt; <a class="code hl_function" href="class_scene_1_1_base.html#a5b7a48e79f4476c0e4cf498d8c4fb172">Scene::Base::GetObjectPtr</a>(<span class="keyword">const</span> std::string_view name)</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>{</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>    <span class="keywordflow">if</span>(name.empty()) {</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : objects_) {</div>
+<div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>            <span class="keywordflow">if</span>(!obj-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">::Object::StatusBit::Alive</a>))</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span> </div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>            <span class="keyword">auto</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a> = std::dynamic_pointer_cast&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span> </div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>)</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>                <span class="keywordflow">return</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>;</div>
+<div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>        }</div>
+<div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>    }</div>
+<div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : objects_) {</div>
+<div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>            <span class="keywordflow">if</span>(!obj-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">::Object::StatusBit::Alive</a>))</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span> </div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>            <span class="keywordflow">if</span>(name.compare(obj-&gt;GetNameDefault()) == 0) {</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>                <span class="keyword">auto</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a> = std::dynamic_pointer_cast&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span> </div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>)</div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>                    <span class="keywordflow">return</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>;</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>            }</div>
+<div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>        }</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : objects_) {</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>            <span class="keywordflow">if</span>(!obj-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">::Object::StatusBit::Alive</a>))</div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span> </div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>            <span class="keywordflow">if</span>(name.compare(obj-&gt;GetName()) == 0) {</div>
+<div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>                <span class="keyword">auto</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a> = std::dynamic_pointer_cast&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span> </div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>)</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>                    <span class="keywordflow">return</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>;</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>            }</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>        }</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span> </div>
+<div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>        <span class="comment">// 作成前Objectも検査する</span></div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : pre_objects_) {</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>            <span class="keywordflow">if</span>(!obj-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">::Object::StatusBit::Alive</a>))</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span> </div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>            <span class="keywordflow">if</span>(name.compare(obj-&gt;GetNameDefault()) == 0) {</div>
+<div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>                <span class="keyword">auto</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a> = std::dynamic_pointer_cast&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span> </div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>)</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>                    <span class="keywordflow">return</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>;</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>            }</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>        }</div>
+<div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : pre_objects_) {</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>            <span class="keywordflow">if</span>(!obj-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">::Object::StatusBit::Alive</a>))</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span> </div>
+<div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>            <span class="keywordflow">if</span>(name.compare(obj-&gt;GetName()) == 0) {</div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>                <span class="keyword">auto</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a> = std::dynamic_pointer_cast&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span> </div>
+<div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>)</div>
+<div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span>                    <span class="keywordflow">return</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>;</div>
+<div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span>            }</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span>        }</div>
+<div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span>    }</div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span> </div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>}</div>
+</div>
+<div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span></div>
+<div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="foldopen" id="foldopen00719" data-start="{" data-end="}">
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno"><a class="line" href="class_scene_1_1_base.html#a6d21955ec981f4d1c98139de14d64998">  719</a></span>std::vector&lt;std::shared_ptr&lt;T&gt;&gt; <a class="code hl_function" href="class_scene_1_1_base.html#a6d21955ec981f4d1c98139de14d64998">Scene::Base::GetObjectsPtr</a>(<span class="keyword">const</span> std::string_view name)</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>{</div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>    std::vector&lt;std::shared_ptr&lt;T&gt;&gt; objects;</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span> </div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>    <span class="keywordflow">if</span>(name == <span class="stringliteral">&quot;&quot;</span>) {</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : objects_) {</div>
+<div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>            <span class="keywordflow">if</span>(!obj-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">::Object::StatusBit::Alive</a>))</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span> </div>
+<div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>            <span class="keyword">auto</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a> = std::dynamic_pointer_cast&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>)</div>
+<div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>                objects.push_back(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>);</div>
+<div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>        }</div>
+<div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : pre_objects_) {</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>            <span class="keywordflow">if</span>(!obj-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">::Object::StatusBit::Alive</a>))</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span> </div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>            <span class="keyword">auto</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a> = std::dynamic_pointer_cast&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>            <span class="keywordflow">if</span>(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>)</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>                objects.push_back(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>);</div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>        }</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    }</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : objects_) {</div>
+<div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>            <span class="keywordflow">if</span>(!obj-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">::Object::StatusBit::Alive</a>))</div>
+<div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span> </div>
+<div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span>            <span class="keywordflow">if</span>(obj-&gt;GetNameDefault() == name) {</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>                <span class="keyword">auto</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a> = std::dynamic_pointer_cast&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>)</div>
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                    objects.push_back(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>);</div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>            }</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>        }</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>        <span class="keywordflow">for</span>(<span class="keyword">auto</span>&amp; obj : pre_objects_) {</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>            <span class="keywordflow">if</span>(!obj-&gt;GetStatus(<a class="code hl_enumvalue" href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">::Object::StatusBit::Alive</a>))</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span> </div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>            <span class="keywordflow">if</span>(obj-&gt;GetNameDefault() == name) {</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>                <span class="keyword">auto</span> <a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a> = std::dynamic_pointer_cast&lt;T&gt;(obj);</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>                <span class="keywordflow">if</span>(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>)</div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>                    objects.push_back(<a class="code hl_function" href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a>);</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>            }</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>        }</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>    }</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>    <span class="keywordflow">return</span> objects;</div>
+<div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>}</div>
+</div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span> </div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>std::shared_ptr&lt;T&gt; Scene::Base::GetObjectPtrWithCreate(<span class="keyword">const</span> std::string_view name)</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>{</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    std::shared_ptr&lt;T&gt; ptr = std::dynamic_pointer_cast&lt;T&gt;(Scene::GetCurrentScene()-&gt;GetObjectPtr&lt;T&gt;(name));</div>
+<div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    <span class="keywordflow">if</span>(ptr == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>        ptr = std::dynamic_pointer_cast&lt;T&gt;(Scene::Object::Create&lt;T&gt;()-&gt;SetName(std::string(name)));</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>    }</div>
+<div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>    <span class="keywordflow">return</span> ptr;</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ttc" id="a_cereal_8h_html"><div class="ttname"><a href="_cereal_8h.html">Cereal.h</a></div><div class="ttdoc">シリアル組み込み用</div></div>
+<div class="ttc" id="a_component_transform_8h_html"><div class="ttname"><a href="_component_transform_8h.html">ComponentTransform.h</a></div><div class="ttdoc">トランスフォームコンポーネント(座標と姿勢と大きさ)</div></div>
+<div class="ttc" id="a_object_8h_html"><div class="ttname"><a href="_object_8h.html">Object.h</a></div><div class="ttdoc">オブジェクト ベースクラス</div></div>
+<div class="ttc" id="a_proc_timing_8h_html_a1c31310757b162591aa0247c84fe6ee5"><div class="ttname"><a href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a></div><div class="ttdeci">ProcPriority</div><div class="ttdoc">プライオリティ</div><div class="ttdef"><b>Definition</b> ProcTiming.h:48</div></div>
+<div class="ttc" id="a_proc_timing_8h_html_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7"><div class="ttname"><a href="_proc_timing_8h.html#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">NORMAL</a></div><div class="ttdeci">@ NORMAL</div><div class="ttdoc">通常</div><div class="ttdef"><b>Definition</b> ProcTiming.h:53</div></div>
+<div class="ttc" id="a_proc_timing_8h_html_ad69e549667e66f71bd785b024e931d6b"><div class="ttname"><a href="_proc_timing_8h.html#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a></div><div class="ttdeci">ProcTiming</div><div class="ttdoc">タイミング</div><div class="ttdef"><b>Definition</b> ProcTiming.h:21</div></div>
+<div class="ttc" id="a_type_info_8h_html"><div class="ttname"><a href="_type_info_8h.html">TypeInfo.h</a></div><div class="ttdoc">クラス型情報</div></div>
+<div class="ttc" id="a_type_info_8h_html_aed9c544bcefbc45da9189a4c3d3e4d6c"><div class="ttname"><a href="_type_info_8h.html#aed9c544bcefbc45da9189a4c3d3e4d6c">BP_CLASS_DECL</a></div><div class="ttdeci">#define BP_CLASS_DECL(CLASS,...)</div><div class="ttdef"><b>Definition</b> TypeInfo.h:132</div></div>
+<div class="ttc" id="a_typedef_8h_html_a1af9f95651e921615e75917a6dd1b574"><div class="ttname"><a href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div><div class="ttdeci">uint64_t u64</div><div class="ttdoc">64bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:24</div></div>
+<div class="ttc" id="a_typedef_8h_html_a987e4d6cf789cb59dbb390728271e4d6"><div class="ttname"><a href="_typedef_8h.html#a987e4d6cf789cb59dbb390728271e4d6">u8</a></div><div class="ttdeci">uint8_t u8</div><div class="ttdoc">8bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:21</div></div>
+<div class="ttc" id="a_vector_math_8h_html_acaf43804f3b1a2e96e58f2ccbbeaab76"><div class="ttname"><a href="_vector_math_8h.html#acaf43804f3b1a2e96e58f2ccbbeaab76">cast</a></div><div class="ttdeci">DxLib::FLOAT2 cast(const float2 &amp;v)</div><div class="ttdoc">DxLib::FLOAT2へキャスト</div><div class="ttdef"><b>Definition</b> VectorMath.h:13</div></div>
+<div class="ttc" id="aclass_component_transform_html"><div class="ttname"><a href="class_component_transform.html">ComponentTransform</a></div><div class="ttdoc">トランスフォーム</div><div class="ttdef"><b>Definition</b> ComponentTransform.h:434</div></div>
+<div class="ttc" id="aclass_object_html_aafc37500c8cc28e401e8e6bc07e8c0b5a59d87a4758a9d35fbaf6b204341bb399"><div class="ttname"><a href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5a59d87a4758a9d35fbaf6b204341bb399">Object::StatusBit::Initialized</a></div><div class="ttdeci">@ Initialized</div><div class="ttdoc">初期化終了</div><div class="ttdef"><b>Definition</b> Object.h:245</div></div>
+<div class="ttc" id="aclass_object_html_aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f"><div class="ttname"><a href="class_object.html#aafc37500c8cc28e401e8e6bc07e8c0b5abd9f7c5d6ab4201b138a3e51dab7056f">Object::StatusBit::Alive</a></div><div class="ttdeci">@ Alive</div><div class="ttdoc">生存状態</div><div class="ttdef"><b>Definition</b> Object.h:242</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html"><div class="ttname"><a href="class_scene_1_1_base.html">Scene::Base</a></div><div class="ttdoc">シーンベース</div><div class="ttdef"><b>Definition</b> Scene.h:55</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a0b3e5ef57d5a7142c71060555e2f511e"><div class="ttname"><a href="class_scene_1_1_base.html#a0b3e5ef57d5a7142c71060555e2f511e">Scene::Base::Init</a></div><div class="ttdeci">virtual bool Init()</div><div class="ttdoc">初期化</div><div class="ttdef"><b>Definition</b> Scene.h:77</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a0ede499ca7926b11efcd18a013849263"><div class="ttname"><a href="class_scene_1_1_base.html#a0ede499ca7926b11efcd18a013849263">Scene::Base::PreRegister</a></div><div class="ttdeci">void PreRegister(ObjectPtr obj, ProcPriority update=ProcPriority::NORMAL, ProcPriority draw=ProcPriority::NORMAL)</div><div class="ttdoc">オブジェクト仮登録</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a23b645fe0ed8548384fc6ca9e322a01f"><div class="ttname"><a href="class_scene_1_1_base.html#a23b645fe0ed8548384fc6ca9e322a01f">Scene::Base::Draw</a></div><div class="ttdeci">virtual void Draw()</div><div class="ttdoc">描画</div><div class="ttdef"><b>Definition</b> Scene.h:80</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a2ac5650dcabca5c8617be8d1bfd4ebf7"><div class="ttname"><a href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7">Scene::Base::StatusBit</a></div><div class="ttdeci">StatusBit</div><div class="ttdef"><b>Definition</b> Scene.h:181</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a2ac5650dcabca5c8617be8d1bfd4ebf7a0698adfc6182853d3bf40771142a42d1"><div class="ttname"><a href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7a0698adfc6182853d3bf40771142a42d1">Scene::Base::StatusBit::NoSerialize</a></div><div class="ttdeci">@ NoSerialize</div><div class="ttdoc">シリアライズしない.</div><div class="ttdef"><b>Definition</b> Scene.h:185</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a2ac5650dcabca5c8617be8d1bfd4ebf7a2b59321169346822ab33b2c61dbb9975"><div class="ttname"><a href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7a2b59321169346822ab33b2c61dbb9975">Scene::Base::StatusBit::Serialized</a></div><div class="ttdeci">@ Serialized</div><div class="ttdoc">シリアライズ済み.</div><div class="ttdef"><b>Definition</b> Scene.h:183</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a2ac5650dcabca5c8617be8d1bfd4ebf7a59d87a4758a9d35fbaf6b204341bb399"><div class="ttname"><a href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7a59d87a4758a9d35fbaf6b204341bb399">Scene::Base::StatusBit::Initialized</a></div><div class="ttdeci">@ Initialized</div><div class="ttdoc">初期化済み</div><div class="ttdef"><b>Definition</b> Scene.h:182</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a2ac5650dcabca5c8617be8d1bfd4ebf7ac41b2d048b5d1542df09f2674fdf4649"><div class="ttname"><a href="class_scene_1_1_base.html#a2ac5650dcabca5c8617be8d1bfd4ebf7ac41b2d048b5d1542df09f2674fdf4649">Scene::Base::StatusBit::AliveInAnotherScene</a></div><div class="ttdeci">@ AliveInAnotherScene</div><div class="ttdoc">別シーン移行でも終了しない</div><div class="ttdef"><b>Definition</b> Scene.h:184</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a320c14f22a41e294322c876e6e4d3c93"><div class="ttname"><a href="class_scene_1_1_base.html#a320c14f22a41e294322c876e6e4d3c93">Scene::Base::PostPhysics</a></div><div class="ttdeci">virtual void PostPhysics()</div><div class="ttdoc">物理後処理</div><div class="ttdef"><b>Definition</b> Scene.h:87</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a32e04165973fa71845f4d1a4a1903523"><div class="ttname"><a href="class_scene_1_1_base.html#a32e04165973fa71845f4d1a4a1903523">Scene::Base::IsAliveInAnotherScene</a></div><div class="ttdeci">bool IsAliveInAnotherScene()</div><div class="ttdoc">別のシーンで生存するように設定されているか?</div><div class="ttdef"><b>Definition</b> Scene.h:196</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a3d6fe564240f437764147bd750834998"><div class="ttname"><a href="class_scene_1_1_base.html#a3d6fe564240f437764147bd750834998">Scene::Base::PostUpdate</a></div><div class="ttdeci">virtual void PostUpdate()</div><div class="ttdoc">更新後(物理後)処理</div><div class="ttdef"><b>Definition</b> Scene.h:88</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a436767ffb4cae760e2d7f4515c875efe"><div class="ttname"><a href="class_scene_1_1_base.html#a436767ffb4cae760e2d7f4515c875efe">Scene::Base::Update</a></div><div class="ttdeci">virtual void Update()</div><div class="ttdoc">更新</div><div class="ttdef"><b>Definition</b> Scene.h:79</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a4cc6bd3dc123e148708ea335e50a612b"><div class="ttname"><a href="class_scene_1_1_base.html#a4cc6bd3dc123e148708ea335e50a612b">Scene::Base::AliveInAnotherScene</a></div><div class="ttdeci">void AliveInAnotherScene(bool alive=true)</div><div class="ttdoc">別のシーンで生存するように設定する</div><div class="ttdef"><b>Definition</b> Scene.h:193</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a53b7e2cea3f86d1ffb0263bc6c2178f2"><div class="ttname"><a href="class_scene_1_1_base.html#a53b7e2cea3f86d1ffb0263bc6c2178f2">Scene::Base::GetSignalsGbuffer</a></div><div class="ttdeci">SignalsDefault &amp; GetSignalsGbuffer()</div><div class="ttdoc">Gbufferタイミングシグナル取得</div><div class="ttdef"><b>Definition</b> Scene.h:214</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a5a6ab848cb67c7d0b644c7cbc950ba2c"><div class="ttname"><a href="class_scene_1_1_base.html#a5a6ab848cb67c7d0b644c7cbc950ba2c">Scene::Base::LateUpdate</a></div><div class="ttdeci">virtual void LateUpdate()</div><div class="ttdoc">通常更新の後更新処理</div><div class="ttdef"><b>Definition</b> Scene.h:85</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a5b7a48e79f4476c0e4cf498d8c4fb172"><div class="ttname"><a href="class_scene_1_1_base.html#a5b7a48e79f4476c0e4cf498d8c4fb172">Scene::Base::GetObjectPtr</a></div><div class="ttdeci">std::shared_ptr&lt; T &gt; GetObjectPtr(const std::string_view name=&quot;&quot;)</div><div class="ttdoc">オブジェクト取得</div><div class="ttdef"><b>Definition</b> Scene.h:650</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a5e3ff265be3b00b502013944eda6f002"><div class="ttname"><a href="class_scene_1_1_base.html#a5e3ff265be3b00b502013944eda6f002">Scene::Base::LateDraw</a></div><div class="ttdeci">virtual void LateDraw()</div><div class="ttdoc">遅い描画の処理</div><div class="ttdef"><b>Definition</b> Scene.h:91</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a604e0945cde121e2daafd9083f5969a1"><div class="ttname"><a href="class_scene_1_1_base.html#a604e0945cde121e2daafd9083f5969a1">Scene::Base::GUI</a></div><div class="ttdeci">virtual void GUI()</div><div class="ttdoc">GUI表示</div><div class="ttdef"><b>Definition</b> Scene.h:82</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a6d21955ec981f4d1c98139de14d64998"><div class="ttname"><a href="class_scene_1_1_base.html#a6d21955ec981f4d1c98139de14d64998">Scene::Base::GetObjectsPtr</a></div><div class="ttdeci">std::vector&lt; std::shared_ptr&lt; T &gt; &gt; GetObjectsPtr(const std::string_view name=&quot;&quot;)</div><div class="ttdef"><b>Definition</b> Scene.h:719</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a6d8010766657dfd7e55e1a4672197e06"><div class="ttname"><a href="class_scene_1_1_base.html#a6d8010766657dfd7e55e1a4672197e06">Scene::Base::PreUpdate</a></div><div class="ttdeci">virtual void PreUpdate()</div><div class="ttdoc">更新前処理</div><div class="ttdef"><b>Definition</b> Scene.h:84</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a77bbd7234621baaba04625a6ede8aa61"><div class="ttname"><a href="class_scene_1_1_base.html#a77bbd7234621baaba04625a6ede8aa61">Scene::Base::PostDraw</a></div><div class="ttdeci">virtual void PostDraw()</div><div class="ttdoc">描画後の処理</div><div class="ttdef"><b>Definition</b> Scene.h:92</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a93e4eb4d09a99b641508780faa4c5086"><div class="ttname"><a href="class_scene_1_1_base.html#a93e4eb4d09a99b641508780faa4c5086">Scene::Base::SetPriority</a></div><div class="ttdeci">void SetPriority(ComponentPtr commponent, ProcTiming timing, ProcPriority priority)</div><div class="ttdoc">優先を設定変更します</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a9527ad705e8ca9d3d8c1830495ad1521"><div class="ttname"><a href="class_scene_1_1_base.html#a9527ad705e8ca9d3d8c1830495ad1521">Scene::Base::GetSignalsHDR</a></div><div class="ttdeci">SignalsDefault &amp; GetSignalsHDR()</div><div class="ttdoc">Lightタイミングシグナル取得</div><div class="ttdef"><b>Definition</b> Scene.h:220</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a968d8f4ead2adfb84499b5cc4d4fc554"><div class="ttname"><a href="class_scene_1_1_base.html#a968d8f4ead2adfb84499b5cc4d4fc554">Scene::Base::GetSignalsShadow</a></div><div class="ttdeci">SignalsDefault &amp; GetSignalsShadow()</div><div class="ttdoc">Shadowタイミングシグナル取得</div><div class="ttdef"><b>Definition</b> Scene.h:211</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a980e131881724c419db9313404db840e"><div class="ttname"><a href="class_scene_1_1_base.html#a980e131881724c419db9313404db840e">Scene::Base::IsSceneExist</a></div><div class="ttdeci">static bool IsSceneExist(const BasePtr &amp;scene)</div><div class="ttdoc">確保しているものに同じシーンタイプがいないかチェックする</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_a9898e11876cbe8530faa84cf931fd717"><div class="ttname"><a href="class_scene_1_1_base.html#a9898e11876cbe8530faa84cf931fd717">Scene::Base::SetScene</a></div><div class="ttdeci">static void SetScene(const BasePtr &amp;scene)</div><div class="ttdoc">シーン確保 (GetSceneを使ってない場合の対処)</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_aadff70f4849a243e4d4856b43106b1db"><div class="ttname"><a href="class_scene_1_1_base.html#aadff70f4849a243e4d4856b43106b1db">Scene::Base::ReleaseScene</a></div><div class="ttdeci">static void ReleaseScene()</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_aaeaacf7aeb3810c06d2da0fc026aec86"><div class="ttname"><a href="class_scene_1_1_base.html#aaeaacf7aeb3810c06d2da0fc026aec86">Scene::Base::GetScene</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; GetScene()</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_aba38130124598c6a0c03646885ed5e02"><div class="ttname"><a href="class_scene_1_1_base.html#aba38130124598c6a0c03646885ed5e02">Scene::Base::GetSignalsLight</a></div><div class="ttdeci">SignalsDefault &amp; GetSignalsLight()</div><div class="ttdoc">Lightタイミングシグナル取得</div><div class="ttdef"><b>Definition</b> Scene.h:217</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_ad1b487f83c4ec95a1fe99899dae8f98b"><div class="ttname"><a href="class_scene_1_1_base.html#ad1b487f83c4ec95a1fe99899dae8f98b">Scene::Base::GetObjectPtrVec</a></div><div class="ttdeci">const ObjectPtrVec GetObjectPtrVec()</div><div class="ttdoc">複数オブジェクト配列の取得</div><div class="ttdef"><b>Definition</b> Scene.h:173</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_adfd06e5a59252146b30f3c215e4bdc08"><div class="ttname"><a href="class_scene_1_1_base.html#adfd06e5a59252146b30f3c215e4bdc08">Scene::Base::PreDraw</a></div><div class="ttdeci">virtual void PreDraw()</div><div class="ttdoc">描画前処理</div><div class="ttdef"><b>Definition</b> Scene.h:90</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_ae249477fac83de8b75eee5e0f28a9d72"><div class="ttname"><a href="class_scene_1_1_base.html#ae249477fac83de8b75eee5e0f28a9d72">Scene::Base::SetPriority</a></div><div class="ttdeci">void SetPriority(ObjectPtr obj, ProcTiming timing, ProcPriority priority)</div><div class="ttdoc">優先を設定変更します</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_aea08d827487f7057b65609b7b9f499bf"><div class="ttname"><a href="class_scene_1_1_base.html#aea08d827487f7057b65609b7b9f499bf">Scene::Base::PrePhysics</a></div><div class="ttdeci">virtual void PrePhysics()</div><div class="ttdoc">物理前(アクション後)処理</div><div class="ttdef"><b>Definition</b> Scene.h:86</div></div>
+<div class="ttc" id="aclass_scene_1_1_base_html_aea546aec5c374052aae6d7d9ac307ddf"><div class="ttname"><a href="class_scene_1_1_base.html#aea546aec5c374052aae6d7d9ac307ddf">Scene::Base::Exit</a></div><div class="ttdeci">virtual void Exit()</div><div class="ttdoc">終了</div><div class="ttdef"><b>Definition</b> Scene.h:81</div></div>
+<div class="ttc" id="aclass_scene_html"><div class="ttname"><a href="class_scene.html">Scene</a></div><div class="ttdef"><b>Definition</b> Scene.h:27</div></div>
+<div class="ttc" id="aclass_scene_html_a01747d00538360fded5f192a2937175b"><div class="ttname"><a href="class_scene.html#a01747d00538360fded5f192a2937175b">Scene::CreateObjectDelayInitialize</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; CreateObjectDelayInitialize(const std::string_view name=u8&quot;object&quot;, bool no_transform=false, ProcPriority update=ProcPriority::NORMAL, ProcPriority draw=ProcPriority::NORMAL)</div><div class="ttdef"><b>Definition</b> Scene.h:443</div></div>
+<div class="ttc" id="aclass_scene_html_a0174d321f2cdc7506e2ffdd9861792bb"><div class="ttname"><a href="class_scene.html#a0174d321f2cdc7506e2ffdd9861792bb">Scene::SelectObjectWindow</a></div><div class="ttdeci">static bool SelectObjectWindow(const ObjectPtr &amp;object)</div><div class="ttdoc">セレクトしているオブジェクトかをチェックする</div></div>
+<div class="ttc" id="aclass_scene_html_a02f329a7c7366773d5e6ae1101464edf"><div class="ttname"><a href="class_scene.html#a02f329a7c7366773d5e6ae1101464edf">Scene::GetSceneCount</a></div><div class="ttdeci">static size_t GetSceneCount()</div><div class="ttdoc">存在するシーン数</div><div class="ttdef"><b>Definition</b> Scene.h:520</div></div>
+<div class="ttc" id="aclass_scene_html_a193518f206eee1c3e683426005d7ca56"><div class="ttname"><a href="class_scene.html#a193518f206eee1c3e683426005d7ca56">Scene::IsPause</a></div><div class="ttdeci">static bool IsPause()</div></div>
+<div class="ttc" id="aclass_scene_html_a22c112358b815e776a8e282a8ee38f03"><div class="ttname"><a href="class_scene.html#a22c112358b815e776a8e282a8ee38f03">Scene::ChangeNextScene</a></div><div class="ttdeci">static void ChangeNextScene()</div><div class="ttdoc">次のシーンに切り替える</div></div>
+<div class="ttc" id="aclass_scene_html_a371a58469c5d5a4887a0514ba5c11090"><div class="ttname"><a href="class_scene.html#a371a58469c5d5a4887a0514ba5c11090">Scene::PickObject</a></div><div class="ttdeci">static ObjectPtr PickObject(int x, int y)</div><div class="ttdoc">オブジェクト選択</div></div>
+<div class="ttc" id="aclass_scene_html_a5819841652f8cf25d474a951944a241e"><div class="ttname"><a href="class_scene.html#a5819841652f8cf25d474a951944a241e">Scene::Draw</a></div><div class="ttdeci">static void Draw()</div><div class="ttdoc">シーン描画</div></div>
+<div class="ttc" id="aclass_scene_html_a6b574f3017be5bb64e7e3d4c7e14aeed"><div class="ttname"><a href="class_scene.html#a6b574f3017be5bb64e7e3d4c7e14aeed">Scene::SetCurrentCamera</a></div><div class="ttdeci">static ComponentCameraWeakPtr SetCurrentCamera(std::string_view name)</div><div class="ttdoc">オブジェクトの名前でのカレントカメラの設定</div></div>
+<div class="ttc" id="aclass_scene_html_a6c587929c515912fc5b966a115539e3e"><div class="ttname"><a href="class_scene.html#a6c587929c515912fc5b966a115539e3e">Scene::Change</a></div><div class="ttdeci">static void Change(BasePtr scene)</div></div>
+<div class="ttc" id="aclass_scene_html_a762ee910330fbab32b76e93032d229e2"><div class="ttname"><a href="class_scene.html#a762ee910330fbab32b76e93032d229e2">Scene::PostUpdate</a></div><div class="ttdeci">static void PostUpdate()</div><div class="ttdoc">シーン更新後の処理 @detail Physicsおよびすべての当たり判定後に処理します</div></div>
+<div class="ttc" id="aclass_scene_html_a770e8579116a453c1b263f7e34c9ce39"><div class="ttname"><a href="class_scene.html#a770e8579116a453c1b263f7e34c9ce39">Scene::ReleaseScene</a></div><div class="ttdeci">static void ReleaseScene()</div><div class="ttdef"><b>Definition</b> Scene.h:284</div></div>
+<div class="ttc" id="aclass_scene_html_a799864454e60bab40e690f7503ffbb4c"><div class="ttname"><a href="class_scene.html#a799864454e60bab40e690f7503ffbb4c">Scene::Exit</a></div><div class="ttdeci">static void Exit()</div><div class="ttdoc">シーン終了</div></div>
+<div class="ttc" id="aclass_scene_html_a826a3f87d3369fd96f07c5ee53e6d68d"><div class="ttname"><a href="class_scene.html#a826a3f87d3369fd96f07c5ee53e6d68d">Scene::Init</a></div><div class="ttdeci">static void Init()</div><div class="ttdoc">初期化処理</div></div>
+<div class="ttc" id="aclass_scene_html_a8eafc112b91ebde95fd4491d409b5334"><div class="ttname"><a href="class_scene.html#a8eafc112b91ebde95fd4491d409b5334">Scene::CreateObjectPtr</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; CreateObjectPtr(const std::string_view name=u8&quot;object&quot;, bool no_transform=false, ProcPriority update=ProcPriority::NORMAL, ProcPriority draw=ProcPriority::NORMAL)</div><div class="ttdef"><b>Definition</b> Scene.h:428</div></div>
+<div class="ttc" id="aclass_scene_html_a908202bd4ffaf8c710345e58a7e36e94"><div class="ttname"><a href="class_scene.html#a908202bd4ffaf8c710345e58a7e36e94">Scene::GetCurrentCamera</a></div><div class="ttdeci">static ComponentCameraWeakPtr GetCurrentCamera()</div><div class="ttdoc">カレントカメラの取得</div></div>
+<div class="ttc" id="aclass_scene_html_a9c34e940e4f2ec488a0adb63b81ae67a"><div class="ttname"><a href="class_scene.html#a9c34e940e4f2ec488a0adb63b81ae67a">Scene::GetScene</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; GetScene()</div><div class="ttdef"><b>Definition</b> Scene.h:265</div></div>
+<div class="ttc" id="aclass_scene_html_a9c9ace68b25b4ce4432a97d26dfc9271"><div class="ttname"><a href="class_scene.html#a9c9ace68b25b4ce4432a97d26dfc9271">Scene::GetObjectsPtr</a></div><div class="ttdeci">static std::vector&lt; std::shared_ptr&lt; T &gt; &gt; GetObjectsPtr()</div><div class="ttdoc">オブジェクトサーチ&amp;取得</div><div class="ttdef"><b>Definition</b> Scene.h:544</div></div>
+<div class="ttc" id="aclass_scene_html_a9e143dc2e860651e852c1b45b0d9b3c3"><div class="ttname"><a href="class_scene.html#a9e143dc2e860651e852c1b45b0d9b3c3">Scene::GetObjectPtr</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; GetObjectPtr(std::string_view name=&quot;&quot;)</div><div class="ttdoc">オブジェクトサーチ&amp;取得</div><div class="ttdef"><b>Definition</b> Scene.h:533</div></div>
+<div class="ttc" id="aclass_scene_html_aa72309f8cf847a64f04ac440acf177ec"><div class="ttname"><a href="class_scene.html#aa72309f8cf847a64f04ac440acf177ec">Scene::Update</a></div><div class="ttdeci">static void Update()</div></div>
+<div class="ttc" id="aclass_scene_html_aa91900395be35598e800994cd8bd4f11"><div class="ttname"><a href="class_scene.html#aa91900395be35598e800994cd8bd4f11">Scene::PrePhysics</a></div><div class="ttdeci">static void PrePhysics()</div><div class="ttdoc">Physics前処理 @detail OwnerObject移動によるコリジョンコンポーネント前処理</div></div>
+<div class="ttc" id="aclass_scene_html_ac92ebe1c4749abec88d8b490e8738a97"><div class="ttname"><a href="class_scene.html#ac92ebe1c4749abec88d8b490e8738a97">Scene::EditorStatusBit</a></div><div class="ttdeci">EditorStatusBit</div><div class="ttdef"><b>Definition</b> Scene.h:599</div></div>
+<div class="ttc" id="aclass_scene_html_ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1"><div class="ttname"><a href="class_scene.html#ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1">Scene::EditorStatusBit::EditorPlacement</a></div><div class="ttdeci">@ EditorPlacement</div><div class="ttdoc">エディタ配置</div><div class="ttdef"><b>Definition</b> Scene.h:600</div></div>
+<div class="ttc" id="aclass_scene_html_ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f"><div class="ttname"><a href="class_scene.html#ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f">Scene::EditorStatusBit::EditorPlacement_Always</a></div><div class="ttdeci">@ EditorPlacement_Always</div><div class="ttdoc">エディタ配置(常に引っ付く)</div><div class="ttdef"><b>Definition</b> Scene.h:601</div></div>
+<div class="ttc" id="aclass_scene_html_ad3fac02e013073c19698b3495f8ce6f4"><div class="ttname"><a href="class_scene.html#ad3fac02e013073c19698b3495f8ce6f4">Scene::GetTime</a></div><div class="ttdeci">static float GetTime()</div></div>
+<div class="ttc" id="aclass_scene_html_ae4235e8f87ca89870494b17d4750b8da"><div class="ttname"><a href="class_scene.html#ae4235e8f87ca89870494b17d4750b8da">Scene::PostPhysics</a></div><div class="ttdeci">static void PostPhysics()</div><div class="ttdoc">Physics後処理 @detail OwnerObject移動によるコリジョンコンポーネント移動後処理</div></div>
+<div class="ttc" id="aclass_scene_html_ae8694d4502086d75488a0f63873daff2"><div class="ttname"><a href="class_scene.html#ae8694d4502086d75488a0f63873daff2">Scene::GUI</a></div><div class="ttdeci">static void GUI()</div><div class="ttdoc">シーンGUI @detail ※この処理はUpdate後に行う必要があります</div></div>
+<div class="ttc" id="aclass_scene_html_aec9c2ca27f4d6154bced40697723d798"><div class="ttname"><a href="class_scene.html#aec9c2ca27f4d6154bced40697723d798">Scene::SetGUIObjectDetailSize</a></div><div class="ttdeci">static void SetGUIObjectDetailSize()</div><div class="ttdoc">GUIオブジェクトのEditor設定であるためObjectでなくこちらで設定する</div></div>
+<div class="ttc" id="aclass_scene_html_aeda746a01a50ce228d21bdb2a5b4aa5d"><div class="ttname"><a href="class_scene.html#aeda746a01a50ce228d21bdb2a5b4aa5d">Scene::SetNextScene</a></div><div class="ttdeci">static void SetNextScene(BasePtr scene)</div><div class="ttdoc">次のシーンをセットする</div></div>
+<div class="ttc" id="aclass_scene_html_af593a86b122e381efc320429f34f9062"><div class="ttname"><a href="class_scene.html#af593a86b122e381efc320429f34f9062">Scene::CheckComponentCollisions</a></div><div class="ttdeci">static void CheckComponentCollisions()</div><div class="ttdoc">ComponentCollisionの当たり判定を行う</div></div>
+<div class="ttc" id="aclass_scene_html_afafc902e0171236d82a7fca75dde2133"><div class="ttname"><a href="class_scene.html#afafc902e0171236d82a7fca75dde2133">Scene::PreUpdate</a></div><div class="ttdeci">static void PreUpdate()</div><div class="ttdoc">シーン更新前処理 @detail 基本的にはUpdate集団より先にで行いたいものをこの層で処理します</div></div>
+<div class="ttc" id="astruct_scene_1_1_object_html"><div class="ttname"><a href="struct_scene_1_1_object.html">Scene::Object</a></div><div class="ttdef"><b>Definition</b> Scene.h:320</div></div>
+<div class="ttc" id="astruct_scene_1_1_object_html_a078b9486831a11b682570b80e93f13a4"><div class="ttname"><a href="struct_scene_1_1_object.html#a078b9486831a11b682570b80e93f13a4">Scene::Object::CreateDelayInitialize</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; CreateDelayInitialize(const std::string_view name=u8&quot;object&quot;, bool no_transform=false, ProcPriority update=ProcPriority::NORMAL, ProcPriority draw=ProcPriority::NORMAL)</div><div class="ttdef"><b>Definition</b> Scene.h:354</div></div>
+<div class="ttc" id="astruct_scene_1_1_object_html_a964e234a55f60b3989ad24a26df11c15"><div class="ttname"><a href="struct_scene_1_1_object.html#a964e234a55f60b3989ad24a26df11c15">Scene::Object::Get</a></div><div class="ttdeci">static std::shared_ptr&lt; T &gt; Get(std::string_view name=&quot;&quot;)</div><div class="ttdoc">オブジェクトサーチ&amp;取得</div><div class="ttdef"><b>Definition</b> Scene.h:397</div></div>
+<div class="ttc" id="astruct_scene_1_1_object_html_a9748635cc87f3a1ad3b5c78767d4cc65"><div class="ttname"><a href="struct_scene_1_1_object.html#a9748635cc87f3a1ad3b5c78767d4cc65">Scene::Object::GetArray</a></div><div class="ttdeci">static std::vector&lt; std::shared_ptr&lt; T &gt; &gt; GetArray()</div><div class="ttdoc">オブジェクトサーチ&amp;取得</div><div class="ttdef"><b>Definition</b> Scene.h:408</div></div>
+<div class="ttc" id="astruct_slot_proc_html"><div class="ttname"><a href="struct_slot_proc.html">SlotProc</a></div><div class="ttdoc">スロット</div><div class="ttdef"><b>Definition</b> ProcTiming.h:110</div></div>
+<div class="ttc" id="astruct_status_html"><div class="ttname"><a href="struct_status.html">Status</a></div><div class="ttdoc">ステータス</div><div class="ttdef"><b>Definition</b> Status.h:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="_scene_8h.html">Scene.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

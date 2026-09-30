@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: Texture クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_texture.html','','class_texture-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Texture クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>テクスチャ  
+ <a href="#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_texture_8h_source.html">Texture.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae9a85f7b33715ef0e68edce67be843a3" id="r_ae9a85f7b33715ef0e68edce67be843a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9a85f7b33715ef0e68edce67be843a3">Texture</a> (ID3D11Resource *d3d_resource)</td></tr>
+<tr class="memitem:a11fcd56485771262b0a6531ac462859c" id="r_a11fcd56485771262b0a6531ac462859c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11fcd56485771262b0a6531ac462859c">Texture</a> (int graphic_handle)</td></tr>
+<tr class="memitem:af842a6fc3ecf83d8a1c94817ab98cb24" id="r_af842a6fc3ecf83d8a1c94817ab98cb24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af842a6fc3ecf83d8a1c94817ab98cb24">Texture</a> (std::string_view path)</td></tr>
+<tr class="memitem:a9deee0cc32ca74cdf8275bc19c4134fa" id="r_a9deee0cc32ca74cdf8275bc19c4134fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9deee0cc32ca74cdf8275bc19c4134fa">Texture</a> (u32 <a class="el" href="#a9c341afd0ca1af6d79c67c89eff67d25">width</a>, u32 height, DXGI_FORMAT dxgi_format)</td></tr>
+<tr class="memitem:ae02304cd1a555cd43b0af49162102a1a" id="r_ae02304cd1a555cd43b0af49162102a1a"><td class="memItemLeft" align="right" valign="top"><a id="ae02304cd1a555cd43b0af49162102a1a" name="ae02304cd1a555cd43b0af49162102a1a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memitem:a9c341afd0ca1af6d79c67c89eff67d25" id="r_a9c341afd0ca1af6d79c67c89eff67d25"><td class="memItemLeft" align="right" valign="top">u32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c341afd0ca1af6d79c67c89eff67d25">width</a> () const</td></tr>
+<tr class="memitem:a22a0dedfb70725f0b78c295e8e4bb0b9" id="r_a22a0dedfb70725f0b78c295e8e4bb0b9"><td class="memItemLeft" align="right" valign="top"><a id="a22a0dedfb70725f0b78c295e8e4bb0b9" name="a22a0dedfb70725f0b78c295e8e4bb0b9"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> () const</td></tr>
+<tr class="memitem:a91c9a5e26823f3f5d109bbfcb65ed030" id="r_a91c9a5e26823f3f5d109bbfcb65ed030"><td class="memItemLeft" align="right" valign="top"><a id="a91c9a5e26823f3f5d109bbfcb65ed030" name="a91c9a5e26823f3f5d109bbfcb65ed030"></a>
+ID3D11Resource *&#160;</td><td class="memItemRight" valign="bottom"><b>d3dResource</b> () const</td></tr>
+<tr class="memitem:a4f0578eda3a38e2dfcbb769382a6fabd" id="r_a4f0578eda3a38e2dfcbb769382a6fabd"><td class="memItemLeft" align="right" valign="top"><a id="a4f0578eda3a38e2dfcbb769382a6fabd" name="a4f0578eda3a38e2dfcbb769382a6fabd"></a>
+ID3D11ShaderResourceView *&#160;</td><td class="memItemRight" valign="bottom"><b>srv</b> () const</td></tr>
+<tr class="memitem:a496d0b82437139031e35a232e81d9985" id="r_a496d0b82437139031e35a232e81d9985"><td class="memItemLeft" align="right" valign="top"><a id="a496d0b82437139031e35a232e81d9985" name="a496d0b82437139031e35a232e81d9985"></a>
+ID3D11RenderTargetView *&#160;</td><td class="memItemRight" valign="bottom"><b>rtv</b> () const</td></tr>
+<tr class="memitem:adae0710525cf51a10a5b44c8bfc12704" id="r_adae0710525cf51a10a5b44c8bfc12704"><td class="memItemLeft" align="right" valign="top"><a id="adae0710525cf51a10a5b44c8bfc12704" name="adae0710525cf51a10a5b44c8bfc12704"></a>
+ID3D11DepthStencilView *&#160;</td><td class="memItemRight" valign="bottom"><b>dsv</b> () const</td></tr>
+<tr class="memitem:a54c11f0221ff775c7937fce6d48cf756" id="r_a54c11f0221ff775c7937fce6d48cf756"><td class="memItemLeft" align="right" valign="top"><a id="a54c11f0221ff775c7937fce6d48cf756" name="a54c11f0221ff775c7937fce6d48cf756"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>operator int</b> ()</td></tr>
+<tr class="memitem:a47ac74626b65d49db950c3d4c09ba0fe" id="r_a47ac74626b65d49db950c3d4c09ba0fe"><td class="memItemLeft" align="right" valign="top"><a id="a47ac74626b65d49db950c3d4c09ba0fe" name="a47ac74626b65d49db950c3d4c09ba0fe"></a>
+const std::wstring &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>path</b> () const</td></tr>
+<tr class="memitem:ab00dee4883d41ac03b28cf15989eaa48" id="r_ab00dee4883d41ac03b28cf15989eaa48"><td class="memItemLeft" align="right" valign="top"><a id="ab00dee4883d41ac03b28cf15989eaa48" name="ab00dee4883d41ac03b28cf15989eaa48"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_valid</b> () const</td></tr>
+<tr class="memitem:ac93b1f45c2596d473c33806768fc902c" id="r_ac93b1f45c2596d473c33806768fc902c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac93b1f45c2596d473c33806768fc902c">is_active</a> () const</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+限定公開メンバ関数</h2></td></tr>
+<tr class="memitem:a6ab555c3825a26edb68b87df48b06d47" id="r_a6ab555c3825a26edb68b87df48b06d47"><td class="memItemLeft" align="right" valign="top"><a id="a6ab555c3825a26edb68b87df48b06d47" name="a6ab555c3825a26edb68b87df48b06d47"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (ID3D11Resource *d3d_resource)</td></tr>
+<tr class="memitem:a56224ad23e5732920877471d4ff6e538" id="r_a56224ad23e5732920877471d4ff6e538"><td class="memItemLeft" align="right" valign="top"><a id="a56224ad23e5732920877471d4ff6e538" name="a56224ad23e5732920877471d4ff6e538"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_initialize</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+限定公開変数類</h2></td></tr>
+<tr class="memitem:a56895dccd0b05ea56476b721d2fed811" id="r_a56895dccd0b05ea56476b721d2fed811"><td class="memItemLeft" align="right" valign="top"><a id="a56895dccd0b05ea56476b721d2fed811" name="a56895dccd0b05ea56476b721d2fed811"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>width_</b> = 0</td></tr>
+<tr class="memdesc:a56895dccd0b05ea56476b721d2fed811"><td class="mdescLeft">&#160;</td><td class="mdescRight">幅 <br /></td></tr>
+<tr class="memitem:a509508e9b6d8f075757a88c95bd4a2d5" id="r_a509508e9b6d8f075757a88c95bd4a2d5"><td class="memItemLeft" align="right" valign="top"><a id="a509508e9b6d8f075757a88c95bd4a2d5" name="a509508e9b6d8f075757a88c95bd4a2d5"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b> = 0</td></tr>
+<tr class="memdesc:a509508e9b6d8f075757a88c95bd4a2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">高さ <br /></td></tr>
+<tr class="memitem:a7fde183054fd3db4bc89abb63f437a4d" id="r_a7fde183054fd3db4bc89abb63f437a4d"><td class="memItemLeft" align="right" valign="top"><a id="a7fde183054fd3db4bc89abb63f437a4d" name="a7fde183054fd3db4bc89abb63f437a4d"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>handle_</b> = -1</td></tr>
+<tr class="memdesc:a7fde183054fd3db4bc89abb63f437a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">[DxLib] Graphicハンドル <br /></td></tr>
+<tr class="memitem:a5771fda846de68e860a4ef7eaebdd34c" id="r_a5771fda846de68e860a4ef7eaebdd34c"><td class="memItemLeft" align="right" valign="top"><a id="a5771fda846de68e860a4ef7eaebdd34c" name="a5771fda846de68e860a4ef7eaebdd34c"></a>
+std::wstring&#160;</td><td class="memItemRight" valign="bottom"><b>path_</b></td></tr>
+<tr class="memdesc:a5771fda846de68e860a4ef7eaebdd34c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルパス <br /></td></tr>
+<tr class="memitem:aee2111a87b945ec4185ba6e0cf32f2af" id="r_aee2111a87b945ec4185ba6e0cf32f2af"><td class="memItemLeft" align="right" valign="top"><a id="aee2111a87b945ec4185ba6e0cf32f2af" name="aee2111a87b945ec4185ba6e0cf32f2af"></a>
+std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>active_</b> = false</td></tr>
+<tr class="memdesc:aee2111a87b945ec4185ba6e0cf32f2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">アクティブ状態 true:利用可能 false:ロード未完了 <br /></td></tr>
+<tr class="memitem:a6895c68b9fadc7ebfb4eac4db17cb793" id="r_a6895c68b9fadc7ebfb4eac4db17cb793"><td class="memItemLeft" align="right" valign="top"><a id="a6895c68b9fadc7ebfb4eac4db17cb793" name="a6895c68b9fadc7ebfb4eac4db17cb793"></a>
+std::atomic&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>need_initialize_</b> = false</td></tr>
+<tr class="memdesc:a6895c68b9fadc7ebfb4eac4db17cb793"><td class="mdescLeft">&#160;</td><td class="mdescRight">初期化要求フラグ true:初期化が必要 false:初期化済または完了で不要 <br /></td></tr>
+<tr class="memitem:afc8c086eab9d2b211bf08993be743370" id="r_afc8c086eab9d2b211bf08993be743370"><td class="memItemLeft" align="right" valign="top"><a id="afc8c086eab9d2b211bf08993be743370" name="afc8c086eab9d2b211bf08993be743370"></a>
+Microsoft::WRL::ComPtr&lt; ID3D11Resource &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>d3d_resource_</b></td></tr>
+<tr class="memdesc:afc8c086eab9d2b211bf08993be743370"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3Dリソース(Texture2D/3D) <br /></td></tr>
+<tr class="memitem:a71bce01bc07d2b5e0ebe7c443af74ef1" id="r_a71bce01bc07d2b5e0ebe7c443af74ef1"><td class="memItemLeft" align="right" valign="top"><a id="a71bce01bc07d2b5e0ebe7c443af74ef1" name="a71bce01bc07d2b5e0ebe7c443af74ef1"></a>
+Microsoft::WRL::ComPtr&lt; ID3D11ShaderResourceView &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>d3d_srv_</b></td></tr>
+<tr class="memdesc:a71bce01bc07d2b5e0ebe7c443af74ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3D ShaderResource View <br /></td></tr>
+<tr class="memitem:a2e47b7edba5d0101d8d9f8045c1e8401" id="r_a2e47b7edba5d0101d8d9f8045c1e8401"><td class="memItemLeft" align="right" valign="top"><a id="a2e47b7edba5d0101d8d9f8045c1e8401" name="a2e47b7edba5d0101d8d9f8045c1e8401"></a>
+Microsoft::WRL::ComPtr&lt; ID3D11RenderTargetView &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>d3d_rtv_</b></td></tr>
+<tr class="memdesc:a2e47b7edba5d0101d8d9f8045c1e8401"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3D RenderTarget View <br /></td></tr>
+<tr class="memitem:a4db26fc933a53a6bab991a3a0bf0163b" id="r_a4db26fc933a53a6bab991a3a0bf0163b"><td class="memItemLeft" align="right" valign="top"><a id="a4db26fc933a53a6bab991a3a0bf0163b" name="a4db26fc933a53a6bab991a3a0bf0163b"></a>
+Microsoft::WRL::ComPtr&lt; ID3D11DepthStencilView &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>d3d_dsv_</b></td></tr>
+<tr class="memdesc:a4db26fc933a53a6bab991a3a0bf0163b"><td class="mdescLeft">&#160;</td><td class="mdescRight">D3D DepthStencil View <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>テクスチャ </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">構築子と解体子</h2>
+<a id="ae9a85f7b33715ef0e68edce67be843a3" name="ae9a85f7b33715ef0e68edce67be843a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9a85f7b33715ef0e68edce67be843a3">&#9670;&#160;</a></span>Texture() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture::Texture </td>
+          <td>(</td>
+          <td class="paramtype">ID3D11Resource *</td>          <td class="paramname"><span class="paramname"><em>d3d_resource</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">d3d_resource</td><td>D3Dリソースオブジェクト </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a11fcd56485771262b0a6531ac462859c" name="a11fcd56485771262b0a6531ac462859c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11fcd56485771262b0a6531ac462859c">&#9670;&#160;</a></span>Texture() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture::Texture </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>graphic_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graphic_handle</td><td>DXライブラリのグラフィックハンドル </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af842a6fc3ecf83d8a1c94817ab98cb24" name="af842a6fc3ecf83d8a1c94817ab98cb24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af842a6fc3ecf83d8a1c94817ab98cb24">&#9670;&#160;</a></span>Texture() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture::Texture </td>
+          <td>(</td>
+          <td class="paramtype">std::string_view</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>ファイルパス </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9deee0cc32ca74cdf8275bc19c4134fa" name="a9deee0cc32ca74cdf8275bc19c4134fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9deee0cc32ca74cdf8275bc19c4134fa">&#9670;&#160;</a></span>Texture() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture::Texture </td>
+          <td>(</td>
+          <td class="paramtype">u32</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u32</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DXGI_FORMAT</td>          <td class="paramname"><span class="paramname"><em>dxgi_format</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>幅 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>高さ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dxgi_format</td><td>ピクセルフォーマット </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="ac93b1f45c2596d473c33806768fc902c" name="ac93b1f45c2596d473c33806768fc902c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac93b1f45c2596d473c33806768fc902c">&#9670;&#160;</a></span>is_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Texture::is_active </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section note"><dt>覚え書き</dt><dd>描画可能になっていない状態でMV1関数を呼ぶとブロッキングされます </dd></dl>
+
+</div>
+</div>
+<a id="a9c341afd0ca1af6d79c67c89eff67d25" name="a9c341afd0ca1af6d79c67c89eff67d25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c341afd0ca1af6d79c67c89eff67d25">&#9670;&#160;</a></span>width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">u32 Texture::width </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section note"><dt>覚え書き</dt><dd>取得/参照 </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/Engine/src/Graphics/<a class="el" href="_texture_8h_source.html">Texture.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_texture.html">Texture</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,409 @@
+\doxysection{Scene クラス}
+\hypertarget{class_scene}{}\label{class_scene}\index{Scene@{Scene}}
+\doxysubsubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_scene_a34512f125a00582d9fb48b407cefa839}\label{class_scene_a34512f125a00582d9fb48b407cefa839} 
+using {\bfseries Base\+Ptr} = std\+::shared\+\_\+ptr$<$Base$>$
+\item 
+\Hypertarget{class_scene_a767f0587dbd609cbaae24219037778d3}\label{class_scene_a767f0587dbd609cbaae24219037778d3} 
+using {\bfseries Base\+Ptr\+Vec} = std\+::vector$<$Base\+Ptr$>$
+\item 
+\Hypertarget{class_scene_a79a7bc59e066d97bf78d144d232f2257}\label{class_scene_a79a7bc59e066d97bf78d144d232f2257} 
+using {\bfseries Base\+Ptr\+Map} = std\+::unordered\+\_\+map$<$std\+::string, Base\+Ptr$>$
+\item 
+\Hypertarget{class_scene_a731012816f97fd5e79f562f2024b93e0}\label{class_scene_a731012816f97fd5e79f562f2024b93e0} 
+using {\bfseries Signals\+Default} = sigslot\+::signal$<$$>$
+\end{DoxyCompactItemize}
+\doxysubsubsection*{静的公開メンバ関数}
+\begin{Indent}\textbf{ シーン操作関係}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T$>$ }\\static std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_scene_a9c34e940e4f2ec488a0adb63b81ae67a}{Get\+Scene}} ()
+\item 
+{\footnotesize template$<$class T$>$ }\\static void \mbox{\hyperlink{class_scene_a770e8579116a453c1b263f7e34c9ce39}{Release\+Scene}} ()
+\item 
+\Hypertarget{class_scene_adb28c35d5f5f39bbb66e472ff0d9c9b2}\label{class_scene_adb28c35d5f5f39bbb66e472ff0d9c9b2} 
+static void {\bfseries Release\+Scene} (const \+::\+Scene\+::\+Base\+Ptr \&scene)
+\item 
+static void \mbox{\hyperlink{class_scene_a6c587929c515912fc5b966a115539e3e}{Change}} (Base\+Ptr scene)
+\item 
+\Hypertarget{class_scene_aeda746a01a50ce228d21bdb2a5b4aa5d}\label{class_scene_aeda746a01a50ce228d21bdb2a5b4aa5d} 
+static void {\bfseries Set\+Next\+Scene} (Base\+Ptr scene)
+\begin{DoxyCompactList}\small\item\em 次のシーンをセットする \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_a8c1da1effe141998e84595bbaad10948}\label{class_scene_a8c1da1effe141998e84595bbaad10948} 
+static void {\bfseries Check\+Leak} ()
+\item 
+\Hypertarget{class_scene_a22c112358b815e776a8e282a8ee38f03}\label{class_scene_a22c112358b815e776a8e282a8ee38f03} 
+static void {\bfseries Change\+Next\+Scene} ()
+\begin{DoxyCompactList}\small\item\em 次のシーンに切り替える \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_a9f606c4b064f812bf2dab1a568a5d9d0}\label{class_scene_a9f606c4b064f812bf2dab1a568a5d9d0} 
+static \mbox{\hyperlink{class_scene_1_1_base}{Scene\+::\+Base}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Current\+Scene} ()
+\item 
+\Hypertarget{class_scene_aa8a101d7d9321906ca46a5a8b3149ee9}\label{class_scene_aa8a101d7d9321906ca46a5a8b3149ee9} 
+{\footnotesize template$<$typename T$>$ }\\static T \texorpdfstring{$\ast$}{*} {\bfseries Get\+Current\+Scene} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ オブジェクト操作 関係}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T$>$ }\\static std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_scene_a8eafc112b91ebde95fd4491d409b5334}{Create\+Object\+Ptr}} (const std\+::string\+\_\+view name=u8"{}object"{}, bool no\+\_\+transform=false, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} update=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} draw=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\item 
+{\footnotesize template$<$class T$>$ }\\static std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_scene_a01747d00538360fded5f192a2937175b}{Create\+Object\+Delay\+Initialize}} (const std\+::string\+\_\+view name=u8"{}object"{}, bool no\+\_\+transform=false, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} update=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} draw=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\item 
+\Hypertarget{class_scene_a298d059ec0aa85b0f905519a05a3b5ce}\label{class_scene_a298d059ec0aa85b0f905519a05a3b5ce} 
+{\footnotesize template$<$class T$>$ }\\static void {\bfseries Release\+Object} ()
+\item 
+\Hypertarget{class_scene_ac7ec92990d92723a7021dce8e129b910}\label{class_scene_ac7ec92990d92723a7021dce8e129b910} 
+static void {\bfseries Release\+Object} (std\+::string\+\_\+view name="{}"{})
+\item 
+\Hypertarget{class_scene_a3bdc712400d71c3850af079c05e84295}\label{class_scene_a3bdc712400d71c3850af079c05e84295} 
+static void {\bfseries Release\+Object} (Object\+Ptr obj)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ シーン処理 関係}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_scene_a826a3f87d3369fd96f07c5ee53e6d68d}\label{class_scene_a826a3f87d3369fd96f07c5ee53e6d68d} 
+static void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_afafc902e0171236d82a7fca75dde2133}\label{class_scene_afafc902e0171236d82a7fca75dde2133} 
+static void {\bfseries Pre\+Update} ()
+\begin{DoxyCompactList}\small\item\em シーン更新前処理 @detail 基本的には\+Update集団より先にで行いたいものをこの層で処理します \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_scene_aa72309f8cf847a64f04ac440acf177ec}{Update}} ()
+\item 
+\Hypertarget{class_scene_aa91900395be35598e800994cd8bd4f11}\label{class_scene_aa91900395be35598e800994cd8bd4f11} 
+static void {\bfseries Pre\+Physics} ()
+\begin{DoxyCompactList}\small\item\em Physics前処理 @detail Owner\+Object移動によるコリジョンコンポーネント前処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_ae4235e8f87ca89870494b17d4750b8da}\label{class_scene_ae4235e8f87ca89870494b17d4750b8da} 
+static void {\bfseries Post\+Physics} ()
+\begin{DoxyCompactList}\small\item\em Physics後処理 @detail Owner\+Object移動によるコリジョンコンポーネント移動後処理 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_a762ee910330fbab32b76e93032d229e2}\label{class_scene_a762ee910330fbab32b76e93032d229e2} 
+static void {\bfseries Post\+Update} ()
+\begin{DoxyCompactList}\small\item\em シーン更新後の処理 @detail Physicsおよびすべての当たり判定後に処理します \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_a5819841652f8cf25d474a951944a241e}\label{class_scene_a5819841652f8cf25d474a951944a241e} 
+static void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em シーン描画 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_a799864454e60bab40e690f7503ffbb4c}\label{class_scene_a799864454e60bab40e690f7503ffbb4c} 
+static void {\bfseries Exit} ()
+\begin{DoxyCompactList}\small\item\em シーン終了 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_ae8694d4502086d75488a0f63873daff2}\label{class_scene_ae8694d4502086d75488a0f63873daff2} 
+static void {\bfseries GUI} ()
+\begin{DoxyCompactList}\small\item\em シーン\+GUI @detail ※この処理は\+Update後に行う必要があります \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ シーン状態 関係}\par
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_scene_a193518f206eee1c3e683426005d7ca56}{Is\+Pause}} ()
+\item 
+static float \mbox{\hyperlink{class_scene_ad3fac02e013073c19698b3495f8ce6f4}{Get\+Time}} ()
+\item 
+\Hypertarget{class_scene_a02f329a7c7366773d5e6ae1101464edf}\label{class_scene_a02f329a7c7366773d5e6ae1101464edf} 
+static size\+\_\+t {\bfseries Get\+Scene\+Count} ()
+\begin{DoxyCompactList}\small\item\em 存在するシーン数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ シーン内オブジェクト取得 関係}\par
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T$>$ }\\static std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_scene_a9e143dc2e860651e852c1b45b0d9b3c3}{Get\+Object\+Ptr}} (std\+::string\+\_\+view name="{}"{})
+\begin{DoxyCompactList}\small\item\em オブジェクトサーチ\&取得 \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\static std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{class_scene_a9c9ace68b25b4ce4432a97d26dfc9271}{Get\+Objects\+Ptr}} ()
+\begin{DoxyCompactList}\small\item\em オブジェクトサーチ\&取得 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_ac4de6c9aa678150f0b66cb61759be1b6}\label{class_scene_ac4de6c9aa678150f0b66cb61759be1b6} 
+{\footnotesize template$<$class T$>$ }\\static std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Get\+Object\+Ptr\+With\+Create} (std\+::string\+\_\+view name="{}"{})
+\item 
+\Hypertarget{class_scene_af593a86b122e381efc320429f34f9062}\label{class_scene_af593a86b122e381efc320429f34f9062} 
+static void {\bfseries Check\+Component\+Collisions} ()
+\begin{DoxyCompactList}\small\item\em Component\+Collisionの当たり判定を行う \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_a0174d321f2cdc7506e2ffdd9861792bb}\label{class_scene_a0174d321f2cdc7506e2ffdd9861792bb} 
+static bool {\bfseries Select\+Object\+Window} (const Object\+Ptr \&object)
+\begin{DoxyCompactList}\small\item\em セレクトしているオブジェクトかをチェックする \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_aa6cc94ed470ebb1c8ba63c2166408fbe}\label{class_scene_aa6cc94ed470ebb1c8ba63c2166408fbe} 
+static Object\+Ptr {\bfseries Select\+Object\+Ptr} ()
+\item 
+\Hypertarget{class_scene_aec9c2ca27f4d6154bced40697723d798}\label{class_scene_aec9c2ca27f4d6154bced40697723d798} 
+static void {\bfseries Set\+GUIObject\+Detail\+Size} ()
+\begin{DoxyCompactList}\small\item\em GUIオブジェクトの\+Editor設定であるため\+Objectでなくこちらで設定する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Proc}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_scene_ac92ebe1c4749abec88d8b490e8738a97}{Editor\+Status\+Bit}} \+: u64 \{ \mbox{\hyperlink{class_scene_ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1}{Editor\+Placement}}
+, \mbox{\hyperlink{class_scene_ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f}{Editor\+Placement\+\_\+\+Always}}
+ \}
+\item 
+\Hypertarget{class_scene_ab92d86fc0973bcfe3cd3d47ebf31a144}\label{class_scene_ab92d86fc0973bcfe3cd3d47ebf31a144} 
+static const int {\bfseries SETGUI\+\_\+\+ATTACH\+\_\+\+LEFT} = -\/10000
+\item 
+\Hypertarget{class_scene_a191e505ff6fc1d326e75b637f07b7952}\label{class_scene_a191e505ff6fc1d326e75b637f07b7952} 
+static const int {\bfseries SETGUI\+\_\+\+ATTACH\+\_\+\+RIGHT} = +10000
+\item 
+\Hypertarget{class_scene_a6f9b586a53fe8076385a6e02b4555628}\label{class_scene_a6f9b586a53fe8076385a6e02b4555628} 
+static const int {\bfseries SETGUI\+\_\+\+ATTACH\+\_\+\+TOP} = -\/10000
+\item 
+\Hypertarget{class_scene_a2e046f0540ab99430e14ee2af74d5140}\label{class_scene_a2e046f0540ab99430e14ee2af74d5140} 
+static const int {\bfseries SETGUI\+\_\+\+ATTACH\+\_\+\+BOTTOM} = +10000
+\item 
+\Hypertarget{class_scene_a89d86265bdf50406d7dae01c7cf24de0}\label{class_scene_a89d86265bdf50406d7dae01c7cf24de0} 
+static Signals\+Default \& {\bfseries Get\+Signals} (\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing)
+\item 
+\Hypertarget{class_scene_ad75a1ed81a95aa300459c4491fa919f4}\label{class_scene_ad75a1ed81a95aa300459c4491fa919f4} 
+static void {\bfseries Set\+GUIWindow} (int posx, int posy, int width, int height)
+\item 
+static Object\+Ptr \mbox{\hyperlink{class_scene_a371a58469c5d5a4887a0514ba5c11090}{Pick\+Object}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em オブジェクト選択 \end{DoxyCompactList}\item 
+static Component\+Camera\+Weak\+Ptr \mbox{\hyperlink{class_scene_a908202bd4ffaf8c710345e58a7e36e94}{Get\+Current\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em カレントカメラの取得 \end{DoxyCompactList}\item 
+static Component\+Camera\+Weak\+Ptr \mbox{\hyperlink{class_scene_a6b574f3017be5bb64e7e3d4c7e14aeed}{Set\+Current\+Camera}} (std\+::string\+\_\+view name)
+\begin{DoxyCompactList}\small\item\em オブジェクトの名前でのカレントカメラの設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_scene_a97e3fcf746d3aef8a3a3789907701fe6}\label{class_scene_a97e3fcf746d3aef8a3a3789907701fe6} 
+static void {\bfseries Set\+Editor\+Status} (\mbox{\hyperlink{class_scene_ac92ebe1c4749abec88d8b490e8738a97}{Editor\+Status\+Bit}} b, bool on)
+\item 
+\Hypertarget{class_scene_a115d6e7de8c7fce285b54ead8caa35ee}\label{class_scene_a115d6e7de8c7fce285b54ead8caa35ee} 
+static bool {\bfseries Get\+Editor\+Status} (\mbox{\hyperlink{class_scene_ac92ebe1c4749abec88d8b490e8738a97}{Editor\+Status\+Bit}} b)
+\item 
+\Hypertarget{class_scene_a3177f5365d677bcb663d5f717d79e9a2}\label{class_scene_a3177f5365d677bcb663d5f717d79e9a2} 
+static \mbox{\hyperlink{struct_status}{Status}}$<$ \mbox{\hyperlink{class_scene_ac92ebe1c4749abec88d8b490e8738a97}{Editor\+Status\+Bit}} $>$ \& {\bfseries Scene\+Status} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Cereal セーブロード}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_scene_ae2c498cdcc205a471f654f7c02cfb0ac}\label{class_scene_ae2c498cdcc205a471f654f7c02cfb0ac} 
+static void {\bfseries Save\+Editor} ()
+\item 
+\Hypertarget{class_scene_a6dacffd9ad9dfba127275902cff660e5}\label{class_scene_a6dacffd9ad9dfba127275902cff660e5} 
+static void {\bfseries Load\+Editor} ()
+\item 
+\Hypertarget{class_scene_a9edb4c659d21e254ed3216162325293a}\label{class_scene_a9edb4c659d21e254ed3216162325293a} 
+static bool {\bfseries Save} (std\+::string\+\_\+view filename="{}"{})
+\item 
+\Hypertarget{class_scene_aed3dec9b07d5fbda9602f909485f4a86}\label{class_scene_aed3dec9b07d5fbda9602f909485f4a86} 
+static bool {\bfseries Load} (std\+::string\+\_\+view filename="{}"{})
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{class_scene_doc-enum-members}
+\doxysubsection{列挙型メンバ詳解}
+\Hypertarget{class_scene_ac92ebe1c4749abec88d8b490e8738a97}\index{Scene@{Scene}!EditorStatusBit@{EditorStatusBit}}
+\index{EditorStatusBit@{EditorStatusBit}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{EditorStatusBit}{EditorStatusBit}}
+{\footnotesize\ttfamily \label{class_scene_ac92ebe1c4749abec88d8b490e8738a97} 
+enum struct Scene\+::\+Editor\+Status\+Bit \+: \mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EditorPlacement@{EditorPlacement}!Scene@{Scene}}\index{Scene@{Scene}!EditorPlacement@{EditorPlacement}}}\Hypertarget{class_scene_ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1}\label{class_scene_ac92ebe1c4749abec88d8b490e8738a97aea7fa9ca65341dfa8d39c8a1c9f780f1} 
+Editor\+Placement&エディタ配置 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EditorPlacement\_Always@{EditorPlacement\_Always}!Scene@{Scene}}\index{Scene@{Scene}!EditorPlacement\_Always@{EditorPlacement\_Always}}}\Hypertarget{class_scene_ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f}\label{class_scene_ac92ebe1c4749abec88d8b490e8738a97afd13d77f767e36a38f72ab370a3f056f} 
+Editor\+Placement\+\_\+\+Always&エディタ配置(常に引っ付く) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{class_scene_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_scene_a6c587929c515912fc5b966a115539e3e}\index{Scene@{Scene}!Change@{Change}}
+\index{Change@{Change}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Change()}{Change()}}
+{\footnotesize\ttfamily \label{class_scene_a6c587929c515912fc5b966a115539e3e} 
+void Scene\+::\+Change (\begin{DoxyParamCaption}\item[{Base\+Ptr}]{scene}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+シーン切り替え 
+\begin{DoxyParams}{引数}
+{\em scene} & 次に再生するシーン\\
+\hline
+\end{DoxyParams}
+内部的には、\+Set\+Next\+Scene() -\/\texorpdfstring{$>$}{>} Change\+Next\+Scene() が呼ばれています \Hypertarget{class_scene_a01747d00538360fded5f192a2937175b}\index{Scene@{Scene}!CreateObjectDelayInitialize@{CreateObjectDelayInitialize}}
+\index{CreateObjectDelayInitialize@{CreateObjectDelayInitialize}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{CreateObjectDelayInitialize()}{CreateObjectDelayInitialize()}}
+{\footnotesize\ttfamily \label{class_scene_a01747d00538360fded5f192a2937175b} 
+template$<$class T$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Scene\+::\+Create\+Object\+Delay\+Initialize (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view}]{name}{ = {\ttfamily u8"{}object"{}}, }\item[{bool}]{no\+\_\+transform}{ = {\ttfamily false}, }\item[{\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}}}]{update}{ = {\ttfamily \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}}, }\item[{\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}}}]{draw}{ = {\ttfamily \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+オブジェクトの作成 Objectをシーン上に発生させる 
+\begin{DoxyParams}{引数}
+{\em no\+\_\+transform} & Component\+Transformを作らない (true = 作らない) \\
+\hline
+{\em update} & 処理優先 \\
+\hline
+{\em draw} & 描画優先 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_a8eafc112b91ebde95fd4491d409b5334}\index{Scene@{Scene}!CreateObjectPtr@{CreateObjectPtr}}
+\index{CreateObjectPtr@{CreateObjectPtr}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{CreateObjectPtr()}{CreateObjectPtr()}}
+{\footnotesize\ttfamily \label{class_scene_a8eafc112b91ebde95fd4491d409b5334} 
+template$<$class T$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Scene\+::\+Create\+Object\+Ptr (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view}]{name}{ = {\ttfamily u8"{}object"{}}, }\item[{bool}]{no\+\_\+transform}{ = {\ttfamily false}, }\item[{\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}}}]{update}{ = {\ttfamily \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}}, }\item[{\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}}}]{draw}{ = {\ttfamily \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+オブジェクトの作成 Objectをシーン上に発生させる 
+\begin{DoxyParams}{引数}
+{\em no\+\_\+transform} & Component\+Transformを作らない (true = 作らない) \\
+\hline
+{\em update} & 処理優先 \\
+\hline
+{\em draw} & 描画優先 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_a908202bd4ffaf8c710345e58a7e36e94}\index{Scene@{Scene}!GetCurrentCamera@{GetCurrentCamera}}
+\index{GetCurrentCamera@{GetCurrentCamera}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetCurrentCamera()}{GetCurrentCamera()}}
+{\footnotesize\ttfamily \label{class_scene_a908202bd4ffaf8c710345e58a7e36e94} 
+Component\+Camera\+Weak\+Ptr Scene\+::\+Get\+Current\+Camera (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+カレントカメラの取得 
+
+\begin{DoxyReturn}{戻り値}
+カレントカメラ 
+\end{DoxyReturn}
+\Hypertarget{class_scene_a9e143dc2e860651e852c1b45b0d9b3c3}\index{Scene@{Scene}!GetObjectPtr@{GetObjectPtr}}
+\index{GetObjectPtr@{GetObjectPtr}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetObjectPtr()}{GetObjectPtr()}}
+{\footnotesize\ttfamily \label{class_scene_a9e143dc2e860651e852c1b45b0d9b3c3} 
+template$<$class T$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Scene\+::\+Get\+Object\+Ptr (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+オブジェクトサーチ\&取得 
+
+
+\begin{DoxyTemplParams}{テンプレート引数}
+{\em T} & 取得したいオブジェクトタイプ \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{引数}
+{\em name} & 取得したいオブジェクトの名前 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+オブジェクト 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{todo}
+\item[\mbox{\hyperlink{todo__todo000001}{todo}}]nullptrの時、存在しないので、ここで\+LOGでエラーを出しておく \end{DoxyRefDesc}
+\Hypertarget{class_scene_a9c9ace68b25b4ce4432a97d26dfc9271}\index{Scene@{Scene}!GetObjectsPtr@{GetObjectsPtr}}
+\index{GetObjectsPtr@{GetObjectsPtr}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetObjectsPtr()}{GetObjectsPtr()}}
+{\footnotesize\ttfamily \label{class_scene_a9c9ace68b25b4ce4432a97d26dfc9271} 
+template$<$class T$>$ \\
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ Scene\+::\+Get\+Objects\+Ptr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+オブジェクトサーチ\&取得 
+
+
+\begin{DoxyTemplParams}{テンプレート引数}
+{\em T} & 取得したいオブジェクトタイプ\\
+\hline
+\end{DoxyTemplParams}
+同じタイプのオブジェクトが複数あると先に見つかったものを返します \begin{DoxyReturn}{戻り値}
+オブジェクト 
+\end{DoxyReturn}
+\Hypertarget{class_scene_a9c34e940e4f2ec488a0adb63b81ae67a}\index{Scene@{Scene}!GetScene@{GetScene}}
+\index{GetScene@{GetScene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetScene()}{GetScene()}}
+{\footnotesize\ttfamily \label{class_scene_a9c34e940e4f2ec488a0adb63b81ae67a} 
+template$<$class T$>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ Scene\+::\+Get\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+シーンを作成または取得します 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em class} & T 取得するシーンクラス \\
+\hline
+\mbox{\texttt{in}}  & {\em name} & シーン名 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+シーン 
+\end{DoxyReturn}
+\Hypertarget{class_scene_ad3fac02e013073c19698b3495f8ce6f4}\index{Scene@{Scene}!GetTime@{GetTime}}
+\index{GetTime@{GetTime}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{GetTime()}{GetTime()}}
+{\footnotesize\ttfamily \label{class_scene_ad3fac02e013073c19698b3495f8ce6f4} 
+float Scene\+::\+Get\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+シーン内時間の取得 \begin{DoxyReturn}{戻り値}
+シーンが始まってからの時間 
+\end{DoxyReturn}
+\Hypertarget{class_scene_a193518f206eee1c3e683426005d7ca56}\index{Scene@{Scene}!IsPause@{IsPause}}
+\index{IsPause@{IsPause}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{IsPause()}{IsPause()}}
+{\footnotesize\ttfamily \label{class_scene_a193518f206eee1c3e683426005d7ca56} 
+bool Scene\+::\+Is\+Pause (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+ポーズ中かをチェック 
+\begin{DoxyRetVals}{戻り値}
+{\em true} & ポーズ中 \\
+\hline
+{\em false} & ポーズしていない \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_scene_a371a58469c5d5a4887a0514ba5c11090}\index{Scene@{Scene}!PickObject@{PickObject}}
+\index{PickObject@{PickObject}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{PickObject()}{PickObject()}}
+{\footnotesize\ttfamily \label{class_scene_a371a58469c5d5a4887a0514ba5c11090} 
+Object\+Ptr Scene\+::\+Pick\+Object (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+オブジェクト選択 
+
+
+\begin{DoxyParams}{引数}
+{\em x} & mouseポインタX \\
+\hline
+{\em y} & mouseポインタY \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+Object\+Ptr (ない場合はnullptr) 
+\end{DoxyReturn}
+\Hypertarget{class_scene_a770e8579116a453c1b263f7e34c9ce39}\index{Scene@{Scene}!ReleaseScene@{ReleaseScene}}
+\index{ReleaseScene@{ReleaseScene}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{ReleaseScene()}{ReleaseScene()}}
+{\footnotesize\ttfamily \label{class_scene_a770e8579116a453c1b263f7e34c9ce39} 
+template$<$class T$>$ \\
+void Scene\+::\+Release\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+シーンを消去します 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em name} & シーン名 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_scene_a6b574f3017be5bb64e7e3d4c7e14aeed}\index{Scene@{Scene}!SetCurrentCamera@{SetCurrentCamera}}
+\index{SetCurrentCamera@{SetCurrentCamera}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{SetCurrentCamera()}{SetCurrentCamera()}}
+{\footnotesize\ttfamily \label{class_scene_a6b574f3017be5bb64e7e3d4c7e14aeed} 
+Component\+Camera\+Weak\+Ptr Scene\+::\+Set\+Current\+Camera (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+オブジェクトの名前でのカレントカメラの設定 
+
+name 名前 \begin{DoxyReturn}{戻り値}
+カレントカメラ 
+\end{DoxyReturn}
+\Hypertarget{class_scene_aa72309f8cf847a64f04ac440acf177ec}\index{Scene@{Scene}!Update@{Update}}
+\index{Update@{Update}!Scene@{Scene}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_scene_aa72309f8cf847a64f04ac440acf177ec} 
+void Scene\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+シーン更新 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em delta} & 更新インターバル(秒指定) \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\mbox{\hyperlink{_scene_8h}{Scene.\+h}}\end{DoxyCompactItemize}

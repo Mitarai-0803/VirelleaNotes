@@ -1,0 +1,182 @@
+\doxysection{UI\+::Grid\+Component クラス}
+\hypertarget{class_u_i_1_1_grid_component}{}\label{class_u_i_1_1_grid_component}\index{UI::GridComponent@{UI::GridComponent}}
+
+
+グリッド描画コンポーネント  
+
+
+
+
+{\ttfamily \#include $<$Grid\+Component.\+h$>$}
+
+UI\+::Grid\+Component の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_grid_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_grid_component_a980527f761541942ceec02ea4a20b026}\label{class_u_i_1_1_grid_component_a980527f761541942ceec02ea4a20b026} 
+{\bfseries Grid\+Component} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_grid_component_ac669c270c51d86b0dbd1ba942c9be0ba}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_grid_component_ab771cf9911fb89b3f43b8a3f2f581ba7}{Set\+Line\+Count}} (int line\+\_\+count)
+\begin{DoxyCompactList}\small\item\em 描画ライン数設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_grid_component_af54de250828d1da89646440bf2e8fede}{Set\+Max\+Play\+Time}} (int max\+\_\+play\+\_\+time\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em 最大再生時間設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_grid_component_aa76a56114a0ff0b68726a61aa0cf4d72}{Set\+Bpm}} (int bpm)
+\begin{DoxyCompactList}\small\item\em BPM設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_grid_component_aaf108afcf566d12a70c31dd2655ba63a}{Set\+Zoom}} (float zoom)
+\begin{DoxyCompactList}\small\item\em 表示倍率（ズーム）設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_grid_component_a601883b6fd80e1a85331623b0b768893}{Set\+ScrollY}} (int scroll\+\_\+y)
+\begin{DoxyCompactList}\small\item\em スクロール量設定 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_u_i_1_1_grid_component_ad80ca42b2cc49b7032dffab3151d7452}{Get\+Max\+ScrollY}} ()
+\begin{DoxyCompactList}\small\item\em 最大スクロール\+Y座標を取得 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_u_i_1_1_grid_component_ad6f4b4c580837943c56b32d568184122}{Get\+Bpm}} ()
+\begin{DoxyCompactList}\small\item\em BPMを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component_base}{Component\+Base}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_component_base_a24e99a122f01df33d2914cd8e5abff63}{Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_component_base_a4c25df37cf7ca24e8cd55889bab19aef}{‾\+Component\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_af2f8f8036a0732b852b2bc74b0b3227c}{Init}} ()
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_ae9fb9187e72a3773b72480f4b19a5bf8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em フレーム更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_base_a6e922e2d405ed29b0abb732b13f585fc}{End}} ()
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+グリッド描画コンポーネント 
+
+秒グリッド、\+BPMグリッド、縦ラインを描画する ゲーム画面上の譜面や\+BPM、ラインの視覚的ガイド用 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_grid_component_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_grid_component_ac669c270c51d86b0dbd1ba942c9be0ba}\index{UI::GridComponent@{UI::GridComponent}!Draw@{Draw}}
+\index{Draw@{Draw}!UI::GridComponent@{UI::GridComponent}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_grid_component_ac669c270c51d86b0dbd1ba942c9be0ba} 
+void UI\+::\+Grid\+Component\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+秒グリッド・\+BPMグリッド・縦ラインを描画 
+
+\mbox{\hyperlink{class_component_base_ae507af3a83b0a3f25a9d57184fd73512}{Component\+Base}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_grid_component_ad6f4b4c580837943c56b32d568184122}\index{UI::GridComponent@{UI::GridComponent}!GetBpm@{GetBpm}}
+\index{GetBpm@{GetBpm}!UI::GridComponent@{UI::GridComponent}}
+\doxysubsubsection{\texorpdfstring{GetBpm()}{GetBpm()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_grid_component_ad6f4b4c580837943c56b32d568184122} 
+int UI\+::\+Grid\+Component\+::\+Get\+Bpm (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+BPMを取得 
+
+\begin{DoxyReturn}{戻り値}
+最大スクロール\+Y座標 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_grid_component_ad80ca42b2cc49b7032dffab3151d7452}\index{UI::GridComponent@{UI::GridComponent}!GetMaxScrollY@{GetMaxScrollY}}
+\index{GetMaxScrollY@{GetMaxScrollY}!UI::GridComponent@{UI::GridComponent}}
+\doxysubsubsection{\texorpdfstring{GetMaxScrollY()}{GetMaxScrollY()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_grid_component_ad80ca42b2cc49b7032dffab3151d7452} 
+int UI\+::\+Grid\+Component\+::\+Get\+Max\+ScrollY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+最大スクロール\+Y座標を取得 
+
+\begin{DoxyReturn}{戻り値}
+最大スクロール\+Y座標 
+\end{DoxyReturn}
+\Hypertarget{class_u_i_1_1_grid_component_aa76a56114a0ff0b68726a61aa0cf4d72}\index{UI::GridComponent@{UI::GridComponent}!SetBpm@{SetBpm}}
+\index{SetBpm@{SetBpm}!UI::GridComponent@{UI::GridComponent}}
+\doxysubsubsection{\texorpdfstring{SetBpm()}{SetBpm()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_grid_component_aa76a56114a0ff0b68726a61aa0cf4d72} 
+void UI\+::\+Grid\+Component\+::\+Set\+Bpm (\begin{DoxyParamCaption}\item[{int}]{bpm}{}\end{DoxyParamCaption})}
+
+
+
+BPM設定 
+
+
+\begin{DoxyParams}{引数}
+{\em bpm} & BPM値 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_grid_component_ab771cf9911fb89b3f43b8a3f2f581ba7}\index{UI::GridComponent@{UI::GridComponent}!SetLineCount@{SetLineCount}}
+\index{SetLineCount@{SetLineCount}!UI::GridComponent@{UI::GridComponent}}
+\doxysubsubsection{\texorpdfstring{SetLineCount()}{SetLineCount()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_grid_component_ab771cf9911fb89b3f43b8a3f2f581ba7} 
+void UI\+::\+Grid\+Component\+::\+Set\+Line\+Count (\begin{DoxyParamCaption}\item[{int}]{line\+\_\+count}{}\end{DoxyParamCaption})}
+
+
+
+描画ライン数設定 
+
+
+\begin{DoxyParams}{引数}
+{\em line\+\_\+count} & 描画する縦ライン数 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_grid_component_af54de250828d1da89646440bf2e8fede}\index{UI::GridComponent@{UI::GridComponent}!SetMaxPlayTime@{SetMaxPlayTime}}
+\index{SetMaxPlayTime@{SetMaxPlayTime}!UI::GridComponent@{UI::GridComponent}}
+\doxysubsubsection{\texorpdfstring{SetMaxPlayTime()}{SetMaxPlayTime()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_grid_component_af54de250828d1da89646440bf2e8fede} 
+void UI\+::\+Grid\+Component\+::\+Set\+Max\+Play\+Time (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+play\+\_\+time\+\_\+ms}{}\end{DoxyParamCaption})}
+
+
+
+最大再生時間設定 
+
+
+\begin{DoxyParams}{引数}
+{\em max\+\_\+play\+\_\+time\+\_\+ms} & 最大再生時間(ms) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_grid_component_a601883b6fd80e1a85331623b0b768893}\index{UI::GridComponent@{UI::GridComponent}!SetScrollY@{SetScrollY}}
+\index{SetScrollY@{SetScrollY}!UI::GridComponent@{UI::GridComponent}}
+\doxysubsubsection{\texorpdfstring{SetScrollY()}{SetScrollY()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_grid_component_a601883b6fd80e1a85331623b0b768893} 
+void UI\+::\+Grid\+Component\+::\+Set\+ScrollY (\begin{DoxyParamCaption}\item[{int}]{scroll\+\_\+y}{}\end{DoxyParamCaption})}
+
+
+
+スクロール量設定 
+
+
+\begin{DoxyParams}{引数}
+{\em scroll\+\_\+y} & スクロール量 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_u_i_1_1_grid_component_aaf108afcf566d12a70c31dd2655ba63a}\index{UI::GridComponent@{UI::GridComponent}!SetZoom@{SetZoom}}
+\index{SetZoom@{SetZoom}!UI::GridComponent@{UI::GridComponent}}
+\doxysubsubsection{\texorpdfstring{SetZoom()}{SetZoom()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_grid_component_aaf108afcf566d12a70c31dd2655ba63a} 
+void UI\+::\+Grid\+Component\+::\+Set\+Zoom (\begin{DoxyParamCaption}\item[{float}]{zoom}{}\end{DoxyParamCaption})}
+
+
+
+表示倍率（ズーム）設定 
+
+
+\begin{DoxyParams}{引数}
+{\em zoom} & 表示倍率 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Grid\+Component.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,150 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+System\+Main.h ファイル}
+\hypertarget{_system_main_8h}{}\label{_system_main_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/SystemMain.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/SystemMain.h}}
+
+
+システムメイン  
+
+
+\doxysubsubsection*{関数}
+\begin{Indent}\textbf{ システム関数}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_system_main_8h_abd5a104987528829c883e7498602008f}\label{_system_main_8h_abd5a104987528829c883e7498602008f} 
+void {\bfseries System\+Init} ()
+\item 
+\Hypertarget{_system_main_8h_ac207065b1fb62c07f89a12f7b4192a20}\label{_system_main_8h_ac207065b1fb62c07f89a12f7b4192a20} 
+void {\bfseries System\+Update} ()
+\item 
+\Hypertarget{_system_main_8h_a30cb1097de07754f11b978bf806c626c}\label{_system_main_8h_a30cb1097de07754f11b978bf806c626c} 
+void {\bfseries System\+Draw} ()
+\item 
+\Hypertarget{_system_main_8h_adf3d97f9a63eb458fc1406df1a256971}\label{_system_main_8h_adf3d97f9a63eb458fc1406df1a256971} 
+void {\bfseries System\+Exit} ()
+\item 
+\Hypertarget{_system_main_8h_a2edee7b81baab0b01f3f4ef07607abd5}\label{_system_main_8h_a2edee7b81baab0b01f3f4ef07607abd5} 
+void {\bfseries System\+Begin\+Frame} ()
+\item 
+\Hypertarget{_system_main_8h_a9c591c101b020bc9081bfc5c77c393c9}\label{_system_main_8h_a9c591c101b020bc9081bfc5c77c393c9} 
+void {\bfseries System\+End\+Frame} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 設定/参照}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_system_main_8h_ad8954d9816002bb9ee851007b67cb855}\label{_system_main_8h_ad8954d9816002bb9ee851007b67cb855} 
+\mbox{\hyperlink{_typedef_8h_a1af9f95651e921615e75917a6dd1b574}{u64}} {\bfseries Get\+Performance\+Counter\+Micro\+Sec} ()
+\item 
+\Hypertarget{_system_main_8h_af988b01c4fb7bb0626602497ead94103}\label{_system_main_8h_af988b01c4fb7bb0626602497ead94103} 
+void {\bfseries Reset\+Delta\+Time} ()
+\item 
+\Hypertarget{_system_main_8h_a452fbbb7d3c2ce1a51dbcfbb8274c617}\label{_system_main_8h_a452fbbb7d3c2ce1a51dbcfbb8274c617} 
+\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} {\bfseries Get\+Delta\+Time} ()
+\item 
+\Hypertarget{_system_main_8h_afde233dd3c2802b2dbf618c7fee95799}\label{_system_main_8h_afde233dd3c2802b2dbf618c7fee95799} 
+\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}} {\bfseries Get\+Delta\+Time60} ()
+\item 
+\Hypertarget{_system_main_8h_a72f4a44a20068b8fb0e33540cb570fc1}\label{_system_main_8h_a72f4a44a20068b8fb0e33540cb570fc1} 
+void {\bfseries Set\+Delta\+Time} (\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}})
+\item 
+void \mbox{\hyperlink{_system_main_8h_abacdb1869fa1d49d870768a351e9ce51}{Show\+Grid}} (bool active)
+\item 
+bool \mbox{\hyperlink{_system_main_8h_a1fa0f7a5b88018c7712103b0fd083698}{Is\+Show\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em メニュー表示 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_system_main_8h_a7fef4433a1be2515e02ad473b0a51d3c}{Is\+Show\+Debug}} ()
+\begin{DoxyCompactList}\small\item\em デバッグ表示 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_system_main_8h_aff0cdcdf54d7590802122fecaedcc6b7}{Is\+Show\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em GUI表示 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_system_main_8h_aa7df6c5579c08529a3012470b542cdc8}{Is\+Show\+FPS}} ()
+\begin{DoxyCompactList}\small\item\em FPS表示 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_system_main_8h_a270fe73d7ed5828035a8d5e50fb4f97b}{Is\+Show\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Grid表示 \end{DoxyCompactList}\item 
+\Hypertarget{_system_main_8h_a39d0273ca5e8a239a7d5d73f8a330695}\label{_system_main_8h_a39d0273ca5e8a239a7d5d73f8a330695} 
+\mbox{\hyperlink{class_texture}{Texture}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Hdr\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Render\+Target HDRバッファを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{詳解}
+システムメイン 
+
+
+
+\label{doc-func-members}
+\Hypertarget{_system_main_8h_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{_system_main_8h_a7fef4433a1be2515e02ad473b0a51d3c}\index{SystemMain.h@{SystemMain.h}!IsShowDebug@{IsShowDebug}}
+\index{IsShowDebug@{IsShowDebug}!SystemMain.h@{SystemMain.h}}
+\doxysubsubsection{\texorpdfstring{IsShowDebug()}{IsShowDebug()}}
+{\footnotesize\ttfamily \label{_system_main_8h_a7fef4433a1be2515e02ad473b0a51d3c} 
+bool Is\+Show\+Debug (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+デバッグ表示 
+
+\begin{DoxyReturn}{戻り値}
+true\+:表示する false\+:非表示 
+\end{DoxyReturn}
+\Hypertarget{_system_main_8h_aa7df6c5579c08529a3012470b542cdc8}\index{SystemMain.h@{SystemMain.h}!IsShowFPS@{IsShowFPS}}
+\index{IsShowFPS@{IsShowFPS}!SystemMain.h@{SystemMain.h}}
+\doxysubsubsection{\texorpdfstring{IsShowFPS()}{IsShowFPS()}}
+{\footnotesize\ttfamily \label{_system_main_8h_aa7df6c5579c08529a3012470b542cdc8} 
+bool Is\+Show\+FPS (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+FPS表示 
+
+\begin{DoxyReturn}{戻り値}
+true\+:表示する false\+:非表示 
+\end{DoxyReturn}
+\Hypertarget{_system_main_8h_a270fe73d7ed5828035a8d5e50fb4f97b}\index{SystemMain.h@{SystemMain.h}!IsShowGrid@{IsShowGrid}}
+\index{IsShowGrid@{IsShowGrid}!SystemMain.h@{SystemMain.h}}
+\doxysubsubsection{\texorpdfstring{IsShowGrid()}{IsShowGrid()}}
+{\footnotesize\ttfamily \label{_system_main_8h_a270fe73d7ed5828035a8d5e50fb4f97b} 
+bool Is\+Show\+Grid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Grid表示 
+
+\begin{DoxyReturn}{戻り値}
+true\+:表示する false\+:非表示 
+\end{DoxyReturn}
+\Hypertarget{_system_main_8h_aff0cdcdf54d7590802122fecaedcc6b7}\index{SystemMain.h@{SystemMain.h}!IsShowGUI@{IsShowGUI}}
+\index{IsShowGUI@{IsShowGUI}!SystemMain.h@{SystemMain.h}}
+\doxysubsubsection{\texorpdfstring{IsShowGUI()}{IsShowGUI()}}
+{\footnotesize\ttfamily \label{_system_main_8h_aff0cdcdf54d7590802122fecaedcc6b7} 
+bool Is\+Show\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+GUI表示 
+
+\begin{DoxyReturn}{戻り値}
+true\+:表示する false\+:非表示 
+\end{DoxyReturn}
+\Hypertarget{_system_main_8h_a1fa0f7a5b88018c7712103b0fd083698}\index{SystemMain.h@{SystemMain.h}!IsShowMenu@{IsShowMenu}}
+\index{IsShowMenu@{IsShowMenu}!SystemMain.h@{SystemMain.h}}
+\doxysubsubsection{\texorpdfstring{IsShowMenu()}{IsShowMenu()}}
+{\footnotesize\ttfamily \label{_system_main_8h_a1fa0f7a5b88018c7712103b0fd083698} 
+bool Is\+Show\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+メニュー表示 
+
+\begin{DoxyReturn}{戻り値}
+true\+:表示する false\+:非表示 
+\end{DoxyReturn}
+\Hypertarget{_system_main_8h_abacdb1869fa1d49d870768a351e9ce51}\index{SystemMain.h@{SystemMain.h}!ShowGrid@{ShowGrid}}
+\index{ShowGrid@{ShowGrid}!SystemMain.h@{SystemMain.h}}
+\doxysubsubsection{\texorpdfstring{ShowGrid()}{ShowGrid()}}
+{\footnotesize\ttfamily \label{_system_main_8h_abacdb1869fa1d49d870768a351e9ce51} 
+void Show\+Grid (\begin{DoxyParamCaption}\item[{bool}]{active}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em active} & true\+:表示する false\+:非表示 \\
+\hline
+\end{DoxyParams}

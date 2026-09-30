@@ -1,0 +1,57 @@
+\doxysection{G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Physics/\+Physics\+Layer.h ファイル}
+\hypertarget{_physics_layer_8h}{}\label{_physics_layer_8h}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsLayer.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsLayer.h}}
+
+
+物理シミュレーション レイヤー管理  
+
+
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267ba}{physics\+::\+Object\+Layers}} \+: u16 \{ \newline
+\mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baadb7efabc078fc1b67b86c709623de88a}{physics\+::\+NON\+\_\+\+MOVING}} = 0
+, \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa2e2cc651c3814ff21219ec336a859ae1}{physics\+::\+MOVING}} = 1
+, \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baaf636b41154b4d22d47e007d5a7e9ecab}{physics\+::\+DEBRIS}} = 2
+, \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa4cdbb711da8a5eef955dcbe48baea742}{physics\+::\+SENSOR}} = 3
+, \newline
+\mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa73d103b12bd08b49bf611a15e890d86d}{physics\+::\+MAX\+\_\+\+COUNT}} = 4
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+物理シミュレーション レイヤー管理 
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_physics_layer_8h_doc-enum-members}
+\doxysubsection{列挙型詳解}
+\Hypertarget{_physics_layer_8h_a8f3495d58817a58553d47f58730267ba}\index{PhysicsLayer.h@{PhysicsLayer.h}!ObjectLayers@{ObjectLayers}}
+\index{ObjectLayers@{ObjectLayers}!PhysicsLayer.h@{PhysicsLayer.h}}
+\doxysubsubsection{\texorpdfstring{ObjectLayers}{ObjectLayers}}
+{\footnotesize\ttfamily \label{_physics_layer_8h_a8f3495d58817a58553d47f58730267ba} 
+enum \mbox{\hyperlink{_physics_layer_8h_a8f3495d58817a58553d47f58730267ba}{physics\+::\+Object\+Layers}} \+: \mbox{\hyperlink{_typedef_8h_a6dbf9516e516c901604625282c174aa4}{u16}}}
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NON\_MOVING@{NON\_MOVING}!PhysicsLayer.h@{PhysicsLayer.h}}\index{PhysicsLayer.h@{PhysicsLayer.h}!NON\_MOVING@{NON\_MOVING}}}\Hypertarget{_physics_layer_8h_a8f3495d58817a58553d47f58730267baadb7efabc078fc1b67b86c709623de88a}\label{_physics_layer_8h_a8f3495d58817a58553d47f58730267baadb7efabc078fc1b67b86c709623de88a} 
+NON\+\_\+\+MOVING&静的。動かない固定 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVING@{MOVING}!PhysicsLayer.h@{PhysicsLayer.h}}\index{PhysicsLayer.h@{PhysicsLayer.h}!MOVING@{MOVING}}}\Hypertarget{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa2e2cc651c3814ff21219ec336a859ae1}\label{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa2e2cc651c3814ff21219ec336a859ae1} 
+MOVING&動的 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBRIS@{DEBRIS}!PhysicsLayer.h@{PhysicsLayer.h}}\index{PhysicsLayer.h@{PhysicsLayer.h}!DEBRIS@{DEBRIS}}}\Hypertarget{_physics_layer_8h_a8f3495d58817a58553d47f58730267baaf636b41154b4d22d47e007d5a7e9ecab}\label{_physics_layer_8h_a8f3495d58817a58553d47f58730267baaf636b41154b4d22d47e007d5a7e9ecab} 
+DEBRIS&破片エフェクトなどは NON\+\_\+\+MOVING のみ衝突 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SENSOR@{SENSOR}!PhysicsLayer.h@{PhysicsLayer.h}}\index{PhysicsLayer.h@{PhysicsLayer.h}!SENSOR@{SENSOR}}}\Hypertarget{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa4cdbb711da8a5eef955dcbe48baea742}\label{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa4cdbb711da8a5eef955dcbe48baea742} 
+SENSOR&センサーは MOVING オブジェクトにのみ衝突 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAX\_COUNT@{MAX\_COUNT}!PhysicsLayer.h@{PhysicsLayer.h}}\index{PhysicsLayer.h@{PhysicsLayer.h}!MAX\_COUNT@{MAX\_COUNT}}}\Hypertarget{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa73d103b12bd08b49bf611a15e890d86d}\label{_physics_layer_8h_a8f3495d58817a58553d47f58730267baa73d103b12bd08b49bf611a15e890d86d} 
+MAX\+\_\+\+COUNT&定義最大数 \\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,42 @@
+\doxysection{Scene\+Physics.\+h}
+\hypertarget{_scene_physics_8h_source}{}\label{_scene_physics_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/ScenePhysics.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Sample/ScenePhysics.h}}
+\mbox{\hyperlink{_scene_physics_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <\mbox{\hyperlink{_scene_8h}{System/Scene.h}}>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }physics\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classphysics_1_1_rigid_body}{RigidBody}};}
+\DoxyCodeLine{00011\ \}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_scene_physics}{ScenePhysics}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_scene_1_1_base}{Scene::Base}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{_type_info_8h_aed9c544bcefbc45da9189a4c3d3e4d6c}{BP\_CLASS\_DECL}}(\mbox{\hyperlink{class_scene_physics}{ScenePhysics}},\ \mbox{\hyperlink{_typedef_8h_a987e4d6cf789cb59dbb390728271e4d6}{u8}}\textcolor{stringliteral}{"{}[Physics]\ 物理シミュレーションサンプル"{}});}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_scene_physics_a93eb6ce3b96b0bd44ec11ff03715d624}{Init}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \textcolor{comment}{//\ 初期化}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_physics_a78608577ca8beb5390df40c4bf1135b5}{Update}}()\ \textcolor{keyword}{override};\ \ \ \ \textcolor{comment}{//\ 更新}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_physics_a455e40db0b38118377e69cb478f96421}{Draw}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \textcolor{comment}{//\ 描画}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_physics_ac34ad11927dcdc6dae54772d19c8d7a8}{Exit}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \textcolor{comment}{//\ 終了}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_scene_physics_a66a8be4a52bf9d207b0e28c891c25a5b}{GUI}}()\ \textcolor{keyword}{override};\ \ \ \ \ \ \ \textcolor{comment}{//\ GUI表示}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{comment}{//\ \ 物理シミュレーションをリセット}}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ ResetPhysics();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<std::shared\_ptr<Model>>\ model\_boxes1\_;\ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::vector<std::shared\_ptr<Model>>\ model\_boxes2\_;\ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<std::shared\_ptr<Model>>\ model\_barrel\_;\ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<std::shared\_ptr<Model>>\ model\_cone\_;\ \ \ \ \ \ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ std::shared\_ptr<physics::RigidBody>\ \ \ \ \ \ \ \ \ \ \ \ \ \ body\_floor\_;\ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ std::vector<std::shared\_ptr<physics::RigidBody>>\ rigid\_bodies\_;\ \ \ \ }
+\DoxyCodeLine{00039\ \};}
+
+\end{DoxyCode}

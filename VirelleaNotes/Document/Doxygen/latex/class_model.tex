@@ -1,0 +1,277 @@
+\doxysection{Model クラス}
+\hypertarget{class_model}{}\label{class_model}\index{Model@{Model}}
+
+
+3Dモデル  
+
+
+
+
+{\ttfamily \#include $<$Model.\+h$>$}
+
+Model の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_model}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383}{Texture\+Type}} \{ \newline
+\mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a41178642cae095a6bdb909119b4d16e8}{Diffuse}}
+, \mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a39b0044dd8789d333e7794f359406740}{Specular}}
+, \mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a2c64c5cf613d8b9f4f7f3980d29aca10}{AO}}
+, \mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a960b44c579bc2f6818d2daaf9e4c16f0}{Normal}}
+, \newline
+\mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383af879d0a27915d351a8e47c2223777710}{Albedo}}
+, \mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a767078b82d60bc9dfaec29326b0b7c06}{Roughness}}
+, \mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a7d8a3680c55ec85a2231e2a48ecc88f3}{Metalness}}
+, \mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383aa6b9ceeb520a512bb3184db6b54160e3}{Count\+Max}}
+ \}
+\begin{DoxyCompactList}\small\item\em テクスチャの種類 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{Indent}\textbf{ 初期化}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_model_ae3b375de5f6df4faf74a95d64748e048}\label{class_model_ae3b375de5f6df4faf74a95d64748e048} 
+{\bfseries Model} ()
+\begin{DoxyCompactList}\small\item\em デフォルトコンストラクタ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_model_af901728cb5ba68052b87d7940dac3230}{Model}} (std\+::string\+\_\+view path)
+\item 
+bool \mbox{\hyperlink{class_model_a5152263c8143d2d3dc958ec04ab77e2c}{load}} (std\+::string\+\_\+view path)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 描画}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_model_ab8afe0a3c375a9ca38b29d1effcce91a}{update}} (f32 dt)
+\item 
+void \mbox{\hyperlink{class_model_aff8852b13d07a3846d612900b3fd4e5e}{render}} (\mbox{\hyperlink{class_shader_vs}{Shader\+Vs}} \texorpdfstring{$\ast$}{*}override\+\_\+vs=nullptr, \mbox{\hyperlink{class_shader_ps}{Shader\+Ps}} \texorpdfstring{$\ast$}{*}override\+\_\+ps=nullptr)
+\item 
+void \mbox{\hyperlink{class_model_a488444a0b86c816834a3a914fdc61ec7}{render\+By\+Frame}} (s32 frame\+\_\+index, \mbox{\hyperlink{class_shader_vs}{Shader\+Vs}} \texorpdfstring{$\ast$}{*}override\+\_\+vs=nullptr, \mbox{\hyperlink{class_shader_ps}{Shader\+Ps}} \texorpdfstring{$\ast$}{*}override\+\_\+ps=nullptr)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 設定}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_model_a823399bc37b8c202c1da238abf569467}\label{class_model_a823399bc37b8c202c1da238abf569467} 
+void {\bfseries set\+World\+Matrix} (const \mbox{\hyperlink{classmatrix}{matrix}} \&mat\+\_\+world)
+\begin{DoxyCompactList}\small\item\em ワールド行列を設定 \end{DoxyCompactList}\item 
+\Hypertarget{class_model_ad4913b52989226b174e17e88fe531a97}\label{class_model_ad4913b52989226b174e17e88fe531a97} 
+void {\bfseries use\+Shader} (bool use)
+\begin{DoxyCompactList}\small\item\em シェーダーを使うかどうかを設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_model_a2bc3ec47ebf1e447e54ade5da7b9ae95}{bind\+Animation}} (\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*}animation)
+\item 
+void \mbox{\hyperlink{class_model_a19f9f9806fc6502dd08853fbf0ed6cbc}{override\+Texture}} (\mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383}{Model\+::\+Texture\+Type}} type, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ \&texture)
+\item 
+\Hypertarget{class_model_af111655e9d3f54caa6edfa4bb4845f3e}\label{class_model_af111655e9d3f54caa6edfa4bb4845f3e} 
+void {\bfseries override\+Texture} (\mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383}{Model\+::\+Texture\+Type}} type, nullptr\+\_\+t)
+\begin{DoxyCompactList}\small\item\em テクスチャオーバーライドを解除します \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_model_a9089cf0cf2bc2889181f46206967b718}\label{class_model_a9089cf0cf2bc2889181f46206967b718} 
+static constexpr u32 {\bfseries VS\+\_\+\+VARIANT\+\_\+\+COUNT} = DX\+\_\+\+MV1\+\_\+\+VERTEX\+\_\+\+TYPE\+\_\+\+NUM
+\begin{DoxyCompactList}\small\item\em 頂点シェーダーのバリエーション数 \end{DoxyCompactList}\item 
+\Hypertarget{class_model_a1ba5a63f7dcff6298a8c1ea89b12abad}\label{class_model_a1ba5a63f7dcff6298a8c1ea89b12abad} 
+static constexpr u32 {\bfseries PS\+\_\+\+VARIANT\+\_\+\+COUNT} = 1
+\begin{DoxyCompactList}\small\item\em ピクセルシェーダーのバリエーション数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{取得}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_model_a6d6796718c2f82bb5aff6c1b6f027b95}\label{class_model_a6d6796718c2f82bb5aff6c1b6f027b95} 
+s32 {\bfseries frame\+Count} ()
+\item 
+\Hypertarget{class_model_a7cdb3b04dee78440d2f50bc5ba8f496f}\label{class_model_a7cdb3b04dee78440d2f50bc5ba8f496f} 
+\mbox{\hyperlink{classmatrix}{matrix}} {\bfseries world\+Matrix} () const
+\item 
+\Hypertarget{class_model_acb78883b26b576dab9a11ab65ee36fb9}\label{class_model_acb78883b26b576dab9a11ab65ee36fb9} 
+{\bfseries operator int} ()
+\item 
+\Hypertarget{class_model_accc87d0d67ed4aed6b888e231fbc77c0}\label{class_model_accc87d0d67ed4aed6b888e231fbc77c0} 
+const std\+::wstring \& {\bfseries path} () const
+\item 
+\Hypertarget{class_model_a436f875911534be67157ec5055ba5c4d}\label{class_model_a436f875911534be67157ec5055ba5c4d} 
+bool {\bfseries is\+Valid} () const
+\item 
+bool \mbox{\hyperlink{class_model_a900e20ada3398b6dd12a16dd71307ae0}{is\+Active}} () const
+\item 
+\Hypertarget{class_model_ace0fbe89210f733a1aeb5c583316e9df}\label{class_model_ace0fbe89210f733a1aeb5c583316e9df} 
+\mbox{\hyperlink{class_resource_model}{Resource\+Model}} \texorpdfstring{$\ast$}{*} {\bfseries resource} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+3Dモデル 
+
+\label{doc-enum-members}
+\Hypertarget{class_model_doc-enum-members}
+\doxysubsection{列挙型メンバ詳解}
+\Hypertarget{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383}\index{Model@{Model}!TextureType@{TextureType}}
+\index{TextureType@{TextureType}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{TextureType}{TextureType}}
+{\footnotesize\ttfamily \label{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383} 
+enum class \mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383}{Model\+::\+Texture\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+テクスチャの種類 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Diffuse@{Diffuse}!Model@{Model}}\index{Model@{Model}!Diffuse@{Diffuse}}}\Hypertarget{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a41178642cae095a6bdb909119b4d16e8}\label{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a41178642cae095a6bdb909119b4d16e8} 
+Diffuse&ディフューズ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Specular@{Specular}!Model@{Model}}\index{Model@{Model}!Specular@{Specular}}}\Hypertarget{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a39b0044dd8789d333e7794f359406740}\label{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a39b0044dd8789d333e7794f359406740} 
+Specular&スペキュラー \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AO@{AO}!Model@{Model}}\index{Model@{Model}!AO@{AO}}}\Hypertarget{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a2c64c5cf613d8b9f4f7f3980d29aca10}\label{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a2c64c5cf613d8b9f4f7f3980d29aca10} 
+AO&Ambient Occlusion \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Normal@{Normal}!Model@{Model}}\index{Model@{Model}!Normal@{Normal}}}\Hypertarget{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a960b44c579bc2f6818d2daaf9e4c16f0}\label{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a960b44c579bc2f6818d2daaf9e4c16f0} 
+Normal&法線マップ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Albedo@{Albedo}!Model@{Model}}\index{Model@{Model}!Albedo@{Albedo}}}\Hypertarget{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383af879d0a27915d351a8e47c2223777710}\label{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383af879d0a27915d351a8e47c2223777710} 
+Albedo&アルベド \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Roughness@{Roughness}!Model@{Model}}\index{Model@{Model}!Roughness@{Roughness}}}\Hypertarget{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a767078b82d60bc9dfaec29326b0b7c06}\label{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a767078b82d60bc9dfaec29326b0b7c06} 
+Roughness&ラフネス \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Metalness@{Metalness}!Model@{Model}}\index{Model@{Model}!Metalness@{Metalness}}}\Hypertarget{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a7d8a3680c55ec85a2231e2a48ecc88f3}\label{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383a7d8a3680c55ec85a2231e2a48ecc88f3} 
+Metalness&メタルネス(\+Metallic) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CountMax@{CountMax}!Model@{Model}}\index{Model@{Model}!CountMax@{CountMax}}}\Hypertarget{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383aa6b9ceeb520a512bb3184db6b54160e3}\label{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383aa6b9ceeb520a512bb3184db6b54160e3} 
+Count\+Max&定義個数 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-constructors}
+\Hypertarget{class_model_doc-constructors}
+\doxysubsection{構築子と解体子}
+\Hypertarget{class_model_af901728cb5ba68052b87d7940dac3230}\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily \label{class_model_af901728cb5ba68052b87d7940dac3230} 
+Model\+::\+Model (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_model_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_model_a2bc3ec47ebf1e447e54ade5da7b9ae95}\index{Model@{Model}!bindAnimation@{bindAnimation}}
+\index{bindAnimation@{bindAnimation}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{bindAnimation()}{bindAnimation()}}
+{\footnotesize\ttfamily \label{class_model_a2bc3ec47ebf1e447e54ade5da7b9ae95} 
+void Model\+::bind\+Animation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_animation}{Animation}} \texorpdfstring{$\ast$}{*}}]{animation}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em animation} & 関連付けるアニメーション(nullptrの場合は解除する) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_a900e20ada3398b6dd12a16dd71307ae0}\index{Model@{Model}!isActive@{isActive}}
+\index{isActive@{isActive}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily \label{class_model_a900e20ada3398b6dd12a16dd71307ae0} 
+bool Model\+::is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\begin{DoxyNote}{覚え書き}
+利用可能になっていない状態で\+Dx\+Lib MV1関連の関数を呼ぶと非同期ロードがブロッキングされます 
+\end{DoxyNote}
+\Hypertarget{class_model_a5152263c8143d2d3dc958ec04ab77e2c}\index{Model@{Model}!load@{load}}
+\index{load@{load}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{class_model_a5152263c8143d2d3dc958ec04ab77e2c} 
+bool Model\+::load (\begin{DoxyParamCaption}\item[{std\+::string\+\_\+view}]{path}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em path} & ファイルパス \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em true} & 成功(正常終了) \\
+\hline
+{\em false} & 失敗(エラー終了) \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{class_model_a19f9f9806fc6502dd08853fbf0ed6cbc}\index{Model@{Model}!overrideTexture@{overrideTexture}}
+\index{overrideTexture@{overrideTexture}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{overrideTexture()}{overrideTexture()}}
+{\footnotesize\ttfamily \label{class_model_a19f9f9806fc6502dd08853fbf0ed6cbc} 
+void Model\+::override\+Texture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model_ac127747e1f2c7fb7d6a3ff86c0dc8383}{Model\+::\+Texture\+Type}}}]{type}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_texture}{Texture}} $>$ \&}]{texture}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em type} & テクスチャの種類 \\
+\hline
+\mbox{\texttt{in}}  & {\em texture} & オーバーライドするテクスチャ(nullptrでオーバーライド解除) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_aff8852b13d07a3846d612900b3fd4e5e}\index{Model@{Model}!render@{render}}
+\index{render@{render}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily \label{class_model_aff8852b13d07a3846d612900b3fd4e5e} 
+void Model\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shader_vs}{Shader\+Vs}} \texorpdfstring{$\ast$}{*}}]{override\+\_\+vs}{ = {\ttfamily nullptr}, }\item[{\mbox{\hyperlink{class_shader_ps}{Shader\+Ps}} \texorpdfstring{$\ast$}{*}}]{override\+\_\+ps}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em override\+\_\+vs} & 上書きする頂点シェーダー (nullptrで無効化) \\
+\hline
+\mbox{\texttt{in}}  & {\em override\+\_\+ps} & 上書きするピクセルシェーダー (nullptrで無効化) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_model_a488444a0b86c816834a3a914fdc61ec7}\index{Model@{Model}!renderByFrame@{renderByFrame}}
+\index{renderByFrame@{renderByFrame}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{renderByFrame()}{renderByFrame()}}
+{\footnotesize\ttfamily \label{class_model_a488444a0b86c816834a3a914fdc61ec7} 
+void Model\+::render\+By\+Frame (\begin{DoxyParamCaption}\item[{s32}]{frame\+\_\+index}{, }\item[{\mbox{\hyperlink{class_shader_vs}{Shader\+Vs}} \texorpdfstring{$\ast$}{*}}]{override\+\_\+vs}{ = {\ttfamily nullptr}, }\item[{\mbox{\hyperlink{class_shader_ps}{Shader\+Ps}} \texorpdfstring{$\ast$}{*}}]{override\+\_\+ps}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em frame\+\_\+index} & フレーム番号 \\
+\hline
+\mbox{\texttt{in}}  & {\em override\+\_\+vs} & 上書きする頂点シェーダー (nullptrで無効化) \\
+\hline
+\mbox{\texttt{in}}  & {\em override\+\_\+ps} & 上書きするピクセルシェーダー (nullptrで無効化) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{覚え書き}
+フレームの総数は frame\+Count() で取得することができます。 
+\end{DoxyNote}
+\Hypertarget{class_model_ab8afe0a3c375a9ca38b29d1effcce91a}\index{Model@{Model}!update@{update}}
+\index{update@{update}!Model@{Model}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_model_ab8afe0a3c375a9ca38b29d1effcce91a} 
+void Model\+::update (\begin{DoxyParamCaption}\item[{f32}]{dt}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em dt} & 経過時間(単位\+:秒) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{覚え書き}
+速度バッファ生成用の1フレーム前の頂点を更新します 
+\end{DoxyNote}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/\mbox{\hyperlink{_model_8h}{Model.\+h}}\end{DoxyCompactItemize}

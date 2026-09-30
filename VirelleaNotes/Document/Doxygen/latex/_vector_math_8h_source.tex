@@ -1,0 +1,158 @@
+\doxysection{Vector\+Math.\+h}
+\hypertarget{_vector_math_8h_source}{}\label{_vector_math_8h_source}\index{F:/sg mitarai/ReoEngine/src/VectorMath.h@{F:/sg mitarai/ReoEngine/src/VectorMath.h}}
+\mbox{\hyperlink{_vector_math_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//============================================================================}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}hlsl++.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }hlslpp;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{inline}\ [[nodiscard]]\ DxLib::FLOAT2\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ float2\&\ v)}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{return}\ \{v.x,\ v.y\};}
+\DoxyCodeLine{00018\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{inline}\ [[nodiscard]]\ DxLib::FLOAT3\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ float3\&\ v)}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{return}\ \{v.x,\ v.y,\ v.z\};}
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{inline}\ [[nodiscard]]\ DxLib::FLOAT4\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ float4\&\ v)}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{return}\ \{v.x,\ v.y,\ v.z,\ v.w\};}
+\DoxyCodeLine{00030\ \}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{inline}\ [[nodiscard]]\ DxLib::INT4\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ int4\&\ v)}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordflow}{return}\ \{v.x,\ v.y,\ v.z,\ v.w\};}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{inline}\ [[nodiscard]]\ DxLib::MATRIX\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ float4x4\&\ m)}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ DxLib::MATRIX\ result;}
+\DoxyCodeLine{00042\ \ \ \ \ store(m,\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{float}*\textcolor{keyword}{>}(\&result));}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{inline}\ [[nodiscard]]\ float2\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ DxLib::FLOAT2\&\ v)}
+\DoxyCodeLine{00048\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return}\ \{v.u,\ v.v\};}
+\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{inline}\ [[nodiscard]]\ float3\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ DxLib::FLOAT3\&\ v)}
+\DoxyCodeLine{00054\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{return}\ \{v.x,\ v.y,\ v.z\};}
+\DoxyCodeLine{00056\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{inline}\ [[nodiscard]]\ float4\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ DxLib::FLOAT4\&\ v)}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordflow}{return}\ \{v.x,\ v.y,\ v.z,\ v.w\};}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{inline}\ [[nodiscard]]\ int4\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ DxLib::INT4\&\ v)}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{return}\ \{v.x,\ v.y,\ v.z,\ v.w\};}
+\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{inline}\ [[nodiscard]]\ float4x4\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(\textcolor{keyword}{const}\ DxLib::MATRIX\&\ m)}
+\DoxyCodeLine{00072\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ float4x4\ result;}
+\DoxyCodeLine{00074\ \ \ \ \ load(result,\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{float}*\textcolor{keyword}{>}(\textcolor{keyword}{const\_cast<}DxLib::MATRIX*\textcolor{keyword}{>}(\&m)));}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00076\ \}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00079\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00081\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00085\ hlslpp\_inline\ [[nodiscard]]\ float3\ \mbox{\hyperlink{_vector_math_8h_ab151ff244ab06b4f346d5827dde650e0}{mul}}(\textcolor{keyword}{const}\ float3x4\&\ m1,\ \textcolor{keyword}{const}\ float4\&\ v)}
+\DoxyCodeLine{00086\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{return}\ float3(\_hlslpp\_mul\_3x4\_4x1\_ps(m1.vec0,\ m1.vec1,\ m1.vec2,\ v.vec));}
+\DoxyCodeLine{00088\ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00093\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00094\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ :\ \textcolor{keyword}{public}\ float4x4}
+\DoxyCodeLine{00095\ \{}
+\DoxyCodeLine{00096\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{using\ }float4x4::float4x4;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}(\textcolor{keyword}{const}\ float4x4\&\ m)}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ :\ float4x4(m)}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_a563189f24256e032ef34dd12b5141461}{identity}}();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{comment}{//\ 平行移動行列}}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}}(\textcolor{keyword}{const}\ float3\&\ v);}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//\ スケール行列}}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_a77943ad632099406ed3a3ec04d772a9c}{scale}}(\textcolor{keyword}{const}\ float3\&\ s);}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_a77943ad632099406ed3a3ec04d772a9c}{scale}}(\textcolor{keywordtype}{float}\ sx,\ \textcolor{keywordtype}{float}\ sy,\ \textcolor{keywordtype}{float}\ sz);}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_a77943ad632099406ed3a3ec04d772a9c}{scale}}(\textcolor{keywordtype}{float}\ s);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{comment}{//\ X軸中心の回転行列}}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_a368f9088c35a97b2b3689c4f17bc7c22}{rotateX}}(\textcolor{keywordtype}{float}\ radian);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//\ Y軸中心の回転行列}}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_a813389a687218884597e96aeb34358c3}{rotateY}}(\textcolor{keywordtype}{float}\ radian);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{comment}{//\ Z軸中心の回転行列}}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_af3869c5076d612bbfe29e21abeab1847}{rotateZ}}(\textcolor{keywordtype}{float}\ radian);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{comment}{//\ 任意軸中心の回転行列}}
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_ad4c15b4b3432a7d15dca39fcd6076a2c}{rotateAxis}}(\textcolor{keyword}{const}\ float3\&\ axis,\ \textcolor{keywordtype}{float}\ radian);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \textcolor{comment}{//\ [左手座標系]\ ビュー行列}}
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_afa0c2aacb9575808899a5797ad83eaea}{lookAtLH}}(\textcolor{keyword}{const}\ float3\&\ eye,\ \textcolor{keyword}{const}\ float3\&\ look\_at,\ \textcolor{keyword}{const}\ float3\&\ world\_up\ =\ float3(0.0f,\ 1.0f,\ 0.0f));}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{comment}{//\ [左手座標系]\ 投影行列}}
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_af4bdc9f63f750f2840832211ecf3113a}{perspectiveFovLH}}(\textcolor{keywordtype}{float}\ fovy,\ \textcolor{keywordtype}{float}\ aspect\_ratio,\ \textcolor{keywordtype}{float}\ near\_z,\ \textcolor{keywordtype}{float}\ far\_z);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{comment}{//\ [左手座標系]\ 無限遠投影行列}}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_a4aedb41fd343fb179e65fa4fba06a20d}{perspectiveFovInfiniteFarPlaneLH}}(\textcolor{keywordtype}{float}\ fovy,\ \textcolor{keywordtype}{float}\ aspect\_ratio,\ \textcolor{keywordtype}{float}\ near\_z);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//\ [左手座標系]\ 平行投影行列}}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keyword}{static}\ [[nodiscard]]\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}}\ \mbox{\hyperlink{classmatrix_a75281117d2449c2873e030dd3447236f}{orthographicOffCenterLH}}(\textcolor{keywordtype}{float}\ left,\ \textcolor{keywordtype}{float}\ right,\ \textcolor{keywordtype}{float}\ bottom,\ \textcolor{keywordtype}{float}\ top,\ \textcolor{keywordtype}{float}\ near\_z,\ \textcolor{keywordtype}{float}\ far\_z);}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{comment}{//\ X軸ベクトルを取得}}
+\DoxyCodeLine{00194\ \ \ \ \ float3\ axisX()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{comment}{//\ Y軸ベクトルを取得}}
+\DoxyCodeLine{00197\ \ \ \ \ float3\ axisY()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//\ Z軸ベクトルを取得}}
+\DoxyCodeLine{00200\ \ \ \ \ float3\ axisZ()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{comment}{//\ 平行移動を取得}}
+\DoxyCodeLine{00203\ \ \ \ \ float3\ \mbox{\hyperlink{classmatrix_aec948f3554d73f56a0e9a4dd3604d46f}{translate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classmatrix_a93e7596281903043e248c52ffedf7c9c}{axisVectorX}}()\ \{\ \textcolor{keywordflow}{return}\ \_11\_12\_13\_14;\ \}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classmatrix_af26e34a9858c79655c828a0e82ca6f60}{axisVectorY}}()\ \{\ \textcolor{keywordflow}{return}\ \_21\_22\_23\_24;\ \}}
+\DoxyCodeLine{00210\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classmatrix_a1aae7438793b15d6403e98fd27c1d324}{axisVectorZ}}()\ \{\ \textcolor{keywordflow}{return}\ \_31\_32\_33\_34;\ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keyword}{auto}\&\ \mbox{\hyperlink{classmatrix_a61209a50a3cca44a15434beaf2db6b5b}{translateVector}}()\ \{\ \textcolor{keywordflow}{return}\ \_41\_42\_43\_44;\ \}}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00224\ \ \ \ \ \mbox{\hyperlink{classmatrix_ad98201f67dd7c577ca05c84880d4698a}{matrix}}(\textcolor{keyword}{const}\ DxLib::MATRIX\&\ \mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}})\ \{\ load(*\textcolor{keyword}{this},\ \textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{float}*\textcolor{keyword}{>}(\textcolor{keyword}{const\_cast<}DxLib::MATRIX*\textcolor{keyword}{>}(\&\mbox{\hyperlink{classmatrix_a73ef15efc56465db46f2f36986da629d}{matrix}})));\ \}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00227\ \ \ \ \ \textcolor{keyword}{operator}\ DxLib::MATRIX\ \textcolor{keyword}{const}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_vector_math_8h_acaf43804f3b1a2e96e58f2ccbbeaab76}{cast}}(*\textcolor{keyword}{this});\ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00230\ \};}
+
+\end{DoxyCode}

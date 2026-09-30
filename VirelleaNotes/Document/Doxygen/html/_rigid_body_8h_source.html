@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/RigidBody.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_rigid_body_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RigidBody.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_rigid_body_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>shape {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span><a class="code hl_class" href="classshape_1_1_sphere.html">Sphere</a>;            </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="classshape_1_1_box.html">Box</a>;               </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span>HeightField;       </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span><a class="code hl_class" href="classshape_1_1_mesh.html">Mesh</a>;              </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="classshape_1_1_convex_hull.html">ConvexHull</a>;        </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="classshape_1_1_capsule.html">Capsule</a>;           </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span>TaperedCapsule;    </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="classshape_1_1_cylinder.html">Cylinder</a>;          </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span>Triangle;          </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span>StaticCompound;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span>MutableCompound;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">   20</a></span><span class="keyword">constexpr</span> <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">default_density</a> = 1000.0f;    </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}    <span class="comment">// namespace shape</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span>physics {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//--------------------------------------------------------------</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">//--------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">   28</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">MotionType</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a84a8921b25f505d0d2077aeb5db4bc16">   30</a></span>    <a class="code hl_enumvalue" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a84a8921b25f505d0d2077aeb5db4bc16">Static</a>,       </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a40c78b58b86002ee38fad2d3c9dd787e">   31</a></span>    <a class="code hl_enumvalue" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a40c78b58b86002ee38fad2d3c9dd787e">Kinematic</a>,    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c">   32</a></span>    <a class="code hl_enumvalue" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c">Dynamic</a>,      </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">//===========================================================================</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//===========================================================================</span></div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="};">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html">   38</a></span><span class="keyword">class </span><a class="code hl_class" href="classphysics_1_1_rigid_body.html">RigidBody</a></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#aeaf58e0ff88940582079c3d6860f80a6">   42</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aeaf58e0ff88940582079c3d6860f80a6">~RigidBody</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">//-----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">//-----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a4db561e203a7a6238b7e6dabfefacbd6">   51</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a4db561e203a7a6238b7e6dabfefacbd6">setLayer</a>(<a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aff03acd91146bc9a20f2a491f93d1932">layer</a>) = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#aff03acd91146bc9a20f2a491f93d1932">   54</a></span>    <span class="keyword">virtual</span> <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aff03acd91146bc9a20f2a491f93d1932">layer</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">//-----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="comment">//-----------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a5a6e6230056bbc74b6af14ecb85fbd58">   65</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a5a6e6230056bbc74b6af14ecb85fbd58">setPosition</a>(<span class="keyword">const</span> float3&amp; <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a43919be018e0b51e9b4b9c568962181e">position</a>, <span class="keywordtype">bool</span> is_activate = <span class="keyword">true</span>) = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a43919be018e0b51e9b4b9c568962181e">   68</a></span>    <span class="keyword">virtual</span> float3 <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a43919be018e0b51e9b4b9c568962181e">position</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a670ba2bf210384276c1c4fe305d2605a">   71</a></span>    <span class="keyword">virtual</span> float3 <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a670ba2bf210384276c1c4fe305d2605a">centerOfMassPosition</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a9deeb6a45f111d31082587d6782fa8c5">   76</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a9deeb6a45f111d31082587d6782fa8c5">setRotation</a>(<span class="keyword">const</span> quaternion&amp; rot, <span class="keywordtype">bool</span> is_activate = <span class="keyword">true</span>) = 0;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a191e138030612de47568431c8b6e727a">   79</a></span>    <span class="keyword">virtual</span> quaternion <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a191e138030612de47568431c8b6e727a">rotation</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#aa66ae217f95717046cc57b312e2e77a2">   82</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classmatrix.html">matrix</a> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aa66ae217f95717046cc57b312e2e77a2">worldMatrix</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a065d328b0a961382a8911805168282eb">   85</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classmatrix.html">matrix</a> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a065d328b0a961382a8911805168282eb">centerOfMassTransform</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">//-----------------------------------------------------------</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a7be837e25dd2f8cded86f47fa2d1d2b4">  100</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a7be837e25dd2f8cded86f47fa2d1d2b4">moveKinematic</a>(<span class="keyword">const</span> float3&amp; target_position, <span class="keyword">const</span> quaternion&amp; target_rotation, <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> delta_time) = 0;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#abea074b8e238039bf3dda46a19ab0179">  104</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#abea074b8e238039bf3dda46a19ab0179">setLinearVelocity</a>(<span class="keyword">const</span> float3&amp; v) = 0;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a795c95e408ea76d6acdcec99e3bb98e4">  107</a></span>    <span class="keyword">virtual</span> float3 <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a795c95e408ea76d6acdcec99e3bb98e4">linearVelocity</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a2060d916e6bb2a292387fd90951e767b">  111</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a2060d916e6bb2a292387fd90951e767b">addLinearVelocity</a>(<span class="keyword">const</span> float3&amp; v) = 0;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#ab09d70d5181788b5893755a1e1621b7f">  115</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#ab09d70d5181788b5893755a1e1621b7f">setAngularVelocity</a>(<span class="keyword">const</span> float3&amp; vrot) = 0;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#aca09f2b18ac78d022623059e1dc6a2d5">  118</a></span>    <span class="keyword">virtual</span> float3 <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aca09f2b18ac78d022623059e1dc6a2d5">angularVelocity</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a0a0c9e6a7c5df94035190acf80b5fd28">  122</a></span>    <span class="keyword">virtual</span> float3 <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a0a0c9e6a7c5df94035190acf80b5fd28">pointVelocity</a>(<span class="keyword">const</span> float3&amp; point) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#af6c8404e91d54e8783ddb3ebb364f98b">  132</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#af6c8404e91d54e8783ddb3ebb364f98b">addForce</a>(<span class="keyword">const</span> float3&amp; force) = 0;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a95f0919a27bf81b0f244382734232eb7">  137</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a95f0919a27bf81b0f244382734232eb7">addForce</a>(<span class="keyword">const</span> float3&amp; force, <span class="keyword">const</span> float3&amp; point) = 0;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#aedfe68f1035bd0a879340d548b92a10f">  141</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aedfe68f1035bd0a879340d548b92a10f">addTorque</a>(<span class="keyword">const</span> float3&amp; torque) = 0;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a81b0c1a3b94735b1377f13bddb758156">  151</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a81b0c1a3b94735b1377f13bddb758156">addImpulse</a>(<span class="keyword">const</span> float3&amp; impulse) = 0;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a5b626de3448224a249ced873c05e2c3e">  156</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a5b626de3448224a249ced873c05e2c3e">addImpulse</a>(<span class="keyword">const</span> float3&amp; impulse, <span class="keyword">const</span> float3&amp; point) = 0;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a4424738f3f08bfa0e3f6adf9698a04a4">  160</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a4424738f3f08bfa0e3f6adf9698a04a4">addAngularImpulse</a>(<span class="keyword">const</span> float3&amp; impulse) = 0;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#ae5b08588113928e34e44d2a5bb04473a">  170</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#ae5b08588113928e34e44d2a5bb04473a">setRestitution</a>(<a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> coeff) = 0;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a633447c5e3021f47842e0e21e790e938">  173</a></span>    <span class="keyword">virtual</span> <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a633447c5e3021f47842e0e21e790e938">restitution</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a3176341b3cd9b22e1dd62122e3e3d6b4">  183</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a3176341b3cd9b22e1dd62122e3e3d6b4">setFriction</a>(<a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> coeff) = 0;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#aa4acbfa32015dedfcbd04fc59e9893e6">  186</a></span>    <span class="keyword">virtual</span> <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aa4acbfa32015dedfcbd04fc59e9893e6">friction</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a40753495537fbb8104fb953ed876fd77">  196</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a40753495537fbb8104fb953ed876fd77">setGravityFactor</a>(<a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> coeff) = 0;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#aaa35fb380e89eaf36505627c723a90d0">  199</a></span>    <span class="keyword">virtual</span> <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aaa35fb380e89eaf36505627c723a90d0">gravityFactor</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#ab4fd511bac9774e5061a2a57b40e16d3">  206</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#ab4fd511bac9774e5061a2a57b40e16d3">setMotionType</a>(<a class="code hl_enumeration" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">physics::MotionType</a> motion_type, <span class="keywordtype">bool</span> is_activate = <span class="keyword">true</span>) = 0;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a4ddd6c758d9f7a53ef5d6d20e36502b5">  209</a></span>    <span class="keyword">virtual</span> <a class="code hl_class" href="classmatrix.html">matrix</a> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a4ddd6c758d9f7a53ef5d6d20e36502b5">inverseInertia</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#a0eaf71f1f1d32abdf4f4095581061a2a">  213</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#a0eaf71f1f1d32abdf4f4095581061a2a">setData</a>(std::intptr_t s) = 0;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#aa06209408a89f72e2b9c37d0dbbc3369">  216</a></span>    <span class="keyword">virtual</span> std::intptr_t <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aa06209408a89f72e2b9c37d0dbbc3369">data</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classphysics_1_1_rigid_body.html#aa3aedac15bd41b6d2623fde9a7b35e8e">  219</a></span>    <span class="keyword">virtual</span> <a class="code hl_typedef" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a> <a class="code hl_function" href="classphysics_1_1_rigid_body.html#aa3aedac15bd41b6d2623fde9a7b35e8e">bodyID</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>};</div>
+</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment">//===========================================================================</span></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment">//===========================================================================</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment">//  Sphere剛体を作成</span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>std::shared_ptr&lt;physics::RigidBody&gt; createRigidBody(<span class="keyword">const</span> <a class="code hl_class" href="classshape_1_1_sphere.html">shape::Sphere</a>&amp; o,        <span class="comment">//</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>                  layer,    <span class="comment">//</span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>                                                    <a class="code hl_enumeration" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">physics::MotionType</a>  motion_type = <a class="code hl_enumvalue" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c">physics::MotionType::Dynamic</a>,</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>                  density     = <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a>);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment">//  Box剛体を作成</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>std::shared_ptr&lt;physics::RigidBody&gt; createRigidBody(<span class="keyword">const</span> <a class="code hl_class" href="classshape_1_1_box.html">shape::Box</a>&amp;   o,        <span class="comment">//</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>                 layer,    <span class="comment">//</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                                                    <a class="code hl_enumeration" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">physics::MotionType</a> motion_type = <a class="code hl_enumvalue" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c">physics::MotionType::Dynamic</a>,</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>                 density     = <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a>);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="comment">//  Cylinder剛体を作成</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>std::shared_ptr&lt;physics::RigidBody&gt; createRigidBody(<span class="keyword">const</span> <a class="code hl_class" href="classshape_1_1_cylinder.html">shape::Cylinder</a>&amp; o,        <span class="comment">//</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>                    layer,    <span class="comment">//</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                                                    <a class="code hl_enumeration" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">physics::MotionType</a>    motion_type = <a class="code hl_enumvalue" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c">physics::MotionType::Dynamic</a>,</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>                    density     = <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a>);</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">//  Capsule剛体を作成</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>std::shared_ptr&lt;physics::RigidBody&gt; createRigidBody(<span class="keyword">const</span> <a class="code hl_class" href="classshape_1_1_capsule.html">shape::Capsule</a>&amp; o,        <span class="comment">//</span></div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>                   layer,    <span class="comment">//</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                                                    <a class="code hl_enumeration" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">physics::MotionType</a>   motion_type = <a class="code hl_enumvalue" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c">physics::MotionType::Dynamic</a>,</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>                   density     = <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a>);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">//  ConvexHull剛体を作成</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>std::shared_ptr&lt;physics::RigidBody&gt; createRigidBody(<span class="keyword">const</span> <a class="code hl_class" href="classshape_1_1_convex_hull.html">shape::ConvexHull</a>&amp; o,        <span class="comment">//</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>                      layer,    <span class="comment">//</span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                                                    <a class="code hl_enumeration" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">physics::MotionType</a>      motion_type = <a class="code hl_enumvalue" href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c">physics::MotionType::Dynamic</a>,</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>                                                    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a>                      density     = <a class="code hl_variable" href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a>);</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment">//  Mesh剛体を作成</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="_rigid_body_8h.html#a2a93d994134381d223627d3c0cc35b26">  259</a></span>std::shared_ptr&lt;physics::RigidBody&gt; createRigidBody(<span class="keyword">const</span> <a class="code hl_class" href="classshape_1_1_mesh.html">shape::Mesh</a>&amp; o, <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a> layer);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>}    <span class="comment">// namespace physics</span></div>
+<div class="ttc" id="a_rigid_body_8h_html_a006ca422edcafa6d8ffa4805f69cfbac"><div class="ttname"><a href="_rigid_body_8h.html#a006ca422edcafa6d8ffa4805f69cfbac">shape::default_density</a></div><div class="ttdeci">constexpr f32 default_density</div><div class="ttdoc">デフォルト質量</div><div class="ttdef"><b>Definition</b> RigidBody.h:20</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_a7664f0ec137fcd61a578e2447e866bd3"><div class="ttname"><a href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3">physics::MotionType</a></div><div class="ttdeci">MotionType</div><div class="ttdoc">動作タイプ</div><div class="ttdef"><b>Definition</b> RigidBody.h:29</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_a7664f0ec137fcd61a578e2447e866bd3a40c78b58b86002ee38fad2d3c9dd787e"><div class="ttname"><a href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a40c78b58b86002ee38fad2d3c9dd787e">physics::MotionType::Kinematic</a></div><div class="ttdeci">@ Kinematic</div><div class="ttdoc">速度のみで移動可能で、力には反応しない。</div><div class="ttdef"><b>Definition</b> RigidBody.h:31</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_a7664f0ec137fcd61a578e2447e866bd3a84a8921b25f505d0d2077aeb5db4bc16"><div class="ttname"><a href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a84a8921b25f505d0d2077aeb5db4bc16">physics::MotionType::Static</a></div><div class="ttdeci">@ Static</div><div class="ttdoc">静的。動かない。</div><div class="ttdef"><b>Definition</b> RigidBody.h:30</div></div>
+<div class="ttc" id="a_rigid_body_8h_html_a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c"><div class="ttname"><a href="_rigid_body_8h.html#a7664f0ec137fcd61a578e2447e866bd3a971fd8cc345d8bd9f92e9f7d88fdf20c">physics::MotionType::Dynamic</a></div><div class="ttdeci">@ Dynamic</div><div class="ttdoc">通常の物理オブジェクトとして力に応答する。</div><div class="ttdef"><b>Definition</b> RigidBody.h:32</div></div>
+<div class="ttc" id="a_typedef_8h_html_a1af9f95651e921615e75917a6dd1b574"><div class="ttname"><a href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div><div class="ttdeci">uint64_t u64</div><div class="ttdoc">64bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:24</div></div>
+<div class="ttc" id="a_typedef_8h_html_a6dbf9516e516c901604625282c174aa4"><div class="ttname"><a href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a></div><div class="ttdeci">uint16_t u16</div><div class="ttdoc">16bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:22</div></div>
+<div class="ttc" id="a_typedef_8h_html_ad34d88453d37b65a09797bad37f2f527"><div class="ttname"><a href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></div><div class="ttdeci">float f32</div><div class="ttdoc">単精度浮動小数点数</div><div class="ttdef"><b>Definition</b> Typedef.h:25</div></div>
+<div class="ttc" id="aclassmatrix_html"><div class="ttname"><a href="classmatrix.html">matrix</a></div><div class="ttdoc">4x4行列</div><div class="ttdef"><b>Definition</b> VectorMath.h:93</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html"><div class="ttname"><a href="classphysics_1_1_rigid_body.html">physics::RigidBody</a></div><div class="ttdoc">剛体クラス</div><div class="ttdef"><b>Definition</b> RigidBody.h:39</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a065d328b0a961382a8911805168282eb"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a065d328b0a961382a8911805168282eb">physics::RigidBody::centerOfMassTransform</a></div><div class="ttdeci">virtual matrix centerOfMassTransform() const =0</div><div class="ttdoc">重心の変換行列を取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a0a0c9e6a7c5df94035190acf80b5fd28"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a0a0c9e6a7c5df94035190acf80b5fd28">physics::RigidBody::pointVelocity</a></div><div class="ttdeci">virtual float3 pointVelocity(const float3 &amp;point) const =0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a0eaf71f1f1d32abdf4f4095581061a2a"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a0eaf71f1f1d32abdf4f4095581061a2a">physics::RigidBody::setData</a></div><div class="ttdeci">virtual void setData(std::intptr_t s)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a191e138030612de47568431c8b6e727a"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a191e138030612de47568431c8b6e727a">physics::RigidBody::rotation</a></div><div class="ttdeci">virtual quaternion rotation() const =0</div><div class="ttdoc">回転姿勢を設定</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a2060d916e6bb2a292387fd90951e767b"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a2060d916e6bb2a292387fd90951e767b">physics::RigidBody::addLinearVelocity</a></div><div class="ttdeci">virtual void addLinearVelocity(const float3 &amp;v)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a3176341b3cd9b22e1dd62122e3e3d6b4"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a3176341b3cd9b22e1dd62122e3e3d6b4">physics::RigidBody::setFriction</a></div><div class="ttdeci">virtual void setFriction(f32 coeff)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a40753495537fbb8104fb953ed876fd77"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a40753495537fbb8104fb953ed876fd77">physics::RigidBody::setGravityFactor</a></div><div class="ttdeci">virtual void setGravityFactor(f32 coeff)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a43919be018e0b51e9b4b9c568962181e"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a43919be018e0b51e9b4b9c568962181e">physics::RigidBody::position</a></div><div class="ttdeci">virtual float3 position() const =0</div><div class="ttdoc">位置を取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a4424738f3f08bfa0e3f6adf9698a04a4"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a4424738f3f08bfa0e3f6adf9698a04a4">physics::RigidBody::addAngularImpulse</a></div><div class="ttdeci">virtual void addAngularImpulse(const float3 &amp;impulse)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a4db561e203a7a6238b7e6dabfefacbd6"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a4db561e203a7a6238b7e6dabfefacbd6">physics::RigidBody::setLayer</a></div><div class="ttdeci">virtual void setLayer(u16 layer)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a4ddd6c758d9f7a53ef5d6d20e36502b5"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a4ddd6c758d9f7a53ef5d6d20e36502b5">physics::RigidBody::inverseInertia</a></div><div class="ttdeci">virtual matrix inverseInertia() const =0</div><div class="ttdoc">ワールド空間の逆慣性テンソルを取得する</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a5a6e6230056bbc74b6af14ecb85fbd58"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a5a6e6230056bbc74b6af14ecb85fbd58">physics::RigidBody::setPosition</a></div><div class="ttdeci">virtual void setPosition(const float3 &amp;position, bool is_activate=true)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a5b626de3448224a249ced873c05e2c3e"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a5b626de3448224a249ced873c05e2c3e">physics::RigidBody::addImpulse</a></div><div class="ttdeci">virtual void addImpulse(const float3 &amp;impulse, const float3 &amp;point)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a633447c5e3021f47842e0e21e790e938"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a633447c5e3021f47842e0e21e790e938">physics::RigidBody::restitution</a></div><div class="ttdeci">virtual f32 restitution() const =0</div><div class="ttdoc">跳ね返り係数を取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a670ba2bf210384276c1c4fe305d2605a"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a670ba2bf210384276c1c4fe305d2605a">physics::RigidBody::centerOfMassPosition</a></div><div class="ttdeci">virtual float3 centerOfMassPosition() const =0</div><div class="ttdoc">重心位置を取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a795c95e408ea76d6acdcec99e3bb98e4"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a795c95e408ea76d6acdcec99e3bb98e4">physics::RigidBody::linearVelocity</a></div><div class="ttdeci">virtual float3 linearVelocity() const =0</div><div class="ttdoc">速度を取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a7be837e25dd2f8cded86f47fa2d1d2b4"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a7be837e25dd2f8cded86f47fa2d1d2b4">physics::RigidBody::moveKinematic</a></div><div class="ttdeci">virtual void moveKinematic(const float3 &amp;target_position, const quaternion &amp;target_rotation, f32 delta_time)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a81b0c1a3b94735b1377f13bddb758156"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a81b0c1a3b94735b1377f13bddb758156">physics::RigidBody::addImpulse</a></div><div class="ttdeci">virtual void addImpulse(const float3 &amp;impulse)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a95f0919a27bf81b0f244382734232eb7"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a95f0919a27bf81b0f244382734232eb7">physics::RigidBody::addForce</a></div><div class="ttdeci">virtual void addForce(const float3 &amp;force, const float3 &amp;point)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_a9deeb6a45f111d31082587d6782fa8c5"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#a9deeb6a45f111d31082587d6782fa8c5">physics::RigidBody::setRotation</a></div><div class="ttdeci">virtual void setRotation(const quaternion &amp;rot, bool is_activate=true)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_aa06209408a89f72e2b9c37d0dbbc3369"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#aa06209408a89f72e2b9c37d0dbbc3369">physics::RigidBody::data</a></div><div class="ttdeci">virtual std::intptr_t data() const =0</div><div class="ttdoc">ユーザーデーターを取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_aa3aedac15bd41b6d2623fde9a7b35e8e"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#aa3aedac15bd41b6d2623fde9a7b35e8e">physics::RigidBody::bodyID</a></div><div class="ttdeci">virtual u64 bodyID() const =0</div><div class="ttdoc">ボディIDを取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_aa4acbfa32015dedfcbd04fc59e9893e6"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#aa4acbfa32015dedfcbd04fc59e9893e6">physics::RigidBody::friction</a></div><div class="ttdeci">virtual f32 friction() const =0</div><div class="ttdoc">摩擦係数を取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_aa66ae217f95717046cc57b312e2e77a2"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#aa66ae217f95717046cc57b312e2e77a2">physics::RigidBody::worldMatrix</a></div><div class="ttdeci">virtual matrix worldMatrix() const =0</div><div class="ttdoc">ワールド行列を取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_aaa35fb380e89eaf36505627c723a90d0"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#aaa35fb380e89eaf36505627c723a90d0">physics::RigidBody::gravityFactor</a></div><div class="ttdeci">virtual f32 gravityFactor() const =0</div><div class="ttdoc">重力係数を取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_ab09d70d5181788b5893755a1e1621b7f"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#ab09d70d5181788b5893755a1e1621b7f">physics::RigidBody::setAngularVelocity</a></div><div class="ttdeci">virtual void setAngularVelocity(const float3 &amp;vrot)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_ab4fd511bac9774e5061a2a57b40e16d3"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#ab4fd511bac9774e5061a2a57b40e16d3">physics::RigidBody::setMotionType</a></div><div class="ttdeci">virtual void setMotionType(physics::MotionType motion_type, bool is_activate=true)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_abea074b8e238039bf3dda46a19ab0179"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#abea074b8e238039bf3dda46a19ab0179">physics::RigidBody::setLinearVelocity</a></div><div class="ttdeci">virtual void setLinearVelocity(const float3 &amp;v)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_aca09f2b18ac78d022623059e1dc6a2d5"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#aca09f2b18ac78d022623059e1dc6a2d5">physics::RigidBody::angularVelocity</a></div><div class="ttdeci">virtual float3 angularVelocity() const =0</div><div class="ttdoc">角速度を取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_ae5b08588113928e34e44d2a5bb04473a"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#ae5b08588113928e34e44d2a5bb04473a">physics::RigidBody::setRestitution</a></div><div class="ttdeci">virtual void setRestitution(f32 coeff)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_aeaf58e0ff88940582079c3d6860f80a6"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#aeaf58e0ff88940582079c3d6860f80a6">physics::RigidBody::~RigidBody</a></div><div class="ttdeci">virtual ~RigidBody()=default</div><div class="ttdoc">デストラクタ</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_aedfe68f1035bd0a879340d548b92a10f"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#aedfe68f1035bd0a879340d548b92a10f">physics::RigidBody::addTorque</a></div><div class="ttdeci">virtual void addTorque(const float3 &amp;torque)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_af6c8404e91d54e8783ddb3ebb364f98b"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#af6c8404e91d54e8783ddb3ebb364f98b">physics::RigidBody::addForce</a></div><div class="ttdeci">virtual void addForce(const float3 &amp;force)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_rigid_body_html_aff03acd91146bc9a20f2a491f93d1932"><div class="ttname"><a href="classphysics_1_1_rigid_body.html#aff03acd91146bc9a20f2a491f93d1932">physics::RigidBody::layer</a></div><div class="ttdeci">virtual u16 layer() const =0</div><div class="ttdoc">オブジェクトレイヤーを取得</div></div>
+<div class="ttc" id="aclassshape_1_1_box_html"><div class="ttname"><a href="classshape_1_1_box.html">shape::Box</a></div><div class="ttdoc">ボックス Box</div><div class="ttdef"><b>Definition</b> Shape.h:70</div></div>
+<div class="ttc" id="aclassshape_1_1_capsule_html"><div class="ttname"><a href="classshape_1_1_capsule.html">shape::Capsule</a></div><div class="ttdoc">カプセル Capsule</div><div class="ttdef"><b>Definition</b> Shape.h:87</div></div>
+<div class="ttc" id="aclassshape_1_1_convex_hull_html"><div class="ttname"><a href="classshape_1_1_convex_hull.html">shape::ConvexHull</a></div><div class="ttdoc">凸形状 ConvexHull</div><div class="ttdef"><b>Definition</b> Shape.h:125</div></div>
+<div class="ttc" id="aclassshape_1_1_cylinder_html"><div class="ttname"><a href="classshape_1_1_cylinder.html">shape::Cylinder</a></div><div class="ttdoc">円筒 Cylinder</div><div class="ttdef"><b>Definition</b> Shape.h:106</div></div>
+<div class="ttc" id="aclassshape_1_1_mesh_html"><div class="ttname"><a href="classshape_1_1_mesh.html">shape::Mesh</a></div><div class="ttdoc">メッシュ Mesh</div><div class="ttdef"><b>Definition</b> Shape.h:137</div></div>
+<div class="ttc" id="aclassshape_1_1_sphere_html"><div class="ttname"><a href="classshape_1_1_sphere.html">shape::Sphere</a></div><div class="ttdoc">球 Sphere</div><div class="ttdef"><b>Definition</b> Shape.h:51</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="dir_d03dc9e14809aca1458b1cae58a8e37f.html">Physics</a></li><li class="navelem"><a href="_rigid_body_8h.html">RigidBody.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

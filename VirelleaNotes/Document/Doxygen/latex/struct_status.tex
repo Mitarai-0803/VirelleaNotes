@@ -1,0 +1,100 @@
+\doxysection{Status\texorpdfstring{$<$}{<} T, V \texorpdfstring{$>$}{>} 構造体テンプレート}
+\hypertarget{struct_status}{}\label{struct_status}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}}
+
+
+ステータス  
+
+
+
+
+{\ttfamily \#include $<$Status.\+h$>$}
+
+\doxysubsubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0}{Bit}} \+: V \{ \newline
+\mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0abd9f7c5d6ab4201b138a3e51dab7056f}{Alive}} = 0
+, \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0ac5475a8fae2fa421403e56f7ae0de108}{Change\+Prio}}
+, \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a552f244367a4f2e2ef9e4e5ff2c52ea0}{Show\+GUI}}
+, \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \newline
+\mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0af3413da9e97ed78dada82d1330fde5f1}{No\+Update}}
+, \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0add349546b418e50c23e2d88a3342a68f}{No\+Draw}}
+, \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0ad0b20a6cab952ae657cd06d2c956a7ea}{Disable\+Pause}}
+, \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a7c572e80f65d4b3a29bc954dd03225b6}{Is\+Pause}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_status_a467ddc32f7183ea10eeac09cc90c23bf}\label{struct_status_a467ddc32f7183ea10eeac09cc90c23bf} 
+V {\bfseries on} (T b)
+\item 
+\Hypertarget{struct_status_a0e024bca0f58b5e1cda3dd6bf94d40c7}\label{struct_status_a0e024bca0f58b5e1cda3dd6bf94d40c7} 
+V {\bfseries off} (T b)
+\item 
+\Hypertarget{struct_status_ad9dc31e328652e8e835aa12d89195811}\label{struct_status_ad9dc31e328652e8e835aa12d89195811} 
+V {\bfseries set} (T b, bool \+\_\+on)
+\item 
+\Hypertarget{struct_status_af4b46e2be91cf8da689ef283875f6bc2}\label{struct_status_af4b46e2be91cf8da689ef283875f6bc2} 
+V {\bfseries is} (T b) const
+\item 
+\Hypertarget{struct_status_a5ab7163f7b7a66a3194abef65187eddc}\label{struct_status_a5ab7163f7b7a66a3194abef65187eddc} 
+V \& {\bfseries get} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\subsubsection*{template$<$class T, class V = u32$>$\newline
+struct Status$<$ T, V $>$}
+ステータス 
+
+\label{doc-enum-members}
+\Hypertarget{struct_status_doc-enum-members}
+\doxysubsection{列挙型メンバ詳解}
+\Hypertarget{struct_status_a18920e81b62e7f59821f116cb1a7e9a0}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}!Bit@{Bit}}
+\index{Bit@{Bit}!Status$<$ T, V $>$@{Status$<$ T, V $>$}}
+\doxysubsubsection{\texorpdfstring{Bit}{Bit}}
+{\footnotesize\ttfamily \label{struct_status_a18920e81b62e7f59821f116cb1a7e9a0} 
+template$<$class T, class V = u32$>$ \\
+enum struct \mbox{\hyperlink{struct_status_a18920e81b62e7f59821f116cb1a7e9a0}{Status\+::\+Bit}} \+: V\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alive@{Alive}!Status$<$ T, V $>$@{Status$<$ T, V $>$}}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}!Alive@{Alive}}}\Hypertarget{struct_status_a18920e81b62e7f59821f116cb1a7e9a0abd9f7c5d6ab4201b138a3e51dab7056f}\label{struct_status_a18920e81b62e7f59821f116cb1a7e9a0abd9f7c5d6ab4201b138a3e51dab7056f} 
+Alive&生存状態 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ChangePrio@{ChangePrio}!Status$<$ T, V $>$@{Status$<$ T, V $>$}}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}!ChangePrio@{ChangePrio}}}\Hypertarget{struct_status_a18920e81b62e7f59821f116cb1a7e9a0ac5475a8fae2fa421403e56f7ae0de108}\label{struct_status_a18920e81b62e7f59821f116cb1a7e9a0ac5475a8fae2fa421403e56f7ae0de108} 
+Change\+Prio&プライオリティの変更中 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ShowGUI@{ShowGUI}!Status$<$ T, V $>$@{Status$<$ T, V $>$}}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}!ShowGUI@{ShowGUI}}}\Hypertarget{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a552f244367a4f2e2ef9e4e5ff2c52ea0}\label{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a552f244367a4f2e2ef9e4e5ff2c52ea0} 
+Show\+GUI&GUI表示中 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Initialized@{Initialized}!Status$<$ T, V $>$@{Status$<$ T, V $>$}}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}!Initialized@{Initialized}}}\Hypertarget{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a59d87a4758a9d35fbaf6b204341bb399}\label{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a59d87a4758a9d35fbaf6b204341bb399} 
+Initialized&初期化終了 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoUpdate@{NoUpdate}!Status$<$ T, V $>$@{Status$<$ T, V $>$}}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}!NoUpdate@{NoUpdate}}}\Hypertarget{struct_status_a18920e81b62e7f59821f116cb1a7e9a0af3413da9e97ed78dada82d1330fde5f1}\label{struct_status_a18920e81b62e7f59821f116cb1a7e9a0af3413da9e97ed78dada82d1330fde5f1} 
+No\+Update&Updateしない \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NoDraw@{NoDraw}!Status$<$ T, V $>$@{Status$<$ T, V $>$}}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}!NoDraw@{NoDraw}}}\Hypertarget{struct_status_a18920e81b62e7f59821f116cb1a7e9a0add349546b418e50c23e2d88a3342a68f}\label{struct_status_a18920e81b62e7f59821f116cb1a7e9a0add349546b418e50c23e2d88a3342a68f} 
+No\+Draw&Drawしない \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DisablePause@{DisablePause}!Status$<$ T, V $>$@{Status$<$ T, V $>$}}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}!DisablePause@{DisablePause}}}\Hypertarget{struct_status_a18920e81b62e7f59821f116cb1a7e9a0ad0b20a6cab952ae657cd06d2c956a7ea}\label{struct_status_a18920e81b62e7f59821f116cb1a7e9a0ad0b20a6cab952ae657cd06d2c956a7ea} 
+Disable\+Pause&ポーズ不可 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IsPause@{IsPause}!Status$<$ T, V $>$@{Status$<$ T, V $>$}}\index{Status$<$ T, V $>$@{Status$<$ T, V $>$}!IsPause@{IsPause}}}\Hypertarget{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a7c572e80f65d4b3a29bc954dd03225b6}\label{struct_status_a18920e81b62e7f59821f116cb1a7e9a0a7c572e80f65d4b3a29bc954dd03225b6} 
+Is\+Pause&ポーズ中 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\mbox{\hyperlink{_status_8h}{Status.\+h}}\end{DoxyCompactItemize}

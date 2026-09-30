@@ -1,0 +1,472 @@
+\doxysection{Component\+Target\+Tracking クラス}
+\hypertarget{class_component_target_tracking}{}\label{class_component_target_tracking}\index{ComponentTargetTracking@{ComponentTargetTracking}}
+Component\+Target\+Tracking の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_component_target_tracking}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2c}{Tracking\+Bit}} \+: u32 \{ \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca0ad455c0d6af3a8d5547cf5dec6fbd0f}{Limit\+AxisY}}
+, \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca0e75e4edd21b61adc096ff537f335a25}{Limit\+AxisX}}
+, \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca5746081740b464ca842f220ff58a78c5}{Object\+Tracking}}
+ \}
+\begin{DoxyCompactList}\small\item\em トラッキングステータス \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+enum struct \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} \+: u64 \{ \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0abd9f7c5d6ab4201b138a3e51dab7056f}{Alive}} = 0
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ac5475a8fae2fa421403e56f7ae0de108}{Change\+Prio}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a552f244367a4f2e2ef9e4e5ff2c52ea0}{Show\+GUI}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a59d87a4758a9d35fbaf6b204341bb399}{Initialized}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0af3413da9e97ed78dada82d1330fde5f1}{No\+Update}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0add349546b418e50c23e2d88a3342a68f}{No\+Draw}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0ad0b20a6cab952ae657cd06d2c956a7ea}{Disable\+Pause}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a7c572e80f65d4b3a29bc954dd03225b6}{Is\+Pause}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a6b554ca9a13e5407990948d4c68e8229}{Same\+Type}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a268ce394e277db759f5d6ee76c59f0e7}{Exited}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2b59321169346822ab33b2c61dbb9975}{Serialized}}
+, \mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a0698adfc6182853d3bf40771142a42d1}{No\+Serialize}}
+, \newline
+\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0a2faec1f9f8cc7f8f40d521c4dd574f49}{Enable}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_target_tracking_ab47d185e11805890766ffc2ba1528e9d}\label{class_component_target_tracking_ab47d185e11805890766ffc2ba1528e9d} 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component_target_tracking}{Component\+Target\+Tracking}}, u8"{}\+Target\+Tracking機能クラス"{})
+\item 
+virtual void \mbox{\hyperlink{class_component_target_tracking_a76b59fd0afa913346f02fc7f782ef23b}{Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_target_tracking_ad0912897c771df1cf4ba58662e4a214b}{Pre\+Update}} () override
+\begin{DoxyCompactList}\small\item\em 向きの初期化 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_target_tracking_adfaede86934160a6161c74dc3cf562c8}{Post\+Update}} () override
+\begin{DoxyCompactList}\small\item\em 向きの更新 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_target_tracking_addd4d95b960a721a8bcb1199904724e1}{Draw}} () override
+\begin{DoxyCompactList}\small\item\em 向きのマトリクス表示(デバッグ用) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_target_tracking_ac137eb92824e90b3c4c3d3890bcefa78}{Exit}} () override
+\begin{DoxyCompactList}\small\item\em 終了処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_target_tracking_a5d2cb277f8f277a114b51b9dbb954e6d}{GUI}} () override
+\begin{DoxyCompactList}\small\item\em GUI処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_target_tracking_aae6698280230239197a773e5cf538131}{Set\+Target\+Object\+Ptr}} (Object\+Weak\+Ptr obj)
+\begin{DoxyCompactList}\small\item\em 追跡オブジェクトの設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_target_tracking_addcbd3cd335d4db25ddff5ad5aab7e4e}{Set\+Target\+Object\+Ptr}} (const std\+::string\+\_\+view obj\+\_\+name)
+\begin{DoxyCompactList}\small\item\em 追跡オブジェクトの設定 \end{DoxyCompactList}\item 
+Object\+Ptr \mbox{\hyperlink{class_component_target_tracking_a59adf20bc856a293e1b741e0bfbb572c}{Get\+Target\+Object\+Ptr}} ()
+\begin{DoxyCompactList}\small\item\em 追跡オブジェクトの取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_target_tracking_ad81e038c85c83342a1a4100dc95219ec}{Set\+Target\+Point}} (float3 target)
+\begin{DoxyCompactList}\small\item\em 追跡ポイントの設定 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_target_tracking_a3e07b9e006288545cef57b9124cc87c5}{Set\+Tracking\+Node}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em トラッキングを行うノード名 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_target_tracking_af639925b2c85f220c73d391ff6ec36dc}{Set\+Tracking\+Node}} (int tracking\+\_\+node\+\_\+index)
+\begin{DoxyCompactList}\small\item\em トラッキングを行うノード名 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_target_tracking_abb0d359cde66787cc48d8ca13ff320c6}{Set\+Tracking\+Limit\+Left\+Right}} (float2 left\+\_\+right)
+\begin{DoxyCompactList}\small\item\em 左右の角度制限 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_target_tracking_a4116f845b7e81bb1d90f20555a5dfeb3}{Set\+Tracking\+Limit\+Up\+Down}} (float2 up\+\_\+down)
+\begin{DoxyCompactList}\small\item\em 上下の角度制限 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_target_tracking_a5e624bf9c9d54da462d112cf699d3e2e}{Set\+Tracking\+Frame\+Limit}} (float limit)
+\begin{DoxyCompactList}\small\item\em フレーム単位の角度制限 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_component_target_tracking_aa008ef47e8a1fcec755b6d488da3adbb}{Set\+Front\+Vector}} (float3 vec)
+\begin{DoxyCompactList}\small\item\em 前ベクトルのセット \end{DoxyCompactList}\item 
+\Hypertarget{class_component_target_tracking_abd56687aa24ccc24bf4b043e07d9f683}\label{class_component_target_tracking_abd56687aa24ccc24bf4b043e07d9f683} 
+void {\bfseries Set\+Tracking\+Status} (\mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2c}{Tracking\+Bit}} bit, bool on)
+\item 
+\Hypertarget{class_component_target_tracking_af6fd9f9df58a2f3ff80d5f177a115a55}\label{class_component_target_tracking_af6fd9f9df58a2f3ff80d5f177a115a55} 
+bool {\bfseries Get\+Tracking\+Status} (\mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2c}{Tracking\+Bit}} bit)
+\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_component}{Component}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries BP\+\_\+\+COMPONENT\+\_\+\+DECL} (\mbox{\hyperlink{class_component}{Component}}, u8"{}\+Componentクラス"{})
+\item 
+\mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_object}{Object}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Owner} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得 \end{DoxyCompactList}\item 
+Object\+Ptr {\bfseries Get\+Owner\+Ptr} ()
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+const Object\+Ptr {\bfseries Get\+Owner\+Ptr} () const
+\begin{DoxyCompactList}\small\item\em オーナー(従属しているオブジェクト)の取得(\+Shared\+Ptr) \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Set\+Name} (const std\+::string\+\_\+view \&name)
+\item 
+const std\+::string\+\_\+view {\bfseries Get\+Name} () const
+\item 
+virtual void \mbox{\hyperlink{class_component_aaf2ce6dc5752072492f790ad4c7955bb}{Update}} ()
+\begin{DoxyCompactList}\small\item\em アップデート \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a1020899c4cee8796a2bb29d960f05daf}{Late\+Update}} ()
+\begin{DoxyCompactList}\small\item\em 遅いアップデート \end{DoxyCompactList}\item 
+virtual void {\bfseries Late\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 遅い描画 \end{DoxyCompactList}\item 
+virtual void {\bfseries Pre\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画前処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Post\+Draw} ()
+\begin{DoxyCompactList}\small\item\em 描画後処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a28834daa627c5e81e93d40f064a19249}{Pre\+Physics}} ()
+\begin{DoxyCompactList}\small\item\em Physics前処理 \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_component_a25dd8e0fdfebc4f68e5fc08738e3c7ae}{Post\+Physics}} ()
+\begin{DoxyCompactList}\small\item\em Physics後処理 \end{DoxyCompactList}\item 
+virtual void {\bfseries Init\+Serialize} ()
+\begin{DoxyCompactList}\small\item\em シリアライズでもどらないユーザー処理関数などを設定 \end{DoxyCompactList}\item 
+void {\bfseries Set\+Priority} (\mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} priority)
+\item 
+std\+::string {\bfseries Unique\+Text} (const std\+::string\+\_\+view \&name, int id=0)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Get\+Proc} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing)
+\begin{DoxyCompactList}\small\item\em 処理を取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Proc} (const std\+::string \&proc\+\_\+name, Proc\+Timing\+Func func, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_slot_proc}{Slot\+Proc}} \& {\bfseries Set\+Priority} (const std\+::string \&proc\+\_\+name, \mbox{\hyperlink{_proc_timing_8h_ad69e549667e66f71bd785b024e931d6b}{Proc\+Timing}} timing=Proc\+Timing\+::\+Update, \mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5}{Proc\+Priority}} prio=\mbox{\hyperlink{_proc_timing_8h_a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7}{Proc\+Priority\+::\+NORMAL}})
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Reset\+Proc} (const std\+::string \&proc\+\_\+name)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Remove\+This\+Component} ()
+\begin{DoxyCompactList}\small\item\em 自分の消去 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Set\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b, bool on)
+\begin{DoxyCompactList}\small\item\em ステータスの設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Get\+Status} (\mbox{\hyperlink{class_component_a5db1ecd55985da494e7a2fb1cfb0e9e0}{Status\+Bit}} b)
+\begin{DoxyCompactList}\small\item\em ステータスの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Construct} (Object\+Ptr owner)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_component_a8e41b07538bf037981574f4f011d773a}{On\+Hit\+Component}} (const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries On\+Hit\+Component} (const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_abeb8b5fb2ca31a185f96d343af1ccd22}\label{class_component_abeb8b5fb2ca31a185f96d343af1ccd22} 
+static void {\bfseries Register\+To\+Object} (Component\+Ptr cmp, Object\+Ptr obj)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a04910312b4e9ad3959892ff5e231629e}\label{class_component_a04910312b4e9ad3959892ff5e231629e} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info}{Hit\+Info}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Func}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_a91d5cc2893166a196e1d5e550391cf58}\label{class_component_a91d5cc2893166a196e1d5e550391cf58} 
+std\+::function$<$ void(const \mbox{\hyperlink{struct_component_1_1_hit_info_physics}{Hit\+Info\+Physics}} \&hit\+\_\+info)$>$ {\bfseries On\+Hit\+Component\+Physics\+Func}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaf224b0e73780a9c3cbad323a0ec59f5}\label{class_component_aaf224b0e73780a9c3cbad323a0ec59f5} 
+Object\+Ptr {\bfseries owner\+\_\+} = nullptr
+\begin{DoxyCompactList}\small\item\em オーナー \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aa075f1283763194b7b15660ceb626196}\label{class_component_aa075f1283763194b7b15660ceb626196} 
+Slot\+Procs {\bfseries proc\+\_\+timings\+\_\+}
+\begin{DoxyCompactList}\small\item\em 登録処理(update) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_af89da12b7dd26576a4b896a785103e04}\label{class_component_af89da12b7dd26576a4b896a785103e04} 
+float {\bfseries update\+\_\+delta\+\_\+time\+\_\+} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em update以外で使用できるように \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_component_aaafe1a5010b858a2c66379bcd6faa80b}\label{class_component_aaafe1a5010b858a2c66379bcd6faa80b} 
+std\+::string {\bfseries name\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{class_component_target_tracking_doc-enum-members}
+\doxysubsection{列挙型メンバ詳解}
+\Hypertarget{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2c}\index{ComponentTargetTracking@{ComponentTargetTracking}!TrackingBit@{TrackingBit}}
+\index{TrackingBit@{TrackingBit}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{TrackingBit}{TrackingBit}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2c} 
+enum struct \mbox{\hyperlink{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2c}{Component\+Target\+Tracking\+::\+Tracking\+Bit}} \+: \mbox{\hyperlink{_typedef_8h_a70c1fcc1a4e96af8f6580f708657cd41}{u32}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+トラッキングステータス 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Initialized@{Initialized}!ComponentTargetTracking@{ComponentTargetTracking}}\index{ComponentTargetTracking@{ComponentTargetTracking}!Initialized@{Initialized}}}\Hypertarget{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca59d87a4758a9d35fbaf6b204341bb399}\label{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca59d87a4758a9d35fbaf6b204341bb399} 
+Initialized&初期化済み \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LimitAxisY@{LimitAxisY}!ComponentTargetTracking@{ComponentTargetTracking}}\index{ComponentTargetTracking@{ComponentTargetTracking}!LimitAxisY@{LimitAxisY}}}\Hypertarget{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca0ad455c0d6af3a8d5547cf5dec6fbd0f}\label{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca0ad455c0d6af3a8d5547cf5dec6fbd0f} 
+Limit\+AxisY&Y軸制限を有効にする \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LimitAxisX@{LimitAxisX}!ComponentTargetTracking@{ComponentTargetTracking}}\index{ComponentTargetTracking@{ComponentTargetTracking}!LimitAxisX@{LimitAxisX}}}\Hypertarget{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca0e75e4edd21b61adc096ff537f335a25}\label{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca0e75e4edd21b61adc096ff537f335a25} 
+Limit\+AxisX&X軸制限を有効にする \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ObjectTracking@{ObjectTracking}!ComponentTargetTracking@{ComponentTargetTracking}}\index{ComponentTargetTracking@{ComponentTargetTracking}!ObjectTracking@{ObjectTracking}}}\Hypertarget{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca5746081740b464ca842f220ff58a78c5}\label{class_component_target_tracking_ad594f0dd0aefbb4c491121efe0db0a2ca5746081740b464ca842f220ff58a78c5} 
+Object\+Tracking&オブジェクトをトラッキングする \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{class_component_target_tracking_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_component_target_tracking_addd4d95b960a721a8bcb1199904724e1}\index{ComponentTargetTracking@{ComponentTargetTracking}!Draw@{Draw}}
+\index{Draw@{Draw}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_addd4d95b960a721a8bcb1199904724e1} 
+virtual void Component\+Target\+Tracking\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+向きのマトリクス表示(デバッグ用) 
+
+
+
+\mbox{\hyperlink{class_component_a8622ccd5f24035d48e33292717299313}{Component}}を再実装しています。
+
+\Hypertarget{class_component_target_tracking_ac137eb92824e90b3c4c3d3890bcefa78}\index{ComponentTargetTracking@{ComponentTargetTracking}!Exit@{Exit}}
+\index{Exit@{Exit}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{Exit()}{Exit()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_ac137eb92824e90b3c4c3d3890bcefa78} 
+virtual void Component\+Target\+Tracking\+::\+Exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+終了処理 
+
+
+
+\mbox{\hyperlink{class_component_a336a670bf5c6e49062b0ea3a7367c5d7}{Component}}を再実装しています。
+
+\Hypertarget{class_component_target_tracking_a59adf20bc856a293e1b741e0bfbb572c}\index{ComponentTargetTracking@{ComponentTargetTracking}!GetTargetObjectPtr@{GetTargetObjectPtr}}
+\index{GetTargetObjectPtr@{GetTargetObjectPtr}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{GetTargetObjectPtr()}{GetTargetObjectPtr()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_a59adf20bc856a293e1b741e0bfbb572c} 
+Object\+Ptr Component\+Target\+Tracking\+::\+Get\+Target\+Object\+Ptr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+追跡オブジェクトの取得 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & 追跡しているオブジェクト \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_target_tracking_a5d2cb277f8f277a114b51b9dbb954e6d}\index{ComponentTargetTracking@{ComponentTargetTracking}!GUI@{GUI}}
+\index{GUI@{GUI}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{GUI()}{GUI()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_a5d2cb277f8f277a114b51b9dbb954e6d} 
+virtual void Component\+Target\+Tracking\+::\+GUI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+GUI処理 
+
+
+
+\mbox{\hyperlink{class_component_ae6895fe308d9365dd629b2e46a2ddf62}{Component}}を再実装しています。
+
+\Hypertarget{class_component_target_tracking_a76b59fd0afa913346f02fc7f782ef23b}\index{ComponentTargetTracking@{ComponentTargetTracking}!Init@{Init}}
+\index{Init@{Init}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_a76b59fd0afa913346f02fc7f782ef23b} 
+virtual void Component\+Target\+Tracking\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化 
+
+
+
+\mbox{\hyperlink{class_component_a5a5e595fab62ba757f03becc5b101732}{Component}}を再実装しています。
+
+\Hypertarget{class_component_target_tracking_adfaede86934160a6161c74dc3cf562c8}\index{ComponentTargetTracking@{ComponentTargetTracking}!PostUpdate@{PostUpdate}}
+\index{PostUpdate@{PostUpdate}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{PostUpdate()}{PostUpdate()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_adfaede86934160a6161c74dc3cf562c8} 
+virtual void Component\+Target\+Tracking\+::\+Post\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+向きの更新 
+
+
+
+\mbox{\hyperlink{class_component_a5ca9fb606c77392f74f4e80c3043d3fe}{Component}}を再実装しています。
+
+\Hypertarget{class_component_target_tracking_ad0912897c771df1cf4ba58662e4a214b}\index{ComponentTargetTracking@{ComponentTargetTracking}!PreUpdate@{PreUpdate}}
+\index{PreUpdate@{PreUpdate}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{PreUpdate()}{PreUpdate()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_ad0912897c771df1cf4ba58662e4a214b} 
+virtual void Component\+Target\+Tracking\+::\+Pre\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+向きの初期化 
+
+
+
+\mbox{\hyperlink{class_component_a01c7688b95056ecdba07d997750c8987}{Component}}を再実装しています。
+
+\Hypertarget{class_component_target_tracking_aa008ef47e8a1fcec755b6d488da3adbb}\index{ComponentTargetTracking@{ComponentTargetTracking}!SetFrontVector@{SetFrontVector}}
+\index{SetFrontVector@{SetFrontVector}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{SetFrontVector()}{SetFrontVector()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_aa008ef47e8a1fcec755b6d488da3adbb} 
+void Component\+Target\+Tracking\+::\+Set\+Front\+Vector (\begin{DoxyParamCaption}\item[{float3}]{vec}{}\end{DoxyParamCaption})}
+
+
+
+前ベクトルのセット 
+
+
+\begin{DoxyParams}{引数}
+{\em vec} & 前ベクトル \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_target_tracking_addcbd3cd335d4db25ddff5ad5aab7e4e}\index{ComponentTargetTracking@{ComponentTargetTracking}!SetTargetObjectPtr@{SetTargetObjectPtr}}
+\index{SetTargetObjectPtr@{SetTargetObjectPtr}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{SetTargetObjectPtr()}{SetTargetObjectPtr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_addcbd3cd335d4db25ddff5ad5aab7e4e} 
+void Component\+Target\+Tracking\+::\+Set\+Target\+Object\+Ptr (\begin{DoxyParamCaption}\item[{const std\+::string\+\_\+view}]{obj\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+追跡オブジェクトの設定 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & 追跡したいオブジェクトの名前 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_target_tracking_aae6698280230239197a773e5cf538131}\index{ComponentTargetTracking@{ComponentTargetTracking}!SetTargetObjectPtr@{SetTargetObjectPtr}}
+\index{SetTargetObjectPtr@{SetTargetObjectPtr}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{SetTargetObjectPtr()}{SetTargetObjectPtr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_aae6698280230239197a773e5cf538131} 
+void Component\+Target\+Tracking\+::\+Set\+Target\+Object\+Ptr (\begin{DoxyParamCaption}\item[{Object\+Weak\+Ptr}]{obj}{}\end{DoxyParamCaption})}
+
+
+
+追跡オブジェクトの設定 
+
+
+\begin{DoxyParams}{引数}
+{\em obj} & 追跡したいオブジェクト \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_target_tracking_ad81e038c85c83342a1a4100dc95219ec}\index{ComponentTargetTracking@{ComponentTargetTracking}!SetTargetPoint@{SetTargetPoint}}
+\index{SetTargetPoint@{SetTargetPoint}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{SetTargetPoint()}{SetTargetPoint()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_ad81e038c85c83342a1a4100dc95219ec} 
+void Component\+Target\+Tracking\+::\+Set\+Target\+Point (\begin{DoxyParamCaption}\item[{float3}]{target}{}\end{DoxyParamCaption})}
+
+
+
+追跡ポイントの設定 
+
+
+\begin{DoxyParams}{引数}
+{\em target} & 向きたいポイント \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_target_tracking_a5e624bf9c9d54da462d112cf699d3e2e}\index{ComponentTargetTracking@{ComponentTargetTracking}!SetTrackingFrameLimit@{SetTrackingFrameLimit}}
+\index{SetTrackingFrameLimit@{SetTrackingFrameLimit}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{SetTrackingFrameLimit()}{SetTrackingFrameLimit()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_a5e624bf9c9d54da462d112cf699d3e2e} 
+void Component\+Target\+Tracking\+::\+Set\+Tracking\+Frame\+Limit (\begin{DoxyParamCaption}\item[{float}]{limit}{}\end{DoxyParamCaption})}
+
+
+
+フレーム単位の角度制限 
+
+
+\begin{DoxyParams}{引数}
+{\em 一度にこのフレーム以上動かないようにする角度} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_target_tracking_abb0d359cde66787cc48d8ca13ff320c6}\index{ComponentTargetTracking@{ComponentTargetTracking}!SetTrackingLimitLeftRight@{SetTrackingLimitLeftRight}}
+\index{SetTrackingLimitLeftRight@{SetTrackingLimitLeftRight}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{SetTrackingLimitLeftRight()}{SetTrackingLimitLeftRight()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_abb0d359cde66787cc48d8ca13ff320c6} 
+void Component\+Target\+Tracking\+::\+Set\+Tracking\+Limit\+Left\+Right (\begin{DoxyParamCaption}\item[{float2}]{left\+\_\+right}{}\end{DoxyParamCaption})}
+
+
+
+左右の角度制限 
+
+
+\begin{DoxyParams}{引数}
+{\em left\+\_\+right} & 左右の角度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_target_tracking_a4116f845b7e81bb1d90f20555a5dfeb3}\index{ComponentTargetTracking@{ComponentTargetTracking}!SetTrackingLimitUpDown@{SetTrackingLimitUpDown}}
+\index{SetTrackingLimitUpDown@{SetTrackingLimitUpDown}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{SetTrackingLimitUpDown()}{SetTrackingLimitUpDown()}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_a4116f845b7e81bb1d90f20555a5dfeb3} 
+void Component\+Target\+Tracking\+::\+Set\+Tracking\+Limit\+Up\+Down (\begin{DoxyParamCaption}\item[{float2}]{up\+\_\+down}{}\end{DoxyParamCaption})}
+
+
+
+上下の角度制限 
+
+
+\begin{DoxyParams}{引数}
+{\em left\+\_\+right} & 上下の角度 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_target_tracking_a3e07b9e006288545cef57b9124cc87c5}\index{ComponentTargetTracking@{ComponentTargetTracking}!SetTrackingNode@{SetTrackingNode}}
+\index{SetTrackingNode@{SetTrackingNode}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{SetTrackingNode()}{SetTrackingNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_a3e07b9e006288545cef57b9124cc87c5} 
+void Component\+Target\+Tracking\+::\+Set\+Tracking\+Node (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+トラッキングを行うノード名 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & ノード名 \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_component_target_tracking_af639925b2c85f220c73d391ff6ec36dc}\index{ComponentTargetTracking@{ComponentTargetTracking}!SetTrackingNode@{SetTrackingNode}}
+\index{SetTrackingNode@{SetTrackingNode}!ComponentTargetTracking@{ComponentTargetTracking}}
+\doxysubsubsection{\texorpdfstring{SetTrackingNode()}{SetTrackingNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_component_target_tracking_af639925b2c85f220c73d391ff6ec36dc} 
+void Component\+Target\+Tracking\+::\+Set\+Tracking\+Node (\begin{DoxyParamCaption}\item[{int}]{tracking\+\_\+node\+\_\+index}{}\end{DoxyParamCaption})}
+
+
+
+トラッキングを行うノード名 
+
+
+\begin{DoxyParams}{引数}
+{\em name} & ノード名 \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/自作エンジン/src/\+System/\+Component/Component\+Target\+Tracking.\+h\end{DoxyCompactItemize}

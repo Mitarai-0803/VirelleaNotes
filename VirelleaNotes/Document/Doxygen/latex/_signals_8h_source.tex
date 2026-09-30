@@ -1,0 +1,25 @@
+\doxysection{Signals.\+h}
+\hypertarget{_signals_8h_source}{}\label{_signals_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Signals.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Signals.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <sigslot/include/sigslot/signal.hpp>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ シグナル}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }SignalsUpdate\ \ =\ sigslot::signal<float>;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }SignalsDraw\ \ \ \ =\ sigslot::signal<>;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }SignalsPrePost\ =\ sigslot::signal<>;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }SignalsGUI\ \ \ \ \ =\ sigslot::signal<>;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ ユーザーシグナル}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ }SignalsShadow\ \ =\ sigslot::signal<>;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }SignalsGbuffer\ =\ sigslot::signal<>;}
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ }SignalsLight\ \ \ =\ sigslot::signal<>;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ }SignalsHDR\ \ \ \ \ =\ sigslot::signal<>;}
+
+\end{DoxyCode}

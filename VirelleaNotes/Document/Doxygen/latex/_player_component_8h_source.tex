@@ -1,0 +1,29 @@
+\doxysection{Player\+Component.\+h}
+\hypertarget{_player_component_8h_source}{}\label{_player_component_8h_source}\index{F:/1新規プロジェクト作成用/音ゲー制作エンジン/src/PlayerComponent.h@{F:/1新規プロジェクト作成用/音ゲー制作エンジン/src/PlayerComponent.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}ComponentBase.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }PlayerComponent\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_component_base_a24e99a122f01df33d2914cd8e5abff63}{ComponentBase}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ PlayerComponent()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00010\ \ \ \ \ ‾PlayerComponent()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_component_a6c9aa1232636234617809bc15d1cbb03}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_component_a137d74ab0939d66a7389ba59a0f36d1f}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_component_a97458f7f0a108eb39c683ee2eb24052f}{Draw}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_player_component_ad9e201763e7dfce0e89645ecc2a669bb}{End}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ プレイヤー位置}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ hitBoxWidth;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ hitBoxHeight;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ score;}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ combo;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ handle;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ DX画像ハンドル}}
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}

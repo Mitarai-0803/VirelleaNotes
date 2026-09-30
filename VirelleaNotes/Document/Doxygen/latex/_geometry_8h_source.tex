@@ -1,0 +1,29 @@
+\doxysection{Geometry.\+h}
+\hypertarget{_geometry_8h_source}{}\label{_geometry_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Geometry.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/System/Geometry.h}}
+\mbox{\hyperlink{_geometry_8h}{\mbox{[}詳解\mbox{]}}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//===========================================================================}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ray_a4c8d138f48dbd8c05e2bb38989d0a5eb}{Ray}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ float3\ \mbox{\hyperlink{class_ray_a46df210e794c81cc5b9e0ea0d2ae4301}{position\_}};\ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ float3\ \mbox{\hyperlink{class_ray_abb03b54758c433f33d8ccbd27da3f143}{dir\_}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_ray_a4c8d138f48dbd8c05e2bb38989d0a5eb}{Ray}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_ray_a2be10d4bf5e0e2c7df7b2040c3211818}{Ray}}(\textcolor{keyword}{const}\ float3\&\ \mbox{\hyperlink{class_ray_aef086f8c516268fb98079308e0f418b2}{position}},\ \textcolor{keyword}{const}\ float3\&\ dir)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_ray_a46df210e794c81cc5b9e0ea0d2ae4301}{position\_}}(\mbox{\hyperlink{class_ray_aef086f8c516268fb98079308e0f418b2}{position}})}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ ,\ \mbox{\hyperlink{class_ray_abb03b54758c433f33d8ccbd27da3f143}{dir\_}}(dir)}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \ \ \ \ float3\ \mbox{\hyperlink{class_ray_aef086f8c516268fb98079308e0f418b2}{position}}(\mbox{\hyperlink{_typedef_8h_ad34d88453d37b65a09797bad37f2f527}{f32}}\ t)\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_ray_a46df210e794c81cc5b9e0ea0d2ae4301}{position\_}}\ +\ \mbox{\hyperlink{class_ray_abb03b54758c433f33d8ccbd27da3f143}{dir\_}}\ *\ t;\ \}}
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,145 @@
+\doxysection{UI\+::Image\+Notes\+Object クラス}
+\hypertarget{class_u_i_1_1_image_notes_object}{}\label{class_u_i_1_1_image_notes_object}\index{UI::ImageNotesObject@{UI::ImageNotesObject}}
+
+
+\doxylink{class_u_i_1_1_image_notes_object}{Image\+Notes\+Object} クラス  
+
+
+
+
+{\ttfamily \#include $<$Image\+Notes\+Object.\+h$>$}
+
+UI\+::Image\+Notes\+Object の継承関係図\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_i_1_1_image_notes_object}
+\end{center}
+\end{figure}
+\doxysubsubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_image_notes_object_a274b48f985ec7e40a36868dee7555a9d}\label{class_u_i_1_1_image_notes_object_a274b48f985ec7e40a36868dee7555a9d} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Image\+Notes\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_notes_object_acea7694e6755c58e55c082610a918302}{On\+Init}} () override
+\begin{DoxyCompactList}\small\item\em 初期化処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_notes_object_a3ad227758e2c6a5eaa62f79f9c20c66c}{On\+Update}} () override
+\begin{DoxyCompactList}\small\item\em 更新処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_notes_object_a098f720299a8a37c5b44dca0b5ef5d1e}{On\+Draw}} () override
+\begin{DoxyCompactList}\small\item\em 描画処理 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_1_1_image_notes_object_abacd8236811e1babadd0c1e479ed77c6}{Set\+Current\+Note\+Type}} (int note\+\_\+type)
+\begin{DoxyCompactList}\small\item\em 現在のノーツタイプの設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Game\+Object} ()=default
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+{\bfseries ‾\+Game\+Object} ()
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_game_object_a986731c4dfb08336dbf0731e6514bad9}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em オブジェクト名を取得 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_object_a74b49a5a95bf2a26c9a9a732ed5986d6}{Set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em オブジェクト名を設定 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T, typename... Args$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_acbcf681e26fc95dcedfae1e220712ba2}{Add\+Component}} (Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em コンポーネント追加 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T$>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_game_object_a192d6861400d0f25c8b07732a7c2e7c8}{Get\+Component}} () const
+\begin{DoxyCompactList}\small\item\em コンポーネント取得 \end{DoxyCompactList}\item 
+void {\bfseries Init} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの初期化呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Update} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの更新呼び出し \end{DoxyCompactList}\item 
+void {\bfseries Draw} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの描画呼び出し \end{DoxyCompactList}\item 
+void {\bfseries End} ()
+\begin{DoxyCompactList}\small\item\em コンポーネントの終了処理呼び出し \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_a531f2c9a32e7e6d240ff561671f5f644}{Draw}} (float scroll, float zoom)
+\begin{DoxyCompactList}\small\item\em スクロール/ズーム適用描画（オーバーロード） \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_game_object_aa696b9ce593ec982b593d0a1dbd82eb3}{On\+Draw}} (float scroll, float zoom)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{限定公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_u_i_1_1_image_notes_object_a7b3c7b94659c7946e1311f2d427f426c}\label{class_u_i_1_1_image_notes_object_a7b3c7b94659c7946e1311f2d427f426c} 
+\mbox{\hyperlink{class_u_i_1_1_image_object}{Image\+Object}} {\bfseries notes\+\_\+images\+\_\+} \mbox{[}NOTE\+\_\+\+TYPE\+\_\+\+MAX\mbox{]} = \{\}
+\begin{DoxyCompactList}\small\item\em 画像オブジェクト \end{DoxyCompactList}\item 
+\Hypertarget{class_u_i_1_1_image_notes_object_a48ef91746e80126aeefee298f3fb8f53}\label{class_u_i_1_1_image_notes_object_a48ef91746e80126aeefee298f3fb8f53} 
+int {\bfseries current\+\_\+note\+\_\+type\+\_\+} = 0
+\begin{DoxyCompactList}\small\item\em 現在のノーツタイプ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{その他の継承メンバ}
+\doxysubsection*{基底クラス \mbox{\hyperlink{class_game_object}{Game\+Object}} に属する継承限定公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_game_object_ad9a3cf1904d03c02437adf8cb9652d71}{On\+End}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+\doxylink{class_u_i_1_1_image_notes_object}{Image\+Notes\+Object} クラス 
+
+ノーツタイプによって画像を変更する\+Game\+Objectクラス 
+
+\label{doc-func-members}
+\Hypertarget{class_u_i_1_1_image_notes_object_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_u_i_1_1_image_notes_object_a098f720299a8a37c5b44dca0b5ef5d1e}\index{UI::ImageNotesObject@{UI::ImageNotesObject}!OnDraw@{OnDraw}}
+\index{OnDraw@{OnDraw}!UI::ImageNotesObject@{UI::ImageNotesObject}}
+\doxysubsubsection{\texorpdfstring{OnDraw()}{OnDraw()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_notes_object_a098f720299a8a37c5b44dca0b5ef5d1e} 
+void UI\+::\+Image\+Notes\+Object\+::\+On\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+描画処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_image_notes_object_acea7694e6755c58e55c082610a918302}\index{UI::ImageNotesObject@{UI::ImageNotesObject}!OnInit@{OnInit}}
+\index{OnInit@{OnInit}!UI::ImageNotesObject@{UI::ImageNotesObject}}
+\doxysubsubsection{\texorpdfstring{OnInit()}{OnInit()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_notes_object_acea7694e6755c58e55c082610a918302} 
+void UI\+::\+Image\+Notes\+Object\+::\+On\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+初期化処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_image_notes_object_a3ad227758e2c6a5eaa62f79f9c20c66c}\index{UI::ImageNotesObject@{UI::ImageNotesObject}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!UI::ImageNotesObject@{UI::ImageNotesObject}}
+\doxysubsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_notes_object_a3ad227758e2c6a5eaa62f79f9c20c66c} 
+void UI\+::\+Image\+Notes\+Object\+::\+On\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+更新処理 
+
+
+
+\mbox{\hyperlink{class_game_object}{Game\+Object}}を再実装しています。
+
+\Hypertarget{class_u_i_1_1_image_notes_object_abacd8236811e1babadd0c1e479ed77c6}\index{UI::ImageNotesObject@{UI::ImageNotesObject}!SetCurrentNoteType@{SetCurrentNoteType}}
+\index{SetCurrentNoteType@{SetCurrentNoteType}!UI::ImageNotesObject@{UI::ImageNotesObject}}
+\doxysubsubsection{\texorpdfstring{SetCurrentNoteType()}{SetCurrentNoteType()}}
+{\footnotesize\ttfamily \label{class_u_i_1_1_image_notes_object_abacd8236811e1babadd0c1e479ed77c6} 
+void UI\+::\+Image\+Notes\+Object\+::\+Set\+Current\+Note\+Type (\begin{DoxyParamCaption}\item[{int}]{note\+\_\+type}{}\end{DoxyParamCaption})}
+
+
+
+現在のノーツタイプの設定 
+
+
+\begin{DoxyParams}{引数}
+{\em note\+\_\+type} & ノーツタイプ \\
+\hline
+\end{DoxyParams}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+F\+:/1新規プロジェクト作成用/音ゲー制作エンジン/src/Image\+Notes\+Object.\+h\end{DoxyCompactItemize}

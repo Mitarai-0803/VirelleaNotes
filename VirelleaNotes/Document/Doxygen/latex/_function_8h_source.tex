@@ -1,0 +1,50 @@
+\doxysection{Function.\+h}
+\hypertarget{_function_8h_source}{}\label{_function_8h_source}\index{G:/sg mitarai/自作エンジン/自作エンジン/src/Function.h@{G:/sg mitarai/自作エンジン/自作エンジン/src/Function.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}Struct.h"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ \ オブジェクト1をオブジェクト2の方向に向けてその角度を返す関数}}
+\DoxyCodeLine{00005\ \textcolor{keywordtype}{float}\ Object\_Point\_To\_Direction(\mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\ now\_obj\_1\_pos,\ \mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\ goal\_obj\_2\_pos,\ \textcolor{keywordtype}{float}\ dir,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ ROT\_SPEED);}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{comment}{//端まで行ったらカメラを止める}}
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{void}\ Camera\_Stop(\textcolor{keywordtype}{float}\ pos\_x,\ \textcolor{keywordtype}{float}\ pos\_y,\ \textcolor{keywordtype}{float}\ w,\ \textcolor{keywordtype}{float}\ h,\ \textcolor{keywordtype}{float}\ camera\_x,\ \textcolor{keywordtype}{float}\ camera\_y);}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ 画像１を画像２の上下左右に外へ出ないようにする}}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ fRota\_Clamp\_image\ (\mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\&\ image\_1,\ \textcolor{keywordtype}{int}\&\ w\_1,\ \textcolor{keywordtype}{int}\&\ h\_1,\ \mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\ image\_2,\ \textcolor{keywordtype}{int}\ w\_2,\ \textcolor{keywordtype}{int}\ h\_2);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ \ 画面の外に行かないようにする関数}}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ fRota\_Clamp\_Screen(\mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\&\ pos1,\ \textcolor{keywordtype}{int}\&\ w\_1,\ \textcolor{keywordtype}{int}\&\ h\_1,\ \textcolor{keywordtype}{float}\&\ window\_w,\ \textcolor{keywordtype}{float}\&\ window\_h);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ 点と四角の当たり判定}}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{bool}\ CheckPointBoxHit\_F(\mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\&\ point,\ \mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\&\ pos,\ \mbox{\hyperlink{struct_float___pos}{Float\_Pos}}\&\ size);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ ２点の長さを取得する関数}}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{float}\ GetDistance(\textcolor{keywordtype}{float}\ x1,\ \textcolor{keywordtype}{float}\ y1,\ \textcolor{keywordtype}{float}\ x2,\ \textcolor{keywordtype}{float}\ y2);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ \ 円同士の当たり判定}}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{bool}\ CheckCircleHit(\textcolor{keywordtype}{float}\ x1,\ \textcolor{keywordtype}{float}\ y1,\ \textcolor{keywordtype}{float}\ r1,\ \textcolor{keywordtype}{float}\ x2,\ \textcolor{keywordtype}{float}\ y2,\ \textcolor{keywordtype}{float}\ r2);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ \ 点と円の当たり判定}}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{bool}\ CheckPointCircleHit(\textcolor{keywordtype}{float}\ point\_x,\ \textcolor{keywordtype}{float}\ point\_y,\ \textcolor{keywordtype}{float}\ circle\_x,\ \textcolor{keywordtype}{float}\ circle\_y,\ \textcolor{keywordtype}{float}\ circle\_r);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ \ 四角同士の当たり判定}}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{bool}\ CheckBoxHit(\textcolor{keywordtype}{float}\ x1,\ \textcolor{keywordtype}{float}\ y1,\ \textcolor{keywordtype}{float}\ w1,\ \textcolor{keywordtype}{float}\ h1,\ \textcolor{keywordtype}{float}\ x2,\ \textcolor{keywordtype}{float}\ y2,\ \textcolor{keywordtype}{float}\ w2,\ \textcolor{keywordtype}{float}\ h2);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ \ 点と四角の当たり判定}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{bool}\ CheckPointBoxHit(\textcolor{keywordtype}{float}\ point\_x,\ \textcolor{keywordtype}{float}\ point\_y,\ \textcolor{keywordtype}{float}\ box\_x,\ \textcolor{keywordtype}{float}\ box\_y,\ \textcolor{keywordtype}{float}\ box\_w,\ \textcolor{keywordtype}{float}\ box\_h);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ \ 度をラジアンに変換する関数}}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{float}\ TO\_RADIAN(\textcolor{keywordtype}{float}\ degree);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{//\ \ ラジアンを度に変換する関数}}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{float}\ TO\_DEGREE(\textcolor{keywordtype}{float}\ radian);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ \ 長さ\ 1.0f\ の線を\ rot\ 分回転させたときに\ rot\ に沿っている分の長さを取得する関数}}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{float}\ GetLength\_RotSotte(\textcolor{keywordtype}{float}\ rot);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{//\ \ 長さ\ 1.0f\ の線を\ rot\ 分回転させたときに\ rot\ の向かいにある分の長さを取得する関数}}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{float}\ GetLength\_RotMukai(\textcolor{keywordtype}{float}\ rot);}
+
+\end{DoxyCode}

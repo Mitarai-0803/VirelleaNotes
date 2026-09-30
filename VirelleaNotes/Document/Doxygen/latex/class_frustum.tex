@@ -1,0 +1,202 @@
+\doxysection{Frustum クラス}
+\hypertarget{class_frustum}{}\label{class_frustum}\index{Frustum@{Frustum}}
+
+
+カメラ  
+
+
+
+
+{\ttfamily \#include $<$Frustum.\+h$>$}
+
+\doxysubsubsection*{公開型}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{Depth\+Mode}} \+: s32 \{ \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67}{Default}}
+, \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda67f115c1fddc4ce1aeb1c754001585bc}{Reverse}}
+, \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda859477cd2af414695fa54772f08fbcc9}{Reverse\+Infinite}}
+ \}
+\begin{DoxyCompactList}\small\item\em デプス動作モード \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{公開メンバ関数}
+\begin{Indent}\textbf{ 初期化}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_frustum_ab225c6aa54200beee8ec378f2314e413}\label{class_frustum_ab225c6aa54200beee8ec378f2314e413} 
+{\bfseries Frustum} ()=default
+\begin{DoxyCompactList}\small\item\em デフォルトコンストラクタ \end{DoxyCompactList}\item 
+\Hypertarget{class_frustum_aca6ea17e0260764080b7698fba755730}\label{class_frustum_aca6ea17e0260764080b7698fba755730} 
+{\bfseries Frustum} (const \mbox{\hyperlink{classmatrix}{matrix}} \&mat\+\_\+view, const \mbox{\hyperlink{classmatrix}{matrix}} \&mat\+\_\+proj, \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{Frustum\+::\+Depth\+Mode}} depth\+\_\+mode=\mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67}{Frustum\+::\+Depth\+Mode\+::\+Default}})
+\item 
+\Hypertarget{class_frustum_abf37ae7096fb44609b6e4b04a63cbe08}\label{class_frustum_abf37ae7096fb44609b6e4b04a63cbe08} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Frustum} ()=default
+\begin{DoxyCompactList}\small\item\em デストラクタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 更新}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_frustum_a17a6dc854202e76bb81dc52924f91a16}\label{class_frustum_a17a6dc854202e76bb81dc52924f91a16} 
+void {\bfseries update} ()
+\item 
+\Hypertarget{class_frustum_a71f2b123d97b8322331b9accaeaf2ee1}\label{class_frustum_a71f2b123d97b8322331b9accaeaf2ee1} 
+void {\bfseries render\+Debug} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ 設定}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_frustum_a310ff517b74da17453bc5062da434876}\label{class_frustum_a310ff517b74da17453bc5062da434876} 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& {\bfseries set\+Position} (const float3 \&position)
+\item 
+\Hypertarget{class_frustum_ae2a1fc953e0a117c91f93c87850586cc}\label{class_frustum_ae2a1fc953e0a117c91f93c87850586cc} 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& {\bfseries set\+Look\+At} (const float3 \&look\+\_\+at)
+\item 
+\Hypertarget{class_frustum_aedc31b8c2d0b2370016ef13a6ec8344d}\label{class_frustum_aedc31b8c2d0b2370016ef13a6ec8344d} 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& {\bfseries set\+World\+Up} (const float3 \&world\+\_\+up)
+\item 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& \mbox{\hyperlink{class_frustum_ad9aeaa231f512ff9e89aa28c0d1a4660}{set\+Look\+At}} (f32 horizontal\+\_\+angle, f32 vertical\+\_\+angle)
+\item 
+\Hypertarget{class_frustum_a10e71748212059e09101fb721ceb3fd0}\label{class_frustum_a10e71748212059e09101fb721ceb3fd0} 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& {\bfseries set\+Fov} (f32 fovy)
+\item 
+\Hypertarget{class_frustum_ac9d56b6a1648a76345728f6560abb6b3}\label{class_frustum_ac9d56b6a1648a76345728f6560abb6b3} 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& {\bfseries set\+Aspect\+Ratio} (f32 aspect\+\_\+ratio)
+\item 
+\Hypertarget{class_frustum_ac693ebcad0cf3be7c28160f62f5b16ac}\label{class_frustum_ac693ebcad0cf3be7c28160f62f5b16ac} 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& {\bfseries set\+NearZ} (f32 z\+\_\+near)
+\item 
+\Hypertarget{class_frustum_a0e9e2ea8a3db13c13f625fe876c58cdf}\label{class_frustum_a0e9e2ea8a3db13c13f625fe876c58cdf} 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& {\bfseries set\+FarZ} (f32 z\+\_\+far)
+\item 
+\Hypertarget{class_frustum_aef58e5a9c01ba23dd23fcb2bff3f21ed}\label{class_frustum_aef58e5a9c01ba23dd23fcb2bff3f21ed} 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& {\bfseries set\+Depth\+Mode} (\mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{Frustum\+::\+Depth\+Mode}} mode)
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{参照}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_frustum_a42ac8538f373ef9732739e62f3b764d7}\label{class_frustum_a42ac8538f373ef9732739e62f3b764d7} 
+float3 {\bfseries position} () const
+\item 
+\Hypertarget{class_frustum_a955661f580aad4c45dd465ba64047895}\label{class_frustum_a955661f580aad4c45dd465ba64047895} 
+float3 {\bfseries look\+At} () const
+\item 
+\Hypertarget{class_frustum_a64eea3a062449447a7e2630c19a5bf5f}\label{class_frustum_a64eea3a062449447a7e2630c19a5bf5f} 
+float3 {\bfseries world\+Up} () const
+\item 
+\Hypertarget{class_frustum_a287657bfb71c2286c37114ecdfee8d01}\label{class_frustum_a287657bfb71c2286c37114ecdfee8d01} 
+f32 {\bfseries fov} () const
+\item 
+\Hypertarget{class_frustum_aa2bcbe4d597781fa74a16aa029f1d655}\label{class_frustum_aa2bcbe4d597781fa74a16aa029f1d655} 
+f32 {\bfseries aspect\+Ratio} () const
+\item 
+\Hypertarget{class_frustum_a2b2a3223e53813e1e289c12664b96911}\label{class_frustum_a2b2a3223e53813e1e289c12664b96911} 
+f32 {\bfseries nearZ} () const
+\item 
+\Hypertarget{class_frustum_a408d5d23226b9e3b27243182d0724afe}\label{class_frustum_a408d5d23226b9e3b27243182d0724afe} 
+f32 {\bfseries farZ} () const
+\item 
+f32 \mbox{\hyperlink{class_frustum_abb0ebfbbcb843f9d17667fdc66227b6e}{screen\+Distance}} (u32 resolution\+\_\+height) const
+\item 
+\Hypertarget{class_frustum_a234f5c84a0076cafb9ed3451cc973fe4}\label{class_frustum_a234f5c84a0076cafb9ed3451cc973fe4} 
+\mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{Frustum\+::\+Depth\+Mode}} {\bfseries depth\+Mode} () const
+\item 
+\Hypertarget{class_frustum_acb47fe1f963e577883b75a3aaa73e922}\label{class_frustum_acb47fe1f963e577883b75a3aaa73e922} 
+bool {\bfseries use\+Reverse\+Depth} () const
+\item 
+float3 \mbox{\hyperlink{class_frustum_a93cfb3b15eba1eac9b79a25b8daedcfd}{ray\+From\+Screen\+Position}} (float2 screen\+\_\+position)
+\item 
+\Hypertarget{class_frustum_aa1fe52ce1a07e18b3fc51aa32557ea42}\label{class_frustum_aa1fe52ce1a07e18b3fc51aa32557ea42} 
+const \mbox{\hyperlink{classmatrix}{matrix}} \& {\bfseries mat\+Camera\+World} () const
+\item 
+\Hypertarget{class_frustum_a4de757581be6d1dbea98ce5b9a2d7466}\label{class_frustum_a4de757581be6d1dbea98ce5b9a2d7466} 
+const \mbox{\hyperlink{classmatrix}{matrix}} \& {\bfseries mat\+View} () const
+\item 
+\Hypertarget{class_frustum_ac0d350c0fb1dec468688ce7d9a0f6f61}\label{class_frustum_ac0d350c0fb1dec468688ce7d9a0f6f61} 
+const \mbox{\hyperlink{classmatrix}{matrix}} \& {\bfseries mat\+Proj} () const
+\item 
+\Hypertarget{class_frustum_af56f0be15163bf3a4d85f0c355810249}\label{class_frustum_af56f0be15163bf3a4d85f0c355810249} 
+const \mbox{\hyperlink{classmatrix}{matrix}} \& {\bfseries mat\+View\+Proj} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+カメラ 
+
+\label{doc-enum-members}
+\Hypertarget{class_frustum_doc-enum-members}
+\doxysubsection{列挙型メンバ詳解}
+\Hypertarget{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}\index{Frustum@{Frustum}!DepthMode@{DepthMode}}
+\index{DepthMode@{DepthMode}!Frustum@{Frustum}}
+\doxysubsubsection{\texorpdfstring{DepthMode}{DepthMode}}
+{\footnotesize\ttfamily \label{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd} 
+enum class \mbox{\hyperlink{class_frustum_a79888d6c79e6f327095ed004a5d7ebdd}{Frustum\+::\+Depth\+Mode}} \+: s32\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+デプス動作モード 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Default@{Default}!Frustum@{Frustum}}\index{Frustum@{Frustum}!Default@{Default}}}\Hypertarget{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67}\label{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda7a1920d61156abc05a60135aefe8bc67} 
+Default&通常 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Reverse@{Reverse}!Frustum@{Frustum}}\index{Frustum@{Frustum}!Reverse@{Reverse}}}\Hypertarget{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda67f115c1fddc4ce1aeb1c754001585bc}\label{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda67f115c1fddc4ce1aeb1c754001585bc} 
+Reverse&反転Z \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ReverseInfinite@{ReverseInfinite}!Frustum@{Frustum}}\index{Frustum@{Frustum}!ReverseInfinite@{ReverseInfinite}}}\Hypertarget{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda859477cd2af414695fa54772f08fbcc9}\label{class_frustum_a79888d6c79e6f327095ed004a5d7ebdda859477cd2af414695fa54772f08fbcc9} 
+Reverse\+Infinite&反転Z (無限遠) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{class_frustum_doc-func-members}
+\doxysubsection{関数詳解}
+\Hypertarget{class_frustum_a93cfb3b15eba1eac9b79a25b8daedcfd}\index{Frustum@{Frustum}!rayFromScreenPosition@{rayFromScreenPosition}}
+\index{rayFromScreenPosition@{rayFromScreenPosition}!Frustum@{Frustum}}
+\doxysubsubsection{\texorpdfstring{rayFromScreenPosition()}{rayFromScreenPosition()}}
+{\footnotesize\ttfamily \label{class_frustum_a93cfb3b15eba1eac9b79a25b8daedcfd} 
+float3 Frustum\+::ray\+From\+Screen\+Position (\begin{DoxyParamCaption}\item[{float2}]{screen\+\_\+position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em screen\+\_\+position} & スクリーン座標の\+XY値 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+カメラ位置からのレイベクトル 
+\end{DoxyReturn}
+\Hypertarget{class_frustum_abb0ebfbbcb843f9d17667fdc66227b6e}\index{Frustum@{Frustum}!screenDistance@{screenDistance}}
+\index{screenDistance@{screenDistance}!Frustum@{Frustum}}
+\doxysubsubsection{\texorpdfstring{screenDistance()}{screenDistance()}}
+{\footnotesize\ttfamily \label{class_frustum_abb0ebfbbcb843f9d17667fdc66227b6e} 
+f32 Frustum\+::screen\+Distance (\begin{DoxyParamCaption}\item[{u32}]{resolution\+\_\+height}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [nodiscard]}}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em resolution\+\_\+height} & 画面解像度の高さ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_frustum_ad9aeaa231f512ff9e89aa28c0d1a4660}\index{Frustum@{Frustum}!setLookAt@{setLookAt}}
+\index{setLookAt@{setLookAt}!Frustum@{Frustum}}
+\doxysubsubsection{\texorpdfstring{setLookAt()}{setLookAt()}}
+{\footnotesize\ttfamily \label{class_frustum_ad9aeaa231f512ff9e89aa28c0d1a4660} 
+\mbox{\hyperlink{class_frustum}{Frustum}} \& Frustum\+::set\+Look\+At (\begin{DoxyParamCaption}\item[{f32}]{horizontal\+\_\+angle}{, }\item[{f32}]{vertical\+\_\+angle}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{in}}  & {\em horizontal\+\_\+angle} & 左右方向の水平回転角度 \\
+\hline
+\mbox{\texttt{in}}  & {\em vertical\+\_\+angle} & 上下方向の垂直回転角度 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{注意}
+位置からの相対方向から設定するため set\+Position() の後に設定してください。 
+\end{DoxyAttention}
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+G\+:/sg mitarai/自作エンジン/\+Engine/src/\+Graphics/\mbox{\hyperlink{_frustum_8h}{Frustum.\+h}}\end{DoxyCompactItemize}

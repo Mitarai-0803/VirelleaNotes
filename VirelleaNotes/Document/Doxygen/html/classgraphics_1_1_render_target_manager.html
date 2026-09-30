@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: graphics::RenderTargetManager クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('classgraphics_1_1_render_target_manager.html','','classgraphics_1_1_render_target_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">graphics::RenderTargetManager クラス</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a0fec4d3033042a3773809e73ea1b8d98" id="r_a0fec4d3033042a3773809e73ea1b8d98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fec4d3033042a3773809e73ea1b8d98">‾RenderTargetManager</a> ()</td></tr>
+<tr class="memdesc:a0fec4d3033042a3773809e73ea1b8d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">デストラクタ  <br /></td></tr>
+<tr class="memitem:a2b328b0fdbac23cf3fa415c0b1ea5a19" id="r_a2b328b0fdbac23cf3fa415c0b1ea5a19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b328b0fdbac23cf3fa415c0b1ea5a19">CreateRenderTarget</a> (const std::string &amp;name, int width, int height, bool useAlpha=true)</td></tr>
+<tr class="memdesc:a2b328b0fdbac23cf3fa415c0b1ea5a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">レンダーターゲット（オフスクリーン）を作成して登録する  <br /></td></tr>
+<tr class="memitem:ac750714f85f8c83a9746c14fa8680961" id="r_ac750714f85f8c83a9746c14fa8680961"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac750714f85f8c83a9746c14fa8680961">SetActive</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:ac750714f85f8c83a9746c14fa8680961"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定した名前のレンダーターゲットを描画先として設定する  <br /></td></tr>
+<tr class="memitem:a14eb6c2d3c00e0fb1619ea8ae0f4b871" id="r_a14eb6c2d3c00e0fb1619ea8ae0f4b871"><td class="memItemLeft" align="right" valign="top"><a id="a14eb6c2d3c00e0fb1619ea8ae0f4b871" name="a14eb6c2d3c00e0fb1619ea8ae0f4b871"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetToScreen</b> ()</td></tr>
+<tr class="memdesc:a14eb6c2d3c00e0fb1619ea8ae0f4b871"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画先をデフォルトのスクリーン（バックバッファ）に戻す <br /></td></tr>
+<tr class="memitem:a66f6954206192e9dba27143b779a12eb" id="r_a66f6954206192e9dba27143b779a12eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66f6954206192e9dba27143b779a12eb">Present</a> (const std::string &amp;name, int x=0, int y=0)</td></tr>
+<tr class="memdesc:a66f6954206192e9dba27143b779a12eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したレンダーターゲットを画面上に描画する  <br /></td></tr>
+<tr class="memitem:a5b800e523699586249e46acbf5467c59" id="r_a5b800e523699586249e46acbf5467c59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b800e523699586249e46acbf5467c59">Release</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a5b800e523699586249e46acbf5467c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定したレンダーターゲットを解放して登録から削除する  <br /></td></tr>
+<tr class="memitem:a80acd526e89fb8c473bc560aa4d1326d" id="r_a80acd526e89fb8c473bc560aa4d1326d"><td class="memItemLeft" align="right" valign="top"><a id="a80acd526e89fb8c473bc560aa4d1326d" name="a80acd526e89fb8c473bc560aa4d1326d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReleaseAll</b> ()</td></tr>
+<tr class="memdesc:a80acd526e89fb8c473bc560aa4d1326d"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録されている全てのレンダーターゲットを解放する <br /></td></tr>
+<tr class="memitem:ab8fde8ca86f5a663220725a20716b349" id="r_ab8fde8ca86f5a663220725a20716b349"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8fde8ca86f5a663220725a20716b349">GetHandle</a> (const std::string &amp;name) const</td></tr>
+<tr class="memdesc:ab8fde8ca86f5a663220725a20716b349"><td class="mdescLeft">&#160;</td><td class="mdescRight">登録名に紐づくハンドルを取得する  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">関数詳解</h2>
+<a id="a0fec4d3033042a3773809e73ea1b8d98" name="a0fec4d3033042a3773809e73ea1b8d98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fec4d3033042a3773809e73ea1b8d98">&#9670;&#160;</a></span>‾RenderTargetManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">graphics::RenderTargetManager::‾RenderTargetManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デストラクタ </p>
+<p>保持している全てのレンダーターゲットを解放します。 </p>
+
+</div>
+</div>
+<a id="a2b328b0fdbac23cf3fa415c0b1ea5a19" name="a2b328b0fdbac23cf3fa415c0b1ea5a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b328b0fdbac23cf3fa415c0b1ea5a19">&#9670;&#160;</a></span>CreateRenderTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int graphics::RenderTargetManager::CreateRenderTarget </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>useAlpha</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>レンダーターゲット（オフスクリーン）を作成して登録する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>登録名（ユニークであること） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>生成するターゲットの幅（ピクセル） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>生成するターゲットの高さ（ピクセル） </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">useAlpha</td><td>アルファチャンネルを含める場合は true </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>作成に成功したハンドル、失敗時は -1 を返す </dd></dl>
+
+</div>
+</div>
+<a id="ab8fde8ca86f5a663220725a20716b349" name="ab8fde8ca86f5a663220725a20716b349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8fde8ca86f5a663220725a20716b349">&#9670;&#160;</a></span>GetHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int graphics::RenderTargetManager::GetHandle </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>登録名に紐づくハンドルを取得する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>登録名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>存在すればハンドル（&gt;=0）、存在しなければ -1 </dd></dl>
+
+</div>
+</div>
+<a id="a66f6954206192e9dba27143b779a12eb" name="a66f6954206192e9dba27143b779a12eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f6954206192e9dba27143b779a12eb">&#9670;&#160;</a></span>Present()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graphics::RenderTargetManager::Present </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したレンダーターゲットを画面上に描画する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>登録名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>描画先 X 座標 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>描画先 Y 座標 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5b800e523699586249e46acbf5467c59" name="a5b800e523699586249e46acbf5467c59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b800e523699586249e46acbf5467c59">&#9670;&#160;</a></span>Release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void graphics::RenderTargetManager::Release </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定したレンダーターゲットを解放して登録から削除する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>登録名 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac750714f85f8c83a9746c14fa8680961" name="ac750714f85f8c83a9746c14fa8680961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac750714f85f8c83a9746c14fa8680961">&#9670;&#160;</a></span>SetActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool graphics::RenderTargetManager::SetActive </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指定した名前のレンダーターゲットを描画先として設定する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>登録名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>指定名のターゲットが存在すれば true、存在しなければ false </dd></dl>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>G:/sg mitarai/自作エンジン/自作エンジン/src/<a class="el" href="_render_target_manager_8h_source.html">RenderTargetManager.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>graphics</b></li><li class="navelem"><a href="classgraphics_1_1_render_target_manager.html">RenderTargetManager</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/ProcTiming.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_proc_timing_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ProcTiming.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>処理タイミング  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_priority_8h_source.html">Priority.h</a>&quot;</code><br />
+<code>#include &lt;System/Signals.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="_cereal_8h_source.html">System/Cereal.h</a>&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+</div>
+<p><a href="_proc_timing_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:Callable" id="r_Callable"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_callable.html">Callable</a></td></tr>
+<tr class="memitem:SlotProc" id="r_SlotProc"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_slot_proc.html">SlotProc</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">スロット  <a href="struct_slot_proc.html#details">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a79954a1c537a0d505633565cfa3a164b" id="r_a79954a1c537a0d505633565cfa3a164b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79954a1c537a0d505633565cfa3a164b">OBJTIMING</a>(p)</td></tr>
+<tr class="memdesc:a79954a1c537a0d505633565cfa3a164b"><td class="mdescLeft">&#160;</td><td class="mdescRight">プライオリティ設定(Macro)  <br /></td></tr>
+<tr class="memitem:a467d763ebd1698c335ae5ee88d44c839" id="r_a467d763ebd1698c335ae5ee88d44c839"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a467d763ebd1698c335ae5ee88d44c839">ProcAddProc</a>(name,  x)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:a322b5cad852df319cf99f93d9c95a05e" id="r_a322b5cad852df319cf99f93d9c95a05e"><td class="memItemLeft" align="right" valign="top"><a id="a322b5cad852df319cf99f93d9c95a05e" name="a322b5cad852df319cf99f93d9c95a05e"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>ProcTimingFunc</b> = std::function&lt;void()&gt;</td></tr>
+<tr class="memitem:ab05faf2a61120596baea980b99128c56" id="r_ab05faf2a61120596baea980b99128c56"><td class="memItemLeft" align="right" valign="top"><a id="ab05faf2a61120596baea980b99128c56" name="ab05faf2a61120596baea980b99128c56"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SlotProcs</b> = std::unordered_map&lt;std::string, <a class="el" href="struct_slot_proc.html">SlotProc</a>&gt;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ad69e549667e66f71bd785b024e931d6b" id="r_ad69e549667e66f71bd785b024e931d6b"><td class="memItemLeft" align="right" valign="top"><a id="ad69e549667e66f71bd785b024e931d6b" name="ad69e549667e66f71bd785b024e931d6b"></a>enum struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> : u32 { <br />
+&#160;&#160;<b>PreUpdate</b> = 0
+, <b>Update</b>
+, <b>LateUpdate</b>
+, <b>PrePhysics</b>
+, <br />
+&#160;&#160;<b>PostPhysics</b>
+, <b>PostUpdate</b>
+, <b>PreDraw</b>
+, <b>Draw</b>
+, <br />
+&#160;&#160;<b>LateDraw</b>
+, <b>PostDraw</b>
+, <b>Shadow</b>
+, <b>Gbuffer</b>
+, <br />
+&#160;&#160;<b>Light</b>
+, <b>HDR</b>
+, <b>Filter</b>
+, <b>UI</b>
+, <br />
+&#160;&#160;<b>NUM</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:ad69e549667e66f71bd785b024e931d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイミング <br /></td></tr>
+<tr class="memitem:a1c31310757b162591aa0247c84fe6ee5" id="r_a1c31310757b162591aa0247c84fe6ee5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a> { <br />
+&#160;&#160;<a class="el" href="#a1c31310757b162591aa0247c84fe6ee5ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a> = -1
+, <a class="el" href="#a1c31310757b162591aa0247c84fe6ee5ae21a4e10ac16b844ebb238a2333bb594">HIGHEST</a> = 100
+, <a class="el" href="#a1c31310757b162591aa0247c84fe6ee5a0c3a1dacf94061154b3ee354359c5893">HIGH</a> = 1000
+, <a class="el" href="#a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7">NORMAL</a> = 10000
+, <br />
+&#160;&#160;<a class="el" href="#a1c31310757b162591aa0247c84fe6ee5a6a226f4143ca3b18999551694cdb72a8">LOW</a> = 15000
+, <a class="el" href="#a1c31310757b162591aa0247c84fe6ee5ae321c2eb4e64b32d51da602bc6352f1d">LOWEST</a> = 20000
+, <a class="el" href="#a1c31310757b162591aa0247c84fe6ee5a9eea1aac668568f900ebe4c229a5c956">IFPOSSIBLE</a> = 50000
+, <b>NUM</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a1c31310757b162591aa0247c84fe6ee5"><td class="mdescLeft">&#160;</td><td class="mdescRight">プライオリティ  <a href="#a1c31310757b162591aa0247c84fe6ee5">[詳解]</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a2deff0220e6921920b821b718ebc8b94" id="r_a2deff0220e6921920b821b718ebc8b94"><td class="memItemLeft" align="right" valign="top"><a id="a2deff0220e6921920b821b718ebc8b94" name="a2deff0220e6921920b821b718ebc8b94"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>USING_PTR</b> (<a class="el" href="class_object.html">Object</a>)</td></tr>
+<tr class="memitem:acf719dccd2f400d5bef112558e3ab522" id="r_acf719dccd2f400d5bef112558e3ab522"><td class="memItemLeft" align="right" valign="top"><a id="acf719dccd2f400d5bef112558e3ab522" name="acf719dccd2f400d5bef112558e3ab522"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>USING_PTR</b> (<a class="el" href="class_component.html">Component</a>)</td></tr>
+<tr class="memitem:a6461e51a4f1ff47f46759c9668dc10c1" id="r_a6461e51a4f1ff47f46759c9668dc10c1"><td class="memItemLeft" align="right" valign="top"><a id="a6461e51a4f1ff47f46759c9668dc10c1" name="a6461e51a4f1ff47f46759c9668dc10c1"></a>
+constexpr int&#160;</td><td class="memItemRight" valign="bottom"><b>TIMING</b> (<a class="el" href="#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> p)</td></tr>
+<tr class="memdesc:a6461e51a4f1ff47f46759c9668dc10c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">プライオリティ設定 <br /></td></tr>
+<tr class="memitem:ac6580db62c4a37f293339076616d1a06" id="r_ac6580db62c4a37f293339076616d1a06"><td class="memItemLeft" align="right" valign="top"><a id="ac6580db62c4a37f293339076616d1a06" name="ac6580db62c4a37f293339076616d1a06"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetProcTimingName</b> (<a class="el" href="#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> proc)</td></tr>
+<tr class="memitem:a677cbee623f7bded94f1e096826e5e51" id="r_a677cbee623f7bded94f1e096826e5e51"><td class="memItemLeft" align="right" valign="top"><a id="a677cbee623f7bded94f1e096826e5e51" name="a677cbee623f7bded94f1e096826e5e51"></a>
+ProcTimingFunc&#160;</td><td class="memItemRight" valign="bottom"><b>GetProcTimingFunc</b> (<a class="el" href="#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a> proc)</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">詳解</h2>
+<div class="textblock"><p>処理タイミング </p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">マクロ定義詳解</h2>
+<a id="a79954a1c537a0d505633565cfa3a164b" name="a79954a1c537a0d505633565cfa3a164b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79954a1c537a0d505633565cfa3a164b">&#9670;&#160;</a></span>OBJTIMING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBJTIMING</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><a class="code hl_function" href="#a6461e51a4f1ff47f46759c9668dc10c1">TIMING</a>(<a class="code hl_enumeration" href="#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a>::##p)</div>
+<div class="ttc" id="a_proc_timing_8h_html_a6461e51a4f1ff47f46759c9668dc10c1"><div class="ttname"><a href="#a6461e51a4f1ff47f46759c9668dc10c1">TIMING</a></div><div class="ttdeci">constexpr int TIMING(ProcTiming p)</div><div class="ttdoc">プライオリティ設定</div><div class="ttdef"><b>Definition</b> ProcTiming.h:62</div></div>
+<div class="ttc" id="a_proc_timing_8h_html_ad69e549667e66f71bd785b024e931d6b"><div class="ttname"><a href="#ad69e549667e66f71bd785b024e931d6b">ProcTiming</a></div><div class="ttdeci">ProcTiming</div><div class="ttdoc">タイミング</div><div class="ttdef"><b>Definition</b> ProcTiming.h:21</div></div>
+</div><!-- fragment -->
+<p>プライオリティ設定(Macro) </p>
+
+</div>
+</div>
+<a id="a467d763ebd1698c335ae5ee88d44c839" name="a467d763ebd1698c335ae5ee88d44c839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a467d763ebd1698c335ae5ee88d44c839">&#9670;&#160;</a></span>ProcAddProc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ProcAddProc</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">    <span class="keyword">class </span><a class="code hl_class" href="class_callable.html">Callable</a>##name : <span class="keyword">public</span> <a class="code hl_class" href="class_callable.html">Callable</a>                                     \</div>
+<div class="line">    {                                                                          \</div>
+<div class="line">    <span class="keyword">public</span>:                                                                    \</div>
+<div class="line">        <a class="code hl_class" href="class_callable.html">Callable</a>##name()                                                       \</div>
+<div class="line">            : <a class="code hl_class" href="class_callable.html">Callable</a>(#name)                                                  \</div>
+<div class="line">        {                                                                      \</div>
+<div class="line">        }                                                                      \</div>
+<div class="line">        <span class="keywordtype">void</span> Exec x;                                                           \</div>
+<div class="line">                                                                               \</div>
+<div class="line">    <span class="keyword">private</span>:                                                                   \</div>
+<div class="line">        CEREAL_SAVELOAD(arc, ver)                                              \</div>
+<div class="line">        {                                                                      \</div>
+<div class="line">            arc(CEREAL_NVP(name_));                                            \</div>
+<div class="line">        }                                                                      \</div>
+<div class="line">    };                                                                         \</div>
+<div class="line">    std::shared_ptr&lt;Callable##name&gt; name = std::make_shared&lt;Callable##name&gt;(); \</div>
+<div class="line">    CEREAL_REGISTER_TYPE(Callable##name);                                      \</div>
+<div class="line">    CEREAL_REGISTER_POLYMORPHIC_RELATION(Callable, Callable##name)</div>
+<div class="ttc" id="aclass_callable_html"><div class="ttname"><a href="class_callable.html">Callable</a></div><div class="ttdef"><b>Definition</b> ProcTiming.h:75</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">列挙型詳解</h2>
+<a id="a1c31310757b162591aa0247c84fe6ee5" name="a1c31310757b162591aa0247c84fe6ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c31310757b162591aa0247c84fe6ee5">&#9670;&#160;</a></span>ProcPriority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a1c31310757b162591aa0247c84fe6ee5">ProcPriority</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プライオリティ </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a1c31310757b162591aa0247c84fe6ee5ac157bdf0b85a40d2619cbc8bc1ae5fe2" name="a1c31310757b162591aa0247c84fe6ee5ac157bdf0b85a40d2619cbc8bc1ae5fe2"></a>NONE&#160;</td><td class="fielddoc"><p>なし </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c31310757b162591aa0247c84fe6ee5ae21a4e10ac16b844ebb238a2333bb594" name="a1c31310757b162591aa0247c84fe6ee5ae21a4e10ac16b844ebb238a2333bb594"></a>HIGHEST&#160;</td><td class="fielddoc"><p>最優先 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c31310757b162591aa0247c84fe6ee5a0c3a1dacf94061154b3ee354359c5893" name="a1c31310757b162591aa0247c84fe6ee5a0c3a1dacf94061154b3ee354359c5893"></a>HIGH&#160;</td><td class="fielddoc"><p>優先高 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7" name="a1c31310757b162591aa0247c84fe6ee5a50d1448013c6f17125caee18aa418af7"></a>NORMAL&#160;</td><td class="fielddoc"><p>通常 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c31310757b162591aa0247c84fe6ee5a6a226f4143ca3b18999551694cdb72a8" name="a1c31310757b162591aa0247c84fe6ee5a6a226f4143ca3b18999551694cdb72a8"></a>LOW&#160;</td><td class="fielddoc"><p>優先低 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c31310757b162591aa0247c84fe6ee5ae321c2eb4e64b32d51da602bc6352f1d" name="a1c31310757b162591aa0247c84fe6ee5ae321c2eb4e64b32d51da602bc6352f1d"></a>LOWEST&#160;</td><td class="fielddoc"><p>最低優先 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a1c31310757b162591aa0247c84fe6ee5a9eea1aac668568f900ebe4c229a5c956" name="a1c31310757b162591aa0247c84fe6ee5a9eea1aac668568f900ebe4c229a5c956"></a>IFPOSSIBLE&#160;</td><td class="fielddoc"><p>処理時間が無ければ処理しない </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="_proc_timing_8h.html">ProcTiming.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: G:/sg mitarai/自作エンジン/自作エンジン/src/System/Physics/PhysicsEngine.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_physics_engine_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PhysicsEngine.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_physics_engine_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="class_ray.html">Ray</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>JPH {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span>Vec3;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span>Quat;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span>Mat44;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span>PhysicsSystem;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span>BodyInterface;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span>TempAllocator;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}    <span class="comment">// namespace JPH</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span>physics {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_physics_layer_8h.html#a8f3495d58817a58553d47f58730267ba">ObjectLayers</a> : <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">//--------------------------------------------------------------</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">//--------------------------------------------------------------</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structphysics_1_1_ray_cast_result.html">   26</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structphysics_1_1_ray_cast_result.html">RayCastResult</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_typedef" href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a> body_id_;    <span class="comment">// ボディID</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> t_;          <span class="comment">// 衝突点のパラメーターt  hit_position = start + t * (end - start)</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>};</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//===========================================================================</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// 物理シミュレーション</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">//===========================================================================</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html">   35</a></span><span class="keyword">class </span><a class="code hl_function" href="classphysics_1_1_engine.html#a08b42b6b3fc88a1a8afd47efde3823cb">Engine</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#a08b42b6b3fc88a1a8afd47efde3823cb">   39</a></span>    <a class="code hl_function" href="classphysics_1_1_engine.html#a08b42b6b3fc88a1a8afd47efde3823cb">Engine</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#a9de3345e6bce21c52b45b47d7f9a60c0">   43</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classphysics_1_1_engine.html#a9de3345e6bce21c52b45b47d7f9a60c0">~Engine</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#a96a24878ea8a67f35ebfef84e804f1cf">   47</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_engine.html#a96a24878ea8a67f35ebfef84e804f1cf">update</a>(<a class="code hl_typedef" href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a> dt) = 0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">//  シーンにレイをキャスト</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#ad87d160a08543e440af348a00be309cd">   54</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classphysics_1_1_engine.html#ad87d160a08543e440af348a00be309cd">castRay</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_ray.html">Ray</a>&amp; ray, <a class="code hl_struct" href="structphysics_1_1_ray_cast_result.html">RayCastResult</a>&amp; result) = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#abbc4494b9eca276c577867230d10b304">   60</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_engine.html#abbc4494b9eca276c577867230d10b304">optimize</a>() = 0;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#a4ed415ef1b0a43a39bc75eab7d9e83b2">   65</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_engine.html#a4ed415ef1b0a43a39bc75eab7d9e83b2">setLayerAlias</a>(<span class="keyword">const</span> std::pair&lt;physics::ObjectLayers, u16&gt;* layers, <span class="keywordtype">size_t</span> layerCount) = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#ad67bc7551d7da8b923967e983260af0d">   70</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classphysics_1_1_engine.html#ad67bc7551d7da8b923967e983260af0d">overrideLayerCollide</a>(std::function&lt;<span class="keywordtype">bool</span>(<a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>, <a class="code hl_typedef" href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a>)&gt; callback) = 0;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#af553ad1f2213303c889854b95e3b2a75">   78</a></span>    <span class="keyword">virtual</span> float3 <a class="code hl_function" href="classphysics_1_1_engine.html#af553ad1f2213303c889854b95e3b2a75">gravity</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#a7b10220f9e53630cb19fc6da12cf0317">   81</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classphysics_1_1_engine.html#a7b10220f9e53630cb19fc6da12cf0317">isValid</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#a78aea17182a7ed3a7082f5660a491cfb">   84</a></span>    <span class="keyword">static</span> <a class="code hl_function" href="classphysics_1_1_engine.html#a08b42b6b3fc88a1a8afd47efde3823cb">Engine</a>* <a class="code hl_function" href="classphysics_1_1_engine.html#a78aea17182a7ed3a7082f5660a491cfb">instance</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="comment">//----------------------------------------------------------</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#a3306f98b56010abde22227702730f61a">   93</a></span>    <span class="keyword">static</span> JPH::PhysicsSystem* <a class="code hl_function" href="classphysics_1_1_engine.html#a3306f98b56010abde22227702730f61a">physicsSystem</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#a4241a537ffe1b9642f134bb88f65c1af">   96</a></span>    <span class="keyword">static</span> JPH::BodyInterface* <a class="code hl_function" href="classphysics_1_1_engine.html#a4241a537ffe1b9642f134bb88f65c1af">bodyInterface</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classphysics_1_1_engine.html#abd023769b83f598a83dfab2d116443ea">   99</a></span>    <span class="keyword">static</span> JPH::TempAllocator* <a class="code hl_function" href="classphysics_1_1_engine.html#abd023769b83f598a83dfab2d116443ea">tempAllocator</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>};</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">//===========================================================================</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment">//===========================================================================</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment">//  物理シミュレーションクラスを作成</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>std::unique_ptr&lt;physics::Engine&gt; createPhysics();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>JPH::Vec3  castJPH(<span class="keyword">const</span> float3&amp; v);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>float3     castJPH(<span class="keyword">const</span> JPH::Vec3&amp; v);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>JPH::Quat  castJPH(<span class="keyword">const</span> quaternion&amp; q);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>quaternion castJPH(<span class="keyword">const</span> JPH::Quat&amp; v);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><a class="code hl_class" href="classmatrix.html">matrix</a>     castJPH(<span class="keyword">const</span> JPH::Mat44&amp; mat44);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}    <span class="comment">// namespace physics</span></div>
+<div class="ttc" id="a_physics_layer_8h_html_a8f3495d58817a58553d47f58730267ba"><div class="ttname"><a href="_physics_layer_8h.html#a8f3495d58817a58553d47f58730267ba">physics::ObjectLayers</a></div><div class="ttdeci">ObjectLayers</div><div class="ttdef"><b>Definition</b> PhysicsLayer.h:15</div></div>
+<div class="ttc" id="a_typedef_8h_html_a1af9f95651e921615e75917a6dd1b574"><div class="ttname"><a href="_typedef_8h.html#a1af9f95651e921615e75917a6dd1b574">u64</a></div><div class="ttdeci">uint64_t u64</div><div class="ttdoc">64bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:24</div></div>
+<div class="ttc" id="a_typedef_8h_html_a6dbf9516e516c901604625282c174aa4"><div class="ttname"><a href="_typedef_8h.html#a6dbf9516e516c901604625282c174aa4">u16</a></div><div class="ttdeci">uint16_t u16</div><div class="ttdoc">16bit 符号なし整数</div><div class="ttdef"><b>Definition</b> Typedef.h:22</div></div>
+<div class="ttc" id="a_typedef_8h_html_ad34d88453d37b65a09797bad37f2f527"><div class="ttname"><a href="_typedef_8h.html#ad34d88453d37b65a09797bad37f2f527">f32</a></div><div class="ttdeci">float f32</div><div class="ttdoc">単精度浮動小数点数</div><div class="ttdef"><b>Definition</b> Typedef.h:25</div></div>
+<div class="ttc" id="aclass_ray_html"><div class="ttname"><a href="class_ray.html">Ray</a></div><div class="ttdoc">光線 レイ</div><div class="ttdef"><b>Definition</b> Geometry.h:11</div></div>
+<div class="ttc" id="aclassmatrix_html"><div class="ttname"><a href="classmatrix.html">matrix</a></div><div class="ttdoc">4x4行列</div><div class="ttdef"><b>Definition</b> VectorMath.h:93</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_a08b42b6b3fc88a1a8afd47efde3823cb"><div class="ttname"><a href="classphysics_1_1_engine.html#a08b42b6b3fc88a1a8afd47efde3823cb">physics::Engine::Engine</a></div><div class="ttdeci">Engine()=default</div><div class="ttdoc">デフォルトコンストラクタ</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_a3306f98b56010abde22227702730f61a"><div class="ttname"><a href="classphysics_1_1_engine.html#a3306f98b56010abde22227702730f61a">physics::Engine::physicsSystem</a></div><div class="ttdeci">static JPH::PhysicsSystem * physicsSystem()</div><div class="ttdoc">[JPH] Physicsシステムを取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_a4241a537ffe1b9642f134bb88f65c1af"><div class="ttname"><a href="classphysics_1_1_engine.html#a4241a537ffe1b9642f134bb88f65c1af">physics::Engine::bodyInterface</a></div><div class="ttdeci">static JPH::BodyInterface * bodyInterface()</div><div class="ttdoc">[JPH] ボディインターフェイスを取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_a4ed415ef1b0a43a39bc75eab7d9e83b2"><div class="ttname"><a href="classphysics_1_1_engine.html#a4ed415ef1b0a43a39bc75eab7d9e83b2">physics::Engine::setLayerAlias</a></div><div class="ttdeci">virtual void setLayerAlias(const std::pair&lt; physics::ObjectLayers, u16 &gt; *layers, size_t layerCount)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_a78aea17182a7ed3a7082f5660a491cfb"><div class="ttname"><a href="classphysics_1_1_engine.html#a78aea17182a7ed3a7082f5660a491cfb">physics::Engine::instance</a></div><div class="ttdeci">static Engine * instance()</div><div class="ttdoc">Physicsインスタンスを取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_a7b10220f9e53630cb19fc6da12cf0317"><div class="ttname"><a href="classphysics_1_1_engine.html#a7b10220f9e53630cb19fc6da12cf0317">physics::Engine::isValid</a></div><div class="ttdeci">virtual bool isValid() const =0</div><div class="ttdoc">正常に初期化されているかどうかを取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_a96a24878ea8a67f35ebfef84e804f1cf"><div class="ttname"><a href="classphysics_1_1_engine.html#a96a24878ea8a67f35ebfef84e804f1cf">physics::Engine::update</a></div><div class="ttdeci">virtual void update(f32 dt)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_a9de3345e6bce21c52b45b47d7f9a60c0"><div class="ttname"><a href="classphysics_1_1_engine.html#a9de3345e6bce21c52b45b47d7f9a60c0">physics::Engine::~Engine</a></div><div class="ttdeci">virtual ~Engine()=default</div><div class="ttdoc">デストラクタ</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_abbc4494b9eca276c577867230d10b304"><div class="ttname"><a href="classphysics_1_1_engine.html#abbc4494b9eca276c577867230d10b304">physics::Engine::optimize</a></div><div class="ttdeci">virtual void optimize()=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_abd023769b83f598a83dfab2d116443ea"><div class="ttname"><a href="classphysics_1_1_engine.html#abd023769b83f598a83dfab2d116443ea">physics::Engine::tempAllocator</a></div><div class="ttdeci">static JPH::TempAllocator * tempAllocator()</div><div class="ttdoc">[JPH] テンポラリアロケーターを取得</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_ad67bc7551d7da8b923967e983260af0d"><div class="ttname"><a href="classphysics_1_1_engine.html#ad67bc7551d7da8b923967e983260af0d">physics::Engine::overrideLayerCollide</a></div><div class="ttdeci">virtual void overrideLayerCollide(std::function&lt; bool(u16, u16)&gt; callback)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_ad87d160a08543e440af348a00be309cd"><div class="ttname"><a href="classphysics_1_1_engine.html#ad87d160a08543e440af348a00be309cd">physics::Engine::castRay</a></div><div class="ttdeci">virtual bool castRay(const Ray &amp;ray, RayCastResult &amp;result)=0</div></div>
+<div class="ttc" id="aclassphysics_1_1_engine_html_af553ad1f2213303c889854b95e3b2a75"><div class="ttname"><a href="classphysics_1_1_engine.html#af553ad1f2213303c889854b95e3b2a75">physics::Engine::gravity</a></div><div class="ttdeci">virtual float3 gravity() const =0</div><div class="ttdoc">重力を取得</div></div>
+<div class="ttc" id="astructphysics_1_1_ray_cast_result_html"><div class="ttname"><a href="structphysics_1_1_ray_cast_result.html">physics::RayCastResult</a></div><div class="ttdoc">レイキャストの結果</div><div class="ttdef"><b>Definition</b> PhysicsEngine.h:27</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_ef68f1e1f5148ff8ef7fb1c955106c3c.html">System</a></li><li class="navelem"><a href="dir_d03dc9e14809aca1458b1cae58a8e37f.html">Physics</a></li><li class="navelem"><a href="_physics_engine_8h.html">PhysicsEngine.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>
