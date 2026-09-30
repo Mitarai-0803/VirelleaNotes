@@ -17,10 +17,6 @@
 ## インストール
 
 ```bash
-プロジェクトファイルをZIPでダウンロードして、VirelleaNotes/Open.cmdを開き実行・ビルドしてください。
+プロジェクトファイルをクローンして、VirelleaNotes/Open.cmdを開き実行・ビルドしてください。
 ※exe用のブランチも追加予定です。
 ```
-
-## コントリビュート
-
-Issue や Pull Request を歓迎します。
