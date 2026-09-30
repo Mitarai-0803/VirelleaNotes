@@ -67,7 +67,7 @@ void CSVLoadObject::OnDraw()
     }
 
     if(str) {
-        int font_handle = Font::GetFont(Font::FontIndex::FONT_SIZE_25_INDEX);
+        int font_handle = Font::GetFont(Font::FontIndex::FONT_SIZE_20_INDEX);
         int str_w       = GetDrawStringWidthToHandle(str, -1, font_handle);
         int str_h       = GetFontSizeToHandle(font_handle);
 

@@ -9,11 +9,11 @@ namespace Font
     //! @brief フォントインデックス
     enum FontIndex
     {
-        FONT_SIZE_70_INDEX = 0,    //!< フォントサイズ 70 のインデックス
+        FONT_SIZE_60_INDEX = 0,    //!< フォントサイズ 70 のインデックス
         FONT_SIZE_50_INDEX,        //!< フォントサイズ 50 のインデックス
         FONT_SIZE_40_INDEX,        //!< フォントサイズ 40 のインデックス
         FONT_SIZE_30_INDEX,        //!< フォントサイズ 30 のインデックス
-        FONT_SIZE_25_INDEX,        //!< フォントサイズ 25 のインデックス
+        FONT_SIZE_20_INDEX,        //!< フォントサイズ 25 のインデックス
         FONT_SIZE_10_INDEX,        //!< フォントサイズ 10 のインデックス
         FONT_MAX                   //!< フォントの最大数
     };

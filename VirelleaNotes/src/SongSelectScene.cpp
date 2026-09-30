@@ -1,6 +1,6 @@
 ﻿//----------------------------------------------------------------------------
-//! @file   SongSelectScene.cpp
-//! @brief  曲選択シーンの実装
+//! @file    SongSelectScene.cpp
+//! @brief   曲選択シーンの実装
 //! @detail 曲一覧の表示と上下キーでの選択、Enterキーで選択確定の処理を提供します。
 //----------------------------------------------------------------------------
 #include "SongSelectScene.h"
@@ -223,12 +223,12 @@ void SongSelectScene::SceneInit()
                         m_song_icons.back() = ImageHandle(h);
                 }
             }
-
-            // 遊び方画像を初期化時に読み込む（描画は DrawHowToOverlay、終了で解放）
-            if(HowtoImageHandle == -1) {
-                HowtoImageHandle = LoadGraph(HOWTO_IMAGE_PATH);
-            }
         }
+    }
+
+    // 遊び方画像を初期化時に読み込む（描画は DrawHowToOverlay、終了で解放）
+    if(HowtoImageHandle == -1) {
+        HowtoImageHandle = LoadGraph(HOWTO_IMAGE_PATH);
     }
 
     m_selected_index = 0;
@@ -251,7 +251,7 @@ void SongSelectScene::SceneInit()
     // フォントハンドルをキャッシュ
     m_font50 = GetFont(Font::FONT_SIZE_50_INDEX);
     m_font30 = GetFont(Font::FONT_SIZE_30_INDEX);
-    m_font25 = GetFont(Font::FONT_SIZE_25_INDEX);
+    m_font25 = GetFont(Font::FONT_SIZE_20_INDEX);
 
     // 曲プレビュー用に全曲の音源を事前読み込みしてキャッシュ
     m_preloaded_sound_handles.clear();
@@ -284,6 +284,7 @@ void SongSelectScene::SceneInit()
 //------------------------------------------------------------
 void SongSelectScene::SceneUpdate()
 {
+    // 遊び方の表示トグル処理
     HandleHowToToggle();
 
     // 曲選択の入力処理
@@ -442,12 +443,12 @@ void SongSelectScene::SceneDraw()
         DrawFormatStringToHandle(info_x, info_y, COLOR_WHITE, m_font30, "%s", sj.c_str());
         int bpm = m_song_bpm[m_selected_index];
         if(bpm > 0)
-            DrawFormatStringToHandle(info_x, info_y + SONG_INFO_BPM_OFFSET, GetColor(200, 200, 200), GetFont(Font::FONT_SIZE_25_INDEX), "BPM: %d", bpm);
+            DrawFormatStringToHandle(info_x, info_y + SONG_INFO_BPM_OFFSET, GetColor(200, 200, 200), GetFont(Font::FONT_SIZE_20_INDEX), "BPM: %d", bpm);
         else
-            DrawFormatStringToHandle(info_x, info_y + SONG_INFO_BPM_OFFSET, GetColor(200, 200, 200), GetFont(Font::FONT_SIZE_25_INDEX), "BPM: -");
+            DrawFormatStringToHandle(info_x, info_y + SONG_INFO_BPM_OFFSET, GetColor(200, 200, 200), GetFont(Font::FONT_SIZE_20_INDEX), "BPM: -");
         if(m_selected_index < static_cast<int>(m_song_best_scores.size())) {
             int best = m_song_best_scores[m_selected_index];
-            DrawFormatStringToHandle(info_x, info_y + SONG_INFO_SCORE_OFFSET, COLOR_WHITE, GetFont(Font::FONT_SIZE_25_INDEX), "SCORE: %d", best);
+            DrawFormatStringToHandle(info_x, info_y + SONG_INFO_SCORE_OFFSET, COLOR_WHITE, GetFont(Font::FONT_SIZE_20_INDEX), "SCORE: %d", best);
         }
         if(m_preview_volume_display_timer > 0) {
             char buf[64];
@@ -487,10 +488,10 @@ void SongSelectScene::SceneDraw()
                 DrawBox(icon_x, info_y, icon_x + SONG_ICON_SIZE, info_y + SONG_ICON_SIZE, COLOR_DARKGRAY, TRUE);
             }
         }
-
-        // 遊び方オーバーレイ描画
-        DrawHowToOverlay();
     }
+
+    // 遊び方オーバーレイ描画
+    DrawHowToOverlay();
 }
 
 //------------------------------------------------------------

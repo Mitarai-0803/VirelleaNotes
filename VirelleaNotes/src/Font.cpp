@@ -14,12 +14,12 @@ namespace Font
 
     void FontManager::Init()
     {
-        m_font_handles[FONT_SIZE_70_INDEX] = LoadFontDataToHandle("data/Font/FOT_RaglanPunch_70.dft");
-        m_font_handles[FONT_SIZE_50_INDEX] = LoadFontDataToHandle("data/Font/FOT_RaglanPunch_50.dft");
-        m_font_handles[FONT_SIZE_40_INDEX] = LoadFontDataToHandle("data/Font/FOT_RaglanPunch_40.dft");
-        m_font_handles[FONT_SIZE_30_INDEX] = LoadFontDataToHandle("data/Font/FOT_RaglanPunch_30.dft");
-        m_font_handles[FONT_SIZE_25_INDEX] = LoadFontDataToHandle("data/Font/FOT_RaglanPunch_25.dft");
-        m_font_handles[FONT_SIZE_10_INDEX] = LoadFontDataToHandle("data/Font/FOT_RaglanPunch_10.dft");
+        m_font_handles[FONT_SIZE_60_INDEX] = LoadFontDataToHandle("data/Font/NotoSansJP-Black60.dft");
+        m_font_handles[FONT_SIZE_50_INDEX] = LoadFontDataToHandle("data/Font/NotoSansJP-Black50.dft");
+        m_font_handles[FONT_SIZE_40_INDEX] = LoadFontDataToHandle("data/Font/NotoSansJP-Black40.dft");
+        m_font_handles[FONT_SIZE_30_INDEX] = LoadFontDataToHandle("data/Font/NotoSansJP-Black30.dft");
+        m_font_handles[FONT_SIZE_20_INDEX] = LoadFontDataToHandle("data/Font/NotoSansJP-Black20.dft");
+        m_font_handles[FONT_SIZE_10_INDEX] = LoadFontDataToHandle("data/Font/NotoSansJP-Black10.dft");
     }
 
     void FontManager::Exit()
@@ -34,7 +34,7 @@ namespace Font
 
     int FontManager::GetFont(int font_index)
     {
-        if(font_index < 0 || font_index >= FONT_MAX) font_index = FONT_SIZE_70_INDEX;
+        if(font_index < 0 || font_index >= FONT_MAX) font_index = FONT_SIZE_60_INDEX;
         return m_font_handles[font_index];
     }
 

@@ -142,12 +142,12 @@ void ResultScene::SceneInit()
     AddObjectSetName<UI::DrawFormatStringObject>("GuideString");
     if(auto guide_str = GetSceneObject<UI::DrawFormatStringObject>("GuideString")) {
         guide_str->SetColor(COLOR_WHITE);
-        guide_str->SetFontHandle(GetFont(Font::FONT_SIZE_25_INDEX));
+        guide_str->SetFontHandle(GetFont(Font::FONT_SIZE_20_INDEX));
         guide_str->SetFormat(RESULT_GUIDE_STR);
         guide_str->ApplyFormat();
 
         // 文字列の幅を取得して中央揃え
-        int str_w = GetDrawStringWidthToHandle(RESULT_GUIDE_STR, -1, GetFont(Font::FONT_SIZE_25_INDEX));
+        int str_w = GetDrawStringWidthToHandle(RESULT_GUIDE_STR, -1, GetFont(Font::FONT_SIZE_20_INDEX));
         guide_str->SetPos(RESULT_GUIDE_X - (str_w * HALF), RESULT_GUIDE_Y);
     }
 

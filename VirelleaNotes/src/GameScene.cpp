@@ -59,7 +59,7 @@ void GameScene::SceneInit()
     // フォントハンドルのキャッシュ
     m_font50 = GetFont(Font::FONT_SIZE_50_INDEX);
     m_font40 = GetFont(Font::FONT_SIZE_40_INDEX);
-    m_font25 = GetFont(Font::FONT_SIZE_25_INDEX);
+    m_font25 = GetFont(Font::FONT_SIZE_20_INDEX);
 
     // 四角描画オブジェクトの追加
     {

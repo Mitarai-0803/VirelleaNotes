@@ -32,11 +32,11 @@ void TitleScene::SceneInit()
     AddObjectSetName<UI::DrawFormatStringObject>("StartGuide");
     if(auto guide = GetSceneObject<UI::DrawFormatStringObject>("StartGuide")) {
         guide->SetFormat(TITLE_GUIDE_STR);
-        guide->SetFontHandle(GetFont(Font::FONT_SIZE_25_INDEX));
+        guide->SetFontHandle(GetFont(Font::FONT_SIZE_20_INDEX));
         guide->SetColor(COLOR_WHITE);
         guide->ApplyFormat();
 
-        int gw = GetDrawStringWidthToHandle(TITLE_GUIDE_STR, -1, GetFont(Font::FONT_SIZE_25_INDEX));
+        int gw = GetDrawStringWidthToHandle(TITLE_GUIDE_STR, -1, GetFont(Font::FONT_SIZE_20_INDEX));
         guide->SetPos(TITLE_GUIDE_X, TITLE_GUIDE_Y);
     }
 
@@ -44,11 +44,11 @@ void TitleScene::SceneInit()
     AddObjectSetName<UI::DrawFormatStringObject>("HowtoGuide");
     if(auto guide = GetSceneObject<UI::DrawFormatStringObject>("HowtoGuide")) {
         guide->SetFormat(HOWTO_GUIDE_STR);
-        guide->SetFontHandle(GetFont(Font::FONT_SIZE_25_INDEX));
+        guide->SetFontHandle(GetFont(Font::FONT_SIZE_20_INDEX));
         guide->SetColor(COLOR_WHITE);
         guide->ApplyFormat();
 
-        int gw = GetDrawStringWidthToHandle(HOWTO_GUIDE_STR, -1, GetFont(Font::FONT_SIZE_25_INDEX));
+        int gw = GetDrawStringWidthToHandle(HOWTO_GUIDE_STR, -1, GetFont(Font::FONT_SIZE_20_INDEX));
         guide->SetPos(HOWTO_GUIDE_X, HOWTO_GUIDE_Y);
     }
 

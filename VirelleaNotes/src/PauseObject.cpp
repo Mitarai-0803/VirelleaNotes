@@ -21,7 +21,7 @@ void PauseObject::OnInit()
     m_box_y = (SCREEN_H / 2) - (m_box_h / 2);
 
     m_big_font   = GetFont(Font::FONT_SIZE_50_INDEX);
-    m_small_font = GetFont(Font::FONT_SIZE_25_INDEX);
+    m_small_font = GetFont(Font::FONT_SIZE_20_INDEX);
 
     // PAUSE_TEXT
     m_text_w = GetDrawStringWidthToHandle(PAUSE_TEXT_STR, -1, m_big_font);

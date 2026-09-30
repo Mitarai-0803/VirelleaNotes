@@ -36,7 +36,7 @@ void LineObject::OnInit()
 
     // ラインに対応する入力ラベルを描画
     if(!m_key_label.empty()) {
-        int   font = Font::GetFont(Font::FONT_SIZE_25_INDEX);
+        int   font = Font::GetFont(Font::FONT_SIZE_20_INDEX);
         int   w    = GetDrawStringWidthToHandle(m_key_label.c_str(), -1, font);
         int   h    = GetFontSizeToHandle(font);
         float x    = m_line_box.x + (m_line_box.w * 0.5f) - (w * 0.5f);
@@ -508,7 +508,7 @@ void LineObject::OnDraw()
                        static_cast<int>(m_draw_line.pos_1.y + KEY_LABEL_Y_OFFSET),
                        m_key_label.c_str(),
                        COLOR_WHITE,
-                       Font::GetFont(Font::FONT_SIZE_25_INDEX));
+                       Font::GetFont(Font::FONT_SIZE_20_INDEX));
 
     //-----------------------------------------------------------
     // 判定結果の表示
@@ -522,15 +522,15 @@ void LineObject::OnDraw()
             unsigned int JUDGE_COLOR[JUDGEMENT_MAX]  = {COLOR_RED, COLOR_PINK, COLOR_YELLOW_GREEN, COLOR_GRAY};
 
             // 判定文字列の幅・高さをキャッシュに保存
-            m_draw_judge_str_w = GetDrawStringWidthToHandle(JUDGE_STRING[m_judgement_mode], -1, Font::GetFont(Font::FONT_SIZE_25_INDEX));
-            m_draw_judge_str_h = GetFontSizeToHandle(Font::GetFont(Font::FONT_SIZE_25_INDEX));
+            m_draw_judge_str_w = GetDrawStringWidthToHandle(JUDGE_STRING[m_judgement_mode], -1, Font::GetFont(Font::FONT_SIZE_20_INDEX));
+            m_draw_judge_str_h = GetFontSizeToHandle(Font::GetFont(Font::FONT_SIZE_20_INDEX));
 
             // ライン中央上部に判定文字列を描画（キャッシュ値を使用）
             DrawStringToHandle(m_line_box.x + (m_line_box.w * HALF) - (m_draw_judge_str_w * HALF),
                                m_draw_line.pos_1.y + m_draw_judge_str_h,
                                JUDGE_STRING[m_judgement_mode],
                                JUDGE_COLOR[m_judgement_mode],
-                               Font::GetFont(Font::FONT_SIZE_25_INDEX));
+                               Font::GetFont(Font::FONT_SIZE_20_INDEX));
 
             ++m_frame_count;
         }
